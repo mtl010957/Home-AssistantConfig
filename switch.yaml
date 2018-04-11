@@ -1,0 +1,10 @@
+platform: x10
+device: cm17a
+filename: /dev/ttyUSB1
+host: localhost
+port: 1099
+switches:
+  l5: Heat Tapes
+  l11: Family Room Ceiling Fan
+  l16: Irrigation Enable
+

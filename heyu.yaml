@@ -1,0 +1,4 @@
+# Heyu hub platform
+# Default is to assume only a single Heyu configuration so no need for the id
+# If you need the id it should be a single hyphen followed by a single digit 0-9
+#id: -0

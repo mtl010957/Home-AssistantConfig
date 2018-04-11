@@ -1,0 +1,3 @@
+# Manual Alarm Control Panel
+platform: manual
+name: "3629 Alarm"

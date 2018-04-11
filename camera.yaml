@@ -1,0 +1,4 @@
+# camera
+platform: local_file
+name: Home Cam
+file_path: /var/www/html/motion/lastsnap.jpg

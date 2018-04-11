@@ -1,0 +1,7 @@
+# Default broker is internal, automatically started
+#Host 	localhost
+#Port 	1883
+#Protocol 	3.1.1
+#User 	homeassistant
+#Password 	Your API password
+#Websocket port 	8080

@@ -1,0 +1,9 @@
+platform: command_line
+switches:
+  #Switch for iSmart PTZ down
+  generic_cam4_down:
+    friendly_name: "3629Cam4 PTZ Down"
+    command_on: '/home/homeassistant/.homeassistant/generic_cam4_switch_down.sh on'
+    command_off: '/home/homeassistant/.homeassistant/generic_cam4_switch_down.sh off'
+
+

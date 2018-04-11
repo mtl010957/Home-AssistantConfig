@@ -1,0 +1,46 @@
+- action:
+  - service: homeassistant.turn_off
+    entity_id: switch.house_fan_switch
+  alias: Turn off house fan below 80 degrees
+  id: '1497804129147'
+  trigger:
+  - below: '80'
+    entity_id: sensor.temperature_mbr
+    platform: numeric_state
+- action:
+  - service: homeassistant.turn_on
+    entity_id:
+      - switch.foscam_cam1_motion
+      - switch.foscam_cam2_motion
+      - switch.foscam_cam3_motion
+      - light.outdoor_flood_lights
+  alias: Camera Motion and Floods On Armed Away
+  id: '1500947016373'
+  trigger:
+  - entity_id: alarm_control_panel.3629_alarm
+    platform: state
+    to: 'armed_away'
+- action:
+  - service: homeassistant.turn_on
+    entity_id:
+      - switch.foscam_cam1_motion
+      - switch.foscam_cam2_motion
+  alias: Camera Motion On Armed Home
+  id: '1500947000000'
+  trigger:
+  - entity_id: alarm_control_panel.3629_alarm
+    platform: state
+    to: 'armed_home'
+- action:
+  - service: homeassistant.turn_off
+    entity_id:
+      - switch.foscam_cam1_motion
+      - switch.foscam_cam2_motion
+      - switch.foscam_cam3_motion
+      - light.outdoor_flood_lights
+  alias: Camera Motion and Floods Off Disarmed
+  id: '1500948466889'
+  trigger:
+  - entity_id: alarm_control_panel.3629_alarm
+    platform: state
+    to: 'disarmed'

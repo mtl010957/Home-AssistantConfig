@@ -1,0 +1,204 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
+  # Pick yours from here - http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: !secret home_time_zone
+  # imperial for US units
+  unit_system: imperial
+
+  customize: !include customize.yaml
+
+# Logger setup
+logger:
+  default: warning
+#  logs:
+#    homeassistant.components.recorder: debug
+
+# Checks for available updates
+updater:
+#  include_used_components: true
+
+# Sensor to tell the current available release
+sensor 0:
+  - platform: command_line
+    command: /srv/homeassistant/bin/python3 -c "import requests; print(requests.get('https://pypi.python.org/pypi/homeassistant/json').json()['info']['version'])"
+    name: HA release
+
+# Track the sun
+sun:
+
+# View all events in a logbook
+logbook:
+
+# Enables the frontend
+frontend:
+
+# Enables support for tracking state changes over time.
+history:
+
+# Enables support for tracking state changes over time.
+recorder:
+  purge_interval: 1
+  purge_keep_days: 14
+  db_url: !secret recorder_db_url
+  exclude:
+    domains:
+      - automation
+    entities:
+      - sun.sun # Don't record sun data
+      - persistent_notification.invalid_config
+      - sensor.date
+
+  # Delete events and states older than 4 weeks
+#  purge_days: 28
+
+# Allows you to issue voice commands from the frontend
+conversation:
+
+# Show links to resources in log and frontend
+introduction:
+
+# Discover some devices automatically
+discovery:
+
+# In case discovery fails to find the Chromecasts
+media_player:
+  - platform: cast
+
+# NEW configuration panels
+config:
+
+# NEW automation configuration panels
+automation: !include automations.yaml
+
+# NEW script editor
+script: !include scripts.yaml
+
+# Security
+http:
+  api_password: !secret http_password
+
+# Wink (only works with dev OAuth now)
+#wink: !include wink.yaml
+wink:
+  local_control: True
+
+# Device tracking
+device_tracker: !include nmap_tracker.yaml
+
+# Honeywell Thermostat
+climate: !include climate.yaml
+
+# X10 over Heyu "hub"
+heyu: !include heyu.yaml
+
+# X10 Lights over Heyu
+light: !include heyu_light.yaml
+
+# X10 Switches over Heyu
+switch: !include heyu_switch.yaml
+
+# DarkSky weather
+sensor 1: !include weather.yaml
+
+# Groups (all in customize now)
+group: !include groups.yaml
+
+# MQTT
+mqtt:
+  client_id: HA-3629
+
+# Temperature sensor over MQTT
+sensor 2: !include mqtt_temp1.yaml
+
+# Humidity sensor over MQTT
+sensor 3: !include mqtt_hum1.yaml
+
+# Barometer sensor over MQTT
+sensor 4: !include mqtt_baro1.yaml
+
+# Temperature sensor over MQTT
+sensor 5: !include mqtt_temp2.yaml
+
+# Humidity sensor over MQTT
+sensor 6: !include mqtt_hum2.yaml
+
+# DTE Energy Bridge
+sensor 7: !include energy_bridge.yaml
+
+# Relay 1-1 over MQTT
+switch 1: !include mqtt_relay11.yaml
+
+# Relay 1-2 over MQTT
+switch 2: !include mqtt_relay12.yaml
+
+# Relay 1-3 over MQTT
+switch 3: !include mqtt_relay13.yaml
+
+# Relay 1-4 over MQTT
+switch 4: !include mqtt_relay14.yaml
+
+# IFTTT channel using Maker
+ifttt: !include ifttt.yaml
+
+# APC UPS Daemon
+apcupsd:
+sensor 8: !include apcupsd.yaml
+
+# USPS
+usps: !include usps.yaml
+
+# UPS
+sensor 10: !include ups.yaml
+
+# FedEx (broke too now)
+sensor 11: !include fedex.yaml
+
+# Temperature Probe over MQTT
+sensor 12: !include mqtt_temp3_1.yaml
+
+# Temperature Probe over MQTT
+sensor 13: !include mqtt_temp3_2.yaml
+
+# Temperature Probe over MQTT
+sensor 14: !include mqtt_temp3_3.yaml
+
+# Temperature Probe over MQTT
+sensor 15: !include mqtt_temp3_4.yaml
+
+# USB Camera
+#camera: !include camera.yaml
+
+# Foscam IP Camera 1
+camera 1: !include foscam_cam1.yaml
+switch 5: !include foscam_cam1_switch.yaml
+
+# Foscam IP Camera 2
+camera 2: !include foscam_cam2.yaml
+switch 6: !include foscam_cam2_switch.yaml
+
+# Foscam IP Camera 3
+camera 3: !include foscam_cam3.yaml
+switch 7: !include foscam_cam3_switch.yaml
+
+# Alarm panel
+alarm_control_panel: !include alarm_panel.yaml
+
+# Nest Stuff
+nest: !include nest.yaml
+
+# ZWave
+#zwave:
+#  device_config: !include zwave_device_config.yaml
+
+# Generic iSmart IP camera
+camera 4: !include generic_cam4.yaml
+switch 8: !include generic_cam4_switch_up.yaml
+switch 9: !include generic_cam4_switch_down.yaml
+switch 10: !include generic_cam4_switch_left.yaml
+switch 11: !include generic_cam4_switch_right.yaml
+

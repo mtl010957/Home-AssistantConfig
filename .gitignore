@@ -1,0 +1,13 @@
+*
+!*.yaml
+!scenes
+!.gitignore
+!*.sh
+secrets.yaml
+shell_secrets.sh
+entity_registry.yaml
+known_devices.yaml
+nmap_tracker.yaml
+tracker.yaml
+nest.conf
+.wink.conf

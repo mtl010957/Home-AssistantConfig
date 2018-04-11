@@ -1,0 +1,11 @@
+platform: heyu
+devices:
+  - name: Heat Tapes
+    id: l5
+  - name: RF Module
+    id: l9
+  - name: Family Room Ceiling Fan
+    id: l11
+  - name: Irrigation Enable
+    id: l16
+

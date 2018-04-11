@@ -1,0 +1,9 @@
+platform: command_line
+switches:
+  #Switch for iSmart PTZ left
+  generic_cam4_left:
+    friendly_name: "3629Cam4 PTZ Left"
+    command_on: '/home/homeassistant/.homeassistant/generic_cam4_switch_left.sh on'
+    command_off: '/home/homeassistant/.homeassistant/generic_cam4_switch_left.sh off'
+
+

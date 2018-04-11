@@ -1,0 +1,7 @@
+# Example configuration.yaml entry
+platform: mqtt
+qos: 1
+devices:
+  michael_nexus5: /location/michael
+  susan_iphone4: /location/susan
+

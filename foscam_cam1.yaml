@@ -1,0 +1,6 @@
+platform: foscam
+ip: !secret foscam1_ip
+name: "3629 Cam 1"
+username: !secret foscam1_username
+password: !secret foscam1_password
+
