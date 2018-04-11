@@ -28,7 +28,7 @@ outdoor_cameras:
     - switch.foscam_cam1_motion
     - camera.3629_cam_2
     - switch.foscam_cam2_motion
-    - camera.front_yard
+    - camera.front_yard_front_porch
 indoor_cameras:
   name: "Indoor Cameras"
   entities:
@@ -266,4 +266,10 @@ devices:
     - group.automations
     - switch.rf_module
     - group.sirens
+desert:
+  name: Desert
+  view: yes
+  entities:
+    - camera.living_room
+    - camera.front_yard_front_porch
 
