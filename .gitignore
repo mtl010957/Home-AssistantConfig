@@ -3,6 +3,7 @@
 !scenes
 !.gitignore
 !*.sh
+!README.md
 secrets.yaml
 shell_secrets.sh
 entity_registry.yaml
