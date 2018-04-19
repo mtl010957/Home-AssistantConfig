@@ -35,10 +35,8 @@ indoor_cameras:
     - camera.3629_cam_3
     - switch.foscam_cam3_motion
     - camera.3629_cam_4
-    - switch.generic_cam4_up
-    - switch.generic_cam4_down
-    - switch.generic_cam4_left
-    - switch.generic_cam4_right
+    - input_number.cam4_up_down
+    - input_number.cam4_left_right
     - camera.living_room
 hubs:
   name: Hubs
@@ -146,6 +144,12 @@ automations:
     - automation.camera_motion_and_floods_off_disarmed
     - automation.camera_motion_and_floods_on_armed_away
     - automation.turn_off_house_fan_below_80_degrees
+    - automation.3629cam4_up
+    - automation.3629cam4_down
+    - automation.3629cam4_up_down_stop
+    - automation.3629cam4_left
+    - automation.3629cam4_right
+    - automation.3629cam4_left_right_stop
 relays:
   name: Relays
   entities:

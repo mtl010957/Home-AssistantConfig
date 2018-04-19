@@ -149,14 +149,14 @@ ifttt: !include ifttt.yaml
 apcupsd:
 sensor 8: !include apcupsd.yaml
 
-# USPS
-usps: !include usps.yaml
+# USPS (broke again)
+#usps: !include usps.yaml
 
-# UPS
-sensor 10: !include ups.yaml
+# UPS (deactivating to avoid future problems)
+#sensor 10: !include ups.yaml
 
 # FedEx (broke too now)
-sensor 11: !include fedex.yaml
+#sensor 11: !include fedex.yaml
 
 # Temperature Probe over MQTT
 sensor 12: !include mqtt_temp3_1.yaml
@@ -197,8 +197,6 @@ nest: !include nest.yaml
 
 # Generic iSmart IP camera
 camera 4: !include generic_cam4.yaml
-switch 8: !include generic_cam4_switch_up.yaml
-switch 9: !include generic_cam4_switch_down.yaml
-switch 10: !include generic_cam4_switch_left.yaml
-switch 11: !include generic_cam4_switch_right.yaml
+switch 8: !include generic_cam4_switch_ptz.yaml
+input_number: !include generic_cam4_slider_ptz.yaml
 
