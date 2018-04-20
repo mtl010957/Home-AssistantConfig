@@ -4,27 +4,61 @@
 
 if [ "$1" = "on" ]
 then
-  curl -k "$CAM4_URL/decoder_control.cgi?user=$CAM4_USR&pwd=$CAM4_PWD&command=0&onestep=0"
+  curl -k "$CAM4_URL/set_alarm.cgi?user=$CAM4_USR&pwd=$CAM4_PWD\
+&motion_armed=1\
+&input_armed=0\
+&motion_sensitivity=8\
+&iolinkage=0\
+&mail=1\
+&record=1\
+&pirenable=1\
+&ioin_level=0\
+&ioout_level=0\
+&alarm_audio=0\
+&upload_interval=1\
+&preset=0\
+&schedule_enable=1\
+&schedule_sun_0=-1\
+&schedule_sun_1=-1\
+&schedule_sun_2=-1\
+&schedule_mon_0=-1\
+&schedule_mon_1=-1\
+&schedule_mon_2=-1\
+&schedule_tue_0=-1\
+&schedule_tue_1=-1\
+&schedule_tue_2=-1\
+&schedule_wed_0=-1\
+&schedule_wed_1=-1\
+&schedule_wed_2=-1\
+&schedule_thu_0=-1\
+&schedule_thu_1=-1\
+&schedule_thu_2=-1\
+&schedule_fri_0=-1\
+&schedule_fri_1=-1\
+&schedule_fri_2=-1\
+&schedule_sat_0=-1\
+&schedule_sat_1=-1\
+&schedule_sat_2=-1\
+"
 elif [ "$1" = "off" ]
 then
-  curl -k "$CAM4_URL/decoder_control.cgi?user=$CAM4_USR&pwd=$CAM4_PWD&command=1&onestep=0"
+  curl -k "$CAM4_URL/set_alarm.cgi?user=$CAM4_USR&pwd=$CAM4_PWD\
+&motion_armed=0\
+&input_armed=0\
+&motion_sensitivity=0\
+&iolinkage=0\
+&mail=0\
+&record=0\
+&pirenable=0\
+&ioin_level=0\
+&ioout_level=0\
+&alarm_audio=0\
+&upload_interval=0\
+&preset=0\
+&schedule_enable=0\
+"
+else
+  curl -k --silent "$CAM4_URL/get_params.cgi?loginuse=$CAM4_USR&loginpas=$CAM4_PWD" | grep 'alarm_motion_armed=' | tr -d ';' | awk -F= '{print $2}'
 fi
 exit 0
-
-
-            url = 'set_alarm.cgi?next_url=alarm.htm';
-            url += '&loginuse=' + top.cookieuser + '&loginpas=' + encodeURIComponent(top.cookiepass);
-            url += '&motion_armed=' + (($("#motion_enable").attr("checked") == "checked") ? 1 : 0);
-            url += '&input_armed=' + (($("#extern_enable").attr("checked") == "checked") ? 1 : 0);
-            url += '&motion_sensitivity=' + (($("#motion_enable").attr("checked") == "checked") ? $("#motion_sensitivity").val() : 5);
-            url += '&iolinkage=' + (($("#linkage_enable").attr("checked") == "checked") ? 1 : 0)
-            url += '&mail=' + (($("#mail_enable").attr("checked") == "checked") ? 1 : 0);
-            url += '&record=' + (($("#record_enable").attr("checked") == "checked") ? 1 : 0);
-			url += '&pirenable='+(($("#pir_enable").attr("checked") == "checked") ? 1 : 0);
-            url += '&ioin_level=' + $("#triger_level").val();
-            url += '&ioout_level=' + $("#output_level").val();
-			url += '&alarm_audio=' + $("#audio_sensitivity").val();
-			//url += '&alarm_audio=' + (($("#voice_enable").attr("checked") == "checked") ? $("#audio_sensitivity").val() : 0);
-            url += '&upload_interval=' + ((($("#ftp_enable").attr("checked") == "checked") && ($("#ftp_interval").val() != '')) ? $("#ftp_interval").val() : 0);
-            url += '&schedule_enable=' + (($("#schedule_enable").attr("checked") == "checked") ? 1 : 0);
 

@@ -198,5 +198,6 @@ nest: !include nest.yaml
 # Generic iSmart IP camera
 camera 4: !include generic_cam4.yaml
 switch 8: !include generic_cam4_switch_ptz.yaml
+switch 9: !include generic_cam4_switch_motion.yaml
 input_number: !include generic_cam4_slider_ptz.yaml
 

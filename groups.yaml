@@ -35,6 +35,7 @@ indoor_cameras:
     - camera.3629_cam_3
     - switch.foscam_cam3_motion
     - camera.3629_cam_4
+    - switch.generic_cam4_motion
     - input_number.cam4_up_down
     - input_number.cam4_left_right
     - camera.living_room
