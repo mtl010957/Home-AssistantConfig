@@ -70,7 +70,7 @@
     - service: homeassistant.turn_on
       entity_id:
         - switch.generic_cam4_down
-  alias: 3629cam4 Up
+  alias: 3629cam4 Down
   id: '1800999911112'
   trigger:
   - entity_id: input_number.cam4_up_down

@@ -1,0 +1,6 @@
+platform: mqtt
+name: "Humidity GARAGE"
+state_topic: "sensor/4/humidity/percentRelative"
+qos: 0
+unit_of_measurement: "%"
+

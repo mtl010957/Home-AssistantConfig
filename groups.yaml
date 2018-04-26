@@ -177,6 +177,7 @@ temperatures:
     - sensor.family_room_temperature
     - sensor.temperature_fr
     - sensor.temperature_mbr
+    - sensor.temperature_garage
     - sensor.temperature_probe_1
     - sensor.temperature_probe_2
     - sensor.temperature_probe_3
@@ -242,6 +243,8 @@ outdoor:
     - group.outdoor_cameras
     - group.relays
     - group.sirens
+    - sensor.temperature_garage
+    - sensor.humidity_garage
 dining:
   name: Dining
   view: yes

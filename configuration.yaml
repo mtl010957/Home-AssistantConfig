@@ -170,6 +170,12 @@ sensor 14: !include mqtt_temp3_3.yaml
 # Temperature Probe over MQTT
 sensor 15: !include mqtt_temp3_4.yaml
 
+# Temperature sensor over MQTT
+sensor 16: !include mqtt_temp4.yaml
+
+# Humidity sensor over MQTT
+sensor 17: !include mqtt_hum4.yaml
+
 # USB Camera
 #camera: !include camera.yaml
 
