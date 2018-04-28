@@ -144,6 +144,7 @@ automations:
   entities:
     - automation.camera_motion_and_floods_off_disarmed
     - automation.camera_motion_and_floods_on_armed_away
+    - automation.camera_motion_on_armed_home
     - automation.turn_off_house_fan_below_80_degrees
     - automation.3629cam4_up
     - automation.3629cam4_down

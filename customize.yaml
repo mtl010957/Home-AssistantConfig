@@ -22,9 +22,13 @@ sensor.humidity_fr:
   icon: mdi:water-percent
 sensor.humidity_mbr:
   icon: mdi:water-percent
+sensor.humidity_garage:
+  icon: mdi:water-percent
 sensor.temperature_fr:
   icon: mdi:thermometer
 sensor.temperature_mbr:
+  icon: mdi:thermometer
+sensor.temperature_garage:
   icon: mdi:thermometer
 sensor.barometer_fr:
   icon: mdi:gauge
@@ -33,6 +37,8 @@ switch.foscam_cam1_motion:
 switch.foscam_cam2_motion:
   icon: mdi:run
 switch.foscam_cam3_motion:
+  icon: mdi:run
+switch.generic_cam4_motion:
   icon: mdi:run
 binary_sensor.fire_and_co_smoke_detected:
   friendly_name: Smoke Detected

@@ -13,6 +13,7 @@
       - switch.foscam_cam1_motion
       - switch.foscam_cam2_motion
       - switch.foscam_cam3_motion
+      - switch.generic_cam4_motion
       - light.outdoor_flood_lights
   alias: Camera Motion and Floods On Armed Away
   id: '1500947016373'
@@ -37,6 +38,7 @@
       - switch.foscam_cam1_motion
       - switch.foscam_cam2_motion
       - switch.foscam_cam3_motion
+      - switch.generic_cam4_motion
       - light.outdoor_flood_lights
   alias: Camera Motion and Floods Off Disarmed
   id: '1500948466889'
