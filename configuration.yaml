@@ -78,6 +78,9 @@ automation: !include automations.yaml
 # NEW script editor
 script: !include scripts.yaml
 
+# Cloud connectivity
+cloud:
+
 # Security
 http:
   api_password: !secret http_password
