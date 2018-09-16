@@ -60,5 +60,17 @@ switch.generic_cam4_left:
   icon: mdi:arrow-left
 switch.generic_cam4_right:
   icon: mdi:arrow-right
+switch.relay_11:
+  icon: mdi:water
+  friendly_name: Irrigation Front
+switch.relay_12:
+  icon: mdi:water
+  friendly_name: Irrigation Unused
+switch.relay_13:
+  icon: mdi:water
+  friendly_name: Irrigation Back
+switch.relay_14:
+  icon: mdi:water
+  friendly_name: Irrigation Enable
 
 

@@ -10,46 +10,46 @@
 - action:
   - service: homeassistant.turn_on
     entity_id:
-      - switch.foscam_cam1_motion
-      - switch.foscam_cam2_motion
-      - switch.foscam_cam3_motion
-      - switch.generic_cam4_motion
-      - light.outdoor_flood_lights
+    - switch.foscam_cam1_motion
+    - switch.foscam_cam2_motion
+    - switch.foscam_cam3_motion
+    - switch.generic_cam4_motion
+    - light.outdoor_flood_lights
   alias: Camera Motion and Floods On Armed Away
   id: '1500947016373'
   trigger:
   - entity_id: alarm_control_panel.3629_alarm
     platform: state
-    to: 'armed_away'
+    to: armed_away
 - action:
   - service: homeassistant.turn_on
     entity_id:
-      - switch.foscam_cam1_motion
-      - switch.foscam_cam2_motion
+    - switch.foscam_cam1_motion
+    - switch.foscam_cam2_motion
   alias: Camera Motion On Armed Home
   id: '1500947000000'
   trigger:
   - entity_id: alarm_control_panel.3629_alarm
     platform: state
-    to: 'armed_home'
+    to: armed_home
 - action:
   - service: homeassistant.turn_off
     entity_id:
-      - switch.foscam_cam1_motion
-      - switch.foscam_cam2_motion
-      - switch.foscam_cam3_motion
-      - switch.generic_cam4_motion
-      - light.outdoor_flood_lights
+    - switch.foscam_cam1_motion
+    - switch.foscam_cam2_motion
+    - switch.foscam_cam3_motion
+    - switch.generic_cam4_motion
+    - light.outdoor_flood_lights
   alias: Camera Motion and Floods Off Disarmed
   id: '1500948466889'
   trigger:
   - entity_id: alarm_control_panel.3629_alarm
     platform: state
-    to: 'disarmed'
+    to: disarmed
 - action:
-    - service: homeassistant.turn_on
-      entity_id:
-        - switch.generic_cam4_up
+  - service: homeassistant.turn_on
+    entity_id:
+    - switch.generic_cam4_up
   alias: 3629cam4 Up
   id: '1800999911110'
   trigger:
@@ -57,10 +57,10 @@
     platform: numeric_state
     below: -0.1
 - action:
-    - service: homeassistant.turn_off
-      entity_id:
-        - switch.generic_cam4_up
-        - switch.generic_cam4_down
+  - service: homeassistant.turn_off
+    entity_id:
+    - switch.generic_cam4_up
+    - switch.generic_cam4_down
   alias: 3629cam4 Up Down Stop
   id: '1800999911111'
   trigger:
@@ -69,9 +69,9 @@
     below: 0.1
     above: -0.1
 - action:
-    - service: homeassistant.turn_on
-      entity_id:
-        - switch.generic_cam4_down
+  - service: homeassistant.turn_on
+    entity_id:
+    - switch.generic_cam4_down
   alias: 3629cam4 Down
   id: '1800999911112'
   trigger:
@@ -79,9 +79,9 @@
     platform: numeric_state
     above: 0.1
 - action:
-    - service: homeassistant.turn_on
-      entity_id:
-        - switch.generic_cam4_left
+  - service: homeassistant.turn_on
+    entity_id:
+    - switch.generic_cam4_left
   alias: 3629cam4 Left
   id: '1800999911113'
   trigger:
@@ -89,10 +89,10 @@
     platform: numeric_state
     below: -0.1
 - action:
-    - service: homeassistant.turn_off
-      entity_id:
-        - switch.generic_cam4_left
-        - switch.generic_cam4_right
+  - service: homeassistant.turn_off
+    entity_id:
+    - switch.generic_cam4_left
+    - switch.generic_cam4_right
   alias: 3629cam4 Left Right Stop
   id: '1800999911114'
   trigger:
@@ -101,17 +101,55 @@
     below: 0.1
     above: -0.1
 - action:
-    - service: homeassistant.turn_on
-      entity_id:
-        - switch.generic_cam4_right
+  - service: homeassistant.turn_on
+    entity_id:
+    - switch.generic_cam4_right
   alias: 3629cam4 Right
   id: '1800999911115'
   trigger:
   - entity_id: input_number.cam4_left_right
     platform: numeric_state
     above: 0.1
-    
-    
-    
+- id: '1533419985023'
+  alias: Irrigation Zone 1 Start
+  trigger:
+  - at: '06:50:00'
+    platform: time
+  condition: []
+  action:
+  - service: homeassistant.turn_on
+    entity_id:
+    - switch.relay_11
+    - switch.relay_14
+- id: '1533419985033'
+  alias: Irrigation Zone 1 Stop
+  trigger:
+  - at: '07:20:00'
+    platform: time
+  condition: []
+  action:
+  - service: homeassistant.turn_off
+    entity_id:
+    - switch.relay_11
+- id: '1533419985043'
+  alias: Irrigation Zone 3 Start
+  trigger:
+  - at: '07:20:00'
+    platform: time
+  condition: []
+  action:
+  - service: homeassistant.turn_on
+    entity_id:
+    - switch.relay_13
+    - switch.relay_14
+- id: '1533419985053'
+  alias: Irrigation Zone 3 Stop
+  trigger:
+  - at: '07:50:00'
+    platform: time
+  condition: []
+  action:
+  - service: homeassistant.turn_off
+    entity_id:
+    - switch.relay_13
 
-    

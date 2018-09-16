@@ -1,0 +1,23 @@
+entities:
+  - name: "3629 Cam1 Pictures"
+    url: http://mtl-svn.dyndns-home.com:8000/3629cam1/C1_00626E69269A/snap/
+    icon: mdi:image
+  - name: "3629 Cam1 Videos"
+    url: http://mtl-svn.dyndns-home.com:8000/3629cam1/C1_00626E69269A/record/
+    icon: mdi:movie
+  - name: "3629 Cam2 Pictures"
+    url: http://mtl-svn.dyndns-home.com:8000/3629cam2/C1_00626E6926B6/snap/
+    icon: mdi:image
+  - name: "3629 Cam2 Videos"
+    url: http://mtl-svn.dyndns-home.com:8000/3629cam2/C1_00626E6926B6/record/
+    icon: mdi:movie
+  - name: "3629 Cam3 Pictures"
+    url: http://mtl-svn.dyndns-home.com:8000/3629cam3/C1_00626E82585D/snap/
+    icon: mdi:image
+  - name: "3629 Cam3 Videos"
+    url: http://mtl-svn.dyndns-home.com:8000/3629cam3/C1_00626E82585D/record/
+    icon: mdi:movie
+  - name: "3629 Cam4 Pictures"
+    url: http://mtl-svn.dyndns-home.com:8000/3629cam4/
+    icon: mdi:image
+

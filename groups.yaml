@@ -152,8 +152,12 @@ automations:
     - automation.3629cam4_left
     - automation.3629cam4_right
     - automation.3629cam4_left_right_stop
+    - automation.irrigation_zone_1_start
+    - automation.irrigation_zone_1_stop
+    - automation.irrigation_zone_3_start
+    - automation.irrigation_zone_3_stop
 relays:
-  name: Relays
+  name: Irrigation
   entities:
     - switch.relay_11
     - switch.relay_12
@@ -236,9 +240,9 @@ outdoor:
   view: yes
   entities:
     - light.outdoor_flood_lights
-    - switch.irrigation_enable
+#    - switch.irrigation_enable
     - light.garage_lights
-    - light.link_bulb
+    - light.garage_attic
     - switch.heat_tapes
     - binary_sensor.garage_door_opened
     - group.outdoor_cameras

@@ -10,6 +10,12 @@ homeassistant:
   # imperial for US units
   unit_system: imperial
 
+  # add this part
+  auth_providers:
+   - type: homeassistant
+   # uncomment this to enable backwards compatible API password support
+   - type: legacy_api_password
+
   customize: !include customize.yaml
 
 # Logger setup
@@ -66,8 +72,8 @@ introduction:
 discovery:
 
 # In case discovery fails to find the Chromecasts
-media_player:
-  - platform: cast
+#media_player:
+#  - platform: cast
 
 # NEW configuration panels
 config:
@@ -84,6 +90,9 @@ cloud:
 # Security
 http:
   api_password: !secret http_password
+#  base_url: https://mtl-svn.dyndns-home.com:8123
+#  ssl_certificate: /home/homeassistant/ssl/fullchain.pem
+#  ssl_key: /home/homeassistant/ssl/privkey.pem
 
 # Wink (only works with dev OAuth now)
 #wink: !include wink.yaml
@@ -105,8 +114,11 @@ light: !include heyu_light.yaml
 # X10 Switches over Heyu
 switch: !include heyu_switch.yaml
 
+# DarkSky sensor
+sensor 1: !include darksky_sensor.yaml
+
 # DarkSky weather
-sensor 1: !include weather.yaml
+weather: !include darksky_weather.yaml
 
 # Groups (all in customize now)
 group: !include groups.yaml
@@ -114,6 +126,7 @@ group: !include groups.yaml
 # MQTT
 mqtt:
   client_id: HA-3629
+  password: !secret mqtt_password
 
 # Temperature sensor over MQTT
 sensor 2: !include mqtt_temp1.yaml
@@ -181,6 +194,9 @@ sensor 17: !include mqtt_hum4.yaml
 
 # USB Camera
 #camera: !include camera.yaml
+
+# Weblinks for cameras
+weblink: !include weblinks.yaml
 
 # Foscam IP Camera 1
 camera 1: !include foscam_cam1.yaml
