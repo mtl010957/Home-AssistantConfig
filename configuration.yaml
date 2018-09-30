@@ -37,6 +37,12 @@ sensor 0:
 # Track the sun
 sun:
 
+# Make date available for automations
+sensor d:
+  - platform: time_date
+    display_options:
+      - 'date'
+
 # View all events in a logbook
 logbook:
 

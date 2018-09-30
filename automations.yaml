@@ -115,7 +115,9 @@
   trigger:
   - at: '06:50:00'
     platform: time
-  condition: []
+  condition:
+    condition: template
+    value_template: "{{ now().month > 4 and now().month < 9 and 'rain' not in states.sensor.dark_sky_daily_summary.state }}"
   action:
   - service: homeassistant.turn_on
     entity_id:
@@ -126,17 +128,22 @@
   trigger:
   - at: '07:20:00'
     platform: time
-  condition: []
+  condition:
+    condition: template
+    value_template: "{{ now().month > 4 and now().month < 9 and 'rain' not in states.sensor.dark_sky_daily_summary.state }}"
   action:
   - service: homeassistant.turn_off
     entity_id:
     - switch.relay_11
+    - switch.relay_14
 - id: '1533419985043'
   alias: Irrigation Zone 3 Start
   trigger:
   - at: '07:20:00'
     platform: time
-  condition: []
+  condition:
+    condition: template
+    value_template: "{{ now().month > 4 and now().month < 9 and 'rain' not in states.sensor.dark_sky_daily_summary.state }}"
   action:
   - service: homeassistant.turn_on
     entity_id:
@@ -147,9 +154,12 @@
   trigger:
   - at: '07:50:00'
     platform: time
-  condition: []
+  condition:
+    condition: template
+    value_template: "{{ now().month > 4 and now().month < 9 and 'rain' not in states.sensor.dark_sky_daily_summary.state }}"
   action:
   - service: homeassistant.turn_off
     entity_id:
     - switch.relay_13
+    - switch.relay_14
 
