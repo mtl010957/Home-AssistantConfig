@@ -22,7 +22,7 @@ homeassistant:
 logger:
   default: warning
 #  logs:
-#    homeassistant.components.recorder: debug
+#    nest: debug
 
 # Checks for available updates
 updater:
@@ -221,6 +221,12 @@ alarm_control_panel: !include alarm_panel.yaml
 
 # Nest Stuff
 nest: !include nest.yaml
+
+# Desert Front Porch Camera Control
+switch 10: !include desert_front_porch_camera_switch.yaml
+
+# Desert Living Room Camera Control
+switch 11: !include desert_living_room_camera_switch.yaml
 
 # ZWave
 #zwave:

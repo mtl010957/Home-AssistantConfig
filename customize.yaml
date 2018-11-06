@@ -72,5 +72,11 @@ switch.relay_13:
 switch.relay_14:
   icon: mdi:water
   friendly_name: Irrigation Enable
+switch.desert_living_room_camera:
+  icon: mdi:camcorder
+  friendly_name: Desert Living Room Camera Switch
+switch.desert_front_porch_camera:
+  icon: mdi:camcorder
+  friendly_name: Desert Front Porch Camera Switch
 
 
