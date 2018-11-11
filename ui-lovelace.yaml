@@ -174,6 +174,13 @@ views:
           - light.family_room_se_ceiling_light
           - light.family_room_link_bulb_1
           - light.family_room_link_bulb_2
+      - type: picture-glance
+        title: 3629 Cam 3
+        entities:
+          - switch.foscam_cam3_motion
+          - weblink.3629_cam3_pictures
+          - weblink.3629_cam3_videos
+        camera_image: camera.3629_cam_3
       - id: 9e0b890569c64e3bbf8136596c74d89e  # Automatically created id
         type: entities
         title: Climate FR
@@ -198,29 +205,14 @@ views:
         type: entities
         entities:
           - switch.living_room_lamp_outlet
-      - id: 8e68afd4f57e4c80985994d3522dd52f  # Automatically created id
-        type: vertical-stack
-        cards:
-          - type: entities
-            title: Indoor Cameras
-            show_header_toggle: true
-            entities:
-              - switch.foscam_cam3_motion
-              - switch.generic_cam4_motion
-              - input_number.cam4_up_down
-              - input_number.cam4_left_right
-          - type: picture-entity
-            title: 3629 Cam 3
-            entity: camera.3629_cam_3
-            camera_image: camera.3629_cam_3
-            show_info: true
-            tap_action: dialog
-          - type: picture-entity
-            title: 3629 Cam 4
-            entity: camera.3629_cam_4
-            camera_image: camera.3629_cam_4
-            show_info: true
-            tap_action: dialog
+      - type: picture-glance
+        title: 3629 Cam 4
+        entities:
+          - switch.generic_cam4_motion
+          - input_number.cam4_up_down
+          - input_number.cam4_left_right
+          - weblink.3629_cam4_pictures
+        camera_image: camera.3629_cam_4
       - id: 57da341b3b0b42c7bb4422e5255d82f5  # Automatically created id
         type: picture-glance
         title: Desert Living Room

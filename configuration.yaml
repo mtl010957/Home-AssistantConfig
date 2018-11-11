@@ -181,16 +181,16 @@ sensor 8: !include apcupsd.yaml
 #sensor 11: !include fedex.yaml
 
 # Temperature Probe over MQTT
-sensor 12: !include mqtt_temp3_1.yaml
+sensor 31: !include mqtt_temp3_1.yaml
 
 # Temperature Probe over MQTT
-sensor 13: !include mqtt_temp3_2.yaml
+sensor 32: !include mqtt_temp3_2.yaml
 
 # Temperature Probe over MQTT
-sensor 14: !include mqtt_temp3_3.yaml
+sensor 33: !include mqtt_temp3_3.yaml
 
 # Temperature Probe over MQTT
-sensor 15: !include mqtt_temp3_4.yaml
+sensor 34: !include mqtt_temp3_4.yaml
 
 # Temperature sensor over MQTT
 sensor 16: !include mqtt_temp4.yaml
