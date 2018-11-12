@@ -1,0 +1,13 @@
+# Template switch
+platform: template
+switches:
+  desert_front_porch_camera:
+    value_template: "{{ is_state('camera.front_yard_front_porch','recording') }}"
+    turn_on:
+      service: camera.turn_on
+      data:
+        entity_id: camera.front_yard_front_porch
+    turn_off:
+      service: camera.turn_off
+      data:
+        entity_id: camera.front_yard_front_porch

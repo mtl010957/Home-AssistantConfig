@@ -1,0 +1,13 @@
+# Template switch
+platform: template
+switches:
+  desert_living_room_camera:
+    value_template: "{{ is_state('camera.living_room','recording') }}"
+    turn_on:
+      service: camera.turn_on
+      data:
+        entity_id: camera.living_room
+    turn_off:
+      service: camera.turn_off
+      data:
+        entity_id: camera.living_room
