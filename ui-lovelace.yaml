@@ -80,14 +80,16 @@ views:
       - id: be7ead61dc25408faabaa30333afcdd3  # Automatically created id
         type: vertical-stack
         cards:
-          - type: picture-glance
+          - id: cam1
+            type: picture-glance
             title: 3629 Cam 1
             entities:
               - switch.foscam_cam1_motion
               - weblink.3629_cam1_pictures
               - weblink.3629_cam1_videos
             camera_image: camera.3629_cam_1
-          - type: picture-glance
+          - id: cam2
+            type: picture-glance
             title: 3629 Cam 2
             entities:
               - switch.foscam_cam2_motion
@@ -97,29 +99,35 @@ views:
       - id: 5d4705555c6648ca9adf0c7af36ea858  # Automatically created id
         type: vertical-stack
         cards:
-          - type: picture-glance
+          - id: porch
+            type: picture-glance
             title: Desert Front Yard (Front Porch)
             entities:
               - weblink.desert_front_porch_camera_feed
+              - binary_sensor.front_yard_camera_front_porch_online
               - switch.desert_front_porch_camera
             camera_image: camera.front_yard_front_porch
-          - type: picture-glance
+          - id: living
+            type: picture-glance
             title: Desert Living Room
             entities:
               - weblink.desert_living_room_camera_feed
+              - binary_sensor.living_room_camera_online
               - switch.desert_living_room_camera
             camera_image: camera.living_room
       - id: 55bd010df86146e79c9afe4d25f80916  # Automatically created id
         type: vertical-stack
         cards:
-          - type: picture-glance
+          - id: cam3
+            type: picture-glance
             title: 3629 Cam 3
             entities:
               - switch.foscam_cam3_motion
               - weblink.3629_cam3_pictures
               - weblink.3629_cam3_videos
             camera_image: camera.3629_cam_3
-          - type: picture-glance
+          - id: cam4
+            type: picture-glance
             title: 3629 Cam 4
             entities:
               - switch.generic_cam4_motion
@@ -174,7 +182,8 @@ views:
           - light.family_room_se_ceiling_light
           - light.family_room_link_bulb_1
           - light.family_room_link_bulb_2
-      - type: picture-glance
+      - id: cam32
+        type: picture-glance
         title: 3629 Cam 3
         entities:
           - switch.foscam_cam3_motion
@@ -205,7 +214,8 @@ views:
         type: entities
         entities:
           - switch.living_room_lamp_outlet
-      - type: picture-glance
+      - id: cam42
+        type: picture-glance
         title: 3629 Cam 4
         entities:
           - switch.generic_cam4_motion
@@ -218,6 +228,7 @@ views:
         title: Desert Living Room
         entities:
           - weblink.desert_living_room_camera_feed
+          - binary_sensor.living_room_camera_online
           - switch.desert_living_room_camera
         camera_image: camera.living_room
       - id: 9cfd7942a27c4150b3265035f3631c36  # Automatically created id
@@ -228,7 +239,8 @@ views:
           - sensor.temperature_probe_1
           - sensor.temperature_probe_2
           - sensor.temperature_probe_3
-      - type: thermostat
+      - id: tstat
+        type: thermostat
         entity: climate.thermostat
   - id: 4  # Automatically created id
     title: Dining
@@ -257,19 +269,22 @@ views:
       - id: 048aa55a13df40a0b406999731922b77  # Automatically created id
         type: vertical-stack
         cards:
-          - type: entities
+          - id: outdoor
+            type: entities
             title: Outdoor Cameras
             show_header_toggle: true
             entities:
               - switch.foscam_cam1_motion
               - switch.foscam_cam2_motion
-          - type: picture-entity
+          - id: cam12
+            type: picture-entity
             title: 3629 Cam 1
             entity: camera.3629_cam_1
             camera_image: camera.3629_cam_1
             show_info: true
             tap_action: dialog
-          - type: picture-entity
+          - id: cam21
+            type: picture-entity
             title: 3629 Cam 2
             entity: camera.3629_cam_2
             camera_image: camera.3629_cam_2
@@ -280,6 +295,7 @@ views:
         title: Desert Front Yard (Front Porch)
         entities:
           - weblink.desert_front_porch_camera_feed
+          - binary_sensor.front_yard_camera_front_porch_online
           - switch.desert_front_porch_camera
         camera_image: camera.front_yard_front_porch
       - id: 6bb3fd010ba5427797afe56c17fc98f0  # Automatically created id
@@ -395,8 +411,19 @@ views:
         entities:
           - wink.siren_and_strobe
           - wink.chime_and_siren
-      - type: thermostat
-        entity: climate.thermostat
+      - id: pkts
+        type: vertical-stack
+        cards:
+          - id: recvsec
+            type: gauge
+            title: Received
+            unit_of_measurement: Pkt/s
+            entity: sensor.wireless_router_packetssec_received
+          - id: sentsec
+            type: gauge
+            title: Sent
+            unit_of_measurement: Pkt/s
+            entity: sensor.wireless_router_packetssec_sent
   - id: 7  # Automatically created id
     title: Guest Room
     cards:
@@ -420,6 +447,7 @@ views:
         title: Desert Living Room
         entities:
           - weblink.desert_living_room_camera_feed
+          - binary_sensor.living_room_camera_online
           - switch.desert_living_room_camera
         camera_image: camera.living_room
       - id: 06fe2e0cb4fa4b76b2d5a7b4e5b2c377  # Automatically created id
@@ -427,6 +455,7 @@ views:
         title: Desert Front Yard (Front Porch)
         entities:
           - weblink.desert_front_porch_camera_feed
+          - binary_sensor.front_yard_camera_front_porch_online
           - switch.desert_front_porch_camera
         camera_image: camera.front_yard_front_porch
 #  - title: TEST
