@@ -45,12 +45,16 @@ binary_sensor.fire_and_co_smoke_detected:
 binary_sensor.fire_and_co_co_detected:
   friendly_name: CO Detected
 sensor.temperature_probe_1:
+  friendly_name: Heat NW Zone Return Temperature
   icon: mdi:thermometer
 sensor.temperature_probe_2:
+  friendly_name: Heat SE Zone Return Temperature
   icon: mdi:thermometer
 sensor.temperature_probe_3:
+  friendly_name: Heat Supply Temperature
   icon: mdi:thermometer
 sensor.temperature_probe_4:
+  friendly_name: Heat Flue Temperature
   icon: mdi:thermometer
 switch.generic_cam4_up:
   icon: mdi:arrow-up
@@ -78,5 +82,3 @@ switch.desert_living_room_camera:
 switch.desert_front_porch_camera:
   icon: mdi:camcorder
   friendly_name: Desert Front Porch Camera Switch
-
-

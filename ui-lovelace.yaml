@@ -239,6 +239,7 @@ views:
           - sensor.temperature_probe_1
           - sensor.temperature_probe_2
           - sensor.temperature_probe_3
+          - sensor.temperature_probe_4
       - id: tstat
         type: thermostat
         entity: climate.thermostat
