@@ -26,6 +26,18 @@
     entity_id:
     - switch.foscam_cam1_motion
     - switch.foscam_cam2_motion
+    - light.outdoor_flood_lights
+  alias: Camera Motion and Floods On Armed Night
+  id: '1500947016399'
+  trigger:
+  - entity_id: alarm_control_panel.3629_alarm
+    platform: state
+    to: armed_night
+- action:
+  - service: homeassistant.turn_on
+    entity_id:
+    - switch.foscam_cam1_motion
+    - switch.foscam_cam2_motion
   alias: Camera Motion On Armed Home
   id: '1500947000000'
   trigger:

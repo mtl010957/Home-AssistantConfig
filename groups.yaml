@@ -47,10 +47,7 @@ hubs:
 michael:
   name: Michael
   entities:
-    - device_tracker.00aefa410a5b
-    - device_tracker.64bc0c6814b0
     - device_tracker.404e3688ee93
-    - device_tracker.b8d7afb567e9
 susan:
   name: Susan
   entities:

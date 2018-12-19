@@ -21,8 +21,8 @@ homeassistant:
 # Logger setup
 logger:
   default: warning
-#  logs:
-#    nest: debug
+  logs:
+    wink: debug
 
 # Checks for available updates
 updater:
@@ -103,7 +103,7 @@ http:
 # Wink (only works with dev OAuth now)
 #wink: !include wink.yaml
 wink:
-  local_control: True
+  local_control: true
 
 # Device tracking
 device_tracker: !include nmap_tracker.yaml
