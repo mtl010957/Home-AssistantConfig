@@ -29,7 +29,7 @@ updater:
 #  include_used_components: true
 
 # Sensor to tell the current available release
-sensor 0:
+sensor v:
   - platform: version
     source: pypi
 
@@ -120,7 +120,7 @@ light x: !include heyu_light.yaml
 switch x: !include heyu_switch.yaml
 
 # DarkSky sensor
-sensor 1: !include darksky_sensor.yaml
+sensor w: !include darksky_sensor.yaml
 
 # DarkSky weather
 weather: !include darksky_weather.yaml
@@ -153,23 +153,23 @@ mqtt:
 #sensor 7: !include energy_bridge.yaml
 
 # Relay 1-1 over MQTT
-switch 1: !include mqtt_relay11.yaml
+#switch 1: !include mqtt_relay11.yaml
 
 # Relay 1-2 over MQTT
-switch 2: !include mqtt_relay12.yaml
+#switch 2: !include mqtt_relay12.yaml
 
 # Relay 1-3 over MQTT
-switch 3: !include mqtt_relay13.yaml
+#switch 3: !include mqtt_relay13.yaml
 
 # Relay 1-4 over MQTT
-switch 4: !include mqtt_relay14.yaml
+#switch 4: !include mqtt_relay14.yaml
 
 # IFTTT channel using Maker
 ifttt: !include ifttt.yaml
 
 # APC UPS Daemon
 apcupsd:
-sensor 8: !include apcupsd.yaml
+sensor u: !include apcupsd.yaml
 
 # USPS (broke again)
 #usps: !include usps.yaml
@@ -205,16 +205,16 @@ sensor 8: !include apcupsd.yaml
 weblink: !include weblinks.yaml
 
 # Foscam IP Camera 1
-camera 1: !include foscam_cam1.yaml
-switch 5: !include foscam_cam1_switch.yaml
+camera c1: !include foscam_cam1.yaml
+switch c1: !include foscam_cam1_switch.yaml
 
 # Foscam IP Camera 2
-camera 2: !include foscam_cam2.yaml
-switch 6: !include foscam_cam2_switch.yaml
+camera c2: !include foscam_cam2.yaml
+switch c2: !include foscam_cam2_switch.yaml
 
 # Foscam IP Camera 3
-camera 3: !include foscam_cam3.yaml
-switch 7: !include foscam_cam3_switch.yaml
+camera c3: !include foscam_cam3.yaml
+switch c3: !include foscam_cam3_switch.yaml
 
 # Alarm panel
 alarm_control_panel: !include alarm_panel.yaml
@@ -223,21 +223,21 @@ alarm_control_panel: !include alarm_panel.yaml
 nest: !include nest.yaml
 
 # Desert Front Porch Camera Control
-switch 10: !include desert_front_porch_camera_switch.yaml
+switch df: !include desert_front_porch_camera_switch.yaml
 
 # Desert Living Room Camera Control
-switch 11: !include desert_living_room_camera_switch.yaml
+switch dl: !include desert_living_room_camera_switch.yaml
 
 # ZWave
 #zwave:
 #  device_config: !include zwave_device_config.yaml
 
 # Generic iSmart IP camera
-camera 4: !include generic_cam4.yaml
-switch 8: !include generic_cam4_switch_ptz.yaml
-switch 9: !include generic_cam4_switch_motion.yaml
+camera c4: !include generic_cam4.yaml
+switch c4a: !include generic_cam4_switch_ptz.yaml
+switch c4b: !include generic_cam4_switch_motion.yaml
 input_number: !include generic_cam4_slider_ptz.yaml
 
-sensor x: !include corrected_barometer.yaml
-sensor f: !include temp_probes_1-4_F.yaml
+sensor baro: !include corrected_barometer.yaml
+sensor tpf: !include temp_probes_1-4_F.yaml
 

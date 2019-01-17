@@ -1,0 +1,19 @@
+- platform: template
+  sensors:
+    temperature_probe_1_f:
+      unit_of_measurement: 'ºF'
+      value_template: "{{ (states('sensor.temperature_probe_1') | float * 9.0/5.0+32.0) | round(1) }}"
+      icon_template: "mdi:thermometer"
+    temperature_probe_2_f:
+      unit_of_measurement: 'ºF'
+      value_template: "{{ (states('sensor.temperature_probe_2') | float * 9.0/5.0+32.0) | round(1) }}"
+      icon_template: "mdi:thermometer"
+    temperature_probe_3_f:
+      unit_of_measurement: 'ºF'
+      value_template: "{{ (states('sensor.temperature_probe_3') | float * 9.0/5.0+32.0) | round(1) }}"
+      icon_template: "mdi:thermometer"
+    temperature_probe_4_f:
+      unit_of_measurement: 'ºF'
+      value_template: "{{ (states('sensor.temperature_probe_4') | float * 9.0/5.0+32.0) | round(1) }}"
+      icon_template: "mdi:thermometer"
+

@@ -1,0 +1,5 @@
+- platform: template
+  sensors:
+    corrected_barometer:
+      unit_of_measurement: 'hPa'
+      value_template: "{{ state_attr('sensor.ah01_tph_pressure', 'state') | float + 34.0 }} 
