@@ -21,8 +21,8 @@ homeassistant:
 # Logger setup
 logger:
   default: warning
-  logs:
-    wink: debug
+#  logs:
+#    wink: debug
 
 # Checks for available updates
 updater:
@@ -30,9 +30,8 @@ updater:
 
 # Sensor to tell the current available release
 sensor 0:
-  - platform: command_line
-    command: /srv/homeassistant/bin/python3 -c "import requests; print(requests.get('https://pypi.python.org/pypi/homeassistant/json').json()['info']['version'])"
-    name: HA release
+  - platform: version
+    source: pypi
 
 # Track the sun
 sun:
@@ -115,10 +114,10 @@ climate: !include climate.yaml
 heyu: !include heyu.yaml
 
 # X10 Lights over Heyu
-light: !include heyu_light.yaml
+light x: !include heyu_light.yaml
 
 # X10 Switches over Heyu
-switch: !include heyu_switch.yaml
+switch x: !include heyu_switch.yaml
 
 # DarkSky sensor
 sensor 1: !include darksky_sensor.yaml
@@ -133,24 +132,25 @@ group: !include groups.yaml
 mqtt:
   client_id: HA-3629
   password: !secret mqtt_password
+  discovery: true
 
 # Temperature sensor over MQTT
-sensor 2: !include mqtt_temp1.yaml
+#sensor 2: !include mqtt_temp1.yaml
 
 # Humidity sensor over MQTT
-sensor 3: !include mqtt_hum1.yaml
+#sensor 3: !include mqtt_hum1.yaml
 
 # Barometer sensor over MQTT
-sensor 4: !include mqtt_baro1.yaml
+#sensor 4: !include mqtt_baro1.yaml
 
 # Temperature sensor over MQTT
-sensor 5: !include mqtt_temp2.yaml
+#sensor 5: !include mqtt_temp2.yaml
 
 # Humidity sensor over MQTT
-sensor 6: !include mqtt_hum2.yaml
+#sensor 6: !include mqtt_hum2.yaml
 
 # DTE Energy Bridge
-sensor 7: !include energy_bridge.yaml
+#sensor 7: !include energy_bridge.yaml
 
 # Relay 1-1 over MQTT
 switch 1: !include mqtt_relay11.yaml
@@ -181,22 +181,22 @@ sensor 8: !include apcupsd.yaml
 #sensor 11: !include fedex.yaml
 
 # Temperature Probe over MQTT
-sensor 31: !include mqtt_temp3_1.yaml
+#sensor 31: !include mqtt_temp3_1.yaml
 
 # Temperature Probe over MQTT
-sensor 32: !include mqtt_temp3_2.yaml
+#sensor 32: !include mqtt_temp3_2.yaml
 
 # Temperature Probe over MQTT
-sensor 33: !include mqtt_temp3_3.yaml
+#sensor 33: !include mqtt_temp3_3.yaml
 
 # Temperature Probe over MQTT
-sensor 34: !include mqtt_temp3_4.yaml
+#sensor 34: !include mqtt_temp3_4.yaml
 
 # Temperature sensor over MQTT
-sensor 16: !include mqtt_temp4.yaml
+#sensor 16: !include mqtt_temp4.yaml
 
 # Humidity sensor over MQTT
-sensor 17: !include mqtt_hum4.yaml
+#sensor 17: !include mqtt_hum4.yaml
 
 # USB Camera
 #camera: !include camera.yaml
@@ -237,4 +237,7 @@ camera 4: !include generic_cam4.yaml
 switch 8: !include generic_cam4_switch_ptz.yaml
 switch 9: !include generic_cam4_switch_motion.yaml
 input_number: !include generic_cam4_slider_ptz.yaml
+
+sensor x: !include corrected_barometer.yaml
+sensor f: !include temp_probes_1-4_F.yaml
 
