@@ -16,7 +16,7 @@ switch.heat_tapes:
   icon: mdi:radiator
 switch.irrigation_enable:
   icon: mdi:water
-switch.siren__strobe:
+switch.siren_strobe:
   icon: mdi:alarm-light
 sensor.humidity_fr:
   icon: mdi:water-percent
@@ -70,3 +70,24 @@ sensor.temperature_probe_3_f:
   friendly_name: Heat Supply Temperature
 sensor.temperature_probe_4_f:
   friendly_name: Heat Flue Temperature
+switch.l_5:
+  friendly_name: Bird Bath Heater
+  icon: mdi:radiator
+switch.l_11:
+  friendly_name: Family Room Ceiling Fan
+  icon: mdi:fan
+switch.l_9:
+  friendly_name: RF Module
+switch.l_7: {}
+light.g_1:
+  friendly_name: Garage Lights
+light.l_15:
+  friendly_name: Xmas Outdoor Lights
+light.l_14:
+  friendly_name: Xmas Indoor Lights
+light.l_6:
+  friendly_name: Front Yard Flood Light
+light.l_2:
+  friendly_name: Upstairs SE Ceiling Light
+light.l_3:
+  friendly_name: Upstairs NW Ceiling Light

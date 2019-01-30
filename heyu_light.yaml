@@ -1,15 +1,14 @@
 platform: heyu
 devices:
-  - name: Upstairs NW Light
+  - name: L_2
     id: l2
-  - name: Upstairs SE Light
+  - name: L_3
     id: l3
-  - name: Outdoor Flood Lights
+  - name: L_6
     id: l6
-  - name: Xmas Indoor Lights
+  - name: L_14
     id: l14
-  - name: Xmas Outdoor Lights
+  - name: L_15
     id: l15
-  - name: Garage Lights
+  - name: G_1
     id: g1
-

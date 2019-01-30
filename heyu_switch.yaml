@@ -1,12 +1,12 @@
 platform: heyu
 devices:
-  - name: Heat Tapes
+  - name: L_5
     id: l5
-  - name: Wink Power
+  - name: L_7
     id: l7
-  - name: RF Module
+  - name: L_9
     id: l9
-  - name: Family Room Ceiling Fan
+  - name: L_11
     id: l11
 #  - name: Irrigation Enable
 #    id: l16

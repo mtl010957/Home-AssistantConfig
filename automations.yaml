@@ -1,127 +1,134 @@
-- action:
-  - service: homeassistant.turn_off
-    entity_id: switch.house_fan_switch
+- id: '1497804129147'
   alias: Turn off house fan below 80 degrees
-  id: '1497804129147'
   trigger:
   - below: '80'
-    entity_id: sensor.temperature_mbr
+    entity_id: sensor.ah02_th_temperature
     platform: numeric_state
-- action:
-  - service: homeassistant.turn_on
-    entity_id:
-    - switch.foscam_cam1_motion
-    - switch.foscam_cam2_motion
-    - switch.foscam_cam3_motion
-    - switch.generic_cam4_motion
-    - light.outdoor_flood_lights
+  action:
+  - data:
+      entity_id: switch.house_fan_switch
+    service: homeassistant.turn_off
+- id: '1500947016373'
   alias: Camera Motion and Floods On Armed Away
-  id: '1500947016373'
   trigger:
-  - entity_id: alarm_control_panel.3629_alarm
+  - to: armed_away
+    entity_id: alarm_control_panel.3629_alarm
     platform: state
-    to: armed_away
-- action:
-  - service: homeassistant.turn_on
-    entity_id:
-    - switch.foscam_cam1_motion
-    - switch.foscam_cam2_motion
-    - light.outdoor_flood_lights
+  action:
+  - data:
+      entities:
+      - switch.foscam_cam1_motion
+      - switch.foscam_cam2_motion
+      - switch.foscam_cam3_motion
+      - switch.generic_cam4_motion
+      - light.l_6
+    service: homeassistant.turn_on
+- id: '1500947016399'
   alias: Camera Motion and Floods On Armed Night
-  id: '1500947016399'
   trigger:
   - entity_id: alarm_control_panel.3629_alarm
     platform: state
     to: armed_night
-- action:
-  - service: homeassistant.turn_on
-    entity_id:
-    - switch.foscam_cam1_motion
-    - switch.foscam_cam2_motion
+  action:
+  - data:
+      entities:
+      - switch.foscam_cam1_motion
+      - switch.foscam_cam2_motion
+      - light.l_6
+    service: homeassistant.turn_on
+- id: '1500947000000'
   alias: Camera Motion On Armed Home
-  id: '1500947000000'
   trigger:
-  - entity_id: alarm_control_panel.3629_alarm
+  - to: armed_home
+    entity_id: alarm_control_panel.3629_alarm
     platform: state
-    to: armed_home
-- action:
-  - service: homeassistant.turn_off
-    entity_id:
-    - switch.foscam_cam1_motion
-    - switch.foscam_cam2_motion
-    - switch.foscam_cam3_motion
-    - switch.generic_cam4_motion
-    - light.outdoor_flood_lights
+  action:
+  - data:
+      entities:
+      - switch.foscam_cam1_motion
+      - switch.foscam_cam2_motion
+    service: homeassistant.turn_on
+- id: '1500948466889'
   alias: Camera Motion and Floods Off Disarmed
-  id: '1500948466889'
   trigger:
-  - entity_id: alarm_control_panel.3629_alarm
+  - to: disarmed
+    entity_id: alarm_control_panel.3629_alarm
     platform: state
-    to: disarmed
-- action:
-  - service: homeassistant.turn_on
-    entity_id:
-    - switch.generic_cam4_up
+  action:
+  - data:
+      entities:
+      - switch.foscam_cam1_motion
+      - switch.foscam_cam2_motion
+      - switch.foscam_cam3_motion
+      - switch.generic_cam4_motion
+      - light.l_6
+    service: homeassistant.turn_off
+- id: '1800999911110'
   alias: 3629cam4 Up
-  id: '1800999911110'
   trigger:
-  - entity_id: input_number.cam4_up_down
+  - below: '-0.1'
+    entity_id: input_number.cam4_up_down
     platform: numeric_state
-    below: -0.1
-- action:
-  - service: homeassistant.turn_off
-    entity_id:
-    - switch.generic_cam4_up
-    - switch.generic_cam4_down
+  action:
+  - data:
+      entity_id: switch.generic_cam4_up
+    service: homeassistant.turn_on
+- id: '1800999911111'
   alias: 3629cam4 Up Down Stop
-  id: '1800999911111'
   trigger:
-  - entity_id: input_number.cam4_up_down
+  - above: '-0.1'
+    below: '0.1'
+    entity_id: input_number.cam4_up_down
     platform: numeric_state
-    below: 0.1
-    above: -0.1
-- action:
-  - service: homeassistant.turn_on
-    entity_id:
-    - switch.generic_cam4_down
+  action:
+  - data:
+      entities:
+      - switch.generic_cam4_up
+      - switch.generic_cam4_down
+    service: homeassistant.turn_off
+- id: '1800999911112'
   alias: 3629cam4 Down
-  id: '1800999911112'
   trigger:
-  - entity_id: input_number.cam4_up_down
+  - above: '0.1'
+    entity_id: input_number.cam4_up_down
     platform: numeric_state
-    above: 0.1
-- action:
-  - service: homeassistant.turn_on
-    entity_id:
-    - switch.generic_cam4_left
+  action:
+  - data:
+      entity_id: switch.generic_cam4_down
+    service: homeassistant.turn_on
+- id: '1800999911113'
   alias: 3629cam4 Left
-  id: '1800999911113'
   trigger:
-  - entity_id: input_number.cam4_left_right
+  - below: '-0.1'
+    entity_id: input_number.cam4_left_right
     platform: numeric_state
-    below: -0.1
-- action:
-  - service: homeassistant.turn_off
-    entity_id:
-    - switch.generic_cam4_left
-    - switch.generic_cam4_right
+  action:
+  - data:
+      entity_id: switch.generic_cam4_left
+    service: homeassistant.turn_on
+- id: '1800999911114'
   alias: 3629cam4 Left Right Stop
-  id: '1800999911114'
   trigger:
-  - entity_id: input_number.cam4_left_right
+  - above: '-0.1'
+    below: '0.1'
+    entity_id: input_number.cam4_left_right
     platform: numeric_state
-    below: 0.1
-    above: -0.1
-- action:
-  - service: homeassistant.turn_on
-    entity_id:
-    - switch.generic_cam4_right
+  action:
+  - data:
+      entities:
+      - switch.generic_cam4_left
+      - switch.generic_cam4_right
+    service: homeassistant.turn_off
+- id: '1800999911115'
   alias: 3629cam4 Right
-  id: '1800999911115'
   trigger:
-  - entity_id: input_number.cam4_left_right
+  - above: '0.1'
+    entity_id: input_number.cam4_left_right
     platform: numeric_state
-    above: 0.1
+  action:
+  - data:
+      entity_id: switch.generic_cam4_right
+    service: homeassistant.turn_on
 - id: '1533419985023'
   alias: Irrigation Zone 1 Start
   trigger:
@@ -132,10 +139,9 @@
     value_template: '{{ now().month > 4 and now().month < 9 and ''rain'' not in states.sensor.dark_sky_daily_summary.state
       }}'
   action:
-  - service: homeassistant.turn_on
-    entity_id:
-    - switch.relay_11
-    - switch.relay_14
+  - data:
+      entity_id: switch.ah01_rly_1
+    service: homeassistant.turn_off
 - id: '1533419985033'
   alias: Irrigation Zone 1 Stop
   trigger:
@@ -146,10 +152,9 @@
     value_template: '{{ now().month > 4 and now().month < 9 and ''rain'' not in states.sensor.dark_sky_daily_summary.state
       }}'
   action:
-  - service: homeassistant.turn_off
-    entity_id:
-    - switch.relay_11
-    - switch.relay_14
+  - data:
+      entity_id: switch.ah01_rly_1
+    service: homeassistant.turn_off
 - id: '1533419985043'
   alias: Irrigation Zone 3 Start
   trigger:
@@ -160,24 +165,22 @@
     value_template: '{{ now().month > 4 and now().month < 9 and ''rain'' not in states.sensor.dark_sky_daily_summary.state
       }}'
   action:
-  - service: homeassistant.turn_on
-    entity_id:
-    - switch.relay_13
-    - switch.relay_14
+  - data:
+      entity_id: switch.ah01_rly_3
+    service: homeassistant.turn_on
 - id: '1533419985053'
   alias: Irrigation Zone 3 Stop
   trigger:
   - at: 07:50:00
     platform: time
   condition:
-    condition: template
+  - condition: template
     value_template: '{{ now().month > 4 and now().month < 9 and ''rain'' not in states.sensor.dark_sky_daily_summary.state
       }}'
   action:
-  - service: homeassistant.turn_off
-    entity_id:
-    - switch.relay_13
-    - switch.relay_14
+  - data:
+      entity_id: switch.ah01_rly_3
+    service: homeassistant.turn_off
 - id: '1545515732471'
   alias: Floods on at 11:00
   trigger:
@@ -186,7 +189,7 @@
   condition: []
   action:
   - data:
-      entity_id: light.outdoor_flood_lights
+      entity_id: light.l_6
     service: homeassistant.turn_on
 - id: '1545515874358'
   alias: Floods off at 06:00
@@ -196,5 +199,26 @@
   condition: []
   action:
   - data:
-      entity_id: light.outdoor_flood_lights
+      entity_id: light.l_6
+    service: homeassistant.turn_off
+- id: '1548612260526'
+  alias: Irrigation Enable
+  trigger:
+  - platform: template
+    value_template: '{{ now().month > 4 and now().month < 9 and ''rain'' not in states.sensor.dark_sky_daily_summary.state
+      }}'
+  condition: []
+  action:
+  - data:
+      entity: switch.ah01_rly_4
+    service: homeassistant.turn_on
+- id: '1548612882816'
+  alias: Irrigation Disable
+  trigger:
+  - platform: template
+    value_template: '{{ now().month > 4 and now().month < 9 and ''rain'' in states.sensor.dark_sky_daily_summary.state }}'
+  condition: []
+  action:
+  - data:
+      entity: switch.ah01_rly_4
     service: homeassistant.turn_off
