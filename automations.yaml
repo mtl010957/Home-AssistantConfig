@@ -216,9 +216,39 @@
   alias: Irrigation Disable
   trigger:
   - platform: template
-    value_template: '{{ now().month > 4 and now().month < 9 and ''rain'' in states.sensor.dark_sky_daily_summary.state }}'
+    value_template: '{{ now().month > 4 and now().month < 9 and ''rain'' in states.sensor.dark_sky_daily_summary.state
+      }}'
   condition: []
   action:
   - data:
       entity: switch.ah01_rly_4
     service: homeassistant.turn_off
+- id: '1548861516503'
+  alias: Reboot Wink Weekly
+  trigger:
+  - platform: template
+    value_template: '{{ now().weekday() == 0 }}'
+  - at: 02:00:00
+    platform: time
+  condition: []
+  action:
+  - data:
+      entity_id: switch.sb03_relay
+    service: homeassistant.turn_off
+  - delay: 00:01
+  - data:
+      entity_id: switch.sb03_relay
+    service: homeassistant.turn_on
+- id: '1548862723503'
+  alias: Power On Wink
+  trigger:
+  - entity_id: switch.sb03_relay
+    for: 00:02
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data:
+      entity_id: switch.sb03_relay
+    service: homeassistant.turn_on
