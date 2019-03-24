@@ -15,18 +15,21 @@ homeassistant:
    - type: homeassistant
    # uncomment this to enable backwards compatible API password support
    - type: legacy_api_password
+     api_password: !secret http_password
 
   customize: !include customize.yaml
 
 # Logger setup
 logger:
   default: warning
-#  logs:
-#    wink: debug
+  logs:
+    homeassistant.components.mqtt.cover: debug
 
-# Checks for available updates
-updater:
-#  include_used_components: true
+system_health:
+
+person:
+
+default_config:
 
 # Sensor to tell the current available release
 sensor v:
@@ -122,7 +125,7 @@ cloud:
 
 # Security
 http:
-  api_password: !secret http_password
+#  api_password: !secret http_password
 #  base_url: https://mtl-svn.dyndns-home.com:8123
 #  ssl_certificate: /home/homeassistant/ssl/fullchain.pem
 #  ssl_key: /home/homeassistant/ssl/privkey.pem
@@ -158,9 +161,11 @@ group: !include groups.yaml
 
 # MQTT
 mqtt:
-  client_id: HA-3629
+  broker: !secret mqtt_broker
+  client_id: !secret mqtt_client_id
   password: !secret mqtt_password
   discovery: true
+  protocol: 3.1
 
 # Temperature sensor over MQTT
 #sensor 2: !include mqtt_temp1.yaml
@@ -268,4 +273,8 @@ input_number: !include generic_cam4_slider_ptz.yaml
 
 sensor baro: !include corrected_barometer.yaml
 sensor tpf: !include temp_probes_1-4_F.yaml
+
+sensor sys: !include systemmonitor.yaml
+
+sensor cover: !include mqtt_cover_sensors.yaml
 

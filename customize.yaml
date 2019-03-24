@@ -82,12 +82,17 @@ switch.l_7: {}
 light.g_1:
   friendly_name: Garage Lights
 light.l_15:
-  friendly_name: Xmas Outdoor Lights
+  friendly_name: Outdoor Christmas Lights
 light.l_14:
-  friendly_name: Xmas Indoor Lights
+  friendly_name: Indoor Christmas Lights
 light.l_6:
   friendly_name: Front Yard Flood Light
 light.l_2:
   friendly_name: Upstairs SE Ceiling Light
 light.l_3:
   friendly_name: Upstairs NW Ceiling Light
+cover.nm01_sv1_cover_2: {}
+cover.nm01_sv1_cover: {}
+cover.nm02_sv1_cover: {}
+sensor.nm02_sv1_cover_tilt:
+  friendly_name: Family Room Blinds NW-SE Tilt

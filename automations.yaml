@@ -11,17 +11,24 @@
 - id: '1500947016373'
   alias: Camera Motion and Floods On Armed Away
   trigger:
-  - to: armed_away
-    entity_id: alarm_control_panel.3629_alarm
+  - entity_id: alarm_control_panel.3629_alarm
     platform: state
+    to: armed_away
   action:
   - data:
-      entities:
-      - switch.foscam_cam1_motion
-      - switch.foscam_cam2_motion
-      - switch.foscam_cam3_motion
-      - switch.generic_cam4_motion
-      - light.l_6
+      entities: switch.foscam_cam1_motion
+    service: homeassistant.turn_on
+  - data:
+      entity_id: switch.foscam_cam2_motion
+    service: homeassistant.turn_on
+  - data:
+      entity_id: switch.foscam_cam3_motion
+    service: homeassistant.turn_on
+  - data:
+      entity_id: switch.generic_cam4_motion
+    service: homeassistant.turn_on
+  - data:
+      entity_id: light.l_6
     service: homeassistant.turn_on
 - id: '1500947016399'
   alias: Camera Motion and Floods On Armed Night
@@ -31,37 +38,48 @@
     to: armed_night
   action:
   - data:
-      entities:
-      - switch.foscam_cam1_motion
-      - switch.foscam_cam2_motion
-      - light.l_6
+      entity_id: switch.foscam_cam1_motion
+    service: homeassistant.turn_on
+  - data:
+      entity_id: switch.foscam_cam2_motion
+    service: homeassistant.turn_on
+  - data:
+      entity_id: light.l_6
     service: homeassistant.turn_on
 - id: '1500947000000'
   alias: Camera Motion On Armed Home
   trigger:
-  - to: armed_home
-    entity_id: alarm_control_panel.3629_alarm
+  - entity_id: alarm_control_panel.3629_alarm
     platform: state
+    to: armed_home
   action:
   - data:
-      entities:
-      - switch.foscam_cam1_motion
-      - switch.foscam_cam2_motion
+      entity_id: switch.foscam_cam1_motion
+    service: homeassistant.turn_on
+  - data:
+      entity_id: switch.foscam_cam2_motion
     service: homeassistant.turn_on
 - id: '1500948466889'
   alias: Camera Motion and Floods Off Disarmed
   trigger:
-  - to: disarmed
-    entity_id: alarm_control_panel.3629_alarm
+  - entity_id: alarm_control_panel.3629_alarm
     platform: state
+    to: disarmed
   action:
   - data:
-      entities:
-      - switch.foscam_cam1_motion
-      - switch.foscam_cam2_motion
-      - switch.foscam_cam3_motion
-      - switch.generic_cam4_motion
-      - light.l_6
+      entity_id: switch.foscam_cam1_motion
+    service: homeassistant.turn_off
+  - data:
+      entity_id: switch.foscam_cam2_motion
+    service: homeassistant.turn_off
+  - data:
+      entity_id: switch.foscam_cam3_motion
+    service: homeassistant.turn_off
+  - data:
+      entity_id: switch.generic_cam4_motion
+    service: homeassistant.turn_off
+  - data:
+      entity_id: light.l_6
     service: homeassistant.turn_off
 - id: '1800999911110'
   alias: 3629cam4 Up
@@ -82,9 +100,10 @@
     platform: numeric_state
   action:
   - data:
-      entities:
-      - switch.generic_cam4_up
-      - switch.generic_cam4_down
+      entity_id: switch.generic_cam4_up
+    service: homeassistant.turn_off
+  - data:
+      entity_id: switch.generic_cam4_down
     service: homeassistant.turn_off
 - id: '1800999911112'
   alias: 3629cam4 Down
@@ -115,9 +134,10 @@
     platform: numeric_state
   action:
   - data:
-      entities:
-      - switch.generic_cam4_left
-      - switch.generic_cam4_right
+      entity_id: switch.generic_cam4_left
+    service: homeassistant.turn_off
+  - data:
+      entity_id: switch.generic_cam4_right
     service: homeassistant.turn_off
 - id: '1800999911115'
   alias: 3629cam4 Right
@@ -182,7 +202,7 @@
       entity_id: switch.ah01_rly_3
     service: homeassistant.turn_off
 - id: '1545515732471'
-  alias: Floods on at 11:00
+  alias: Floods on at 11:00 PM
   trigger:
   - at: '23:00'
     platform: time
@@ -192,7 +212,7 @@
       entity_id: light.l_6
     service: homeassistant.turn_on
 - id: '1545515874358'
-  alias: Floods off at 06:00
+  alias: Floods off at 06:00 AM
   trigger:
   - at: 06:00
     platform: time
@@ -252,3 +272,54 @@
   - data:
       entity_id: switch.sb03_relay
     service: homeassistant.turn_on
+- id: '1552222922150'
+  alias: Open Blinds at Sunrise
+  trigger:
+  - event: sunrise
+    platform: sun
+  condition: []
+  action:
+  - data:
+      entity_id: cover.nm01_sv1_cover
+    service: cover.open_cover_tilt
+  - data:
+      entity_id: cover.nm02_sv1_cover
+    service: cover.open_cover_tilt
+  - delay: 00:00:03
+  - data:
+      entity_id: cover.nm01_sv1_cover
+      tilt_position: 45
+    service: cover.set_cover_tilt_position
+  - data:
+      entity_id: cover.nm03_sv1_cover
+    service: cover.open_cover_tilt
+- id: '1552245394001'
+  alias: Close Blinds at 11:00 PM
+  trigger:
+  - at: '23:00'
+    platform: time
+  condition: []
+  action:
+  - data:
+      entity_id: cover.nm01_sv1_cover
+    service: cover.close_cover_tilt
+- id: '1552938556370'
+  alias: Grow Lamp on at 06:00 AM
+  trigger:
+  - at: 06:00:00
+    platform: time
+  condition: []
+  action:
+  - data:
+      entity_id: switch.sb04_relay
+    service: switch.turn_on
+- id: '1552938778764'
+  alias: Grow Lamp off at 08:00 PM
+  trigger:
+  - at: '20:00:00'
+    platform: time
+  condition: []
+  action:
+  - data:
+      entity_id: switch.sb04_relay
+    service: switch.turn_off

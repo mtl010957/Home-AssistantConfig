@@ -1,0 +1,10 @@
+- platform: mqtt
+  name: "NM01_SV1 Cover Tilt Position"
+  state_topic: nm01_sv1/cover/nm01_sv1_cover/tilt/state
+- platform: mqtt
+  name: "NM02_SV1 Cover Tilt Position"
+  state_topic: nm02_sv1/cover/nm02_sv1_cover/tilt/state
+- platform: mqtt
+  name: "NM03_SV1 Cover Tilt Position"
+  state_topic: nm03_sv1/cover/nm03_sv1_cover/tilt/state
+

@@ -1,0 +1,9 @@
+- platform: mqtt
+  name: "NM01_SV1 Cover"
+  tilt_command_topic: nm01_sv1/cover/nm01_sv1_cover/tilt
+  tilt_status_topic: nm01_sv1/cover/nm01_sv1_cover/tilt-state
+  tilt_min: 0
+  tilt_max: 100
+  tilt_closed_value: 10
+  tilt_opened_value: 60
+
