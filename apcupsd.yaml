@@ -3,10 +3,8 @@ platform: apcupsd
 resources:
   - bcharge
   - battv
-  - nombattv
   - loadpct
   - linev
-  - nominv
   - numxfers
   - status
   - timeleft

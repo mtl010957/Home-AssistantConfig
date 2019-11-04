@@ -14,8 +14,6 @@ switch.house_fan_switch:
   icon: mdi:fan
 switch.heat_tapes:
   icon: mdi:radiator
-switch.irrigation_enable:
-  icon: mdi:water
 switch.siren_strobe:
   icon: mdi:alarm-light
 sensor.humidity_fr:
@@ -44,16 +42,16 @@ switch.generic_cam4_left:
   icon: mdi:arrow-left
 switch.generic_cam4_right:
   icon: mdi:arrow-right
-switch.ah01_rly_1:
+switch.ah01_rly4_1:
+  friendly_name: Irrigation Back
   icon: mdi:water
-  friendly_name: Irrigation Front
-switch.ah01_rly_2:
+switch.ah01_rly4_2:
   icon: mdi:water
   friendly_name: Irrigation Unused
-switch.ah01_rly_3:
+switch.ah01_rly4_3:
+  friendly_name: Irrigation Front
   icon: mdi:water
-  friendly_name: Irrigation Back
-switch.ah01_rly_4:
+switch.ah01_rly4_4:
   icon: mdi:water
   friendly_name: Irrigation Enable
 switch.desert_living_room_camera:
@@ -78,7 +76,6 @@ switch.l_11:
   icon: mdi:fan
 switch.l_9:
   friendly_name: RF Module
-switch.l_7: {}
 light.g_1:
   friendly_name: Garage Lights
 light.l_15:
@@ -86,13 +83,12 @@ light.l_15:
 light.l_14:
   friendly_name: Indoor Christmas Lights
 light.l_6:
-  friendly_name: Front Yard Flood Light
-light.l_2:
-  friendly_name: Upstairs SE Ceiling Light
-light.l_3:
-  friendly_name: Upstairs NW Ceiling Light
-cover.nm01_sv1_cover_2: {}
-cover.nm01_sv1_cover: {}
-cover.nm02_sv1_cover: {}
-sensor.nm02_sv1_cover_tilt:
-  friendly_name: Family Room Blinds NW-SE Tilt
+  friendly_name: Front Yard
+camera.3629_cam_1:
+  friendly_name: Front Door
+camera.3629_cam_2:
+  friendly_name: Back Door
+camera.3629_cam_3:
+  friendly_name: Family Room
+camera.3629_cam_4:
+  friendly_name: Living Room

@@ -1,9 +1,5 @@
 platform: heyu
 devices:
-  - name: L_2
-    id: l2
-  - name: L_3
-    id: l3
   - name: L_6
     id: l6
   - name: L_14
