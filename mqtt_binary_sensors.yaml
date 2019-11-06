@@ -1,0 +1,41 @@
+- platform: mqtt
+  name: "X10 G1 Command"
+  state_topic: "X10/G1"
+  payload_on: "On"
+  payload_off: "Off"
+- platform: mqtt
+  name: "X10 G2 Command"
+  state_topic: "X10/G2"
+  payload_on: "On"
+  payload_off: "Off"
+- platform: mqtt
+  name: "X10 L10 Command"
+  state_topic: "X10/L10"
+  payload_on: "On"
+  payload_off: "Off"
+- platform: mqtt
+  name: "X10 L11 Command"
+  state_topic: "X10/L11"
+  payload_on: "On"
+  payload_off: "Off"
+- platform: mqtt
+  name: "X10 L12 Command"
+  state_topic: "X10/L12"
+  payload_on: "On"
+  payload_off: "Off"
+- platform: mqtt
+  name: "X10 L13 Command"
+  state_topic: "X10/L13"
+  payload_on: "On"
+  payload_off: "Off"
+- platform: mqtt
+  name: "X10 L14 Command"
+  state_topic: "X10/L14"
+  payload_on: "On"
+  payload_off: "Off"
+- platform: mqtt
+  name: "X10 L15 Command"
+  state_topic: "X10/L15"
+  payload_on: "On"
+  payload_off: "Off"
+

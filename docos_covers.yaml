@@ -1,0 +1,40 @@
+- platform: mqtt
+  name: "Template Cover"
+  command_topic: esphome/cover/esphome_cover/command
+- platform: mqtt
+  name: "Position Cover"
+  command_topic: esphome/cover/esphome_cover/command
+  set_position_topic: esphome/cover/esphome_cover/position/command
+  position_topic: esphome/cover/esphome_cover/position/state
+  position_open: 100
+  position_closed: 0
+  optimistic: true
+- platform: mqtt
+  name: "Tilt Cover"
+  tilt_command_topic: esphome/cover/esphome_cover/tilt/command
+  tilt_status_topic: esphome/cover/esphome_cover/tilt/state
+  tilt_max: 100
+  tilt_min: 0
+  tilt_opened_value: 100
+  tilt_closed_value: 0
+  tilt_invert_state: false
+  optimistic: true
+- platform: mqtt
+  name: "Position and Tilt Cover"
+  command_topic: esphome/cover/esphome_cover/command
+  set_position_topic: esphome/cover/esphome_cover/position/command
+  position_topic: esphome/cover/esphome_cover/position/state
+  position_open: 100
+  position_closed: 0
+  tilt_command_topic: esphome/cover/esphome_cover/tilt/command
+  tilt_status_topic: esphome/cover/esphome_cover/tilt/state
+  tilt_max: 100
+  tilt_min: 0
+  tilt_opened_value: 100
+  tilt_closed_value: 0
+  tilt_invert_state: false
+  optimistic: true
+
+
+
+

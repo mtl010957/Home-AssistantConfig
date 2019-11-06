@@ -1,0 +1,30 @@
+google_actions:
+  filter:
+    exclude_entities:
+      - climate.thermostat
+      - light.bedside_light_bulb
+      - light.garage_attic
+      - light.guest_room_light_bulb
+      - light.family_room_lamp_bulb_1
+      - light.family_room_lamp_bulb_2
+      - light.dining_room_light
+      - light.office_light_bulb
+      - light.family_room_nw_ceiling_light
+      - light.family_room_se_ceiling_light
+      - light.living_room_dimmer
+      - switch.living_room_lamp_outlet
+      - switch.smart_plug_isp6x
+      - switch.house_fan_switch
+      - switch.desert_front_porch_camera
+      - switch.desert_living_room_camera
+      - switch.generic_cam4_down
+      - switch.generic_cam4_left
+      - switch.generic_cam4_right
+      - switch.generic_cam4_up
+      - group.michael
+      - group.susan
+      - group.family
+      - group.all_switches
+      - media_player.mini
+      - media_player.bedroom_tv
+
