@@ -34,7 +34,7 @@ script: !include scripts.yaml
 group: !include groups.yaml
 
 # Scenes in directory
-scene: !include_dir_list scenes
+scene: !include scenes.yaml
 
 # NEW streaming support
 stream:
