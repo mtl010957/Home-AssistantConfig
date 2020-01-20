@@ -1,0 +1,23 @@
+- platform: template
+  sensors:
+    nm15_t4_0xdc000008e3b1ab28_f:
+      friendly_name: "Heat NW Zone Return Temperature"
+      unit_of_measurement: 'ºF'
+      value_template: "{{ (states('sensor.nm15_t4_0xdc000008e3b1ab28') | float * 9.0/5.0+32.0) | round(1) }}"
+      icon_template: "mdi:thermometer"
+    nm15_t4_0xde000008e2b6af28_f:
+      friendly_name: "Heat SE Zone Return Temperature"
+      unit_of_measurement: 'ºF'
+      value_template: "{{ (states('sensor.nm15_t4_0xde000008e2b6af28') | float * 9.0/5.0+32.0) | round(1) }}"
+      icon_template: "mdi:thermometer"
+    nm15_t4_0xc400000a01299728_f:
+      friendly_name: "Heat Supply Temperature"
+      unit_of_measurement: 'ºF'
+      value_template: "{{ (states('sensor.nm15_t4_0xc400000a01299728') | float * 9.0/5.0+32.0) | round(1) }}"
+      icon_template: "mdi:thermometer"
+    nm15_t4_0x7b00000a00bbb128_f:
+      friendly_name: "Heat Flue Temperature"
+      unit_of_measurement: 'ºF'
+      value_template: "{{ (states('sensor.nm15_t4_0x7b00000a00bbb128') | float * 9.0/5.0+32.0) | round(1) }}"
+      icon_template: "mdi:thermometer"
+

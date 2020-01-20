@@ -1,5 +1,5 @@
 - id: '1497804129147'
-  alias: Turn off house fan below 80 degrees
+  alias: House fan off below 80 degrees
   trigger:
   - below: '80'
     entity_id: sensor.ah02_th_temperature
@@ -161,24 +161,24 @@
     platform: time
   condition:
   - condition: state
-    entity_id: switch.ah01_rly4_4
+    entity_id: switch.nm14_rly4_4
     state: 'on'
   action:
   - data:
-      entity_id: switch.ah01_rly4_1
+      entity_id: switch.nm14_rly4_1
     service: switch.turn_on
   - delay: '{{ states(''input_number.zone1_run_minutes'') | multiply(60) | timestamp_custom(''%H:%M:%S'',False)
       }}'
   - data:
-      entity_id: switch.ah01_rly4_1
+      entity_id: switch.nm14_rly4_1
     service: switch.turn_off
   - data:
-      entity_id: switch.ah01_rly4_3
+      entity_id: switch.nm14_rly4_3
     service: switch.turn_on
   - delay: '{{ states(''input_number.zone3_run_minutes'') | multiply(60) | timestamp_custom(''%H:%M:%S'',False)
       }}'
   - data:
-      entity_id: switch.ah01_rly4_3
+      entity_id: switch.nm14_rly4_3
     service: switch.turn_off
 - id: '1545515732471'
   alias: Floods on at 11:00 PM
@@ -191,9 +191,9 @@
       entity_id: light.l_6
     service: light.turn_on
 - id: '1545515874358'
-  alias: Floods off at 06:00 AM
+  alias: Floods off at 04:30 AM
   trigger:
-  - at: 06:00
+  - at: 04:30
     platform: time
   condition: []
   action:
@@ -209,7 +209,7 @@
   condition: []
   action:
   - data:
-      entity_id: switch.ah01_rly4_4
+      entity_id: switch.nm14_rly4_4
     service: switch.turn_on
 - id: '1548612882816'
   alias: Irrigation Disable
@@ -221,7 +221,7 @@
   condition: []
   action:
   - data:
-      entity_id: switch.ah01_rly4_4
+      entity_id: switch.nm14_rly4_4
     service: switch.turn_off
 - id: '1548861516503'
   alias: Reboot Wink Weekly
@@ -253,9 +253,10 @@
       entity_id: switch.sb03_relay
     service: homeassistant.turn_on
 - id: '1552222922150'
-  alias: Open Blinds at Sunrise
+  alias: Open Blinds at Dawn
   trigger:
   - event: sunrise
+    offset: -00:20:00
     platform: sun
   condition: []
   action:
@@ -570,3 +571,102 @@
       message: The UPS has come back ONLINE
       title: UPS ONINE
     service: notify.notify
+- id: '1576173820669'
+  alias: Bird bath heater off at sunset
+  description: ''
+  trigger:
+  - event: sunset
+    platform: sun
+  condition:
+  - condition: state
+    entity_id: switch.l_5
+    state: 'on'
+  action:
+  - alias: ''
+    data: {}
+    entity_id: switch.l_5
+    service: switch.turn_off
+- id: '1576174004779'
+  alias: Bird bath heater off above 32 degrees
+  description: ''
+  trigger:
+  - above: '32'
+    entity_id: sensor.dark_sky_temperature
+    platform: numeric_state
+  condition:
+  - condition: state
+    entity_id: switch.l_5
+    state: 'on'
+  action:
+  - data: {}
+    entity_id: switch.l_5
+    service: switch.turn_off
+- id: '1576174236299'
+  alias: Bird bath heater on below freezing daytime
+  description: ''
+  trigger:
+  - below: '32'
+    entity_id: sensor.dark_sky_temperature
+    platform: numeric_state
+  condition:
+  - after: sunrise
+    before: sunset
+    condition: sun
+  - condition: state
+    entity_id: switch.l_5
+    state: 'off'
+  action:
+  - data: {}
+    entity_id: switch.l_5
+    service: switch.turn_on
+- id: '1576243291952'
+  alias: Bird bath heater on at sunrise below freezing
+  description: ''
+  trigger:
+  - event: sunrise
+    platform: sun
+  condition:
+  - below: '32'
+    condition: numeric_state
+    entity_id: sensor.dark_sky_temperature
+  action:
+  - entity_id: switch.l_5
+    service: switch.turn_on
+- id: '1578535843455'
+  alias: Garage latch off when door open
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.garage_door
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - entity_id: switch.nm08_sv1_latch_servo
+    service: switch.turn_off
+- id: '1578620613401'
+  alias: Humidifier off above set point
+  description: ''
+  trigger:
+  - above: '0'
+    entity_id: sensor.ah02_th_humidity
+    platform: numeric_state
+    value_template: '{{ states(''sensor.ah02_th_humidity'') | float - states(''input_number.humidifier_off'')
+      | float }}'
+  condition: []
+  action:
+  - entity_id: switch.sb05_relay
+    service: switch.turn_off
+- id: '1578620814432'
+  alias: Humidifier on below set point
+  description: ''
+  trigger:
+  - below: '0'
+    entity_id: sensor.ah02_th_humidity
+    platform: numeric_state
+    value_template: '{{ states(''sensor.ah02_th_humidity'') | float - states(''input_number.humidifier_on'')
+      | float }}'
+  condition: []
+  action:
+  - entity_id: switch.sb05_relay
+    service: switch.turn_on

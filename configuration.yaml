@@ -71,22 +71,13 @@ logbook:
 # Enables the frontend
 frontend:
   javascript_version: latest
+  themes: !include_dir_merge_named themes
 
 # Enables support for tracking state changes over time.
-history:
+history: !include history.yaml
 
 # Enables support for tracking state changes over time.
-recorder:
-  purge_interval: 1
-  purge_keep_days: 14
-  db_url: !secret recorder_db_url
-  exclude:
-    domains:
-      - automation
-    entities:
-      - sun.sun # Don't record sun data
-      - persistent_notification.invalid_config
-      - sensor.date
+recorder: !include recorder.yaml
 
   # Delete events and states older than 4 weeks
 #  purge_days: 28
@@ -203,7 +194,7 @@ switch c4a: !include generic_cam4_switch_ptz.yaml
 switch c4b: !include generic_cam4_switch_motion.yaml
 
 sensor baro: !include corrected_barometer.yaml
-sensor tpf: !include temp_probes_1-4_F.yaml
+sensor tpf: !include temp_probes_F.yaml
 
 sensor cover: !include mqtt_cover_sensors.yaml
 
