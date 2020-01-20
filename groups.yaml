@@ -1,15 +1,7 @@
 # If you name an entry default_view it will REPLACE the contents of the "Home" tab
-michael:
-  name: Michael
-  entities:
-    - device_tracker.404e3688ee93
-susan:
-  name: Susan
-  entities:
-    - device_tracker.30636b8f4165
 family:
   name: Family
   entities:
-    - group.michael
-    - group.susan
+    - person.michael
+    - person.susan
 
