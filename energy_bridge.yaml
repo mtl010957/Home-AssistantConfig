@@ -1,3 +1,0 @@
-platform: dte_energy_bridge
-ip: !secret dte_energy_bridge_ip
-version: 2

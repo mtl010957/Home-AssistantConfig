@@ -1,5 +1,0 @@
-name: "3629 Back Patio Camera"
-entities:
-  - camera.3629_cam_1
-  - switch.foscam_cam1_motion
-

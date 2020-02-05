@@ -1,6 +1,0 @@
-platform: mqtt
-name: "Barometer FR"
-state_topic: "sensor/1/barometer/inchHg"
-qos: 0
-unit_of_measurement: "inHg"
-

@@ -1,37 +1,59 @@
 homeassistant:
-  # Name of the location where Home Assistant is running
-#  name: Home
-  # Location required to calculate the time the sun rises and sets
-#  latitude: !secret home_latitude
-#  longitude: !secret home_longitude
-#  elevation: !secret home_elevation
-  # Pick yours from here - http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-#  time_zone: !secret home_time_zone
-  # imperial for US units
-#  unit_system: imperial
-
-  # add this part
-  auth_providers:
-   - type: homeassistant
-   # uncomment this to enable backwards compatible API password support
-#   - type: legacy_api_password
-#     api_password: !secret http_password
-
   customize: !include customize.yaml
 
-map:
-
-# NEW configuration panels
-config:
-
-# NEW automation configuration panels
+default_config:
+# Stuff that is included by default_config:
 automation: !include automations.yaml
-
-# NEW script editor
+#cloud:
+#config:
+frontend:
+  javascript_version: latest
+  themes: !include_dir_merge_named themes
+history: !include history.yaml
+#logbook:
+#map:
+#mobile_app:
+#person:
 script: !include scripts.yaml
+#ssdp:
+#sun:
+#system_health:
+#updater:
+#zeroconf:
+
+# APC UPS Daemon
+apcupsd:
+
+# Allows you to issue voice commands from the frontend
+conversation:
+
+# Discover some devices automatically
+discovery:
 
 # Groups (all in customize now)
 group: !include groups.yaml
+
+# X10 over Heyu "hub"
+heyu: !include heyu.yaml
+
+# Security
+http:
+
+# IFTTT channel using Maker
+ifttt: !include ifttt.yaml
+
+# Logger setup
+logger: !include logger.yaml
+
+# Manual integrations
+# MQTT
+mqtt: !include mqtt.yaml
+
+# Nest Stuff
+nest: !include nest.yaml
+
+# Enables support for tracking state changes over time.
+recorder: !include recorder.yaml
 
 # Scenes in directory
 scene: !include scenes.yaml
@@ -39,187 +61,45 @@ scene: !include scenes.yaml
 # NEW streaming support
 stream:
 
-# Cloud connectivity
-#cloud: !include cloud.yaml
-cloud:
-
-# Security
-http:
-#  api_password: !secret http_password
-#  base_url: https://mtl-svn.dyndns-home.com:8123
-#  ssl_certificate: /home/homeassistant/ssl/fullchain.pem
-#  ssl_key: /home/homeassistant/ssl/privkey.pem
-
-# Logger setup
-logger:
-  default: warning
-#  logs:
-#    homeassistant.components.zha: debug
-#    zigpy: debug
-#    zigpy_xbee: debug
-#    zigpy_xbee.api: debug
-#    zigpy_xbee.uart: debug
-#    zigpy_xbee.zigbee.application: debug
-
-system_health:
-
-person:
-
-# View all events in a logbook
-logbook:
-
-# Enables the frontend
-frontend:
-  javascript_version: latest
-  themes: !include_dir_merge_named themes
-
-# Enables support for tracking state changes over time.
-history: !include history.yaml
-
-# Enables support for tracking state changes over time.
-recorder: !include recorder.yaml
-
-  # Delete events and states older than 4 weeks
-#  purge_days: 28
-
-# Allows you to issue voice commands from the frontend
-conversation:
-
-# Discover some devices automatically
-discovery:
-zeroconf:
-ssdp:
-
-# Track the sun
-sun:
-
-# Sensor to tell the current available release
-sensor version:
-  - platform: version
-    source: pypi
-
-sensor dns:
-  - platform: dnsip
-
-sensor cert:
-  - platform: cert_expiry
-    host: mtl-svn.dyndns-home.com
-
-# Make date available for automations
-sensor date:
-  - platform: time_date
-    display_options:
-      - 'date'
-sensor sys: !include systemmonitor.yaml
-
-# MQTT
-mqtt:
-  broker: !secret mqtt_broker
-  client_id: !secret mqtt_client_id
-  password: !secret mqtt_password
-  discovery: true
-  protocol: 3.1
-
-# IFTTT channel using Maker
-ifttt: !include ifttt.yaml
-
-# APC UPS Daemon
-apcupsd:
-sensor apcups: !include apcupsd.yaml
-binary_sensor apcups: !include apcupsd_binary_sensor.yaml
-
 # Wink
-wink:
-  local_control: true
-
-# Nest Stuff
-nest: !include nest.yaml
+wink: !include wink.yaml
 
 # ZWave
-zwave:
-  usb_path: /dev/ttyACM0
-#  device_config: !include zwave_device_config.yaml
+zwave: !include zwave.yaml
 
-# Device tracking
-device_tracker: !include nmap_tracker.yaml
+# Various manually defined devices
+# Alarm panel
+alarm_control_panel: !include alarm_control_panel.yaml
+
+binary_sensor: !include_dir_merge_list binary_sensor
+
+camera: !include_dir_merge_list camera
 
 # Honeywell Thermostat
 climate: !include climate.yaml
 
-# X10 over Heyu "hub"
-heyu: !include heyu.yaml
+# Device tracking
+device_tracker: !include device_tracker.yaml
 
-# X10 Lights over Heyu
-light heyu: !include heyu_light.yaml
+fan: !include_dir_merge_list fan
 
-# X10 Switches over Heyu
-switch heyu: !include heyu_switch.yaml
+# HDHomeRun integration in HACS
+hdhomerun:
 
-# DarkSky sensor
-sensor darksky: !include darksky_sensor.yaml
+input_number: !include_dir_merge_named input_number
 
-# DarkSky weather
-weather: !include darksky_weather.yaml
+light: !include_dir_merge_list light
 
 # HTML5 Push Notifications
 notify: !include notify.yaml
 
+sensor: !include_dir_merge_list sensor
+
+switch: !include_dir_merge_list switch
+
+# DarkSky weather
+weather: !include_dir_merge_list weather
+
 # Weblinks for cameras
 weblink: !include weblinks.yaml
-
-# Foscam IP Camera 1
-camera c1: !include foscam_cam1.yaml
-switch c1: !include foscam_cam1_switch.yaml
-
-# Foscam IP Camera 2
-camera c2: !include foscam_cam2.yaml
-switch c2: !include foscam_cam2_switch.yaml
-
-# Foscam IP Camera 3
-camera c3: !include foscam_cam3.yaml
-switch c3: !include foscam_cam3_switch.yaml
-
-# Alarm panel
-alarm_control_panel: !include alarm_panel.yaml
-
-# Desert Front Porch Camera Control
-switch df: !include desert_front_porch_camera_switch.yaml
-
-# Desert Living Room Camera Control
-switch dl: !include desert_living_room_camera_switch.yaml
-
-# Generic iSmart IP camera
-camera c4: !include generic_cam4.yaml
-switch c4a: !include generic_cam4_switch_ptz.yaml
-switch c4b: !include generic_cam4_switch_motion.yaml
-
-sensor baro: !include corrected_barometer.yaml
-sensor tpf: !include temp_probes_F.yaml
-
-sensor cover: !include mqtt_cover_sensors.yaml
-
-sensor dte: !include dte_mqtt_sensor.yaml
-
-fan fr: !include family_room_ceiling_fan.yaml
-
-fan house: !include house_fan.yaml
-
-input_number: !include input_number.yaml
-
-#cover: !include docos_covers.yaml
-
-#cover mqtt: !include cover.yaml
-
-# Zigbee
-#zha: !include zha_config.yaml
-
-# TUYA
-#tuya: !include tuya.yaml
-
-# Binary Sensor for various MQTT connected devices
-binary_sensor mqtt: !include mqtt_binary_sensors.yaml
-
-# Binary Sensor for GoControl Door Sensors
-binary_sensor gocontrol: !include gocontrol_binary_sensors.yaml
-
 

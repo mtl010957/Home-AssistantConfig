@@ -1,9 +1,0 @@
-platform: x10
-devices:
-  - name: Heat Tapes
-    id: l5
-  - name: Family Room Ceiling Fan
-    id: l11
-  - name: Irrigation Enable
-    id: l16
-

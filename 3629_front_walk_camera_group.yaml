@@ -1,5 +1,0 @@
-name: "3629 Front Walk Camera"
-entities:
-  - camera.3629_cam_2
-  - switch.foscam_cam2_motion
-

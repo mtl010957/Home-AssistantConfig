@@ -1,7 +1,0 @@
-platform: mqtt
-name: "Relay 1-4"
-command_topic: "relay/1/4/set"
-state_topic: "relay/1/4/state"
-payload_on: "on"
-payload_off: "off"
-retain: true

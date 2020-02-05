@@ -253,7 +253,7 @@
       entity_id: switch.sb03_relay
     service: homeassistant.turn_on
 - id: '1552222922150'
-  alias: Open Blinds at Dawn
+  alias: Blinds Open at Dawn
   trigger:
   - event: sunrise
     offset: -00:20:00
@@ -276,7 +276,7 @@
       entity_id: cover.nm05_sv1_cover
     service: cover.open_cover_tilt
 - id: '1552245394001'
-  alias: Close Blinds at 11:00 PM
+  alias: Blinds Close at 11:00 PM
   trigger:
   - at: '23:00'
     platform: time
@@ -392,7 +392,7 @@
       speed: low
     service: fan.set_speed
 - id: '1563648409962'
-  alias: Arm Night
+  alias: Security Arm Night
   trigger:
   - at: '23:00:00'
     platform: time
@@ -408,7 +408,7 @@
       entity_id: all
     service: alarm_control_panel.alarm_arm_night
 - id: '1563648489927'
-  alias: Disarm Home Morning
+  alias: Security Disarm Home Morning
   trigger:
   - at: 06:00:00
     platform: time
@@ -424,7 +424,7 @@
       entity_id: all
     service: alarm_control_panel.alarm_disarm
 - id: '1563648590512'
-  alias: Arm Away
+  alias: Security Arm Away
   trigger:
   - entity_id: group.family
     from: home
@@ -436,7 +436,7 @@
       entity_id: all
     service: alarm_control_panel.alarm_arm_away
 - id: '1563648678608'
-  alias: Disarm Return Home
+  alias: Security Disarm Return Home
   trigger:
   - entity_id: group.family
     from: not_home
@@ -649,9 +649,9 @@
   description: ''
   trigger:
   - above: '0'
-    entity_id: sensor.ah02_th_humidity
+    entity_id: sensor.nm11_th_humidity
     platform: numeric_state
-    value_template: '{{ states(''sensor.ah02_th_humidity'') | float - states(''input_number.humidifier_off'')
+    value_template: '{{ states(''sensor.nm11_th_humidity'') | float - states(''input_number.humidifier_off'')
       | float }}'
   condition: []
   action:
@@ -662,9 +662,9 @@
   description: ''
   trigger:
   - below: '0'
-    entity_id: sensor.ah02_th_humidity
+    entity_id: sensor.nm11_th_humidity
     platform: numeric_state
-    value_template: '{{ states(''sensor.ah02_th_humidity'') | float - states(''input_number.humidifier_on'')
+    value_template: '{{ states(''sensor.nm11_th_humidity'') | float - states(''input_number.humidifier_on'')
       | float }}'
   condition: []
   action:

@@ -1,6 +1,0 @@
-platform: mqtt
-name: "Temperature Probe 3"
-state_topic: "sensor/3/289729010A0000C4/temperature/degreeFahrenheit"
-qos: 0
-unit_of_measurement: "ºF"
-

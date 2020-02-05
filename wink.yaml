@@ -1,6 +1,1 @@
-# Wink
-#access_token: <token>
-#refresh_token: <token>
-#email: !secret wink_email
-#password: !secret wink_password
 local_control: True
