@@ -1,0 +1,17 @@
+humidifier_off:
+  name: "Humidifier Off Humidity"
+  icon: mdi:water-percent
+  min: 20
+  max: 40
+  step: 1
+  mode: box
+  unit_of_measurement: '%'
+humidifier_on:
+  name: "Humidifier On Humidity"
+  icon: mdi:water-percent
+  min: 20
+  max: 40
+  step: 1
+  mode: box
+  unit_of_measurement: '%'
+

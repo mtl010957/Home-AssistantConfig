@@ -1,0 +1,15 @@
+zone1_run_minutes:
+  name: "Zone 1 Run Minutes"
+  icon: mdi:clock-start
+  min: 0
+  max: 120
+  step: 5
+  mode: box
+zone3_run_minutes:
+  name: "Zone 3 Run Minutes"
+  icon: mdi:clock-start
+  min: 0
+  max: 120
+  step: 5
+  mode: box
+

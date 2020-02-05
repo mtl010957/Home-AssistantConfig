@@ -1,0 +1,11 @@
+- platform: command_line
+  switches:
+    #Switch for iSmart Motion Detection
+    generic_cam4_motion:
+      friendly_name: "3629Cam4 Motion Enable"
+      command_on: '/home/homeassistant/.homeassistant/scripts/c4_motion.sh on'
+      command_off: '/home/homeassistant/.homeassistant/scripts/c4_motion.sh off'
+      command_state: '/home/homeassistant/.homeassistant/scripts/c4_motion.sh'
+      value_template: '{{ value == "1" }}'
+
+

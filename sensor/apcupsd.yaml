@@ -1,0 +1,11 @@
+# APC UPS Daemon
+- platform: apcupsd
+  resources:
+    - bcharge
+    - battv
+    - loadpct
+    - linev
+    - numxfers
+    - status
+    - timeleft
+    - tonbatt

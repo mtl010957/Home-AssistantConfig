@@ -1,0 +1,13 @@
+# Replace admin and password with an "Admin" privileged Foscam user
+# Replace ipaddress with the local IP address of your Foscam
+- platform: command_line
+  switches:
+    #Switch for Foscam Motion Detection
+    foscam_cam1_motion:
+      friendly_name: "3629Cam1 Motion Enable"
+      command_on: '/home/homeassistant/.homeassistant/scripts/c1.sh on'
+      command_off: '/home/homeassistant/.homeassistant/scripts/c1.sh off'
+      command_state: '/home/homeassistant/.homeassistant/scripts/c1.sh'
+      value_template: '{{ value == "1" }}'
+
+

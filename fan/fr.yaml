@@ -1,0 +1,14 @@
+- platform: template
+  fans:
+    family_room_ceiling_fan:
+      friendly_name: "Family Room Ceiling Fan"
+      value_template: "{{ states('switch.l_11') }}"
+      turn_on:
+        service: switch.turn_on
+        data:
+          entity_id: switch.l_11
+      turn_off:
+        service: switch.turn_off
+        data:
+          entity_id: switch.l_11
+

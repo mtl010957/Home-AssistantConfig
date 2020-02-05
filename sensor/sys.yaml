@@ -1,0 +1,23 @@
+# systemmonitor
+- platform: systemmonitor
+  resources:
+    - type: load_1m
+    - type: load_5m
+    - type: load_15m
+    - type: disk_use_percent
+      arg: /
+    - type: memory_use_percent
+    - type: network_in
+      arg: eth0
+    - type: network_out
+      arg: eth0
+    - type: processor_use
+    - type: process
+      arg: mosquitto
+    - type: process
+      arg: heyu
+    - type: process
+      arg: mysqld
+    - type: process
+      arg: apcupsd
+    - type: last_boot

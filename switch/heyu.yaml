@@ -1,0 +1,14 @@
+# X10 Switches over Heyu
+- platform: heyu
+  devices:
+    - name: L_5
+      id: l5
+    - name: L_7
+      id: l7
+    - name: L_9
+      id: l9
+    - name: L_11
+      id: l11
+#    - name: Irrigation Enable
+#      id: l16
+
