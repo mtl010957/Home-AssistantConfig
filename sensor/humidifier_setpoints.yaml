@@ -1,0 +1,12 @@
+- platform: template
+  sensors:
+    humidifier_off:
+      friendly_name: "Humidifier Off Point"
+      unit_of_measurement: "%"
+      value_template: "{{ (states('sensor.dark_sky_temperature') | float * states('input_number.humidifier_slope') | float / 100.0 + states('input_number.humidifier_offset') | float) | round(2) }}"
+
+    humidifier_on:
+      friendly_name: "Humidifier On Point"
+      unit_of_measurement: "%"
+      value_template: "{{ ((states('sensor.dark_sky_temperature') | float * states('input_number.humidifier_slope') | float / 100.0 + states('input_number.humidifier_offset') | float) * (1.0 - states('input_number.humidifier_deadband') | float / 100.0)) | round(2) }}"
+

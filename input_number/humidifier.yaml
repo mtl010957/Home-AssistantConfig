@@ -1,16 +1,24 @@
-humidifier_off:
-  name: "Humidifier Off Humidity"
+humidifier_offset:
+  name: "Humidity at 0 degF"
   icon: mdi:water-percent
   min: 20
   max: 40
   step: 1
   mode: box
   unit_of_measurement: '%'
-humidifier_on:
-  name: "Humidifier On Humidity"
+humidifier_slope:
+  name: "Humidifier Temperature Gain"
   icon: mdi:water-percent
-  min: 20
-  max: 40
+  min: 0
+  max: 50
+  step: 5
+  mode: box
+  unit_of_measurement: '%'
+humidifier_deadband:
+  name: "Humidifier Turn On Deadband"
+  icon: mdi:water-percent
+  min: 0
+  max: 30
   step: 1
   mode: box
   unit_of_measurement: '%'

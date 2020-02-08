@@ -651,8 +651,8 @@
   - above: '0'
     entity_id: sensor.nm11_th_humidity
     platform: numeric_state
-    value_template: '{{ states(''sensor.nm11_th_humidity'') | float - states(''input_number.humidifier_off'')
-      | float }}'
+    value_template: '{{ states(sensor.nm11_th_humidity) | float - states(sensor.humidiifier_off)
+      | float  }}'
   condition: []
   action:
   - entity_id: switch.sb05_relay
@@ -664,9 +664,12 @@
   - below: '0'
     entity_id: sensor.nm11_th_humidity
     platform: numeric_state
-    value_template: '{{ states(''sensor.nm11_th_humidity'') | float - states(''input_number.humidifier_on'')
-      | float }}'
-  condition: []
+    value_template: '{{ states(sensor.nm11_th_humidity) | float - states(sensor.humidifier_on)
+      | float  }}'
+  condition:
+  - after: '20:00:00'
+    before: 08:00:00
+    condition: time
   action:
   - entity_id: switch.sb05_relay
     service: switch.turn_on
