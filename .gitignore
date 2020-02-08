@@ -4,6 +4,15 @@
 !.gitignore
 !*.sh
 !README.md
+!binary_sensor
+!camera
+!fan
+!input_number
+!light
+!scripts
+!sensor
+!switch
+!weather
 secrets.yaml
 shell_secrets.sh
 entity_registry.yaml
