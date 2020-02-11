@@ -30,6 +30,9 @@ conversation:
 # Discover some devices automatically
 discovery:
 
+#Google Calendar
+google: !include google.yaml
+
 # Groups (all in customize now)
 group: !include groups.yaml
 
@@ -102,4 +105,5 @@ weather: !include_dir_merge_list weather
 
 # Weblinks for cameras
 weblink: !include weblinks.yaml
+
 

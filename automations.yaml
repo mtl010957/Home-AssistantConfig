@@ -648,10 +648,8 @@
   alias: Humidifier off above set point
   description: ''
   trigger:
-  - above: '0'
-    entity_id: sensor.nm11_th_humidity
-    platform: numeric_state
-    value_template: '{{ states(sensor.nm11_th_humidity) | float - states(sensor.humidiifier_off)
+  - platform: template
+    value_template: '{{ states(''sensor.nm11_th_humidity'') | float > states(''sensor.humidifier_off'')
       | float  }}'
   condition: []
   action:
@@ -661,15 +659,43 @@
   alias: Humidifier on below set point
   description: ''
   trigger:
-  - below: '0'
-    entity_id: sensor.nm11_th_humidity
-    platform: numeric_state
-    value_template: '{{ states(sensor.nm11_th_humidity) | float - states(sensor.humidifier_on)
+  - platform: template
+    value_template: '{{ states(''sensor.nm11_th_humidity'') | float < states(''sensor.humidifier_on'')
       | float  }}'
   condition:
-  - after: '20:00:00'
+  - after: '22:00:00'
     before: 08:00:00
     condition: time
   action:
   - entity_id: switch.sb05_relay
     service: switch.turn_on
+- id: '1581365990144'
+  alias: Humidifier on at 20:00
+  description: ''
+  trigger:
+  - at: '20:00:00'
+    platform: time
+  condition:
+  - condition: template
+    value_template: '{{ states(''sensor.nm11_th_humidity'') | float < states(''sensor.humidifier_on'')
+      | float }}'
+  action:
+  - entity_id: switch.sb05_relay
+    service: switch.turn_on
+- id: '1581437260727'
+  alias: Thermostat set to 70 on work morning
+  description: ''
+  trigger:
+  - at: 04:00:00
+    platform: time
+  condition:
+  - condition: template
+    value_template: '{{ is_state_attr(''calendar.susan'', ''message'', ''Work'') }}'
+  - condition: template
+    value_template: '{{ is_state_attr(''calendar.susan'', ''start_time'', as_timestamp(now())
+      | timestamp_custom(''%Y-%m-%d'') ~ '' 06:00:00'') }}'
+  action:
+  - data:
+      temperature: 70
+    entity_id: climate.thermostat
+    service: climate.set_temperature

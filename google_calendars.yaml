@@ -1,0 +1,70 @@
+
+- cal_id: tucsontopia.com_fdu9gg0ech0o8pvdjlgtc2ub4s@group.calendar.google.com
+  entities:
+  - device_id: tucson_events_and_activities
+    ignore_availability: true
+    name: Tucson Events and Activities
+    track: true
+
+- cal_id: hgpjcng01132f8al8rpvui56to@group.calendar.google.com
+  entities:
+  - device_id: family_reunion_planning
+    ignore_availability: true
+    name: Family Reunion Planning
+    track: true
+
+- cal_id: puie0f00q2pflo3q0if8qajnq9gfqgi0@import.calendar.google.com
+  entities:
+  - device_id: marvac
+    ignore_availability: true
+    name: MARVAC
+    track: true
+
+- cal_id: michael.t.loeffler@gmail.com
+  entities:
+  - device_id: michael_t_loeffler_gmail_com
+    ignore_availability: true
+    name: michael.t.loeffler@gmail.com
+    track: true
+
+- cal_id: ee2s2470o31dvldbq1ie3rp6191a2vjv@import.calendar.google.com
+  entities:
+  - device_id: https_www_icloud_com_calendar_share_st_e_i_2_geydgobzgu4tkobygiytamzyhg4bf7lrfe23xigsfavrjvnwd3xebn6myfllalgof4fjkim2bzvmm
+    ignore_availability: true
+    name: https://www.icloud.com/calendar/share/#st=e&i=2_GEYDGOBZGU4TKOBYGIYTAMZYHG4BF7LRFE23XIGSFAVRJVNWD3XEBN6MYFLLALGOF4FJKIM2BZVMM
+    track: true
+
+- cal_id: 704fvuff34m3rc1ncqf3fb9j3c@group.calendar.google.com
+  entities:
+  - device_id: susan
+    ignore_availability: true
+    name: Susan
+    track: true
+
+- cal_id: skiwiskiclub@gmail.com
+  entities:
+  - device_id: skiwiskiclub_gmail_com
+    ignore_availability: true
+    name: skiwiskiclub@gmail.com
+    track: true
+
+- cal_id: en.christian#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: christian_holidays
+    ignore_availability: true
+    name: Christian Holidays
+    track: true
+
+- cal_id: en.usa#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: holidays_in_united_states
+    ignore_availability: true
+    name: Holidays in United States
+    track: true
+
+- cal_id: mlb_6_%44etroit+%54igers#sports@group.v.calendar.google.com
+  entities:
+  - device_id: detroit_tigers
+    ignore_availability: true
+    name: Detroit Tigers
+    track: true
