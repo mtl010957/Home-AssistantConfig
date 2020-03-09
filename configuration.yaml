@@ -1,31 +1,31 @@
 homeassistant:
   customize: !include customize.yaml
 
+# Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
-# Stuff that is included by default_config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
 automation: !include automations.yaml
-#cloud:
-#config:
+script: !include scripts.yaml
+scene: !include scenes.yaml
+#history: !include history.yaml
 frontend:
   javascript_version: latest
   themes: !include_dir_merge_named themes
-history: !include history.yaml
-#logbook:
-#map:
-#mobile_app:
-#person:
-script: !include scripts.yaml
-#ssdp:
-#sun:
-#system_health:
-#updater:
-#zeroconf:
 
 # APC UPS Daemon
 apcupsd:
 
 # Allows you to issue voice commands from the frontend
-conversation:
+#conversation:
 
 # Discover some devices automatically
 discovery:
@@ -33,24 +33,14 @@ discovery:
 #Google Calendar
 google: !include google.yaml
 
-# Groups (all in customize now)
-group: !include groups.yaml
-
 # X10 over Heyu "hub"
-heyu: !include heyu.yaml
-
-# Security
-http:
+#heyu: !include heyu.yaml
 
 # IFTTT channel using Maker
-ifttt: !include ifttt.yaml
+#ifttt: !include ifttt.yaml
 
 # Logger setup
 logger: !include logger.yaml
-
-# Manual integrations
-# MQTT
-mqtt: !include mqtt.yaml
 
 # Nest Stuff
 nest: !include nest.yaml
@@ -58,17 +48,11 @@ nest: !include nest.yaml
 # Enables support for tracking state changes over time.
 recorder: !include recorder.yaml
 
-# Scenes in directory
-scene: !include scenes.yaml
-
 # NEW streaming support
 stream:
 
 # Wink
 wink: !include wink.yaml
-
-# ZWave
-zwave: !include zwave.yaml
 
 # Various manually defined devices
 # Alarm panel
@@ -90,8 +74,6 @@ fan: !include_dir_merge_list fan
 hdhomerun:
 
 input_number: !include_dir_merge_named input_number
-
-light: !include_dir_merge_list light
 
 # HTML5 Push Notifications
 notify: !include notify.yaml

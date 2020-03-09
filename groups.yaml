@@ -1,7 +1,5 @@
-# If you name an entry default_view it will REPLACE the contents of the "Home" tab
 family:
   name: Family
   entities:
-    - person.michael
-    - person.susan
-
+    - person.michael_loeffler
+    - person.susan_loeffler

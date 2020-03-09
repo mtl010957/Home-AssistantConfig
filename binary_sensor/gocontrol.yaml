@@ -5,60 +5,60 @@
       friendly_name: Back Door
       device_class: door
       value_template: >-
-        {{ states("sensor.linear_unknown_type_2001_id_0102_alarm_level")|int == 255 and states("sensor.linear_unknown_type_2001_id_0102_burglar")|int == 2 }}
+        {{ states("sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_alarm_level")|int == 255 and states("sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_burglar")|int == 2 }}
     back_door_tamper:
       friendly_name: Back Door Tamper
       device_class: problem
       value_template: >-
-        {{ states("sensor.linear_unknown_type_2001_id_0102_alarm_level")|int == 255 and states("sensor.linear_unknown_type_2001_id_0102_burglar")|int == 3 }}
+        {{ states("sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_alarm_level")|int == 255 and states("sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_burglar")|int == 3 }}
     front_door:
       friendly_name: Front Door
       device_class: door
       value_template: >-
-        {{ states("sensor.linear_unknown_type_2001_id_0102_alarm_level_2")|int == 255 and states("sensor.linear_unknown_type_2001_id_0102_burglar_2")|int == 2 }}
+        {{ states("sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_alarm_level_3")|int == 255 and states("sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_burglar_3")|int == 2 }}
     front_door_tamper:
       friendly_name: Front Door Tamper
       device_class: problem
       value_template: >-
-        {{ states("sensor.linear_unknown_type_2001_id_0102_alarm_level_2")|int == 255 and states("sensor.linear_unknown_type_2001_id_0102_burglar_2")|int == 3 }}
+        {{ states("sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_alarm_level_3")|int == 255 and states("sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_burglar_3")|int == 3 }}
     garage_door:
       friendly_name: Garage Door
       device_class: garage_door
       value_template: >-
-        {{ states("sensor.linear_unknown_type_2001_id_0102_alarm_level_3")|int == 255 and states("sensor.linear_unknown_type_2001_id_0102_burglar_3")|int == 2 }}
+        {{ states("sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_alarm_level_2")|int == 255 and states("sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_burglar_2")|int == 2 }}
     garage_door_tamper:
       friendly_name: Garage Door Tamper
       device_class: problem
       value_template: >-
-        {{ states("sensor.linear_unknown_type_2001_id_0102_alarm_level_3")|int == 255 and states("sensor.linear_unknown_type_2001_id_0102_burglar_3")|int == 3 }}
+        {{ states("sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_alarm_level_2")|int == 255 and states("sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_burglar_2")|int == 3 }}
     garage_in_door:
       friendly_name: Garage In Door
       device_class: door
       value_template: >-
-        {{ states("sensor.linear_unknown_type_2001_id_0102_alarm_level_4")|int == 255 and states("sensor.linear_unknown_type_2001_id_0102_burglar_4")|int == 2 }}
+        {{ states("sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_alarm_level_4")|int == 255 and states("sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_burglar_4")|int == 2 }}
     garage_in_door_tamper:
       friendly_name: Garage In Door Tamper
       device_class: problem
       value_template: >-
-        {{ states("sensor.linear_unknown_type_2001_id_0102_alarm_level_4")|int == 255 and states("sensor.linear_unknown_type_2001_id_0102_burglar_4")|int == 3 }}
+        {{ states("sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_alarm_level_4")|int == 255 and states("sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_burglar_4")|int == 3 }}
     family_room_motion:
       friendly_name: Family Room Motion
       device_class: motion
       value_template: >-
-        {{ states("sensor.linear_unknown_type_2002_id_0203_alarm_level")|int == 255 and states("sensor.linear_unknown_type_2002_id_0203_burglar")|int == 2 }}
+        {{ states("sensor.linear_nortek_security_control_llc_wapirz_1_motion_sensor_alarm_level")|int == 255 and states("sensor.linear_nortek_security_control_llc_wapirz_1_motion_sensor_burglar")|int == 2 }}
     family_room_motion_tamper:
       friendly_name: Family Room Motion Tamper
       device_class: problem
       value_template: >-
-        {{ states("sensor.linear_unknown_type_2002_id_0203_alarm_level")|int == 255 and states("sensor.linear_unknown_type_2002_id_0203_burglar")|int == 3 }}
+        {{ states("sensor.linear_nortek_security_control_llc_wapirz_1_motion_sensor_alarm_level")|int == 255 and states("sensor.linear_nortek_security_control_llc_wapirz_1_motion_sensor_burglar")|int == 3 }}
     master_bedroom_motion:
       friendly_name: Master Bedroom Motion
       device_class: motion
       value_template: >-
-        {{ states("sensor.linear_unknown_type_2002_id_0203_alarm_level_2")|int == 255 and states("sensor.linear_unknown_type_2002_id_0203_burglar_2")|int == 2 }}
+        {{ states("sensor.linear_nortek_security_control_llc_wapirz_1_motion_sensor_alarm_level_2")|int == 255 and states("sensor.linear_nortek_security_control_llc_wapirz_1_motion_sensor_burglar_2")|int == 2 }}
     master_bedroom_motion_tamper:
       friendly_name: Master Bedroom Motion Tamper
       device_class: problem
       value_template: >-
-        {{ states("sensor.linear_unknown_type_2002_id_0203_alarm_level_2")|int == 255 and states("sensor.linear_unknown_type_2002_id_0203_burglar_2")|int == 3 }}
+        {{ states("sensor.linear_nortek_security_control_llc_wapirz_1_motion_sensor_alarm_level_2")|int == 255 and states("sensor.linear_nortek_security_control_llc_wapirz_1_motion_sensor_burglar_2")|int == 3 }}
 

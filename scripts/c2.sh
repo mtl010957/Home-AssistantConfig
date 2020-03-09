@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. /home/homeassistant/.homeassistant/shell_secrets.sh
+. /config/shell_secrets.sh
 
 if [ "$1" = "on" ]
 then

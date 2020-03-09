@@ -20,21 +20,16 @@
     platform: state
     to: armed_away
   action:
-  - data:
-      entities: switch.foscam_cam1_motion
+  - entity_id: switch.foscam_cam1_motion
     service: switch.turn_on
-  - data:
-      entity_id: switch.foscam_cam2_motion
+  - entity_id: switch.foscam_cam2_motion
     service: switch.turn_on
-  - data:
-      entity_id: switch.foscam_cam3_motion
+  - entity_id: switch.foscam_cam3_motion
     service: switch.turn_on
-  - data:
-      entity_id: switch.generic_cam4_motion
+  - entity_id: switch.generic_cam4_motion
     service: switch.turn_on
-  - data:
-      entity_id: light.l_6
-    service: light.turn_on
+  - entity_id: switch.sb01_relay
+    service: switch.turn_on
 - id: '1500947016399'
   alias: Camera Motion and Floods On Armed Night
   trigger:
@@ -42,15 +37,12 @@
     platform: state
     to: armed_night
   action:
-  - data:
-      entity_id: switch.foscam_cam1_motion
+  - entity_id: switch.foscam_cam1_motion
     service: switch.turn_on
-  - data:
-      entity_id: switch.foscam_cam2_motion
+  - entity_id: switch.foscam_cam2_motion
     service: switch.turn_on
-  - data:
-      entity_id: light.l_6
-    service: light.turn_on
+  - entity_id: switch.sb01_relay
+    service: switch.turn_on
 - id: '1500947000000'
   alias: Camera Motion On Armed Home
   trigger:
@@ -58,11 +50,9 @@
     platform: state
     to: armed_home
   action:
-  - data:
-      entity_id: switch.foscam_cam1_motion
+  - entity_id: switch.foscam_cam1_motion
     service: switch.turn_on
-  - data:
-      entity_id: switch.foscam_cam2_motion
+  - entity_id: switch.foscam_cam2_motion
     service: switch.turn_on
 - id: '1500948466889'
   alias: Camera Motion and Floods Off Disarmed
@@ -71,21 +61,16 @@
     platform: state
     to: disarmed
   action:
-  - data:
-      entity_id: switch.foscam_cam1_motion
+  - entity_id: switch.foscam_cam1_motion
     service: switch.turn_off
-  - data:
-      entity_id: switch.foscam_cam2_motion
+  - entity_id: switch.foscam_cam2_motion
     service: switch.turn_off
-  - data:
-      entity_id: switch.foscam_cam3_motion
+  - entity_id: switch.foscam_cam3_motion
     service: switch.turn_off
-  - data:
-      entity_id: switch.generic_cam4_motion
+  - entity_id: switch.generic_cam4_motion
     service: switch.turn_off
-  - data:
-      entity_id: light.l_6
-    service: light.turn_off
+  - entity_id: switch.sb01_relay
+    service: switch.turn_off
 - id: '1800999911110'
   alias: 3629cam4 Up
   trigger:
@@ -181,25 +166,25 @@
       entity_id: switch.nm14_rly4_3
     service: switch.turn_off
 - id: '1545515732471'
-  alias: Floods on at 11:00 PM
+  alias: Front Yard Light on at 11:00 PM
   trigger:
   - at: '23:00'
     platform: time
   condition: []
   action:
-  - data:
-      entity_id: light.l_6
-    service: light.turn_on
+  - data: {}
+    entity_id: switch.sb01_relay
+    service: switch.turn_on
 - id: '1545515874358'
-  alias: Floods off at 04:30 AM
+  alias: Front Yard Light off at 04:30 AM
   trigger:
   - at: 04:30
     platform: time
   condition: []
   action:
-  - data:
-      entity_id: light.l_6
-    service: light.turn_off
+  - data: {}
+    entity_id: switch.sb01_relay
+    service: switch.turn_off
 - id: '1548612260526'
   alias: Irrigation Enable
   trigger:
@@ -232,26 +217,26 @@
     platform: time
   condition: []
   action:
-  - data:
-      entity_id: switch.sb03_relay
-    service: homeassistant.turn_off
+  - data: {}
+    entity_id: switch.wink_power
+    service: switch.turn_off
   - delay: 00:01
-  - data:
-      entity_id: switch.sb03_relay
-    service: homeassistant.turn_on
+  - data: {}
+    entity_id: switch.wink_power
+    service: switch.turn_on
 - id: '1548862723503'
   alias: Power On Wink
   trigger:
-  - entity_id: switch.sb03_relay
+  - entity_id: switch.wink_power
     for: 00:02
     from: 'on'
     platform: state
     to: 'off'
   condition: []
   action:
-  - data:
-      entity_id: switch.sb03_relay
-    service: homeassistant.turn_on
+  - data: {}
+    entity_id: switch.wink_power
+    service: switch.turn_on
 - id: '1552222922150'
   alias: Blinds Open at Dawn
   trigger:
@@ -404,8 +389,8 @@
     entity_id: alarm_control_panel.3629_alarm
     state: disarmed
   action:
-  - data:
-      entity_id: all
+  - data: {}
+    entity_id: alarm_control_panel.3629_alarm
     service: alarm_control_panel.alarm_arm_night
 - id: '1563648489927'
   alias: Security Disarm Home Morning
@@ -420,8 +405,8 @@
     entity_id: alarm_control_panel.3629_alarm
     state: armed_night
   action:
-  - data:
-      entity_id: all
+  - data: {}
+    entity_id: alarm_control_panel.3629_alarm
     service: alarm_control_panel.alarm_disarm
 - id: '1563648590512'
   alias: Security Arm Away
@@ -432,8 +417,8 @@
     to: not_home
   condition: []
   action:
-  - data:
-      entity_id: all
+  - data: {}
+    entity_id: alarm_control_panel.3629_alarm
     service: alarm_control_panel.alarm_arm_away
 - id: '1563648678608'
   alias: Security Disarm Return Home
@@ -444,8 +429,8 @@
     to: home
   condition: []
   action:
-  - data:
-      entity_id: all
+  - data: {}
+    entity_id: alarm_control_panel.3629_alarm
     service: alarm_control_panel.alarm_disarm
 - id: '1572629564877'
   alias: Security Notify Front Door Opened
@@ -531,11 +516,11 @@
       title: Master Bedroom Motion Detected
     service: notify.notify
 - id: '1572631200037'
-  alias: Office Temperature Low
+  alias: Notify Office Temperature Low
   description: ''
   trigger:
   - below: '50.0'
-    entity_id: sensor.ah03_th_temperature
+    entity_id: sensor.office_temperature
     platform: numeric_state
   condition: []
   action:
@@ -642,7 +627,7 @@
     to: 'on'
   condition: []
   action:
-  - entity_id: switch.nm08_sv1_latch_servo
+  - entity_id: switch.garage_latch_servo
     service: switch.turn_off
 - id: '1578620613401'
   alias: Humidifier off above set point
@@ -653,7 +638,7 @@
       | float  }}'
   condition: []
   action:
-  - entity_id: switch.sb05_relay
+  - entity_id: switch.humidifier_power
     service: switch.turn_off
 - id: '1578620814432'
   alias: Humidifier on below set point
@@ -667,7 +652,7 @@
     before: 08:00:00
     condition: time
   action:
-  - entity_id: switch.sb05_relay
+  - entity_id: switch.humidifier_power
     service: switch.turn_on
 - id: '1581365990144'
   alias: Humidifier on at 20:00
@@ -680,7 +665,7 @@
     value_template: '{{ states(''sensor.nm11_th_humidity'') | float < states(''sensor.humidifier_on'')
       | float }}'
   action:
-  - entity_id: switch.sb05_relay
+  - entity_id: switch.humidifier_power
     service: switch.turn_on
 - id: '1581437260727'
   alias: Thermostat set to 70 on work morning
@@ -699,3 +684,13 @@
       temperature: 70
     entity_id: climate.thermostat
     service: climate.set_temperature
+- id: '1581601374878'
+  alias: Humidifier off at 08:00
+  description: ''
+  trigger:
+  - at: 08:00:00
+    platform: time
+  condition: []
+  action:
+  - entity_id: switch.humidifier_power
+    service: switch.turn_off

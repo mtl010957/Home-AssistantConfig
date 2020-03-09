@@ -5,9 +5,9 @@
     #Switch for Foscam Motion Detection
     foscam_cam2_motion:
       friendly_name: "3629Cam2 Motion Enable"
-      command_on: '/home/homeassistant/.homeassistant/scripts/c2.sh on'
-      command_off: '/home/homeassistant/.homeassistant/scripts/c2.sh off'
-      command_state: '/home/homeassistant/.homeassistant/scripts/c2.sh'
+      command_on: '/config/scripts/c2.sh on'
+      command_off: '/config/scripts/c2.sh off'
+      command_state: '/config/scripts/c2.sh'
       value_template: '{{ value == "1" }}'
 
 

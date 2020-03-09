@@ -1,18 +1,22 @@
 purge_interval: 1
-purge_keep_days: 14
+purge_keep_days: 7
 db_url: !secret recorder_db_url
-exclude:
-  domains:
-    - automation
-    - camera
-    - group
-    - scene
-    - script
-    - sun
-    - weblink
-    - zwave
+include:
+#  domains:
+#    - automation
+#    - camera
+#    - group
+#    - scene
+#    - script
+#    - sun
+#    - weblink
+#    - zwave
   entities:
-    - persistent_notification.invalid_config
-    - sensor.date
-    - sensor.dte_energy_bridge # too much data
-
+    - binary_sensor.back_door
+    - binary_sensor.front_door
+    - binary_sensor.garage_door
+    - binary_sensor.garage_in_door
+    - light.linear_nortek_security_control_llc_pd300z_2_plug_in_dimmer_module_level_3
+    - sensor.office_temperature
+    - sensor.office_humidity
+    - switch.leviton_dzpa1_2bw_plug_in_outlet_switch

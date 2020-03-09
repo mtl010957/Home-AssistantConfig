@@ -27,13 +27,6 @@
     name: michael.t.loeffler@gmail.com
     track: true
 
-- cal_id: ee2s2470o31dvldbq1ie3rp6191a2vjv@import.calendar.google.com
-  entities:
-  - device_id: https_www_icloud_com_calendar_share_st_e_i_2_geydgobzgu4tkobygiytamzyhg4bf7lrfe23xigsfavrjvnwd3xebn6myfllalgof4fjkim2bzvmm
-    ignore_availability: true
-    name: https://www.icloud.com/calendar/share/#st=e&i=2_GEYDGOBZGU4TKOBYGIYTAMZYHG4BF7LRFE23XIGSFAVRJVNWD3XEBN6MYFLLALGOF4FJKIM2BZVMM
-    track: true
-
 - cal_id: 704fvuff34m3rc1ncqf3fb9j3c@group.calendar.google.com
   entities:
   - device_id: susan

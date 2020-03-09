@@ -1,0 +1,64 @@
+{
+    "data": {
+        "areas": [
+            {
+                "id": "ba35ea6dc22d42808e3dc7511c49bfe6",
+                "name": "Living Room"
+            },
+            {
+                "id": "994d07af5955428c961b2448d9bcf261",
+                "name": "Kitchen"
+            },
+            {
+                "id": "30065008d98541db8a0e1a665260b650",
+                "name": "Bedroom"
+            },
+            {
+                "id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name": "Family Room"
+            },
+            {
+                "id": "be918af12ae344be9d3936091fc54a20",
+                "name": "Garage"
+            },
+            {
+                "id": "a9551ad1cd4c4f63ab8c697ff8949be5",
+                "name": "Master Bedroom"
+            },
+            {
+                "id": "316107820cce4630be06041fc14816e3",
+                "name": "Office"
+            },
+            {
+                "id": "66b0e5549f8b45ef8d7c37400cec0237",
+                "name": "Caravan"
+            },
+            {
+                "id": "0fe4b21cbf874ef3b141cffeca700b1d",
+                "name": "Attic"
+            },
+            {
+                "id": "34c603d253c649ccb4430b96d906f5a8",
+                "name": "Guest Room"
+            },
+            {
+                "id": "d66690d909184fc39c8ef0e3559befea",
+                "name": "Dining Room"
+            },
+            {
+                "id": "74a49ece870947fc998a78d2e088b47f",
+                "name": "Utility Room"
+            },
+            {
+                "id": "dc451399bee647789f50e8317344517e",
+                "name": "Back Yard"
+            },
+            {
+                "id": "ef79dc2fd72045778494fbbced8dcf7b",
+                "name": "Front Yard"
+            }
+        ]
+    },
+    "key": "core.area_registry",
+    "version": 1
+}

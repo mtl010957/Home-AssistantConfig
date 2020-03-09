@@ -24,4 +24,3 @@ switch.desert_living_room_camera:
 switch.desert_front_porch_camera:
   icon: mdi:camcorder
   friendly_name: Desert Front Porch Camera Switch
-
