@@ -1,6 +1,0 @@
-broker: !secret mqtt_broker
-client_id: !secret mqtt_client_id
-password: !secret mqtt_password
-discovery: true
-protocol: 3.1
-
