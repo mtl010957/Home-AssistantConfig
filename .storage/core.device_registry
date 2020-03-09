@@ -892,7 +892,7 @@
                 "via_device_id": null
             },
             {
-                "area_id": null,
+                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
                 "config_entries": [
                     "c2f182f0e3c34f73b167638f5877b669"
                 ],
@@ -907,7 +907,7 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm06_rfx1",
-                "name_by_user": null,
+                "name_by_user": "Fan Remote",
                 "sw_version": "esphome v1.15.0-dev Feb 27 2020, 16:01:16",
                 "via_device_id": null
             },
@@ -967,7 +967,7 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm09_th",
-                "name_by_user": "Office Temperature and Humidity",
+                "name_by_user": "Office Climate",
                 "sw_version": "esphome v1.15.0-dev Feb 27 2020, 16:02:20",
                 "via_device_id": null
             },
@@ -992,7 +992,7 @@
                 "via_device_id": null
             },
             {
-                "area_id": null,
+                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
                 "config_entries": [
                     "c2f182f0e3c34f73b167638f5877b669"
                 ],
@@ -1007,12 +1007,12 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm11_th",
-                "name_by_user": null,
+                "name_by_user": "Master Bedroom Climate",
                 "sw_version": "esphome v1.15.0-dev Feb 27 2020, 16:03:02",
                 "via_device_id": null
             },
             {
-                "area_id": null,
+                "area_id": "be918af12ae344be9d3936091fc54a20",
                 "config_entries": [
                     "c2f182f0e3c34f73b167638f5877b669"
                 ],
@@ -1027,7 +1027,7 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm12_th",
-                "name_by_user": null,
+                "name_by_user": "Garage Climate",
                 "sw_version": "esphome v1.15.0-dev Feb 27 2020, 16:03:23",
                 "via_device_id": null
             },
@@ -1052,7 +1052,7 @@
                 "via_device_id": null
             },
             {
-                "area_id": null,
+                "area_id": "74a49ece870947fc998a78d2e088b47f",
                 "config_entries": [
                     "c2f182f0e3c34f73b167638f5877b669"
                 ],
@@ -1067,12 +1067,12 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm14_rly4",
-                "name_by_user": null,
+                "name_by_user": "Irrigation Control",
                 "sw_version": "esphome v1.15.0-dev Feb 27 2020, 16:04:10",
                 "via_device_id": null
             },
             {
-                "area_id": null,
+                "area_id": "74a49ece870947fc998a78d2e088b47f",
                 "config_entries": [
                     "c2f182f0e3c34f73b167638f5877b669"
                 ],
@@ -1087,12 +1087,12 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm15_t4",
-                "name_by_user": null,
+                "name_by_user": "Furnace",
                 "sw_version": "esphome v1.15.0-dev Feb 27 2020, 16:04:25",
                 "via_device_id": null
             },
             {
-                "area_id": null,
+                "area_id": "dc451399bee647789f50e8317344517e",
                 "config_entries": [
                     "c2f182f0e3c34f73b167638f5877b669"
                 ],
@@ -1107,7 +1107,7 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm16_th",
-                "name_by_user": null,
+                "name_by_user": "Outdoor Climate",
                 "sw_version": "esphome v1.15.0-dev Feb 27 2020, 16:04:45",
                 "via_device_id": null
             },

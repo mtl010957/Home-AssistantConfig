@@ -146,24 +146,20 @@
     platform: time
   condition:
   - condition: state
-    entity_id: switch.nm14_rly4_4
+    entity_id: switch.irrigation_control_enable
     state: 'on'
   action:
-  - data:
-      entity_id: switch.nm14_rly4_1
+  - entity_id: switch.irrigation_control_back_yard
     service: switch.turn_on
   - delay: '{{ states(''input_number.zone1_run_minutes'') | multiply(60) | timestamp_custom(''%H:%M:%S'',False)
       }}'
-  - data:
-      entity_id: switch.nm14_rly4_1
+  - entity_id: switch.irrigation_control_back_yard
     service: switch.turn_off
-  - data:
-      entity_id: switch.nm14_rly4_3
+  - entity_id: switch.irrigation_control_front_yard
     service: switch.turn_on
   - delay: '{{ states(''input_number.zone3_run_minutes'') | multiply(60) | timestamp_custom(''%H:%M:%S'',False)
       }}'
-  - data:
-      entity_id: switch.nm14_rly4_3
+  - entity_id: switch.irrigation_control_front_yard
     service: switch.turn_off
 - id: '1545515732471'
   alias: Front Yard Light on at 11:00 PM
@@ -193,8 +189,7 @@
       and ''Rain'' not in states.sensor.dark_sky_hourly_summary.state) }}'
   condition: []
   action:
-  - data:
-      entity_id: switch.nm14_rly4_4
+  - entity_id: switch.irrigation_control_enable
     service: switch.turn_on
 - id: '1548612882816'
   alias: Irrigation Disable
@@ -332,49 +327,48 @@
 - id: '1562957476111'
   alias: Master Bedroom Ceiling Fan Remote Stop
   trigger:
-  - entity_id: binary_sensor.nm06_rfx1_fan_remote_stop
+  - entity_id: binary_sensor.fan_remote_stop
     platform: state
     to: 'on'
   condition: []
   action:
-  - data:
-      entity_id: ' fan.ge_unknown_type_4944_id_3131_level'
+  - entity_id: fan.master_bedroom_ceiling_fan_switch_level
     service: fan.turn_off
 - id: '1562957684896'
   alias: Master Bedroom Ceiling Fan Remote Hi
   trigger:
-  - entity_id: binary_sensor.nm06_rfx1_fan_remote_hi
+  - entity_id: binary_sensor.fan_remote_hi
     platform: state
     to: 'on'
   condition: []
   action:
   - data:
-      entity_id: ' fan.ge_unknown_type_4944_id_3131_level'
       speed: high
+    entity_id: fan.master_bedroom_ceiling_fan_switch_level
     service: fan.set_speed
 - id: '1562958033989'
   alias: Master Bedroom Ceiling Fan Remote Medium
   trigger:
-  - entity_id: binary_sensor.nm06_rfx1_fan_remote_med
+  - entity_id: binary_sensor.fan_remote_med
     platform: state
     to: 'on'
   condition: []
   action:
   - data:
-      entity_id: ' fan.ge_unknown_type_4944_id_3131_level'
       speed: medium
+    entity_id: fan.master_bedroom_ceiling_fan_switch_level
     service: fan.set_speed
 - id: '1562958094562'
   alias: Master Bedroom Ceiling Fan Remote Low
   trigger:
-  - entity_id: binary_sensor.nm06_rfx1_fan_remote_low
+  - entity_id: binary_sensor.fan_remote_low
     platform: state
     to: 'on'
   condition: []
   action:
   - data:
-      entity_id: ' fan.ge_unknown_type_4944_id_3131_level'
       speed: low
+    entity_id: fan.master_bedroom_ceiling_fan_switch_level
     service: fan.set_speed
 - id: '1563648409962'
   alias: Security Arm Night
@@ -634,7 +628,7 @@
   description: ''
   trigger:
   - platform: template
-    value_template: '{{ states(''sensor.nm11_th_humidity'') | float > states(''sensor.humidifier_off'')
+    value_template: '{{ states(''sensor.master_bedroom_humidity'') | float > states(''sensor.humidifier_off'')
       | float  }}'
   condition: []
   action:
@@ -645,7 +639,7 @@
   description: ''
   trigger:
   - platform: template
-    value_template: '{{ states(''sensor.nm11_th_humidity'') | float < states(''sensor.humidifier_on'')
+    value_template: '{{ states(''sensor.master_bedroom_humidity'') | float < states(''sensor.humidifier_on'')
       | float  }}'
   condition:
   - after: '22:00:00'
@@ -662,7 +656,7 @@
     platform: time
   condition:
   - condition: template
-    value_template: '{{ states(''sensor.nm11_th_humidity'') | float < states(''sensor.humidifier_on'')
+    value_template: '{{ states(''sensor.master_bedroom_humidity'') | float < states(''sensor.humidifier_on'')
       | float }}'
   action:
   - entity_id: switch.humidifier_power
