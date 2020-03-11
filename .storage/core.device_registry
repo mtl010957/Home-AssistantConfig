@@ -203,7 +203,7 @@
                 "model": "",
                 "name": "HACS",
                 "name_by_user": null,
-                "sw_version": "0.23.0",
+                "sw_version": "0.23.2",
                 "via_device_id": null
             },
             {
@@ -812,7 +812,7 @@
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
             },
             {
-                "area_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "c2f182f0e3c34f73b167638f5877b669"
                 ],
@@ -827,12 +827,12 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm01_sv1",
-                "name_by_user": null,
+                "name_by_user": "Family Room SE-NE Blinds",
                 "sw_version": "esphome v1.15.0-dev Feb 27 2020, 15:59:22",
                 "via_device_id": null
             },
             {
-                "area_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "c2f182f0e3c34f73b167638f5877b669"
                 ],
@@ -847,12 +847,12 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm02_sv1",
-                "name_by_user": null,
+                "name_by_user": "Family Room SE-SW Blinds",
                 "sw_version": "esphome v1.15.0-dev Feb 27 2020, 15:59:49",
                 "via_device_id": null
             },
             {
-                "area_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "c2f182f0e3c34f73b167638f5877b669"
                 ],
@@ -867,12 +867,12 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm04_sv1",
-                "name_by_user": null,
+                "name_by_user": "Family Room SW-NW Blinds",
                 "sw_version": "esphome v1.15.0-dev Feb 27 2020, 16:00:29",
                 "via_device_id": null
             },
             {
-                "area_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "c2f182f0e3c34f73b167638f5877b669"
                 ],
@@ -887,7 +887,7 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm05_sv1",
-                "name_by_user": null,
+                "name_by_user": "Family Room NW-SW Blinds",
                 "sw_version": "esphome v1.15.0-dev Feb 27 2020, 16:00:51",
                 "via_device_id": null
             },
@@ -1132,7 +1132,7 @@
                 "via_device_id": null
             },
             {
-                "area_id": null,
+                "area_id": "2f62b68890ee49f1b08273ad89d15bad",
                 "config_entries": [
                     "c2f182f0e3c34f73b167638f5877b669"
                 ],
@@ -1147,7 +1147,7 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sb02",
-                "name_by_user": null,
+                "name_by_user": "Outdoor Xmas Lights",
                 "sw_version": "esphome v1.15.0-dev Feb 27 2020, 16:05:34",
                 "via_device_id": null
             },
@@ -1172,7 +1172,7 @@
                 "via_device_id": null
             },
             {
-                "area_id": null,
+                "area_id": "be918af12ae344be9d3936091fc54a20",
                 "config_entries": [
                     "c2f182f0e3c34f73b167638f5877b669"
                 ],
@@ -1187,7 +1187,7 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sb04",
-                "name_by_user": null,
+                "name_by_user": "Garage Light",
                 "sw_version": "esphome v1.15.0-dev Feb 27 2020, 16:06:31",
                 "via_device_id": null
             },
@@ -1212,7 +1212,7 @@
                 "via_device_id": null
             },
             {
-                "area_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "c2f182f0e3c34f73b167638f5877b669"
                 ],
@@ -1227,8 +1227,48 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm03_sv1",
-                "name_by_user": null,
+                "name_by_user": "Family Room SW-SE Blinds",
                 "sw_version": "esphome v1.15.0-dev Feb 27 2020, 16:07:59",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "c2f182f0e3c34f73b167638f5877b669"
+                ],
+                "connections": [],
+                "id": "e13b11e02fc4464b9e850b93abfe6816",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "dc4f22dc562f"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_ESP01_1M",
+                "name": "sb06",
+                "name_by_user": null,
+                "sw_version": "esphome v1.15.0-dev Mar  9 2020, 20:24:59",
+                "via_device_id": null
+            },
+            {
+                "area_id": "be918af12ae344be9d3936091fc54a20",
+                "config_entries": [
+                    "c2f182f0e3c34f73b167638f5877b669"
+                ],
+                "connections": [],
+                "id": "74ae4b7a533a47aea8aab39dba3953fa",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "a4cf12d9e08d"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "nm17_m",
+                "name_by_user": "Garage Motion",
+                "sw_version": "esphome v1.15.0-dev Mar 11 2020, 09:25:46",
                 "via_device_id": null
             }
         ]
