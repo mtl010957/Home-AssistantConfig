@@ -68,3 +68,9 @@
   - data:
       entity_id: all
     service: cover.close_cover_tilt
+'1583801449652':
+  alias: Open all blinds
+  sequence:
+  - data:
+      entity_id: all
+    service: cover.open_cover

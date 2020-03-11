@@ -16,7 +16,55 @@ include:
     - binary_sensor.front_door
     - binary_sensor.garage_door
     - binary_sensor.garage_in_door
-    - light.linear_nortek_security_control_llc_pd300z_2_plug_in_dimmer_module_level_3
+    - binary_sensor.garage_motion
+    - light.living_room_lamp_dimmer
     - sensor.office_temperature
     - sensor.office_humidity
-    - switch.leviton_dzpa1_2bw_plug_in_outlet_switch
+    - switch.living_room_lamp_module
+    - sensor.caravan_temperature
+    - sensor.caravan_humidity
+    - sensor.dark_sky_temperature
+    - sensor.dte_energy_bridge_summary
+    - sensor.family_room_humidity
+    - light.family_room_lamp_bulb_1
+    - light.family_room_lamp_bulb_2
+    - light.family_room_link_bulb_1
+    - light.family_room_link_bulb_2
+    - binary_sensor.family_room_motion
+    - cover.family_room_nwsw_blinds
+    - sensor.corrected_barometer_inhg
+    - cover.family_room_sene_blinds
+    - cover.family_room_sesw_blinds
+    - cover.family_room_swnw_blinds
+    - cover.family_room_swse_blinds
+    - sensor.family_room_temperature
+    - sensor.furnace_flue_temperature_f
+    - sensor.furnace_nw_zone_return_temperature_f
+    - sensor.furnace_se_zone_return_temperature_f
+    - sensor.furnace_supply_temperature_f
+    - light.garage_attic_link_bulb
+    - sensor.garage_humidity
+    - switch.garage_latch
+    - switch.garage_light
+    - sensor.garage_temperature
+    - light.guest_room_lamp_bulb
+    - fan.house_fan
+    - sensor.humidifier_off
+    - sensor.humidifier_on
+    - switch.humidifier_power
+    - switch.irrigation_control_back_yard
+    - switch.irrigation_control_enable
+    - switch.irrigation_control_front_yard
+    - sensor.last_boot
+    - light.living_room_lamp_dimmer
+    - switch.living_room_lamp_module
+    - sensor.master_bedroom_humidity
+    - binary_sensor.master_bedroom_motion
+    - sensor.master_bedroom_temperature
+    - person.michael_loeffler
+    - light.office_light_bulb
+    - sensor.outdoor_humidity
+    - sensor.outdoor_temperature
+    - sensor.load_1m
+    - person.susan_loeffler
+    - sensor.ups_transfer_count

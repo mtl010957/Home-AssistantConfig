@@ -243,14 +243,11 @@
   - data:
       entity_id: cover.nm01_sv1_cover
     service: cover.open_cover_tilt
-  - data:
-      entity_id: cover.nm02_sv1_cover
+  - entity_id: cover.family_room_sesw_blinds
     service: cover.open_cover_tilt
-  - data:
-      entity_id: cover.nm03_sv1_cover
+  - entity_id: cover.family_room_swse_blinds
     service: cover.open_cover_tilt
-  - data:
-      entity_id: cover.nm04_sv1_cover
+  - entity_id: cover.family_room_swnw_blinds
     service: cover.open_cover_tilt
   - data:
       entity_id: cover.nm05_sv1_cover
@@ -265,14 +262,11 @@
   - data:
       entity_id: cover.nm01_sv1_cover
     service: cover.close_cover_tilt
-  - data:
-      entity_id: cover.nm02_sv1_cover
+  - entity_id: cover.family_room_sesw_blinds
     service: cover.close_cover_tilt
-  - data:
-      entity_id: cover.nm03_sv1_cover
+  - entity_id: cover.family_room_swse_blinds
     service: cover.close_cover_tilt
-  - data:
-      entity_id: cover.nm04_sv1_cover
+  - entity_id: cover.family_room_swnw_blinds
     service: cover.close_cover_tilt
   - data:
       entity_id: cover.nm05_sv1_cover
@@ -284,8 +278,7 @@
     platform: time
   condition: []
   action:
-  - data:
-      entity_id: switch.sb04_relay
+  - entity_id: switch.sb06_relay
     service: switch.turn_on
 - id: '1552938778764'
   alias: Grow Lamp off at 08:00 PM
@@ -294,8 +287,7 @@
     platform: time
   condition: []
   action:
-  - data:
-      entity_id: switch.sb04_relay
+  - entity_id: switch.sb06_relay
     service: switch.turn_off
 - id: '1560461893289'
   alias: Security Lighting On Close Blinds
@@ -688,3 +680,53 @@
   action:
   - entity_id: switch.humidifier_power
     service: switch.turn_off
+- id: '1583938382449'
+  alias: Garage lights on when doors opened
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.garage_door
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: binary_sensor.garage_in_door
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.garage_light
+    service: switch.turn_on
+- id: '1583939404713'
+  alias: Garage lights off when no motion for 10 minutes with doors closed
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.garage_motion
+    for: 00:10:00
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition:
+  - condition: state
+    entity_id: group.garage_doors
+    state: 'off'
+  action:
+  - data: {}
+    entity_id: switch.garage_light
+    service: switch.turn_off
+- id: '1583940295594'
+  alias: Garage lights on with motion
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.garage_motion
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: switch.garage_light
+    state: 'off'
+  action:
+  - data: {}
+    entity_id: switch.garage_light
+    service: switch.turn_on
