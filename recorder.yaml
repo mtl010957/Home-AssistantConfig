@@ -68,3 +68,7 @@ include:
     - sensor.load_1m
     - person.susan_loeffler
     - sensor.ups_transfer_count
+    - sensor.us_coronavirus_current
+    - sensor.us_coronavirus_deaths
+    - sensor.worldwide_coronavirus_current
+    - sensor.worldwide_coronavirus_deaths

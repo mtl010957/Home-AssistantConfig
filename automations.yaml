@@ -703,7 +703,6 @@
   trigger:
   - entity_id: binary_sensor.garage_motion
     for: 00:10:00
-    from: 'on'
     platform: state
     to: 'off'
   condition:

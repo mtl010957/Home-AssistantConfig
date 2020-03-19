@@ -1,24 +1,24 @@
 entities:
   - name: "3629 Cam1 Pictures"
-    url: https://mtl-svn.dyndns-home.com/3629cam1/C1_00626E69269A/snap/
+    url: https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam1/C1_00626E69269A/snap/index.html
     icon: mdi:image
   - name: "3629 Cam1 Videos"
-    url: https://mtl-svn.dyndns-home.com/3629cam1/C1_00626E69269A/record/
+    url: https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam1/C1_00626E69269A/record/index.html
     icon: mdi:movie
   - name: "3629 Cam2 Pictures"
-    url: https://mtl-svn.dyndns-home.com/3629cam2/C1_00626E6926B6/snap/
+    url: https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam2/C1_00626E6926B6/snap/index.html
     icon: mdi:image
   - name: "3629 Cam2 Videos"
-    url: https://mtl-svn.dyndns-home.com/3629cam2/C1_00626E6926B6/record/
+    url: https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam2/C1_00626E6926B6/record/index.html
     icon: mdi:movie
   - name: "3629 Cam3 Pictures"
-    url: https://mtl-svn.dyndns-home.com/3629cam3/C1_00626E82585D/snap/
+    url: https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam3/C1_00626E82585D/snap/index.html
     icon: mdi:image
   - name: "3629 Cam3 Videos"
-    url: https://mtl-svn.dyndns-home.com/3629cam3/C1_00626E82585D/record/
+    url: https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam3/C1_00626E82585D/record/index.html
     icon: mdi:movie
   - name: "3629 Cam4 Pictures"
-    url: https://mtl-svn.dyndns-home.com/3629cam4/
+    url: https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam4/index.html
     icon: mdi:image
   - name: "Desert Front Porch Camera Feed"
     url: https://home.nest.com/camera/3d9c6edadb734864865e2b4a8a53cb93
