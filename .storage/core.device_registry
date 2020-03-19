@@ -223,7 +223,7 @@
                 "model": "hdhomerun5_atsc",
                 "name": "HDHomeRun 10673BCA",
                 "name_by_user": null,
-                "sw_version": "20190715beta1",
+                "sw_version": "20200225",
                 "via_device_id": null
             },
             {
@@ -564,9 +564,9 @@
                         "00:13:a2:00:41:07:04:37"
                     ]
                 ],
-                "manufacturer": "ZHA",
+                "manufacturer": "Digi",
                 "model": "XBee",
-                "name": "Zigbee Coordinator",
+                "name": "Digi XBee",
                 "name_by_user": null,
                 "sw_version": null,
                 "via_device_id": null
