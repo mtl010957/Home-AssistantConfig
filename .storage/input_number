@@ -1,0 +1,56 @@
+{
+    "data": {
+        "items": [
+            {
+                "icon": "mdi:swap-vertical",
+                "id": "3629cam4_up_down",
+                "max": 1.0,
+                "min": -1.0,
+                "mode": "slider",
+                "name": "3629Cam4 Up-Down",
+                "step": 1.0
+            },
+            {
+                "icon": "mdi:swap-horizontal",
+                "id": "3629cam4_left_right",
+                "max": 1.0,
+                "min": -1.0,
+                "mode": "slider",
+                "name": "3629Cam4 Left-Right",
+                "step": 1.0
+            },
+            {
+                "icon": "mdi:water-percent",
+                "id": "humidity_at_0_degf",
+                "max": 40.0,
+                "min": 20.0,
+                "mode": "box",
+                "name": "Humidity at 0 degF",
+                "step": 1.0,
+                "unit_of_measurement": "%"
+            },
+            {
+                "icon": "mdi:water-percent",
+                "id": "humidifier_temperature_gain",
+                "max": 50.0,
+                "min": 0.0,
+                "mode": "box",
+                "name": "Humidifier Temperature Gain",
+                "step": 1.0,
+                "unit_of_measurement": "%"
+            },
+            {
+                "icon": "mdi:water-percent",
+                "id": "humidifier_turn_on_deadband",
+                "max": 30.0,
+                "min": 0.0,
+                "mode": "box",
+                "name": "Humidifier Turn On Deadband",
+                "step": 1.0,
+                "unit_of_measurement": "%"
+            }
+        ]
+    },
+    "key": "input_number",
+    "version": 1
+}

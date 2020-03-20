@@ -567,38 +567,6 @@
                 "device_class": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "input_number.cam4_up_down",
-                "icon": null,
-                "name": null,
-                "original_icon": "mdi:swap-vertical",
-                "original_name": "3629Cam4 Up-Down",
-                "platform": "input_number",
-                "supported_features": 0,
-                "unique_id": "cam4_up_down",
-                "unit_of_measurement": null
-            },
-            {
-                "capabilities": {},
-                "config_entry_id": null,
-                "device_class": null,
-                "device_id": null,
-                "disabled_by": null,
-                "entity_id": "input_number.cam4_left_right",
-                "icon": null,
-                "name": null,
-                "original_icon": "mdi:swap-horizontal",
-                "original_name": "3629Cam4 Left-Right",
-                "platform": "input_number",
-                "supported_features": 0,
-                "unique_id": "cam4_left_right",
-                "unit_of_measurement": null
-            },
-            {
-                "capabilities": {},
-                "config_entry_id": null,
-                "device_class": null,
-                "device_id": null,
-                "disabled_by": null,
                 "entity_id": "input_number.humidifier_offset",
                 "icon": null,
                 "name": null,
@@ -5468,7 +5436,7 @@
                 "unit_of_measurement": "\u00baC"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "6993bc6df10e4dff8a3a0878d4ad0e49",
                 "device_class": null,
                 "device_id": "4bfcdcf419bc43b885ea4baf9a7cfc31",
@@ -5484,7 +5452,7 @@
                 "unit_of_measurement": "KiB/s"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "6993bc6df10e4dff8a3a0878d4ad0e49",
                 "device_class": null,
                 "device_id": "4bfcdcf419bc43b885ea4baf9a7cfc31",
@@ -5500,7 +5468,7 @@
                 "unit_of_measurement": "KiB/s"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "eda6b7902a174f3ea77c745fbef807d7",
                 "device_class": null,
                 "device_id": null,
@@ -5516,7 +5484,7 @@
                 "unit_of_measurement": "people"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "eda6b7902a174f3ea77c745fbef807d7",
                 "device_class": null,
                 "device_id": null,
@@ -5532,7 +5500,7 @@
                 "unit_of_measurement": "people"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "eda6b7902a174f3ea77c745fbef807d7",
                 "device_class": null,
                 "device_id": null,
@@ -5548,7 +5516,7 @@
                 "unit_of_measurement": "people"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "eda6b7902a174f3ea77c745fbef807d7",
                 "device_class": null,
                 "device_id": null,
@@ -5564,7 +5532,7 @@
                 "unit_of_measurement": "people"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "ed526fe2149e451c9f5aad8431f85cbb",
                 "device_class": null,
                 "device_id": null,
@@ -5580,7 +5548,7 @@
                 "unit_of_measurement": "people"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "ed526fe2149e451c9f5aad8431f85cbb",
                 "device_class": null,
                 "device_id": null,
@@ -5596,7 +5564,7 @@
                 "unit_of_measurement": "people"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "ed526fe2149e451c9f5aad8431f85cbb",
                 "device_class": null,
                 "device_id": null,
@@ -5612,7 +5580,7 @@
                 "unit_of_measurement": "people"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "ed526fe2149e451c9f5aad8431f85cbb",
                 "device_class": null,
                 "device_id": null,
@@ -5626,6 +5594,102 @@
                 "supported_features": 0,
                 "unique_id": "__worldwide-confirmed",
                 "unit_of_measurement": "people"
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "automation.garage_lights_off_when_door_closed_if_no_motion",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": "Garage lights off when door closed if no motion",
+                "platform": "automation",
+                "supported_features": 0,
+                "unique_id": "1584656811875",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "input_number.3629cam4_up_down",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:swap-vertical",
+                "original_name": "3629Cam4 Up-Down",
+                "platform": "input_number",
+                "supported_features": 0,
+                "unique_id": "3629cam4_up_down",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "input_number.3629cam4_left_right",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:swap-horizontal",
+                "original_name": "3629Cam4 Left-Right",
+                "platform": "input_number",
+                "supported_features": 0,
+                "unique_id": "3629cam4_left_right",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "input_number.humidity_at_0_degf",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:water-percent",
+                "original_name": "Humidity at 0 degF",
+                "platform": "input_number",
+                "supported_features": 0,
+                "unique_id": "humidity_at_0_degf",
+                "unit_of_measurement": "%"
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "input_number.humidifier_temperature_gain",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:water-percent",
+                "original_name": "Humidifier Temperature Gain",
+                "platform": "input_number",
+                "supported_features": 0,
+                "unique_id": "humidifier_temperature_gain",
+                "unit_of_measurement": "%"
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "input_number.humidifier_turn_on_deadband",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:water-percent",
+                "original_name": "Humidifier Turn On Deadband",
+                "platform": "input_number",
+                "supported_features": 0,
+                "unique_id": "humidifier_turn_on_deadband",
+                "unit_of_measurement": "%"
             }
         ]
     },

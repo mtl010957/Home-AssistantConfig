@@ -241,16 +241,7 @@
   condition: []
   action:
   - data:
-      entity_id: cover.nm01_sv1_cover
-    service: cover.open_cover_tilt
-  - entity_id: cover.family_room_sesw_blinds
-    service: cover.open_cover_tilt
-  - entity_id: cover.family_room_swse_blinds
-    service: cover.open_cover_tilt
-  - entity_id: cover.family_room_swnw_blinds
-    service: cover.open_cover_tilt
-  - data:
-      entity_id: cover.nm05_sv1_cover
+      entity_id: all
     service: cover.open_cover_tilt
 - id: '1552245394001'
   alias: Blinds Close at 11:00 PM
@@ -260,16 +251,7 @@
   condition: []
   action:
   - data:
-      entity_id: cover.nm01_sv1_cover
-    service: cover.close_cover_tilt
-  - entity_id: cover.family_room_sesw_blinds
-    service: cover.close_cover_tilt
-  - entity_id: cover.family_room_swse_blinds
-    service: cover.close_cover_tilt
-  - entity_id: cover.family_room_swnw_blinds
-    service: cover.close_cover_tilt
-  - data:
-      entity_id: cover.nm05_sv1_cover
+      entity_id: all
     service: cover.close_cover_tilt
 - id: '1552938556370'
   alias: Grow Lamp on at 06:00 AM
@@ -729,3 +711,20 @@
   - data: {}
     entity_id: switch.garage_light
     service: switch.turn_on
+- id: '1584656811875'
+  alias: Garage lights off when door closed if no motion
+  description: ''
+  trigger:
+  - entity_id: group.garage_doors
+    for: 00:00:20
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition:
+  - condition: state
+    entity_id: binary_sensor.garage_motion
+    state: 'off'
+  action:
+  - data: {}
+    entity_id: switch.garage_light
+    service: switch.turn_off

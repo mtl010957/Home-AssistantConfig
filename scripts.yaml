@@ -73,4 +73,4 @@
   sequence:
   - data:
       entity_id: all
-    service: cover.open_cover
+    service: cover.open_cover_tilt
