@@ -43,24 +43,22 @@
 '1562586761531':
   alias: Irrigation Zone 1 Run
   sequence:
-  - data:
-      entity_id: switch.ah01_rly4_1
+  - data: {}
+    entity_id: switch.irrigation_control_back_yard
     service: switch.turn_on
-  - delay: '{{ states(''input_number.zone1_run_minutes'') | multiply(60) | timestamp_custom(''%H:%M:%S'',False)
+  - delay: '{{ states(''input_number.zone_1_run_minutes'') | multiply(60) | timestamp_custom(''%H:%M:%S'',False)
       }}'
-  - data:
-      entity_id: switch.ah01_rly4_1
+  - data: {}
+    entity_id: switch.irrigation_control_back_yard
     service: switch.turn_off
 '1562587237822':
   alias: Irrigation Zone 3 Run
   sequence:
-  - data:
-      entity_id: switch.ah01_rly4_3
+  - entity_id: switch.irrigation_control_front_yard
     service: switch.turn_on
-  - delay: '{{ states(''input_number.zone3_run_minutes'') | multiply(60) | timestamp_custom(''%H:%M:%S'',False)
+  - delay: '{{ states(''input_number.zone_3_run_minutes'') | multiply(60) | timestamp_custom(''%H:%M:%S'',False)
       }}'
-  - data:
-      entity_id: switch.ah01_rly4_3
+  - entity_id: switch.irrigation_control_front_yard
     service: switch.turn_off
 '1571453541250':
   alias: Close All Blinds

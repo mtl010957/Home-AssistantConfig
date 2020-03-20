@@ -151,13 +151,13 @@
   action:
   - entity_id: switch.irrigation_control_back_yard
     service: switch.turn_on
-  - delay: '{{ states(''input_number.zone1_run_minutes'') | multiply(60) | timestamp_custom(''%H:%M:%S'',False)
+  - delay: '{{ states(''input_number.zone_1_run_minutes'') | multiply(60) | timestamp_custom(''%H:%M:%S'',False)
       }}'
   - entity_id: switch.irrigation_control_back_yard
     service: switch.turn_off
   - entity_id: switch.irrigation_control_front_yard
     service: switch.turn_on
-  - delay: '{{ states(''input_number.zone3_run_minutes'') | multiply(60) | timestamp_custom(''%H:%M:%S'',False)
+  - delay: '{{ states(''input_number.zone_3_run_minutes'') | multiply(60) | timestamp_custom(''%H:%M:%S'',False)
       }}'
   - entity_id: switch.irrigation_control_front_yard
     service: switch.turn_off

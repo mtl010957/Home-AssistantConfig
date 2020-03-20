@@ -48,6 +48,26 @@
                 "name": "Humidifier Turn On Deadband",
                 "step": 1.0,
                 "unit_of_measurement": "%"
+            },
+            {
+                "icon": "mdi:clock-start",
+                "id": "zone_1_run_minutes",
+                "max": 120.0,
+                "min": 0.0,
+                "mode": "box",
+                "name": "Zone 1 Run Minutes",
+                "step": 1.0,
+                "unit_of_measurement": "min"
+            },
+            {
+                "icon": "mdi:clock-start",
+                "id": "zone_3_run_minutes",
+                "max": 120.0,
+                "min": 0.0,
+                "mode": "box",
+                "name": "Zone 3 Run Minutes",
+                "step": 1.0,
+                "unit_of_measurement": "min"
             }
         ]
     },

@@ -563,86 +563,6 @@
             },
             {
                 "capabilities": {},
-                "config_entry_id": null,
-                "device_class": null,
-                "device_id": null,
-                "disabled_by": null,
-                "entity_id": "input_number.humidifier_offset",
-                "icon": null,
-                "name": null,
-                "original_icon": "mdi:water-percent",
-                "original_name": "Humidity at 0 degF",
-                "platform": "input_number",
-                "supported_features": 0,
-                "unique_id": "humidifier_offset",
-                "unit_of_measurement": "%"
-            },
-            {
-                "capabilities": {},
-                "config_entry_id": null,
-                "device_class": null,
-                "device_id": null,
-                "disabled_by": null,
-                "entity_id": "input_number.humidifier_slope",
-                "icon": null,
-                "name": null,
-                "original_icon": "mdi:water-percent",
-                "original_name": "Humidifier Temperature Gain",
-                "platform": "input_number",
-                "supported_features": 0,
-                "unique_id": "humidifier_slope",
-                "unit_of_measurement": "%"
-            },
-            {
-                "capabilities": {},
-                "config_entry_id": null,
-                "device_class": null,
-                "device_id": null,
-                "disabled_by": null,
-                "entity_id": "input_number.humidifier_deadband",
-                "icon": null,
-                "name": null,
-                "original_icon": "mdi:water-percent",
-                "original_name": "Humidifier Turn On Deadband",
-                "platform": "input_number",
-                "supported_features": 0,
-                "unique_id": "humidifier_deadband",
-                "unit_of_measurement": "%"
-            },
-            {
-                "capabilities": {},
-                "config_entry_id": null,
-                "device_class": null,
-                "device_id": null,
-                "disabled_by": null,
-                "entity_id": "input_number.zone1_run_minutes",
-                "icon": null,
-                "name": null,
-                "original_icon": "mdi:clock-start",
-                "original_name": "Zone 1 Run Minutes",
-                "platform": "input_number",
-                "supported_features": 0,
-                "unique_id": "zone1_run_minutes",
-                "unit_of_measurement": null
-            },
-            {
-                "capabilities": {},
-                "config_entry_id": null,
-                "device_class": null,
-                "device_id": null,
-                "disabled_by": null,
-                "entity_id": "input_number.zone3_run_minutes",
-                "icon": null,
-                "name": null,
-                "original_icon": "mdi:clock-start",
-                "original_name": "Zone 3 Run Minutes",
-                "platform": "input_number",
-                "supported_features": 0,
-                "unique_id": "zone3_run_minutes",
-                "unit_of_measurement": null
-            },
-            {
-                "capabilities": {},
                 "config_entry_id": "9dedbabbe05e43868f21688e3913610a",
                 "device_class": null,
                 "device_id": null,
@@ -5612,7 +5532,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": null,
                 "device_class": null,
                 "device_id": null,
@@ -5628,7 +5548,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": null,
                 "device_class": null,
                 "device_id": null,
@@ -5644,7 +5564,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": null,
                 "device_class": null,
                 "device_id": null,
@@ -5660,7 +5580,7 @@
                 "unit_of_measurement": "%"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": null,
                 "device_class": null,
                 "device_id": null,
@@ -5676,7 +5596,7 @@
                 "unit_of_measurement": "%"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": null,
                 "device_class": null,
                 "device_id": null,
@@ -5690,6 +5610,38 @@
                 "supported_features": 0,
                 "unique_id": "humidifier_turn_on_deadband",
                 "unit_of_measurement": "%"
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "input_number.zone_1_run_minutes",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:clock-start",
+                "original_name": "Zone 1 Run Minutes",
+                "platform": "input_number",
+                "supported_features": 0,
+                "unique_id": "zone_1_run_minutes",
+                "unit_of_measurement": "min"
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "input_number.zone_3_run_minutes",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:clock-start",
+                "original_name": "Zone 3 Run Minutes",
+                "platform": "input_number",
+                "supported_features": 0,
+                "unique_id": "zone_3_run_minutes",
+                "unit_of_measurement": "min"
             }
         ]
     },
