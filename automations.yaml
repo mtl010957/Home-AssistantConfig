@@ -75,70 +75,62 @@
   alias: 3629cam4 Up
   trigger:
   - below: '-0.1'
-    entity_id: input_number.cam4_up_down
+    entity_id: input_number.3629cam4_up_down
     platform: numeric_state
   action:
-  - data:
-      entity_id: switch.generic_cam4_up
-    service: homeassistant.turn_on
+  - entity_id: switch.generic_cam4_up
+    service: switch.turn_on
 - id: '1800999911111'
   alias: 3629cam4 Up Down Stop
   trigger:
   - above: '-0.1'
     below: '0.1'
-    entity_id: input_number.cam4_up_down
+    entity_id: input_number.3629cam4_up_down
     platform: numeric_state
   action:
-  - data:
-      entity_id: switch.generic_cam4_up
-    service: homeassistant.turn_off
-  - data:
-      entity_id: switch.generic_cam4_down
-    service: homeassistant.turn_off
+  - entity_id: switch.generic_cam4_up
+    service: switch.turn_off
+  - entity_id: switch.generic_cam4_down
+    service: switch.turn_off
 - id: '1800999911112'
   alias: 3629cam4 Down
   trigger:
   - above: '0.1'
-    entity_id: input_number.cam4_up_down
+    entity_id: input_number.3629cam4_up_down
     platform: numeric_state
   action:
-  - data:
-      entity_id: switch.generic_cam4_down
-    service: homeassistant.turn_on
+  - entity_id: switch.generic_cam4_down
+    service: switch.turn_on
 - id: '1800999911113'
   alias: 3629cam4 Left
   trigger:
   - below: '-0.1'
-    entity_id: input_number.cam4_left_right
+    entity_id: input_number.3629cam4_left_right
     platform: numeric_state
   action:
-  - data:
-      entity_id: switch.generic_cam4_left
-    service: homeassistant.turn_on
+  - entity_id: switch.generic_cam4_left
+    service: switch.turn_on
 - id: '1800999911114'
   alias: 3629cam4 Left Right Stop
   trigger:
   - above: '-0.1'
     below: '0.1'
-    entity_id: input_number.cam4_left_right
+    entity_id: input_number.3629cam4_left_right
     platform: numeric_state
   action:
-  - data:
-      entity_id: switch.generic_cam4_left
-    service: homeassistant.turn_off
-  - data:
-      entity_id: switch.generic_cam4_right
-    service: homeassistant.turn_off
+  - entity_id: switch.generic_cam4_left
+    service: switch.turn_off
+  - entity_id: switch.generic_cam4_right
+    service: switch.turn_off
 - id: '1800999911115'
   alias: 3629cam4 Right
   trigger:
   - above: '0.1'
-    entity_id: input_number.cam4_left_right
+    entity_id: input_number.3629cam4_left_right
     platform: numeric_state
   action:
-  - data:
-      entity_id: switch.generic_cam4_right
-    service: homeassistant.turn_on
+  - entity_id: switch.generic_cam4_right
+    service: switch.turn_on
 - id: '1533419985023'
   alias: Irrigation Run
   trigger:
