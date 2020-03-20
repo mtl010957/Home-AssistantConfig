@@ -59,6 +59,8 @@ include:
     - sensor.load_1m
     - sensor.memory_use_percent
     - sensor.swap_use_percent
+    - sensor.cpu_temperature
+    - sensor.disk_use_percent
     - person.susan_loeffler
     - sensor.ups_transfer_count
     - sensor.us_coronavirus_current
