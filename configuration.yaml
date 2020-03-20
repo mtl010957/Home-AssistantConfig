@@ -73,8 +73,6 @@ fan: !include_dir_merge_list fan
 # HDHomeRun integration in HACS
 hdhomerun:
 
-input_number: !include_dir_merge_named input_number
-
 # HTML5 Push Notifications
 notify: !include notify.yaml
 
