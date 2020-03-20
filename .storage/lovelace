@@ -196,41 +196,31 @@
                         {
                             "cards": [
                                 {
+                                    "aspect_ratio": "0%",
                                     "camera_image": "camera.3629_cam_1",
                                     "entities": [
                                         {
                                             "entity": "switch.foscam_cam1_motion"
+                                        },
+                                        {
+                                            "entity": "camera.3629_cam_1",
+                                            "icon": "mdi:image-album",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam1/C1_00626E69269A/snap/index.html"
+                                            }
+                                        },
+                                        {
+                                            "entity": "camera.3629_cam_1",
+                                            "icon": "mdi:movie",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam1/C1_00626E69269A/record/index.html"
+                                            }
                                         }
                                     ],
                                     "title": "Front Door",
                                     "type": "picture-glance"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "entities": [
-                                                {
-                                                    "icon": "mdi:image-album",
-                                                    "name": "Stills",
-                                                    "type": "weblink",
-                                                    "url": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam1/C1_00626E69269A/snap/index.html"
-                                                }
-                                            ],
-                                            "type": "entities"
-                                        },
-                                        {
-                                            "entities": [
-                                                {
-                                                    "icon": "mdi:movie",
-                                                    "name": "Videos",
-                                                    "type": "weblink",
-                                                    "url": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam1/C1_00626E69269A/record/index.html"
-                                                }
-                                            ],
-                                            "type": "entities"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
                                 }
                             ],
                             "type": "vertical-stack"
@@ -283,37 +273,26 @@
                                     "entities": [
                                         {
                                             "entity": "switch.foscam_cam1_motion"
+                                        },
+                                        {
+                                            "entity": "camera.3629_cam_1",
+                                            "icon": "mdi:image-album",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam1/C1_00626E69269A/snap/index.html"
+                                            }
+                                        },
+                                        {
+                                            "entity": "camera.3629_cam_1",
+                                            "icon": "mdi:movie",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam1/C1_00626E69269A/record/index.html"
+                                            }
                                         }
                                     ],
                                     "title": "Front Door",
                                     "type": "picture-glance"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "entities": [
-                                                {
-                                                    "icon": "mdi:image-album",
-                                                    "name": "Stills",
-                                                    "type": "weblink",
-                                                    "url": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam1/C1_00626E69269A/snap/index.html"
-                                                }
-                                            ],
-                                            "type": "entities"
-                                        },
-                                        {
-                                            "entities": [
-                                                {
-                                                    "icon": "mdi:movie",
-                                                    "name": "Videos",
-                                                    "type": "weblink",
-                                                    "url": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam1/C1_00626E69269A/record/index.html"
-                                                }
-                                            ],
-                                            "type": "entities"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
                                 },
                                 {
                                     "aspect_ratio": "0%",
@@ -321,38 +300,26 @@
                                     "entities": [
                                         {
                                             "entity": "switch.foscam_cam2_motion"
-                                        }
-                                    ],
-                                    "image": "https://demo.home-assistant.io/stub_config/kitchen.png",
-                                    "title": "Back Door",
-                                    "type": "picture-glance"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "entities": [
-                                                {
-                                                    "icon": "mdi:image-album",
-                                                    "name": "Stills",
-                                                    "type": "weblink",
-                                                    "url": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam2/C1_00626E6926B6/snap/index.html"
-                                                }
-                                            ],
-                                            "type": "entities"
                                         },
                                         {
-                                            "entities": [
-                                                {
-                                                    "icon": "mdi:movie",
-                                                    "name": "Videos",
-                                                    "type": "weblink",
-                                                    "url": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam2/C1_00626E6926B6/record/index.html"
-                                                }
-                                            ],
-                                            "type": "entities"
+                                            "entity": "camera.3629_cam_2",
+                                            "icon": "mdi:image-album",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam2/C1_00626E6926B6/snap/index.html"
+                                            }
+                                        },
+                                        {
+                                            "entity": "camera.3629_cam_2",
+                                            "icon": "mdi:movie",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam2/C1_00626E6926B6/record/index.html"
+                                            }
                                         }
                                     ],
-                                    "type": "horizontal-stack"
+                                    "title": "Back Door",
+                                    "type": "picture-glance"
                                 }
                             ],
                             "type": "vertical-stack"
@@ -365,37 +332,26 @@
                                     "entities": [
                                         {
                                             "entity": "switch.foscam_cam3_motion"
+                                        },
+                                        {
+                                            "entity": "camera.3629_cam_3",
+                                            "icon": "mdi:image-album",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam3/C1_00626E82585D/snap/index.html"
+                                            }
+                                        },
+                                        {
+                                            "entity": "camera.3629_cam_3",
+                                            "icon": "mdi:movie",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam3/C1_00626E82585D/record/index.html"
+                                            }
                                         }
                                     ],
                                     "title": "Family Room",
                                     "type": "picture-glance"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "entities": [
-                                                {
-                                                    "icon": "mdi:image-album",
-                                                    "name": "Stills",
-                                                    "type": "weblink",
-                                                    "url": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam3/C1_00626E82585D/snap/index.html"
-                                                }
-                                            ],
-                                            "type": "entities"
-                                        },
-                                        {
-                                            "entities": [
-                                                {
-                                                    "icon": "mdi:movie",
-                                                    "name": "Videos",
-                                                    "type": "weblink",
-                                                    "url": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam3/C1_00626E82585D/record/index.html"
-                                                }
-                                            ],
-                                            "type": "entities"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
                                 },
                                 {
                                     "aspect_ratio": "0%",
@@ -409,21 +365,18 @@
                                         },
                                         {
                                             "entity": "input_number.3629cam4_left_right"
+                                        },
+                                        {
+                                            "entity": "camera.3629_cam_4",
+                                            "icon": "mdi:image-album",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam4/index.html"
+                                            }
                                         }
                                     ],
                                     "title": "Living Room",
                                     "type": "picture-glance"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "icon": "mdi:image-album",
-                                            "name": "Stills and Videos",
-                                            "type": "weblink",
-                                            "url": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam4/index.html"
-                                        }
-                                    ],
-                                    "type": "entities"
                                 }
                             ],
                             "type": "vertical-stack"
@@ -439,42 +392,38 @@
                                         },
                                         {
                                             "entity": "switch.desert_front_porch_camera"
+                                        },
+                                        {
+                                            "entity": "camera.front_yard_front_porch",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://home.nest.com/camera/3d9c6edadb734864865e2b4a8a53cb93"
+                                            }
                                         }
                                     ],
                                     "title": "Desert Front Yard (Front Porch)",
                                     "type": "picture-glance"
                                 },
                                 {
-                                    "entities": [
-                                        {
-                                            "icon": "mdi:movie",
-                                            "name": "Desert Front Porch Camera Feed",
-                                            "type": "weblink",
-                                            "url": "https://home.nest.com/camera/3d9c6edadb734864865e2b4a8a53cb93"
-                                        }
-                                    ],
-                                    "type": "entities"
-                                },
-                                {
                                     "aspect_ratio": "0%",
                                     "camera_image": "camera.living_room",
                                     "entities": [
-                                        "binary_sensor.living_room_camera_online",
-                                        "switch.desert_living_room_camera"
+                                        {
+                                            "entity": "binary_sensor.living_room_camera_online"
+                                        },
+                                        {
+                                            "entity": "switch.desert_living_room_camera"
+                                        },
+                                        {
+                                            "entity": "camera.living_room",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://home.nest.com/camera/38791aecd8ec42e0bdf6d3d6fcc8753e"
+                                            }
+                                        }
                                     ],
                                     "title": "Desert Living Room",
                                     "type": "picture-glance"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "icon": "mdi:movie",
-                                            "name": "Desert Living Room Camera Feed",
-                                            "type": "weblink",
-                                            "url": "https://home.nest.com/camera/38791aecd8ec42e0bdf6d3d6fcc8753e"
-                                        }
-                                    ],
-                                    "type": "entities"
                                 }
                             ],
                             "type": "vertical-stack"
@@ -559,37 +508,29 @@
                             "type": "entities"
                         },
                         {
-                            "cards": [
+                            "aspect_ratio": "0%",
+                            "camera_image": "camera.3629_cam_4",
+                            "entities": [
                                 {
-                                    "aspect_ratio": "0%",
-                                    "camera_image": "camera.3629_cam_4",
-                                    "entities": [
-                                        {
-                                            "entity": "switch.generic_cam4_motion"
-                                        },
-                                        {
-                                            "entity": "input_number.cam4_up_down"
-                                        },
-                                        {
-                                            "entity": "input_number.cam4_left_right"
-                                        }
-                                    ],
-                                    "title": "Living Room",
-                                    "type": "picture-glance"
+                                    "entity": "switch.generic_cam4_motion"
                                 },
                                 {
-                                    "entities": [
-                                        {
-                                            "icon": "mdi:image-album",
-                                            "name": "Stills and Videos",
-                                            "type": "weblink",
-                                            "url": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam4/index.html"
-                                        }
-                                    ],
-                                    "type": "entities"
+                                    "entity": "input_number.3629cam4_up_down"
+                                },
+                                {
+                                    "entity": "input_number.3629cam4_left_right"
+                                },
+                                {
+                                    "entity": "camera.3629_cam_4",
+                                    "icon": "mdi:image-album",
+                                    "tap_action": {
+                                        "action": "url",
+                                        "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam4/index.html"
+                                    }
                                 }
                             ],
-                            "type": "vertical-stack"
+                            "title": "Living Room",
+                            "type": "picture-glance"
                         },
                         {
                             "cards": [
@@ -598,21 +539,17 @@
                                     "camera_image": "camera.living_room",
                                     "entities": [
                                         "binary_sensor.living_room_camera_online",
-                                        "switch.desert_living_room_camera"
+                                        "switch.desert_living_room_camera",
+                                        {
+                                            "entity": "camera.living_room",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://home.nest.com/camera/38791aecd8ec42e0bdf6d3d6fcc8753e"
+                                            }
+                                        }
                                     ],
                                     "title": "Desert Living Room",
                                     "type": "picture-glance"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "icon": "mdi:movie",
-                                            "name": "Desert Living Room Camera Feed",
-                                            "type": "weblink",
-                                            "url": "https://home.nest.com/camera/38791aecd8ec42e0bdf6d3d6fcc8753e"
-                                        }
-                                    ],
-                                    "type": "entities"
                                 }
                             ],
                             "type": "vertical-stack"
@@ -877,37 +814,26 @@
                                     "entities": [
                                         {
                                             "entity": "switch.foscam_cam3_motion"
+                                        },
+                                        {
+                                            "entity": "camera.3629_cam_3",
+                                            "icon": "mdi:image-album",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam3/C1_00626E82585D/snap/index.html"
+                                            }
+                                        },
+                                        {
+                                            "entity": "camera.3629_cam_3",
+                                            "icon": "mdi:movie",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam3/C1_00626E82585D/record/index.html"
+                                            }
                                         }
                                     ],
                                     "title": "Family Room",
                                     "type": "picture-glance"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "entities": [
-                                                {
-                                                    "icon": "mdi:image-album",
-                                                    "name": "Stills",
-                                                    "type": "weblink",
-                                                    "url": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam3/C1_00626E82585D/snap/index.html"
-                                                }
-                                            ],
-                                            "type": "entities"
-                                        },
-                                        {
-                                            "entities": [
-                                                {
-                                                    "icon": "mdi:movie",
-                                                    "name": "Videos",
-                                                    "type": "weblink",
-                                                    "url": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam3/C1_00626E82585D/record/index.html"
-                                                }
-                                            ],
-                                            "type": "entities"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
                                 }
                             ],
                             "type": "vertical-stack"
@@ -1170,37 +1096,26 @@
                                     "entities": [
                                         {
                                             "entity": "switch.foscam_cam1_motion"
+                                        },
+                                        {
+                                            "entity": "camera.3629_cam_1",
+                                            "icon": "mdi:image-album",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam1/C1_00626E69269A/snap/index.html"
+                                            }
+                                        },
+                                        {
+                                            "entity": "camera.3629_cam_1",
+                                            "icon": "mdi:movie",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam1/C1_00626E69269A/record/index.html"
+                                            }
                                         }
                                     ],
                                     "title": "Front Door",
                                     "type": "picture-glance"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "entities": [
-                                                {
-                                                    "icon": "mdi:image-album",
-                                                    "name": "Stills",
-                                                    "type": "weblink",
-                                                    "url": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam1/C1_00626E69269A/snap/index.html"
-                                                }
-                                            ],
-                                            "type": "entities"
-                                        },
-                                        {
-                                            "entities": [
-                                                {
-                                                    "icon": "mdi:movie",
-                                                    "name": "Videos",
-                                                    "type": "weblink",
-                                                    "url": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam1/C1_00626E69269A/record/index.html"
-                                                }
-                                            ],
-                                            "type": "entities"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
                                 },
                                 {
                                     "aspect_ratio": "0%",
@@ -1208,38 +1123,26 @@
                                     "entities": [
                                         {
                                             "entity": "switch.foscam_cam2_motion"
-                                        }
-                                    ],
-                                    "image": "https://demo.home-assistant.io/stub_config/kitchen.png",
-                                    "title": "Back Door",
-                                    "type": "picture-glance"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "entities": [
-                                                {
-                                                    "icon": "mdi:image-album",
-                                                    "name": "Stills",
-                                                    "type": "weblink",
-                                                    "url": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam2/C1_00626E6926B6/snap/index.html"
-                                                }
-                                            ],
-                                            "type": "entities"
                                         },
                                         {
-                                            "entities": [
-                                                {
-                                                    "icon": "mdi:movie",
-                                                    "name": "Videos",
-                                                    "type": "weblink",
-                                                    "url": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam2/C1_00626E6926B6/record/index.html"
-                                                }
-                                            ],
-                                            "type": "entities"
+                                            "entity": "camera.3629_cam_2",
+                                            "icon": "mdi:image-album",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam2/C1_00626E6926B6/snap/index.html"
+                                            }
+                                        },
+                                        {
+                                            "entity": "camera.3629_cam_2",
+                                            "icon": "mdi:movie",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam2/C1_00626E6926B6/record/index.html"
+                                            }
                                         }
                                     ],
-                                    "type": "horizontal-stack"
+                                    "title": "Back Door",
+                                    "type": "picture-glance"
                                 }
                             ],
                             "type": "vertical-stack"
@@ -1255,21 +1158,17 @@
                                         },
                                         {
                                             "entity": "switch.desert_front_porch_camera"
+                                        },
+                                        {
+                                            "entity": "camera.front_yard_front_porch",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://home.nest.com/camera/3d9c6edadb734864865e2b4a8a53cb93"
+                                            }
                                         }
                                     ],
                                     "title": "Desert Front Yard (Front Porch)",
                                     "type": "picture-glance"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "icon": "mdi:movie",
-                                            "name": "Desert Front Porch Camera Feed",
-                                            "type": "weblink",
-                                            "url": "https://home.nest.com/camera/3d9c6edadb734864865e2b4a8a53cb93"
-                                        }
-                                    ],
-                                    "type": "entities"
                                 }
                             ],
                             "type": "vertical-stack"
