@@ -21,6 +21,7 @@ include:
     - cover.family_room_swse_blinds
     # fans
     - fan.house_fan
+    - fan.master_bedroom_ceiling_fan_switch_level
     # lights
     - light.living_room_lamp_dimmer
     - light.family_room_lamp_bulb_1

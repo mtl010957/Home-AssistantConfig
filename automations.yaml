@@ -293,19 +293,25 @@
 - id: '1562957476111'
   alias: Master Bedroom Ceiling Fan Remote Stop
   trigger:
-  - entity_id: binary_sensor.fan_remote_stop
-    platform: state
-    to: 'on'
+  - device_id: 496a677156f946c1814340485397c835
+    domain: binary_sensor
+    entity_id: binary_sensor.fan_remote_stop
+    platform: device
+    type: turned_on
   condition: []
   action:
-  - entity_id: fan.master_bedroom_ceiling_fan_switch_level
-    service: fan.turn_off
+  - data:
+      speed: 'off'
+    entity_id: fan.master_bedroom_ceiling_fan_switch_level
+    service: fan.set_speed
 - id: '1562957684896'
   alias: Master Bedroom Ceiling Fan Remote Hi
   trigger:
-  - entity_id: binary_sensor.fan_remote_hi
-    platform: state
-    to: 'on'
+  - device_id: 496a677156f946c1814340485397c835
+    domain: binary_sensor
+    entity_id: binary_sensor.fan_remote_hi
+    platform: device
+    type: turned_on
   condition: []
   action:
   - data:
@@ -315,9 +321,11 @@
 - id: '1562958033989'
   alias: Master Bedroom Ceiling Fan Remote Medium
   trigger:
-  - entity_id: binary_sensor.fan_remote_med
-    platform: state
-    to: 'on'
+  - device_id: 496a677156f946c1814340485397c835
+    domain: binary_sensor
+    entity_id: binary_sensor.fan_remote_med
+    platform: device
+    type: turned_on
   condition: []
   action:
   - data:
@@ -327,9 +335,11 @@
 - id: '1562958094562'
   alias: Master Bedroom Ceiling Fan Remote Low
   trigger:
-  - entity_id: binary_sensor.fan_remote_low
-    platform: state
-    to: 'on'
+  - device_id: 496a677156f946c1814340485397c835
+    domain: binary_sensor
+    entity_id: binary_sensor.fan_remote_low
+    platform: device
+    type: turned_on
   condition: []
   action:
   - data:
