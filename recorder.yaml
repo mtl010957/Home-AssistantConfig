@@ -11,6 +11,8 @@ include:
     - binary_sensor.garage_motion
     - binary_sensor.master_bedroom_motion
     - binary_sensor.family_room_motion
+    # climate
+    - climate.thermostat
     # covers
     - cover.family_room_sene_blinds
     - cover.family_room_nwsw_blinds
