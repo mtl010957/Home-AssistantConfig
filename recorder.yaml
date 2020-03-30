@@ -1,69 +1,83 @@
 purge_interval: 1
-purge_keep_days: 4
+purge_keep_days: 2
 db_url: !secret recorder_db_url
 include:
   entities:
+    # binary_sensors
     - binary_sensor.back_door
     - binary_sensor.front_door
     - binary_sensor.garage_door
     - binary_sensor.garage_in_door
     - binary_sensor.garage_motion
+    - binary_sensor.master_bedroom_motion
+    - binary_sensor.family_room_motion
+    # covers
+    - cover.family_room_sene_blinds
+    - cover.family_room_nwsw_blinds
+    - cover.family_room_sesw_blinds
+    - cover.family_room_swnw_blinds
+    - cover.family_room_swse_blinds
+    # fans
+    - fan.house_fan
+    # lights
     - light.living_room_lamp_dimmer
+    - light.family_room_lamp_bulb_1
+    - light.family_room_lamp_bulb_2
+    - light.family_room_link_bulb_1
+    - light.family_room_link_bulb_2
+    - light.garage_attic_link_bulb
+    - light.guest_room_lamp_bulb
+    - light.office_light_bulb
+    - light.living_room_lamp_dimmer
+    # persons
+    - person.michael_loeffler
+    - person.susan_loeffler
+    # sensors
+    - sensor.last_boot
+    - sensor.load_1m
+    - sensor.memory_use_percent
+    - sensor.swap_use_percent
+    - sensor.cpu_temperature
     - sensor.office_temperature
     - sensor.office_humidity
-    - switch.living_room_lamp_module
     - sensor.caravan_temperature
     - sensor.caravan_humidity
     - sensor.dark_sky_temperature
     - sensor.dte_energy_bridge_summary
     - sensor.family_room_humidity
-    - light.family_room_lamp_bulb_1
-    - light.family_room_lamp_bulb_2
-    - light.family_room_link_bulb_1
-    - light.family_room_link_bulb_2
-    - binary_sensor.family_room_motion
-    - cover.family_room_nwsw_blinds
     - sensor.corrected_barometer_inhg
-    - cover.family_room_sene_blinds
-    - cover.family_room_sesw_blinds
-    - cover.family_room_swnw_blinds
-    - cover.family_room_swse_blinds
     - sensor.family_room_temperature
     - sensor.furnace_flue_temperature_f
     - sensor.furnace_nw_zone_return_temperature_f
     - sensor.furnace_se_zone_return_temperature_f
     - sensor.furnace_supply_temperature_f
-    - light.garage_attic_link_bulb
     - sensor.garage_humidity
-    - switch.garage_latch
-    - switch.garage_light
     - sensor.garage_temperature
-    - light.guest_room_lamp_bulb
-    - fan.house_fan
     - sensor.humidifier_off
     - sensor.humidifier_on
+    - sensor.master_bedroom_humidity
+    - sensor.master_bedroom_temperature
+    - sensor.outdoor_humidity
+    - sensor.outdoor_temperature
+    - sensor.ups_transfer_count
+    # switches
+    - switch.living_room_lamp_module
+    - switch.garage_latch
+    - switch.garage_light
     - switch.humidifier_power
     - switch.irrigation_control_back_yard
     - switch.irrigation_control_enable
     - switch.irrigation_control_front_yard
-    - sensor.last_boot
-    - light.living_room_lamp_dimmer
     - switch.living_room_lamp_module
-    - sensor.master_bedroom_humidity
-    - binary_sensor.master_bedroom_motion
-    - sensor.master_bedroom_temperature
-    - person.michael_loeffler
-    - light.office_light_bulb
-    - sensor.outdoor_humidity
-    - sensor.outdoor_temperature
-    - sensor.load_1m
-    - sensor.memory_use_percent
-    - sensor.swap_use_percent
-    - sensor.cpu_temperature
-    - sensor.disk_use_percent
-    - person.susan_loeffler
-    - sensor.ups_transfer_count
-    - sensor.us_coronavirus_current
-    - sensor.us_coronavirus_deaths
-    - sensor.worldwide_coronavirus_current
-    - sensor.worldwide_coronavirus_deaths
+exclude:
+  event_types:
+    - alexa_smart_home
+    - component_loaded
+    - device_registry_updated
+    - hacs/config
+    - hacs/reload
+    - hacs/repository
+    - hacs/status
+    - panels_updated
+    - platform_discovered
+    - timer_out_of_sync

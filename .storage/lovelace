@@ -233,30 +233,6 @@
                                 }
                             ],
                             "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.us_coronavirus_current"
-                                },
-                                {
-                                    "entity": "sensor.us_coronavirus_deaths"
-                                }
-                            ],
-                            "title": "US Coronavirus",
-                            "type": "glance"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.worldwide_coronavirus_current"
-                                },
-                                {
-                                    "entity": "sensor.worldwide_coronavirus_deaths"
-                                }
-                            ],
-                            "title": "World Coronavirus",
-                            "type": "glance"
                         }
                     ],
                     "icon": "mdi:home",

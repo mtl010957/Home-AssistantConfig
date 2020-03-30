@@ -1,13 +1,18 @@
-platform: nmap_tracker
-interval_seconds: 15
-consider_home: 0:30:00
-home_interval: 10
-hosts: 192.168.13.1/24
-exclude:
- - 192.168.13.1
- - 192.168.13.5
- - 192.168.13.23
- - 192.168.13.32
- - 192.168.13.34
-new_device_defaults:
-  track_new_devices: false
+#- platform: nmap_tracker
+#  interval_seconds: 60
+#  consider_home: 0:30:00
+#  home_interval: 10
+#  hosts: 192.168.13.1/24
+#  exclude:
+#   - 192.168.13.1
+#   - 192.168.13.5
+#   - 192.168.13.23
+#   - 192.168.13.32
+#   - 192.168.13.34
+#  new_device_defaults:
+#    track_new_devices: false
+- platform: ping
+  consider_home: 00:30:00
+  hosts:
+    pixel2: 192.168.13.116
+    iphonex: 192.168.13.139

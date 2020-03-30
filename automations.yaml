@@ -28,7 +28,7 @@
     service: switch.turn_on
   - entity_id: switch.generic_cam4_motion
     service: switch.turn_on
-  - entity_id: switch.sb01_relay
+  - entity_id: switch.front_yard_light
     service: switch.turn_on
 - id: '1500947016399'
   alias: Camera Motion and Floods On Armed Night
@@ -41,7 +41,7 @@
     service: switch.turn_on
   - entity_id: switch.foscam_cam2_motion
     service: switch.turn_on
-  - entity_id: switch.sb01_relay
+  - entity_id: switch.front_yard_light
     service: switch.turn_on
 - id: '1500947000000'
   alias: Camera Motion On Armed Home
@@ -69,7 +69,7 @@
     service: switch.turn_off
   - entity_id: switch.generic_cam4_motion
     service: switch.turn_off
-  - entity_id: switch.sb01_relay
+  - entity_id: switch.front_yard_light
     service: switch.turn_off
 - id: '1800999911110'
   alias: 3629cam4 Up
