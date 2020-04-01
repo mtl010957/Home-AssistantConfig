@@ -208,7 +208,7 @@
                                             "icon": "mdi:image-album",
                                             "tap_action": {
                                                 "action": "url",
-                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam1/C1_00626E69269A/snap/index.html"
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam1/C1_00626E69269A/snap/index.html"
                                             }
                                         },
                                         {
@@ -216,7 +216,7 @@
                                             "icon": "mdi:movie",
                                             "tap_action": {
                                                 "action": "url",
-                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam1/C1_00626E69269A/record/index.html"
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam1/C1_00626E69269A/record/index.html"
                                             }
                                         }
                                     ],
@@ -256,7 +256,7 @@
                                             "icon": "mdi:image-album",
                                             "tap_action": {
                                                 "action": "url",
-                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam1/C1_00626E69269A/snap/index.html"
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam1/C1_00626E69269A/snap/index.html"
                                             }
                                         },
                                         {
@@ -264,7 +264,7 @@
                                             "icon": "mdi:movie",
                                             "tap_action": {
                                                 "action": "url",
-                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam1/C1_00626E69269A/record/index.html"
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam1/C1_00626E69269A/record/index.html"
                                             }
                                         }
                                     ],
@@ -283,7 +283,7 @@
                                             "icon": "mdi:image-album",
                                             "tap_action": {
                                                 "action": "url",
-                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam2/C1_00626E6926B6/snap/index.html"
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam2/C1_00626E6926B6/snap/index.html"
                                             }
                                         },
                                         {
@@ -291,7 +291,7 @@
                                             "icon": "mdi:movie",
                                             "tap_action": {
                                                 "action": "url",
-                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam2/C1_00626E6926B6/record/index.html"
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam2/C1_00626E6926B6/record/index.html"
                                             }
                                         }
                                     ],
@@ -315,7 +315,7 @@
                                             "icon": "mdi:image-album",
                                             "tap_action": {
                                                 "action": "url",
-                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam3/C1_00626E82585D/snap/index.html"
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam3/C1_00626E82585D/snap/index.html"
                                             }
                                         },
                                         {
@@ -323,7 +323,7 @@
                                             "icon": "mdi:movie",
                                             "tap_action": {
                                                 "action": "url",
-                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam3/C1_00626E82585D/record/index.html"
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam3/C1_00626E82585D/record/index.html"
                                             }
                                         }
                                     ],
@@ -348,7 +348,7 @@
                                             "icon": "mdi:image-album",
                                             "tap_action": {
                                                 "action": "url",
-                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam4/index.html"
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam4/index.html"
                                             }
                                         }
                                     ],
@@ -502,7 +502,7 @@
                                     "icon": "mdi:image-album",
                                     "tap_action": {
                                         "action": "url",
-                                        "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam4/index.html"
+                                        "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam4/index.html"
                                     }
                                 }
                             ],
@@ -797,7 +797,7 @@
                                             "icon": "mdi:image-album",
                                             "tap_action": {
                                                 "action": "url",
-                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam3/C1_00626E82585D/snap/index.html"
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam3/C1_00626E82585D/snap/index.html"
                                             }
                                         },
                                         {
@@ -805,7 +805,7 @@
                                             "icon": "mdi:movie",
                                             "tap_action": {
                                                 "action": "url",
-                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/local/nas_a2/3629cam3/C1_00626E82585D/record/index.html"
+                                                "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam3/C1_00626E82585D/record/index.html"
                                             }
                                         }
                                     ],

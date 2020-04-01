@@ -63,6 +63,7 @@ include:
     - sensor.outdoor_humidity
     - sensor.outdoor_temperature
     - sensor.ups_transfer_count
+    - sensor.ups_input_voltage
     # switches
     - switch.living_room_lamp_module
     - switch.garage_latch
