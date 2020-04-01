@@ -730,3 +730,17 @@
   - data: {}
     entity_id: switch.garage_light
     service: switch.turn_off
+- id: '1585672107503'
+  alias: Purge recorder database
+  description: ''
+  trigger:
+  - hours: '*'
+    minutes: '42'
+    platform: time_pattern
+    seconds: '15'
+  condition: []
+  action:
+  - data:
+      keep_days: 2
+      repack: true
+    service: recorder.purge

@@ -5514,6 +5514,22 @@
                 "supported_features": 0,
                 "unique_id": "zone_3_run_minutes",
                 "unit_of_measurement": "min"
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "automation.clean_up_history_database",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": "Purge recorder database",
+                "platform": "automation",
+                "supported_features": 0,
+                "unique_id": "1585672107503",
+                "unit_of_measurement": null
             }
         ]
     },
