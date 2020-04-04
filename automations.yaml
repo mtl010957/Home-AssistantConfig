@@ -177,8 +177,8 @@
   alias: Irrigation Enable
   trigger:
   - platform: template
-    value_template: '{{ now().month > 4 and now().month < 9 and (''rain'' not in states.sensor.dark_sky_hourly_summary.state
-      and ''Rain'' not in states.sensor.dark_sky_hourly_summary.state) }}'
+    value_template: '{{ now().month > 4 and now().month < 9 and (''rain'' not in states.sensor.forecast_today.state
+      and ''Rain'' not in states.sensor.forecast_today.state) }}'
   condition: []
   action:
   - entity_id: switch.irrigation_control_enable
@@ -187,13 +187,11 @@
   alias: Irrigation Disable
   trigger:
   - platform: template
-    value_template: '{{ (now().month <= 4 or now().month >=9) or not (''rain'' in
-      states.sensor.dark_sky_hourly_summary.state or ''Rain'' in states.sensor.dark_sky_hourly_summary.state)
-      }}'
+    value_template: '{{ (now().month <= 4 or now().month >=9) or (''rain'' in states.sensor.forecast_today.state
+      or ''Rain'' in states.sensor.forecast_today.state) }}'
   condition: []
   action:
-  - data:
-      entity_id: switch.nm14_rly4_4
+  - entity_id: switch.irrigation_control_enable
     service: switch.turn_off
 - id: '1548861516503'
   alias: Reboot Wink Weekly
@@ -741,6 +739,6 @@
   condition: []
   action:
   - data:
-      keep_days: 2
+      keep_days: 1
       repack: true
     service: recorder.purge

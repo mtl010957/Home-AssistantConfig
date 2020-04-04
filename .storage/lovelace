@@ -670,7 +670,7 @@
                                                     "type": "entity-button"
                                                 },
                                                 {
-                                                    "entity": "sensor.family_room_se_ne_blinds_tilt_position",
+                                                    "entity": "sensor.family_room_sene_blinds_tilt_position",
                                                     "max": 100,
                                                     "min": 0,
                                                     "name": "SE-NE FR Pos",
@@ -693,7 +693,7 @@
                                                     "type": "entity-button"
                                                 },
                                                 {
-                                                    "entity": "sensor.family_room_se_sw_blinds_tilt_position",
+                                                    "entity": "sensor.family_room_sesw_blinds_tilt_position",
                                                     "max": 100,
                                                     "min": 0,
                                                     "name": "SE-SW FR Pos",
@@ -716,7 +716,7 @@
                                                     "type": "entity-button"
                                                 },
                                                 {
-                                                    "entity": "sensor.family_room_sw_se_blinds_tilt_position",
+                                                    "entity": "sensor.family_room_swse_blinds_tilt_position",
                                                     "max": 100,
                                                     "min": 0,
                                                     "name": "SW-SE FR Pos",
@@ -739,7 +739,7 @@
                                                     "type": "entity-button"
                                                 },
                                                 {
-                                                    "entity": "sensor.family_room_sw_nw_blinds_tilt_position",
+                                                    "entity": "sensor.family_room_swnw_blinds_tilt_position",
                                                     "max": 100,
                                                     "min": 0,
                                                     "name": "SW-NW FR Pos",
@@ -762,7 +762,7 @@
                                                     "type": "entity-button"
                                                 },
                                                 {
-                                                    "entity": "sensor.family_room_nw_sw_blinds_tilt_position",
+                                                    "entity": "sensor.family_room_nwsw_blinds_tilt_position",
                                                     "max": 100,
                                                     "min": 0,
                                                     "name": "NW-SW FR Pos",
@@ -1166,10 +1166,12 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "sensor.dark_sky_hourly_summary"
+                                    "entity": "sensor.forecast_today",
+                                    "icon": "mdi:weather-sunny"
                                 },
                                 {
-                                    "entity": "sensor.dark_sky_precip_probability_0d"
+                                    "entity": "sensor.precipitation_probability_today",
+                                    "icon": "mdi:weather-rainy"
                                 }
                             ],
                             "show_header_toggle": false,

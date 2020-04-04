@@ -1,16 +1,18 @@
-- platform: mqtt
-  name: "Family Room SE-NE Blinds Tilt Position"
-  state_topic: nm01_sv1/cover/nm01_sv1_cover/tilt/state
-- platform: mqtt
-  name: "Family Room SE-SW Blinds Tilt Position"
-  state_topic: nm02_sv1/cover/nm02_sv1_cover/tilt/state
-- platform: mqtt
-  name: "Family Room SW-SE Blinds Tilt Position"
-  state_topic: nm03_sv1/cover/nm03_sv1_cover/tilt/state
-- platform: mqtt
-  name: "Family Room SW-NW Blinds Tilt Position"
-  state_topic: nm04_sv1/cover/nm04_sv1_cover/tilt/state
-- platform: mqtt
-  name: "Family Room NW-SW Blinds Tilt Position"
-  state_topic: nm05_sv1/cover/nm05_sv1_cover/tilt/state
+- platform: template
+  sensors:
+    family_room_sene_blinds_tilt_position:
+      friendly_name: "Family Room SE-NE Blinds Tilt Position"
+      value_template: "{{ state_attr('cover.family_room_sene_blinds', 'current_tilt_position') }}"
+    family_room_sesw_blinds_tilt_position:
+      friendly_name: "Family Room SE-SW Blinds Tilt Position"
+      value_template: "{{ state_attr('cover.family_room_sesw_blinds', 'current_tilt_position') }}"
+    family_room_swse_blinds_tilt_position:
+      friendly_name: "Family Room SW-SE Blinds Tilt Position"
+      value_template: "{{ state_attr('cover.family_room_swse_blinds', 'current_tilt_position') }}"
+    family_room_swnw_blinds_tilt_position:
+      friendly_name: "Family Room SW-NW Blinds Tilt Position"
+      value_template: "{{ state_attr('cover.family_room_swnw_blinds', 'current_tilt_position') }}"
+    family_room_nwsw_blinds_tilt_position:
+      friendly_name: "Family Room NW-SW Blinds Tilt Position"
+      value_template: "{{ state_attr('cover.family_room_nwsw_blinds', 'current_tilt_position') }}"
 
