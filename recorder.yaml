@@ -73,7 +73,6 @@ include:
     - switch.irrigation_control_back_yard
     - switch.irrigation_control_enable
     - switch.irrigation_control_front_yard
-    - switch.living_room_lamp_module
     # weather
     - weather.ktpk
 exclude:

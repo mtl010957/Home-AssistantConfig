@@ -74,7 +74,7 @@
                         "17081e8298e362fac4c5f1287e4c35b2"
                     ]
                 ],
-                "manufacturer": "Unknown manufacturer",
+                "manufacturer": "",
                 "model": "MIBOX4",
                 "name": "Caravan",
                 "name_by_user": null,
@@ -848,7 +848,7 @@
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm02_sv1",
                 "name_by_user": "Family Room SE-SW Blinds",
-                "sw_version": "esphome v1.15.0-dev Mar 24 2020, 16:15:36",
+                "sw_version": "esphome v1.15.0-dev Apr  5 2020, 18:11:57",
                 "via_device_id": null
             },
             {

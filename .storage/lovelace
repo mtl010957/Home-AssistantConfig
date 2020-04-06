@@ -58,7 +58,7 @@
                             "type": "weather-forecast"
                         },
                         {
-                            "aspect_ratio": "100%",
+                            "aspect_ratio": "120%",
                             "entity": "camera.dtx",
                             "image": "https://www.home-assistant.io/images/merchandise/shirt-frontpage.png",
                             "type": "picture-entity"
