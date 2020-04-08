@@ -987,6 +987,40 @@
                         {
                             "entity": "media_player.office_speaker",
                             "type": "media-control"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.epson_xp_7100_series",
+                                    "type": "entity"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.epson_xp_7100_series_black_ink",
+                                            "name": "BK"
+                                        },
+                                        {
+                                            "entity": "sensor.epson_xp_7100_series_cyan_ink",
+                                            "name": "CY"
+                                        },
+                                        {
+                                            "entity": "sensor.epson_xp_7100_series_magenta_ink",
+                                            "name": "MG"
+                                        },
+                                        {
+                                            "entity": "sensor.epson_xp_7100_series_photo_black_ink",
+                                            "name": "PBK"
+                                        },
+                                        {
+                                            "entity": "sensor.epson_xp_7100_series_yellow_ink",
+                                            "name": "YE"
+                                        }
+                                    ],
+                                    "type": "glance"
+                                }
+                            ],
+                            "type": "vertical-stack"
                         }
                     ],
                     "title": "Upstairs"
