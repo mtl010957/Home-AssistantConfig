@@ -78,9 +78,9 @@
                                             "type": "entity-button"
                                         },
                                         {
-                                            "entity": "switch.front_yard_light",
-                                            "icon": "mdi:spotlight-beam",
-                                            "name": "FRONT YARD",
+                                            "entity": "light.dining_room_ceiling_light_level",
+                                            "icon": "mdi:ceiling-light",
+                                            "name": "DINING ROOM",
                                             "state_color": true,
                                             "tap_action": {
                                                 "action": "toggle"
@@ -88,9 +88,9 @@
                                             "type": "entity-button"
                                         },
                                         {
-                                            "entity": "switch.garage_light",
-                                            "icon": "mdi:lightbulb",
-                                            "name": "GARAGE",
+                                            "entity": "light.family_room_lamp_bulb_1",
+                                            "icon": "mdi:lamp",
+                                            "name": "FAMILY ROOM",
                                             "state_color": true,
                                             "tap_action": {
                                                 "action": "toggle"
@@ -98,14 +98,14 @@
                                             "type": "entity-button"
                                         }
                                     ],
-                                    "type": "vertical-stack"
+                                    "type": "horizontal-stack"
                                 },
                                 {
                                     "cards": [
                                         {
-                                            "entity": "light.jasco_products_14294_in_wall_smart_dimmer_level_3",
-                                            "icon": "mdi:ceiling-light",
-                                            "name": "DINING ROOM",
+                                            "entity": "switch.front_yard_light",
+                                            "icon": "mdi:spotlight-beam",
+                                            "name": "FRONT YARD",
                                             "state_color": true,
                                             "tap_action": {
                                                 "action": "toggle"
@@ -123,24 +123,20 @@
                                             "type": "entity-button"
                                         },
                                         {
-                                            "entity": "light.office_light_bulb",
-                                            "icon": "mdi:desk-lamp",
-                                            "name": "OFFICE",
+                                            "entity": "fan.family_room_ceiling_fan",
+                                            "name": "FAMILY ROOM",
                                             "state_color": true,
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
                                             "type": "entity-button"
                                         }
                                     ],
-                                    "type": "vertical-stack"
+                                    "type": "horizontal-stack"
                                 },
                                 {
                                     "cards": [
                                         {
-                                            "entity": "light.family_room_lamp_bulb_1",
-                                            "icon": "mdi:lamp",
-                                            "name": "FAMILY ROOM",
+                                            "entity": "switch.garage_light",
+                                            "icon": "mdi:lightbulb",
+                                            "name": "GARAGE",
                                             "state_color": true,
                                             "tap_action": {
                                                 "action": "toggle"
@@ -148,9 +144,13 @@
                                             "type": "entity-button"
                                         },
                                         {
-                                            "entity": "fan.family_room_ceiling_fan",
-                                            "name": "FAMILY ROOM",
+                                            "entity": "light.office_light_bulb",
+                                            "icon": "mdi:desk-lamp",
+                                            "name": "OFFICE",
                                             "state_color": true,
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
                                             "type": "entity-button"
                                         },
                                         {
@@ -164,10 +164,10 @@
                                             "type": "entity-button"
                                         }
                                     ],
-                                    "type": "vertical-stack"
+                                    "type": "horizontal-stack"
                                 }
                             ],
-                            "type": "horizontal-stack"
+                            "type": "vertical-stack"
                         },
                         {
                             "entity": "alarm_control_panel.3629_alarm",
@@ -1310,7 +1310,7 @@
                             "type": "glance"
                         },
                         {
-                            "entity": "light.jasco_products_14294_in_wall_smart_dimmer_level_3",
+                            "entity": "light.dining_room_ceiling_light_level",
                             "type": "light"
                         }
                     ],

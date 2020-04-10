@@ -1861,22 +1861,6 @@
                 "capabilities": {},
                 "config_entry_id": "de284e3b58a141aeb7547a2926ad6b12",
                 "device_class": null,
-                "device_id": "a58c772f7049479bbd9b49695b173b63",
-                "disabled_by": null,
-                "entity_id": "light.jasco_products_14294_in_wall_smart_dimmer_level_3",
-                "icon": null,
-                "name": "Dining Room Ceiling Light Level",
-                "original_icon": null,
-                "original_name": "Jasco Products 14294 In-Wall Smart Dimmer Level",
-                "platform": "zwave",
-                "supported_features": 33,
-                "unique_id": "15-72057594294403073",
-                "unit_of_measurement": null
-            },
-            {
-                "capabilities": {},
-                "config_entry_id": "de284e3b58a141aeb7547a2926ad6b12",
-                "device_class": null,
                 "device_id": "ccb650ff68e24c859522b24f0e88419e",
                 "disabled_by": null,
                 "entity_id": "zwave.linear_nortek_security_control_llc_unknown_type_2005_id_0503",
@@ -5532,7 +5516,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "bea899b7c1e64cd49896bd567eb749b5",
                 "device_class": "timestamp",
                 "device_id": "22ee088da369491b87f94664a097322c",
@@ -5548,7 +5532,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "bea899b7c1e64cd49896bd567eb749b5",
                 "device_class": null,
                 "device_id": "22ee088da369491b87f94664a097322c",
@@ -5564,7 +5548,7 @@
                 "unit_of_measurement": "%"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "bea899b7c1e64cd49896bd567eb749b5",
                 "device_class": null,
                 "device_id": "22ee088da369491b87f94664a097322c",
@@ -5580,7 +5564,7 @@
                 "unit_of_measurement": "%"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "bea899b7c1e64cd49896bd567eb749b5",
                 "device_class": null,
                 "device_id": "22ee088da369491b87f94664a097322c",
@@ -5596,7 +5580,7 @@
                 "unit_of_measurement": "%"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "bea899b7c1e64cd49896bd567eb749b5",
                 "device_class": null,
                 "device_id": "22ee088da369491b87f94664a097322c",
@@ -5612,7 +5596,7 @@
                 "unit_of_measurement": "%"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "bea899b7c1e64cd49896bd567eb749b5",
                 "device_class": null,
                 "device_id": "22ee088da369491b87f94664a097322c",
@@ -5628,7 +5612,7 @@
                 "unit_of_measurement": "%"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "bea899b7c1e64cd49896bd567eb749b5",
                 "device_class": null,
                 "device_id": "22ee088da369491b87f94664a097322c",
@@ -5641,6 +5625,22 @@
                 "platform": "ipp",
                 "supported_features": 0,
                 "unique_id": "cfe92100-67c4-11d4-a45f-389d92b35178_printer",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": "de284e3b58a141aeb7547a2926ad6b12",
+                "device_class": null,
+                "device_id": "a58c772f7049479bbd9b49695b173b63",
+                "disabled_by": null,
+                "entity_id": "light.dining_room_ceiling_light_level",
+                "icon": null,
+                "name": "Dining Room Ceiling Light Level",
+                "original_icon": null,
+                "original_name": "Jasco Products 14294 In-Wall Smart Dimmer Level",
+                "platform": "zwave",
+                "supported_features": 33,
+                "unique_id": "15-72057594294403073",
                 "unit_of_measurement": null
             }
         ]

@@ -688,7 +688,7 @@
                 "model": "A19 W 10 year",
                 "name": "LEDVANCE A19 W 10 year",
                 "name_by_user": "Office Light Bulb",
-                "sw_version": null,
+                "sw_version": "0x00102302",
                 "via_device_id": "90f3b45357284c18b721821c16964d8e"
             },
             {
@@ -713,7 +713,7 @@
                 "model": "A19 W 10 year",
                 "name": "LEDVANCE A19 W 10 year",
                 "name_by_user": "Family Room Lamp Bulb 1",
-                "sw_version": null,
+                "sw_version": "0x00102302",
                 "via_device_id": "90f3b45357284c18b721821c16964d8e"
             },
             {
@@ -763,7 +763,7 @@
                 "model": "A19 W 10 year",
                 "name": "LEDVANCE A19 W 10 year",
                 "name_by_user": "Family Room Lamp Bulb 2",
-                "sw_version": null,
+                "sw_version": "0x00102302",
                 "via_device_id": "90f3b45357284c18b721821c16964d8e"
             },
             {
@@ -788,7 +788,7 @@
                 "model": "A19 W 10 year",
                 "name": "LEDVANCE A19 W 10 year",
                 "name_by_user": "Guest Room Lamp Bulb",
-                "sw_version": null,
+                "sw_version": "0x00102302",
                 "via_device_id": "90f3b45357284c18b721821c16964d8e"
             },
             {
@@ -848,7 +848,7 @@
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm02_sv1",
                 "name_by_user": "Family Room SE-SW Blinds",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:22:32",
+                "sw_version": "esphome v1.15.0-dev Apr  5 2020, 18:11:57",
                 "via_device_id": null
             },
             {
