@@ -61,3 +61,10 @@
     ignore_availability: true
     name: Detroit Tigers
     track: true
+
+- cal_id: 27t36ngf54ukr6a1p90m1k6fis@group.calendar.google.com
+  entities:
+  - device_id: portland_trip
+    ignore_availability: true
+    name: Portland Trip
+    track: true
