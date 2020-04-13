@@ -427,10 +427,10 @@
                                     "entity": "binary_sensor.front_door"
                                 },
                                 {
-                                    "entity": "sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_battery_level_3"
+                                    "entity": "binary_sensor.front_door_tamper"
                                 },
                                 {
-                                    "entity": "binary_sensor.front_door_tamper"
+                                    "entity": "sensor.front_door_sensor_battery_level"
                                 }
                             ],
                             "show_name": false,
@@ -534,10 +534,10 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "switch.wink_unknown_type_0200_id_0001_switch"
+                                    "entity": "switch.siren_and_chime_switch"
                                 },
                                 {
-                                    "entity": "sensor.wink_unknown_type_0200_id_0001_battery_level"
+                                    "entity": "sensor.siren_and_chime_battery_level"
                                 }
                             ],
                             "show_name": false,
@@ -575,10 +575,10 @@
                                     "entity": "binary_sensor.family_room_motion_tamper"
                                 },
                                 {
-                                    "entity": "sensor.linear_nortek_security_control_llc_wapirz_1_motion_sensor_battery_level"
+                                    "entity": "sensor.family_room_motion_sensor_battery_level"
                                 },
                                 {
-                                    "entity": "sensor.linear_nortek_security_control_llc_wapirz_1_motion_sensor_temperature"
+                                    "entity": "sensor.family_room_motion_sensor_temperature"
                                 }
                             ],
                             "show_name": false,
@@ -594,7 +594,7 @@
                                     "entity": "binary_sensor.back_door_tamper"
                                 },
                                 {
-                                    "entity": "sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_battery_level"
+                                    "entity": "sensor.back_door_sensor_battery_level"
                                 }
                             ],
                             "show_name": false,
@@ -616,12 +616,12 @@
                         {
                             "cards": [
                                 {
-                                    "entity": "light.jasco_products_14294_in_wall_smart_dimmer_level",
+                                    "entity": "light.family_room_nw_ceiling_lights_level",
                                     "name": "Fam Rm NW Ceiling",
                                     "type": "light"
                                 },
                                 {
-                                    "entity": "light.jasco_products_14294_in_wall_smart_dimmer_level_2",
+                                    "entity": "light.family_room_se_ceiling_lights_level",
                                     "name": "Fam Rm SE Ceiling",
                                     "type": "light"
                                 }
@@ -822,10 +822,10 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "switch.linear_nortek_security_control_llc_unknown_type_2005_id_0503_switch"
+                                    "entity": "switch.siren_and_strobe_switch"
                                 },
                                 {
-                                    "entity": "sensor.linear_nortek_security_control_llc_unknown_type_2005_id_0503_battery_level"
+                                    "entity": "sensor.siren_and_strobe_battery_level"
                                 }
                             ],
                             "show_name": false,
@@ -907,10 +907,10 @@
                                     "entity": "binary_sensor.master_bedroom_motion_tamper"
                                 },
                                 {
-                                    "entity": "sensor.linear_nortek_security_control_llc_wapirz_1_motion_sensor_battery_level_2"
+                                    "entity": "sensor.master_bedroom_motion_sensor_battery_level"
                                 },
                                 {
-                                    "entity": "sensor.linear_nortek_security_control_llc_wapirz_1_motion_sensor_temperature_2"
+                                    "entity": "sensor.master_bedroom_motion_sensor_temperature"
                                 }
                             ],
                             "show_name": false,
@@ -935,11 +935,13 @@
                                 {
                                     "cards": [
                                         {
-                                            "entity": "light.linear_nortek_security_control_llc_pd300z_2_plug_in_dimmer_module_level",
+                                            "entity": "light.master_bedroom_se_ceiling_lights",
+                                            "name": "MBR SE Ceiling Lights",
                                             "type": "light"
                                         },
                                         {
-                                            "entity": "light.linear_nortek_security_control_llc_pd300z_2_plug_in_dimmer_module_level_2",
+                                            "entity": "light.master_bedroom_nw_ceiling_lights",
+                                            "name": "MBR NW Ceiling Lights",
                                             "type": "light"
                                         }
                                     ],
@@ -1052,7 +1054,7 @@
                                     "entity": "binary_sensor.garage_door_tamper"
                                 },
                                 {
-                                    "entity": "sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_battery_level_2"
+                                    "entity": "sensor.garage_door_sensor_battery_level"
                                 }
                             ],
                             "show_name": false,
@@ -1302,7 +1304,7 @@
                                     "entity": "binary_sensor.garage_in_door_tamper"
                                 },
                                 {
-                                    "entity": "sensor.linear_nortek_security_control_llc_wadwaz_1_door_window_sensor_battery_level_4"
+                                    "entity": "sensor.garage_inside_door_sensor_battery_level"
                                 }
                             ],
                             "show_name": false,
@@ -1337,6 +1339,9 @@
                         },
                         {
                             "entity": "sensor.latest_version"
+                        },
+                        {
+                            "entity": "sensor.ssl_certificate_expiry_2"
                         },
                         {
                             "entity": "sensor.hacs"

@@ -1,5 +1,9 @@
 - platform: html5
-  name: notify
+  name: html5_notify
   vapid_pub_key: !secret vapid_pub_key
   vapid_prv_key: !secret vapid_prv_key
   vapid_email: !secret vapid_email
+- platform: hangouts
+  name: hangouts_notify
+  default_conversations:
+    - id: !secret hangouts_notify_conversation

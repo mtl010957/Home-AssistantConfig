@@ -2,22 +2,22 @@
   alias: Security Lighting On
   sequence:
   - data: {}
-    entity_id: switch.leviton_dzpa1_2bw_plug_in_outlet_switch
+    entity_id: switch.living_room_lamp_module
     service: switch.turn_on
   - delay: 00:{{ (range(1, 5) | random) }}:00
   - data: {}
-    entity_id: light.family_room_lamp_bulb_1_34580300_level_light_color_on_off
+    entity_id: light.family_room_lamp_bulb_1
     service: light.turn_on
   - data: {}
-    entity_id: light.family_room_link_bulb_1_cf271300_level_on_off
+    entity_id: light.family_room_link_bulb_1
     service: light.turn_on
   - delay: 00:{{ (range(5, 15) | random) }}:00
   - data: {}
-    entity_id: light.office_light_bulb_2cae0400_level_light_color_on_off
+    entity_id: light.office_light_bulb
     service: light.turn_on
   - delay: 00:{{ (range(1, 5) | random) }}:00
   - data: {}
-    entity_id: light.bedside_lamp_bulb_06d20400_level_light_color_on_off
+    entity_id: light.bedside_lamp_bulb
     service: light.turn_on
 '1560463039446':
   alias: Security Lighting Off
@@ -30,7 +30,7 @@
     service: light.turn_off
   - delay: 00:{{ (range(1, 5) | random) }}:00
   - data: {}
-    entity_id: switch.leviton_dzpa1_2bw_plug_in_outlet_switch
+    entity_id: switch.living_room_lamp_module
     service: switch.turn_off
   - delay: 00:{{ (range(5, 15) | random) }}:00
   - data: {}
