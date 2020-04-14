@@ -12,6 +12,7 @@ include:
     - binary_sensor.garage_motion
     - binary_sensor.master_bedroom_motion
     - binary_sensor.family_room_motion
+    - binary_sensor.updater
     # climate
     - climate.thermostat
     # covers
@@ -22,8 +23,10 @@ include:
     - cover.family_room_swse_blinds
     # fans
     - fan.house_fan
-    - fan.master_bedroom_ceiling_fan_switch_level
+    - fan.family_room_ceiling_fan
+    - fan.master_bedroom_ceiling_fan
     # lights
+    - light.dining_room_ceiling_light
     - light.living_room_lamp_dimmer
     - light.family_room_lamp_bulb_1
     - light.family_room_lamp_bulb_2
@@ -33,6 +36,8 @@ include:
     - light.guest_room_lamp_bulb
     - light.office_light_bulb
     - light.living_room_lamp_dimmer
+    - light.master_bedroom_nw_ceiling_lights
+    - light.master_bedroom_se_ceiling_lights
     # persons
     - person.michael_loeffler
     - person.susan_loeffler
@@ -66,12 +71,15 @@ include:
     - sensor.ups_input_voltage
     # switches
     - switch.living_room_lamp_module
+    - switch.front_yard_light
     - switch.garage_latch
     - switch.garage_light
     - switch.humidifier_power
     - switch.irrigation_control_back_yard
     - switch.irrigation_control_enable
     - switch.irrigation_control_front_yard
+    - switch.back_outdoor_xmas_lights
+    - switch.front_outdoor_xmas_lights
     # weather
     - weather.ktpk
 exclude:

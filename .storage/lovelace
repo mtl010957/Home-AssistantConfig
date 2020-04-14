@@ -78,7 +78,7 @@
                                             "type": "entity-button"
                                         },
                                         {
-                                            "entity": "light.dining_room_ceiling_light_level",
+                                            "entity": "light.dining_room_ceiling_light",
                                             "icon": "mdi:ceiling-light",
                                             "name": "DINING ROOM",
                                             "state_color": true,
@@ -179,22 +179,6 @@
                             "type": "alarm-panel"
                         },
                         {
-                            "entity": "climate.thermostat",
-                            "type": "thermostat"
-                        },
-                        {
-                            "entity": "sensor.dte_energy_bridge",
-                            "max": 6000,
-                            "min": 0,
-                            "severity": {
-                                "green": 0,
-                                "red": 4000,
-                                "yellow": 2000
-                            },
-                            "theme": "default",
-                            "type": "gauge"
-                        },
-                        {
                             "cards": [
                                 {
                                     "aspect_ratio": "0%",
@@ -227,13 +211,20 @@
                             "type": "vertical-stack"
                         },
                         {
-                            "entities": [
-                                {
-                                    "type": "cast",
-                                    "view": "0"
-                                }
-                            ],
-                            "type": "entities"
+                            "entity": "climate.thermostat",
+                            "type": "thermostat"
+                        },
+                        {
+                            "entity": "sensor.dte_energy_bridge",
+                            "max": 6000,
+                            "min": 0,
+                            "severity": {
+                                "green": 0,
+                                "red": 4000,
+                                "yellow": 2000
+                            },
+                            "theme": "default",
+                            "type": "gauge"
                         }
                     ],
                     "icon": "mdi:home",
@@ -966,7 +957,7 @@
                                     "type": "entity-button"
                                 },
                                 {
-                                    "entity": "fan.master_bedroom_ceiling_fan_switch_level",
+                                    "entity": "fan.master_bedroom_ceiling_fan",
                                     "hold_action": {
                                         "action": "more-info"
                                     },
@@ -1055,6 +1046,10 @@
                                 },
                                 {
                                     "entity": "sensor.garage_door_sensor_battery_level"
+                                },
+                                {
+                                    "entity": "switch.garage_latch",
+                                    "icon": "mdi:lock"
                                 }
                             ],
                             "show_name": false,
@@ -1076,22 +1071,6 @@
                                     "name": "Garage Lights",
                                     "state_color": true,
                                     "type": "entity-button"
-                                },
-                                {
-                                    "entity": "switch.garage_latch",
-                                    "icon": "mdi:lock",
-                                    "name": "Garage Latch",
-                                    "state_color": true,
-                                    "type": "entity-button"
-                                }
-                            ],
-                            "type": "horizontal-stack"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "entity": "light.garage_latch_blue_led",
-                                    "type": "light"
                                 },
                                 {
                                     "entity": "light.garage_attic_link_bulb",
@@ -1289,6 +1268,37 @@
                         {
                             "entity": "media_player.mini",
                             "type": "media-control"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "switch.front_outdoor_xmas_lights",
+                                    "hold_action": {
+                                        "action": "more-info"
+                                    },
+                                    "icon": "mdi:string-lights",
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "button"
+                                },
+                                {
+                                    "entity": "switch.back_outdoor_xmas_lights",
+                                    "hold_action": {
+                                        "action": "more-info"
+                                    },
+                                    "icon": "mdi:string-lights",
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "button"
+                                }
+                            ],
+                            "type": "horizontal-stack"
                         }
                     ],
                     "title": "Outdoor"
@@ -1312,7 +1322,7 @@
                             "type": "glance"
                         },
                         {
-                            "entity": "light.dining_room_ceiling_light_level",
+                            "entity": "light.dining_room_ceiling_light",
                             "type": "light"
                         }
                     ],
@@ -1339,6 +1349,9 @@
                         },
                         {
                             "entity": "sensor.latest_version"
+                        },
+                        {
+                            "entity": "binary_sensor.updater"
                         },
                         {
                             "entity": "sensor.ssl_certificate_expiry_2"

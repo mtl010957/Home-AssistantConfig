@@ -362,7 +362,7 @@
                 "manufacturer": "Jasco Products",
                 "model": "14287 Fan Control Switch",
                 "name": "Jasco Products 14287 Fan Control Switch",
-                "name_by_user": "Master Bedroom Ceiling Fan Switch",
+                "name_by_user": "Master Bedroom Ceiling Fan",
                 "sw_version": null,
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
             },
@@ -1132,7 +1132,7 @@
                 "via_device_id": null
             },
             {
-                "area_id": "2f62b68890ee49f1b08273ad89d15bad",
+                "area_id": "ef79dc2fd72045778494fbbced8dcf7b",
                 "config_entries": [
                     "c2f182f0e3c34f73b167638f5877b669"
                 ],
@@ -1147,7 +1147,7 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sb02",
-                "name_by_user": "Outdoor Xmas Lights",
+                "name_by_user": "Front Outdoor Xmas Lights",
                 "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:36:24",
                 "via_device_id": null
             },
@@ -1232,7 +1232,7 @@
                 "via_device_id": null
             },
             {
-                "area_id": null,
+                "area_id": "dc451399bee647789f50e8317344517e",
                 "config_entries": [
                     "c2f182f0e3c34f73b167638f5877b669"
                 ],
@@ -1247,7 +1247,7 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sb06",
-                "name_by_user": null,
+                "name_by_user": "Back Outdoor Xmas Lights",
                 "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:39:25",
                 "via_device_id": null
             },
