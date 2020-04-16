@@ -13,6 +13,8 @@ include:
     - binary_sensor.master_bedroom_motion
     - binary_sensor.family_room_motion
     - binary_sensor.updater
+    - binary_sensor.fire_and_co_co_detected
+    - binary_sensor.fire_and_co_smoke_detected
     # climate
     - climate.thermostat
     # covers

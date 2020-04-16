@@ -593,26 +593,27 @@
                             "type": "glance"
                         },
                         {
-                            "entity": "fan.family_room_ceiling_fan",
-                            "hold_action": {
-                                "action": "more-info"
-                            },
-                            "show_icon": true,
-                            "show_name": true,
-                            "tap_action": {
-                                "action": "toggle"
-                            },
-                            "type": "entity-button"
-                        },
-                        {
                             "cards": [
                                 {
-                                    "entity": "light.family_room_nw_ceiling_lights_level",
+                                    "entity": "light.family_room_nw_ceiling_lights",
                                     "name": "Fam Rm NW Ceiling",
                                     "type": "light"
                                 },
                                 {
-                                    "entity": "light.family_room_se_ceiling_lights_level",
+                                    "entity": "fan.family_room_ceiling_fan",
+                                    "hold_action": {
+                                        "action": "more-info"
+                                    },
+                                    "name": "Fam Rm Ceiling Fan",
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "button"
+                                },
+                                {
+                                    "entity": "light.family_room_se_ceiling_lights",
                                     "name": "Fam Rm SE Ceiling",
                                     "type": "light"
                                 }
@@ -1277,6 +1278,7 @@
                                         "action": "more-info"
                                     },
                                     "icon": "mdi:string-lights",
+                                    "name": "Front Xmas Lights",
                                     "show_icon": true,
                                     "show_name": true,
                                     "tap_action": {
@@ -1290,6 +1292,7 @@
                                         "action": "more-info"
                                     },
                                     "icon": "mdi:string-lights",
+                                    "name": "Back Xmas Lights",
                                     "show_icon": true,
                                     "show_name": true,
                                     "tap_action": {

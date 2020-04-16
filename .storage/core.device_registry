@@ -848,7 +848,7 @@
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm02_sv1",
                 "name_by_user": "Family Room SE-SW Blinds",
-                "sw_version": "esphome v1.15.0-dev Apr  5 2020, 18:11:57",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:22:32",
                 "via_device_id": null
             },
             {
@@ -1289,6 +1289,26 @@
                 "name": "EPSON XP-7100 Series",
                 "name_by_user": null,
                 "sw_version": "01.67.YL31K1",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "c2f182f0e3c34f73b167638f5877b669"
+                ],
+                "connections": [],
+                "id": "ef610712dc174532af4e01f6916e0426",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "c82b961dbc5d"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_D1_MINI",
+                "name": "dm01_sv1",
+                "name_by_user": null,
+                "sw_version": "esphome v1.15.0-dev Apr 16 2020, 14:10:20",
                 "via_device_id": null
             }
         ]
