@@ -5690,6 +5690,38 @@
                 "supported_features": 41,
                 "unique_id": "ESPlightdm01_sv1_blue_led",
                 "unit_of_measurement": null
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": "c2f182f0e3c34f73b167638f5877b669",
+                "device_class": null,
+                "device_id": "ef610712dc174532af4e01f6916e0426",
+                "disabled_by": null,
+                "entity_id": "sensor.dm01_sv1_cover_tilt_sensor",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:flash",
+                "original_name": "DM01_SV1 Cover Tilt Sensor",
+                "platform": "mqtt",
+                "supported_features": 0,
+                "unique_id": "c82b961dbc5d-adc",
+                "unit_of_measurement": "V"
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": "c2f182f0e3c34f73b167638f5877b669",
+                "device_class": "shutter",
+                "device_id": "ef610712dc174532af4e01f6916e0426",
+                "disabled_by": null,
+                "entity_id": "cover.dm01_sv1_cover",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": "DM01_SV1 Cover",
+                "platform": "mqtt",
+                "supported_features": 240,
+                "unique_id": "ESPcoverdm01_sv1_cover",
+                "unit_of_measurement": null
             }
         ]
     },

@@ -1305,10 +1305,10 @@
                     ]
                 ],
                 "manufacturer": "espressif",
-                "model": "PLATFORMIO_D1_MINI",
+                "model": "PLATFORMIO_NODEMCUV2",
                 "name": "dm01_sv1",
                 "name_by_user": null,
-                "sw_version": "esphome v1.15.0-dev Apr 16 2020, 14:10:20",
+                "sw_version": "esphome v1.15.0-dev Apr 16 2020, 15:07:04",
                 "via_device_id": null
             }
         ]
