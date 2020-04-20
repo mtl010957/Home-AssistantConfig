@@ -3,7 +3,7 @@
     humidifier_off:
       friendly_name: "Humidifier Off Point"
       unit_of_measurement: "%"
-      value_template: "{{ [[(state_attr('weather.kptk','temperature') | float * states('input_number.humidifier_temperature_gain') | float / 100.0 + states('input_number.humidity_at_0_degf') | float) | round(1), 40.0] | min, 15.0] | max }}"
+      value_template: "{{ [[(states('sensor.outdoor_temperature') | float * states('input_number.humidifier_temperature_gain') | float / 100.0 + states('input_number.humidity_at_0_degf') | float) | round(1), 40.0] | min, 15.0] | max }}"
 
     humidifier_on:
       friendly_name: "Humidifier On Point"
