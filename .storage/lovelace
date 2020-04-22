@@ -595,11 +595,6 @@
                         {
                             "cards": [
                                 {
-                                    "entity": "light.family_room_nw_ceiling_lights",
-                                    "name": "Fam Rm NW Ceiling",
-                                    "type": "light"
-                                },
-                                {
                                     "entity": "fan.family_room_ceiling_fan",
                                     "hold_action": {
                                         "action": "more-info"
@@ -613,9 +608,18 @@
                                     "type": "button"
                                 },
                                 {
-                                    "entity": "light.family_room_se_ceiling_lights",
-                                    "name": "Fam Rm SE Ceiling",
-                                    "type": "light"
+                                    "entity": "switch.family_room_ceiling_fan_light",
+                                    "hold_action": {
+                                        "action": "more-info"
+                                    },
+                                    "icon": "mdi:lightbulb",
+                                    "name": "Fam Rm Ceiling Fan Light",
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "button"
                                 }
                             ],
                             "type": "horizontal-stack"
@@ -645,6 +649,21 @@
                                 {
                                     "entity": "light.family_room_lamp_bulb_2",
                                     "name": "Fam Rm Lamp 2",
+                                    "type": "light"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "light.family_room_nw_ceiling_lights",
+                                    "name": "Fam Rm NW Ceiling",
+                                    "type": "light"
+                                },
+                                {
+                                    "entity": "light.family_room_se_ceiling_lights",
+                                    "name": "Fam Rm SE Ceiling",
                                     "type": "light"
                                 }
                             ],
@@ -1302,6 +1321,15 @@
                                 }
                             ],
                             "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "light.back_porch_light",
+                                    "type": "light"
+                                }
+                            ],
+                            "type": "horizontal-stack"
                         }
                     ],
                     "title": "Outdoor"
@@ -1509,13 +1537,6 @@
                             ],
                             "sort_by": "available",
                             "type": "custom:zha-network-card"
-                        },
-                        {
-                            "entities": [
-                                "sensor.hdhomerun_tuner_10673bca_0",
-                                "sensor.hdhomerun_tuner_10673bca_1"
-                            ],
-                            "type": "entities"
                         }
                     ],
                     "title": "Hubs"

@@ -71,7 +71,7 @@ device_tracker: !include device_tracker.yaml
 fan: !include_dir_merge_list fan
 
 # HDHomeRun integration in HACS
-hdhomerun:
+#hdhomerun:
 
 # HTML5 Push Notifications
 notify: !include notify.yaml

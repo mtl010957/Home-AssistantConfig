@@ -289,7 +289,7 @@
   - delay: 00:{{ (range(5, 25) | random) }}:00
   - service: script.1560463039446
 - id: '1562957476111'
-  alias: Master Bedroom Ceiling Fan Remote Stop
+  alias: Family Room Ceiling Fan Remote Stop
   trigger:
   - device_id: 496a677156f946c1814340485397c835
     domain: binary_sensor
@@ -300,10 +300,10 @@
   action:
   - data:
       speed: 'off'
-    entity_id: fan.master_bedroom_ceiling_fan_switch_level
+    entity_id: fan.family_room_ceiling_fan
     service: fan.set_speed
 - id: '1562957684896'
-  alias: Master Bedroom Ceiling Fan Remote Hi
+  alias: Family Room Ceiling Fan Remote Hi
   trigger:
   - device_id: 496a677156f946c1814340485397c835
     domain: binary_sensor
@@ -314,10 +314,10 @@
   action:
   - data:
       speed: high
-    entity_id: fan.master_bedroom_ceiling_fan_switch_level
+    entity_id: fan.family_room_ceiling_fan
     service: fan.set_speed
 - id: '1562958033989'
-  alias: Master Bedroom Ceiling Fan Remote Medium
+  alias: Family Room Ceiling Fan Remote Medium
   trigger:
   - device_id: 496a677156f946c1814340485397c835
     domain: binary_sensor
@@ -328,10 +328,10 @@
   action:
   - data:
       speed: medium
-    entity_id: fan.master_bedroom_ceiling_fan_switch_level
+    entity_id: fan.family_room_ceiling_fan
     service: fan.set_speed
 - id: '1562958094562'
-  alias: Master Bedroom Ceiling Fan Remote Low
+  alias: Family Room Ceiling Fan Remote Low
   trigger:
   - device_id: 496a677156f946c1814340485397c835
     domain: binary_sensor
@@ -342,7 +342,7 @@
   action:
   - data:
       speed: low
-    entity_id: fan.master_bedroom_ceiling_fan_switch_level
+    entity_id: fan.family_room_ceiling_fan
     service: fan.set_speed
 - id: '1563648409962'
   alias: Security Arm Night
@@ -522,7 +522,7 @@
   action:
   - data:
       message: The UPS has come back ONLINE
-      title: UPS ONINE
+      title: UPS ONLINE
     service: notify.hangouts_notify
 - id: '1576173820669'
   alias: Bird bath heater off at sunset
@@ -742,3 +742,17 @@
       keep_days: 1
       repack: true
     service: recorder.purge
+- id: '1587480575094'
+  alias: Family Room Ceiling Fan Remote Light
+  description: ''
+  trigger:
+  - device_id: 496a677156f946c1814340485397c835
+    domain: binary_sensor
+    entity_id: binary_sensor.fan_remote_light
+    platform: device
+    type: turned_on
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.family_room_ceiling_fan_light
+    service: switch.toggle

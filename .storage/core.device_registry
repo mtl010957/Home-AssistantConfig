@@ -203,7 +203,7 @@
                 "model": "",
                 "name": "HACS",
                 "name_by_user": null,
-                "sw_version": "0.24.0",
+                "sw_version": "0.24.1",
                 "via_device_id": null
             },
             {
@@ -1310,6 +1310,66 @@
                 "name_by_user": null,
                 "sw_version": "esphome v1.15.0-dev Apr 16 2020, 15:07:04",
                 "via_device_id": null
+            },
+            {
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "config_entries": [
+                    "c2f182f0e3c34f73b167638f5877b669"
+                ],
+                "connections": [],
+                "id": "2426b9985226438493d2507d0a4dd081",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "2cf432c2f2dd"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_ESP01_1M",
+                "name": "sb07",
+                "name_by_user": "Family Room Ceiling Fan Light",
+                "sw_version": "esphome v1.15.0-dev Apr 21 2020, 08:41:26",
+                "via_device_id": null
+            },
+            {
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "config_entries": [
+                    "de284e3b58a141aeb7547a2926ad6b12"
+                ],
+                "connections": [],
+                "id": "f743120b85da4c02b68c18c65965b2c3",
+                "identifiers": [
+                    [
+                        "zwave",
+                        20
+                    ]
+                ],
+                "manufacturer": "Jasco Products",
+                "model": "14287 Fan Control Switch",
+                "name": "Jasco Products 14287 Fan Control Switch",
+                "name_by_user": "Family Room Ceiling Fan",
+                "sw_version": null,
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+            },
+            {
+                "area_id": "dc451399bee647789f50e8317344517e",
+                "config_entries": [
+                    "de284e3b58a141aeb7547a2926ad6b12"
+                ],
+                "connections": [],
+                "id": "332c972f71e74030b4c62dab126764ce",
+                "identifiers": [
+                    [
+                        "zwave",
+                        21
+                    ]
+                ],
+                "manufacturer": "Leviton",
+                "model": "DZ6HD-1BZ Decora 600W Smart Dimmer",
+                "name": "Leviton DZ6HD-1BZ Decora 600W Smart Dimmer",
+                "name_by_user": "Back Porch Light",
+                "sw_version": null,
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
             }
         ]
     },
