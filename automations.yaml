@@ -291,7 +291,7 @@
 - id: '1562957476111'
   alias: Family Room Ceiling Fan Remote Stop
   trigger:
-  - device_id: 496a677156f946c1814340485397c835
+  - device_id: 46b35f49b60e40bdb51cb453517d898c
     domain: binary_sensor
     entity_id: binary_sensor.fan_remote_stop
     platform: device
@@ -305,7 +305,7 @@
 - id: '1562957684896'
   alias: Family Room Ceiling Fan Remote Hi
   trigger:
-  - device_id: 496a677156f946c1814340485397c835
+  - device_id: 46b35f49b60e40bdb51cb453517d898c
     domain: binary_sensor
     entity_id: binary_sensor.fan_remote_hi
     platform: device
@@ -319,7 +319,7 @@
 - id: '1562958033989'
   alias: Family Room Ceiling Fan Remote Medium
   trigger:
-  - device_id: 496a677156f946c1814340485397c835
+  - device_id: 46b35f49b60e40bdb51cb453517d898c
     domain: binary_sensor
     entity_id: binary_sensor.fan_remote_med
     platform: device
@@ -333,7 +333,7 @@
 - id: '1562958094562'
   alias: Family Room Ceiling Fan Remote Low
   trigger:
-  - device_id: 496a677156f946c1814340485397c835
+  - device_id: 46b35f49b60e40bdb51cb453517d898c
     domain: binary_sensor
     entity_id: binary_sensor.fan_remote_low
     platform: device
@@ -746,7 +746,7 @@
   alias: Family Room Ceiling Fan Remote Light
   description: ''
   trigger:
-  - device_id: 496a677156f946c1814340485397c835
+  - device_id: 46b35f49b60e40bdb51cb453517d898c
     domain: binary_sensor
     entity_id: binary_sensor.fan_remote_light
     platform: device

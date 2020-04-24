@@ -2,5 +2,5 @@
   username: !secret honeywell_username
   password: !secret honeywell_password
   region: us
-  scan_interval: 300
+  scan_interval: 420
 #  away_heat_temperature: 16.0

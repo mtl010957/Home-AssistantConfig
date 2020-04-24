@@ -1391,10 +1391,13 @@
                             "entity": "sensor.hacs"
                         },
                         {
-                            "entity": "sensor.ups_transfer_count"
+                            "entity": "sensor.ups_status"
                         },
                         {
-                            "entity": "sensor.ups_status"
+                            "entity": "sensor.ups_battery_charge"
+                        },
+                        {
+                            "entity": "sensor.ups_input_voltage"
                         }
                     ],
                     "cards": [
@@ -1465,37 +1468,6 @@
                                 }
                             ],
                             "type": "glance"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.ups_battery"
-                                },
-                                {
-                                    "entity": "sensor.ups_battery_voltage"
-                                },
-                                {
-                                    "entity": "sensor.ups_load"
-                                },
-                                {
-                                    "entity": "sensor.ups_input_voltage"
-                                },
-                                {
-                                    "entity": "sensor.ups_transfer_count"
-                                },
-                                {
-                                    "entity": "sensor.ups_status"
-                                },
-                                {
-                                    "entity": "sensor.ups_time_left"
-                                },
-                                {
-                                    "entity": "sensor.ups_time_on_battery"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "UPS",
-                            "type": "entities"
                         },
                         {
                             "clickable": true,

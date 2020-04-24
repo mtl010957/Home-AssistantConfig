@@ -203,27 +203,7 @@
                 "model": "",
                 "name": "HACS",
                 "name_by_user": null,
-                "sw_version": "0.24.1",
-                "via_device_id": null
-            },
-            {
-                "area_id": null,
-                "config_entries": [
-                    "cb33d48204b84676be1ee9819127b871"
-                ],
-                "connections": [],
-                "id": "6a377fdfef6c4ff7972f47263218b60a",
-                "identifiers": [
-                    [
-                        "hdhomerun",
-                        "10673BCA"
-                    ]
-                ],
-                "manufacturer": "SiliconDust",
-                "model": "hdhomerun5_atsc",
-                "name": "HDHomeRun 10673BCA",
-                "name_by_user": null,
-                "sw_version": "20200225",
+                "sw_version": "0.24.2",
                 "via_device_id": null
             },
             {
@@ -812,466 +792,6 @@
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "b67e56507dd44ed096f041c55eb62321",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "807d3a3c5a02"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_NODEMCUV2",
-                "name": "nm01_sv1",
-                "name_by_user": "Family Room SE-NE Blinds",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:21:53",
-                "via_device_id": null
-            },
-            {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "eb9541ae066448b695ee57d1939c436a",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "807d3a3c5c6b"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_NODEMCUV2",
-                "name": "nm02_sv1",
-                "name_by_user": "Family Room SE-SW Blinds",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:22:32",
-                "via_device_id": null
-            },
-            {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "f8157952970249dfadf7a3879a96f3d6",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "ecfabc285e6c"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_NODEMCUV2",
-                "name": "nm04_sv1",
-                "name_by_user": "Family Room SW-NW Blinds",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:26:05",
-                "via_device_id": null
-            },
-            {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "8143cec5e54f4b4dbf4e8486ce4f7f39",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "bcddc2247150"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_NODEMCUV2",
-                "name": "nm05_sv1",
-                "name_by_user": "Family Room NW-SW Blinds",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:26:48",
-                "via_device_id": null
-            },
-            {
-                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "496a677156f946c1814340485397c835",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "ecfabc2808ee"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_NODEMCUV2",
-                "name": "nm06_rfx1",
-                "name_by_user": "Fan Remote",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:27:33",
-                "via_device_id": null
-            },
-            {
-                "area_id": null,
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "70af42aad0f749f2bb0cadf27bf64d13",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "84f3ebed94b2"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_NODEMCUV2",
-                "name": "nm07_rfx1",
-                "name_by_user": null,
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:28:13",
-                "via_device_id": null
-            },
-            {
-                "area_id": "be918af12ae344be9d3936091fc54a20",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "fcd22b57f79e420d885e7a77b05a44ca",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "84f3ebee71bf"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_NODEMCUV2",
-                "name": "nm08_sv1",
-                "name_by_user": "Garage Latch",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:28:55",
-                "via_device_id": null
-            },
-            {
-                "area_id": "316107820cce4630be06041fc14816e3",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "94c5757b596a46e98de9cb0dc61b0b7b",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "84f3ebee68df"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_NODEMCUV2",
-                "name": "nm09_th",
-                "name_by_user": "Office Climate",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:29:35",
-                "via_device_id": null
-            },
-            {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "3f65efb0197049d5aa6e7cf70b260879",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "2cf432147fd5"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_NODEMCUV2",
-                "name": "nm10_tph",
-                "name_by_user": "Family Room Climate",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:30:14",
-                "via_device_id": null
-            },
-            {
-                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "765b4d734e0d4b47ac42d2b4e37b692a",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "84f3ebed9b26"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_NODEMCUV2",
-                "name": "nm11_th",
-                "name_by_user": "Master Bedroom Climate",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:30:54",
-                "via_device_id": null
-            },
-            {
-                "area_id": "be918af12ae344be9d3936091fc54a20",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "352ace3a945842afbe246e08d1619590",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "2cf432146c86"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_NODEMCUV2",
-                "name": "nm12_th",
-                "name_by_user": "Garage Climate",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:31:34",
-                "via_device_id": null
-            },
-            {
-                "area_id": "66b0e5549f8b45ef8d7c37400cec0237",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "52b3e53666434339a204d20597c411c5",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "2cf43214801c"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_NODEMCUV2",
-                "name": "nm13_th",
-                "name_by_user": "Caravan Climate",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:32:15",
-                "via_device_id": null
-            },
-            {
-                "area_id": "74a49ece870947fc998a78d2e088b47f",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "0e71741287ef408d9d7d4494e1a54a8a",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "2cf4323cd5f2"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_NODEMCUV2",
-                "name": "nm14_rly4",
-                "name_by_user": "Irrigation Control",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:32:56",
-                "via_device_id": null
-            },
-            {
-                "area_id": "74a49ece870947fc998a78d2e088b47f",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "e141d0d09bbe447685d46bdf69a886ed",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "2cf4323cd811"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_NODEMCUV2",
-                "name": "nm15_t4",
-                "name_by_user": "Furnace",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:33:35",
-                "via_device_id": null
-            },
-            {
-                "area_id": "dc451399bee647789f50e8317344517e",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "dc61b39feafd402c874c907b591f4898",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "84f3ebe36595"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_NODEMCUV2",
-                "name": "nm16_th",
-                "name_by_user": "Outdoor Climate",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:34:16",
-                "via_device_id": null
-            },
-            {
-                "area_id": "ef79dc2fd72045778494fbbced8dcf7b",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "aed98cb53e124a47b486494dab3ed61d",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "dc4f22920bc3"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_ESP01_1M",
-                "name": "sb01",
-                "name_by_user": "Front Yard Light",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:35:40",
-                "via_device_id": null
-            },
-            {
-                "area_id": "ef79dc2fd72045778494fbbced8dcf7b",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "141b171195894e619a9d919aef6ed395",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "dc4f2292606d"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_ESP01_1M",
-                "name": "sb02",
-                "name_by_user": "Front Outdoor Xmas Lights",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:36:24",
-                "via_device_id": null
-            },
-            {
-                "area_id": "74a49ece870947fc998a78d2e088b47f",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "ccae30eb2a604d03b307c9497cf2062b",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "dc4f22defeb4"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_ESP01_1M",
-                "name": "sb03",
-                "name_by_user": "Wink Power",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:37:10",
-                "via_device_id": null
-            },
-            {
-                "area_id": "be918af12ae344be9d3936091fc54a20",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "a487268210574f06b702f06e0878c1fb",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "dc4f22ded8f3"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_ESP01_1M",
-                "name": "sb04",
-                "name_by_user": "Garage Light",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:37:55",
-                "via_device_id": null
-            },
-            {
-                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "3d8e27efce994769a3b3fbf6d012edc7",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "dc4f22de74e2"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_ESP01_1M",
-                "name": "sb05",
-                "name_by_user": "Humidifier Power",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:38:40",
-                "via_device_id": null
-            },
-            {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "da6db2f1c54744fcb601d0513b3b65eb",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "bcddc29ca95f"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_NODEMCUV2",
-                "name": "nm03_sv1",
-                "name_by_user": "Family Room SW-SE Blinds",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:24:18",
-                "via_device_id": null
-            },
-            {
-                "area_id": "dc451399bee647789f50e8317344517e",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "e13b11e02fc4464b9e850b93abfe6816",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "dc4f22dc562f"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_ESP01_1M",
-                "name": "sb06",
-                "name_by_user": "Back Outdoor Xmas Lights",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:39:25",
-                "via_device_id": null
-            },
-            {
-                "area_id": "be918af12ae344be9d3936091fc54a20",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "74ae4b7a533a47aea8aab39dba3953fa",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "a4cf12d9e08d"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_NODEMCUV2",
-                "name": "nm17_m",
-                "name_by_user": "Garage Motion",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:34:59",
-                "via_device_id": null
-            },
-            {
                 "area_id": "316107820cce4630be06041fc14816e3",
                 "config_entries": [
                     "bea899b7c1e64cd49896bd567eb749b5"
@@ -1289,46 +809,6 @@
                 "name": "EPSON XP-7100 Series",
                 "name_by_user": null,
                 "sw_version": "01.67.YL31K1",
-                "via_device_id": null
-            },
-            {
-                "area_id": null,
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "ef610712dc174532af4e01f6916e0426",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "c82b961dbc5d"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_NODEMCUV2",
-                "name": "dm01_sv1",
-                "name_by_user": null,
-                "sw_version": "esphome v1.15.0-dev Apr 16 2020, 15:07:04",
-                "via_device_id": null
-            },
-            {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "config_entries": [
-                    "c2f182f0e3c34f73b167638f5877b669"
-                ],
-                "connections": [],
-                "id": "2426b9985226438493d2507d0a4dd081",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "2cf432c2f2dd"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_ESP01_1M",
-                "name": "sb07",
-                "name_by_user": "Family Room Ceiling Fan Light",
-                "sw_version": "esphome v1.15.0-dev Apr 21 2020, 08:41:26",
                 "via_device_id": null
             },
             {
@@ -1370,6 +850,526 @@
                 "name_by_user": "Back Porch Light",
                 "sw_version": null,
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+            },
+            {
+                "area_id": "be918af12ae344be9d3936091fc54a20",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "6f257e741b564746b69eca3a6eae1985",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "dc4f22ded8f3"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_ESP01_1M",
+                "name": "sb04",
+                "name_by_user": "Garage Light",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:37:55",
+                "via_device_id": null
+            },
+            {
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "46b35f49b60e40bdb51cb453517d898c",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "ecfabc2808ee"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "nm06_rfx1",
+                "name_by_user": "Fan Remote",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:27:33",
+                "via_device_id": null
+            },
+            {
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "01b25cc1a9ff49c997bcd154e5b683f8",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "ecfabc285e6c"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "nm04_sv1",
+                "name_by_user": "Family Room SW-NW Blinds",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:26:05",
+                "via_device_id": null
+            },
+            {
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "fa7eeb66a74e455496e3ab375495dcf7",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "2cf432147fd5"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "nm10_tph",
+                "name_by_user": "Family Room Climate",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:30:14",
+                "via_device_id": null
+            },
+            {
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "8a99ee78cda64cabb43541c266410c90",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "bcddc2247150"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "nm05_sv1",
+                "name_by_user": "Family Room NW-SW Blinds",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:26:48",
+                "via_device_id": null
+            },
+            {
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "6792d04f64544b2f96bf1ba9855e2e5b",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "807d3a3c5c6b"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "nm02_sv1",
+                "name_by_user": "Family Room SE-SW Blinds",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:22:32",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "0d65186f76674e718fea0f63976d0522",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "84f3ebed94b2"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "nm07_rfx1",
+                "name_by_user": null,
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:28:13",
+                "via_device_id": null
+            },
+            {
+                "area_id": "be918af12ae344be9d3936091fc54a20",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "7ec89b1bd00d47248701a5eedbf3a331",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "84f3ebee71bf"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "nm08_sv1",
+                "name_by_user": "Garage Latch",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:28:55",
+                "via_device_id": null
+            },
+            {
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "ad38b2b29eb24331b68fbae50ee3316a",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "2cf432c2f2dd"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_ESP01_1M",
+                "name": "sb07",
+                "name_by_user": "Family Room Ceiling Fan Light",
+                "sw_version": "esphome v1.15.0-dev Apr 21 2020, 08:41:26",
+                "via_device_id": null
+            },
+            {
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "2bab1b706cff40359bbe36c356ee18d8",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "bcddc29ca95f"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "nm03_sv1",
+                "name_by_user": "Family Room SW-SE Blinds",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:24:18",
+                "via_device_id": null
+            },
+            {
+                "area_id": "be918af12ae344be9d3936091fc54a20",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "0297d19b6ceb409693273a05449045dc",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "a4cf12d9e08d"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "nm17_m",
+                "name_by_user": "Garage Motion",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:34:59",
+                "via_device_id": null
+            },
+            {
+                "area_id": "74a49ece870947fc998a78d2e088b47f",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "57673a6ec02649a3a76d73e5d17ca744",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "2cf4323cd5f2"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "nm14_rly4",
+                "name_by_user": "Irrigation Control",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:32:56",
+                "via_device_id": null
+            },
+            {
+                "area_id": "316107820cce4630be06041fc14816e3",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "9df2e6a44ed14cecaf8bc31da5aa8cce",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "84f3ebee68df"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "nm09_th",
+                "name_by_user": "Office Climate",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:29:35",
+                "via_device_id": null
+            },
+            {
+                "area_id": "74a49ece870947fc998a78d2e088b47f",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "90ec9849e88c4c19b61c9dc937b7c1ae",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "2cf4323cd811"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "nm15_t4",
+                "name_by_user": "Furnace",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:33:35",
+                "via_device_id": null
+            },
+            {
+                "area_id": "dc451399bee647789f50e8317344517e",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "f1da704df4dd4da69ef980d105f8d710",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "84f3ebe36595"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "nm16_th",
+                "name_by_user": "Outdoor Climate",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:34:16",
+                "via_device_id": null
+            },
+            {
+                "area_id": "ef79dc2fd72045778494fbbced8dcf7b",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "8d8de4c32fc84734af376c764700e31f",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "dc4f22920bc3"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_ESP01_1M",
+                "name": "sb01",
+                "name_by_user": "Front Yard Light",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:35:40",
+                "via_device_id": null
+            },
+            {
+                "area_id": "dc451399bee647789f50e8317344517e",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "9536dc3f7ae24ca4becaa28866474d00",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "dc4f22dc562f"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_ESP01_1M",
+                "name": "sb06",
+                "name_by_user": "Back Outdoor Xmas Lights",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:39:25",
+                "via_device_id": null
+            },
+            {
+                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "bd33d495ed6f409c9622f3669499aead",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "84f3ebed9b26"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "nm11_th",
+                "name_by_user": "Master Bedroom Climate",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:30:54",
+                "via_device_id": null
+            },
+            {
+                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "cbfd393800a549f18ffe84e0f6b6be6f",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "dc4f22de74e2"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_ESP01_1M",
+                "name": "sb05",
+                "name_by_user": "Humidifier Power",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:38:40",
+                "via_device_id": null
+            },
+            {
+                "area_id": "66b0e5549f8b45ef8d7c37400cec0237",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "5eb22ee9f39e420687061b390d1f23d7",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "2cf43214801c"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "nm13_th",
+                "name_by_user": "Caravan Climate",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:32:15",
+                "via_device_id": null
+            },
+            {
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "3f2e1d3be7a049f08d4d1bfe39c87fc4",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "807d3a3c5a02"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "nm01_sv1",
+                "name_by_user": "Family Room SE-NE Blinds",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:21:53",
+                "via_device_id": null
+            },
+            {
+                "area_id": "74a49ece870947fc998a78d2e088b47f",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "61344d8b56db43388bf5cc133786843b",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "dc4f22defeb4"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_ESP01_1M",
+                "name": "sb03",
+                "name_by_user": "Wink Power",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:37:10",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "abf3c9fea2e9422482ebac790b87643b",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "c82b961dbc5d"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "dm01_sv1",
+                "name_by_user": null,
+                "sw_version": "esphome v1.15.0-dev Apr 16 2020, 15:07:04",
+                "via_device_id": null
+            },
+            {
+                "area_id": "be918af12ae344be9d3936091fc54a20",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "b0c05091d40849359f4f4d55a70a79d4",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "2cf432146c86"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "nm12_th",
+                "name_by_user": "Garage Climate",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:31:34",
+                "via_device_id": null
+            },
+            {
+                "area_id": "ef79dc2fd72045778494fbbced8dcf7b",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "8b90b436c1854e4fa6d18dc2c9e076a7",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "dc4f2292606d"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_ESP01_1M",
+                "name": "sb02",
+                "name_by_user": "Front Outdoor Xmas Lights",
+                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:36:24",
+                "via_device_id": null
+            },
+            {
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "config_entries": [
+                    "fbf5eddc5250430a8e8e4d478a4c832f"
+                ],
+                "connections": [],
+                "id": "ce95da89bb7b4d029e8f9ceeb144925e",
+                "identifiers": [
+                    [
+                        "nut",
+                        "APC_Back-UPS ES 650_5B0749T24313  "
+                    ]
+                ],
+                "manufacturer": "APC",
+                "model": "Back-UPS ES 650",
+                "name": "UPS",
+                "name_by_user": null,
+                "sw_version": "825.B1.D",
+                "via_device_id": null
             }
         ]
     },

@@ -35,6 +35,7 @@ include:
     - light.family_room_lamp_bulb_2
     - light.family_room_link_bulb_1
     - light.family_room_link_bulb_2
+    - light.back_porch_light
     - light.garage_attic_link_bulb
     - light.guest_room_lamp_bulb
     - light.office_light_bulb
@@ -70,9 +71,10 @@ include:
     - sensor.master_bedroom_temperature
     - sensor.outdoor_humidity
     - sensor.outdoor_temperature
-    - sensor.ups_transfer_count
+    - sensor.ups_status
     - sensor.ups_input_voltage
     # switches
+    - switch.family_room_ceiling_fan_light
     - switch.living_room_lamp_module
     - switch.front_yard_light
     - switch.garage_latch
