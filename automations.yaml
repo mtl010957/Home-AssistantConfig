@@ -161,7 +161,7 @@
   condition: []
   action:
   - data: {}
-    entity_id: switch.sb01_relay
+    entity_id: switch.front_yard_light
     service: switch.turn_on
 - id: '1545515874358'
   alias: Front Yard Light off at 04:30 AM
@@ -171,7 +171,7 @@
   condition: []
   action:
   - data: {}
-    entity_id: switch.sb01_relay
+    entity_id: switch.front_yard_light
     service: switch.turn_off
 - id: '1548612260526'
   alias: Irrigation Enable
@@ -250,7 +250,7 @@
     platform: time
   condition: []
   action:
-  - entity_id: switch.sb06_relay
+  - entity_id: switch.grow_lamp
     service: switch.turn_on
 - id: '1552938778764'
   alias: Grow Lamp off at 08:00 PM
@@ -259,7 +259,7 @@
     platform: time
   condition: []
   action:
-  - entity_id: switch.sb06_relay
+  - entity_id: switch.grow_lamp
     service: switch.turn_off
 - id: '1560461893289'
   alias: Security Lighting On Close Blinds
@@ -500,10 +500,10 @@
   alias: UPS Notify Offline
   description: ''
   trigger:
-  - entity_id: binary_sensor.ups_online_status
-    from: 'on'
+  - entity_id: sensor.ups_status
+    from: Online
     platform: state
-    to: 'off'
+    to: Offline
   condition: []
   action:
   - data:
@@ -514,10 +514,10 @@
   alias: UPS Notify Online
   description: ''
   trigger:
-  - entity_id: binary_sensor.ups_online_status
-    from: 'off'
+  - entity_id: sensor.ups_status
+    from: Offline
     platform: state
-    to: 'on'
+    to: Online
   condition: []
   action:
   - data:
