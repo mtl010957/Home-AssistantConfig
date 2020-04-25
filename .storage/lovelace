@@ -395,15 +395,6 @@
                                 }
                             ],
                             "type": "vertical-stack"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "type": "cast",
-                                    "view": "1"
-                                }
-                            ],
-                            "type": "entities"
                         }
                     ],
                     "icon": "mdi:camera",
