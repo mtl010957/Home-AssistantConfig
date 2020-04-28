@@ -572,39 +572,35 @@
                     "badges": [],
                     "cards": [
                         {
-                            "entities": [
+                            "cards": [
                                 {
-                                    "entity": "binary_sensor.family_room_motion"
+                                    "cards": [
+                                        {
+                                            "detail": 2,
+                                            "entity": "sensor.family_room_humidity",
+                                            "graph": "line",
+                                            "name": "Humidity",
+                                            "type": "sensor"
+                                        },
+                                        {
+                                            "detail": 2,
+                                            "entity": "sensor.family_room_temperature",
+                                            "graph": "line",
+                                            "name": "Temperature",
+                                            "type": "sensor"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
                                 },
                                 {
-                                    "entity": "binary_sensor.family_room_motion_tamper"
-                                },
-                                {
-                                    "entity": "sensor.family_room_motion_sensor_battery_level"
-                                },
-                                {
-                                    "entity": "sensor.family_room_motion_sensor_temperature"
+                                    "detail": 2,
+                                    "entity": "sensor.corrected_barometer_inhg",
+                                    "graph": "line",
+                                    "type": "sensor"
                                 }
                             ],
-                            "show_name": false,
-                            "title": "Family Room Motion",
-                            "type": "glance"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.back_door"
-                                },
-                                {
-                                    "entity": "binary_sensor.back_door_tamper"
-                                },
-                                {
-                                    "entity": "sensor.back_door_sensor_battery_level"
-                                }
-                            ],
-                            "show_name": false,
-                            "title": "Back Door",
-                            "type": "glance"
+                            "title": "Family Room",
+                            "type": "vertical-stack"
                         },
                         {
                             "cards": [
@@ -637,37 +633,6 @@
                                 }
                             ],
                             "type": "horizontal-stack"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "cards": [
-                                        {
-                                            "detail": 2,
-                                            "entity": "sensor.family_room_humidity",
-                                            "graph": "line",
-                                            "name": "Humidity",
-                                            "type": "sensor"
-                                        },
-                                        {
-                                            "detail": 2,
-                                            "entity": "sensor.family_room_temperature",
-                                            "graph": "line",
-                                            "name": "Temperature",
-                                            "type": "sensor"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "detail": 2,
-                                    "entity": "sensor.corrected_barometer_inhg",
-                                    "graph": "line",
-                                    "type": "sensor"
-                                }
-                            ],
-                            "title": "Family Room",
-                            "type": "vertical-stack"
                         },
                         {
                             "cards": [
@@ -713,6 +678,41 @@
                                 }
                             ],
                             "type": "horizontal-stack"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.family_room_motion"
+                                },
+                                {
+                                    "entity": "binary_sensor.family_room_motion_tamper"
+                                },
+                                {
+                                    "entity": "sensor.family_room_motion_sensor_battery_level"
+                                },
+                                {
+                                    "entity": "sensor.family_room_motion_sensor_temperature"
+                                }
+                            ],
+                            "show_name": false,
+                            "title": "Family Room Motion",
+                            "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.back_door"
+                                },
+                                {
+                                    "entity": "binary_sensor.back_door_tamper"
+                                },
+                                {
+                                    "entity": "sensor.back_door_sensor_battery_level"
+                                }
+                            ],
+                            "show_name": false,
+                            "title": "Back Door",
+                            "type": "glance"
                         },
                         {
                             "entity": "media_player.family_room_tv",
@@ -917,25 +917,6 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "binary_sensor.master_bedroom_motion"
-                                },
-                                {
-                                    "entity": "binary_sensor.master_bedroom_motion_tamper"
-                                },
-                                {
-                                    "entity": "sensor.master_bedroom_motion_sensor_battery_level"
-                                },
-                                {
-                                    "entity": "sensor.master_bedroom_motion_sensor_temperature"
-                                }
-                            ],
-                            "show_name": false,
-                            "title": "Master Bedroom Motion",
-                            "type": "glance"
-                        },
-                        {
-                            "entities": [
-                                {
                                     "entity": "switch.humidifier_power",
                                     "name": "Power",
                                     "state_color": true
@@ -990,6 +971,38 @@
                         {
                             "cards": [
                                 {
+                                    "entity": "fan.house_fan",
+                                    "hold_action": {
+                                        "action": "more-info"
+                                    },
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "state_color": true,
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "entity-button"
+                                },
+                                {
+                                    "entity": "fan.master_bedroom_ceiling_fan",
+                                    "hold_action": {
+                                        "action": "more-info"
+                                    },
+                                    "name": "Ceiling Fan MBR",
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "state_color": true,
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "entity-button"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
                                     "cards": [
                                         {
                                             "entity": "light.bedside_lamp_bulb",
@@ -1021,36 +1034,23 @@
                             "type": "vertical-stack"
                         },
                         {
-                            "cards": [
+                            "entities": [
                                 {
-                                    "entity": "fan.house_fan",
-                                    "hold_action": {
-                                        "action": "more-info"
-                                    },
-                                    "show_icon": true,
-                                    "show_name": true,
-                                    "state_color": true,
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "type": "entity-button"
+                                    "entity": "binary_sensor.master_bedroom_motion"
                                 },
                                 {
-                                    "entity": "fan.master_bedroom_ceiling_fan",
-                                    "hold_action": {
-                                        "action": "more-info"
-                                    },
-                                    "name": "Ceiling Fan MBR",
-                                    "show_icon": true,
-                                    "show_name": true,
-                                    "state_color": true,
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "type": "entity-button"
+                                    "entity": "binary_sensor.master_bedroom_motion_tamper"
+                                },
+                                {
+                                    "entity": "sensor.master_bedroom_motion_sensor_battery_level"
+                                },
+                                {
+                                    "entity": "sensor.master_bedroom_motion_sensor_temperature"
                                 }
                             ],
-                            "type": "horizontal-stack"
+                            "show_name": false,
+                            "title": "Master Bedroom Motion",
+                            "type": "glance"
                         },
                         {
                             "cards": [
@@ -1289,32 +1289,6 @@
                             "type": "horizontal-stack"
                         },
                         {
-                            "cards": [
-                                {
-                                    "aspect_ratio": "0%",
-                                    "camera_image": "camera.front_yard_front_porch",
-                                    "entities": [
-                                        {
-                                            "entity": "binary_sensor.front_yard_camera_front_porch_online"
-                                        },
-                                        {
-                                            "entity": "switch.desert_front_porch_camera"
-                                        },
-                                        {
-                                            "entity": "camera.front_yard_front_porch",
-                                            "tap_action": {
-                                                "action": "url",
-                                                "url_path": "https://home.nest.com/camera/3d9c6edadb734864865e2b4a8a53cb93"
-                                            }
-                                        }
-                                    ],
-                                    "title": "Desert Front Yard (Front Porch)",
-                                    "type": "picture-glance"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        },
-                        {
                             "entities": [
                                 {
                                     "entity": "sensor.forecast_today",
@@ -1433,6 +1407,32 @@
                                 }
                             ],
                             "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "aspect_ratio": "0%",
+                                    "camera_image": "camera.front_yard_front_porch",
+                                    "entities": [
+                                        {
+                                            "entity": "binary_sensor.front_yard_camera_front_porch_online"
+                                        },
+                                        {
+                                            "entity": "switch.desert_front_porch_camera"
+                                        },
+                                        {
+                                            "entity": "camera.front_yard_front_porch",
+                                            "tap_action": {
+                                                "action": "url",
+                                                "url_path": "https://home.nest.com/camera/3d9c6edadb734864865e2b4a8a53cb93"
+                                            }
+                                        }
+                                    ],
+                                    "title": "Desert Front Yard (Front Porch)",
+                                    "type": "picture-glance"
+                                }
+                            ],
+                            "type": "vertical-stack"
                         }
                     ],
                     "title": "Outdoor"
