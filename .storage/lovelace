@@ -564,6 +564,10 @@
                                 }
                             ],
                             "type": "vertical-stack"
+                        },
+                        {
+                            "entity": "light.front_porch_light",
+                            "type": "light"
                         }
                     ],
                     "title": "Living Rm"

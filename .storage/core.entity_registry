@@ -5937,6 +5937,38 @@
                 "supported_features": 240,
                 "unique_id": "ESPcoverdm01_sv1_cover",
                 "unit_of_measurement": null
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": "de284e3b58a141aeb7547a2926ad6b12",
+                "device_class": null,
+                "device_id": "7b4d27b07969400087ff94ee4091b87d",
+                "disabled_by": null,
+                "entity_id": "zwave.front_porch_light",
+                "icon": null,
+                "name": "Front Porch Light",
+                "original_icon": null,
+                "original_name": "Leviton DZ6HD-1BZ Decora 600W Smart Dimmer",
+                "platform": "zwave",
+                "supported_features": 0,
+                "unique_id": "node-22",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": {},
+                "config_entry_id": "de284e3b58a141aeb7547a2926ad6b12",
+                "device_class": null,
+                "device_id": "7b4d27b07969400087ff94ee4091b87d",
+                "disabled_by": null,
+                "entity_id": "light.front_porch_light",
+                "icon": null,
+                "name": "Front Porch Light",
+                "original_icon": null,
+                "original_name": "Leviton DZ6HD-1BZ Decora 600W Smart Dimmer Level",
+                "platform": "zwave",
+                "supported_features": 1,
+                "unique_id": "22-72057594411843585",
+                "unit_of_measurement": null
             }
         ]
     },
