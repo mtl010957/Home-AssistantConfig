@@ -15,4 +15,7 @@
     family_room_nwsw_blinds_tilt_position:
       friendly_name: "Family Room NW-SW Blinds Tilt Position"
       value_template: "{{ state_attr('cover.family_room_nwsw_blinds', 'current_tilt_position') }}"
+    living_room_se_blinds_tilt_position:
+      friendly_name: "Living Room SE Blinds Tilt Position"
+      value_template: "{{ state_attr('cover.living_room_se_blinds', 'current_tilt_position') }}"
 

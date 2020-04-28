@@ -185,6 +185,10 @@
                                     "camera_image": "camera.3629_cam_1",
                                     "entities": [
                                         {
+                                            "entity": "switch.front_yard_light",
+                                            "icon": "mdi:spotlight-beam"
+                                        },
+                                        {
                                             "entity": "switch.foscam_cam1_motion"
                                         },
                                         {
@@ -204,7 +208,7 @@
                                             }
                                         }
                                     ],
-                                    "title": "Front Door",
+                                    "title": "Front Yard",
                                     "type": "picture-glance"
                                 }
                             ],
@@ -240,6 +244,10 @@
                                     "camera_image": "camera.3629_cam_1",
                                     "entities": [
                                         {
+                                            "entity": "switch.front_yard_light",
+                                            "icon": "mdi:spotlight-beam"
+                                        },
+                                        {
                                             "entity": "switch.foscam_cam1_motion"
                                         },
                                         {
@@ -259,13 +267,16 @@
                                             }
                                         }
                                     ],
-                                    "title": "Front Door",
+                                    "title": "Front Yard",
                                     "type": "picture-glance"
                                 },
                                 {
                                     "aspect_ratio": "0%",
                                     "camera_image": "camera.3629_cam_2",
                                     "entities": [
+                                        {
+                                            "entity": "light.back_porch_light"
+                                        },
                                         {
                                             "entity": "switch.foscam_cam2_motion"
                                         },
@@ -286,7 +297,7 @@
                                             }
                                         }
                                     ],
-                                    "title": "Back Door",
+                                    "title": "Back Yard",
                                     "type": "picture-glance"
                                 }
                             ],
@@ -525,6 +536,34 @@
                             "show_name": false,
                             "title": "Siren and Chime",
                             "type": "glance"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "cards": [
+                                        {
+                                            "entity": "cover.living_room_se_blinds",
+                                            "name": "SE LR",
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "sensor.living_room_se_blinds_tilt_position",
+                                            "max": 100,
+                                            "min": 0,
+                                            "name": "SE LR Pos",
+                                            "severity": {
+                                                "green": 0,
+                                                "red": 80,
+                                                "yellow": 20
+                                            },
+                                            "theme": "default",
+                                            "type": "gauge"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                }
+                            ],
+                            "type": "vertical-stack"
                         }
                     ],
                     "title": "Living Rm"
@@ -532,22 +571,6 @@
                 {
                     "badges": [],
                     "cards": [
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.corrected_barometer_inhg"
-                                },
-                                {
-                                    "entity": "sensor.family_room_humidity"
-                                },
-                                {
-                                    "entity": "sensor.family_room_temperature"
-                                }
-                            ],
-                            "show_name": false,
-                            "title": "Family Room",
-                            "type": "glance"
-                        },
                         {
                             "entities": [
                                 {
@@ -618,6 +641,37 @@
                         {
                             "cards": [
                                 {
+                                    "cards": [
+                                        {
+                                            "detail": 2,
+                                            "entity": "sensor.family_room_humidity",
+                                            "graph": "line",
+                                            "name": "Humidity",
+                                            "type": "sensor"
+                                        },
+                                        {
+                                            "detail": 2,
+                                            "entity": "sensor.family_room_temperature",
+                                            "graph": "line",
+                                            "name": "Temperature",
+                                            "type": "sensor"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                },
+                                {
+                                    "detail": 2,
+                                    "entity": "sensor.corrected_barometer_inhg",
+                                    "graph": "line",
+                                    "type": "sensor"
+                                }
+                            ],
+                            "title": "Family Room",
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "cards": [
+                                {
                                     "entity": "light.family_room_link_bulb_1",
                                     "name": "Fam Rm Link Bulb 1",
                                     "type": "light"
@@ -659,6 +713,10 @@
                                 }
                             ],
                             "type": "horizontal-stack"
+                        },
+                        {
+                            "entity": "media_player.family_room_tv",
+                            "type": "media-control"
                         },
                         {
                             "cards": [
@@ -818,10 +876,6 @@
                             "type": "vertical-stack"
                         },
                         {
-                            "entity": "media_player.family_room_tv",
-                            "type": "media-control"
-                        },
-                        {
                             "entities": [
                                 {
                                     "entity": "switch.siren_and_strobe_switch"
@@ -841,16 +895,42 @@
                 {
                     "cards": [
                         {
-                            "entities": [
+                            "cards": [
                                 {
-                                    "entity": "sensor.master_bedroom_humidity"
+                                    "detail": 2,
+                                    "entity": "sensor.master_bedroom_humidity",
+                                    "graph": "line",
+                                    "name": "Humidity",
+                                    "type": "sensor"
                                 },
                                 {
-                                    "entity": "sensor.master_bedroom_temperature"
+                                    "detail": 2,
+                                    "entity": "sensor.master_bedroom_temperature",
+                                    "graph": "line",
+                                    "name": "Temperature",
+                                    "type": "sensor"
+                                }
+                            ],
+                            "title": "Master Bedroom",
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.master_bedroom_motion"
+                                },
+                                {
+                                    "entity": "binary_sensor.master_bedroom_motion_tamper"
+                                },
+                                {
+                                    "entity": "sensor.master_bedroom_motion_sensor_battery_level"
+                                },
+                                {
+                                    "entity": "sensor.master_bedroom_motion_sensor_temperature"
                                 }
                             ],
                             "show_name": false,
-                            "title": "Master Bedroom",
+                            "title": "Master Bedroom Motion",
                             "type": "glance"
                         },
                         {
@@ -888,36 +968,24 @@
                             "type": "entities"
                         },
                         {
-                            "entities": [
+                            "cards": [
                                 {
-                                    "entity": "sensor.office_humidity"
+                                    "detail": 2,
+                                    "entity": "sensor.office_humidity",
+                                    "graph": "line",
+                                    "name": "Humidity",
+                                    "type": "sensor"
                                 },
                                 {
-                                    "entity": "sensor.office_temperature"
+                                    "detail": 2,
+                                    "entity": "sensor.office_temperature",
+                                    "graph": "line",
+                                    "name": "Temperature",
+                                    "type": "sensor"
                                 }
                             ],
-                            "show_name": false,
                             "title": "Office",
-                            "type": "glance"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.master_bedroom_motion"
-                                },
-                                {
-                                    "entity": "binary_sensor.master_bedroom_motion_tamper"
-                                },
-                                {
-                                    "entity": "sensor.master_bedroom_motion_sensor_battery_level"
-                                },
-                                {
-                                    "entity": "sensor.master_bedroom_motion_sensor_temperature"
-                                }
-                            ],
-                            "show_name": false,
-                            "title": "Master Bedroom Motion",
-                            "type": "glance"
+                            "type": "horizontal-stack"
                         },
                         {
                             "cards": [
@@ -985,14 +1053,6 @@
                             "type": "horizontal-stack"
                         },
                         {
-                            "entity": "media_player.bedroom_tv",
-                            "type": "media-control"
-                        },
-                        {
-                            "entity": "media_player.office_speaker",
-                            "type": "media-control"
-                        },
-                        {
                             "cards": [
                                 {
                                     "entity": "sensor.epson_xp_7100_series",
@@ -1025,6 +1085,14 @@
                                 }
                             ],
                             "type": "vertical-stack"
+                        },
+                        {
+                            "entity": "media_player.bedroom_tv",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.office_speaker",
+                            "type": "media-control"
                         }
                     ],
                     "title": "Upstairs"
@@ -1032,20 +1100,24 @@
                 {
                     "cards": [
                         {
-                            "entities": [
+                            "cards": [
                                 {
-                                    "entity": "sensor.garage_humidity"
+                                    "detail": 2,
+                                    "entity": "sensor.garage_humidity",
+                                    "graph": "line",
+                                    "name": "Humidity",
+                                    "type": "sensor"
                                 },
                                 {
-                                    "entity": "sensor.garage_temperature"
-                                },
-                                {
-                                    "entity": "binary_sensor.garage_motion"
+                                    "detail": 2,
+                                    "entity": "sensor.garage_temperature",
+                                    "graph": "line",
+                                    "name": "Temperature",
+                                    "type": "sensor"
                                 }
                             ],
-                            "show_name": false,
                             "title": "Garage",
-                            "type": "glance"
+                            "type": "horizontal-stack"
                         },
                         {
                             "entities": [
@@ -1073,22 +1145,61 @@
                                     "entity": "switch.front_yard_light",
                                     "icon": "mdi:spotlight-beam",
                                     "name": "Front Yard",
-                                    "state_color": true,
-                                    "type": "entity-button"
-                                },
-                                {
-                                    "entity": "switch.garage_light",
-                                    "icon": "mdi:lightbulb",
-                                    "name": "Garage Lights",
-                                    "state_color": true,
                                     "type": "entity-button"
                                 },
                                 {
                                     "entity": "light.garage_attic_link_bulb",
                                     "name": "Garage Attic",
                                     "type": "light"
+                                },
+                                {
+                                    "cards": [
+                                        {
+                                            "entity": "switch.garage_light",
+                                            "hold_action": {
+                                                "action": "more-info"
+                                            },
+                                            "icon": "mdi:lightbulb",
+                                            "show_icon": true,
+                                            "show_name": true,
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "type": "button"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "entity": "binary_sensor.garage_motion"
+                                                }
+                                            ],
+                                            "show_name": false,
+                                            "type": "glance"
+                                        }
+                                    ],
+                                    "type": "vertical-stack"
                                 }
                             ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "detail": 2,
+                                    "entity": "sensor.outdoor_humidity",
+                                    "graph": "line",
+                                    "name": "Humidity",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "detail": 2,
+                                    "entity": "sensor.outdoor_temperature",
+                                    "graph": "line",
+                                    "name": "Temperature",
+                                    "type": "sensor"
+                                }
+                            ],
+                            "title": "Outdoor",
                             "type": "horizontal-stack"
                         },
                         {
@@ -1097,6 +1208,10 @@
                                     "aspect_ratio": "0%",
                                     "camera_image": "camera.3629_cam_1",
                                     "entities": [
+                                        {
+                                            "entity": "switch.front_yard_light",
+                                            "icon": "mdi:spotlight-beam"
+                                        },
                                         {
                                             "entity": "switch.foscam_cam1_motion"
                                         },
@@ -1117,13 +1232,16 @@
                                             }
                                         }
                                     ],
-                                    "title": "Front Door",
+                                    "title": "Front Yard",
                                     "type": "picture-glance"
                                 },
                                 {
                                     "aspect_ratio": "0%",
                                     "camera_image": "camera.3629_cam_2",
                                     "entities": [
+                                        {
+                                            "entity": "light.back_porch_light"
+                                        },
                                         {
                                             "entity": "switch.foscam_cam2_motion"
                                         },
@@ -1144,11 +1262,31 @@
                                             }
                                         }
                                     ],
-                                    "title": "Back Door",
+                                    "title": "Back Yard",
                                     "type": "picture-glance"
                                 }
                             ],
                             "type": "vertical-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "detail": 2,
+                                    "entity": "sensor.caravan_humidity",
+                                    "graph": "line",
+                                    "name": "Humidity",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "detail": 2,
+                                    "entity": "sensor.caravan_temperature",
+                                    "graph": "line",
+                                    "name": "Temperature",
+                                    "type": "sensor"
+                                }
+                            ],
+                            "title": "Caravan",
+                            "type": "horizontal-stack"
                         },
                         {
                             "cards": [
@@ -1175,19 +1313,6 @@
                                 }
                             ],
                             "type": "vertical-stack"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.outdoor_humidity"
-                                },
-                                {
-                                    "entity": "sensor.outdoor_temperature"
-                                }
-                            ],
-                            "show_name": false,
-                            "title": "Outdoor",
-                            "type": "glance"
                         },
                         {
                             "entities": [
@@ -1262,19 +1387,6 @@
                                 }
                             ],
                             "type": "vertical-stack"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.caravan_humidity"
-                                },
-                                {
-                                    "entity": "sensor.caravan_temperature"
-                                }
-                            ],
-                            "show_name": false,
-                            "title": "Caravan",
-                            "type": "glance"
                         },
                         {
                             "entity": "media_player.mini",

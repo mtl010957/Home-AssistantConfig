@@ -24,6 +24,7 @@ include:
     - cover.family_room_sesw_blinds
     - cover.family_room_swnw_blinds
     - cover.family_room_swse_blinds
+    - cover.living_room_se_blinds
     # fans
     - fan.house_fan
     - fan.family_room_ceiling_fan
