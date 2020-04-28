@@ -1,0 +1,17 @@
+{
+    "data": {
+        "items": [
+            {
+                "icon": "mdi:cactus",
+                "id": "lovelace_desert",
+                "mode": "storage",
+                "require_admin": false,
+                "show_in_sidebar": true,
+                "title": "Desert",
+                "url_path": "lovelace-desert"
+            }
+        ]
+    },
+    "key": "lovelace_dashboards",
+    "version": 1
+}

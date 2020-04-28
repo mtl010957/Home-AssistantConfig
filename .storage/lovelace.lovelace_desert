@@ -1,0 +1,67 @@
+{
+    "data": {
+        "config": {
+            "title": "Desert",
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "aspect_ratio": "0%",
+                            "camera_image": "camera.living_room",
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.living_room_camera_online"
+                                },
+                                {
+                                    "entity": "switch.desert_living_room_camera"
+                                },
+                                {
+                                    "entity": "camera.living_room",
+                                    "tap_action": {
+                                        "action": "url",
+                                        "url_path": "https://home.nest.com/camera/38791aecd8ec42e0bdf6d3d6fcc8753e"
+                                    }
+                                }
+                            ],
+                            "title": "Desert Living Room",
+                            "type": "picture-glance"
+                        }
+                    ],
+                    "path": "inside",
+                    "title": "Inside"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "aspect_ratio": "0%",
+                            "camera_image": "camera.front_yard_front_porch",
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.front_yard_camera_front_porch_online"
+                                },
+                                {
+                                    "entity": "switch.desert_front_porch_camera"
+                                },
+                                {
+                                    "entity": "camera.front_yard_front_porch",
+                                    "tap_action": {
+                                        "action": "url",
+                                        "url_path": "https://home.nest.com/camera/3d9c6edadb734864865e2b4a8a53cb93"
+                                    }
+                                }
+                            ],
+                            "title": "Desert Front Yard (Front Porch)",
+                            "type": "picture-glance"
+                        }
+                    ],
+                    "path": "outside",
+                    "title": "Outside"
+                }
+            ]
+        }
+    },
+    "key": "lovelace.lovelace_desert",
+    "version": 1
+}

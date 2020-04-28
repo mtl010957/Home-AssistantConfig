@@ -19,6 +19,7 @@
 !.storage/core.area_registry
 !.storage/core.device_registry
 !.storage/core.entity_registry
+!.storage/lovelace
 .cloud
 Archive
 secrets.yaml
@@ -29,3 +30,6 @@ nmap_tracker.yaml
 tracker.yaml
 nest.conf
 .wink.conf
+!.storage/lovelace.lovelace_desert
+!.storage/lovelace_dashboards
+!.storage/lovelace_resources
