@@ -1,6 +1,4 @@
-# Interval = 0 disabled, use automation
-purge_interval: 0
-#commit_interval: 5
+auto_purge: false
 purge_keep_days: 1
 db_url: !secret recorder_db_url
 include:

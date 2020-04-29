@@ -53,7 +53,7 @@
                     ],
                     "cards": [
                         {
-                            "entity": "weather.kptk",
+                            "entity": "weather.kptk_daynight",
                             "name": "Waterford",
                             "type": "weather-forecast"
                         },

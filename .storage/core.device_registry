@@ -14,7 +14,7 @@
                         "b3d3a131cf6fbd05c17d4a49863fb6ab"
                     ]
                 ],
-                "manufacturer": "Unknown manufacturer",
+                "manufacturer": "Google Inc.",
                 "model": "MIBOX4",
                 "name": "Family Room TV",
                 "name_by_user": null,
@@ -34,7 +34,7 @@
                         "c7f5e694a696c50aedc1bd6fa2da9894"
                     ]
                 ],
-                "manufacturer": "Unknown manufacturer",
+                "manufacturer": "Google Inc.",
                 "model": "Google Nest Mini",
                 "name": "Office speaker",
                 "name_by_user": null,
@@ -54,7 +54,7 @@
                         "aae780309012bd4f34f740adb52a7826"
                     ]
                 ],
-                "manufacturer": "Unknown manufacturer",
+                "manufacturer": "Google Inc.",
                 "model": "Google Home Mini",
                 "name": "Mini",
                 "name_by_user": null,
@@ -74,7 +74,7 @@
                         "17081e8298e362fac4c5f1287e4c35b2"
                     ]
                 ],
-                "manufacturer": "Unknown manufacturer",
+                "manufacturer": "Google Inc.",
                 "model": "MIBOX4",
                 "name": "Caravan",
                 "name_by_user": null,
@@ -94,7 +94,7 @@
                         "9b126d8d5d93d327126012fcd8f39085"
                     ]
                 ],
-                "manufacturer": "Unknown manufacturer",
+                "manufacturer": "Google Inc.",
                 "model": "MIBOX4",
                 "name": "Bedroom TV",
                 "name_by_user": null,
@@ -1366,7 +1366,7 @@
                 ],
                 "manufacturer": "APC",
                 "model": "Back-UPS ES 650",
-                "name": "UPS",
+                "name": "Ups",
                 "name_by_user": null,
                 "sw_version": "825.B1.D",
                 "via_device_id": null

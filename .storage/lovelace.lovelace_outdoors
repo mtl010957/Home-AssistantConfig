@@ -236,12 +236,6 @@
                         {
                             "cards": [
                                 {
-                                    "entity": "switch.front_yard_light",
-                                    "icon": "mdi:spotlight-beam",
-                                    "name": "Front Yard",
-                                    "type": "entity-button"
-                                },
-                                {
                                     "entity": "light.front_porch_light",
                                     "type": "light"
                                 },
@@ -258,6 +252,12 @@
                                         "action": "toggle"
                                     },
                                     "type": "button"
+                                },
+                                {
+                                    "entity": "switch.front_yard_light",
+                                    "icon": "mdi:spotlight-beam",
+                                    "name": "Front Yard",
+                                    "type": "entity-button"
                                 }
                             ],
                             "type": "horizontal-stack"
