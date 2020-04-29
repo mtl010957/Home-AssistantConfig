@@ -1,0 +1,143 @@
+{
+    "data": {
+        "config": {
+            "title": "Hubs",
+            "views": [
+                {
+                    "badges": [
+                        {
+                            "entity": "sensor.load_1m"
+                        },
+                        {
+                            "entity": "sensor.load_5m"
+                        },
+                        {
+                            "entity": "sensor.latest_version"
+                        },
+                        {
+                            "entity": "binary_sensor.updater"
+                        },
+                        {
+                            "entity": "sensor.ssl_certificate_expiry_2"
+                        },
+                        {
+                            "entity": "sensor.hacs"
+                        },
+                        {
+                            "entity": "sensor.ups_status"
+                        },
+                        {
+                            "entity": "sensor.ups_battery_charge"
+                        },
+                        {
+                            "entity": "sensor.ups_input_voltage"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "entity": "sensor.processor_use",
+                            "max": 100,
+                            "min": 0,
+                            "severity": {
+                                "green": 1,
+                                "red": 81,
+                                "yellow": 41
+                            },
+                            "theme": "default",
+                            "type": "gauge"
+                        },
+                        {
+                            "columns": 2,
+                            "entities": [
+                                {
+                                    "entity": "sensor.last_boot"
+                                },
+                                {
+                                    "entity": "sensor.uptime"
+                                },
+                                {
+                                    "entity": "sensor.memory_use_percent"
+                                },
+                                {
+                                    "entity": "sensor.swap_use_percent"
+                                },
+                                {
+                                    "entity": "sensor.disk_use_percent"
+                                },
+                                {
+                                    "entity": "sensor.cpu_temperature"
+                                }
+                            ],
+                            "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.myip"
+                                },
+                                {
+                                    "entity": "zwave.aeon_labs_zw090_z_stick_gen5_us"
+                                },
+                                {
+                                    "entity": "binary_sensor.wink",
+                                    "state_color": true
+                                },
+                                {
+                                    "entity": "switch.wink_power",
+                                    "state_color": true
+                                }
+                            ],
+                            "title": "Hubs",
+                            "type": "entities"
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "name": "Name",
+                                    "prop": "name"
+                                },
+                                {
+                                    "attr": "available",
+                                    "id": "available",
+                                    "modify": "x || \"false\"",
+                                    "name": "Online"
+                                },
+                                {
+                                    "attr": "last_seen",
+                                    "name": "Last Seen"
+                                },
+                                {
+                                    "attr": "manufacturer",
+                                    "name": "Manufacturer"
+                                },
+                                {
+                                    "attr": "model",
+                                    "name": "Model"
+                                },
+                                {
+                                    "attr": "ieee",
+                                    "name": "IEEE"
+                                },
+                                {
+                                    "name": "NWK",
+                                    "prop": "nwk"
+                                },
+                                {
+                                    "attr": "quirk_class",
+                                    "name": "Quirk"
+                                }
+                            ],
+                            "lickable": true,
+                            "sort_by": "available",
+                            "type": "custom:zha-network-card"
+                        }
+                    ],
+                    "path": "hubs",
+                    "title": "Hubs"
+                }
+            ]
+        }
+    },
+    "key": "lovelace.lovelace_admin",
+    "version": 1
+}

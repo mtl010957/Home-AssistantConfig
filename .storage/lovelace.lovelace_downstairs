@@ -1,0 +1,517 @@
+{
+    "data": {
+        "config": {
+            "title": "Downstairs",
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "cards": [
+                                        {
+                                            "detail": 2,
+                                            "entity": "sensor.family_room_humidity",
+                                            "graph": "line",
+                                            "name": "Humidity",
+                                            "type": "sensor"
+                                        },
+                                        {
+                                            "detail": 2,
+                                            "entity": "sensor.family_room_temperature",
+                                            "graph": "line",
+                                            "name": "Temperature",
+                                            "type": "sensor"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                },
+                                {
+                                    "detail": 2,
+                                    "entity": "sensor.corrected_barometer_inhg",
+                                    "graph": "line",
+                                    "type": "sensor"
+                                }
+                            ],
+                            "title": "Family Room",
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "fan.family_room_ceiling_fan",
+                                    "hold_action": {
+                                        "action": "more-info"
+                                    },
+                                    "name": "Fam Rm Ceiling Fan",
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "button"
+                                },
+                                {
+                                    "entity": "switch.family_room_ceiling_fan_light",
+                                    "hold_action": {
+                                        "action": "more-info"
+                                    },
+                                    "icon": "mdi:lightbulb",
+                                    "name": "Fam Rm Ceiling Fan Light",
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "button"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "light.family_room_link_bulb_1",
+                                    "name": "Fam Rm Link Bulb 1",
+                                    "type": "light"
+                                },
+                                {
+                                    "entity": "light.family_room_link_bulb_2",
+                                    "name": "Fam Rm Link Bulb 2",
+                                    "type": "light"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "light.family_room_lamp_bulb_1",
+                                    "name": "Fam Rm Lamp 1",
+                                    "type": "light"
+                                },
+                                {
+                                    "entity": "light.family_room_lamp_bulb_2",
+                                    "name": "Fam Rm Lamp 2",
+                                    "type": "light"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "light.family_room_nw_ceiling_lights",
+                                    "name": "Fam Rm NW Ceiling",
+                                    "type": "light"
+                                },
+                                {
+                                    "entity": "light.family_room_se_ceiling_lights",
+                                    "name": "Fam Rm SE Ceiling",
+                                    "type": "light"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.family_room_motion"
+                                },
+                                {
+                                    "entity": "binary_sensor.family_room_motion_tamper"
+                                },
+                                {
+                                    "entity": "sensor.family_room_motion_sensor_battery_level"
+                                },
+                                {
+                                    "entity": "sensor.family_room_motion_sensor_temperature"
+                                }
+                            ],
+                            "show_name": false,
+                            "title": "Family Room Motion",
+                            "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.back_door"
+                                },
+                                {
+                                    "entity": "binary_sensor.back_door_tamper"
+                                },
+                                {
+                                    "entity": "sensor.back_door_sensor_battery_level"
+                                }
+                            ],
+                            "show_name": false,
+                            "title": "Back Door",
+                            "type": "glance"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "cards": [
+                                        {
+                                            "cards": [
+                                                {
+                                                    "entity": "cover.family_room_sene_blinds",
+                                                    "name": "SE-NE FR",
+                                                    "type": "entity-button"
+                                                },
+                                                {
+                                                    "entity": "sensor.family_room_sene_blinds_tilt_position",
+                                                    "max": 100,
+                                                    "min": 0,
+                                                    "name": "SE-NE FR Pos",
+                                                    "severity": {
+                                                        "green": 0,
+                                                        "red": 80,
+                                                        "yellow": 20
+                                                    },
+                                                    "theme": "default",
+                                                    "type": "gauge"
+                                                }
+                                            ],
+                                            "type": "horizontal-stack"
+                                        },
+                                        {
+                                            "cards": [
+                                                {
+                                                    "entity": "cover.family_room_sesw_blinds",
+                                                    "name": "SE-SW FR",
+                                                    "type": "entity-button"
+                                                },
+                                                {
+                                                    "entity": "sensor.family_room_sesw_blinds_tilt_position",
+                                                    "max": 100,
+                                                    "min": 0,
+                                                    "name": "SE-SW FR Pos",
+                                                    "severity": {
+                                                        "green": 0,
+                                                        "red": 80,
+                                                        "yellow": 20
+                                                    },
+                                                    "theme": "default",
+                                                    "type": "gauge"
+                                                }
+                                            ],
+                                            "type": "horizontal-stack"
+                                        },
+                                        {
+                                            "cards": [
+                                                {
+                                                    "entity": "cover.family_room_swse_blinds",
+                                                    "name": "SW-SE FR",
+                                                    "type": "entity-button"
+                                                },
+                                                {
+                                                    "entity": "sensor.family_room_swse_blinds_tilt_position",
+                                                    "max": 100,
+                                                    "min": 0,
+                                                    "name": "SW-SE FR Pos",
+                                                    "severity": {
+                                                        "green": 0,
+                                                        "red": 80,
+                                                        "yellow": 20
+                                                    },
+                                                    "theme": "default",
+                                                    "type": "gauge"
+                                                }
+                                            ],
+                                            "type": "horizontal-stack"
+                                        },
+                                        {
+                                            "cards": [
+                                                {
+                                                    "entity": "cover.family_room_swnw_blinds",
+                                                    "name": "SW-NW FR",
+                                                    "type": "entity-button"
+                                                },
+                                                {
+                                                    "entity": "sensor.family_room_swnw_blinds_tilt_position",
+                                                    "max": 100,
+                                                    "min": 0,
+                                                    "name": "SW-NW FR Pos",
+                                                    "severity": {
+                                                        "green": 0,
+                                                        "red": 80,
+                                                        "yellow": 20
+                                                    },
+                                                    "theme": "default",
+                                                    "type": "gauge"
+                                                }
+                                            ],
+                                            "type": "horizontal-stack"
+                                        },
+                                        {
+                                            "cards": [
+                                                {
+                                                    "entity": "cover.family_room_nwsw_blinds",
+                                                    "name": "NW-SW FR",
+                                                    "type": "entity-button"
+                                                },
+                                                {
+                                                    "entity": "sensor.family_room_nwsw_blinds_tilt_position",
+                                                    "max": 100,
+                                                    "min": 0,
+                                                    "name": "NW-SW FR Pos",
+                                                    "severity": {
+                                                        "green": 0,
+                                                        "red": 80,
+                                                        "yellow": 20
+                                                    },
+                                                    "theme": "default",
+                                                    "type": "gauge"
+                                                }
+                                            ],
+                                            "type": "horizontal-stack"
+                                        }
+                                    ],
+                                    "type": "vertical-stack"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.siren_and_strobe_switch"
+                                },
+                                {
+                                    "entity": "sensor.siren_and_strobe_battery_level"
+                                }
+                            ],
+                            "show_name": false,
+                            "title": "Siren and Strobe",
+                            "type": "glance"
+                        },
+                        {
+                            "entity": "media_player.family_room_tv",
+                            "type": "media-control"
+                        },
+                        {
+                            "aspect_ratio": "0%",
+                            "camera_image": "camera.3629_cam_3",
+                            "entities": [
+                                {
+                                    "entity": "switch.foscam_cam3_motion"
+                                },
+                                {
+                                    "entity": "camera.3629_cam_3",
+                                    "icon": "mdi:image-album",
+                                    "tap_action": {
+                                        "action": "url",
+                                        "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam3/C1_00626E82585D/snap/index.html"
+                                    }
+                                },
+                                {
+                                    "entity": "camera.3629_cam_3",
+                                    "icon": "mdi:movie",
+                                    "tap_action": {
+                                        "action": "url",
+                                        "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam3/C1_00626E82585D/record/index.html"
+                                    }
+                                }
+                            ],
+                            "title": "Family Room",
+                            "type": "picture-glance"
+                        }
+                    ],
+                    "path": "family-room",
+                    "title": "Family Room"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "aspect_ratio": "0%",
+                            "camera_image": "camera.3629_cam_4",
+                            "entities": [
+                                {
+                                    "entity": "switch.living_room_lamp_module",
+                                    "hold_action": {
+                                        "action": "more-info"
+                                    },
+                                    "icon": "mdi:lightbulb"
+                                },
+                                {
+                                    "entity": "light.living_room_lamp_dimmer"
+                                },
+                                {
+                                    "entity": "switch.generic_cam4_motion"
+                                },
+                                {
+                                    "entity": "input_number.3629cam4_up_down"
+                                },
+                                {
+                                    "entity": "input_number.3629cam4_left_right"
+                                },
+                                {
+                                    "entity": "camera.3629_cam_4",
+                                    "icon": "mdi:image-album",
+                                    "tap_action": {
+                                        "action": "url",
+                                        "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam4/index.html"
+                                    }
+                                }
+                            ],
+                            "title": "Living Room",
+                            "type": "picture-glance"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "light.living_room_lamp_dimmer",
+                                    "type": "light"
+                                },
+                                {
+                                    "entity": "switch.living_room_lamp_module",
+                                    "hold_action": {
+                                        "action": "more-info"
+                                    },
+                                    "icon": "mdi:lightbulb",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "entity-button"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "climate.thermostat",
+                                    "type": "thermostat"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.furnace_flue_temperature_f",
+                                            "name": "Flue"
+                                        },
+                                        {
+                                            "entity": "sensor.furnace_nw_zone_return_temperature_f",
+                                            "name": "NW Ret"
+                                        },
+                                        {
+                                            "entity": "sensor.furnace_se_zone_return_temperature_f",
+                                            "name": "SE Ret"
+                                        },
+                                        {
+                                            "entity": "sensor.furnace_supply_temperature_f",
+                                            "name": "Supply"
+                                        }
+                                    ],
+                                    "type": "glance"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.front_door"
+                                },
+                                {
+                                    "entity": "binary_sensor.front_door_tamper"
+                                },
+                                {
+                                    "entity": "sensor.front_door_sensor_battery_level"
+                                }
+                            ],
+                            "show_name": false,
+                            "title": "Front Door",
+                            "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.siren_and_chime_switch"
+                                },
+                                {
+                                    "entity": "sensor.siren_and_chime_battery_level"
+                                }
+                            ],
+                            "show_name": false,
+                            "title": "Siren and Chime",
+                            "type": "glance"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "cards": [
+                                        {
+                                            "entity": "cover.living_room_se_blinds",
+                                            "name": "SE LR",
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "sensor.living_room_se_blinds_tilt_position",
+                                            "max": 100,
+                                            "min": 0,
+                                            "name": "SE LR Pos",
+                                            "severity": {
+                                                "green": 0,
+                                                "red": 80,
+                                                "yellow": 20
+                                            },
+                                            "theme": "default",
+                                            "type": "gauge"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        }
+                    ],
+                    "path": "living-room",
+                    "title": "Living Room"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "light.dining_room_ceiling_light",
+                            "type": "light"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.garage_in_door"
+                                },
+                                {
+                                    "entity": "binary_sensor.garage_in_door_tamper"
+                                },
+                                {
+                                    "entity": "sensor.garage_inside_door_sensor_battery_level"
+                                }
+                            ],
+                            "show_name": false,
+                            "title": "Garage In Door",
+                            "type": "glance"
+                        }
+                    ],
+                    "path": "dining-room",
+                    "title": "Dining Room"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "light.guest_room_lamp_bulb",
+                            "type": "light"
+                        }
+                    ],
+                    "path": "guest-room",
+                    "title": "Guest Room"
+                }
+            ]
+        }
+    },
+    "key": "lovelace.lovelace_downstairs",
+    "version": 1
+}

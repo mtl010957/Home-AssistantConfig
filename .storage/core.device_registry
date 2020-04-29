@@ -1308,7 +1308,7 @@
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "dm01_sv1",
                 "name_by_user": "Living Room SE Blinds",
-                "sw_version": "esphome v1.15.0-dev Apr 16 2020, 15:07:04",
+                "sw_version": "esphome v1.15.0-dev Apr 29 2020, 10:56:04",
                 "via_device_id": null
             },
             {

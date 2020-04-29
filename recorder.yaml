@@ -37,6 +37,7 @@ include:
     - light.family_room_link_bulb_1
     - light.family_room_link_bulb_2
     - light.back_porch_light
+    - light.front_porch_light
     - light.garage_attic_link_bulb
     - light.guest_room_lamp_bulb
     - light.office_light_bulb

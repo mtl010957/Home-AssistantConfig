@@ -1,0 +1,220 @@
+{
+    "data": {
+        "config": {
+            "title": "Upstairs",
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "detail": 2,
+                                    "entity": "sensor.master_bedroom_humidity",
+                                    "graph": "line",
+                                    "name": "Humidity",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "detail": 2,
+                                    "entity": "sensor.master_bedroom_temperature",
+                                    "graph": "line",
+                                    "name": "Temperature",
+                                    "type": "sensor"
+                                }
+                            ],
+                            "title": "Master Bedroom",
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.humidifier_power",
+                                    "name": "Power",
+                                    "state_color": true
+                                },
+                                {
+                                    "entity": "sensor.humidifier_on",
+                                    "icon": "mdi:water",
+                                    "name": "On Below"
+                                },
+                                {
+                                    "entity": "sensor.humidifier_off",
+                                    "icon": "mdi:water-off",
+                                    "name": "Off Above"
+                                },
+                                {
+                                    "entity": "input_number.humidity_at_0_degf",
+                                    "name": "% at 0 \u00b0F"
+                                },
+                                {
+                                    "entity": "input_number.humidifier_temperature_gain",
+                                    "name": "Gain %"
+                                },
+                                {
+                                    "entity": "input_number.humidifier_turn_on_deadband",
+                                    "name": "Deadband %"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Humidifier",
+                            "type": "entities"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "light.bedside_lamp_bulb",
+                                    "type": "light"
+                                },
+                                {
+                                    "entity": "fan.master_bedroom_ceiling_fan",
+                                    "hold_action": {
+                                        "action": "more-info"
+                                    },
+                                    "name": "Ceiling Fan MBR",
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "button"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "light.master_bedroom_se_ceiling_lights",
+                                    "name": "MBR SE Ceiling Lights",
+                                    "type": "light"
+                                },
+                                {
+                                    "entity": "light.master_bedroom_nw_ceiling_lights",
+                                    "name": "MBR NW Ceiling Lights",
+                                    "type": "light"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.master_bedroom_motion"
+                                },
+                                {
+                                    "entity": "binary_sensor.master_bedroom_motion_tamper"
+                                },
+                                {
+                                    "entity": "sensor.master_bedroom_motion_sensor_battery_level"
+                                },
+                                {
+                                    "entity": "sensor.master_bedroom_motion_sensor_temperature"
+                                }
+                            ],
+                            "show_name": false,
+                            "title": "Master Bedroom Motion",
+                            "type": "glance"
+                        },
+                        {
+                            "entity": "media_player.bedroom_tv",
+                            "type": "media-control"
+                        }
+                    ],
+                    "path": "master-bedroom",
+                    "title": "Master Bedroom"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "detail": 2,
+                                    "entity": "sensor.office_humidity",
+                                    "graph": "line",
+                                    "name": "Humidity",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "detail": 2,
+                                    "entity": "sensor.office_temperature",
+                                    "graph": "line",
+                                    "name": "Temperature",
+                                    "type": "sensor"
+                                }
+                            ],
+                            "title": "Office",
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "entity": "light.office_light_bulb",
+                            "type": "light"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.epson_xp_7100_series",
+                                    "type": "entity"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.epson_xp_7100_series_black_ink",
+                                            "name": "BK"
+                                        },
+                                        {
+                                            "entity": "sensor.epson_xp_7100_series_cyan_ink",
+                                            "name": "CY"
+                                        },
+                                        {
+                                            "entity": "sensor.epson_xp_7100_series_magenta_ink",
+                                            "name": "MG"
+                                        },
+                                        {
+                                            "entity": "sensor.epson_xp_7100_series_photo_black_ink",
+                                            "name": "PBK"
+                                        },
+                                        {
+                                            "entity": "sensor.epson_xp_7100_series_yellow_ink",
+                                            "name": "YE"
+                                        }
+                                    ],
+                                    "type": "glance"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "entity": "media_player.office_speaker",
+                            "type": "media-control"
+                        }
+                    ],
+                    "path": "office",
+                    "title": "Office"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "fan.house_fan",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "show_icon": true,
+                            "show_name": true,
+                            "tap_action": {
+                                "action": "toggle"
+                            },
+                            "type": "button"
+                        }
+                    ],
+                    "path": "attic",
+                    "title": "Attic"
+                }
+            ]
+        }
+    },
+    "key": "lovelace.lovelace_upstairs",
+    "version": 1
+}
