@@ -5971,7 +5971,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "aec2df2994d94281bafd73a2145e40e8",
                 "device_class": null,
                 "device_id": null,
@@ -5987,7 +5987,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "aec2df2994d94281bafd73a2145e40e8",
                 "device_class": null,
                 "device_id": null,
@@ -6000,6 +6000,70 @@
                 "platform": "nws",
                 "supported_features": 0,
                 "unique_id": "42.69070043328764_-83.41129302978517_hourly",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": "e90403f65535468b9f4a071967aaef04",
+                "device_class": null,
+                "device_id": "9d361d73d84644189fd9557e1ea3eefd",
+                "disabled_by": null,
+                "entity_id": "device_tracker.pixel_2",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": "Pixel 2",
+                "platform": "mobile_app",
+                "supported_features": 0,
+                "unique_id": "cfc27b6ad79ba55e",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": "e90403f65535468b9f4a071967aaef04",
+                "device_class": "battery",
+                "device_id": "9d361d73d84644189fd9557e1ea3eefd",
+                "disabled_by": null,
+                "entity_id": "sensor.pixel_2_battery_level",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:battery-90",
+                "original_name": "Pixel 2 Battery Level",
+                "platform": "mobile_app",
+                "supported_features": 0,
+                "unique_id": "cee472c1ebd3ef784ece3450c70aa4c5f6fda2894468052a0c12bae7109387f7_battery_level",
+                "unit_of_measurement": "%"
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": "e90403f65535468b9f4a071967aaef04",
+                "device_class": null,
+                "device_id": "9d361d73d84644189fd9557e1ea3eefd",
+                "disabled_by": null,
+                "entity_id": "sensor.pixel_2_wifi_connection",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:wifi-strength-1",
+                "original_name": "Pixel 2 Wifi Connection",
+                "platform": "mobile_app",
+                "supported_features": 0,
+                "unique_id": "cee472c1ebd3ef784ece3450c70aa4c5f6fda2894468052a0c12bae7109387f7_wifi_connection",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": "e90403f65535468b9f4a071967aaef04",
+                "device_class": null,
+                "device_id": "9d361d73d84644189fd9557e1ea3eefd",
+                "disabled_by": null,
+                "entity_id": "sensor.pixel_2_geocoded_location",
+                "icon": null,
+                "name": null,
+                "original_icon": "mdi:map",
+                "original_name": "Pixel 2 Geocoded Location",
+                "platform": "mobile_app",
+                "supported_features": 0,
+                "unique_id": "cee472c1ebd3ef784ece3450c70aa4c5f6fda2894468052a0c12bae7109387f7_geocoded_location",
                 "unit_of_measurement": null
             }
         ]

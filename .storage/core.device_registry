@@ -203,7 +203,7 @@
                 "model": "",
                 "name": "HACS",
                 "name_by_user": null,
-                "sw_version": "0.24.2",
+                "sw_version": "0.24.3",
                 "via_device_id": null
             },
             {
@@ -1390,6 +1390,26 @@
                 "name_by_user": "Front Porch Light",
                 "sw_version": null,
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "e90403f65535468b9f4a071967aaef04"
+                ],
+                "connections": [],
+                "id": "9d361d73d84644189fd9557e1ea3eefd",
+                "identifiers": [
+                    [
+                        "mobile_app",
+                        "cfc27b6ad79ba55e"
+                    ]
+                ],
+                "manufacturer": "Google",
+                "model": "Pixel 2",
+                "name": "Pixel 2",
+                "name_by_user": null,
+                "sw_version": "29",
+                "via_device_id": null
             }
         ]
     },

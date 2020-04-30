@@ -1,7 +1,10 @@
 {
     "data": {
         "config": {
-            "title": "Hubs",
+            "custom_header": {
+                "compact_mode": true
+            },
+            "title": "Admin",
             "views": [
                 {
                     "badges": [

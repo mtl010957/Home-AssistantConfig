@@ -1,6 +1,9 @@
 {
     "data": {
         "config": {
+            "custom_header": {
+                "compact_mode": true
+            },
             "title": "Downstairs",
             "views": [
                 {
@@ -363,10 +366,6 @@
                         {
                             "cards": [
                                 {
-                                    "entity": "light.living_room_lamp_dimmer",
-                                    "type": "light"
-                                },
-                                {
                                     "entity": "switch.living_room_lamp_module",
                                     "hold_action": {
                                         "action": "more-info"
@@ -376,6 +375,10 @@
                                         "action": "toggle"
                                     },
                                     "type": "entity-button"
+                                },
+                                {
+                                    "entity": "light.living_room_lamp_dimmer",
+                                    "type": "light"
                                 }
                             ],
                             "type": "horizontal-stack"

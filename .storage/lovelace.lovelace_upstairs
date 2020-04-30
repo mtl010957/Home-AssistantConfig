@@ -1,6 +1,9 @@
 {
     "data": {
         "config": {
+            "custom_header": {
+                "compact_mode": true
+            },
             "title": "Upstairs",
             "views": [
                 {

@@ -25,7 +25,7 @@
                 "swipe_amount": 15,
                 "wrap": true
             },
-            "title": "Home",
+            "title": "Overview",
             "views": [
                 {
                     "badges": [
@@ -53,15 +53,95 @@
                     ],
                     "cards": [
                         {
-                            "entity": "weather.kptk_daynight",
-                            "name": "Waterford",
-                            "type": "weather-forecast"
+                            "cards": [
+                                {
+                                    "cards": [
+                                        {
+                                            "aspect_ratio": "0%",
+                                            "camera_image": "camera.3629_cam_1",
+                                            "entities": [
+                                                {
+                                                    "entity": "light.front_porch_light"
+                                                },
+                                                {
+                                                    "entity": "switch.front_outdoor_xmas_lights",
+                                                    "icon": "mdi:string-lights"
+                                                },
+                                                {
+                                                    "entity": "switch.front_yard_light",
+                                                    "icon": "mdi:spotlight-beam"
+                                                },
+                                                {
+                                                    "entity": "switch.foscam_cam1_motion"
+                                                },
+                                                {
+                                                    "entity": "camera.3629_cam_1",
+                                                    "icon": "mdi:image-album",
+                                                    "tap_action": {
+                                                        "action": "url",
+                                                        "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam1/C1_00626E69269A/snap/index.html"
+                                                    }
+                                                },
+                                                {
+                                                    "entity": "camera.3629_cam_1",
+                                                    "icon": "mdi:movie",
+                                                    "tap_action": {
+                                                        "action": "url",
+                                                        "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam1/C1_00626E69269A/record/index.html"
+                                                    }
+                                                }
+                                            ],
+                                            "title": "Front Yard",
+                                            "type": "picture-glance"
+                                        },
+                                        {
+                                            "aspect_ratio": "0%",
+                                            "camera_image": "camera.3629_cam_2",
+                                            "entities": [
+                                                {
+                                                    "entity": "light.back_porch_light"
+                                                },
+                                                {
+                                                    "entity": "switch.back_outdoor_xmas_lights",
+                                                    "icon": "mdi:string-lights"
+                                                },
+                                                {
+                                                    "entity": "switch.foscam_cam2_motion"
+                                                },
+                                                {
+                                                    "entity": "camera.3629_cam_2",
+                                                    "icon": "mdi:image-album",
+                                                    "tap_action": {
+                                                        "action": "url",
+                                                        "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam2/C1_00626E6926B6/snap/index.html"
+                                                    }
+                                                },
+                                                {
+                                                    "entity": "camera.3629_cam_2",
+                                                    "icon": "mdi:movie",
+                                                    "tap_action": {
+                                                        "action": "url",
+                                                        "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam2/C1_00626E6926B6/record/index.html"
+                                                    }
+                                                }
+                                            ],
+                                            "title": "Back Yard",
+                                            "type": "picture-glance"
+                                        }
+                                    ],
+                                    "type": "vertical-stack"
+                                }
+                            ],
+                            "type": "vertical-stack"
                         },
                         {
-                            "aspect_ratio": "120%",
-                            "entity": "camera.dtx",
-                            "image": "https://www.home-assistant.io/images/merchandise/shirt-frontpage.png",
-                            "type": "picture-entity"
+                            "entity": "alarm_control_panel.3629_alarm",
+                            "states": [
+                                "arm_home",
+                                "arm_away",
+                                "arm_night"
+                            ],
+                            "type": "alarm-panel"
                         },
                         {
                             "cards": [
@@ -170,97 +250,6 @@
                             "type": "vertical-stack"
                         },
                         {
-                            "entity": "alarm_control_panel.3629_alarm",
-                            "states": [
-                                "arm_home",
-                                "arm_away",
-                                "arm_night"
-                            ],
-                            "type": "alarm-panel"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "cards": [
-                                        {
-                                            "aspect_ratio": "0%",
-                                            "camera_image": "camera.3629_cam_1",
-                                            "entities": [
-                                                {
-                                                    "entity": "light.front_porch_light"
-                                                },
-                                                {
-                                                    "entity": "switch.front_outdoor_xmas_lights",
-                                                    "icon": "mdi:string-lights"
-                                                },
-                                                {
-                                                    "entity": "switch.front_yard_light",
-                                                    "icon": "mdi:spotlight-beam"
-                                                },
-                                                {
-                                                    "entity": "switch.foscam_cam1_motion"
-                                                },
-                                                {
-                                                    "entity": "camera.3629_cam_1",
-                                                    "icon": "mdi:image-album",
-                                                    "tap_action": {
-                                                        "action": "url",
-                                                        "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam1/C1_00626E69269A/snap/index.html"
-                                                    }
-                                                },
-                                                {
-                                                    "entity": "camera.3629_cam_1",
-                                                    "icon": "mdi:movie",
-                                                    "tap_action": {
-                                                        "action": "url",
-                                                        "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam1/C1_00626E69269A/record/index.html"
-                                                    }
-                                                }
-                                            ],
-                                            "title": "Front Yard",
-                                            "type": "picture-glance"
-                                        },
-                                        {
-                                            "aspect_ratio": "0%",
-                                            "camera_image": "camera.3629_cam_2",
-                                            "entities": [
-                                                {
-                                                    "entity": "light.back_porch_light"
-                                                },
-                                                {
-                                                    "entity": "switch.back_outdoor_xmas_lights",
-                                                    "icon": "mdi:string-lights"
-                                                },
-                                                {
-                                                    "entity": "switch.foscam_cam2_motion"
-                                                },
-                                                {
-                                                    "entity": "camera.3629_cam_2",
-                                                    "icon": "mdi:image-album",
-                                                    "tap_action": {
-                                                        "action": "url",
-                                                        "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam2/C1_00626E6926B6/snap/index.html"
-                                                    }
-                                                },
-                                                {
-                                                    "entity": "camera.3629_cam_2",
-                                                    "icon": "mdi:movie",
-                                                    "tap_action": {
-                                                        "action": "url",
-                                                        "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam2/C1_00626E6926B6/record/index.html"
-                                                    }
-                                                }
-                                            ],
-                                            "title": "Back Yard",
-                                            "type": "picture-glance"
-                                        }
-                                    ],
-                                    "type": "vertical-stack"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        },
-                        {
                             "entity": "climate.thermostat",
                             "type": "thermostat"
                         },
@@ -275,11 +264,22 @@
                             },
                             "theme": "default",
                             "type": "gauge"
+                        },
+                        {
+                            "aspect_ratio": "120%",
+                            "entity": "camera.dtx",
+                            "image": "https://www.home-assistant.io/images/merchandise/shirt-frontpage.png",
+                            "type": "picture-entity"
+                        },
+                        {
+                            "entity": "weather.kptk_daynight",
+                            "name": "Waterford",
+                            "type": "weather-forecast"
                         }
                     ],
-                    "icon": "mdi:home",
+                    "icon": "",
                     "panel": false,
-                    "title": "Panel"
+                    "title": "Overview"
                 }
             ]
         }
