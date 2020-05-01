@@ -948,7 +948,7 @@
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm05_sv1",
                 "name_by_user": "Family Room NW-SW Blinds",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:26:48",
+                "sw_version": "esphome v1.15.0-dev May  1 2020, 10:07:49",
                 "via_device_id": null
             },
             {

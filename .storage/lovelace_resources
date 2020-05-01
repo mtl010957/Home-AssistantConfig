@@ -12,8 +12,8 @@
                 "url": "/hacsfiles/zha-network-card/zha-network-card.js"
             },
             {
-                "id": "24f1c868d33e4ba6b31e1e42c2d8d621",
-                "type": "js",
+                "id": "61016c1555644b94bb20f575b3a8eea2",
+                "type": "module",
                 "url": "/hacsfiles/lovelace-swipe-navigation/swipe-navigation.js"
             }
         ]
