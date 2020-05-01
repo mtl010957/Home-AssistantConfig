@@ -6003,7 +6003,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "e90403f65535468b9f4a071967aaef04",
                 "device_class": null,
                 "device_id": "9d361d73d84644189fd9557e1ea3eefd",
@@ -6019,7 +6019,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "e90403f65535468b9f4a071967aaef04",
                 "device_class": "battery",
                 "device_id": "9d361d73d84644189fd9557e1ea3eefd",
@@ -6035,7 +6035,7 @@
                 "unit_of_measurement": "%"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "e90403f65535468b9f4a071967aaef04",
                 "device_class": null,
                 "device_id": "9d361d73d84644189fd9557e1ea3eefd",
@@ -6051,7 +6051,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "e90403f65535468b9f4a071967aaef04",
                 "device_class": null,
                 "device_id": "9d361d73d84644189fd9557e1ea3eefd",
