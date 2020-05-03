@@ -908,7 +908,7 @@
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm04_sv1",
                 "name_by_user": "Family Room SW-NW Blinds",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:26:05",
+                "sw_version": "esphome v1.15.0-dev May  1 2020, 16:18:42",
                 "via_device_id": null
             },
             {
@@ -948,7 +948,7 @@
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm05_sv1",
                 "name_by_user": "Family Room NW-SW Blinds",
-                "sw_version": "esphome v1.15.0-dev May  1 2020, 10:07:49",
+                "sw_version": "esphome v1.15.0-dev May  1 2020, 16:26:43",
                 "via_device_id": null
             },
             {
@@ -968,7 +968,7 @@
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm02_sv1",
                 "name_by_user": "Family Room SE-SW Blinds",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:22:32",
+                "sw_version": "esphome v1.15.0-dev May  1 2020, 14:56:49",
                 "via_device_id": null
             },
             {
@@ -1048,7 +1048,7 @@
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm03_sv1",
                 "name_by_user": "Family Room SW-SE Blinds",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:24:18",
+                "sw_version": "esphome v1.15.0-dev May  1 2020, 16:15:17",
                 "via_device_id": null
             },
             {
@@ -1268,7 +1268,7 @@
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm01_sv1",
                 "name_by_user": "Family Room SE-NE Blinds",
-                "sw_version": "esphome v1.15.0-dev Apr  7 2020, 13:21:53",
+                "sw_version": "esphome v1.15.0-dev May  1 2020, 14:52:10",
                 "via_device_id": null
             },
             {
@@ -1308,7 +1308,7 @@
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "dm01_sv1",
                 "name_by_user": "Living Room SE Blinds",
-                "sw_version": "esphome v1.15.0-dev Apr 29 2020, 10:56:04",
+                "sw_version": "esphome v1.15.0-dev May  1 2020, 16:28:03",
                 "via_device_id": null
             },
             {
@@ -1409,6 +1409,26 @@
                 "name": "Pixel 2",
                 "name_by_user": null,
                 "sw_version": "29",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "3cbe8ba6a37a444886eddeb49d953cf7"
+                ],
+                "connections": [],
+                "id": "195b141847214538a451c2a6cfaacd35",
+                "identifiers": [
+                    [
+                        "cast",
+                        "51cd29173b15cbeb7671ba3ba22c9eb6"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "MIBOX4",
+                "name": "Bedroom TV",
+                "name_by_user": null,
+                "sw_version": null,
                 "via_device_id": null
             }
         ]
