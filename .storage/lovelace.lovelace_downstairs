@@ -466,6 +466,29 @@
                                         }
                                     ],
                                     "type": "horizontal-stack"
+                                },
+                                {
+                                    "cards": [
+                                        {
+                                            "entity": "cover.living_room_se_ctr_blinds",
+                                            "name": "SE CTR LR",
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "sensor.living_room_se_ctr_blinds_tilt_position",
+                                            "max": 100,
+                                            "min": 0,
+                                            "name": "SE CTR LR Pos",
+                                            "severity": {
+                                                "green": 0,
+                                                "red": 80,
+                                                "yellow": 20
+                                            },
+                                            "theme": "default",
+                                            "type": "gauge"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
                                 }
                             ],
                             "type": "vertical-stack"
