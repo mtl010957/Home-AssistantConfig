@@ -559,6 +559,39 @@
                                         }
                                     ],
                                     "type": "horizontal-stack"
+                                },
+                                {
+                                    "cards": [
+                                        {
+                                            "entity": "cover.living_room_ctr_blinds",
+                                            "hold_action": {
+                                                "action": "more-info"
+                                            },
+                                            "name": "CTR LR",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.toggle_cover_tilt",
+                                                "service_data": {
+                                                    "entity_id": "cover.living_room_ctr_blinds"
+                                                }
+                                            },
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "sensor.living_room_ctr_blinds_tilt_position",
+                                            "max": 100,
+                                            "min": 0,
+                                            "name": "CTR LR Pos",
+                                            "severity": {
+                                                "green": 0,
+                                                "red": 80,
+                                                "yellow": 20
+                                            },
+                                            "theme": "default",
+                                            "type": "gauge"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
                                 }
                             ],
                             "type": "vertical-stack"

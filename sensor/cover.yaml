@@ -21,4 +21,13 @@
     living_room_se_ctr_blinds_tilt_position:
       friendly_name: "Living Room SE CTR Blinds Tilt Position"
       value_template: "{{ state_attr('cover.living_room_se_ctr_blinds', 'current_tilt_position') }}"
+    living_room_ctr_blinds_tilt_position:
+      friendly_name: "Living Room CTR Blinds Tilt Position"
+      value_template: "{{ state_attr('cover.living_room_ctr_blinds', 'current_tilt_position') }}"
+    living_room_nw_ctr_blinds_tilt_position:
+      friendly_name: "Living Room NW CTR Blinds Tilt Position"
+      value_template: "{{ state_attr('cover.living_room_nw_ctr_blinds', 'current_tilt_position') }}"
+    living_room_nw_blinds_tilt_position:
+      friendly_name: "Living Room NW Blinds Tilt Position"
+      value_template: "{{ state_attr('cover.living_room_nw_blinds', 'current_tilt_position') }}"
 

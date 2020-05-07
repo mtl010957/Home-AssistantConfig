@@ -1448,7 +1448,67 @@
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm02_sv1",
                 "name_by_user": "Living Room SE CTR Blinds",
-                "sw_version": "esphome v1.15.0-dev May  6 2020, 15:02:22",
+                "sw_version": "esphome v1.15.0-dev May  6 2020, 14:39:30",
+                "via_device_id": null
+            },
+            {
+                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "28c408aeffa1431ab8135271d9e05835",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "fcf5c496f9bf"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_D1_MINI",
+                "name": "dm03_sv1",
+                "name_by_user": "Living Room CTR Blinds",
+                "sw_version": "esphome v1.15.0-dev May  7 2020, 10:33:26",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "800d8ada96f04f2e95461f3f93c6d3a8",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "fcf5c4969813"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_D1_MINI",
+                "name": "dm04_sv1",
+                "name_by_user": null,
+                "sw_version": "esphome v1.15.0-dev May  7 2020, 10:36:35",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "e0df26504d514ce2ae20e20ce379cd99",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "68c63af80616"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_D1_MINI",
+                "name": "dm05_sv1",
+                "name_by_user": null,
+                "sw_version": "esphome v1.15.0-dev May  7 2020, 10:38:06",
                 "via_device_id": null
             }
         ]
