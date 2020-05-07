@@ -160,7 +160,17 @@
                                             "cards": [
                                                 {
                                                     "entity": "cover.family_room_sene_blinds",
+                                                    "hold_action": {
+                                                        "action": "more-info"
+                                                    },
                                                     "name": "SE-NE FR",
+                                                    "tap_action": {
+                                                        "action": "call-service",
+                                                        "service": "cover.toggle_cover_tilt",
+                                                        "service_data": {
+                                                            "entity_id": "cover.family_room_sene_blinds"
+                                                        }
+                                                    },
                                                     "type": "entity-button"
                                                 },
                                                 {
@@ -183,7 +193,17 @@
                                             "cards": [
                                                 {
                                                     "entity": "cover.family_room_sesw_blinds",
+                                                    "hold_action": {
+                                                        "action": "more-info"
+                                                    },
                                                     "name": "SE-SW FR",
+                                                    "tap_action": {
+                                                        "action": "call-service",
+                                                        "service": "cover.toggle_cover_tilt",
+                                                        "service_data": {
+                                                            "entity_id": "cover.family_room_sesw_blinds"
+                                                        }
+                                                    },
                                                     "type": "entity-button"
                                                 },
                                                 {
@@ -206,7 +226,17 @@
                                             "cards": [
                                                 {
                                                     "entity": "cover.family_room_swse_blinds",
+                                                    "hold_action": {
+                                                        "action": "more-info"
+                                                    },
                                                     "name": "SW-SE FR",
+                                                    "tap_action": {
+                                                        "action": "call-service",
+                                                        "service": "cover.toggle_cover_tilt",
+                                                        "service_data": {
+                                                            "entity_id": "cover.family_room_swse_blinds"
+                                                        }
+                                                    },
                                                     "type": "entity-button"
                                                 },
                                                 {
@@ -229,7 +259,17 @@
                                             "cards": [
                                                 {
                                                     "entity": "cover.family_room_swnw_blinds",
+                                                    "hold_action": {
+                                                        "action": "more-info"
+                                                    },
                                                     "name": "SW-NW FR",
+                                                    "tap_action": {
+                                                        "action": "call-service",
+                                                        "service": "cover.toggle_cover_tilt",
+                                                        "service_data": {
+                                                            "entity_id": "cover.family_room_swnw_blinds"
+                                                        }
+                                                    },
                                                     "type": "entity-button"
                                                 },
                                                 {
@@ -252,7 +292,17 @@
                                             "cards": [
                                                 {
                                                     "entity": "cover.family_room_nwsw_blinds",
+                                                    "hold_action": {
+                                                        "action": "more-info"
+                                                    },
                                                     "name": "NW-SW FR",
+                                                    "tap_action": {
+                                                        "action": "call-service",
+                                                        "service": "cover.toggle_cover_tilt",
+                                                        "service_data": {
+                                                            "entity_id": "cover.family_room_nwsw_blinds"
+                                                        }
+                                                    },
                                                     "type": "entity-button"
                                                 },
                                                 {
@@ -448,7 +498,17 @@
                                     "cards": [
                                         {
                                             "entity": "cover.living_room_se_blinds",
+                                            "hold_action": {
+                                                "action": "more-info"
+                                            },
                                             "name": "SE LR",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.toggle_cover_tilt",
+                                                "service_data": {
+                                                    "entity_id": "cover.living_room_se_blinds"
+                                                }
+                                            },
                                             "type": "entity-button"
                                         },
                                         {
@@ -471,7 +531,17 @@
                                     "cards": [
                                         {
                                             "entity": "cover.living_room_se_ctr_blinds",
+                                            "hold_action": {
+                                                "action": "more-info"
+                                            },
                                             "name": "SE CTR LR",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.toggle_cover_tilt",
+                                                "service_data": {
+                                                    "entity_id": "cover.living_room_se_ctr_blinds"
+                                                }
+                                            },
                                             "type": "entity-button"
                                         },
                                         {
