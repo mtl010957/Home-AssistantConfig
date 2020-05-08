@@ -1448,7 +1448,7 @@
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm02_sv1",
                 "name_by_user": "Living Room SE CTR Blinds",
-                "sw_version": "esphome v1.15.0-dev May  6 2020, 14:39:30",
+                "sw_version": "esphome v1.15.0-dev May  6 2020, 15:02:22",
                 "via_device_id": null
             },
             {
@@ -1472,7 +1472,7 @@
                 "via_device_id": null
             },
             {
-                "area_id": null,
+                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
@@ -1487,12 +1487,12 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm04_sv1",
-                "name_by_user": null,
+                "name_by_user": "Living Room NW CTR Blinds",
                 "sw_version": "esphome v1.15.0-dev May  7 2020, 10:36:35",
                 "via_device_id": null
             },
             {
-                "area_id": null,
+                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
@@ -1507,7 +1507,7 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm05_sv1",
-                "name_by_user": null,
+                "name_by_user": "Living Room NW Blinds",
                 "sw_version": "esphome v1.15.0-dev May  7 2020, 10:38:06",
                 "via_device_id": null
             }
