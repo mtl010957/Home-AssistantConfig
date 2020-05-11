@@ -60,6 +60,14 @@
             {
                 "id": "2f62b68890ee49f1b08273ad89d15bad",
                 "name": "Outdoor"
+            },
+            {
+                "id": "fb89b524d9f34166bd038247f8d434b7",
+                "name": "Upstairs"
+            },
+            {
+                "id": "bebd4b239b054e2da7abe614ba924f32",
+                "name": "Downstairs"
             }
         ]
     },

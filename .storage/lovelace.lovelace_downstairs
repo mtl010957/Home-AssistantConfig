@@ -493,6 +493,32 @@
                             "type": "glance"
                         },
                         {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.downstairs_smoke_detected",
+                                    "name": "Smoke",
+                                    "state_color": true
+                                },
+                                {
+                                    "entity": "binary_sensor.downstairs_co_detected",
+                                    "name": "CO",
+                                    "state_color": true
+                                },
+                                {
+                                    "entity": "binary_sensor.downstairs_smoke_alarm_test",
+                                    "name": "Test",
+                                    "state_color": true
+                                },
+                                {
+                                    "entity": "sensor.downstairs_smoke_alarm_battery_level",
+                                    "name": "Battery"
+                                }
+                            ],
+                            "show_name": true,
+                            "title": "Downstairs Smoke Alarm",
+                            "type": "glance"
+                        },
+                        {
                             "cards": [
                                 {
                                     "cards": [

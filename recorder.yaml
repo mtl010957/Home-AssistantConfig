@@ -5,6 +5,9 @@ include:
   entities:
     # binary_sensors
     - binary_sensor.back_door
+    - binary_sensor.downstairs_co_detected
+    - binary_sensor.downstairs_smoke_detected
+    - binary_sensor.downstairs_smoke_detector_test
     - binary_sensor.front_door
     - binary_sensor.garage_door
     - binary_sensor.garage_in_door
@@ -12,8 +15,9 @@ include:
     - binary_sensor.master_bedroom_motion
     - binary_sensor.family_room_motion
     - binary_sensor.updater
-    - binary_sensor.fire_and_co_co_detected
-    - binary_sensor.fire_and_co_smoke_detected
+    - binary_sensor.upstairs_co_detected
+    - binary_sensor.upstairs_smoke_detected
+    - binary_sensor.upstairs_smoke_detector_test
     # climate
     - climate.thermostat
     # covers
@@ -56,6 +60,7 @@ include:
     - sensor.office_humidity
     - sensor.caravan_temperature
     - sensor.caravan_humidity
+    - sensor.downstairs_smoke_alarm_battery_level
     - sensor.dte_energy_bridge_summary
     - sensor.family_room_humidity
     - sensor.corrected_barometer_inhg
@@ -74,6 +79,7 @@ include:
     - sensor.outdoor_temperature
     - sensor.ups_status
     - sensor.ups_input_voltage
+    - sensor.upstairs_smoke_alarm_battery_level
     # switches
     - switch.family_room_ceiling_fan_light
     - switch.living_room_lamp_module

@@ -122,6 +122,32 @@
                         {
                             "entity": "media_player.bedroom_tv",
                             "type": "media-control"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.upstairs_smoke_detected",
+                                    "name": "Smoke",
+                                    "state_color": true
+                                },
+                                {
+                                    "entity": "binary_sensor.upstairs_co_detected",
+                                    "name": "CO",
+                                    "state_color": true
+                                },
+                                {
+                                    "entity": "binary_sensor.upstairs_smoke_alarm_test",
+                                    "name": "Test",
+                                    "state_color": true
+                                },
+                                {
+                                    "entity": "sensor.upstairs_smoke_alarm_battery_level",
+                                    "name": "Battery"
+                                }
+                            ],
+                            "show_name": true,
+                            "title": "Upstairs Smoke Alarm",
+                            "type": "glance"
                         }
                     ],
                     "path": "master-bedroom",
@@ -161,35 +187,75 @@
                                     "type": "entity"
                                 },
                                 {
-                                    "entities": [
+                                    "cards": [
                                         {
                                             "entity": "sensor.epson_xp_7100_series_black_ink",
-                                            "name": "BK"
+                                            "max": 100,
+                                            "min": 0,
+                                            "name": "Black",
+                                            "severity": {
+                                                "green": 50,
+                                                "red": 0,
+                                                "yellow": 15
+                                            },
+                                            "type": "gauge"
                                         },
                                         {
                                             "entity": "sensor.epson_xp_7100_series_cyan_ink",
-                                            "name": "CY"
+                                            "max": 100,
+                                            "min": 0,
+                                            "name": "Cyan",
+                                            "severity": {
+                                                "green": 50,
+                                                "red": 0,
+                                                "yellow": 15
+                                            },
+                                            "type": "gauge"
                                         },
                                         {
                                             "entity": "sensor.epson_xp_7100_series_magenta_ink",
-                                            "name": "MG"
+                                            "max": 100,
+                                            "min": 0,
+                                            "name": "Magenta",
+                                            "severity": {
+                                                "green": 50,
+                                                "red": 0,
+                                                "yellow": 15
+                                            },
+                                            "type": "gauge"
                                         },
                                         {
                                             "entity": "sensor.epson_xp_7100_series_photo_black_ink",
-                                            "name": "PBK"
+                                            "max": 100,
+                                            "min": 0,
+                                            "name": "PBlack",
+                                            "severity": {
+                                                "green": 50,
+                                                "red": 0,
+                                                "yellow": 15
+                                            },
+                                            "type": "gauge"
                                         },
                                         {
                                             "entity": "sensor.epson_xp_7100_series_yellow_ink",
-                                            "name": "YE"
+                                            "max": 100,
+                                            "min": 0,
+                                            "name": "Yellow",
+                                            "severity": {
+                                                "green": 50,
+                                                "red": 0,
+                                                "yellow": 15
+                                            },
+                                            "type": "gauge"
                                         }
                                     ],
-                                    "type": "glance"
+                                    "type": "horizontal-stack"
                                 }
                             ],
                             "type": "vertical-stack"
                         },
                         {
-                            "entity": "media_player.office_speaker",
+                            "entity": "media_player.speaker_pair",
                             "type": "media-control"
                         }
                     ],

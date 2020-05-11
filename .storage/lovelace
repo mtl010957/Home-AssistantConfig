@@ -30,10 +30,16 @@
                 {
                     "badges": [
                         {
-                            "entity": "binary_sensor.fire_and_co_smoke_detected"
+                            "entity": "binary_sensor.downstairs_smoke_detected"
                         },
                         {
-                            "entity": "binary_sensor.fire_and_co_co_detected"
+                            "entity": "binary_sensor.downstairs_co_detected"
+                        },
+                        {
+                            "entity": "binary_sensor.upstairs_smoke_detected"
+                        },
+                        {
+                            "entity": "binary_sensor.upstairs_co_detected"
                         },
                         {
                             "entity": "binary_sensor.front_door"

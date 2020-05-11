@@ -63,6 +63,9 @@ camera: !include_dir_merge_list camera
 # Honeywell Thermostat
 climate: !include climate.yaml
 
+# Cover groups
+cover: !include cover.yaml
+
 # Device tracking
 device_tracker: !include device_tracker.yaml
 

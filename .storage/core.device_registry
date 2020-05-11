@@ -203,7 +203,7 @@
                 "model": "",
                 "name": "HACS",
                 "name_by_user": null,
-                "sw_version": "0.24.3",
+                "sw_version": "0.24.4",
                 "via_device_id": null
             },
             {
@@ -1412,7 +1412,7 @@
                 "via_device_id": null
             },
             {
-                "area_id": null,
+                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
                 "config_entries": [
                     "3cbe8ba6a37a444886eddeb49d953cf7"
                 ],
@@ -1510,6 +1510,66 @@
                 "name_by_user": "Living Room NW Blinds",
                 "sw_version": "esphome v1.15.0-dev May  7 2020, 10:38:06",
                 "via_device_id": null
+            },
+            {
+                "area_id": "316107820cce4630be06041fc14816e3",
+                "config_entries": [
+                    "3cbe8ba6a37a444886eddeb49d953cf7"
+                ],
+                "connections": [],
+                "id": "ca756dc0b69d4d3292d23c5b10332324",
+                "identifiers": [
+                    [
+                        "cast",
+                        "df18f348d26d86562d51183db2a0c10b"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Google Nest Mini",
+                "name": "Office speaker 2",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": "fb89b524d9f34166bd038247f8d434b7",
+                "config_entries": [
+                    "de284e3b58a141aeb7547a2926ad6b12"
+                ],
+                "connections": [],
+                "id": "4e811fdefdea408ebf121abe13e8bb8f",
+                "identifiers": [
+                    [
+                        "zwave",
+                        23
+                    ]
+                ],
+                "manufacturer": "First Alert (BRK Brands Inc)",
+                "model": "ZCombo Smoke and Carbon Monoxide Detector",
+                "name": "First Alert (BRK Brands Inc) ZCombo Smoke and Carbon Monoxide Detector",
+                "name_by_user": "Upstairs Smoke Alarm",
+                "sw_version": null,
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+            },
+            {
+                "area_id": "bebd4b239b054e2da7abe614ba924f32",
+                "config_entries": [
+                    "de284e3b58a141aeb7547a2926ad6b12"
+                ],
+                "connections": [],
+                "id": "fcbbefffc26a4249a4e27f01bbf24105",
+                "identifiers": [
+                    [
+                        "zwave",
+                        24
+                    ]
+                ],
+                "manufacturer": "First Alert (BRK Brands Inc)",
+                "model": "ZCombo Smoke and Carbon Monoxide Detector",
+                "name": "First Alert (BRK Brands Inc) ZCombo Smoke and Carbon Monoxide Detector",
+                "name_by_user": "Downstairs Smoke Alarm",
+                "sw_version": null,
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
             }
         ]
     },
