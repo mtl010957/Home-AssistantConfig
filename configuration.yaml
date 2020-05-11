@@ -50,7 +50,7 @@ recorder: !include recorder.yaml
 stream:
 
 # Wink
-wink: !include wink.yaml
+#wink: !include wink.yaml
 
 # Various manually defined devices
 # Alarm panel
@@ -74,7 +74,7 @@ fan: !include_dir_merge_list fan
 # HDHomeRun integration in HACS
 #hdhomerun:
 
-# HTML5 Push Notifications
+# Hangouts Notifications
 notify: !include notify.yaml
 
 sensor: !include_dir_merge_list sensor

@@ -82,11 +82,7 @@
                                     "entity": "zwave.aeon_labs_zw090_z_stick_gen5_us"
                                 },
                                 {
-                                    "entity": "binary_sensor.wink",
-                                    "state_color": true
-                                },
-                                {
-                                    "entity": "switch.wink_power",
+                                    "entity": "switch.utility_power",
                                     "state_color": true
                                 }
                             ],

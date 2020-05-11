@@ -1287,7 +1287,7 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sb03",
-                "name_by_user": "Wink Power",
+                "name_by_user": "Utility Power",
                 "sw_version": "esphome v1.15.0-dev May  4 2020, 17:46:04",
                 "via_device_id": null
             },
