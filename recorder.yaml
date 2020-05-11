@@ -8,6 +8,9 @@ include:
     - binary_sensor.downstairs_co_detected
     - binary_sensor.downstairs_smoke_detected
     - binary_sensor.downstairs_smoke_detector_test
+    - binary_sensor.family_room_co_detected
+    - binary_sensor.family_room_smoke_detected
+    - binary_sensor.family_room_smoke_detector_test
     - binary_sensor.front_door
     - binary_sensor.garage_door
     - binary_sensor.garage_in_door

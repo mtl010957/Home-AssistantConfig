@@ -193,26 +193,10 @@
   action:
   - entity_id: switch.irrigation_control_enable
     service: switch.turn_off
-- id: '1548861516503'
-  alias: Reboot Wink Weekly
-  trigger:
-  - platform: template
-    value_template: '{{ now().weekday() == 0 }}'
-  - at: 02:00:00
-    platform: time
-  condition: []
-  action:
-  - data: {}
-    entity_id: switch.wink_power
-    service: switch.turn_off
-  - delay: 00:01
-  - data: {}
-    entity_id: switch.wink_power
-    service: switch.turn_on
 - id: '1548862723503'
-  alias: Power On Wink
+  alias: Power On Utility
   trigger:
-  - entity_id: switch.wink_power
+  - entity_id: switch.utility_power
     for: 00:02
     from: 'on'
     platform: state
@@ -220,7 +204,7 @@
   condition: []
   action:
   - data: {}
-    entity_id: switch.wink_power
+    entity_id: switch.utility_power
     service: switch.turn_on
 - id: '1552222922150'
   alias: Blinds Open at Dawn
@@ -495,7 +479,7 @@
   - data:
       message: The temperature in the office is below 50 degrees
       title: Office Temperature Low
-    service: notify.notify
+    service: notify.hangouts_notify
 - id: '1572633741649'
   alias: UPS Notify Offline
   description: ''
@@ -756,3 +740,93 @@
   - data: {}
     entity_id: switch.family_room_ceiling_fan_light
     service: switch.toggle
+- id: '1589219972504'
+  alias: Notify Fire Downstairs
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.downstairs_smoke_detected
+    for: 00:00:10
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      message: There is a fire downstairs, get to safety!
+      title: FIRE Downstairs!
+    service: notify.hangouts_notify
+- id: '1589220124517'
+  alias: Notify CO Downstairs
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.downstairs_co_detected
+    for: 00:00:10
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      message: There is high CO detected downstairs, get to fresh air!
+      title: CO Downstairs!
+    service: notify.hangouts_notify
+- id: '1589220235995'
+  alias: Notify CO Upstairs
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.upstairs_co_detected
+    for: 00:00:10
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      message: There is high CO detected upstairs, get to fresh air!
+      title: CO Upstairs!
+    service: notify.hangouts_notify
+- id: '1589220336564'
+  alias: Notify Fire Upstairs
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.upstairs_smoke_detected
+    for: 00:00:10
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      message: There is a fire upstairs, get to safety!
+      title: FIRE Upstairs!
+    service: notify.hangouts_notify
+- id: '1589220971925'
+  alias: Notify Fire Family Room
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.family_room_fire_detected
+    for: 00:00:10
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      message: There is a fire in the family room, get to safety!
+      title: FIRE In Family Room!
+    service: notify.hangouts_notify
+- id: '1589221081422'
+  alias: Notify CO Family Room
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.family_room_co_detected
+    for: 00:00:10
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      message: There is high CO detected in the family room, get to fresh air!
+      title: CO In Family Room!
+    service: notify.hangouts_notify

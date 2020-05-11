@@ -5,7 +5,20 @@
             "title": "Desert",
             "views": [
                 {
-                    "badges": [],
+                    "badges": [
+                        {
+                            "entity": "binary_sensor.desert_living_room_camera_loudness"
+                        },
+                        {
+                            "entity": "binary_sensor.desert_living_room_camera_motion"
+                        },
+                        {
+                            "entity": "binary_sensor.desert_away"
+                        },
+                        {
+                            "entity": "sensor.desert_security_state"
+                        }
+                    ],
                     "cards": [
                         {
                             "aspect_ratio": "0%",
@@ -33,7 +46,20 @@
                     "title": "Inside"
                 },
                 {
-                    "badges": [],
+                    "badges": [
+                        {
+                            "entity": "binary_sensor.desert_front_yard_camera_front_porch_loudness"
+                        },
+                        {
+                            "entity": "binary_sensor.desert_front_yard_camera_front_porch_motion"
+                        },
+                        {
+                            "entity": "binary_sensor.desert_away"
+                        },
+                        {
+                            "entity": "sensor.desert_security_state"
+                        }
+                    ],
                     "cards": [
                         {
                             "aspect_ratio": "0%",
