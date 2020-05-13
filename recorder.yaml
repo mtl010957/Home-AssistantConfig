@@ -7,10 +7,10 @@ include:
     - binary_sensor.back_door
     - binary_sensor.downstairs_co_detected
     - binary_sensor.downstairs_smoke_detected
-    - binary_sensor.downstairs_smoke_detector_test
+    - binary_sensor.downstairs_smoke_alarm_test
     - binary_sensor.family_room_co_detected
     - binary_sensor.family_room_smoke_detected
-    - binary_sensor.family_room_smoke_detector_test
+    - binary_sensor.family_room_smoke_alarm_test
     - binary_sensor.front_door
     - binary_sensor.garage_door
     - binary_sensor.garage_in_door
@@ -20,7 +20,7 @@ include:
     - binary_sensor.updater
     - binary_sensor.upstairs_co_detected
     - binary_sensor.upstairs_smoke_detected
-    - binary_sensor.upstairs_smoke_detector_test
+    - binary_sensor.upstairs_smoke_alarm_test
     # climate
     - climate.thermostat
     # covers

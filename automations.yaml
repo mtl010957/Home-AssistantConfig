@@ -830,3 +830,44 @@
       message: There is high CO detected in the family room, get to fresh air!
       title: CO In Family Room!
     service: notify.hangouts_notify
+- id: '1589227167980'
+  alias: Notify Downstairs Smoke Alarm Battery Low
+  description: ''
+  trigger:
+  - below: 30
+    device_id: fcbbefffc26a4249a4e27f01bbf24105
+    domain: sensor
+    entity_id: sensor.downstairs_smoke_alarm_battery_level
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 10
+    platform: device
+    type: battery_level
+  condition: []
+  action:
+  - data:
+      message: The downstairs smoke alarm battery is below 30%, please replace it
+        ASAP.
+      title: Downstairs Smoke Alarm Battery Low
+    service: notify.hangouts_notify
+- id: '1589227293445'
+  alias: Notify Upstairs Smoke Alarm Battery Low
+  description: ''
+  trigger:
+  - below: 30
+    device_id: 4e811fdefdea408ebf121abe13e8bb8f
+    domain: sensor
+    entity_id: sensor.upstairs_smoke_alarm_battery_level
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 10
+    platform: device
+    type: battery_level
+  condition: []
+  action:
+  - data:
+      message: The upstairs smoke alarm battery is below 30%, please replace it ASAP.
+      title: Upstairs Smoke Alarm Battery Low
+    service: notify.hangouts_notify

@@ -6435,7 +6435,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": null,
                 "device_class": null,
                 "device_id": null,
@@ -6451,7 +6451,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": null,
                 "device_class": null,
                 "device_id": null,
@@ -6467,7 +6467,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": null,
                 "device_class": null,
                 "device_id": null,
@@ -6483,7 +6483,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": null,
                 "device_class": null,
                 "device_id": null,
@@ -6499,7 +6499,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": null,
                 "device_class": null,
                 "device_id": null,
@@ -6515,7 +6515,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": null,
                 "device_class": null,
                 "device_id": null,
@@ -6528,6 +6528,38 @@
                 "platform": "automation",
                 "supported_features": 0,
                 "unique_id": "1589221081422",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "automation.notify_downstairs_smoke_alarm_battery_low",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": "Notify Downstairs Smoke Alarm Battery Low",
+                "platform": "automation",
+                "supported_features": 0,
+                "unique_id": "1589227167980",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "automation.notify_upstairs_smoke_alarm_battery_low",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": "Notify Upstairs Smoke Alarm Battery Low",
+                "platform": "automation",
+                "supported_features": 0,
+                "unique_id": "1589227293445",
                 "unit_of_measurement": null
             }
         ]
