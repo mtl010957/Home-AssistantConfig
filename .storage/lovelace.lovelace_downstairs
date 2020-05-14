@@ -687,6 +687,22 @@
                                 }
                             ],
                             "type": "vertical-stack"
+                        },
+                        {
+                            "entity": "cover.living_room_blinds",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "show_icon": true,
+                            "show_name": true,
+                            "tap_action": {
+                                "action": "call-service",
+                                "service": "cover.toggle_cover_tilt",
+                                "service_data": {
+                                    "entity_id": "cover.living_room_blinds"
+                                }
+                            },
+                            "type": "button"
                         }
                     ],
                     "path": "living-room",
