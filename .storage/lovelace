@@ -36,6 +36,12 @@
                             "entity": "binary_sensor.downstairs_co_detected"
                         },
                         {
+                            "entity": "binary_sensor.family_room_smoke_detected"
+                        },
+                        {
+                            "entity": "binary_sensor.family_room_co_detected"
+                        },
+                        {
                             "entity": "binary_sensor.upstairs_smoke_detected"
                         },
                         {

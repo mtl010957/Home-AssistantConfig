@@ -1570,6 +1570,26 @@
                 "name_by_user": "Downstairs Smoke Alarm",
                 "sw_version": null,
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+            },
+            {
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "config_entries": [
+                    "de284e3b58a141aeb7547a2926ad6b12"
+                ],
+                "connections": [],
+                "id": "c3cc29801bfd4f25802b05085241dca2",
+                "identifiers": [
+                    [
+                        "zwave",
+                        25
+                    ]
+                ],
+                "manufacturer": "First Alert (BRK Brands Inc)",
+                "model": "ZCombo Smoke and Carbon Monoxide Detector",
+                "name": "First Alert (BRK Brands Inc) ZCombo Smoke and Carbon Monoxide Detector",
+                "name_by_user": "Family Room Smoke Alarm",
+                "sw_version": null,
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
             }
         ]
     },

@@ -178,7 +178,8 @@
   trigger:
   - platform: template
     value_template: '{{ now().month > 4 and now().month < 9 and (''rain'' not in states.sensor.forecast_today.state
-      and ''Rain'' not in states.sensor.forecast_today.state) }}'
+      and ''Rain'' not in states.sensor.forecast_today.state and ''unavailable'' not
+      in states.sensor.forecast_today.state) }}'
   condition: []
   action:
   - entity_id: switch.irrigation_control_enable
@@ -188,7 +189,8 @@
   trigger:
   - platform: template
     value_template: '{{ (now().month <= 4 or now().month >=9) or (''rain'' in states.sensor.forecast_today.state
-      or ''Rain'' in states.sensor.forecast_today.state) }}'
+      or ''Rain'' in states.sensor.forecast_today.state or ''unavailable'' in states.sensor.forecast_today.state)
+      }}'
   condition: []
   action:
   - entity_id: switch.irrigation_control_enable
@@ -468,7 +470,7 @@
       title: Master Bedroom Motion Detected
     service: notify.hangouts_notify
 - id: '1572631200037'
-  alias: Notify Office Temperature Low
+  alias: Notify Temperature Low Office
   description: ''
   trigger:
   - below: '50.0'
@@ -831,7 +833,7 @@
       title: CO In Family Room!
     service: notify.hangouts_notify
 - id: '1589227167980'
-  alias: Notify Downstairs Smoke Alarm Battery Low
+  alias: Notify Battery Low Downstairs Smoke Alarm
   description: ''
   trigger:
   - below: 30
@@ -852,7 +854,7 @@
       title: Downstairs Smoke Alarm Battery Low
     service: notify.hangouts_notify
 - id: '1589227293445'
-  alias: Notify Upstairs Smoke Alarm Battery Low
+  alias: Notify Battery Low Upstairs Smoke Alarm
   description: ''
   trigger:
   - below: 30
@@ -870,4 +872,53 @@
   - data:
       message: The upstairs smoke alarm battery is below 30%, please replace it ASAP.
       title: Upstairs Smoke Alarm Battery Low
+    service: notify.hangouts_notify
+- id: '1589562649239'
+  alias: Living Room Blinds Remote Open
+  description: ''
+  trigger:
+  - device_id: 46b35f49b60e40bdb51cb453517d898c
+    domain: binary_sensor
+    entity_id: binary_sensor.fan_remote_2h
+    platform: device
+    type: turned_on
+  condition: []
+  action:
+  - data: {}
+    entity_id: cover.living_room_blinds
+    service: cover.open_cover_tilt
+- id: '1589563247159'
+  alias: Living Room Blinds Remote Close
+  description: ''
+  trigger:
+  - device_id: 46b35f49b60e40bdb51cb453517d898c
+    domain: binary_sensor
+    entity_id: binary_sensor.fan_remote_8h
+    platform: device
+    type: turned_on
+  condition: []
+  action:
+  - data: {}
+    entity_id: cover.living_room_blinds
+    service: cover.close_cover_tilt
+- id: '1589565473182'
+  alias: Notify Battery Low Family Room Smoke Alarm
+  description: ''
+  trigger:
+  - below: 30
+    device_id: c3cc29801bfd4f25802b05085241dca2
+    domain: sensor
+    entity_id: sensor.family_room_smoke_alarm_battery_level
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 10
+    platform: device
+    type: battery_level
+  condition: []
+  action:
+  - data:
+      message: The family room smoke alarm battery is below 30%, please replace it
+        ASAP.
+      title: Family Room Smoke Alarm Battery Low
     service: notify.hangouts_notify
