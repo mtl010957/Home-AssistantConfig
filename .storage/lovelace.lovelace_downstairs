@@ -1,9 +1,6 @@
 {
     "data": {
         "config": {
-            "custom_header": {
-                "compact_mode": true
-            },
             "title": "Downstairs",
             "views": [
                 {
@@ -150,6 +147,32 @@
                             ],
                             "show_name": false,
                             "title": "Back Door",
+                            "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.family_room_smoke_detected",
+                                    "name": "Smoke",
+                                    "state_color": true
+                                },
+                                {
+                                    "entity": "binary_sensor.family_room_co_detected",
+                                    "name": "CO",
+                                    "state_color": true
+                                },
+                                {
+                                    "entity": "binary_sensor.family_room_smoke_alarm_test",
+                                    "name": "Test",
+                                    "state_color": true
+                                },
+                                {
+                                    "entity": "sensor.family_room_smoke_alarm_battery_level",
+                                    "name": "Battery"
+                                }
+                            ],
+                            "show_name": true,
+                            "title": "Family Room Smoke Alarm",
                             "type": "glance"
                         },
                         {
@@ -370,32 +393,6 @@
                             ],
                             "title": "Family Room",
                             "type": "picture-glance"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.family_room_smoke_detected",
-                                    "name": "Smoke",
-                                    "state_color": true
-                                },
-                                {
-                                    "entity": "binary_sensor.family_room_co_detected",
-                                    "name": "CO",
-                                    "state_color": true
-                                },
-                                {
-                                    "entity": "binary_sensor.family_room_smoke_alarm_test",
-                                    "name": "Test",
-                                    "state_color": true
-                                },
-                                {
-                                    "entity": "sensor.family_room_smoke_alarm_battery_level",
-                                    "name": "Battery"
-                                }
-                            ],
-                            "show_name": true,
-                            "title": "Family Room Smoke Alarm",
-                            "type": "glance"
                         }
                     ],
                     "path": "family-room",

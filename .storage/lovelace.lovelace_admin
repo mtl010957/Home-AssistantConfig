@@ -1,9 +1,6 @@
 {
     "data": {
         "config": {
-            "custom_header": {
-                "compact_mode": true
-            },
             "title": "Admin",
             "views": [
                 {
@@ -131,8 +128,8 @@
                             "type": "custom:zha-network-card"
                         }
                     ],
-                    "path": "hubs",
-                    "title": "Hubs"
+                    "path": "admin",
+                    "title": "Admin"
                 }
             ]
         }

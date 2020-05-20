@@ -7,6 +7,7 @@
                     "3cbe8ba6a37a444886eddeb49d953cf7"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "6a3d4e79ac0a4eb98e5a86b870225f21",
                 "identifiers": [
                     [
@@ -27,6 +28,7 @@
                     "3cbe8ba6a37a444886eddeb49d953cf7"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "27eff64c6f8746cda679e76e617026c9",
                 "identifiers": [
                     [
@@ -47,6 +49,7 @@
                     "3cbe8ba6a37a444886eddeb49d953cf7"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "da3bb0666349463e87d8db1dcbe00213",
                 "identifiers": [
                     [
@@ -67,6 +70,7 @@
                     "3cbe8ba6a37a444886eddeb49d953cf7"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "4a9e2f9494b04eba8794c40747cda4c3",
                 "identifiers": [
                     [
@@ -82,31 +86,12 @@
                 "via_device_id": null
             },
             {
-                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
-                "config_entries": [
-                    "3cbe8ba6a37a444886eddeb49d953cf7"
-                ],
-                "connections": [],
-                "id": "82f7cd345c0547e3b513be1ba37350f8",
-                "identifiers": [
-                    [
-                        "cast",
-                        "9b126d8d5d93d327126012fcd8f39085"
-                    ]
-                ],
-                "manufacturer": "Google Inc.",
-                "model": "MIBOX4",
-                "name": "Bedroom TV",
-                "name_by_user": null,
-                "sw_version": null,
-                "via_device_id": null
-            },
-            {
                 "area_id": null,
                 "config_entries": [
                     "de3e4e31808c4269b46ef0acfd37a53a"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "16398d829c294e22875b65cf407a4ae8",
                 "identifiers": [
                     [
@@ -127,6 +112,7 @@
                     "de3e4e31808c4269b46ef0acfd37a53a"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "91ae9631e2af4dd6bd596e94b02cc7d6",
                 "identifiers": [
                     [
@@ -147,6 +133,7 @@
                     "de3e4e31808c4269b46ef0acfd37a53a"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "2a4b324a5fb44db0b7cf65e3114d3b7b",
                 "identifiers": [
                     [
@@ -164,7 +151,7 @@
             {
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
-                    "6993bc6df10e4dff8a3a0878d4ad0e49"
+                    "656fba9c69574537be05d6e219b50a7b"
                 ],
                 "connections": [
                     [
@@ -172,6 +159,7 @@
                         "uuid:ec9982fc-9600-11df-b8e5-000c29d32f89"
                     ]
                 ],
+                "entry_type": null,
                 "id": "4bfcdcf419bc43b885ea4baf9a7cfc31",
                 "identifiers": [
                     [
@@ -192,6 +180,7 @@
                     "47badf5aab2343108f4ab45cd4e1e3bb"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "a6390213c6084f2394864c2845d012ee",
                 "identifiers": [
                     [
@@ -212,6 +201,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "identifiers": [
                     [
@@ -232,6 +222,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "ccb650ff68e24c859522b24f0e88419e",
                 "identifiers": [
                     [
@@ -252,6 +243,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "0dc7fbd61b1b4e3db6f21c1782558563",
                 "identifiers": [
                     [
@@ -272,6 +264,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "fd0cbc97c4f9457f985d6a1fed0a732d",
                 "identifiers": [
                     [
@@ -292,6 +285,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "bf4280b430244dc8965f7b0ded9793cd",
                 "identifiers": [
                     [
@@ -312,6 +306,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "121267773a72407e9aa51f5b0f615b21",
                 "identifiers": [
                     [
@@ -332,6 +327,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "6d21f24f1bc24bee85172a5327b56fda",
                 "identifiers": [
                     [
@@ -352,6 +348,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "b02e28111d784dd594cea56a0773fb1d",
                 "identifiers": [
                     [
@@ -372,6 +369,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "ba06d61e68e24d3c95a73becfc711c61",
                 "identifiers": [
                     [
@@ -392,6 +390,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "fe41f1020bdf4e74840c084f3a91f438",
                 "identifiers": [
                     [
@@ -412,6 +411,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "e98ba1007257472b94ec68076912820e",
                 "identifiers": [
                     [
@@ -432,6 +432,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "a58c772f7049479bbd9b49695b173b63",
                 "identifiers": [
                     [
@@ -452,6 +453,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "c120525c21d248faaedc8a1d88d17911",
                 "identifiers": [
                     [
@@ -472,6 +474,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "ed8f4acba5054046be851176e81b190c",
                 "identifiers": [
                     [
@@ -492,6 +495,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "a67fb5f1ee3f4a57a338786db4ac61a3",
                 "identifiers": [
                     [
@@ -512,6 +516,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "a12d65a79e254bd8bc1286b578df6491",
                 "identifiers": [
                     [
@@ -527,36 +532,12 @@
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "config_entries": [
-                    "00a98b2aa68641ba8b48ba08fcbb26bb"
-                ],
-                "connections": [
-                    [
-                        "zigbee",
-                        "00:13:a2:00:41:07:04:37"
-                    ]
-                ],
-                "id": "90f3b45357284c18b721821c16964d8e",
-                "identifiers": [
-                    [
-                        "zha",
-                        "00:13:a2:00:41:07:04:37"
-                    ]
-                ],
-                "manufacturer": "ZHA",
-                "model": "XBee",
-                "name": "Zigbee Coordinator",
-                "name_by_user": null,
-                "sw_version": null,
-                "via_device_id": null
-            },
-            {
                 "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "3b5f006c562946f99e7aaf50d8f2ed5b",
                 "identifiers": [
                     [
@@ -582,6 +563,7 @@
                         "7c:e5:24:00:00:13:27:cf"
                     ]
                 ],
+                "entry_type": null,
                 "id": "c7ed60af146d440385d25a1b4f32ba02",
                 "identifiers": [
                     [
@@ -594,7 +576,7 @@
                 "name": "GE SoftWhite",
                 "name_by_user": "Family Room Link Bulb 1",
                 "sw_version": "0x02000208",
-                "via_device_id": "90f3b45357284c18b721821c16964d8e"
+                "via_device_id": "908090144c184a77a053873b46a95536"
             },
             {
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
@@ -607,6 +589,7 @@
                         "7c:e5:24:00:00:14:6f:d6"
                     ]
                 ],
+                "entry_type": null,
                 "id": "0326419ab49f441bbe672e759ae8b494",
                 "identifiers": [
                     [
@@ -619,7 +602,7 @@
                 "name": "GE SoftWhite",
                 "name_by_user": "Family Room Link Bulb 2",
                 "sw_version": "0x02000208",
-                "via_device_id": "90f3b45357284c18b721821c16964d8e"
+                "via_device_id": "908090144c184a77a053873b46a95536"
             },
             {
                 "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
@@ -632,6 +615,7 @@
                         "84:18:26:00:00:04:d2:06"
                     ]
                 ],
+                "entry_type": null,
                 "id": "2f410060429a42f78888722f30b8959c",
                 "identifiers": [
                     [
@@ -644,7 +628,7 @@
                 "name": "OSRAM LIGHTIFY A19 Tunable White",
                 "name_by_user": "Bedside Lamp Bulb",
                 "sw_version": null,
-                "via_device_id": "90f3b45357284c18b721821c16964d8e"
+                "via_device_id": "908090144c184a77a053873b46a95536"
             },
             {
                 "area_id": "316107820cce4630be06041fc14816e3",
@@ -657,6 +641,7 @@
                         "f0:d1:b8:00:00:04:ae:2c"
                     ]
                 ],
+                "entry_type": null,
                 "id": "a3a53ae5cdcf40ffae17d4e396c93d27",
                 "identifiers": [
                     [
@@ -669,7 +654,7 @@
                 "name": "LEDVANCE A19 W 10 year",
                 "name_by_user": "Office Light Bulb",
                 "sw_version": "0x00102302",
-                "via_device_id": "90f3b45357284c18b721821c16964d8e"
+                "via_device_id": "908090144c184a77a053873b46a95536"
             },
             {
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
@@ -682,6 +667,7 @@
                         "f0:d1:b8:00:00:03:58:34"
                     ]
                 ],
+                "entry_type": null,
                 "id": "1e5e4752a3384f1bb579e0bf9fabb6a6",
                 "identifiers": [
                     [
@@ -694,7 +680,7 @@
                 "name": "LEDVANCE A19 W 10 year",
                 "name_by_user": "Family Room Lamp Bulb 1",
                 "sw_version": "0x00102302",
-                "via_device_id": "90f3b45357284c18b721821c16964d8e"
+                "via_device_id": "908090144c184a77a053873b46a95536"
             },
             {
                 "area_id": "be918af12ae344be9d3936091fc54a20",
@@ -707,6 +693,7 @@
                         "7c:e5:24:00:00:13:61:2c"
                     ]
                 ],
+                "entry_type": null,
                 "id": "1d313fdd3a2b45ee854fd45736c3dcc0",
                 "identifiers": [
                     [
@@ -719,7 +706,7 @@
                 "name": "GE SoftWhite",
                 "name_by_user": "Garage Attic Link Bulb",
                 "sw_version": "0x02000208",
-                "via_device_id": "90f3b45357284c18b721821c16964d8e"
+                "via_device_id": "908090144c184a77a053873b46a95536"
             },
             {
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
@@ -732,6 +719,7 @@
                         "f0:d1:b8:00:00:03:4f:87"
                     ]
                 ],
+                "entry_type": null,
                 "id": "66618e45aeaf45a9884441d8142b3c3d",
                 "identifiers": [
                     [
@@ -744,7 +732,7 @@
                 "name": "LEDVANCE A19 W 10 year",
                 "name_by_user": "Family Room Lamp Bulb 2",
                 "sw_version": "0x00102302",
-                "via_device_id": "90f3b45357284c18b721821c16964d8e"
+                "via_device_id": "908090144c184a77a053873b46a95536"
             },
             {
                 "area_id": "34c603d253c649ccb4430b96d906f5a8",
@@ -757,6 +745,7 @@
                         "f0:d1:b8:00:00:04:98:91"
                     ]
                 ],
+                "entry_type": null,
                 "id": "1df737b790954843a6ae70aaf80ea977",
                 "identifiers": [
                     [
@@ -769,7 +758,7 @@
                 "name": "LEDVANCE A19 W 10 year",
                 "name_by_user": "Guest Room Lamp Bulb",
                 "sw_version": "0x00102302",
-                "via_device_id": "90f3b45357284c18b721821c16964d8e"
+                "via_device_id": "908090144c184a77a053873b46a95536"
             },
             {
                 "area_id": "d66690d909184fc39c8ef0e3559befea",
@@ -777,6 +766,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "653b58242ddd475fa47b906fdc469822",
                 "identifiers": [
                     [
@@ -797,6 +787,7 @@
                     "bea899b7c1e64cd49896bd567eb749b5"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "22ee088da369491b87f94664a097322c",
                 "identifiers": [
                     [
@@ -817,6 +808,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "f743120b85da4c02b68c18c65965b2c3",
                 "identifiers": [
                     [
@@ -837,6 +829,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "332c972f71e74030b4c62dab126764ce",
                 "identifiers": [
                     [
@@ -857,6 +850,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "6f257e741b564746b69eca3a6eae1985",
                 "identifiers": [
                     [
@@ -877,6 +871,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "46b35f49b60e40bdb51cb453517d898c",
                 "identifiers": [
                     [
@@ -897,6 +892,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "01b25cc1a9ff49c997bcd154e5b683f8",
                 "identifiers": [
                     [
@@ -917,6 +913,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "fa7eeb66a74e455496e3ab375495dcf7",
                 "identifiers": [
                     [
@@ -937,6 +934,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "8a99ee78cda64cabb43541c266410c90",
                 "identifiers": [
                     [
@@ -957,6 +955,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "6792d04f64544b2f96bf1ba9855e2e5b",
                 "identifiers": [
                     [
@@ -977,6 +976,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "0d65186f76674e718fea0f63976d0522",
                 "identifiers": [
                     [
@@ -997,6 +997,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "7ec89b1bd00d47248701a5eedbf3a331",
                 "identifiers": [
                     [
@@ -1017,6 +1018,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "ad38b2b29eb24331b68fbae50ee3316a",
                 "identifiers": [
                     [
@@ -1037,6 +1039,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "2bab1b706cff40359bbe36c356ee18d8",
                 "identifiers": [
                     [
@@ -1057,6 +1060,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "0297d19b6ceb409693273a05449045dc",
                 "identifiers": [
                     [
@@ -1077,6 +1081,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "57673a6ec02649a3a76d73e5d17ca744",
                 "identifiers": [
                     [
@@ -1097,6 +1102,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "9df2e6a44ed14cecaf8bc31da5aa8cce",
                 "identifiers": [
                     [
@@ -1117,6 +1123,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "90ec9849e88c4c19b61c9dc937b7c1ae",
                 "identifiers": [
                     [
@@ -1137,6 +1144,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "f1da704df4dd4da69ef980d105f8d710",
                 "identifiers": [
                     [
@@ -1157,6 +1165,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "8d8de4c32fc84734af376c764700e31f",
                 "identifiers": [
                     [
@@ -1177,6 +1186,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "9536dc3f7ae24ca4becaa28866474d00",
                 "identifiers": [
                     [
@@ -1197,6 +1207,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "bd33d495ed6f409c9622f3669499aead",
                 "identifiers": [
                     [
@@ -1217,6 +1228,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "cbfd393800a549f18ffe84e0f6b6be6f",
                 "identifiers": [
                     [
@@ -1237,6 +1249,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "5eb22ee9f39e420687061b390d1f23d7",
                 "identifiers": [
                     [
@@ -1257,6 +1270,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "3f2e1d3be7a049f08d4d1bfe39c87fc4",
                 "identifiers": [
                     [
@@ -1277,6 +1291,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "61344d8b56db43388bf5cc133786843b",
                 "identifiers": [
                     [
@@ -1297,6 +1312,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "abf3c9fea2e9422482ebac790b87643b",
                 "identifiers": [
                     [
@@ -1317,6 +1333,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "b0c05091d40849359f4f4d55a70a79d4",
                 "identifiers": [
                     [
@@ -1337,6 +1354,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "8b90b436c1854e4fa6d18dc2c9e076a7",
                 "identifiers": [
                     [
@@ -1357,6 +1375,7 @@
                     "fbf5eddc5250430a8e8e4d478a4c832f"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "ce95da89bb7b4d029e8f9ceeb144925e",
                 "identifiers": [
                     [
@@ -1377,6 +1396,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "7b4d27b07969400087ff94ee4091b87d",
                 "identifiers": [
                     [
@@ -1397,6 +1417,7 @@
                     "e90403f65535468b9f4a071967aaef04"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "9d361d73d84644189fd9557e1ea3eefd",
                 "identifiers": [
                     [
@@ -1417,6 +1438,7 @@
                     "3cbe8ba6a37a444886eddeb49d953cf7"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "195b141847214538a451c2a6cfaacd35",
                 "identifiers": [
                     [
@@ -1437,6 +1459,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "afeedf06916c460680efcd14027f18af",
                 "identifiers": [
                     [
@@ -1457,6 +1480,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "28c408aeffa1431ab8135271d9e05835",
                 "identifiers": [
                     [
@@ -1477,6 +1501,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "800d8ada96f04f2e95461f3f93c6d3a8",
                 "identifiers": [
                     [
@@ -1497,6 +1522,7 @@
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "e0df26504d514ce2ae20e20ce379cd99",
                 "identifiers": [
                     [
@@ -1517,6 +1543,7 @@
                     "3cbe8ba6a37a444886eddeb49d953cf7"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "ca756dc0b69d4d3292d23c5b10332324",
                 "identifiers": [
                     [
@@ -1537,6 +1564,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "4e811fdefdea408ebf121abe13e8bb8f",
                 "identifiers": [
                     [
@@ -1557,6 +1585,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "fcbbefffc26a4249a4e27f01bbf24105",
                 "identifiers": [
                     [
@@ -1577,6 +1606,7 @@
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "c3cc29801bfd4f25802b05085241dca2",
                 "identifiers": [
                     [

@@ -209,15 +209,18 @@
     entity_id: switch.utility_power
     service: switch.turn_on
 - id: '1552222922150'
-  alias: Blinds Open at Dawn
+  alias: Blinds Open Before Sunrise If Home
   trigger:
   - event: sunrise
-    offset: -00:20:00
+    offset: -00:65:00
     platform: sun
-  condition: []
+  condition:
+  - condition: state
+    entity_id: group.family
+    state: home
   action:
-  - data:
-      entity_id: all
+  - data: {}
+    entity_id: all
     service: cover.open_cover_tilt
 - id: '1552245394001'
   alias: Blinds Close at 11:00 PM
@@ -226,8 +229,8 @@
     platform: time
   condition: []
   action:
-  - data:
-      entity_id: all
+  - data: {}
+    entity_id: all
     service: cover.close_cover_tilt
 - id: '1552938556370'
   alias: Grow Lamp on at 06:00 AM
@@ -922,3 +925,17 @@
         ASAP.
       title: Family Room Smoke Alarm Battery Low
     service: notify.hangouts_notify
+- id: '1589813195543'
+  alias: Blinds Open at Sunrise if Armed Away
+  description: ''
+  trigger:
+  - event: sunrise
+    platform: sun
+  condition:
+  - condition: state
+    entity_id: alarm_control_panel.3629_alarm
+    state: armed_away
+  action:
+  - data: {}
+    entity_id: all
+    service: cover.open_cover_tilt

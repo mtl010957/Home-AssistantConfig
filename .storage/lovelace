@@ -1,30 +1,6 @@
 {
     "data": {
         "config": {
-            "custom_header": {
-                "compact_mode": true
-            },
-            "resources": [
-                {
-                    "type": "module",
-                    "url": "/community_plugin/custom-header/custom-header.js"
-                },
-                {
-                    "type": "js",
-                    "url": "/community_plugin/zha-network-card/zha-network-card.js"
-                },
-                {
-                    "type": "js",
-                    "url": "/community_plugin/lovelace-swipe-navigation/swipe-navigation.js"
-                }
-            ],
-            "swipe_nav": {
-                "animate": "swipe",
-                "prevent_default": false,
-                "skip_tabs": null,
-                "swipe_amount": 15,
-                "wrap": true
-            },
             "title": "Overview",
             "views": [
                 {
@@ -289,7 +265,6 @@
                             "type": "weather-forecast"
                         }
                     ],
-                    "icon": "",
                     "panel": false,
                     "title": "Overview"
                 }

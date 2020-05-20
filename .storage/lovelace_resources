@@ -2,11 +2,6 @@
     "data": {
         "items": [
             {
-                "id": "6041800667e4441ca46515a97adbef56",
-                "type": "module",
-                "url": "/hacsfiles/custom-header/custom-header.js"
-            },
-            {
                 "id": "291fca0f4795409aac578cf4cdf13f85",
                 "type": "js",
                 "url": "/hacsfiles/zha-network-card/zha-network-card.js"
