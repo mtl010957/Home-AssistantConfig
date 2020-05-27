@@ -1,6 +1,9 @@
 {
     "data": {
         "config": {
+            "custom_header": {
+                "compact_mode": true
+            },
             "title": "Overview",
             "views": [
                 {
@@ -260,8 +263,9 @@
                             "type": "picture-entity"
                         },
                         {
-                            "entity": "weather.kptk_daynight",
+                            "entity": "weather.kptk_hourly",
                             "name": "Waterford",
+                            "secondary_info_attribute": "humidity",
                             "type": "weather-forecast"
                         }
                     ],

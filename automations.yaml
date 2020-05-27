@@ -177,9 +177,8 @@
   alias: Irrigation Enable
   trigger:
   - platform: template
-    value_template: '{{ now().month > 4 and now().month < 9 and (''rain'' not in states.sensor.forecast_today.state
-      and ''Rain'' not in states.sensor.forecast_today.state and ''unavailable'' not
-      in states.sensor.forecast_today.state) }}'
+    value_template: '{{ now().month > 4 and now().month < 9 and states(''sensor.precipitation_probability_today'')
+      | float <= 40 }}'
   condition: []
   action:
   - entity_id: switch.irrigation_control_enable
@@ -188,9 +187,8 @@
   alias: Irrigation Disable
   trigger:
   - platform: template
-    value_template: '{{ (now().month <= 4 or now().month >=9) or (''rain'' in states.sensor.forecast_today.state
-      or ''Rain'' in states.sensor.forecast_today.state or ''unavailable'' in states.sensor.forecast_today.state)
-      }}'
+    value_template: '{{ (now().month <= 4 or now().month >=9) or states(''sensor.precipitation_probability_today'')
+      | float > 40 }}'
   condition: []
   action:
   - entity_id: switch.irrigation_control_enable
@@ -705,7 +703,7 @@
   description: ''
   trigger:
   - entity_id: group.garage_doors
-    for: 00:00:20
+    for: 00:00:30
     from: 'on'
     platform: state
     to: 'off'

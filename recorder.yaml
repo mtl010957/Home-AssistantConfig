@@ -34,6 +34,8 @@ include:
     - cover.living_room_ctr_blinds
     - cover.living_room_nw_ctr_blinds
     - cover.living_room_nw_blinds
+    # device_trackers
+    - device_tracker.pixel_2
     # fans
     - fan.house_fan
     - fan.family_room_ceiling_fan

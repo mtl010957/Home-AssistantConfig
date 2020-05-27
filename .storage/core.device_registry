@@ -192,7 +192,7 @@
                 "model": "",
                 "name": "HACS",
                 "name_by_user": null,
-                "sw_version": "0.24.5",
+                "sw_version": "1.0.3",
                 "via_device_id": null
             },
             {
@@ -576,7 +576,7 @@
                 "name": "GE SoftWhite",
                 "name_by_user": "Family Room Link Bulb 1",
                 "sw_version": "0x02000208",
-                "via_device_id": "908090144c184a77a053873b46a95536"
+                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc"
             },
             {
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
@@ -602,7 +602,7 @@
                 "name": "GE SoftWhite",
                 "name_by_user": "Family Room Link Bulb 2",
                 "sw_version": "0x02000208",
-                "via_device_id": "908090144c184a77a053873b46a95536"
+                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc"
             },
             {
                 "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
@@ -627,8 +627,8 @@
                 "model": "LIGHTIFY A19 Tunable White",
                 "name": "OSRAM LIGHTIFY A19 Tunable White",
                 "name_by_user": "Bedside Lamp Bulb",
-                "sw_version": null,
-                "via_device_id": "908090144c184a77a053873b46a95536"
+                "sw_version": "0x01020492",
+                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc"
             },
             {
                 "area_id": "316107820cce4630be06041fc14816e3",
@@ -654,7 +654,7 @@
                 "name": "LEDVANCE A19 W 10 year",
                 "name_by_user": "Office Light Bulb",
                 "sw_version": "0x00102302",
-                "via_device_id": "908090144c184a77a053873b46a95536"
+                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc"
             },
             {
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
@@ -680,7 +680,7 @@
                 "name": "LEDVANCE A19 W 10 year",
                 "name_by_user": "Family Room Lamp Bulb 1",
                 "sw_version": "0x00102302",
-                "via_device_id": "908090144c184a77a053873b46a95536"
+                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc"
             },
             {
                 "area_id": "be918af12ae344be9d3936091fc54a20",
@@ -706,7 +706,7 @@
                 "name": "GE SoftWhite",
                 "name_by_user": "Garage Attic Link Bulb",
                 "sw_version": "0x02000208",
-                "via_device_id": "908090144c184a77a053873b46a95536"
+                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc"
             },
             {
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
@@ -732,7 +732,7 @@
                 "name": "LEDVANCE A19 W 10 year",
                 "name_by_user": "Family Room Lamp Bulb 2",
                 "sw_version": "0x00102302",
-                "via_device_id": "908090144c184a77a053873b46a95536"
+                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc"
             },
             {
                 "area_id": "34c603d253c649ccb4430b96d906f5a8",
@@ -758,7 +758,7 @@
                 "name": "LEDVANCE A19 W 10 year",
                 "name_by_user": "Guest Room Lamp Bulb",
                 "sw_version": "0x00102302",
-                "via_device_id": "908090144c184a77a053873b46a95536"
+                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc"
             },
             {
                 "area_id": "d66690d909184fc39c8ef0e3559befea",
@@ -904,7 +904,7 @@
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm04_sv1",
                 "name_by_user": "Family Room SW-NW Blinds",
-                "sw_version": "esphome v1.15.0-dev May  6 2020, 14:59:33",
+                "sw_version": "esphome v1.15.0-dev May 22 2020, 12:45:30",
                 "via_device_id": null
             },
             {
@@ -946,7 +946,7 @@
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm05_sv1",
                 "name_by_user": "Family Room NW-SW Blinds",
-                "sw_version": "esphome v1.15.0-dev May  6 2020, 15:01:05",
+                "sw_version": "esphome v1.15.0-dev May 22 2020, 12:43:37",
                 "via_device_id": null
             },
             {
@@ -967,7 +967,7 @@
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm02_sv1",
                 "name_by_user": "Family Room SE-SW Blinds",
-                "sw_version": "esphome v1.15.0-dev May  6 2020, 15:05:09",
+                "sw_version": "esphome v1.15.0-dev May 22 2020, 12:51:07",
                 "via_device_id": null
             },
             {
@@ -1051,7 +1051,7 @@
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm03_sv1",
                 "name_by_user": "Family Room SW-SE Blinds",
-                "sw_version": "esphome v1.15.0-dev May  6 2020, 15:06:30",
+                "sw_version": "esphome v1.15.0-dev May 22 2020, 12:49:15",
                 "via_device_id": null
             },
             {
@@ -1282,7 +1282,7 @@
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm01_sv1",
                 "name_by_user": "Family Room SE-NE Blinds",
-                "sw_version": "esphome v1.15.0-dev May  6 2020, 15:07:33",
+                "sw_version": "esphome v1.15.0-dev May 22 2020, 13:05:49",
                 "via_device_id": null
             },
             {
@@ -1324,7 +1324,7 @@
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm01_sv1",
                 "name_by_user": "Living Room SE Blinds",
-                "sw_version": "esphome v1.15.0-dev May  6 2020, 15:04:05",
+                "sw_version": "esphome v1.15.0-dev May 22 2020, 12:52:42",
                 "via_device_id": null
             },
             {
@@ -1414,7 +1414,7 @@
             {
                 "area_id": null,
                 "config_entries": [
-                    "e90403f65535468b9f4a071967aaef04"
+                    "2e0d978447294089a9a34854309f2f27"
                 ],
                 "connections": [],
                 "entry_type": null,
@@ -1471,7 +1471,7 @@
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm02_sv1",
                 "name_by_user": "Living Room SE CTR Blinds",
-                "sw_version": "esphome v1.15.0-dev May  6 2020, 15:02:22",
+                "sw_version": "esphome v1.15.0-dev May 22 2020, 12:54:08",
                 "via_device_id": null
             },
             {
@@ -1492,7 +1492,7 @@
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm03_sv1",
                 "name_by_user": "Living Room CTR Blinds",
-                "sw_version": "esphome v1.15.0-dev May  7 2020, 10:33:26",
+                "sw_version": "esphome v1.15.0-dev May 22 2020, 12:55:16",
                 "via_device_id": null
             },
             {
@@ -1513,7 +1513,7 @@
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm04_sv1",
                 "name_by_user": "Living Room NW CTR Blinds",
-                "sw_version": "esphome v1.15.0-dev May  7 2020, 10:36:35",
+                "sw_version": "esphome v1.15.0-dev May 22 2020, 12:56:32",
                 "via_device_id": null
             },
             {
@@ -1534,7 +1534,7 @@
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm05_sv1",
                 "name_by_user": "Living Room NW Blinds",
-                "sw_version": "esphome v1.15.0-dev May  7 2020, 10:38:06",
+                "sw_version": "esphome v1.15.0-dev May 22 2020, 12:57:35",
                 "via_device_id": null
             },
             {
@@ -1620,6 +1620,74 @@
                 "name_by_user": "Family Room Smoke Alarm",
                 "sw_version": null,
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "entry_type": null,
+                "id": "1088744891254b82bc3d03f1b7e066d8",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "68c63af81296"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_D1_MINI",
+                "name": "dm06_reb1",
+                "name_by_user": null,
+                "sw_version": "esphome v1.15.0-dev May 24 2020, 12:19:51",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "00a98b2aa68641ba8b48ba08fcbb26bb"
+                ],
+                "connections": [
+                    [
+                        "zigbee",
+                        "00:13:a2:00:41:07:04:37"
+                    ]
+                ],
+                "entry_type": null,
+                "id": "7a6fe1d61caf4b5289ad667d0e3578bc",
+                "identifiers": [
+                    [
+                        "zha",
+                        "00:13:a2:00:41:07:04:37"
+                    ]
+                ],
+                "manufacturer": "ZHA",
+                "model": "Digi XBee S2C, XBee 3 radios",
+                "name": "Zigbee Coordinator",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "a81d848b5e3b44b48bdfc4b076822d39"
+                ],
+                "connections": [],
+                "entry_type": null,
+                "id": "3697d9de1b7f463ab09fb9c7b8420dbf",
+                "identifiers": [
+                    [
+                        "mobile_app",
+                        "16562871e89c1b99"
+                    ]
+                ],
+                "manufacturer": "VANTOP",
+                "model": "Z10",
+                "name": "Z10",
+                "name_by_user": null,
+                "sw_version": "28",
+                "via_device_id": null
             }
         ]
     },

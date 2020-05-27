@@ -1,6 +1,9 @@
 {
     "data": {
         "config": {
+            "custom_header": {
+                "compact_mode": true
+            },
             "title": "Admin",
             "views": [
                 {
@@ -126,6 +129,26 @@
                             "lickable": true,
                             "sort_by": "available",
                             "type": "custom:zha-network-card"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "device_tracker.pixel_2"
+                                },
+                                {
+                                    "entity": "sensor.pixel_2_battery_level"
+                                },
+                                {
+                                    "entity": "sensor.pixel_2_battery_state"
+                                },
+                                {
+                                    "entity": "sensor.pixel_2_geocoded_location"
+                                },
+                                {
+                                    "entity": "sensor.pixel_2_wifi_connection"
+                                }
+                            ],
+                            "type": "entities"
                         }
                     ],
                     "path": "admin",
