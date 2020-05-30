@@ -6,10 +6,13 @@
                 {
                     "badges": [
                         {
-                            "entity": "binary_sensor.desert_living_room_camera_loudness"
+                            "entity": "binary_sensor.living_room_camera_sound_detected"
                         },
                         {
-                            "entity": "binary_sensor.desert_living_room_camera_motion"
+                            "entity": "binary_sensor.living_room_camera_motion_detected"
+                        },
+                        {
+                            "entity": "binary_sensor.living_room_camera_person_detected"
                         },
                         {
                             "entity": "binary_sensor.desert_away"
@@ -47,10 +50,22 @@
                 {
                     "badges": [
                         {
-                            "entity": "binary_sensor.desert_front_yard_camera_front_porch_loudness"
+                            "entity": "binary_sensor.front_yard_camera_front_porch_sound_detected"
                         },
                         {
-                            "entity": "binary_sensor.desert_front_yard_camera_front_porch_motion"
+                            "entity": "binary_sensor.front_yard_camera_front_porch_motion_detected"
+                        },
+                        {
+                            "entity": "binary_sensor.front_yard_camera_front_porch_person_detected"
+                        },
+                        {
+                            "entity": "binary_sensor.front_yard_camera_front_porch_porch_activity"
+                        },
+                        {
+                            "entity": "binary_sensor.front_yard_camera_front_porch_sidewalk_and_yard_activity"
+                        },
+                        {
+                            "entity": "binary_sensor.front_yard_camera_front_porch_street_activity"
                         },
                         {
                             "entity": "binary_sensor.desert_away"

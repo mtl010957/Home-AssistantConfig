@@ -45,6 +45,14 @@
                                 {
                                     "entities": [
                                         {
+                                            "entity": "input_datetime.irrigation_start_time",
+                                            "name": "Start Time"
+                                        },
+                                        {
+                                            "entity": "input_number.irrigation_enable_below_precip",
+                                            "name": "Enable Below Prob"
+                                        },
+                                        {
                                             "entity": "input_number.zone_1_run_minutes",
                                             "name": "Back Minutes"
                                         },

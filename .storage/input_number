@@ -68,6 +68,15 @@
                 "name": "Zone 3 Run Minutes",
                 "step": 1.0,
                 "unit_of_measurement": "min"
+            },
+            {
+                "id": "irrigation_precip_percent_on_threshold",
+                "max": 100.0,
+                "min": 0.0,
+                "mode": "slider",
+                "name": "Irrigation Enable Below Precip",
+                "step": 5.0,
+                "unit_of_measurement": "%"
             }
         ]
     },

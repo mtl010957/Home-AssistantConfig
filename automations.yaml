@@ -134,8 +134,11 @@
 - id: '1533419985023'
   alias: Irrigation Run
   trigger:
-  - at: 06:30:00
-    platform: time
+  - platform: template
+    value_template: '{{ states(''sensor.time'') == state_attr(''input_datetime.irrigation_start_time'',
+      ''timestamp'') | timestamp_custom(''%H:%M'', False) }}
+
+      '
   condition:
   - condition: state
     entity_id: switch.irrigation_control_enable
@@ -178,7 +181,7 @@
   trigger:
   - platform: template
     value_template: '{{ now().month > 4 and now().month < 9 and states(''sensor.precipitation_probability_today'')
-      | float <= 40 }}'
+      | int < states(''input_number.irrigation_enable_below_precip'') | int }}'
   condition: []
   action:
   - entity_id: switch.irrigation_control_enable
@@ -188,7 +191,7 @@
   trigger:
   - platform: template
     value_template: '{{ (now().month <= 4 or now().month >=9) or states(''sensor.precipitation_probability_today'')
-      | float > 40 }}'
+      | int >= states(''input_number.irrigation_enable_below_precip'') | int }}'
   condition: []
   action:
   - entity_id: switch.irrigation_control_enable
@@ -196,11 +199,10 @@
 - id: '1548862723503'
   alias: Power On Utility
   trigger:
-  - entity_id: switch.utility_power
-    for: 00:02
-    from: 'on'
+  - entity_id: sensor.ups_status
+    for: 00:00:10
     platform: state
-    to: 'off'
+    to: Online
   condition: []
   action:
   - data: {}

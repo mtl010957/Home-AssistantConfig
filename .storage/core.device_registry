@@ -1688,6 +1688,27 @@
                 "name_by_user": null,
                 "sw_version": "28",
                 "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "entry_type": null,
+                "id": "4565c2edfb9842a1896dd5139be87fe1",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "a4cf12d9e8e9"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "nm05_sv1",
+                "name_by_user": null,
+                "sw_version": "esphome v1.15.0-dev May 29 2020, 19:11:43",
+                "via_device_id": null
             }
         ]
     },

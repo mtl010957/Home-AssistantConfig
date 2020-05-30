@@ -12,9 +12,18 @@ include:
     - binary_sensor.family_room_smoke_detected
     - binary_sensor.family_room_smoke_alarm_test
     - binary_sensor.front_door
+    - binary_sensor.front_yard_camera_front_porch_motion_detected
+    - binary_sensor.front_yard_camera_front_porch_person_detected
+    - binary_sensor.front_yard_camera_front_porch_sound_detected
+    - binary_sensor.front_yard_camera_front_porch_porch_activity
+    - binary_sensor.front_yard_camera_front_porch_sidewalk_and_yard_activity
+    - binary_sensor.front_yard_camera_front_porch_street_activity
     - binary_sensor.garage_door
     - binary_sensor.garage_in_door
     - binary_sensor.garage_motion
+    - binary_sensor.living_room_camera_motion_detected
+    - binary_sensor.living_room_camera_sound_detected
+    - binary_sensor.living_room_camera_person_detected
     - binary_sensor.master_bedroom_motion
     - binary_sensor.family_room_motion
     - binary_sensor.updater

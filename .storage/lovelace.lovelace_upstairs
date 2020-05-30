@@ -191,9 +191,9 @@
                                             "min": 0,
                                             "name": "Black",
                                             "severity": {
-                                                "green": 50,
+                                                "green": 30,
                                                 "red": 0,
-                                                "yellow": 15
+                                                "yellow": 10
                                             },
                                             "type": "gauge"
                                         },
@@ -203,9 +203,9 @@
                                             "min": 0,
                                             "name": "Cyan",
                                             "severity": {
-                                                "green": 50,
+                                                "green": 30,
                                                 "red": 0,
-                                                "yellow": 15
+                                                "yellow": 10
                                             },
                                             "type": "gauge"
                                         },
@@ -215,9 +215,9 @@
                                             "min": 0,
                                             "name": "Magenta",
                                             "severity": {
-                                                "green": 50,
+                                                "green": 30,
                                                 "red": 0,
-                                                "yellow": 15
+                                                "yellow": 10
                                             },
                                             "type": "gauge"
                                         },
@@ -227,9 +227,9 @@
                                             "min": 0,
                                             "name": "PBlack",
                                             "severity": {
-                                                "green": 50,
+                                                "green": 30,
                                                 "red": 0,
-                                                "yellow": 15
+                                                "yellow": 10
                                             },
                                             "type": "gauge"
                                         },
@@ -239,9 +239,9 @@
                                             "min": 0,
                                             "name": "Yellow",
                                             "severity": {
-                                                "green": 50,
+                                                "green": 30,
                                                 "red": 0,
-                                                "yellow": 15
+                                                "yellow": 10
                                             },
                                             "type": "gauge"
                                         }
