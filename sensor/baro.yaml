@@ -3,10 +3,15 @@
     corrected_barometer:
       friendly_name: "Corrected Barometer"
       unit_of_measurement: 'hPa'
-      value_template: "{{ (states('sensor.family_room_pressure') | float) / (1 - ((0.0065 * 289.0) / ((((states('sensor.family_room_temperature') | float) - 32.0) * 5.0/9.0) + (0.0065 * 289.0) + 273.15)))**5.257 | round(1) }}"
+      value_template: >
+        {% if states('sensor.family_room_pressure') | float > 800.0 -%}
+          {{ (states('sensor.family_room_pressure') | float) / (1 - ((0.0065 * 289.0) / ((((states('sensor.family_room_temperature') | float) - 32.0) * 5.0/9.0) + (0.0065 * 289.0) + 273.15)))**5.257 | round(1) }}
+        {%- else -%}
+          {{ (state_attr('weather.kptk_daynight','pressure') | float / 0.0295) | round(1) }}
+        {%- endif %}
       icon_template: "mdi:gauge"
     corrected_barometer_inhg:
       friendly_name: "Corrected Barometer (inHg)"
       unit_of_measurement: 'inHg'
-      value_template: "{{ ((states('sensor.family_room_pressure') | float) / (1 - ((0.0065 * 289.0) / ((((states('sensor.family_room_temperature') | float) - 32.0) * 5.0/9.0) + (0.0065 * 289.0) + 273.15)))**5.257 * 0.0295) | round(2) }}"
+      value_template: "{{ (states('sensor.corrected_barometer') | float * 0.0295) | round(2) }}"
       icon_template: "mdi:gauge"
