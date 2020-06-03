@@ -1,17 +1,16 @@
 - id: '1497804129147'
-  alias: House fan off below 80 degrees
+  alias: House fan off below setpoint
   trigger:
-  - below: '80'
-    entity_id: sensor.ah02_th_temperature
-    for: 00:02:00
+  - below: '0'
+    entity_id: sensor.master_bedroom_temperature
+    for: 00:00:10
     platform: numeric_state
-  condition:
-  - condition: state
-    entity_id: switch.aeotec_micro_switch_2nd_edition_switch
-    state: 'on'
+    value_template: '{{ states(''sensor.master_bedroom_temperature'') | float - states(''input_number.house_fan_off_below_temperature'')
+      | float }}'
+  condition: []
   action:
-  - data:
-      entity_id: fan.house_fan
+  - data: {}
+    entity_id: fan.house_fan
     service: fan.turn_off
 - id: '1500947016373'
   alias: Camera Motion and Floods On Armed Away
@@ -939,3 +938,15 @@
   - data: {}
     entity_id: all
     service: cover.open_cover_tilt
+- id: '1591192185107'
+  alias: Family Room Ceiling Fan Stop After Time
+  description: ''
+  trigger:
+  - platform: template
+    value_template: '{{ states(''sensor.time'') == state_attr(''input_datetime.family_room_ceiling_fan_stop_time'',
+      ''timestamp'') | timestamp_custom(''%H:%M'', False) }}'
+  condition: []
+  action:
+  - data: {}
+    entity_id: fan.family_room_ceiling_fan
+    service: fan.turn_off

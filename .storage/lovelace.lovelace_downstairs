@@ -40,17 +40,31 @@
                         {
                             "cards": [
                                 {
-                                    "entity": "fan.family_room_ceiling_fan",
-                                    "hold_action": {
-                                        "action": "more-info"
-                                    },
-                                    "name": "Fam Rm Ceiling Fan",
-                                    "show_icon": true,
-                                    "show_name": true,
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "type": "button"
+                                    "cards": [
+                                        {
+                                            "entity": "fan.family_room_ceiling_fan",
+                                            "hold_action": {
+                                                "action": "more-info"
+                                            },
+                                            "name": "Fam Rm Ceiling Fan",
+                                            "show_icon": true,
+                                            "show_name": true,
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "type": "button"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "entity": "input_datetime.family_room_ceiling_fan_stop_time",
+                                                    "name": "Off"
+                                                }
+                                            ],
+                                            "type": "entities"
+                                        }
+                                    ],
+                                    "type": "vertical-stack"
                                 },
                                 {
                                     "entity": "switch.family_room_ceiling_fan_light",

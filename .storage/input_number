@@ -77,6 +77,15 @@
                 "name": "Irrigation Enable Below Precip",
                 "step": 5.0,
                 "unit_of_measurement": "%"
+            },
+            {
+                "id": "house_fan_off_below_temperature",
+                "max": 100.0,
+                "min": 60.0,
+                "mode": "slider",
+                "name": "House Fan Off Below Temperature",
+                "step": 1.0,
+                "unit_of_measurement": "\u00b0F"
             }
         ]
     },

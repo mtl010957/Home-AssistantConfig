@@ -263,16 +263,31 @@
                     "badges": [],
                     "cards": [
                         {
-                            "entity": "fan.house_fan",
-                            "hold_action": {
-                                "action": "more-info"
-                            },
-                            "show_icon": true,
-                            "show_name": true,
-                            "tap_action": {
-                                "action": "toggle"
-                            },
-                            "type": "button"
+                            "cards": [
+                                {
+                                    "entity": "fan.house_fan",
+                                    "hold_action": {
+                                        "action": "more-info"
+                                    },
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "button"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "input_number.house_fan_off_below_temperature",
+                                            "name": "Off Below"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "type": "entities"
+                                }
+                            ],
+                            "type": "vertical-stack"
                         }
                     ],
                     "path": "attic",
