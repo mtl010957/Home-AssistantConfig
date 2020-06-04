@@ -83,7 +83,7 @@
                 "max": 100.0,
                 "min": 60.0,
                 "mode": "slider",
-                "name": "House Fan Off Below Temperature",
+                "name": "Fan Off Below Temp",
                 "step": 1.0,
                 "unit_of_measurement": "\u00b0F"
             }

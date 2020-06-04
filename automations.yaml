@@ -5,7 +5,7 @@
     entity_id: sensor.master_bedroom_temperature
     for: 00:00:10
     platform: numeric_state
-    value_template: '{{ states(''sensor.master_bedroom_temperature'') | float - states(''input_number.house_fan_off_below_temperature'')
+    value_template: '{{ states(''sensor.master_bedroom_temperature'') | float - states(''input_number.fan_off_below_temp'')
       | float }}'
   condition: []
   action:

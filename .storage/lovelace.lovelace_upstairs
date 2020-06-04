@@ -279,7 +279,7 @@
                                 {
                                     "entities": [
                                         {
-                                            "entity": "input_number.house_fan_off_below_temperature",
+                                            "entity": "input_number.fan_off_below_temp",
                                             "name": "Off Below"
                                         }
                                     ],

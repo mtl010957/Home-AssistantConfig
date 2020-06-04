@@ -6744,22 +6744,6 @@
                 "device_class": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "input_number.house_fan_off_below_temperature",
-                "icon": null,
-                "name": null,
-                "original_icon": null,
-                "original_name": "House Fan Off Below Temperature",
-                "platform": "input_number",
-                "supported_features": 0,
-                "unique_id": "house_fan_off_below_temperature",
-                "unit_of_measurement": null
-            },
-            {
-                "capabilities": null,
-                "config_entry_id": null,
-                "device_class": null,
-                "device_id": null,
-                "disabled_by": null,
                 "entity_id": "input_datetime.family_room_ceiling_fan_stop_time",
                 "icon": null,
                 "name": null,
@@ -6785,6 +6769,22 @@
                 "supported_features": 0,
                 "unique_id": "1591192185107",
                 "unit_of_measurement": null
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "input_number.fan_off_below_temp",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": "Fan Off Below Temp",
+                "platform": "input_number",
+                "supported_features": 0,
+                "unique_id": "house_fan_off_below_temperature",
+                "unit_of_measurement": "\u00b0F"
             }
         ]
     },
