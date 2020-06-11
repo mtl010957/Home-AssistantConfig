@@ -1,5 +1,6 @@
 {
     "data": {
+        "deleted_devices": [],
         "devices": [
             {
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
@@ -192,7 +193,7 @@
                 "model": "",
                 "name": "HACS",
                 "name_by_user": null,
-                "sw_version": "1.0.3",
+                "sw_version": "1.1.0",
                 "via_device_id": null
             },
             {
@@ -1429,7 +1430,7 @@
                 "model": "Pixel 2",
                 "name": "Pixel 2",
                 "name_by_user": null,
-                "sw_version": "29",
+                "sw_version": "30",
                 "via_device_id": null
             },
             {
@@ -1708,6 +1709,27 @@
                 "name": "nm05_sv1",
                 "name_by_user": null,
                 "sw_version": "esphome v1.15.0-dev May 29 2020, 19:11:43",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "entry_type": null,
+                "id": "59d08600fb6f48069c10167786877ed2",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "fcf5c4948465"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_D1_MINI",
+                "name": "dm07_reb1",
+                "name_by_user": null,
+                "sw_version": "esphome v1.15.0-dev Jun  4 2020, 11:55:57",
                 "via_device_id": null
             }
         ]

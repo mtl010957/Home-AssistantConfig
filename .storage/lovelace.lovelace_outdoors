@@ -342,33 +342,6 @@
                     "badges": [],
                     "cards": [
                         {
-                            "aspect_ratio": "0%",
-                            "camera_image": "camera.3629_cam_3",
-                            "entities": [
-                                {
-                                    "entity": "switch.foscam_cam3_motion"
-                                },
-                                {
-                                    "entity": "camera.3629_cam_3",
-                                    "icon": "mdi:image-album",
-                                    "tap_action": {
-                                        "action": "url",
-                                        "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam3/C1_00626E82585D/snap/index.html"
-                                    }
-                                },
-                                {
-                                    "entity": "camera.3629_cam_3",
-                                    "icon": "mdi:movie",
-                                    "tap_action": {
-                                        "action": "url",
-                                        "url_path": "https://ha.mtl-svn.dyndns-home.com/html/3629cam3/C1_00626E82585D/record/index.html"
-                                    }
-                                }
-                            ],
-                            "title": "Caravan",
-                            "type": "picture-glance"
-                        },
-                        {
                             "cards": [
                                 {
                                     "detail": 2,

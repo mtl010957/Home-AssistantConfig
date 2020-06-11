@@ -90,6 +90,15 @@
                                     "camera_image": "camera.3629_cam_3",
                                     "entities": [
                                         {
+                                            "entity": "light.family_room_lamp_bulb_1"
+                                        },
+                                        {
+                                            "entity": "light.family_room_link_bulb_1"
+                                        },
+                                        {
+                                            "entity": "fan.family_room_ceiling_fan"
+                                        },
+                                        {
                                             "entity": "switch.foscam_cam3_motion"
                                         },
                                         {
@@ -109,7 +118,7 @@
                                             }
                                         }
                                     ],
-                                    "title": "Caravan",
+                                    "title": "Family Room",
                                     "type": "picture-glance"
                                 },
                                 {
