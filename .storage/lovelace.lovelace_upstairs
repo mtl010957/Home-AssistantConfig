@@ -178,6 +178,25 @@
                             "type": "light"
                         },
                         {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.office_motion"
+                                },
+                                {
+                                    "entity": "binary_sensor.office_motion_tamper"
+                                },
+                                {
+                                    "entity": "sensor.office_motion_sensor_battery_level"
+                                },
+                                {
+                                    "entity": "sensor.office_motion_sensor_temperature"
+                                }
+                            ],
+                            "show_name": false,
+                            "title": "Office Motion",
+                            "type": "glance"
+                        },
+                        {
                             "cards": [
                                 {
                                     "entity": "sensor.epson_xp_7100_series",

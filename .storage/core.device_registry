@@ -193,7 +193,7 @@
                 "model": "",
                 "name": "HACS",
                 "name_by_user": null,
-                "sw_version": "1.1.0",
+                "sw_version": "1.1.2",
                 "via_device_id": null
             },
             {
@@ -470,7 +470,7 @@
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "area_id": "316107820cce4630be06041fc14816e3",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
@@ -486,7 +486,7 @@
                 "manufacturer": "Linear (Nortek Security Control LLC)",
                 "model": "WAPIRZ-1 Motion Sensor",
                 "name": "Linear (Nortek Security Control LLC) WAPIRZ-1 Motion Sensor",
-                "name_by_user": "Family Room Motion Sensor",
+                "name_by_user": "Office Motion Sensor",
                 "sw_version": null,
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
             },
@@ -1691,7 +1691,7 @@
                 "via_device_id": null
             },
             {
-                "area_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
@@ -1707,7 +1707,7 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm05_sv1",
-                "name_by_user": null,
+                "name_by_user": "Family Room NW-SW Blinds",
                 "sw_version": "esphome v1.15.0-dev May 29 2020, 19:11:43",
                 "via_device_id": null
             },

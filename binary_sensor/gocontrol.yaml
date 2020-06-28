@@ -41,16 +41,16 @@
       device_class: problem
       value_template: >-
         {{ states("sensor.garage_inside_door_sensor_alarm_level")|int == 255 and states("sensor.garage_inside_door_sensor_burglar")|int == 3 }}
-    family_room_motion:
-      friendly_name: Family Room Motion
+    office_motion:
+      friendly_name: Office Motion
       device_class: motion
       value_template: >-
-        {{ states("sensor.family_room_motion_sensor_alarm_level")|int == 255 and states("sensor.family_room_motion_sensor_burglar")|int == 2 }}
-    family_room_motion_tamper:
-      friendly_name: Family Room Motion Tamper
+        {{ states("sensor.office_motion_sensor_alarm_level")|int == 255 and states("sensor.office_motion_sensor_burglar")|int == 2 }}
+    office_motion_tamper:
+      friendly_name: Office Motion Tamper
       device_class: problem
       value_template: >-
-        {{ states("sensor.family_room_motion_sensor_alarm_level")|int == 255 and states("sensor.family_room_motion_sensor_burglar")|int == 3 }}
+        {{ states("sensor.office_motion_sensor_alarm_level")|int == 255 and states("sensor.office_motion_sensor_burglar")|int == 3 }}
     master_bedroom_motion:
       friendly_name: Master Bedroom Motion
       device_class: motion

@@ -167,25 +167,6 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "binary_sensor.family_room_motion"
-                                },
-                                {
-                                    "entity": "binary_sensor.family_room_motion_tamper"
-                                },
-                                {
-                                    "entity": "sensor.family_room_motion_sensor_battery_level"
-                                },
-                                {
-                                    "entity": "sensor.family_room_motion_sensor_temperature"
-                                }
-                            ],
-                            "show_name": false,
-                            "title": "Family Room Motion",
-                            "type": "glance"
-                        },
-                        {
-                            "entities": [
-                                {
                                     "entity": "binary_sensor.back_door"
                                 },
                                 {

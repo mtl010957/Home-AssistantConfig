@@ -185,7 +185,10 @@
                                 },
                                 {
                                     "entity": "switch.garage_latch",
-                                    "icon": "mdi:lock"
+                                    "icon": "mdi:lock",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    }
                                 }
                             ],
                             "show_name": false,
