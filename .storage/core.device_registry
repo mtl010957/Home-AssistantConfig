@@ -3,7 +3,7 @@
         "deleted_devices": [],
         "devices": [
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "area_id": null,
                 "config_entries": [
                     "3cbe8ba6a37a444886eddeb49d953cf7"
                 ],
@@ -1663,7 +1663,7 @@
                     ]
                 ],
                 "manufacturer": "ZHA",
-                "model": "Digi XBee S2C, XBee 3 radios",
+                "model": "XBee = Digi XBee Zigbee radios: Digi XBee Series 2, 2C, 3",
                 "name": "Zigbee Coordinator",
                 "name_by_user": null,
                 "sw_version": null,
@@ -1730,6 +1730,27 @@
                 "name": "dm07_reb1",
                 "name_by_user": null,
                 "sw_version": "esphome v1.15.0-dev Jun  4 2020, 11:55:57",
+                "via_device_id": null
+            },
+            {
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "config_entries": [
+                    "3cbe8ba6a37a444886eddeb49d953cf7"
+                ],
+                "connections": [],
+                "entry_type": null,
+                "id": "264905e4581b4bfbbbedc9e22861547b",
+                "identifiers": [
+                    [
+                        "cast",
+                        "0aa5541e317fe8b6a7097a1ae56f9bc4"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "MIBOX4",
+                "name": "Family Room TV",
+                "name_by_user": null,
+                "sw_version": null,
                 "via_device_id": null
             }
         ]
