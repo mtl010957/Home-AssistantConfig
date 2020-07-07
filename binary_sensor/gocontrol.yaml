@@ -51,14 +51,14 @@
       device_class: problem
       value_template: >-
         {{ states("sensor.office_motion_sensor_alarm_level")|int == 255 and states("sensor.office_motion_sensor_burglar")|int == 3 }}
-    master_bedroom_motion:
-      friendly_name: Master Bedroom Motion
+    main_bedroom_motion:
+      friendly_name: Main Bedroom Motion
       device_class: motion
       value_template: >-
-        {{ states("sensor.master_bedroom_motion_sensor_alarm_level")|int == 255 and states("sensor.master_bedroom_motion_sensor_burglar")|int == 2 }}
-    master_bedroom_motion_tamper:
-      friendly_name: Master Bedroom Motion Tamper
+        {{ states("sensor.main_bedroom_motion_sensor_alarm_level")|int == 255 and states("sensor.main_bedroom_motion_sensor_burglar")|int == 2 }}
+    main_bedroom_motion_tamper:
+      friendly_name: Main Bedroom Motion Tamper
       device_class: problem
       value_template: >-
-        {{ states("sensor.master_bedroom_motion_sensor_alarm_level")|int == 255 and states("sensor.master_bedroom_motion_sensor_burglar")|int == 3 }}
+        {{ states("sensor.main_bedroom_motion_sensor_alarm_level")|int == 255 and states("sensor.main_bedroom_motion_sensor_burglar")|int == 3 }}
 

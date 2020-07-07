@@ -2,10 +2,10 @@
   alias: House fan off below setpoint
   trigger:
   - below: '0'
-    entity_id: sensor.master_bedroom_temperature
+    entity_id: sensor.main_bedroom_temperature
     for: 00:00:10
     platform: numeric_state
-    value_template: '{{ states(''sensor.master_bedroom_temperature'') | float - states(''input_number.fan_off_below_temp'')
+    value_template: '{{ states(''sensor.main_bedroom_temperature'') | float - states(''input_number.fan_off_below_temp'')
       | float }}'
   condition: []
   action:
@@ -183,8 +183,10 @@
       | int < states(''input_number.irrigation_enable_below_precip'') | int }}'
   condition: []
   action:
-  - entity_id: switch.irrigation_control_enable
-    service: switch.turn_on
+  - device_id: 57673a6ec02649a3a76d73e5d17ca744
+    domain: switch
+    entity_id: switch.irrigation_control_enable
+    type: turn_on
 - id: '1548612882816'
   alias: Irrigation Disable
   trigger:
@@ -193,8 +195,10 @@
       | int >= states(''input_number.irrigation_enable_below_precip'') | int }}'
   condition: []
   action:
-  - entity_id: switch.irrigation_control_enable
-    service: switch.turn_off
+  - device_id: 57673a6ec02649a3a76d73e5d17ca744
+    domain: switch
+    entity_id: switch.irrigation_control_enable
+    type: turn_off
 - id: '1548862723503'
   alias: Power On Utility
   trigger:
@@ -456,10 +460,10 @@
       title: Family Room Motion Detected
     service: notify.hangouts_notify
 - id: '1572630414451'
-  alias: Security Notify Master Bedrom Motion
+  alias: Security Notify Main Bedroom Motion
   description: ''
   trigger:
-  - entity_id: binary_sensor.master_bedroom_motion
+  - entity_id: binary_sensor.main_bedroom_motion
     platform: state
     to: 'on'
   condition:
@@ -468,8 +472,8 @@
     state: armed_away
   action:
   - data:
-      message: Motion has been detected in the Master Bedroom
-      title: Master Bedroom Motion Detected
+      message: Motion has been detected in the Main Bedroom
+      title: Main Bedroom Motion Detected
     service: notify.hangouts_notify
 - id: '1572631200037'
   alias: Notify Temperature Low Office
@@ -590,7 +594,7 @@
   description: ''
   trigger:
   - platform: template
-    value_template: '{{ states(''sensor.master_bedroom_humidity'') | float > states(''sensor.humidifier_off'')
+    value_template: '{{ states(''sensor.main_bedroom_humidity'') | float > states(''sensor.humidifier_off'')
       | float  }}'
   condition: []
   action:
@@ -601,7 +605,7 @@
   description: ''
   trigger:
   - platform: template
-    value_template: '{{ states(''sensor.master_bedroom_humidity'') | float < states(''sensor.humidifier_on'')
+    value_template: '{{ states(''sensor.main_bedroom_humidity'') | float < states(''sensor.humidifier_on'')
       | float  }}'
   condition:
   - after: '22:00:00'
@@ -618,7 +622,7 @@
     platform: time
   condition:
   - condition: template
-    value_template: '{{ states(''sensor.master_bedroom_humidity'') | float < states(''sensor.humidifier_on'')
+    value_template: '{{ states(''sensor.main_bedroom_humidity'') | float < states(''sensor.humidifier_on'')
       | float }}'
   action:
   - entity_id: switch.humidifier_power
@@ -881,7 +885,7 @@
   trigger:
   - device_id: 46b35f49b60e40bdb51cb453517d898c
     domain: binary_sensor
-    entity_id: binary_sensor.fan_remote_2h
+    entity_id: binary_sensor.fan_remote_4h
     platform: device
     type: turned_on
   condition: []
@@ -950,3 +954,18 @@
   - data: {}
     entity_id: fan.family_room_ceiling_fan
     service: fan.turn_off
+- id: '1594043498917'
+  alias: Living Room Blinds Remote 100%
+  description: ''
+  trigger:
+  - device_id: 46b35f49b60e40bdb51cb453517d898c
+    domain: binary_sensor
+    entity_id: binary_sensor.fan_remote_2h
+    platform: device
+    type: turned_on
+  condition: []
+  action:
+  - data:
+      tilt_position: 100
+    entity_id: cover.living_room_blinds
+    service: cover.set_cover_tilt_position

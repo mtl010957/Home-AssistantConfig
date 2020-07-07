@@ -10,20 +10,20 @@
                             "cards": [
                                 {
                                     "detail": 2,
-                                    "entity": "sensor.master_bedroom_humidity",
+                                    "entity": "sensor.main_bedroom_humidity",
                                     "graph": "line",
                                     "name": "Humidity",
                                     "type": "sensor"
                                 },
                                 {
                                     "detail": 2,
-                                    "entity": "sensor.master_bedroom_temperature",
+                                    "entity": "sensor.main_bedroom_temperature",
                                     "graph": "line",
                                     "name": "Temperature",
                                     "type": "sensor"
                                 }
                             ],
-                            "title": "Master Bedroom",
+                            "title": "Main Bedroom",
                             "type": "horizontal-stack"
                         },
                         {
@@ -67,7 +67,7 @@
                                     "type": "light"
                                 },
                                 {
-                                    "entity": "fan.master_bedroom_ceiling_fan",
+                                    "entity": "fan.main_bedroom_ceiling_fan",
                                     "hold_action": {
                                         "action": "more-info"
                                     },
@@ -85,12 +85,12 @@
                         {
                             "cards": [
                                 {
-                                    "entity": "light.master_bedroom_se_ceiling_lights",
+                                    "entity": "light.main_bedroom_se_ceiling_lights",
                                     "name": "MBR SE Ceiling Lights",
                                     "type": "light"
                                 },
                                 {
-                                    "entity": "light.master_bedroom_nw_ceiling_lights",
+                                    "entity": "light.main_bedroom_nw_ceiling_lights",
                                     "name": "MBR NW Ceiling Lights",
                                     "type": "light"
                                 }
@@ -100,20 +100,20 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "binary_sensor.master_bedroom_motion"
+                                    "entity": "binary_sensor.main_bedroom_motion"
                                 },
                                 {
-                                    "entity": "binary_sensor.master_bedroom_motion_tamper"
+                                    "entity": "binary_sensor.main_bedroom_motion_tamper"
                                 },
                                 {
-                                    "entity": "sensor.master_bedroom_motion_sensor_battery_level"
+                                    "entity": "sensor.main_bedroom_motion_sensor_battery_level"
                                 },
                                 {
-                                    "entity": "sensor.master_bedroom_motion_sensor_temperature"
+                                    "entity": "sensor.main_bedroom_motion_sensor_temperature"
                                 }
                             ],
                             "show_name": false,
-                            "title": "Master Bedroom Motion",
+                            "title": "Main Bedroom Motion",
                             "type": "glance"
                         },
                         {
@@ -147,8 +147,8 @@
                             "type": "glance"
                         }
                     ],
-                    "path": "master-bedroom",
-                    "title": "Master Bedroom"
+                    "path": "main-bedroom",
+                    "title": "Main Bedroom"
                 },
                 {
                     "badges": [],

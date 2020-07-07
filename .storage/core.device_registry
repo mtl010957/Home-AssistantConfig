@@ -276,7 +276,7 @@
                 "manufacturer": "Linear (Nortek Security Control LLC)",
                 "model": "PD300Z-2 Plug-in Dimmer Module",
                 "name": "Linear (Nortek Security Control LLC) PD300Z-2 Plug-in Dimmer Module",
-                "name_by_user": "Master Bedroom SE Ceiling Lights",
+                "name_by_user": "Main Bedroom SE Ceiling Lights",
                 "sw_version": null,
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
             },
@@ -297,7 +297,7 @@
                 "manufacturer": "Linear (Nortek Security Control LLC)",
                 "model": "PD300Z-2 Plug-in Dimmer Module",
                 "name": "Linear (Nortek Security Control LLC) PD300Z-2 Plug-in Dimmer Module",
-                "name_by_user": "Master Bedroom NW Ceiling Lights",
+                "name_by_user": "Main Bedroom NW Ceiling Lights",
                 "sw_version": null,
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
             },
@@ -339,7 +339,7 @@
                 "manufacturer": "Jasco Products",
                 "model": "14287 Fan Control Switch",
                 "name": "Jasco Products 14287 Fan Control Switch",
-                "name_by_user": "Master Bedroom Ceiling Fan",
+                "name_by_user": "Main Bedroom Ceiling Fan",
                 "sw_version": null,
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
             },
@@ -528,7 +528,7 @@
                 "manufacturer": "Linear (Nortek Security Control LLC)",
                 "model": "WAPIRZ-1 Motion Sensor",
                 "name": "Linear (Nortek Security Control LLC) WAPIRZ-1 Motion Sensor",
-                "name_by_user": "Master Bedroom Motion Sensor",
+                "name_by_user": "Main Bedroom Motion Sensor",
                 "sw_version": null,
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
             },
@@ -1219,7 +1219,7 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm11_th",
-                "name_by_user": "Master Bedroom Climate",
+                "name_by_user": "Main Bedroom Climate",
                 "sw_version": "esphome v1.15.0-dev May  4 2020, 17:12:13",
                 "via_device_id": null
             },

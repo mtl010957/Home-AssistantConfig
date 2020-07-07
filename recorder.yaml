@@ -1,5 +1,5 @@
 auto_purge: true
-purge_keep_days: 2
+purge_keep_days: 3
 db_url: !secret recorder_db_url
 include:
   entities:
@@ -24,7 +24,7 @@ include:
     - binary_sensor.living_room_camera_motion_detected
     - binary_sensor.living_room_camera_sound_detected
     - binary_sensor.living_room_camera_person_detected
-    - binary_sensor.master_bedroom_motion
+    - binary_sensor.main_bedroom_motion
     - binary_sensor.family_room_motion
     - binary_sensor.updater
     - binary_sensor.upstairs_co_detected
@@ -48,7 +48,7 @@ include:
     # fans
     - fan.house_fan
     - fan.family_room_ceiling_fan
-    - fan.master_bedroom_ceiling_fan
+    - fan.main_bedroom_ceiling_fan
     # lights
     - light.dining_room_ceiling_light
     - light.living_room_lamp_dimmer
@@ -62,8 +62,8 @@ include:
     - light.guest_room_lamp_bulb
     - light.office_light_bulb
     - light.living_room_lamp_dimmer
-    - light.master_bedroom_nw_ceiling_lights
-    - light.master_bedroom_se_ceiling_lights
+    - light.main_bedroom_nw_ceiling_lights
+    - light.main_bedroom_se_ceiling_lights
     # persons
     - person.michael_loeffler
     - person.susan_loeffler
@@ -90,8 +90,8 @@ include:
     - sensor.garage_temperature
     - sensor.humidifier_off
     - sensor.humidifier_on
-    - sensor.master_bedroom_humidity
-    - sensor.master_bedroom_temperature
+    - sensor.main_bedroom_humidity
+    - sensor.main_bedroom_temperature
     - sensor.outdoor_humidity
     - sensor.outdoor_temperature
     - sensor.ups_status
