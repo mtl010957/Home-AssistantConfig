@@ -1,0 +1,35 @@
+- platform: mqtt
+  name: "ESPRouter E7CC33 RSSI"
+  state_topic: "WiFi/ESPRouter_e7cc33/system/Topology"
+  device_class: "signal_strength"
+  unit_of_measurement: 'dBm'
+  value_template: "{{ value_json['nodeinfo']['rssi'] }}"
+  availability_topic: "WiFi/ESPRouter_e7cc33/system/status"
+- platform: mqtt
+  name: "ESPRouter E7CC33 Stations"
+  state_topic: "WiFi/ESPRouter_e7cc33/system/Topology"
+  value_template: "{{ value_json['nodeinfo']['no_stas'] }}"
+  availability_topic: "WiFi/ESPRouter_e7cc33/system/status"
+- platform: mqtt
+  name: "ESPRouter E7CC33 IP"
+  state_topic: "WiFi/ESPRouter_e7cc33/system/Topology"
+  value_template: "{{ value_json['nodeinfo']['sta_ip'] }}"
+  availability_topic: "WiFi/ESPRouter_e7cc33/system/status"
+- platform: mqtt
+  name: "ESPRouter E7CC33 Mesh Level"
+  state_topic: "WiFi/ESPRouter_e7cc33/system/Topology"
+  value_template: "{{ value_json['nodeinfo']['mesh_level'] }}"
+  availability_topic: "WiFi/ESPRouter_e7cc33/system/status"
+- platform: mqtt
+  name: "ESPRouter E7CC33 Uptime"
+  state_topic: "WiFi/ESPRouter_e7cc33/system/Uptime"
+  unit_of_measurement: 's'
+  availability_topic: "WiFi/ESPRouter_e7cc33/system/status"
+- platform: mqtt
+  name: "ESPRouter E7CC33 Bytes In"
+  state_topic: "WiFi/ESPRouter_e7cc33/system/Bin"
+  availability_topic: "WiFi/ESPRouter_e7cc33/system/status"
+- platform: mqtt
+  name: "ESPRouter E7CC33 Bytes Out"
+  state_topic: "WiFi/ESPRouter_e7cc33/system/Bout"
+  availability_topic: "WiFi/ESPRouter_e7cc33/system/status"

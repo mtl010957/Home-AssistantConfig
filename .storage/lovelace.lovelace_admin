@@ -34,6 +34,12 @@
                         },
                         {
                             "entity": "sensor.ups_input_voltage"
+                        },
+                        {
+                            "entity": "binary_sensor.esprouter_e7cc33_online"
+                        },
+                        {
+                            "entity": "sensor.esprouter_e7cc33_stations"
                         }
                     ],
                     "cards": [
@@ -148,6 +154,38 @@
                                     "entity": "sensor.pixel_2_wifi_connection"
                                 }
                             ],
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.esprouter_e7cc33_rssi"
+                                },
+                                {
+                                    "entity": "sensor.esprouter_e7cc33_ip",
+                                    "icon": "mdi:network"
+                                },
+                                {
+                                    "entity": "sensor.esprouter_e7cc33_mesh_level",
+                                    "icon": "mdi:router"
+                                },
+                                {
+                                    "entity": "sensor.esprouter_e7cc33_stations"
+                                },
+                                {
+                                    "entity": "sensor.esprouter_e7cc33_uptime",
+                                    "icon": "mdi:clock"
+                                },
+                                {
+                                    "entity": "sensor.esprouter_e7cc33_bytes_in",
+                                    "icon": "mdi:network"
+                                },
+                                {
+                                    "entity": "sensor.esprouter_e7cc33_bytes_out",
+                                    "icon": "mdi:network"
+                                }
+                            ],
+                            "title": "ESPRouter E7CC33",
                             "type": "entities"
                         }
                     ],

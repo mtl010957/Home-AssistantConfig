@@ -30,6 +30,7 @@ include:
     - binary_sensor.upstairs_co_detected
     - binary_sensor.upstairs_smoke_detected
     - binary_sensor.upstairs_smoke_alarm_test
+    - binary_sensor.esprouter_e7cc33_online
     # climate
     - climate.thermostat
     # covers
@@ -97,6 +98,8 @@ include:
     - sensor.ups_status
     - sensor.ups_input_voltage
     - sensor.upstairs_smoke_alarm_battery_level
+    - sensor.esprouter_e7cc33_stations
+    - sensor.esprouter_e7cc33_rssi
     # switches
     - switch.family_room_ceiling_fan_light
     - switch.living_room_lamp_module

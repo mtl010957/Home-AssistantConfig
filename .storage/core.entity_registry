@@ -6004,7 +6004,7 @@
                 "entity_id": "sensor.pixel_2_wifi_connection",
                 "icon": null,
                 "name": null,
-                "original_icon": "mdi:wifi-strength-1",
+                "original_icon": "mdi:wifi-strength-3",
                 "original_name": "Pixel 2 Wifi Connection",
                 "platform": "mobile_app",
                 "supported_features": 0,
