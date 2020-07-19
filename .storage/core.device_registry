@@ -1325,7 +1325,7 @@
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm01_sv1",
                 "name_by_user": "Living Room SE Blinds",
-                "sw_version": "esphome v1.15.0-dev Jul  7 2020, 11:33:08",
+                "sw_version": "esphome v1.15.0-dev Jul 17 2020, 11:16:55",
                 "via_device_id": null
             },
             {
@@ -1472,7 +1472,7 @@
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm02_sv1",
                 "name_by_user": "Living Room SE CTR Blinds",
-                "sw_version": "esphome v1.15.0-dev Jul  7 2020, 11:38:10",
+                "sw_version": "esphome v1.15.0-dev Jul 17 2020, 11:23:44",
                 "via_device_id": null
             },
             {
@@ -1493,7 +1493,7 @@
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm03_sv1",
                 "name_by_user": "Living Room CTR Blinds",
-                "sw_version": "esphome v1.15.0-dev Jul  7 2020, 11:50:18",
+                "sw_version": "esphome v1.15.0-dev Jul 17 2020, 11:28:56",
                 "via_device_id": null
             },
             {
@@ -1514,7 +1514,7 @@
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm04_sv1",
                 "name_by_user": "Living Room NW CTR Blinds",
-                "sw_version": "esphome v1.15.0-dev Jul  7 2020, 11:46:38",
+                "sw_version": "esphome v1.15.0-dev Jul 17 2020, 11:33:29",
                 "via_device_id": null
             },
             {
@@ -1535,7 +1535,7 @@
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm05_sv1",
                 "name_by_user": "Living Room NW Blinds",
-                "sw_version": "esphome v1.15.0-dev Jul  7 2020, 11:43:02",
+                "sw_version": "esphome v1.15.0-dev Jul 17 2020, 11:38:26",
                 "via_device_id": null
             },
             {

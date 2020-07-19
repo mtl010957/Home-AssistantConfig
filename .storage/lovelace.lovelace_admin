@@ -187,6 +187,71 @@
                             ],
                             "title": "ESPRouter E7CC33",
                             "type": "entities"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.living_room_nw_blinds_wifi_signal_strength",
+                                    "max": -50,
+                                    "min": -100,
+                                    "name": "LR NW",
+                                    "severity": {
+                                        "green": -70,
+                                        "red": -100,
+                                        "yellow": -80
+                                    },
+                                    "type": "gauge"
+                                },
+                                {
+                                    "entity": "sensor.living_room_nw_ctr_blinds_wifi_signal_strength",
+                                    "max": -50,
+                                    "min": -100,
+                                    "name": "LR NW-CTR",
+                                    "severity": {
+                                        "green": -70,
+                                        "red": -100,
+                                        "yellow": -80
+                                    },
+                                    "type": "gauge"
+                                },
+                                {
+                                    "entity": "sensor.living_room_ctr_blinds_wifi_signal_strength",
+                                    "max": -50,
+                                    "min": -100,
+                                    "name": "LR CTR",
+                                    "severity": {
+                                        "green": -70,
+                                        "red": -100,
+                                        "yellow": -80
+                                    },
+                                    "type": "gauge"
+                                },
+                                {
+                                    "entity": "sensor.living_room_se_ctr_blinds_wifi_signal_strength",
+                                    "max": -50,
+                                    "min": -100,
+                                    "name": "LR SE-CTR",
+                                    "severity": {
+                                        "green": -70,
+                                        "red": -100,
+                                        "yellow": -80
+                                    },
+                                    "type": "gauge"
+                                },
+                                {
+                                    "entity": "sensor.living_room_se_blinds_wifi_signal_strength",
+                                    "max": -50,
+                                    "min": -100,
+                                    "name": "LR SE",
+                                    "severity": {
+                                        "green": -70,
+                                        "red": -100,
+                                        "yellow": -80
+                                    },
+                                    "type": "gauge"
+                                }
+                            ],
+                            "type": "horizontal-stack"
                         }
                     ],
                     "path": "admin",
