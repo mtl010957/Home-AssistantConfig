@@ -4756,7 +4756,7 @@
                 "entity_id": "sensor.ups_battery_runtime",
                 "icon": null,
                 "name": null,
-                "original_icon": "mdi:timer",
+                "original_icon": "mdi:timer-outline",
                 "original_name": "Ups Battery Runtime",
                 "platform": "nut",
                 "supported_features": 0,
@@ -5908,7 +5908,7 @@
                 "entity_id": "sensor.pixel_2_battery_level",
                 "icon": null,
                 "name": null,
-                "original_icon": "mdi:battery-60",
+                "original_icon": "mdi:battery-90",
                 "original_name": "Pixel 2 Battery Level",
                 "platform": "mobile_app",
                 "supported_features": 0,
@@ -5924,7 +5924,7 @@
                 "entity_id": "sensor.pixel_2_battery_state",
                 "icon": null,
                 "name": null,
-                "original_icon": "mdi:battery-charging-60",
+                "original_icon": "mdi:battery-90",
                 "original_name": "Pixel 2 Battery State",
                 "platform": "mobile_app",
                 "supported_features": 0,
@@ -6915,7 +6915,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "e1efa85aced04f95bc58dc5f248bf376",
                 "device_class": null,
                 "device_id": "e0df26504d514ce2ae20e20ce379cd99",
@@ -6931,7 +6931,7 @@
                 "unit_of_measurement": "dB"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "e1efa85aced04f95bc58dc5f248bf376",
                 "device_class": null,
                 "device_id": "28c408aeffa1431ab8135271d9e05835",
@@ -6947,7 +6947,7 @@
                 "unit_of_measurement": "dB"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "e1efa85aced04f95bc58dc5f248bf376",
                 "device_class": null,
                 "device_id": "800d8ada96f04f2e95461f3f93c6d3a8",
@@ -6963,7 +6963,7 @@
                 "unit_of_measurement": "dB"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "e1efa85aced04f95bc58dc5f248bf376",
                 "device_class": null,
                 "device_id": "afeedf06916c460680efcd14027f18af",
@@ -6979,7 +6979,7 @@
                 "unit_of_measurement": "dB"
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": "e1efa85aced04f95bc58dc5f248bf376",
                 "device_class": null,
                 "device_id": "abf3c9fea2e9422482ebac790b87643b",

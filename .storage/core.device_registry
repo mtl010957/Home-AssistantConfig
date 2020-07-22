@@ -1,6 +1,20 @@
 {
     "data": {
-        "deleted_devices": [],
+        "deleted_devices": [
+            {
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "id": "8a99ee78cda64cabb43541c266410c90",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "bcddc2247150"
+                    ]
+                ]
+            }
+        ],
         "devices": [
             {
                 "area_id": null,
@@ -193,7 +207,7 @@
                 "model": "",
                 "name": "HACS",
                 "name_by_user": null,
-                "sw_version": "1.1.2",
+                "sw_version": "1.2.2",
                 "via_device_id": null
             },
             {
@@ -927,27 +941,6 @@
                 "name": "nm10_tph",
                 "name_by_user": "Family Room Climate",
                 "sw_version": "esphome v1.15.0-dev May  4 2020, 17:14:43",
-                "via_device_id": null
-            },
-            {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "config_entries": [
-                    "e1efa85aced04f95bc58dc5f248bf376"
-                ],
-                "connections": [],
-                "entry_type": null,
-                "id": "8a99ee78cda64cabb43541c266410c90",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "bcddc2247150"
-                    ]
-                ],
-                "manufacturer": "espressif",
-                "model": "PLATFORMIO_NODEMCUV2",
-                "name": "nm05_sv1",
-                "name_by_user": "Family Room NW-SW Blinds",
-                "sw_version": "esphome v1.15.0-dev May 22 2020, 12:43:37",
                 "via_device_id": null
             },
             {
