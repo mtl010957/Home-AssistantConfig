@@ -100,6 +100,7 @@
   action:
   - entity_id: switch.generic_cam4_down
     service: switch.turn_on
+  mode: single
 - id: '1800999911113'
   alias: 3629cam4 Left
   trigger:
@@ -265,9 +266,10 @@
     state: armed_away
   action:
   - data: {}
-    service: script.1560462776632
+    service: script.security_lighting_on
   - data: {}
-    service: script.1571453541250
+    service: script.close_all_blinds
+  mode: single
 - id: '1560462571547'
   alias: Security Lighting Off
   trigger:
@@ -279,7 +281,8 @@
     state: armed_away
   action:
   - delay: 00:{{ (range(5, 25) | random) }}:00
-  - service: script.1560463039446
+  - service: script.security_lighting_off
+  mode: single
 - id: '1562957476111'
   alias: Family Room Ceiling Fan Remote Stop
   trigger:
@@ -380,6 +383,7 @@
   - data: {}
     entity_id: alarm_control_panel.3629_alarm
     service: alarm_control_panel.alarm_arm_away
+  mode: single
 - id: '1563648678608'
   alias: Security Disarm Return Home
   trigger:
@@ -942,6 +946,7 @@
   - data: {}
     entity_id: all
     service: cover.open_cover_tilt
+  mode: single
 - id: '1591192185107'
   alias: Family Room Ceiling Fan Stop After Time
   description: ''

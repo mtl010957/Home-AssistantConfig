@@ -83,7 +83,7 @@
                                                 "action": "call-service",
                                                 "service": "script.turn_on",
                                                 "service_data": {
-                                                    "entity_id": "script.1562586761531"
+                                                    "entity_id": "script.irrigation_zone_1_run"
                                                 }
                                             },
                                             "type": "entity-button"
@@ -97,7 +97,7 @@
                                                 "action": "call-service",
                                                 "service": "script.turn_on",
                                                 "service_data": {
-                                                    "entity_id": "script.1562587237822"
+                                                    "entity_id": "script.irrigation_zone_3_run"
                                                 }
                                             },
                                             "type": "entity-button"

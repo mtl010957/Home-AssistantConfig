@@ -1,4 +1,12 @@
-'1560462776632':
+close_all_blinds:
+  alias: Close all blinds
+  icon: mdi:window-shutter
+  mode: single
+  sequence:
+  - data: {}
+    entity_id: all
+    service: cover.close_cover_tilt
+security_lighting_on:
   alias: Security Lighting On
   sequence:
   - data: {}
@@ -21,7 +29,7 @@
     service: light.turn_on
   mode: single
   icon: mdi:spotlight-beam
-'1560463039446':
+security_lighting_off:
   alias: Security Lighting Off
   sequence:
   - data: {}
@@ -44,7 +52,7 @@
     service: light.turn_off
   mode: single
   icon: mdi:spotlight-beam
-'1562586761531':
+irrigation_zone_1_run:
   alias: Irrigation Zone 1 Run
   sequence:
   - data: {}
@@ -57,7 +65,7 @@
     service: switch.turn_off
   mode: single
   icon: mdi:water
-'1562587237822':
+irrigation_zone_3_run:
   alias: Irrigation Zone 3 Run
   sequence:
   - entity_id: switch.irrigation_control_front_yard
@@ -68,15 +76,7 @@
     service: switch.turn_off
   mode: single
   icon: mdi:water
-'1571453541250':
-  alias: Close All Blinds
-  sequence:
-  - data:
-      entity_id: all
-    service: cover.close_cover_tilt
-  mode: single
-  icon: mdi:window-shutter
-'1583801449652':
+open_all_blinds:
   alias: Open all blinds
   sequence:
   - data:
