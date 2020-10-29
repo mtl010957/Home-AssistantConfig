@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace.lovelace_downstairs",
     "data": {
         "config": {
             "title": "Downstairs",
@@ -775,7 +777,5 @@
                 }
             ]
         }
-    },
-    "key": "lovelace.lovelace_downstairs",
-    "version": 1
+    }
 }

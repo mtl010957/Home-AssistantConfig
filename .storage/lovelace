@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace",
     "data": {
         "config": {
             "custom_header": {
@@ -259,8 +261,8 @@
                         {
                             "aspect_ratio": "120%",
                             "entity": "camera.dtx",
-                            "image": "https://www.home-assistant.io/images/merchandise/shirt-frontpage.png",
-                            "type": "picture-entity"
+                            "type": "picture-entity",
+                            "show_state": false
                         },
                         {
                             "entity": "weather.kptk_hourly",
@@ -274,7 +276,5 @@
                 }
             ]
         }
-    },
-    "key": "lovelace",
-    "version": 1
+    }
 }

@@ -14,5 +14,4 @@
 - platform: ping
   consider_home: 00:30:00
   hosts:
-    pixel2: 192.168.13.116
-    iphonex: 192.168.13.139
+    iphonex: 192.168.13.118

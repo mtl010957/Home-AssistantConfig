@@ -1,29 +1,13 @@
 {
+    "version": 1,
+    "key": "core.device_registry",
     "data": {
-        "deleted_devices": [
-            {
-                "config_entries": [
-                    "e1efa85aced04f95bc58dc5f248bf376"
-                ],
-                "connections": [],
-                "id": "8a99ee78cda64cabb43541c266410c90",
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "bcddc2247150"
-                    ]
-                ]
-            }
-        ],
         "devices": [
             {
-                "area_id": null,
                 "config_entries": [
                     "3cbe8ba6a37a444886eddeb49d953cf7"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "6a3d4e79ac0a4eb98e5a86b870225f21",
                 "identifiers": [
                     [
                         "cast",
@@ -33,18 +17,18 @@
                 "manufacturer": "Google Inc.",
                 "model": "MIBOX4",
                 "name": "Family Room TV",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "6a3d4e79ac0a4eb98e5a86b870225f21",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": "316107820cce4630be06041fc14816e3",
                 "config_entries": [
                     "3cbe8ba6a37a444886eddeb49d953cf7"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "27eff64c6f8746cda679e76e617026c9",
                 "identifiers": [
                     [
                         "cast",
@@ -54,18 +38,18 @@
                 "manufacturer": "Google Inc.",
                 "model": "Google Nest Mini",
                 "name": "Office speaker",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "27eff64c6f8746cda679e76e617026c9",
+                "via_device_id": null,
+                "area_id": "316107820cce4630be06041fc14816e3",
+                "name_by_user": null
             },
             {
-                "area_id": "be918af12ae344be9d3936091fc54a20",
                 "config_entries": [
                     "3cbe8ba6a37a444886eddeb49d953cf7"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "da3bb0666349463e87d8db1dcbe00213",
                 "identifiers": [
                     [
                         "cast",
@@ -75,18 +59,18 @@
                 "manufacturer": "Google Inc.",
                 "model": "Google Home Mini",
                 "name": "Mini",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "da3bb0666349463e87d8db1dcbe00213",
+                "via_device_id": null,
+                "area_id": "be918af12ae344be9d3936091fc54a20",
+                "name_by_user": null
             },
             {
-                "area_id": "66b0e5549f8b45ef8d7c37400cec0237",
                 "config_entries": [
                     "3cbe8ba6a37a444886eddeb49d953cf7"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "4a9e2f9494b04eba8794c40747cda4c3",
                 "identifiers": [
                     [
                         "cast",
@@ -96,18 +80,18 @@
                 "manufacturer": "Google Inc.",
                 "model": "MIBOX4",
                 "name": "Caravan",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "4a9e2f9494b04eba8794c40747cda4c3",
+                "via_device_id": null,
+                "area_id": "66b0e5549f8b45ef8d7c37400cec0237",
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "de3e4e31808c4269b46ef0acfd37a53a"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "16398d829c294e22875b65cf407a4ae8",
                 "identifiers": [
                     [
                         "nest",
@@ -117,18 +101,18 @@
                 "manufacturer": "Nest Labs",
                 "model": "Camera",
                 "name": "Living Room Camera",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "16398d829c294e22875b65cf407a4ae8",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "de3e4e31808c4269b46ef0acfd37a53a"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "91ae9631e2af4dd6bd596e94b02cc7d6",
                 "identifiers": [
                     [
                         "nest",
@@ -138,18 +122,18 @@
                 "manufacturer": "Nest Labs",
                 "model": "Structure",
                 "name": "Desert",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "91ae9631e2af4dd6bd596e94b02cc7d6",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "de3e4e31808c4269b46ef0acfd37a53a"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "2a4b324a5fb44db0b7cf65e3114d3b7b",
                 "identifiers": [
                     [
                         "nest",
@@ -159,44 +143,18 @@
                 "manufacturer": "Nest Labs",
                 "model": "Camera",
                 "name": "Front Yard Camera (Front Porch)",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
-            },
-            {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "config_entries": [
-                    "656fba9c69574537be05d6e219b50a7b"
-                ],
-                "connections": [
-                    [
-                        "upnp",
-                        "uuid:ec9982fc-9600-11df-b8e5-000c29d32f89"
-                    ]
-                ],
                 "entry_type": null,
-                "id": "4bfcdcf419bc43b885ea4baf9a7cfc31",
-                "identifiers": [
-                    [
-                        "upnp",
-                        "uuid:ec9982fc-9600-11df-b8e5-000c29d32f89"
-                    ]
-                ],
-                "manufacturer": "Tenda",
-                "model": "Wireless Router",
-                "name": "Wireless Router",
-                "name_by_user": null,
-                "sw_version": null,
-                "via_device_id": null
+                "id": "2a4b324a5fb44db0b7cf65e3114d3b7b",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "47badf5aab2343108f4ab45cd4e1e3bb"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "a6390213c6084f2394864c2845d012ee",
                 "identifiers": [
                     [
                         "hacs",
@@ -206,18 +164,18 @@
                 "manufacturer": "hacs.xyz",
                 "model": "",
                 "name": "HACS",
-                "name_by_user": null,
-                "sw_version": "1.2.2",
-                "via_device_id": null
+                "sw_version": "1.6.1",
+                "entry_type": "service",
+                "id": "a6390213c6084f2394864c2845d012ee",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "identifiers": [
                     [
                         "zwave",
@@ -227,18 +185,18 @@
                 "manufacturer": "AEON Labs",
                 "model": "ZW090 Z-Stick Gen5 US",
                 "name": "AEON Labs ZW090 Z-Stick Gen5 US",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "ccb650ff68e24c859522b24f0e88419e",
                 "identifiers": [
                     [
                         "zwave",
@@ -248,18 +206,18 @@
                 "manufacturer": "Linear (Nortek Security Control LLC)",
                 "model": "Unknown: type=2005, id=0503",
                 "name": "Linear (Nortek Security Control LLC) Unknown: type=2005, id=0503",
-                "name_by_user": "Siren and Strobe",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "ccb650ff68e24c859522b24f0e88419e",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": "Siren and Strobe"
             },
             {
-                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "0dc7fbd61b1b4e3db6f21c1782558563",
                 "identifiers": [
                     [
                         "zwave",
@@ -269,18 +227,18 @@
                 "manufacturer": "Wink",
                 "model": "Unknown: type=0200, id=0001",
                 "name": "Wink Unknown: type=0200, id=0001",
-                "name_by_user": "Siren and Chime",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "0dc7fbd61b1b4e3db6f21c1782558563",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
+                "name_by_user": "Siren and Chime"
             },
             {
-                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "fd0cbc97c4f9457f985d6a1fed0a732d",
                 "identifiers": [
                     [
                         "zwave",
@@ -290,18 +248,18 @@
                 "manufacturer": "Linear (Nortek Security Control LLC)",
                 "model": "PD300Z-2 Plug-in Dimmer Module",
                 "name": "Linear (Nortek Security Control LLC) PD300Z-2 Plug-in Dimmer Module",
-                "name_by_user": "Main Bedroom SE Ceiling Lights",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "fd0cbc97c4f9457f985d6a1fed0a732d",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
+                "name_by_user": "Main Bedroom SE Ceiling Lights"
             },
             {
-                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "bf4280b430244dc8965f7b0ded9793cd",
                 "identifiers": [
                     [
                         "zwave",
@@ -311,18 +269,18 @@
                 "manufacturer": "Linear (Nortek Security Control LLC)",
                 "model": "PD300Z-2 Plug-in Dimmer Module",
                 "name": "Linear (Nortek Security Control LLC) PD300Z-2 Plug-in Dimmer Module",
-                "name_by_user": "Main Bedroom NW Ceiling Lights",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "bf4280b430244dc8965f7b0ded9793cd",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
+                "name_by_user": "Main Bedroom NW Ceiling Lights"
             },
             {
-                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "121267773a72407e9aa51f5b0f615b21",
                 "identifiers": [
                     [
                         "zwave",
@@ -332,18 +290,18 @@
                 "manufacturer": "Linear (Nortek Security Control LLC)",
                 "model": "PD300Z-2 Plug-in Dimmer Module",
                 "name": "Linear (Nortek Security Control LLC) PD300Z-2 Plug-in Dimmer Module",
-                "name_by_user": "Living Room Lamp Dimmer",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "121267773a72407e9aa51f5b0f615b21",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
+                "name_by_user": "Living Room Lamp Dimmer"
             },
             {
-                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "6d21f24f1bc24bee85172a5327b56fda",
                 "identifiers": [
                     [
                         "zwave",
@@ -353,18 +311,18 @@
                 "manufacturer": "Jasco Products",
                 "model": "14287 Fan Control Switch",
                 "name": "Jasco Products 14287 Fan Control Switch",
-                "name_by_user": "Main Bedroom Ceiling Fan",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "6d21f24f1bc24bee85172a5327b56fda",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
+                "name_by_user": "Main Bedroom Ceiling Fan"
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "b02e28111d784dd594cea56a0773fb1d",
                 "identifiers": [
                     [
                         "zwave",
@@ -374,18 +332,18 @@
                 "manufacturer": "Jasco Products",
                 "model": "14294 In-Wall Smart Dimmer",
                 "name": "Jasco Products 14294 In-Wall Smart Dimmer",
-                "name_by_user": "Family Room NW Ceiling Lights",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "b02e28111d784dd594cea56a0773fb1d",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": "Family Room NW Ceiling Lights"
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "ba06d61e68e24d3c95a73becfc711c61",
                 "identifiers": [
                     [
                         "zwave",
@@ -395,18 +353,18 @@
                 "manufacturer": "Jasco Products",
                 "model": "14294 In-Wall Smart Dimmer",
                 "name": "Jasco Products 14294 In-Wall Smart Dimmer",
-                "name_by_user": "Family Room SE Ceiling Lights",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "ba06d61e68e24d3c95a73becfc711c61",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": "Family Room SE Ceiling Lights"
             },
             {
-                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "fe41f1020bdf4e74840c084f3a91f438",
                 "identifiers": [
                     [
                         "zwave",
@@ -416,18 +374,18 @@
                 "manufacturer": "Leviton",
                 "model": "DZPA1-2BW Plug-In Outlet",
                 "name": "Leviton DZPA1-2BW Plug-In Outlet",
-                "name_by_user": "Living Room Lamp Module",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "fe41f1020bdf4e74840c084f3a91f438",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
+                "name_by_user": "Living Room Lamp Module"
             },
             {
-                "area_id": "0fe4b21cbf874ef3b141cffeca700b1d",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "e98ba1007257472b94ec68076912820e",
                 "identifiers": [
                     [
                         "zwave",
@@ -437,18 +395,18 @@
                 "manufacturer": "AEON Labs",
                 "model": "DSC26103 Micro Switch (2nd Edition)",
                 "name": "AEON Labs DSC26103 Micro Switch (2nd Edition)",
-                "name_by_user": "House Fan Switch Module",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "e98ba1007257472b94ec68076912820e",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "0fe4b21cbf874ef3b141cffeca700b1d",
+                "name_by_user": "House Fan Switch Module"
             },
             {
-                "area_id": "d66690d909184fc39c8ef0e3559befea",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "a58c772f7049479bbd9b49695b173b63",
                 "identifiers": [
                     [
                         "zwave",
@@ -458,18 +416,18 @@
                 "manufacturer": "Jasco Products",
                 "model": "14294 In-Wall Smart Dimmer",
                 "name": "Jasco Products 14294 In-Wall Smart Dimmer",
-                "name_by_user": "Dining Room Ceiling Light",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "a58c772f7049479bbd9b49695b173b63",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "d66690d909184fc39c8ef0e3559befea",
+                "name_by_user": "Dining Room Ceiling Light"
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "c120525c21d248faaedc8a1d88d17911",
                 "identifiers": [
                     [
                         "zwave",
@@ -479,18 +437,18 @@
                 "manufacturer": "Linear (Nortek Security Control LLC)",
                 "model": "WADWAZ-1 Door/Window Sensor",
                 "name": "Linear (Nortek Security Control LLC) WADWAZ-1 Door/Window Sensor",
-                "name_by_user": "Back Door Sensor",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "c120525c21d248faaedc8a1d88d17911",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": "Back Door Sensor"
             },
             {
-                "area_id": "316107820cce4630be06041fc14816e3",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "ed8f4acba5054046be851176e81b190c",
                 "identifiers": [
                     [
                         "zwave",
@@ -500,18 +458,18 @@
                 "manufacturer": "Linear (Nortek Security Control LLC)",
                 "model": "WAPIRZ-1 Motion Sensor",
                 "name": "Linear (Nortek Security Control LLC) WAPIRZ-1 Motion Sensor",
-                "name_by_user": "Office Motion Sensor",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "ed8f4acba5054046be851176e81b190c",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "316107820cce4630be06041fc14816e3",
+                "name_by_user": "Office Motion Sensor"
             },
             {
-                "area_id": "be918af12ae344be9d3936091fc54a20",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "a67fb5f1ee3f4a57a338786db4ac61a3",
                 "identifiers": [
                     [
                         "zwave",
@@ -521,18 +479,18 @@
                 "manufacturer": "Linear (Nortek Security Control LLC)",
                 "model": "WADWAZ-1 Door/Window Sensor",
                 "name": "Linear (Nortek Security Control LLC) WADWAZ-1 Door/Window Sensor",
-                "name_by_user": "Garage Door Sensor",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "a67fb5f1ee3f4a57a338786db4ac61a3",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "be918af12ae344be9d3936091fc54a20",
+                "name_by_user": "Garage Door Sensor"
             },
             {
-                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "a12d65a79e254bd8bc1286b578df6491",
                 "identifiers": [
                     [
                         "zwave",
@@ -542,18 +500,18 @@
                 "manufacturer": "Linear (Nortek Security Control LLC)",
                 "model": "WAPIRZ-1 Motion Sensor",
                 "name": "Linear (Nortek Security Control LLC) WAPIRZ-1 Motion Sensor",
-                "name_by_user": "Main Bedroom Motion Sensor",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "a12d65a79e254bd8bc1286b578df6491",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
+                "name_by_user": "Main Bedroom Motion Sensor"
             },
             {
-                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "3b5f006c562946f99e7aaf50d8f2ed5b",
                 "identifiers": [
                     [
                         "zwave",
@@ -563,12 +521,14 @@
                 "manufacturer": "Linear (Nortek Security Control LLC)",
                 "model": "WADWAZ-1 Door/Window Sensor",
                 "name": "Linear (Nortek Security Control LLC) WADWAZ-1 Door/Window Sensor",
-                "name_by_user": "Front Door Sensor",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "3b5f006c562946f99e7aaf50d8f2ed5b",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
+                "name_by_user": "Front Door Sensor"
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "00a98b2aa68641ba8b48ba08fcbb26bb"
                 ],
@@ -578,23 +538,23 @@
                         "7c:e5:24:00:00:13:27:cf"
                     ]
                 ],
+                "identifiers": [
+                    [
+                        "zha",
+                        "7c:e5:24:00:00:13:27:cf"
+                    ]
+                ],
+                "manufacturer": "GE",
+                "model": "SoftWhite",
+                "name": "GE SoftWhite",
+                "sw_version": "0x02000208",
                 "entry_type": null,
                 "id": "c7ed60af146d440385d25a1b4f32ba02",
-                "identifiers": [
-                    [
-                        "zha",
-                        "7c:e5:24:00:00:13:27:cf"
-                    ]
-                ],
-                "manufacturer": "GE",
-                "model": "SoftWhite",
-                "name": "GE SoftWhite",
-                "name_by_user": "Family Room Link Bulb 1",
-                "sw_version": "0x02000208",
-                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc"
+                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc",
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": "Family Room Link Bulb 1"
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "00a98b2aa68641ba8b48ba08fcbb26bb"
                 ],
@@ -604,8 +564,6 @@
                         "7c:e5:24:00:00:14:6f:d6"
                     ]
                 ],
-                "entry_type": null,
-                "id": "0326419ab49f441bbe672e759ae8b494",
                 "identifiers": [
                     [
                         "zha",
@@ -615,12 +573,14 @@
                 "manufacturer": "GE",
                 "model": "SoftWhite",
                 "name": "GE SoftWhite",
-                "name_by_user": "Family Room Link Bulb 2",
                 "sw_version": "0x02000208",
-                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc"
+                "entry_type": null,
+                "id": "0326419ab49f441bbe672e759ae8b494",
+                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc",
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": "Family Room Link Bulb 2"
             },
             {
-                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
                 "config_entries": [
                     "00a98b2aa68641ba8b48ba08fcbb26bb"
                 ],
@@ -630,8 +590,6 @@
                         "84:18:26:00:00:04:d2:06"
                     ]
                 ],
-                "entry_type": null,
-                "id": "2f410060429a42f78888722f30b8959c",
                 "identifiers": [
                     [
                         "zha",
@@ -641,12 +599,14 @@
                 "manufacturer": "OSRAM",
                 "model": "LIGHTIFY A19 Tunable White",
                 "name": "OSRAM LIGHTIFY A19 Tunable White",
-                "name_by_user": "Bedside Lamp Bulb",
                 "sw_version": "0x01020492",
-                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc"
+                "entry_type": null,
+                "id": "2f410060429a42f78888722f30b8959c",
+                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc",
+                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
+                "name_by_user": "Bedside Lamp Bulb"
             },
             {
-                "area_id": "316107820cce4630be06041fc14816e3",
                 "config_entries": [
                     "00a98b2aa68641ba8b48ba08fcbb26bb"
                 ],
@@ -656,23 +616,23 @@
                         "f0:d1:b8:00:00:04:ae:2c"
                     ]
                 ],
+                "identifiers": [
+                    [
+                        "zha",
+                        "f0:d1:b8:00:00:04:ae:2c"
+                    ]
+                ],
+                "manufacturer": "LEDVANCE",
+                "model": "A19 W 10 year",
+                "name": "LEDVANCE A19 W 10 year",
+                "sw_version": "0x00102302",
                 "entry_type": null,
                 "id": "a3a53ae5cdcf40ffae17d4e396c93d27",
-                "identifiers": [
-                    [
-                        "zha",
-                        "f0:d1:b8:00:00:04:ae:2c"
-                    ]
-                ],
-                "manufacturer": "LEDVANCE",
-                "model": "A19 W 10 year",
-                "name": "LEDVANCE A19 W 10 year",
-                "name_by_user": "Office Light Bulb",
-                "sw_version": "0x00102302",
-                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc"
+                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc",
+                "area_id": "316107820cce4630be06041fc14816e3",
+                "name_by_user": "Office Light Bulb"
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "00a98b2aa68641ba8b48ba08fcbb26bb"
                 ],
@@ -682,8 +642,6 @@
                         "f0:d1:b8:00:00:03:58:34"
                     ]
                 ],
-                "entry_type": null,
-                "id": "1e5e4752a3384f1bb579e0bf9fabb6a6",
                 "identifiers": [
                     [
                         "zha",
@@ -693,12 +651,14 @@
                 "manufacturer": "LEDVANCE",
                 "model": "A19 W 10 year",
                 "name": "LEDVANCE A19 W 10 year",
-                "name_by_user": "Family Room Lamp Bulb 1",
                 "sw_version": "0x00102302",
-                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc"
+                "entry_type": null,
+                "id": "1e5e4752a3384f1bb579e0bf9fabb6a6",
+                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc",
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": "Family Room Lamp Bulb 1"
             },
             {
-                "area_id": "be918af12ae344be9d3936091fc54a20",
                 "config_entries": [
                     "00a98b2aa68641ba8b48ba08fcbb26bb"
                 ],
@@ -708,8 +668,6 @@
                         "7c:e5:24:00:00:13:61:2c"
                     ]
                 ],
-                "entry_type": null,
-                "id": "1d313fdd3a2b45ee854fd45736c3dcc0",
                 "identifiers": [
                     [
                         "zha",
@@ -719,12 +677,14 @@
                 "manufacturer": "GE",
                 "model": "SoftWhite",
                 "name": "GE SoftWhite",
-                "name_by_user": "Garage Attic Link Bulb",
                 "sw_version": "0x02000208",
-                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc"
+                "entry_type": null,
+                "id": "1d313fdd3a2b45ee854fd45736c3dcc0",
+                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc",
+                "area_id": "be918af12ae344be9d3936091fc54a20",
+                "name_by_user": "Garage Attic Link Bulb"
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "00a98b2aa68641ba8b48ba08fcbb26bb"
                 ],
@@ -734,23 +694,23 @@
                         "f0:d1:b8:00:00:03:4f:87"
                     ]
                 ],
+                "identifiers": [
+                    [
+                        "zha",
+                        "f0:d1:b8:00:00:03:4f:87"
+                    ]
+                ],
+                "manufacturer": "LEDVANCE",
+                "model": "A19 W 10 year",
+                "name": "LEDVANCE A19 W 10 year",
+                "sw_version": "0x00102302",
                 "entry_type": null,
                 "id": "66618e45aeaf45a9884441d8142b3c3d",
-                "identifiers": [
-                    [
-                        "zha",
-                        "f0:d1:b8:00:00:03:4f:87"
-                    ]
-                ],
-                "manufacturer": "LEDVANCE",
-                "model": "A19 W 10 year",
-                "name": "LEDVANCE A19 W 10 year",
-                "name_by_user": "Family Room Lamp Bulb 2",
-                "sw_version": "0x00102302",
-                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc"
+                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc",
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": "Family Room Lamp Bulb 2"
             },
             {
-                "area_id": "34c603d253c649ccb4430b96d906f5a8",
                 "config_entries": [
                     "00a98b2aa68641ba8b48ba08fcbb26bb"
                 ],
@@ -760,8 +720,6 @@
                         "f0:d1:b8:00:00:04:98:91"
                     ]
                 ],
-                "entry_type": null,
-                "id": "1df737b790954843a6ae70aaf80ea977",
                 "identifiers": [
                     [
                         "zha",
@@ -771,18 +729,18 @@
                 "manufacturer": "LEDVANCE",
                 "model": "A19 W 10 year",
                 "name": "LEDVANCE A19 W 10 year",
-                "name_by_user": "Guest Room Lamp Bulb",
                 "sw_version": "0x00102302",
-                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc"
+                "entry_type": null,
+                "id": "1df737b790954843a6ae70aaf80ea977",
+                "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc",
+                "area_id": "34c603d253c649ccb4430b96d906f5a8",
+                "name_by_user": "Guest Room Lamp Bulb"
             },
             {
-                "area_id": "d66690d909184fc39c8ef0e3559befea",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "653b58242ddd475fa47b906fdc469822",
                 "identifiers": [
                     [
                         "zwave",
@@ -792,18 +750,18 @@
                 "manufacturer": "Linear (Nortek Security Control LLC)",
                 "model": "WADWAZ-1 Door/Window Sensor",
                 "name": "Linear (Nortek Security Control LLC) WADWAZ-1 Door/Window Sensor",
-                "name_by_user": "Garage Inside Door Sensor",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "653b58242ddd475fa47b906fdc469822",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "d66690d909184fc39c8ef0e3559befea",
+                "name_by_user": "Garage Inside Door Sensor"
             },
             {
-                "area_id": "316107820cce4630be06041fc14816e3",
                 "config_entries": [
                     "bea899b7c1e64cd49896bd567eb749b5"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "22ee088da369491b87f94664a097322c",
                 "identifiers": [
                     [
                         "ipp",
@@ -813,18 +771,18 @@
                 "manufacturer": "EPSON",
                 "model": "XP-7100 Series",
                 "name": "EPSON XP-7100 Series",
-                "name_by_user": null,
                 "sw_version": "01.67.YL31K1",
-                "via_device_id": null
+                "entry_type": null,
+                "id": "22ee088da369491b87f94664a097322c",
+                "via_device_id": null,
+                "area_id": "316107820cce4630be06041fc14816e3",
+                "name_by_user": null
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "f743120b85da4c02b68c18c65965b2c3",
                 "identifiers": [
                     [
                         "zwave",
@@ -834,18 +792,18 @@
                 "manufacturer": "Jasco Products",
                 "model": "14287 Fan Control Switch",
                 "name": "Jasco Products 14287 Fan Control Switch",
-                "name_by_user": "Family Room Ceiling Fan",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "f743120b85da4c02b68c18c65965b2c3",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": "Family Room Ceiling Fan"
             },
             {
-                "area_id": "dc451399bee647789f50e8317344517e",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "332c972f71e74030b4c62dab126764ce",
                 "identifiers": [
                     [
                         "zwave",
@@ -855,18 +813,18 @@
                 "manufacturer": "Leviton",
                 "model": "DZ6HD-1BZ Decora 600W Smart Dimmer",
                 "name": "Leviton DZ6HD-1BZ Decora 600W Smart Dimmer",
-                "name_by_user": "Back Porch Light",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "332c972f71e74030b4c62dab126764ce",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "dc451399bee647789f50e8317344517e",
+                "name_by_user": "Back Porch Light"
             },
             {
-                "area_id": "be918af12ae344be9d3936091fc54a20",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "6f257e741b564746b69eca3a6eae1985",
                 "identifiers": [
                     [
                         "mqtt",
@@ -876,18 +834,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sb04",
-                "name_by_user": "Garage Light",
-                "sw_version": "esphome v1.15.0-dev May  4 2020, 17:48:09",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 22:06:18",
+                "entry_type": null,
+                "id": "6f257e741b564746b69eca3a6eae1985",
+                "via_device_id": null,
+                "area_id": "be918af12ae344be9d3936091fc54a20",
+                "name_by_user": "Garage Light"
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "46b35f49b60e40bdb51cb453517d898c",
                 "identifiers": [
                     [
                         "mqtt",
@@ -897,18 +855,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm06_rfx1",
-                "name_by_user": "Fan Remote",
-                "sw_version": "esphome v1.15.0-dev May  4 2020, 16:42:19",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 21:50:11",
+                "entry_type": null,
+                "id": "46b35f49b60e40bdb51cb453517d898c",
+                "via_device_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": "Fan Remote"
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "01b25cc1a9ff49c997bcd154e5b683f8",
                 "identifiers": [
                     [
                         "mqtt",
@@ -918,18 +876,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm04_sv1",
-                "name_by_user": "Family Room SW-NW Blinds",
-                "sw_version": "esphome v1.15.0-dev May 22 2020, 12:45:30",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Oct 20 2020, 12:13:23",
+                "entry_type": null,
+                "id": "01b25cc1a9ff49c997bcd154e5b683f8",
+                "via_device_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": "Family Room SW-NW Blinds"
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "fa7eeb66a74e455496e3ab375495dcf7",
                 "identifiers": [
                     [
                         "mqtt",
@@ -939,18 +897,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm10_tph",
-                "name_by_user": "Family Room Climate",
-                "sw_version": "esphome v1.15.0-dev May  4 2020, 17:14:43",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 21:53:47",
+                "entry_type": null,
+                "id": "fa7eeb66a74e455496e3ab375495dcf7",
+                "via_device_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": "Family Room Climate"
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "6792d04f64544b2f96bf1ba9855e2e5b",
                 "identifiers": [
                     [
                         "mqtt",
@@ -960,18 +918,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm02_sv1",
-                "name_by_user": "Family Room SE-SW Blinds",
-                "sw_version": "esphome v1.15.0-dev May 22 2020, 12:51:07",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Oct 20 2020, 12:17:18",
+                "entry_type": null,
+                "id": "6792d04f64544b2f96bf1ba9855e2e5b",
+                "via_device_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": "Family Room SE-SW Blinds"
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "0d65186f76674e718fea0f63976d0522",
                 "identifiers": [
                     [
                         "mqtt",
@@ -981,18 +939,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm07_rfx1",
-                "name_by_user": null,
-                "sw_version": "esphome v1.15.0-dev May  4 2020, 16:48:25",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 21:51:03",
+                "entry_type": null,
+                "id": "0d65186f76674e718fea0f63976d0522",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": "be918af12ae344be9d3936091fc54a20",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "7ec89b1bd00d47248701a5eedbf3a331",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1002,18 +960,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm08_sv1",
-                "name_by_user": "Garage Latch",
-                "sw_version": "esphome v1.15.0-dev May  4 2020, 17:05:31",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 21:51:59",
+                "entry_type": null,
+                "id": "7ec89b1bd00d47248701a5eedbf3a331",
+                "via_device_id": null,
+                "area_id": "be918af12ae344be9d3936091fc54a20",
+                "name_by_user": "Garage Latch"
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "ad38b2b29eb24331b68fbae50ee3316a",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1023,18 +981,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sb07",
-                "name_by_user": "Family Room Ceiling Fan Light",
-                "sw_version": "esphome v1.15.0-dev May  4 2020, 17:51:51",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 22:13:06",
+                "entry_type": null,
+                "id": "ad38b2b29eb24331b68fbae50ee3316a",
+                "via_device_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": "Family Room Ceiling Fan Light"
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "2bab1b706cff40359bbe36c356ee18d8",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1044,18 +1002,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm03_sv1",
-                "name_by_user": "Family Room SW-SE Blinds",
-                "sw_version": "esphome v1.15.0-dev May 22 2020, 12:49:15",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Oct 20 2020, 12:15:27",
+                "entry_type": null,
+                "id": "2bab1b706cff40359bbe36c356ee18d8",
+                "via_device_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": "Family Room SW-SE Blinds"
             },
             {
-                "area_id": "be918af12ae344be9d3936091fc54a20",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "0297d19b6ceb409693273a05449045dc",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1065,18 +1023,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm17_m",
-                "name_by_user": "Garage Motion",
-                "sw_version": "esphome v1.15.0-dev May  4 2020, 17:29:10",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 22:02:05",
+                "entry_type": null,
+                "id": "0297d19b6ceb409693273a05449045dc",
+                "via_device_id": null,
+                "area_id": "be918af12ae344be9d3936091fc54a20",
+                "name_by_user": "Garage Motion"
             },
             {
-                "area_id": "74a49ece870947fc998a78d2e088b47f",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "57673a6ec02649a3a76d73e5d17ca744",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1086,18 +1044,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm14_rly4",
-                "name_by_user": "Irrigation Control",
-                "sw_version": "esphome v1.15.0-dev May  4 2020, 17:22:30",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 21:57:30",
+                "entry_type": null,
+                "id": "57673a6ec02649a3a76d73e5d17ca744",
+                "via_device_id": null,
+                "area_id": "74a49ece870947fc998a78d2e088b47f",
+                "name_by_user": "Irrigation Control"
             },
             {
-                "area_id": "316107820cce4630be06041fc14816e3",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "9df2e6a44ed14cecaf8bc31da5aa8cce",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1107,18 +1065,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm09_th",
-                "name_by_user": "Office Climate",
-                "sw_version": "esphome v1.15.0-dev May  4 2020, 17:10:32",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 21:52:53",
+                "entry_type": null,
+                "id": "9df2e6a44ed14cecaf8bc31da5aa8cce",
+                "via_device_id": null,
+                "area_id": "316107820cce4630be06041fc14816e3",
+                "name_by_user": "Office Climate"
             },
             {
-                "area_id": "74a49ece870947fc998a78d2e088b47f",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "90ec9849e88c4c19b61c9dc937b7c1ae",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1128,18 +1086,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm15_t4",
-                "name_by_user": "Furnace",
-                "sw_version": "esphome v1.15.0-dev May  4 2020, 17:25:14",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 21:58:37",
+                "entry_type": null,
+                "id": "90ec9849e88c4c19b61c9dc937b7c1ae",
+                "via_device_id": null,
+                "area_id": "74a49ece870947fc998a78d2e088b47f",
+                "name_by_user": "Furnace"
             },
             {
-                "area_id": "dc451399bee647789f50e8317344517e",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "f1da704df4dd4da69ef980d105f8d710",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1149,18 +1107,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm16_th",
-                "name_by_user": "Outdoor Climate",
-                "sw_version": "esphome v1.15.0-dev May  4 2020, 17:17:56",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 21:59:31",
+                "entry_type": null,
+                "id": "f1da704df4dd4da69ef980d105f8d710",
+                "via_device_id": null,
+                "area_id": "dc451399bee647789f50e8317344517e",
+                "name_by_user": "Outdoor Climate"
             },
             {
-                "area_id": "ef79dc2fd72045778494fbbced8dcf7b",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "8d8de4c32fc84734af376c764700e31f",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1170,18 +1128,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sb01",
-                "name_by_user": "Front Yard Light",
-                "sw_version": "esphome v1.15.0-dev May  4 2020, 17:41:59",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 22:03:03",
+                "entry_type": null,
+                "id": "8d8de4c32fc84734af376c764700e31f",
+                "via_device_id": null,
+                "area_id": "ef79dc2fd72045778494fbbced8dcf7b",
+                "name_by_user": "Front Yard Light"
             },
             {
-                "area_id": "dc451399bee647789f50e8317344517e",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "9536dc3f7ae24ca4becaa28866474d00",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1191,18 +1149,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sb06",
-                "name_by_user": "Back Outdoor Xmas Lights",
-                "sw_version": "esphome v1.15.0-dev May  4 2020, 17:50:52",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 22:11:38",
+                "entry_type": null,
+                "id": "9536dc3f7ae24ca4becaa28866474d00",
+                "via_device_id": null,
+                "area_id": "dc451399bee647789f50e8317344517e",
+                "name_by_user": "Back Outdoor Xmas Lights"
             },
             {
-                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "bd33d495ed6f409c9622f3669499aead",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1212,18 +1170,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm11_th",
-                "name_by_user": "Main Bedroom Climate",
-                "sw_version": "esphome v1.15.0-dev May  4 2020, 17:12:13",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 21:54:33",
+                "entry_type": null,
+                "id": "bd33d495ed6f409c9622f3669499aead",
+                "via_device_id": null,
+                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
+                "name_by_user": "Main Bedroom Climate"
             },
             {
-                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "cbfd393800a549f18ffe84e0f6b6be6f",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1233,18 +1191,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sb05",
-                "name_by_user": "Humidifier Power",
-                "sw_version": "esphome v1.15.0-dev May  4 2020, 17:49:33",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 22:10:31",
+                "entry_type": null,
+                "id": "cbfd393800a549f18ffe84e0f6b6be6f",
+                "via_device_id": null,
+                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
+                "name_by_user": "Humidifier Power"
             },
             {
-                "area_id": "66b0e5549f8b45ef8d7c37400cec0237",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "5eb22ee9f39e420687061b390d1f23d7",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1254,18 +1212,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm13_th",
-                "name_by_user": "Caravan Climate",
-                "sw_version": "esphome v1.15.0-dev May  4 2020, 17:16:39",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 21:56:34",
+                "entry_type": null,
+                "id": "5eb22ee9f39e420687061b390d1f23d7",
+                "via_device_id": null,
+                "area_id": "66b0e5549f8b45ef8d7c37400cec0237",
+                "name_by_user": "Caravan Climate"
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "3f2e1d3be7a049f08d4d1bfe39c87fc4",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1275,18 +1233,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm01_sv1",
-                "name_by_user": "Family Room SE-NE Blinds",
-                "sw_version": "esphome v1.15.0-dev May 22 2020, 13:05:49",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Oct 20 2020, 12:19:14",
+                "entry_type": null,
+                "id": "3f2e1d3be7a049f08d4d1bfe39c87fc4",
+                "via_device_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": "Family Room SE-NE Blinds"
             },
             {
-                "area_id": "74a49ece870947fc998a78d2e088b47f",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "61344d8b56db43388bf5cc133786843b",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1296,18 +1254,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sb03",
-                "name_by_user": "Utility Power",
-                "sw_version": "esphome v1.15.0-dev May  4 2020, 17:46:04",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 22:05:08",
+                "entry_type": null,
+                "id": "61344d8b56db43388bf5cc133786843b",
+                "via_device_id": null,
+                "area_id": "74a49ece870947fc998a78d2e088b47f",
+                "name_by_user": "Utility Power"
             },
             {
-                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "abf3c9fea2e9422482ebac790b87643b",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1317,18 +1275,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm01_sv1",
-                "name_by_user": "Living Room SE Blinds",
-                "sw_version": "esphome v1.15.0-dev Jul 17 2020, 11:16:55",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Oct 20 2020, 12:08:35",
+                "entry_type": null,
+                "id": "abf3c9fea2e9422482ebac790b87643b",
+                "via_device_id": null,
+                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
+                "name_by_user": "Living Room SE Blinds"
             },
             {
-                "area_id": "be918af12ae344be9d3936091fc54a20",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "b0c05091d40849359f4f4d55a70a79d4",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1338,18 +1296,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm12_th",
-                "name_by_user": "Garage Climate",
-                "sw_version": "esphome v1.15.0-dev May  4 2020, 17:15:44",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 21:55:30",
+                "entry_type": null,
+                "id": "b0c05091d40849359f4f4d55a70a79d4",
+                "via_device_id": null,
+                "area_id": "be918af12ae344be9d3936091fc54a20",
+                "name_by_user": "Garage Climate"
             },
             {
-                "area_id": "ef79dc2fd72045778494fbbced8dcf7b",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "8b90b436c1854e4fa6d18dc2c9e076a7",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1359,18 +1317,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_ESP01_1M",
                 "name": "sb02",
-                "name_by_user": "Front Outdoor Xmas Lights",
-                "sw_version": "esphome v1.15.0-dev May  4 2020, 17:43:10",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 22:04:01",
+                "entry_type": null,
+                "id": "8b90b436c1854e4fa6d18dc2c9e076a7",
+                "via_device_id": null,
+                "area_id": "ef79dc2fd72045778494fbbced8dcf7b",
+                "name_by_user": "Front Outdoor Xmas Lights"
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "fbf5eddc5250430a8e8e4d478a4c832f"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "ce95da89bb7b4d029e8f9ceeb144925e",
                 "identifiers": [
                     [
                         "nut",
@@ -1380,18 +1338,18 @@
                 "manufacturer": "APC",
                 "model": "Back-UPS ES 650",
                 "name": "Ups",
-                "name_by_user": null,
                 "sw_version": "825.B1.D",
-                "via_device_id": null
+                "entry_type": null,
+                "id": "ce95da89bb7b4d029e8f9ceeb144925e",
+                "via_device_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": null
             },
             {
-                "area_id": "ef79dc2fd72045778494fbbced8dcf7b",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "7b4d27b07969400087ff94ee4091b87d",
                 "identifiers": [
                     [
                         "zwave",
@@ -1401,18 +1359,18 @@
                 "manufacturer": "Leviton",
                 "model": "DZ6HD-1BZ Decora 600W Smart Dimmer",
                 "name": "Leviton DZ6HD-1BZ Decora 600W Smart Dimmer",
-                "name_by_user": "Front Porch Light",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "7b4d27b07969400087ff94ee4091b87d",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "ef79dc2fd72045778494fbbced8dcf7b",
+                "name_by_user": "Front Porch Light"
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "2e0d978447294089a9a34854309f2f27"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "9d361d73d84644189fd9557e1ea3eefd",
                 "identifiers": [
                     [
                         "mobile_app",
@@ -1420,20 +1378,20 @@
                     ]
                 ],
                 "manufacturer": "Google",
-                "model": "Pixel 2",
+                "model": "Pixel 4a",
                 "name": "Pixel 2",
-                "name_by_user": null,
                 "sw_version": "30",
-                "via_device_id": null
+                "entry_type": null,
+                "id": "9d361d73d84644189fd9557e1ea3eefd",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": "Pixel 4a"
             },
             {
-                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
                 "config_entries": [
                     "3cbe8ba6a37a444886eddeb49d953cf7"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "195b141847214538a451c2a6cfaacd35",
                 "identifiers": [
                     [
                         "cast",
@@ -1443,18 +1401,18 @@
                 "manufacturer": "Google Inc.",
                 "model": "MIBOX4",
                 "name": "Bedroom TV",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "195b141847214538a451c2a6cfaacd35",
+                "via_device_id": null,
+                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
+                "name_by_user": null
             },
             {
-                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "afeedf06916c460680efcd14027f18af",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1464,18 +1422,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm02_sv1",
-                "name_by_user": "Living Room SE CTR Blinds",
-                "sw_version": "esphome v1.15.0-dev Jul 17 2020, 11:23:44",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Oct 20 2020, 12:24:30",
+                "entry_type": null,
+                "id": "afeedf06916c460680efcd14027f18af",
+                "via_device_id": null,
+                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
+                "name_by_user": "Living Room SE CTR Blinds"
             },
             {
-                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "28c408aeffa1431ab8135271d9e05835",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1485,18 +1443,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm03_sv1",
-                "name_by_user": "Living Room CTR Blinds",
-                "sw_version": "esphome v1.15.0-dev Jul 17 2020, 11:28:56",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Oct 20 2020, 12:25:52",
+                "entry_type": null,
+                "id": "28c408aeffa1431ab8135271d9e05835",
+                "via_device_id": null,
+                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
+                "name_by_user": "Living Room CTR Blinds"
             },
             {
-                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "800d8ada96f04f2e95461f3f93c6d3a8",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1506,18 +1464,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm04_sv1",
-                "name_by_user": "Living Room NW CTR Blinds",
-                "sw_version": "esphome v1.15.0-dev Jul 17 2020, 11:33:29",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Oct 20 2020, 12:27:15",
+                "entry_type": null,
+                "id": "800d8ada96f04f2e95461f3f93c6d3a8",
+                "via_device_id": null,
+                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
+                "name_by_user": "Living Room NW CTR Blinds"
             },
             {
-                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "e0df26504d514ce2ae20e20ce379cd99",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1527,18 +1485,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm05_sv1",
-                "name_by_user": "Living Room NW Blinds",
-                "sw_version": "esphome v1.15.0-dev Jul 17 2020, 11:38:26",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Oct 20 2020, 12:28:37",
+                "entry_type": null,
+                "id": "e0df26504d514ce2ae20e20ce379cd99",
+                "via_device_id": null,
+                "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
+                "name_by_user": "Living Room NW Blinds"
             },
             {
-                "area_id": "316107820cce4630be06041fc14816e3",
                 "config_entries": [
                     "3cbe8ba6a37a444886eddeb49d953cf7"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "ca756dc0b69d4d3292d23c5b10332324",
                 "identifiers": [
                     [
                         "cast",
@@ -1548,18 +1506,18 @@
                 "manufacturer": "Google Inc.",
                 "model": "Google Nest Mini",
                 "name": "Office speaker 2",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "ca756dc0b69d4d3292d23c5b10332324",
+                "via_device_id": null,
+                "area_id": "316107820cce4630be06041fc14816e3",
+                "name_by_user": null
             },
             {
-                "area_id": "fb89b524d9f34166bd038247f8d434b7",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "4e811fdefdea408ebf121abe13e8bb8f",
                 "identifiers": [
                     [
                         "zwave",
@@ -1569,18 +1527,18 @@
                 "manufacturer": "First Alert (BRK Brands Inc)",
                 "model": "ZCombo Smoke and Carbon Monoxide Detector",
                 "name": "First Alert (BRK Brands Inc) ZCombo Smoke and Carbon Monoxide Detector",
-                "name_by_user": "Upstairs Smoke Alarm",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "4e811fdefdea408ebf121abe13e8bb8f",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "fb89b524d9f34166bd038247f8d434b7",
+                "name_by_user": "Upstairs Smoke Alarm"
             },
             {
-                "area_id": "bebd4b239b054e2da7abe614ba924f32",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "fcbbefffc26a4249a4e27f01bbf24105",
                 "identifiers": [
                     [
                         "zwave",
@@ -1590,18 +1548,18 @@
                 "manufacturer": "First Alert (BRK Brands Inc)",
                 "model": "ZCombo Smoke and Carbon Monoxide Detector",
                 "name": "First Alert (BRK Brands Inc) ZCombo Smoke and Carbon Monoxide Detector",
-                "name_by_user": "Downstairs Smoke Alarm",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "fcbbefffc26a4249a4e27f01bbf24105",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "bebd4b239b054e2da7abe614ba924f32",
+                "name_by_user": "Downstairs Smoke Alarm"
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "c3cc29801bfd4f25802b05085241dca2",
                 "identifiers": [
                     [
                         "zwave",
@@ -1611,18 +1569,18 @@
                 "manufacturer": "First Alert (BRK Brands Inc)",
                 "model": "ZCombo Smoke and Carbon Monoxide Detector",
                 "name": "First Alert (BRK Brands Inc) ZCombo Smoke and Carbon Monoxide Detector",
-                "name_by_user": "Family Room Smoke Alarm",
                 "sw_version": null,
-                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4"
+                "entry_type": null,
+                "id": "c3cc29801bfd4f25802b05085241dca2",
+                "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": "Family Room Smoke Alarm"
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "1088744891254b82bc3d03f1b7e066d8",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1632,12 +1590,14 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm06_reb1",
-                "name_by_user": null,
-                "sw_version": "esphome v1.15.0-dev May 24 2020, 12:19:51",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 21:42:06",
+                "entry_type": null,
+                "id": "1088744891254b82bc3d03f1b7e066d8",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "00a98b2aa68641ba8b48ba08fcbb26bb"
                 ],
@@ -1647,8 +1607,6 @@
                         "00:13:a2:00:41:07:04:37"
                     ]
                 ],
-                "entry_type": null,
-                "id": "7a6fe1d61caf4b5289ad667d0e3578bc",
                 "identifiers": [
                     [
                         "zha",
@@ -1658,18 +1616,18 @@
                 "manufacturer": "ZHA",
                 "model": "XBee = Digi XBee Zigbee radios: Digi XBee Series 2, 2C, 3",
                 "name": "Zigbee Coordinator",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "7a6fe1d61caf4b5289ad667d0e3578bc",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "a81d848b5e3b44b48bdfc4b076822d39"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "3697d9de1b7f463ab09fb9c7b8420dbf",
                 "identifiers": [
                     [
                         "mobile_app",
@@ -1679,18 +1637,18 @@
                 "manufacturer": "VANTOP",
                 "model": "Z10",
                 "name": "Z10",
-                "name_by_user": null,
                 "sw_version": "28",
-                "via_device_id": null
+                "entry_type": null,
+                "id": "3697d9de1b7f463ab09fb9c7b8420dbf",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "4565c2edfb9842a1896dd5139be87fe1",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1700,18 +1658,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm05_sv1",
-                "name_by_user": "Family Room NW-SW Blinds",
-                "sw_version": "esphome v1.15.0-dev May 29 2020, 19:11:43",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Oct 20 2020, 12:10:45",
+                "entry_type": null,
+                "id": "4565c2edfb9842a1896dd5139be87fe1",
+                "via_device_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": "Family Room NW-SW Blinds"
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "59d08600fb6f48069c10167786877ed2",
                 "identifiers": [
                     [
                         "mqtt",
@@ -1721,18 +1679,18 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_D1_MINI",
                 "name": "dm07_reb1",
-                "name_by_user": null,
-                "sw_version": "esphome v1.15.0-dev Jun  4 2020, 11:55:57",
-                "via_device_id": null
+                "sw_version": "esphome v1.16.0-dev Sep 24 2020, 21:41:12",
+                "entry_type": null,
+                "id": "59d08600fb6f48069c10167786877ed2",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "config_entries": [
                     "3cbe8ba6a37a444886eddeb49d953cf7"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "264905e4581b4bfbbbedc9e22861547b",
                 "identifiers": [
                     [
                         "cast",
@@ -1742,12 +1700,117 @@
                 "manufacturer": "Google Inc.",
                 "model": "MIBOX4",
                 "name": "Family Room TV",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "264905e4581b4bfbbbedc9e22861547b",
+                "via_device_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "b9816fed082711ebb58e63fa0fc688fa"
+                ],
+                "connections": [
+                    [
+                        "upnp",
+                        "uuid:3ddcd1d3-2380-45f5-b069-244bfe763ed8"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "upnp",
+                        "uuid:3ddcd1d3-2380-45f5-b069-244bfe763ed8"
+                    ]
+                ],
+                "manufacturer": "ASUSTeK Computer Inc.",
+                "model": "RT-AC66U_B1",
+                "name": "RT-AC66U_B1-3ED8",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "bf8f31d2082711eb945a6746db3d83a7",
+                "via_device_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "3cbe8ba6a37a444886eddeb49d953cf7"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "cast",
+                        "6a56e323a001e6dc28ad10f450107890"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Chromecast",
+                "name": "Chromecast6845",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "2d84e7d3095c11eba0dc5b76efde60ac",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "3cbe8ba6a37a444886eddeb49d953cf7"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "cast",
+                        "498f89836b7afd6a5a7f51bb6100e390"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Chromecast",
+                "name": "Family Room TV",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "b98da57a095d11eb8d641b97afe12976",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "c06cea10162111eba0561b533e9a1d7b"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mobile_app",
+                        "b5f193f756d731e1"
+                    ]
+                ],
+                "manufacturer": "AZPEN",
+                "model": "A748",
+                "name": "A748",
+                "sw_version": "23",
+                "entry_type": null,
+                "id": "c06d38bd162111ebb0b3415c796a7971",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
+            }
+        ],
+        "deleted_devices": [
+            {
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "bcddc2247150"
+                    ]
+                ],
+                "id": "8a99ee78cda64cabb43541c266410c90"
             }
         ]
-    },
-    "key": "core.device_registry",
-    "version": 1
+    }
 }

@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace.lovelace_admin",
     "data": {
         "config": {
             "custom_header": {
@@ -34,12 +36,6 @@
                         },
                         {
                             "entity": "sensor.ups_input_voltage"
-                        },
-                        {
-                            "entity": "binary_sensor.esprouter_e7cc33_online"
-                        },
-                        {
-                            "entity": "sensor.esprouter_e7cc33_stations"
                         }
                     ],
                     "cards": [
@@ -139,53 +135,21 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "device_tracker.pixel_2"
+                                    "entity": "device_tracker.pixel_4a"
                                 },
                                 {
-                                    "entity": "sensor.pixel_2_battery_level"
+                                    "entity": "sensor.pixel_4a_battery_level"
                                 },
                                 {
-                                    "entity": "sensor.pixel_2_battery_state"
+                                    "entity": "sensor.pixel_4a_battery_state"
                                 },
                                 {
-                                    "entity": "sensor.pixel_2_geocoded_location"
+                                    "entity": "sensor.pixel_4a_geocoded_location"
                                 },
                                 {
-                                    "entity": "sensor.pixel_2_wifi_connection"
+                                    "entity": "sensor.pixel_4a_wifi_connection"
                                 }
                             ],
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.esprouter_e7cc33_rssi"
-                                },
-                                {
-                                    "entity": "sensor.esprouter_e7cc33_ip",
-                                    "icon": "mdi:network"
-                                },
-                                {
-                                    "entity": "sensor.esprouter_e7cc33_mesh_level",
-                                    "icon": "mdi:router"
-                                },
-                                {
-                                    "entity": "sensor.esprouter_e7cc33_stations"
-                                },
-                                {
-                                    "entity": "sensor.esprouter_e7cc33_uptime",
-                                    "icon": "mdi:clock"
-                                },
-                                {
-                                    "entity": "sensor.esprouter_e7cc33_bytes_in",
-                                    "icon": "mdi:network"
-                                },
-                                {
-                                    "entity": "sensor.esprouter_e7cc33_bytes_out",
-                                    "icon": "mdi:network"
-                                }
-                            ],
-                            "title": "ESPRouter E7CC33",
                             "type": "entities"
                         },
                         {
@@ -252,6 +216,27 @@
                                 }
                             ],
                             "type": "horizontal-stack"
+                        },
+                        {
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.rt_ac66u_b1_3ed8_kib_s_received",
+                                    "min": 0,
+                                    "max": 2000,
+                                    "name": "Rec",
+                                    "unit": "KiB/s"
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.rt_ac66u_b1_3ed8_kib_s_sent",
+                                    "min": 0,
+                                    "max": 2000,
+                                    "name": "Sent",
+                                    "unit": "KiB/s"
+                                }
+                            ]
                         }
                     ],
                     "path": "admin",
@@ -259,7 +244,5 @@
                 }
             ]
         }
-    },
-    "key": "lovelace.lovelace_admin",
-    "version": 1
+    }
 }

@@ -68,3 +68,17 @@
     ignore_availability: true
     name: Portland Trip
     track: true
+
+- cal_id: okrjsqq9sfbej6cbk4sa2o698g@group.calendar.google.com
+  entities:
+  - device_id: tucson_trip_2020_november
+    ignore_availability: true
+    name: Tucson Trip 2020 November
+    track: true
+
+- cal_id: 2cseosq5gktmgb02br8b85jfcj9ob529@import.calendar.google.com
+  entities:
+  - device_id: https_www_rvtripwizard_com_ics_hash_73421_l3lssvlsk25lbusxegm3slbuss9sut09
+    ignore_availability: true
+    name: https://www.rvtripwizard.com/ics_hash/73421/L3lsSVlsK25lbUsxeGM3SlBUSS9SUT09
+    track: true

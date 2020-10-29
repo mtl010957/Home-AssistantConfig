@@ -632,7 +632,7 @@
   - entity_id: switch.humidifier_power
     service: switch.turn_on
 - id: '1581437260727'
-  alias: Thermostat set to 70 on work morning
+  alias: Work Morning thermostat set to 70 and open LR blinds
   description: ''
   trigger:
   - at: 04:00:00
@@ -648,6 +648,10 @@
       temperature: 70
     entity_id: climate.thermostat
     service: climate.set_temperature
+  - service: cover.open_cover_tilt
+    data: {}
+    entity_id: cover.living_room_blinds
+  mode: single
 - id: '1581601374878'
   alias: Humidifier off at 08:00
   description: ''
@@ -846,7 +850,7 @@
   alias: Notify Battery Low Downstairs Smoke Alarm
   description: ''
   trigger:
-  - below: 30
+  - below: 80
     device_id: fcbbefffc26a4249a4e27f01bbf24105
     domain: sensor
     entity_id: sensor.downstairs_smoke_alarm_battery_level
@@ -863,11 +867,12 @@
         ASAP.
       title: Downstairs Smoke Alarm Battery Low
     service: notify.hangouts_notify
+  mode: single
 - id: '1589227293445'
   alias: Notify Battery Low Upstairs Smoke Alarm
   description: ''
   trigger:
-  - below: 30
+  - below: 80
     device_id: 4e811fdefdea408ebf121abe13e8bb8f
     domain: sensor
     entity_id: sensor.upstairs_smoke_alarm_battery_level
@@ -883,6 +888,7 @@
       message: The upstairs smoke alarm battery is below 30%, please replace it ASAP.
       title: Upstairs Smoke Alarm Battery Low
     service: notify.hangouts_notify
+  mode: single
 - id: '1589562649239'
   alias: Living Room Blinds Remote Open
   description: ''
@@ -915,7 +921,7 @@
   alias: Notify Battery Low Family Room Smoke Alarm
   description: ''
   trigger:
-  - below: 30
+  - below: 80
     device_id: c3cc29801bfd4f25802b05085241dca2
     domain: sensor
     entity_id: sensor.family_room_smoke_alarm_battery_level
@@ -932,6 +938,7 @@
         ASAP.
       title: Family Room Smoke Alarm Battery Low
     service: notify.hangouts_notify
+  mode: single
 - id: '1589813195543'
   alias: Blinds Open at Sunrise if Armed Away
   description: ''
