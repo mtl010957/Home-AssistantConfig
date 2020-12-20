@@ -259,12 +259,6 @@
                             "type": "gauge"
                         },
                         {
-                            "aspect_ratio": "120%",
-                            "entity": "camera.dtx",
-                            "type": "picture-entity",
-                            "show_state": false
-                        },
-                        {
                             "entity": "weather.kptk_hourly",
                             "name": "Waterford",
                             "secondary_info_attribute": "humidity",

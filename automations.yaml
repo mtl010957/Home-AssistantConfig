@@ -981,3 +981,85 @@
       tilt_position: 100
     entity_id: cover.living_room_blinds
     service: cover.set_cover_tilt_position
+- id: '1608157965895'
+  alias: Xmas lights on at dusk
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: -00:20:00
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 9536dc3f7ae24ca4becaa28866474d00
+    entity_id: switch.back_outdoor_xmas_lights
+    domain: switch
+  mode: single
+- id: '1608158115532'
+  alias: Xmas lights off at 11:00 PM
+  description: ''
+  trigger:
+  - platform: time
+    at: '23:00:00'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 9536dc3f7ae24ca4becaa28866474d00
+    entity_id: switch.back_outdoor_xmas_lights
+    domain: switch
+  mode: single
+- id: '1608158234233'
+  alias: Xmas lights off after sunrise
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+    offset: 00:20:00
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 9536dc3f7ae24ca4becaa28866474d00
+    entity_id: switch.back_outdoor_xmas_lights
+    domain: switch
+  mode: single
+- id: '1608158400934'
+  alias: Xmas lights on at 05:00 AM
+  description: ''
+  trigger:
+  - platform: time
+    at: 05:00:00
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 9536dc3f7ae24ca4becaa28866474d00
+    entity_id: switch.back_outdoor_xmas_lights
+    domain: switch
+  mode: single
+- id: '1608163895748'
+  alias: Xmas lights on remote
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fan_remote_1h
+    to: 'on'
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 9536dc3f7ae24ca4becaa28866474d00
+    entity_id: switch.back_outdoor_xmas_lights
+    domain: switch
+  mode: single
+- id: '1608164010627'
+  alias: Xmas lights off remote
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fan_remote_4h
+    to: 'on'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 9536dc3f7ae24ca4becaa28866474d00
+    entity_id: switch.back_outdoor_xmas_lights
+    domain: switch
+  mode: single

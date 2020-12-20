@@ -1,0 +1,10 @@
+  host: !secret asuswrt_desert_host
+  username: !secret asuswrt_desert_username
+  password: !secret asuswrt_desert_password
+  port: !secret asuswrt_desert_port
+  sensors:
+    - devices
+    - upload
+    - download
+    - upload_speed
+    - download_speed

@@ -22,7 +22,8 @@
                 "id": "6a3d4e79ac0a4eb98e5a86b870225f21",
                 "via_device_id": null,
                 "area_id": null,
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -43,7 +44,8 @@
                 "id": "27eff64c6f8746cda679e76e617026c9",
                 "via_device_id": null,
                 "area_id": "316107820cce4630be06041fc14816e3",
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -64,7 +66,8 @@
                 "id": "da3bb0666349463e87d8db1dcbe00213",
                 "via_device_id": null,
                 "area_id": "be918af12ae344be9d3936091fc54a20",
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -85,7 +88,8 @@
                 "id": "4a9e2f9494b04eba8794c40747cda4c3",
                 "via_device_id": null,
                 "area_id": "66b0e5549f8b45ef8d7c37400cec0237",
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -106,7 +110,8 @@
                 "id": "16398d829c294e22875b65cf407a4ae8",
                 "via_device_id": null,
                 "area_id": null,
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -127,7 +132,8 @@
                 "id": "91ae9631e2af4dd6bd596e94b02cc7d6",
                 "via_device_id": null,
                 "area_id": null,
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -148,7 +154,8 @@
                 "id": "2a4b324a5fb44db0b7cf65e3114d3b7b",
                 "via_device_id": null,
                 "area_id": null,
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -164,12 +171,13 @@
                 "manufacturer": "hacs.xyz",
                 "model": "",
                 "name": "HACS",
-                "sw_version": "1.6.1",
+                "sw_version": "1.9.0",
                 "entry_type": "service",
                 "id": "a6390213c6084f2394864c2845d012ee",
                 "via_device_id": null,
                 "area_id": null,
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -190,7 +198,8 @@
                 "id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "via_device_id": null,
                 "area_id": null,
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -211,7 +220,8 @@
                 "id": "ccb650ff68e24c859522b24f0e88419e",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": "Siren and Strobe"
+                "name_by_user": "Siren and Strobe",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -232,7 +242,8 @@
                 "id": "0dc7fbd61b1b4e3db6f21c1782558563",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
-                "name_by_user": "Siren and Chime"
+                "name_by_user": "Siren and Chime",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -253,7 +264,8 @@
                 "id": "fd0cbc97c4f9457f985d6a1fed0a732d",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
-                "name_by_user": "Main Bedroom SE Ceiling Lights"
+                "name_by_user": "Main Bedroom SE Ceiling Lights",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -274,7 +286,8 @@
                 "id": "bf4280b430244dc8965f7b0ded9793cd",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
-                "name_by_user": "Main Bedroom NW Ceiling Lights"
+                "name_by_user": "Main Bedroom NW Ceiling Lights",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -295,7 +308,8 @@
                 "id": "121267773a72407e9aa51f5b0f615b21",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
-                "name_by_user": "Living Room Lamp Dimmer"
+                "name_by_user": "Living Room Lamp Dimmer",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -316,7 +330,8 @@
                 "id": "6d21f24f1bc24bee85172a5327b56fda",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
-                "name_by_user": "Main Bedroom Ceiling Fan"
+                "name_by_user": "Main Bedroom Ceiling Fan",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -337,7 +352,8 @@
                 "id": "b02e28111d784dd594cea56a0773fb1d",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": "Family Room NW Ceiling Lights"
+                "name_by_user": "Family Room NW Ceiling Lights",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -358,7 +374,8 @@
                 "id": "ba06d61e68e24d3c95a73becfc711c61",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": "Family Room SE Ceiling Lights"
+                "name_by_user": "Family Room SE Ceiling Lights",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -379,7 +396,8 @@
                 "id": "fe41f1020bdf4e74840c084f3a91f438",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
-                "name_by_user": "Living Room Lamp Module"
+                "name_by_user": "Living Room Lamp Module",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -400,7 +418,8 @@
                 "id": "e98ba1007257472b94ec68076912820e",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "0fe4b21cbf874ef3b141cffeca700b1d",
-                "name_by_user": "House Fan Switch Module"
+                "name_by_user": "House Fan Switch Module",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -421,7 +440,8 @@
                 "id": "a58c772f7049479bbd9b49695b173b63",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "d66690d909184fc39c8ef0e3559befea",
-                "name_by_user": "Dining Room Ceiling Light"
+                "name_by_user": "Dining Room Ceiling Light",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -442,7 +462,8 @@
                 "id": "c120525c21d248faaedc8a1d88d17911",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": "Back Door Sensor"
+                "name_by_user": "Back Door Sensor",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -463,7 +484,8 @@
                 "id": "ed8f4acba5054046be851176e81b190c",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "316107820cce4630be06041fc14816e3",
-                "name_by_user": "Office Motion Sensor"
+                "name_by_user": "Office Motion Sensor",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -484,7 +506,8 @@
                 "id": "a67fb5f1ee3f4a57a338786db4ac61a3",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "be918af12ae344be9d3936091fc54a20",
-                "name_by_user": "Garage Door Sensor"
+                "name_by_user": "Garage Door Sensor",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -505,7 +528,8 @@
                 "id": "a12d65a79e254bd8bc1286b578df6491",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
-                "name_by_user": "Main Bedroom Motion Sensor"
+                "name_by_user": "Main Bedroom Motion Sensor",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -526,7 +550,8 @@
                 "id": "3b5f006c562946f99e7aaf50d8f2ed5b",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
-                "name_by_user": "Front Door Sensor"
+                "name_by_user": "Front Door Sensor",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -552,7 +577,8 @@
                 "id": "c7ed60af146d440385d25a1b4f32ba02",
                 "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc",
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": "Family Room Link Bulb 1"
+                "name_by_user": "Family Room Link Bulb 1",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -578,7 +604,8 @@
                 "id": "0326419ab49f441bbe672e759ae8b494",
                 "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc",
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": "Family Room Link Bulb 2"
+                "name_by_user": "Family Room Link Bulb 2",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -604,7 +631,8 @@
                 "id": "2f410060429a42f78888722f30b8959c",
                 "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc",
                 "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
-                "name_by_user": "Bedside Lamp Bulb"
+                "name_by_user": "Bedside Lamp Bulb",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -630,7 +658,8 @@
                 "id": "a3a53ae5cdcf40ffae17d4e396c93d27",
                 "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc",
                 "area_id": "316107820cce4630be06041fc14816e3",
-                "name_by_user": "Office Light Bulb"
+                "name_by_user": "Office Light Bulb",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -656,7 +685,8 @@
                 "id": "1e5e4752a3384f1bb579e0bf9fabb6a6",
                 "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc",
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": "Family Room Lamp Bulb 1"
+                "name_by_user": "Family Room Lamp Bulb 1",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -682,7 +712,8 @@
                 "id": "1d313fdd3a2b45ee854fd45736c3dcc0",
                 "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc",
                 "area_id": "be918af12ae344be9d3936091fc54a20",
-                "name_by_user": "Garage Attic Link Bulb"
+                "name_by_user": "Garage Attic Link Bulb",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -708,7 +739,8 @@
                 "id": "66618e45aeaf45a9884441d8142b3c3d",
                 "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc",
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": "Family Room Lamp Bulb 2"
+                "name_by_user": "Family Room Lamp Bulb 2",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -734,7 +766,8 @@
                 "id": "1df737b790954843a6ae70aaf80ea977",
                 "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc",
                 "area_id": "34c603d253c649ccb4430b96d906f5a8",
-                "name_by_user": "Guest Room Lamp Bulb"
+                "name_by_user": "Guest Room Lamp Bulb",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -755,7 +788,8 @@
                 "id": "653b58242ddd475fa47b906fdc469822",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "d66690d909184fc39c8ef0e3559befea",
-                "name_by_user": "Garage Inside Door Sensor"
+                "name_by_user": "Garage Inside Door Sensor",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -776,7 +810,8 @@
                 "id": "22ee088da369491b87f94664a097322c",
                 "via_device_id": null,
                 "area_id": "316107820cce4630be06041fc14816e3",
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -797,7 +832,8 @@
                 "id": "f743120b85da4c02b68c18c65965b2c3",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": "Family Room Ceiling Fan"
+                "name_by_user": "Family Room Ceiling Fan",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -818,7 +854,8 @@
                 "id": "332c972f71e74030b4c62dab126764ce",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "dc451399bee647789f50e8317344517e",
-                "name_by_user": "Back Porch Light"
+                "name_by_user": "Back Porch Light",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -839,7 +876,8 @@
                 "id": "6f257e741b564746b69eca3a6eae1985",
                 "via_device_id": null,
                 "area_id": "be918af12ae344be9d3936091fc54a20",
-                "name_by_user": "Garage Light"
+                "name_by_user": "Garage Light",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -860,7 +898,8 @@
                 "id": "46b35f49b60e40bdb51cb453517d898c",
                 "via_device_id": null,
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": "Fan Remote"
+                "name_by_user": "Fan Remote",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -881,7 +920,8 @@
                 "id": "01b25cc1a9ff49c997bcd154e5b683f8",
                 "via_device_id": null,
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": "Family Room SW-NW Blinds"
+                "name_by_user": "Family Room SW-NW Blinds",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -902,7 +942,8 @@
                 "id": "fa7eeb66a74e455496e3ab375495dcf7",
                 "via_device_id": null,
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": "Family Room Climate"
+                "name_by_user": "Family Room Climate",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -923,7 +964,8 @@
                 "id": "6792d04f64544b2f96bf1ba9855e2e5b",
                 "via_device_id": null,
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": "Family Room SE-SW Blinds"
+                "name_by_user": "Family Room SE-SW Blinds",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -944,7 +986,8 @@
                 "id": "0d65186f76674e718fea0f63976d0522",
                 "via_device_id": null,
                 "area_id": null,
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -965,7 +1008,8 @@
                 "id": "7ec89b1bd00d47248701a5eedbf3a331",
                 "via_device_id": null,
                 "area_id": "be918af12ae344be9d3936091fc54a20",
-                "name_by_user": "Garage Latch"
+                "name_by_user": "Garage Latch",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -986,7 +1030,8 @@
                 "id": "ad38b2b29eb24331b68fbae50ee3316a",
                 "via_device_id": null,
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": "Family Room Ceiling Fan Light"
+                "name_by_user": "Family Room Ceiling Fan Light",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1007,7 +1052,8 @@
                 "id": "2bab1b706cff40359bbe36c356ee18d8",
                 "via_device_id": null,
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": "Family Room SW-SE Blinds"
+                "name_by_user": "Family Room SW-SE Blinds",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1028,7 +1074,8 @@
                 "id": "0297d19b6ceb409693273a05449045dc",
                 "via_device_id": null,
                 "area_id": "be918af12ae344be9d3936091fc54a20",
-                "name_by_user": "Garage Motion"
+                "name_by_user": "Garage Motion",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1049,7 +1096,8 @@
                 "id": "57673a6ec02649a3a76d73e5d17ca744",
                 "via_device_id": null,
                 "area_id": "74a49ece870947fc998a78d2e088b47f",
-                "name_by_user": "Irrigation Control"
+                "name_by_user": "Irrigation Control",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1070,7 +1118,8 @@
                 "id": "9df2e6a44ed14cecaf8bc31da5aa8cce",
                 "via_device_id": null,
                 "area_id": "316107820cce4630be06041fc14816e3",
-                "name_by_user": "Office Climate"
+                "name_by_user": "Office Climate",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1091,7 +1140,8 @@
                 "id": "90ec9849e88c4c19b61c9dc937b7c1ae",
                 "via_device_id": null,
                 "area_id": "74a49ece870947fc998a78d2e088b47f",
-                "name_by_user": "Furnace"
+                "name_by_user": "Furnace",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1112,7 +1162,8 @@
                 "id": "f1da704df4dd4da69ef980d105f8d710",
                 "via_device_id": null,
                 "area_id": "dc451399bee647789f50e8317344517e",
-                "name_by_user": "Outdoor Climate"
+                "name_by_user": "Outdoor Climate",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1133,7 +1184,8 @@
                 "id": "8d8de4c32fc84734af376c764700e31f",
                 "via_device_id": null,
                 "area_id": "ef79dc2fd72045778494fbbced8dcf7b",
-                "name_by_user": "Front Yard Light"
+                "name_by_user": "Front Yard Light",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1154,7 +1206,8 @@
                 "id": "9536dc3f7ae24ca4becaa28866474d00",
                 "via_device_id": null,
                 "area_id": "dc451399bee647789f50e8317344517e",
-                "name_by_user": "Back Outdoor Xmas Lights"
+                "name_by_user": "Back Outdoor Xmas Lights",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1175,7 +1228,8 @@
                 "id": "bd33d495ed6f409c9622f3669499aead",
                 "via_device_id": null,
                 "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
-                "name_by_user": "Main Bedroom Climate"
+                "name_by_user": "Main Bedroom Climate",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1196,7 +1250,8 @@
                 "id": "cbfd393800a549f18ffe84e0f6b6be6f",
                 "via_device_id": null,
                 "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
-                "name_by_user": "Humidifier Power"
+                "name_by_user": "Humidifier Power",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1217,7 +1272,8 @@
                 "id": "5eb22ee9f39e420687061b390d1f23d7",
                 "via_device_id": null,
                 "area_id": "66b0e5549f8b45ef8d7c37400cec0237",
-                "name_by_user": "Caravan Climate"
+                "name_by_user": "Caravan Climate",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1238,7 +1294,8 @@
                 "id": "3f2e1d3be7a049f08d4d1bfe39c87fc4",
                 "via_device_id": null,
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": "Family Room SE-NE Blinds"
+                "name_by_user": "Family Room SE-NE Blinds",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1259,7 +1316,8 @@
                 "id": "61344d8b56db43388bf5cc133786843b",
                 "via_device_id": null,
                 "area_id": "74a49ece870947fc998a78d2e088b47f",
-                "name_by_user": "Utility Power"
+                "name_by_user": "Utility Power",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1280,7 +1338,8 @@
                 "id": "abf3c9fea2e9422482ebac790b87643b",
                 "via_device_id": null,
                 "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
-                "name_by_user": "Living Room SE Blinds"
+                "name_by_user": "Living Room SE Blinds",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1301,7 +1360,8 @@
                 "id": "b0c05091d40849359f4f4d55a70a79d4",
                 "via_device_id": null,
                 "area_id": "be918af12ae344be9d3936091fc54a20",
-                "name_by_user": "Garage Climate"
+                "name_by_user": "Garage Climate",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1322,7 +1382,8 @@
                 "id": "8b90b436c1854e4fa6d18dc2c9e076a7",
                 "via_device_id": null,
                 "area_id": "ef79dc2fd72045778494fbbced8dcf7b",
-                "name_by_user": "Front Outdoor Xmas Lights"
+                "name_by_user": "Front Outdoor Xmas Lights",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1343,7 +1404,8 @@
                 "id": "ce95da89bb7b4d029e8f9ceeb144925e",
                 "via_device_id": null,
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1364,7 +1426,8 @@
                 "id": "7b4d27b07969400087ff94ee4091b87d",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "ef79dc2fd72045778494fbbced8dcf7b",
-                "name_by_user": "Front Porch Light"
+                "name_by_user": "Front Porch Light",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1379,13 +1442,14 @@
                 ],
                 "manufacturer": "Google",
                 "model": "Pixel 4a",
-                "name": "Pixel 2",
+                "name": "Pixel 4a",
                 "sw_version": "30",
                 "entry_type": null,
                 "id": "9d361d73d84644189fd9557e1ea3eefd",
                 "via_device_id": null,
                 "area_id": null,
-                "name_by_user": "Pixel 4a"
+                "name_by_user": "Pixel 4a",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1406,7 +1470,8 @@
                 "id": "195b141847214538a451c2a6cfaacd35",
                 "via_device_id": null,
                 "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1427,7 +1492,8 @@
                 "id": "afeedf06916c460680efcd14027f18af",
                 "via_device_id": null,
                 "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
-                "name_by_user": "Living Room SE CTR Blinds"
+                "name_by_user": "Living Room SE CTR Blinds",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1448,7 +1514,8 @@
                 "id": "28c408aeffa1431ab8135271d9e05835",
                 "via_device_id": null,
                 "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
-                "name_by_user": "Living Room CTR Blinds"
+                "name_by_user": "Living Room CTR Blinds",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1469,7 +1536,8 @@
                 "id": "800d8ada96f04f2e95461f3f93c6d3a8",
                 "via_device_id": null,
                 "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
-                "name_by_user": "Living Room NW CTR Blinds"
+                "name_by_user": "Living Room NW CTR Blinds",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1490,7 +1558,8 @@
                 "id": "e0df26504d514ce2ae20e20ce379cd99",
                 "via_device_id": null,
                 "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
-                "name_by_user": "Living Room NW Blinds"
+                "name_by_user": "Living Room NW Blinds",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1511,7 +1580,8 @@
                 "id": "ca756dc0b69d4d3292d23c5b10332324",
                 "via_device_id": null,
                 "area_id": "316107820cce4630be06041fc14816e3",
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1532,7 +1602,8 @@
                 "id": "4e811fdefdea408ebf121abe13e8bb8f",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "fb89b524d9f34166bd038247f8d434b7",
-                "name_by_user": "Upstairs Smoke Alarm"
+                "name_by_user": "Upstairs Smoke Alarm",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1553,7 +1624,8 @@
                 "id": "fcbbefffc26a4249a4e27f01bbf24105",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "bebd4b239b054e2da7abe614ba924f32",
-                "name_by_user": "Downstairs Smoke Alarm"
+                "name_by_user": "Downstairs Smoke Alarm",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1574,7 +1646,8 @@
                 "id": "c3cc29801bfd4f25802b05085241dca2",
                 "via_device_id": "eba8c86d010a45a9bd1fa7e58917bdc4",
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": "Family Room Smoke Alarm"
+                "name_by_user": "Family Room Smoke Alarm",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1595,7 +1668,8 @@
                 "id": "1088744891254b82bc3d03f1b7e066d8",
                 "via_device_id": null,
                 "area_id": null,
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1621,7 +1695,8 @@
                 "id": "7a6fe1d61caf4b5289ad667d0e3578bc",
                 "via_device_id": null,
                 "area_id": null,
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1642,7 +1717,8 @@
                 "id": "3697d9de1b7f463ab09fb9c7b8420dbf",
                 "via_device_id": null,
                 "area_id": null,
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1663,7 +1739,8 @@
                 "id": "4565c2edfb9842a1896dd5139be87fe1",
                 "via_device_id": null,
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": "Family Room NW-SW Blinds"
+                "name_by_user": "Family Room NW-SW Blinds",
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1684,7 +1761,8 @@
                 "id": "59d08600fb6f48069c10167786877ed2",
                 "via_device_id": null,
                 "area_id": null,
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1705,7 +1783,8 @@
                 "id": "264905e4581b4bfbbbedc9e22861547b",
                 "via_device_id": null,
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1731,7 +1810,8 @@
                 "id": "bf8f31d2082711eb945a6746db3d83a7",
                 "via_device_id": null,
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1752,7 +1832,8 @@
                 "id": "2d84e7d3095c11eba0dc5b76efde60ac",
                 "via_device_id": null,
                 "area_id": null,
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1773,7 +1854,8 @@
                 "id": "b98da57a095d11eb8d641b97afe12976",
                 "via_device_id": null,
                 "area_id": null,
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             },
             {
                 "config_entries": [
@@ -1794,7 +1876,8 @@
                 "id": "c06d38bd162111ebb0b3415c796a7971",
                 "via_device_id": null,
                 "area_id": null,
-                "name_by_user": null
+                "name_by_user": null,
+                "disabled_by": null
             }
         ],
         "deleted_devices": [

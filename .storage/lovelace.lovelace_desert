@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace.lovelace_desert",
     "data": {
         "config": {
             "title": "Desert",
@@ -42,6 +44,33 @@
                             ],
                             "title": "Desert Living Room",
                             "type": "picture-glance"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                "sensor.asuswrt_devices_connected",
+                                "sensor.asuswrt_download",
+                                "sensor.asuswrt_upload"
+                            ]
+                        },
+                        {
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.asuswrt_download_speed",
+                                    "min": 0,
+                                    "max": 20,
+                                    "name": "Down"
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.asuswrt_upload_speed",
+                                    "min": 0,
+                                    "max": 20,
+                                    "name": "Up"
+                                }
+                            ]
                         }
                     ],
                     "path": "inside",
@@ -102,7 +131,5 @@
                 }
             ]
         }
-    },
-    "key": "lovelace.lovelace_desert",
-    "version": 1
+    }
 }

@@ -9,6 +9,8 @@
             "title": "Admin",
             "views": [
                 {
+                    "path": "admin",
+                    "title": "Admin",
                     "badges": [
                         {
                             "entity": "sensor.load_1m"
@@ -23,7 +25,7 @@
                             "entity": "binary_sensor.updater"
                         },
                         {
-                            "entity": "sensor.ssl_certificate_expiry_2"
+                            "entity": "sensor.cert_expiry_timestamp_ha_mtl_svn_dyndns_home_com"
                         },
                         {
                             "entity": "sensor.hacs"
@@ -238,9 +240,7 @@
                                 }
                             ]
                         }
-                    ],
-                    "path": "admin",
-                    "title": "Admin"
+                    ]
                 }
             ]
         }
