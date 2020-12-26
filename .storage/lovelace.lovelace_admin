@@ -42,16 +42,42 @@
                     ],
                     "cards": [
                         {
-                            "entity": "sensor.processor_use",
-                            "max": 100,
-                            "min": 0,
-                            "severity": {
-                                "green": 1,
-                                "red": 81,
-                                "yellow": 41
-                            },
-                            "theme": "default",
-                            "type": "gauge"
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.processor_use",
+                                    "min": 0,
+                                    "max": 100,
+                                    "severity": {
+                                        "green": 0,
+                                        "yellow": 41,
+                                        "red": 81
+                                    }
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.memory_use_percent",
+                                    "min": 0,
+                                    "max": 100,
+                                    "severity": {
+                                        "green": 0,
+                                        "yellow": 80,
+                                        "red": 90
+                                    }
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.swap_use_percent",
+                                    "min": 0,
+                                    "max": 100,
+                                    "severity": {
+                                        "green": 0,
+                                        "yellow": 40,
+                                        "red": 70
+                                    }
+                                }
+                            ]
                         },
                         {
                             "columns": 2,
@@ -61,12 +87,6 @@
                                 },
                                 {
                                     "entity": "sensor.uptime"
-                                },
-                                {
-                                    "entity": "sensor.memory_use_percent"
-                                },
-                                {
-                                    "entity": "sensor.swap_use_percent"
                                 },
                                 {
                                     "entity": "sensor.disk_use_percent"
@@ -84,10 +104,6 @@
                                 },
                                 {
                                     "entity": "zwave.aeon_labs_zw090_z_stick_gen5_us"
-                                },
-                                {
-                                    "entity": "switch.utility_power",
-                                    "state_color": true
                                 }
                             ],
                             "title": "Hubs",

@@ -73,6 +73,7 @@ include:
     - sensor.load_1m
     - sensor.memory_use_percent
     - sensor.swap_use_percent
+    - sensor.processor_use
     - sensor.cpu_temperature
     - sensor.office_temperature
     - sensor.office_humidity
