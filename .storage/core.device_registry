@@ -1856,6 +1856,28 @@
                 "area_id": null,
                 "name_by_user": null,
                 "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "e1efa85aced04f95bc58dc5f248bf376"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "dc4f22defeb4"
+                    ]
+                ],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_ESP01_1M",
+                "name": "sb03",
+                "sw_version": "esphome v1.16.0-dev Dec 22 2020, 13:47:25",
+                "entry_type": null,
+                "id": "61344d8b56db43388bf5cc133786843b",
+                "via_device_id": null,
+                "area_id": "74a49ece870947fc998a78d2e088b47f",
+                "name_by_user": "Utility Power",
+                "disabled_by": null
             }
         ],
         "deleted_devices": [
@@ -1871,19 +1893,6 @@
                     ]
                 ],
                 "id": "8a99ee78cda64cabb43541c266410c90"
-            },
-            {
-                "config_entries": [
-                    "e1efa85aced04f95bc58dc5f248bf376"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mqtt",
-                        "dc4f22defeb4"
-                    ]
-                ],
-                "id": "61344d8b56db43388bf5cc133786843b"
             }
         ]
     }

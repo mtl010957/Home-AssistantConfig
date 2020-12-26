@@ -104,6 +104,9 @@
                                 },
                                 {
                                     "entity": "zwave.aeon_labs_zw090_z_stick_gen5_us"
+                                },
+                                {
+                                    "entity": "switch.utility_power_relay"
                                 }
                             ],
                             "title": "Hubs",
