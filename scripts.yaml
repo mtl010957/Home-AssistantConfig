@@ -84,3 +84,29 @@ open_all_blinds:
     service: cover.open_cover_tilt
   mode: single
   icon: mdi:window-shutter
+turn_on_xmas_lights:
+  alias: Turn on Xmas lights
+  sequence:
+  - type: turn_on
+    device_id: 9536dc3f7ae24ca4becaa28866474d00
+    entity_id: switch.back_outdoor_xmas_lights
+    domain: switch
+  - type: turn_on
+    device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
+    entity_id: switch.front_outdoor_xmas_lights
+    domain: switch
+  mode: single
+  icon: mdi:string-lights
+turn_off_xmas_lights:
+  alias: Turn off Xmas lights
+  sequence:
+  - type: turn_off
+    device_id: 9536dc3f7ae24ca4becaa28866474d00
+    entity_id: switch.back_outdoor_xmas_lights
+    domain: switch
+  - type: turn_off
+    device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
+    entity_id: switch.front_outdoor_xmas_lights
+    domain: switch
+  mode: single
+  icon: mdi:string-lights

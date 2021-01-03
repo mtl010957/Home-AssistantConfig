@@ -11,28 +11,6 @@
                 "identifiers": [
                     [
                         "cast",
-                        "b3d3a131cf6fbd05c17d4a49863fb6ab"
-                    ]
-                ],
-                "manufacturer": "Google Inc.",
-                "model": "MIBOX4",
-                "name": "Family Room TV",
-                "sw_version": null,
-                "entry_type": null,
-                "id": "6a3d4e79ac0a4eb98e5a86b870225f21",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
-                    "3cbe8ba6a37a444886eddeb49d953cf7"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "cast",
                         "c7f5e694a696c50aedc1bd6fa2da9894"
                     ]
                 ],
@@ -1750,77 +1728,6 @@
                 "identifiers": [
                     [
                         "cast",
-                        "0aa5541e317fe8b6a7097a1ae56f9bc4"
-                    ]
-                ],
-                "manufacturer": "Google Inc.",
-                "model": "MIBOX4",
-                "name": "Family Room TV",
-                "sw_version": null,
-                "entry_type": null,
-                "id": "264905e4581b4bfbbbedc9e22861547b",
-                "via_device_id": null,
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
-                    "b9816fed082711ebb58e63fa0fc688fa"
-                ],
-                "connections": [
-                    [
-                        "upnp",
-                        "uuid:3ddcd1d3-2380-45f5-b069-244bfe763ed8"
-                    ]
-                ],
-                "identifiers": [
-                    [
-                        "upnp",
-                        "uuid:3ddcd1d3-2380-45f5-b069-244bfe763ed8"
-                    ]
-                ],
-                "manufacturer": "ASUSTeK Computer Inc.",
-                "model": "RT-AC66U_B1",
-                "name": "RT-AC66U_B1-3ED8",
-                "sw_version": null,
-                "entry_type": null,
-                "id": "bf8f31d2082711eb945a6746db3d83a7",
-                "via_device_id": null,
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
-                    "3cbe8ba6a37a444886eddeb49d953cf7"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "cast",
-                        "6a56e323a001e6dc28ad10f450107890"
-                    ]
-                ],
-                "manufacturer": "Google Inc.",
-                "model": "Chromecast",
-                "name": "Chromecast6845",
-                "sw_version": null,
-                "entry_type": null,
-                "id": "2d84e7d3095c11eba0dc5b76efde60ac",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
-                    "3cbe8ba6a37a444886eddeb49d953cf7"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "cast",
                         "498f89836b7afd6a5a7f51bb6100e390"
                     ]
                 ],
@@ -1831,7 +1738,7 @@
                 "entry_type": null,
                 "id": "b98da57a095d11eb8d641b97afe12976",
                 "via_device_id": null,
-                "area_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "name_by_user": null,
                 "disabled_by": null
             },
@@ -1877,6 +1784,55 @@
                 "via_device_id": null,
                 "area_id": "74a49ece870947fc998a78d2e088b47f",
                 "name_by_user": "Utility Power",
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "3cbe8ba6a37a444886eddeb49d953cf7"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "cast",
+                        "eca4a421f02b180a04785e8b4ad08818"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Chromecast",
+                "name": "Main Bedroom TV",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "77175e88feb3f5c1eef883d50e685c62",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "0fdcbc83449ee59b42979255c1fa635e"
+                ],
+                "connections": [
+                    [
+                        "upnp",
+                        "uuid:3ddcd1d3-2380-45f5-b069-244bfe763ed8"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "upnp",
+                        "uuid:3ddcd1d3-2380-45f5-b069-244bfe763ed8"
+                    ]
+                ],
+                "manufacturer": "ASUSTeK Computer Inc.",
+                "model": "RT-AC66U_B1",
+                "name": "RT-AC66U_B1-3ED8",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "679544e65f9533f1fb4b9a4883e125e8",
+                "via_device_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": null,
                 "disabled_by": null
             }
         ],

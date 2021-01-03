@@ -591,8 +591,9 @@
     to: 'on'
   condition: []
   action:
-  - entity_id: switch.garage_latch_servo
+  - entity_id: switch.garage_latch
     service: switch.turn_off
+  mode: single
 - id: '1578620613401'
   alias: Humidifier off above set point
   description: ''
@@ -632,7 +633,7 @@
   - entity_id: switch.humidifier_power
     service: switch.turn_on
 - id: '1581437260727'
-  alias: Work Morning thermostat set to 70 and open LR blinds
+  alias: Work Morning Fall-Winter
   description: ''
   trigger:
   - at: 04:00:00
@@ -643,14 +644,19 @@
   - condition: template
     value_template: '{{ is_state_attr(''calendar.susan'', ''start_time'', as_timestamp(now())
       | timestamp_custom(''%Y-%m-%d'') ~ '' 06:00:00'') }}'
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: sensor.season
+      state: autumn
+    - condition: state
+      entity_id: sensor.season
+      state: winter
   action:
-  - data:
+  - scene: scene.work_morning_winter
+  - service: climate.set_temperature
+    data:
       temperature: 70
-    entity_id: climate.thermostat
-    service: climate.set_temperature
-  - service: cover.open_cover_tilt
-    data: {}
-    entity_id: cover.living_room_blinds
   mode: single
 - id: '1581601374878'
   alias: Humidifier off at 08:00
@@ -990,10 +996,8 @@
     offset: -00:20:00
   condition: []
   action:
-  - type: turn_on
-    device_id: 9536dc3f7ae24ca4becaa28866474d00
-    entity_id: switch.back_outdoor_xmas_lights
-    domain: switch
+  - service: script.turn_on_xmas_lights
+    data: {}
   mode: single
 - id: '1608158115532'
   alias: Xmas lights off at 11:00 PM
@@ -1003,10 +1007,8 @@
     at: '23:00:00'
   condition: []
   action:
-  - type: turn_off
-    device_id: 9536dc3f7ae24ca4becaa28866474d00
-    entity_id: switch.back_outdoor_xmas_lights
-    domain: switch
+  - service: script.turn_off_xmas_lights
+    data: {}
   mode: single
 - id: '1608158234233'
   alias: Xmas lights off after sunrise
@@ -1017,10 +1019,8 @@
     offset: 00:20:00
   condition: []
   action:
-  - type: turn_off
-    device_id: 9536dc3f7ae24ca4becaa28866474d00
-    entity_id: switch.back_outdoor_xmas_lights
-    domain: switch
+  - service: script.turn_off_xmas_lights
+    data: {}
   mode: single
 - id: '1608158400934'
   alias: Xmas lights on at 05:00 AM
@@ -1030,10 +1030,8 @@
     at: 05:00:00
   condition: []
   action:
-  - type: turn_on
-    device_id: 9536dc3f7ae24ca4becaa28866474d00
-    entity_id: switch.back_outdoor_xmas_lights
-    domain: switch
+  - service: script.turn_on_xmas_lights
+    data: {}
   mode: single
 - id: '1608163895748'
   alias: Xmas lights on remote
@@ -1044,10 +1042,8 @@
     to: 'on'
   condition: []
   action:
-  - type: turn_on
-    device_id: 9536dc3f7ae24ca4becaa28866474d00
-    entity_id: switch.back_outdoor_xmas_lights
-    domain: switch
+  - service: script.turn_on_xmas_lights
+    data: {}
   mode: single
 - id: '1608164010627'
   alias: Xmas lights off remote
@@ -1058,8 +1054,43 @@
     to: 'on'
   condition: []
   action:
-  - type: turn_off
-    device_id: 9536dc3f7ae24ca4becaa28866474d00
-    entity_id: switch.back_outdoor_xmas_lights
-    domain: switch
+  - service: script.turn_off_xmas_lights
+    data: {}
+  mode: single
+- id: '1609352755365'
+  alias: Tag Play Alt 98.7 is scanned
+  description: ''
+  trigger:
+  - platform: tag
+    tag_id: 82482dc8-74e0-483d-a7ce-c82d9b31eb08
+  condition: []
+  action:
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.speaker_pair
+      media_content_id: https://17683.live.streamtheworld.com/WDZHFMAAC_SC?sbmid=7f9670a7-6b98-4daf-b9fb-45e8db5bafac
+      media_content_type: music
+  mode: single
+- id: '1609622832605'
+  alias: Work Morning Spring-Summer
+  description: ''
+  trigger:
+  - at: 04:00:00
+    platform: time
+  condition:
+  - condition: template
+    value_template: '{{ is_state_attr(''calendar.susan'', ''message'', ''Work'') }}'
+  - condition: template
+    value_template: '{{ is_state_attr(''calendar.susan'', ''start_time'', as_timestamp(now())
+      | timestamp_custom(''%Y-%m-%d'') ~ '' 06:00:00'') }}'
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: sensor.season
+      state: spring
+    - condition: state
+      entity_id: sensor.season
+      state: summer
+  action:
+  - scene: scene.work_morning_summer
   mode: single

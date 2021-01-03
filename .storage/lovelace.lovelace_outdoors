@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace.lovelace_outdoors",
     "data": {
         "config": {
             "title": "Outdoors",
@@ -214,8 +216,7 @@
                                     "entity": "light.front_porch_light"
                                 },
                                 {
-                                    "entity": "switch.front_outdoor_xmas_lights",
-                                    "icon": "mdi:string-lights"
+                                    "entity": "switch.front_outdoor_xmas_lights"
                                 },
                                 {
                                     "entity": "switch.front_yard_light",
@@ -255,7 +256,6 @@
                                     "hold_action": {
                                         "action": "more-info"
                                     },
-                                    "icon": "mdi:string-lights",
                                     "name": "Front Xmas Lights",
                                     "show_icon": true,
                                     "show_name": true,
@@ -288,8 +288,7 @@
                                     "entity": "light.back_porch_light"
                                 },
                                 {
-                                    "entity": "switch.back_outdoor_xmas_lights",
-                                    "icon": "mdi:string-lights"
+                                    "entity": "switch.back_outdoor_xmas_lights"
                                 },
                                 {
                                     "entity": "switch.foscam_cam2_motion"
@@ -325,7 +324,6 @@
                                     "hold_action": {
                                         "action": "more-info"
                                     },
-                                    "icon": "mdi:string-lights",
                                     "name": "Back Xmas Lights",
                                     "show_icon": true,
                                     "show_name": true,
@@ -374,7 +372,5 @@
                 }
             ]
         }
-    },
-    "key": "lovelace.lovelace_outdoors",
-    "version": 1
+    }
 }
