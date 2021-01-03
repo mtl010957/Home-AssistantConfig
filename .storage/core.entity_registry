@@ -8263,7 +8263,7 @@
                 "device_class": null,
                 "unit_of_measurement": "Mbps",
                 "original_name": "Pixel 4a WiFi Link Speed",
-                "original_icon": "mdi:wifi-strength-3"
+                "original_icon": "mdi:wifi-strength-2"
             },
             {
                 "entity_id": "binary_sensor.pixel_4a_wifi_state",
@@ -8314,7 +8314,7 @@
                 "device_class": null,
                 "unit_of_measurement": "dBm",
                 "original_name": "Pixel 4a WiFi Signal Strength",
-                "original_icon": "mdi:wifi-strength-1"
+                "original_icon": "mdi:wifi-strength-2"
             },
             {
                 "entity_id": "sensor.pixel_4a_public_ip_address",
