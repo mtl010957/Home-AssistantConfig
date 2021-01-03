@@ -209,181 +209,6 @@
                             "type": "glance"
                         },
                         {
-                            "cards": [
-                                {
-                                    "cards": [
-                                        {
-                                            "cards": [
-                                                {
-                                                    "entity": "cover.family_room_sene_blinds",
-                                                    "hold_action": {
-                                                        "action": "more-info"
-                                                    },
-                                                    "name": "SE-NE FR",
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "cover.toggle_cover_tilt",
-                                                        "service_data": {
-                                                            "entity_id": "cover.family_room_sene_blinds"
-                                                        }
-                                                    },
-                                                    "type": "entity-button"
-                                                },
-                                                {
-                                                    "entity": "sensor.family_room_sene_blinds_tilt_position",
-                                                    "max": 100,
-                                                    "min": 0,
-                                                    "name": "SE-NE FR Pos",
-                                                    "severity": {
-                                                        "green": 0,
-                                                        "red": 80,
-                                                        "yellow": 20
-                                                    },
-                                                    "theme": "default",
-                                                    "type": "gauge"
-                                                }
-                                            ],
-                                            "type": "horizontal-stack"
-                                        },
-                                        {
-                                            "cards": [
-                                                {
-                                                    "entity": "cover.family_room_sesw_blinds",
-                                                    "hold_action": {
-                                                        "action": "more-info"
-                                                    },
-                                                    "name": "SE-SW FR",
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "cover.toggle_cover_tilt",
-                                                        "service_data": {
-                                                            "entity_id": "cover.family_room_sesw_blinds"
-                                                        }
-                                                    },
-                                                    "type": "entity-button"
-                                                },
-                                                {
-                                                    "entity": "sensor.family_room_sesw_blinds_tilt_position",
-                                                    "max": 100,
-                                                    "min": 0,
-                                                    "name": "SE-SW FR Pos",
-                                                    "severity": {
-                                                        "green": 0,
-                                                        "red": 80,
-                                                        "yellow": 20
-                                                    },
-                                                    "theme": "default",
-                                                    "type": "gauge"
-                                                }
-                                            ],
-                                            "type": "horizontal-stack"
-                                        },
-                                        {
-                                            "cards": [
-                                                {
-                                                    "entity": "cover.family_room_swse_blinds",
-                                                    "hold_action": {
-                                                        "action": "more-info"
-                                                    },
-                                                    "name": "SW-SE FR",
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "cover.toggle_cover_tilt",
-                                                        "service_data": {
-                                                            "entity_id": "cover.family_room_swse_blinds"
-                                                        }
-                                                    },
-                                                    "type": "entity-button"
-                                                },
-                                                {
-                                                    "entity": "sensor.family_room_swse_blinds_tilt_position",
-                                                    "max": 100,
-                                                    "min": 0,
-                                                    "name": "SW-SE FR Pos",
-                                                    "severity": {
-                                                        "green": 0,
-                                                        "red": 80,
-                                                        "yellow": 20
-                                                    },
-                                                    "theme": "default",
-                                                    "type": "gauge"
-                                                }
-                                            ],
-                                            "type": "horizontal-stack"
-                                        },
-                                        {
-                                            "cards": [
-                                                {
-                                                    "entity": "cover.family_room_swnw_blinds",
-                                                    "hold_action": {
-                                                        "action": "more-info"
-                                                    },
-                                                    "name": "SW-NW FR",
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "cover.toggle_cover_tilt",
-                                                        "service_data": {
-                                                            "entity_id": "cover.family_room_swnw_blinds"
-                                                        }
-                                                    },
-                                                    "type": "entity-button"
-                                                },
-                                                {
-                                                    "entity": "sensor.family_room_swnw_blinds_tilt_position",
-                                                    "max": 100,
-                                                    "min": 0,
-                                                    "name": "SW-NW FR Pos",
-                                                    "severity": {
-                                                        "green": 0,
-                                                        "red": 80,
-                                                        "yellow": 20
-                                                    },
-                                                    "theme": "default",
-                                                    "type": "gauge"
-                                                }
-                                            ],
-                                            "type": "horizontal-stack"
-                                        },
-                                        {
-                                            "cards": [
-                                                {
-                                                    "entity": "cover.family_room_nwsw_blinds",
-                                                    "hold_action": {
-                                                        "action": "more-info"
-                                                    },
-                                                    "name": "NW-SW FR",
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "cover.toggle_cover_tilt",
-                                                        "service_data": {
-                                                            "entity_id": "cover.family_room_nwsw_blinds"
-                                                        }
-                                                    },
-                                                    "type": "entity-button"
-                                                },
-                                                {
-                                                    "entity": "sensor.family_room_nwsw_blinds_tilt_position",
-                                                    "max": 100,
-                                                    "min": 0,
-                                                    "name": "NW-SW FR Pos",
-                                                    "severity": {
-                                                        "green": 0,
-                                                        "red": 80,
-                                                        "yellow": 20
-                                                    },
-                                                    "theme": "default",
-                                                    "type": "gauge"
-                                                }
-                                            ],
-                                            "type": "horizontal-stack"
-                                        }
-                                    ],
-                                    "type": "vertical-stack"
-                                }
-                            ],
-                            "type": "horizontal-stack"
-                        },
-                        {
                             "entities": [
                                 {
                                     "entity": "switch.siren_and_strobe_switch"
@@ -399,6 +224,173 @@
                         {
                             "entity": "media_player.family_room_tv",
                             "type": "media-control"
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "title": "Family Room Blinds",
+                            "cards": [
+                                {
+                                    "cards": [
+                                        {
+                                            "entity": "cover.family_room_sene_blinds",
+                                            "hold_action": {
+                                                "action": "more-info"
+                                            },
+                                            "name": "SE-NE",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.toggle_cover_tilt",
+                                                "service_data": {
+                                                    "entity_id": "cover.family_room_sene_blinds"
+                                                }
+                                            },
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "cover.family_room_sesw_blinds",
+                                            "hold_action": {
+                                                "action": "more-info"
+                                            },
+                                            "name": "SE-SW",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.toggle_cover_tilt",
+                                                "service_data": {
+                                                    "entity_id": "cover.family_room_sesw_blinds"
+                                                }
+                                            },
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "cover.family_room_swse_blinds",
+                                            "hold_action": {
+                                                "action": "more-info"
+                                            },
+                                            "name": "SW-SE",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.toggle_cover_tilt",
+                                                "service_data": {
+                                                    "entity_id": "cover.family_room_swse_blinds"
+                                                }
+                                            },
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "cover.family_room_swnw_blinds",
+                                            "hold_action": {
+                                                "action": "more-info"
+                                            },
+                                            "name": "SW-NW",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.toggle_cover_tilt",
+                                                "service_data": {
+                                                    "entity_id": "cover.family_room_swnw_blinds"
+                                                }
+                                            },
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "cover.family_room_nwsw_blinds",
+                                            "hold_action": {
+                                                "action": "more-info"
+                                            },
+                                            "name": "NW-SW",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.toggle_cover_tilt",
+                                                "service_data": {
+                                                    "entity_id": "cover.family_room_nwsw_blinds"
+                                                }
+                                            },
+                                            "type": "entity-button"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.family_room_sene_blinds_tilt_position",
+                                            "min": 0,
+                                            "max": 100,
+                                            "severity": {
+                                                "green": 0,
+                                                "yellow": 20,
+                                                "red": 80
+                                            },
+                                            "name": " "
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.family_room_sesw_blinds_tilt_position",
+                                            "min": 0,
+                                            "max": 100,
+                                            "severity": {
+                                                "green": 0,
+                                                "yellow": 20,
+                                                "red": 80
+                                            },
+                                            "name": " "
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.family_room_swse_blinds_tilt_position",
+                                            "min": 0,
+                                            "max": 100,
+                                            "severity": {
+                                                "green": 0,
+                                                "yellow": 20,
+                                                "red": 80
+                                            },
+                                            "name": " "
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.family_room_swnw_blinds_tilt_position",
+                                            "min": 0,
+                                            "max": 100,
+                                            "name": " ",
+                                            "severity": {
+                                                "green": 0,
+                                                "yellow": 20,
+                                                "red": 80
+                                            }
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.family_room_nwsw_blinds_tilt_position",
+                                            "min": 0,
+                                            "max": 100,
+                                            "name": " ",
+                                            "severity": {
+                                                "green": 0,
+                                                "yellow": 20,
+                                                "red": 80
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "entity": "cover.family_room_blinds",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "show_icon": true,
+                            "show_name": true,
+                            "tap_action": {
+                                "action": "call-service",
+                                "service": "cover.toggle_cover_tilt",
+                                "service_data": {
+                                    "entity_id": "cover.family_room_blinds"
+                                }
+                            },
+                            "type": "button"
                         }
                     ],
                     "path": "family-room",
@@ -548,139 +540,9 @@
                             "type": "glance"
                         },
                         {
+                            "type": "vertical-stack",
+                            "title": "Living Room Blinds",
                             "cards": [
-                                {
-                                    "cards": [
-                                        {
-                                            "entity": "cover.living_room_se_blinds",
-                                            "hold_action": {
-                                                "action": "more-info"
-                                            },
-                                            "name": "SE LR",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "cover.toggle_cover_tilt",
-                                                "service_data": {
-                                                    "entity_id": "cover.living_room_se_blinds"
-                                                }
-                                            },
-                                            "type": "entity-button"
-                                        },
-                                        {
-                                            "entity": "sensor.living_room_se_blinds_tilt_position",
-                                            "max": 100,
-                                            "min": 0,
-                                            "name": "SE LR Pos",
-                                            "severity": {
-                                                "green": 0,
-                                                "red": 80,
-                                                "yellow": 20
-                                            },
-                                            "theme": "default",
-                                            "type": "gauge"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "entity": "cover.living_room_se_ctr_blinds",
-                                            "hold_action": {
-                                                "action": "more-info"
-                                            },
-                                            "name": "SE CTR LR",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "cover.toggle_cover_tilt",
-                                                "service_data": {
-                                                    "entity_id": "cover.living_room_se_ctr_blinds"
-                                                }
-                                            },
-                                            "type": "entity-button"
-                                        },
-                                        {
-                                            "entity": "sensor.living_room_se_ctr_blinds_tilt_position",
-                                            "max": 100,
-                                            "min": 0,
-                                            "name": "SE CTR LR Pos",
-                                            "severity": {
-                                                "green": 0,
-                                                "red": 80,
-                                                "yellow": 20
-                                            },
-                                            "theme": "default",
-                                            "type": "gauge"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "entity": "cover.living_room_ctr_blinds",
-                                            "hold_action": {
-                                                "action": "more-info"
-                                            },
-                                            "name": "CTR LR",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "cover.toggle_cover_tilt",
-                                                "service_data": {
-                                                    "entity_id": "cover.living_room_ctr_blinds"
-                                                }
-                                            },
-                                            "type": "entity-button"
-                                        },
-                                        {
-                                            "entity": "sensor.living_room_ctr_blinds_tilt_position",
-                                            "max": 100,
-                                            "min": 0,
-                                            "name": "CTR LR Pos",
-                                            "severity": {
-                                                "green": 0,
-                                                "red": 80,
-                                                "yellow": 20
-                                            },
-                                            "theme": "default",
-                                            "type": "gauge"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "entity": "cover.living_room_nw_ctr_blinds",
-                                            "hold_action": {
-                                                "action": "more-info"
-                                            },
-                                            "name": "NW CTR LR",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "cover.toggle_cover_tilt",
-                                                "service_data": {
-                                                    "entity_id": "cover.living_room_nw_ctr_blinds"
-                                                }
-                                            },
-                                            "type": "entity-button"
-                                        },
-                                        {
-                                            "entity": "sensor.living_room_nw_ctr_blinds_tilt_position",
-                                            "max": 100,
-                                            "min": 0,
-                                            "name": "NW CTR LR Pos",
-                                            "severity": {
-                                                "green": 0,
-                                                "red": 80,
-                                                "yellow": 20
-                                            },
-                                            "theme": "default",
-                                            "type": "gauge"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
                                 {
                                     "cards": [
                                         {
@@ -688,7 +550,7 @@
                                             "hold_action": {
                                                 "action": "more-info"
                                             },
-                                            "name": "NW LR",
+                                            "name": "NW",
                                             "tap_action": {
                                                 "action": "call-service",
                                                 "service": "cover.toggle_cover_tilt",
@@ -699,23 +561,135 @@
                                             "type": "entity-button"
                                         },
                                         {
-                                            "entity": "sensor.living_room_nw_blinds_tilt_position",
-                                            "max": 100,
-                                            "min": 0,
-                                            "name": "NW LR Pos",
-                                            "severity": {
-                                                "green": 0,
-                                                "red": 80,
-                                                "yellow": 20
+                                            "entity": "cover.living_room_nw_ctr_blinds",
+                                            "hold_action": {
+                                                "action": "more-info"
                                             },
-                                            "theme": "default",
-                                            "type": "gauge"
+                                            "name": "NW-CTR",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.toggle_cover_tilt",
+                                                "service_data": {
+                                                    "entity_id": "cover.family_room_sesw_blinds"
+                                                }
+                                            },
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "cover.living_room_ctr_blinds",
+                                            "hold_action": {
+                                                "action": "more-info"
+                                            },
+                                            "name": "CTR",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.toggle_cover_tilt",
+                                                "service_data": {
+                                                    "entity_id": "cover.family_room_swse_blinds"
+                                                }
+                                            },
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "cover.living_room_se_ctr_blinds",
+                                            "hold_action": {
+                                                "action": "more-info"
+                                            },
+                                            "name": "SE-CTR",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.toggle_cover_tilt",
+                                                "service_data": {
+                                                    "entity_id": "cover.family_room_swnw_blinds"
+                                                }
+                                            },
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "cover.living_room_se_blinds",
+                                            "hold_action": {
+                                                "action": "more-info"
+                                            },
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.toggle_cover_tilt",
+                                                "service_data": {
+                                                    "entity_id": "cover.family_room_nwsw_blinds"
+                                                }
+                                            },
+                                            "type": "entity-button",
+                                            "name": "SE",
+                                            "show_state": false
                                         }
                                     ],
                                     "type": "horizontal-stack"
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.living_room_nw_blinds_tilt_position",
+                                            "min": 0,
+                                            "max": 100,
+                                            "severity": {
+                                                "green": 0,
+                                                "yellow": 20,
+                                                "red": 80
+                                            },
+                                            "name": " "
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.living_room_nw_ctr_blinds_tilt_position",
+                                            "min": 0,
+                                            "max": 100,
+                                            "severity": {
+                                                "green": 0,
+                                                "yellow": 20,
+                                                "red": 80
+                                            },
+                                            "name": " "
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.living_room_ctr_blinds_tilt_position",
+                                            "min": 0,
+                                            "max": 100,
+                                            "severity": {
+                                                "green": 0,
+                                                "yellow": 20,
+                                                "red": 80
+                                            },
+                                            "name": " "
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.living_room_se_ctr_blinds_tilt_position",
+                                            "min": 0,
+                                            "max": 100,
+                                            "name": " ",
+                                            "severity": {
+                                                "green": 0,
+                                                "yellow": 20,
+                                                "red": 80
+                                            }
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.living_room_se_blinds_tilt_position",
+                                            "min": 0,
+                                            "max": 100,
+                                            "name": " ",
+                                            "severity": {
+                                                "green": 0,
+                                                "yellow": 20,
+                                                "red": 80
+                                            }
+                                        }
+                                    ]
                                 }
-                            ],
-                            "type": "vertical-stack"
+                            ]
                         },
                         {
                             "entity": "cover.living_room_blinds",

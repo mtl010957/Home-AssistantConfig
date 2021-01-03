@@ -26,3 +26,5 @@ switch.desert_front_porch_camera:
   friendly_name: Desert Front Porch Camera Switch
 cover.living_room_blinds:
   device_class: shutter
+cover.family_room_blinds:
+  device_class: shutter

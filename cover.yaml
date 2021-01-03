@@ -6,3 +6,11 @@
     - cover.living_room_ctr_blinds
     - cover.living_room_nw_ctr_blinds
     - cover.living_room_nw_blinds
+- platform: group
+  name: "Family Room Blinds"
+  entities:
+    - cover.family_room_sene_blinds
+    - cover.family_room_sesw_blinds
+    - cover.family_room_swse_blinds
+    - cover.family_room_swnw_blinds
+    - cover.family_room_nwsw_blinds
