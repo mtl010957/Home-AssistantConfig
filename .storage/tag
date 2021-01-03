@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "key": "tag",
+    "data": {
+        "items": [
+            {
+                "tag_id": "82482dc8-74e0-483d-a7ce-c82d9b31eb08",
+                "name": "Play Alt 98.7",
+                "id": "82482dc8-74e0-483d-a7ce-c82d9b31eb08",
+                "last_scanned": "2020-12-30T17:16:39.337319+00:00"
+            }
+        ]
+    }
+}
