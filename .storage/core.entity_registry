@@ -7481,7 +7481,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Battery State",
-                "original_icon": "mdi:battery-minus"
+                "original_icon": "mdi:battery-plus"
             },
             {
                 "entity_id": "sensor.pixel_4a_bluetooth_connection",
@@ -7515,7 +7515,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Charger Type",
-                "original_icon": "mdi:battery"
+                "original_icon": "mdi:power-plug"
             },
             {
                 "entity_id": "sensor.pixel_4a_do_not_disturb_sensor",
@@ -7566,7 +7566,7 @@
                 "device_class": "plug",
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Is Charging",
-                "original_icon": "mdi:power-plug-off"
+                "original_icon": "mdi:power-plug"
             },
             {
                 "entity_id": "sensor.pixel_4a_last_reboot",
@@ -8144,7 +8144,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Device Locked",
-                "original_icon": "mdi:cellphone-lock"
+                "original_icon": "mdi:cellphone"
             },
             {
                 "entity_id": "binary_sensor.pixel_4a_device_secure",
@@ -8314,7 +8314,7 @@
                 "device_class": null,
                 "unit_of_measurement": "dBm",
                 "original_name": "Pixel 4a WiFi Signal Strength",
-                "original_icon": "mdi:wifi-strength-2"
+                "original_icon": "mdi:wifi-strength-3"
             },
             {
                 "entity_id": "sensor.pixel_4a_public_ip_address",
@@ -8399,7 +8399,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Interactive",
-                "original_icon": "mdi:cellphone-off"
+                "original_icon": "mdi:cellphone"
             },
             {
                 "entity_id": "binary_sensor.pixel_4a_doze_mode",
@@ -8892,6 +8892,23 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Work Morning Spring-Summer",
+                "original_icon": null
+            },
+            {
+                "entity_id": "automation.tag_garage_latch_is_scanned",
+                "config_entry_id": null,
+                "device_id": null,
+                "area_id": null,
+                "unique_id": "1609723691654",
+                "platform": "automation",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "Tag Garage Latch is scanned",
                 "original_icon": null
             }
         ]

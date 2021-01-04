@@ -1094,3 +1094,16 @@
   action:
   - scene: scene.work_morning_summer
   mode: single
+- id: '1609723691654'
+  alias: Tag Garage Latch is scanned
+  description: ''
+  trigger:
+  - platform: tag
+    tag_id: 1806f93b-d481-4eca-9716-91647b715913
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 7ec89b1bd00d47248701a5eedbf3a331
+    entity_id: switch.garage_latch
+    domain: switch
+  mode: single
