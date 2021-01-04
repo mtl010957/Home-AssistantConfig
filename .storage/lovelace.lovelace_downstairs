@@ -209,19 +209,6 @@
                             "type": "glance"
                         },
                         {
-                            "entities": [
-                                {
-                                    "entity": "switch.siren_and_strobe_switch"
-                                },
-                                {
-                                    "entity": "sensor.siren_and_strobe_battery_level"
-                                }
-                            ],
-                            "show_name": false,
-                            "title": "Siren and Strobe",
-                            "type": "glance"
-                        },
-                        {
                             "entity": "media_player.family_room_tv",
                             "type": "media-control"
                         },

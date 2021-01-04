@@ -272,6 +272,19 @@
                                 }
                             ],
                             "type": "horizontal-stack"
+                        },
+                        {
+                            "type": "glance",
+                            "entities": [
+                                {
+                                    "entity": "switch.siren_and_strobe_switch"
+                                },
+                                {
+                                    "entity": "sensor.siren_and_strobe_battery_level"
+                                }
+                            ],
+                            "title": "Siren and Strobe",
+                            "show_name": false
                         }
                     ],
                     "path": "front-yard",

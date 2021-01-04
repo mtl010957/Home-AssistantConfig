@@ -2326,7 +2326,7 @@
                 "unique_id": "18-72057594344718336",
                 "platform": "zwave",
                 "name": "Siren and Strobe Switch",
-                "icon": null,
+                "icon": "mdi:alarm-light",
                 "disabled_by": null,
                 "capabilities": {},
                 "supported_features": 0,
@@ -8263,7 +8263,7 @@
                 "device_class": null,
                 "unit_of_measurement": "Mbps",
                 "original_name": "Pixel 4a WiFi Link Speed",
-                "original_icon": "mdi:wifi-strength-2"
+                "original_icon": "mdi:wifi-strength-1"
             },
             {
                 "entity_id": "binary_sensor.pixel_4a_wifi_state",
@@ -8416,7 +8416,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Doze Mode",
-                "original_icon": "mdi:sleep-off"
+                "original_icon": "mdi:sleep"
             },
             {
                 "entity_id": "binary_sensor.pixel_4a_power_save",
@@ -8909,6 +8909,23 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Tag Garage Latch is scanned",
+                "original_icon": null
+            },
+            {
+                "entity_id": "automation.reboot_weekly",
+                "config_entry_id": null,
+                "device_id": null,
+                "area_id": null,
+                "unique_id": "1609793361731",
+                "platform": "automation",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "Reboot Weekly",
                 "original_icon": null
             }
         ]

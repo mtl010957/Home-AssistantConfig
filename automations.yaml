@@ -1107,3 +1107,19 @@
     entity_id: switch.garage_latch
     domain: switch
   mode: single
+- id: '1609793361731'
+  alias: Reboot Weekly
+  description: ''
+  trigger:
+  - platform: time
+    at: 02:30:00
+  condition:
+  - condition: time
+    weekday:
+    - tue
+    after: 02:00:00
+    before: 03:00:00
+  action:
+  - service: hassio.host_reboot
+    data: {}
+  mode: single
