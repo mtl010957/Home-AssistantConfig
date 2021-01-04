@@ -7481,7 +7481,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Battery State",
-                "original_icon": "mdi:battery-plus"
+                "original_icon": "mdi:battery-minus"
             },
             {
                 "entity_id": "sensor.pixel_4a_bluetooth_connection",
@@ -7515,7 +7515,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Charger Type",
-                "original_icon": "mdi:power-plug"
+                "original_icon": "mdi:battery"
             },
             {
                 "entity_id": "sensor.pixel_4a_do_not_disturb_sensor",
@@ -7566,7 +7566,7 @@
                 "device_class": "plug",
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Is Charging",
-                "original_icon": "mdi:power-plug"
+                "original_icon": "mdi:power-plug-off"
             },
             {
                 "entity_id": "sensor.pixel_4a_last_reboot",
@@ -8144,7 +8144,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Device Locked",
-                "original_icon": "mdi:cellphone"
+                "original_icon": "mdi:cellphone-lock"
             },
             {
                 "entity_id": "binary_sensor.pixel_4a_device_secure",
@@ -8263,7 +8263,7 @@
                 "device_class": null,
                 "unit_of_measurement": "Mbps",
                 "original_name": "Pixel 4a WiFi Link Speed",
-                "original_icon": "mdi:wifi-strength-3"
+                "original_icon": "mdi:wifi-strength-2"
             },
             {
                 "entity_id": "binary_sensor.pixel_4a_wifi_state",
@@ -8314,7 +8314,7 @@
                 "device_class": null,
                 "unit_of_measurement": "dBm",
                 "original_name": "Pixel 4a WiFi Signal Strength",
-                "original_icon": "mdi:wifi-strength-3"
+                "original_icon": "mdi:wifi-strength-2"
             },
             {
                 "entity_id": "sensor.pixel_4a_public_ip_address",
@@ -8399,7 +8399,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Interactive",
-                "original_icon": "mdi:cellphone"
+                "original_icon": "mdi:cellphone-off"
             },
             {
                 "entity_id": "binary_sensor.pixel_4a_doze_mode",
@@ -8904,7 +8904,7 @@
                 "name": null,
                 "icon": null,
                 "disabled_by": null,
-                "capabilities": null,
+                "capabilities": {},
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
