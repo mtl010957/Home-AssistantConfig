@@ -7464,7 +7464,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "Pixel 4a Battery Level",
-                "original_icon": "mdi:battery-80"
+                "original_icon": "mdi:battery-90"
             },
             {
                 "entity_id": "sensor.pixel_4a_battery_state",
@@ -8144,7 +8144,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Device Locked",
-                "original_icon": "mdi:cellphone-lock"
+                "original_icon": "mdi:cellphone"
             },
             {
                 "entity_id": "binary_sensor.pixel_4a_device_secure",
@@ -8178,7 +8178,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Keyguard Locked",
-                "original_icon": "mdi:cellphone-lock"
+                "original_icon": "mdi:cellphone"
             },
             {
                 "entity_id": "binary_sensor.pixel_4a_keyguard_secure",
@@ -8263,7 +8263,7 @@
                 "device_class": null,
                 "unit_of_measurement": "Mbps",
                 "original_name": "Pixel 4a WiFi Link Speed",
-                "original_icon": "mdi:wifi-strength-1"
+                "original_icon": "mdi:wifi-strength-3"
             },
             {
                 "entity_id": "binary_sensor.pixel_4a_wifi_state",
@@ -8314,7 +8314,7 @@
                 "device_class": null,
                 "unit_of_measurement": "dBm",
                 "original_name": "Pixel 4a WiFi Signal Strength",
-                "original_icon": "mdi:wifi-strength-2"
+                "original_icon": "mdi:wifi-strength-3"
             },
             {
                 "entity_id": "sensor.pixel_4a_public_ip_address",
@@ -8416,7 +8416,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Doze Mode",
-                "original_icon": "mdi:sleep"
+                "original_icon": "mdi:sleep-off"
             },
             {
                 "entity_id": "binary_sensor.pixel_4a_power_save",
@@ -8921,7 +8921,7 @@
                 "name": null,
                 "icon": null,
                 "disabled_by": null,
-                "capabilities": null,
+                "capabilities": {},
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,

@@ -657,6 +657,7 @@
   - service: climate.set_temperature
     data:
       temperature: 70
+    entity_id: climate.thermostat
   mode: single
 - id: '1581601374878'
   alias: Humidifier off at 08:00
