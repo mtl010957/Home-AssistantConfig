@@ -141,6 +141,14 @@
                                     "name": "IEEE"
                                 },
                                 {
+                                    "attr": "rssi",
+                                    "name": "RSSI"
+                                },
+                                {
+                                    "attr": "lqi",
+                                    "name": "LQI"
+                                },
+                                {
                                     "name": "NWK",
                                     "prop": "nwk"
                                 },
@@ -149,7 +157,7 @@
                                     "name": "Quirk"
                                 }
                             ],
-                            "lickable": true,
+                            "clickable": true,
                             "sort_by": "available",
                             "type": "custom:zha-network-card"
                         },
@@ -258,6 +266,14 @@
                                     "unit": "KiB/s"
                                 }
                             ]
+                        },
+                        {
+                            "type": "glance",
+                            "entities": [
+                                "sensor.ikea_of_sweden_tradfri_remote_control_239115fe_power"
+                            ],
+                            "title": "IKEA Remote",
+                            "show_name": false
                         }
                     ]
                 }

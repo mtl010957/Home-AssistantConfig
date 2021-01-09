@@ -1124,3 +1124,15 @@
   - service: hassio.host_reboot
     data: {}
   mode: single
+- id: '1610113994794'
+  alias: ZHA - IKEA five button remote
+  description: ''
+  use_blueprint:
+    path: wormie_dk/zha-ikea-five-button-remote.yaml
+    input:
+      remote: 439888cd2429e60eae9b9c512836115b
+      button_on_off:
+      - type: toggle
+        device_id: 9536dc3f7ae24ca4becaa28866474d00
+        entity_id: switch.back_outdoor_xmas_lights
+        domain: switch
