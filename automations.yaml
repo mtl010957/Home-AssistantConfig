@@ -1136,3 +1136,7 @@
         device_id: 9536dc3f7ae24ca4becaa28866474d00
         entity_id: switch.back_outdoor_xmas_lights
         domain: switch
+      - type: toggle
+        device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
+        entity_id: switch.front_outdoor_xmas_lights
+        domain: switch

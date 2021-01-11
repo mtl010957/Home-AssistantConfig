@@ -7464,7 +7464,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "Pixel 4a Battery Level",
-                "original_icon": "mdi:battery-80"
+                "original_icon": "mdi:battery-60"
             },
             {
                 "entity_id": "sensor.pixel_4a_battery_state",
@@ -7685,7 +7685,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Wifi Connection",
-                "original_icon": "mdi:wifi"
+                "original_icon": "mdi:wifi-off"
             },
             {
                 "entity_id": "media_player.family_room_tv",
@@ -8144,7 +8144,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Device Locked",
-                "original_icon": "mdi:cellphone-lock"
+                "original_icon": "mdi:cellphone"
             },
             {
                 "entity_id": "binary_sensor.pixel_4a_device_secure",
@@ -8229,7 +8229,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a WiFi BSSID",
-                "original_icon": "mdi:wifi"
+                "original_icon": "mdi:wifi-off"
             },
             {
                 "entity_id": "sensor.pixel_4a_wifi_ip_address",
@@ -8263,7 +8263,7 @@
                 "device_class": null,
                 "unit_of_measurement": "Mbps",
                 "original_name": "Pixel 4a WiFi Link Speed",
-                "original_icon": "mdi:wifi-strength-3"
+                "original_icon": "mdi:wifi-strength-off"
             },
             {
                 "entity_id": "binary_sensor.pixel_4a_wifi_state",
@@ -8314,7 +8314,7 @@
                 "device_class": null,
                 "unit_of_measurement": "dBm",
                 "original_name": "Pixel 4a WiFi Signal Strength",
-                "original_icon": "mdi:wifi-strength-3"
+                "original_icon": "mdi:wifi-strength-off"
             },
             {
                 "entity_id": "sensor.pixel_4a_public_ip_address",
@@ -8552,7 +8552,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Detected Activity",
-                "original_icon": "mdi:sleep"
+                "original_icon": "mdi:walk"
             },
             {
                 "entity_id": "sensor.pixel_4a_steps_sensor",
