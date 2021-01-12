@@ -1,4 +1,4 @@
 radio_type: xbee
 usb_path: /dev/ttyUSB1
-database_path: /home/homeassistant/.homeassistant/zigbee.db
+database_path: /config/zigbee.db
 
