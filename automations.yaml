@@ -857,7 +857,7 @@
   alias: Notify Battery Low Downstairs Smoke Alarm
   description: ''
   trigger:
-  - below: 80
+  - below: 75
     device_id: fcbbefffc26a4249a4e27f01bbf24105
     domain: sensor
     entity_id: sensor.downstairs_smoke_alarm_battery_level
@@ -870,8 +870,7 @@
   condition: []
   action:
   - data:
-      message: The downstairs smoke alarm battery is below 30%, please replace it
-        ASAP.
+      message: The downstairs smoke alarm battery is low, please replace it ASAP.
       title: Downstairs Smoke Alarm Battery Low
     service: notify.hangouts_notify
   mode: single
@@ -879,7 +878,7 @@
   alias: Notify Battery Low Upstairs Smoke Alarm
   description: ''
   trigger:
-  - below: 80
+  - below: 75
     device_id: 4e811fdefdea408ebf121abe13e8bb8f
     domain: sensor
     entity_id: sensor.upstairs_smoke_alarm_battery_level
@@ -892,7 +891,7 @@
   condition: []
   action:
   - data:
-      message: The upstairs smoke alarm battery is below 30%, please replace it ASAP.
+      message: The upstairs smoke alarm battery is low, please replace it ASAP.
       title: Upstairs Smoke Alarm Battery Low
     service: notify.hangouts_notify
   mode: single
@@ -928,7 +927,7 @@
   alias: Notify Battery Low Family Room Smoke Alarm
   description: ''
   trigger:
-  - below: 80
+  - below: 75
     device_id: c3cc29801bfd4f25802b05085241dca2
     domain: sensor
     entity_id: sensor.family_room_smoke_alarm_battery_level
@@ -941,8 +940,7 @@
   condition: []
   action:
   - data:
-      message: The family room smoke alarm battery is below 30%, please replace it
-        ASAP.
+      message: The family room smoke alarm battery is low, please replace it ASAP.
       title: Family Room Smoke Alarm Battery Low
     service: notify.hangouts_notify
   mode: single
