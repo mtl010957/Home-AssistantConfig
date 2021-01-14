@@ -1,7 +1,8 @@
 default: warning
-#logs:
-#  homeassistant.components.zha: debug
-#  zigpy: debug
+logs:
+  homeassistant.components.zha.core.device: debug
+  zigpy.application: debug
+  zigpy.appdb: debug
 #  zigpy_xbee: debug
 #  zigpy_xbee.api: debug
 #  zigpy_xbee.uart: debug
