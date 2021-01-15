@@ -1524,28 +1524,6 @@
             },
             {
                 "config_entries": [
-                    "a81d848b5e3b44b48bdfc4b076822d39"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mobile_app",
-                        "16562871e89c1b99"
-                    ]
-                ],
-                "manufacturer": "VANTOP",
-                "model": "Z10",
-                "name": "Z10",
-                "sw_version": "28",
-                "entry_type": null,
-                "id": "3697d9de1b7f463ab09fb9c7b8420dbf",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
@@ -1583,28 +1561,6 @@
                 "sw_version": "esphome v1.16.0-dev Sep 24 2020, 21:41:12",
                 "entry_type": null,
                 "id": "59d08600fb6f48069c10167786877ed2",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
-                    "c06cea10162111eba0561b533e9a1d7b"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mobile_app",
-                        "b5f193f756d731e1"
-                    ]
-                ],
-                "manufacturer": "AZPEN",
-                "model": "A748",
-                "name": "A748",
-                "sw_version": "23",
-                "entry_type": null,
-                "id": "c06d38bd162111ebb0b3415c796a7971",
                 "via_device_id": null,
                 "area_id": null,
                 "name_by_user": null,
@@ -1683,28 +1639,6 @@
                 "id": "439888cd2429e60eae9b9c512836115b",
                 "via_device_id": "7a6fe1d61caf4b5289ad667d0e3578bc",
                 "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
-                    "46349b1934105b2b115c8830423c9e6a"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mobile_app",
-                        "fd9c00228e913d30"
-                    ]
-                ],
-                "manufacturer": "Google",
-                "model": "Pixel 4a",
-                "name": "Pixel 4a",
-                "sw_version": "30",
-                "entry_type": null,
-                "id": "b77e530feccbd3733a3f0c7530eed1e3",
-                "via_device_id": null,
-                "area_id": null,
                 "name_by_user": null,
                 "disabled_by": null
             },
@@ -1837,6 +1771,28 @@
                 "id": "643a9cb9a59e7757b61bd91e6daebc83",
                 "via_device_id": null,
                 "area_id": "66b0e5549f8b45ef8d7c37400cec0237",
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "5ea87613e5ce5e9fce1d91d3415ec7d5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mobile_app",
+                        "fd9c00228e913d30"
+                    ]
+                ],
+                "manufacturer": "Google",
+                "model": "Pixel 4a",
+                "name": "Pixel 4a",
+                "sw_version": "30",
+                "entry_type": null,
+                "id": "77ea7e8e39715881866784bb68da74ed",
+                "via_device_id": null,
+                "area_id": null,
                 "name_by_user": null,
                 "disabled_by": null
             }

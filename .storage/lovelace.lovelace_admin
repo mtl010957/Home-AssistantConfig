@@ -164,19 +164,19 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "device_tracker.pixel_4a_2"
+                                    "entity": "device_tracker.pixel_4a"
                                 },
                                 {
-                                    "entity": "sensor.pixel_4a_battery_level_2"
+                                    "entity": "sensor.pixel_4a_battery_level"
                                 },
                                 {
-                                    "entity": "sensor.pixel_4a_battery_state_2"
+                                    "entity": "sensor.pixel_4a_battery_state"
                                 },
                                 {
-                                    "entity": "sensor.pixel_4a_battery_health_2"
+                                    "entity": "sensor.pixel_4a_battery_health"
                                 },
                                 {
-                                    "entity": "sensor.pixel_4a_charger_type_2"
+                                    "entity": "sensor.pixel_4a_charger_type"
                                 }
                             ],
                             "type": "entities"

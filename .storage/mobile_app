@@ -1,0 +1,64 @@
+{
+    "version": 1,
+    "key": "mobile_app",
+    "data": {
+        "binary_sensor": {
+            "478eb31aeaa5549457365609df125021dc957a0d034e3ba8c76cadefcb35cc39_is_charging": {
+                "unique_id": "is_charging",
+                "state": true,
+                "type": "binary_sensor",
+                "icon": "mdi:power-plug",
+                "attributes": {},
+                "name": "Is Charging",
+                "device_class": "plug",
+                "webhook_id": "478eb31aeaa5549457365609df125021dc957a0d034e3ba8c76cadefcb35cc39",
+                "added": true
+            }
+        },
+        "deleted_ids": [],
+        "sensor": {
+            "478eb31aeaa5549457365609df125021dc957a0d034e3ba8c76cadefcb35cc39_battery_level": {
+                "unique_id": "battery_level",
+                "state": 66,
+                "type": "sensor",
+                "icon": "mdi:battery-60",
+                "attributes": {},
+                "name": "Battery Level",
+                "device_class": "battery",
+                "unit_of_measurement": "%",
+                "webhook_id": "478eb31aeaa5549457365609df125021dc957a0d034e3ba8c76cadefcb35cc39",
+                "added": true
+            },
+            "478eb31aeaa5549457365609df125021dc957a0d034e3ba8c76cadefcb35cc39_battery_state": {
+                "unique_id": "battery_state",
+                "state": "charging",
+                "type": "sensor",
+                "icon": "mdi:battery-plus",
+                "attributes": {},
+                "name": "Battery State",
+                "webhook_id": "478eb31aeaa5549457365609df125021dc957a0d034e3ba8c76cadefcb35cc39",
+                "added": true
+            },
+            "478eb31aeaa5549457365609df125021dc957a0d034e3ba8c76cadefcb35cc39_charger_type": {
+                "unique_id": "charger_type",
+                "state": "ac",
+                "type": "sensor",
+                "icon": "mdi:power-plug",
+                "attributes": {},
+                "name": "Charger Type",
+                "webhook_id": "478eb31aeaa5549457365609df125021dc957a0d034e3ba8c76cadefcb35cc39",
+                "added": true
+            },
+            "478eb31aeaa5549457365609df125021dc957a0d034e3ba8c76cadefcb35cc39_battery_health": {
+                "unique_id": "battery_health",
+                "state": "good",
+                "type": "sensor",
+                "icon": "mdi:battery-heart-variant",
+                "attributes": {},
+                "name": "Battery Health",
+                "webhook_id": "478eb31aeaa5549457365609df125021dc957a0d034e3ba8c76cadefcb35cc39",
+                "added": true
+            }
+        }
+    }
+}
