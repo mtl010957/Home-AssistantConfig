@@ -1387,28 +1387,6 @@
             },
             {
                 "config_entries": [
-                    "2e0d978447294089a9a34854309f2f27"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "mobile_app",
-                        "cfc27b6ad79ba55e"
-                    ]
-                ],
-                "manufacturer": "Google",
-                "model": "Pixel 4a",
-                "name": "Pixel 4a",
-                "sw_version": "30",
-                "entry_type": null,
-                "id": "9d361d73d84644189fd9557e1ea3eefd",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": "Pixel 4a",
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
                     "3cbe8ba6a37a444886eddeb49d953cf7"
                 ],
                 "connections": [],
