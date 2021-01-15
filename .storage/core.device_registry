@@ -5,72 +5,6 @@
         "devices": [
             {
                 "config_entries": [
-                    "3cbe8ba6a37a444886eddeb49d953cf7"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "cast",
-                        "c7f5e694a696c50aedc1bd6fa2da9894"
-                    ]
-                ],
-                "manufacturer": "Google Inc.",
-                "model": "Google Nest Mini",
-                "name": "Office speaker",
-                "sw_version": null,
-                "entry_type": null,
-                "id": "27eff64c6f8746cda679e76e617026c9",
-                "via_device_id": null,
-                "area_id": "316107820cce4630be06041fc14816e3",
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
-                    "3cbe8ba6a37a444886eddeb49d953cf7"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "cast",
-                        "aae780309012bd4f34f740adb52a7826"
-                    ]
-                ],
-                "manufacturer": "Google Inc.",
-                "model": "Google Home Mini",
-                "name": "Mini",
-                "sw_version": null,
-                "entry_type": null,
-                "id": "da3bb0666349463e87d8db1dcbe00213",
-                "via_device_id": null,
-                "area_id": "be918af12ae344be9d3936091fc54a20",
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
-                    "3cbe8ba6a37a444886eddeb49d953cf7"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "cast",
-                        "17081e8298e362fac4c5f1287e4c35b2"
-                    ]
-                ],
-                "manufacturer": "Google Inc.",
-                "model": "MIBOX4",
-                "name": "Caravan",
-                "sw_version": null,
-                "entry_type": null,
-                "id": "4a9e2f9494b04eba8794c40747cda4c3",
-                "via_device_id": null,
-                "area_id": "66b0e5549f8b45ef8d7c37400cec0237",
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
                     "de3e4e31808c4269b46ef0acfd37a53a"
                 ],
                 "connections": [],
@@ -1387,28 +1321,6 @@
             },
             {
                 "config_entries": [
-                    "3cbe8ba6a37a444886eddeb49d953cf7"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "cast",
-                        "51cd29173b15cbeb7671ba3ba22c9eb6"
-                    ]
-                ],
-                "manufacturer": "Google Inc.",
-                "model": "MIBOX4",
-                "name": "Bedroom TV",
-                "sw_version": null,
-                "entry_type": null,
-                "id": "195b141847214538a451c2a6cfaacd35",
-                "via_device_id": null,
-                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
                     "e1efa85aced04f95bc58dc5f248bf376"
                 ],
                 "connections": [],
@@ -1493,28 +1405,6 @@
                 "via_device_id": null,
                 "area_id": "ba35ea6dc22d42808e3dc7511c49bfe6",
                 "name_by_user": "Living Room NW Blinds",
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
-                    "3cbe8ba6a37a444886eddeb49d953cf7"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "cast",
-                        "df18f348d26d86562d51183db2a0c10b"
-                    ]
-                ],
-                "manufacturer": "Google Inc.",
-                "model": "Google Nest Mini",
-                "name": "Office speaker 2",
-                "sw_version": null,
-                "entry_type": null,
-                "id": "ca756dc0b69d4d3292d23c5b10332324",
-                "via_device_id": null,
-                "area_id": "316107820cce4630be06041fc14816e3",
-                "name_by_user": null,
                 "disabled_by": null
             },
             {
@@ -1700,28 +1590,6 @@
             },
             {
                 "config_entries": [
-                    "3cbe8ba6a37a444886eddeb49d953cf7"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "cast",
-                        "498f89836b7afd6a5a7f51bb6100e390"
-                    ]
-                ],
-                "manufacturer": "Google Inc.",
-                "model": "Chromecast",
-                "name": "Family Room TV",
-                "sw_version": null,
-                "entry_type": null,
-                "id": "b98da57a095d11eb8d641b97afe12976",
-                "via_device_id": null,
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
                     "c06cea10162111eba0561b533e9a1d7b"
                 ],
                 "connections": [],
@@ -1762,28 +1630,6 @@
                 "via_device_id": null,
                 "area_id": "74a49ece870947fc998a78d2e088b47f",
                 "name_by_user": "Utility Power",
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
-                    "3cbe8ba6a37a444886eddeb49d953cf7"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "cast",
-                        "eca4a421f02b180a04785e8b4ad08818"
-                    ]
-                ],
-                "manufacturer": "Google Inc.",
-                "model": "Chromecast",
-                "name": "Main Bedroom TV",
-                "sw_version": null,
-                "entry_type": null,
-                "id": "77175e88feb3f5c1eef883d50e685c62",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
                 "disabled_by": null
             },
             {
@@ -1859,6 +1705,138 @@
                 "id": "b77e530feccbd3733a3f0c7530eed1e3",
                 "via_device_id": null,
                 "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "3225d3fe461d6d8d30d93e0b5a551af5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "cast",
+                        "c7f5e694a696c50aedc1bd6fa2da9894"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Google Nest Mini",
+                "name": "Office speaker",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "afe79321b224ad7c92fb42196fa881e5",
+                "via_device_id": null,
+                "area_id": "316107820cce4630be06041fc14816e3",
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "3225d3fe461d6d8d30d93e0b5a551af5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "cast",
+                        "aae780309012bd4f34f740adb52a7826"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Google Home Mini",
+                "name": "Mini",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "188bf0cdd7fc84fd398502f049e77ef9",
+                "via_device_id": null,
+                "area_id": "be918af12ae344be9d3936091fc54a20",
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "3225d3fe461d6d8d30d93e0b5a551af5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "cast",
+                        "df18f348d26d86562d51183db2a0c10b"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Google Nest Mini",
+                "name": "Office speaker 2",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "99d08c08124a43dd740ce8754e96b918",
+                "via_device_id": null,
+                "area_id": "316107820cce4630be06041fc14816e3",
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "3225d3fe461d6d8d30d93e0b5a551af5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "cast",
+                        "498f89836b7afd6a5a7f51bb6100e390"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Chromecast",
+                "name": "Family Room TV",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "fb4edc8f1305a9a04050a0c9952c0573",
+                "via_device_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "3225d3fe461d6d8d30d93e0b5a551af5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "cast",
+                        "eca4a421f02b180a04785e8b4ad08818"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Chromecast",
+                "name": "Main Bedroom TV",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "02f81d15c47637a2562d4fd3b173f322",
+                "via_device_id": null,
+                "area_id": "a9551ad1cd4c4f63ab8c697ff8949be5",
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "3225d3fe461d6d8d30d93e0b5a551af5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "cast",
+                        "17081e8298e362fac4c5f1287e4c35b2"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "MIBOX4",
+                "name": "Caravan",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "643a9cb9a59e7757b61bd91e6daebc83",
+                "via_device_id": null,
+                "area_id": "66b0e5549f8b45ef8d7c37400cec0237",
                 "name_by_user": null,
                 "disabled_by": null
             }

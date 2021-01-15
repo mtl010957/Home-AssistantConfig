@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace.lovelace_upstairs",
     "data": {
         "config": {
             "title": "Upstairs",
@@ -117,7 +119,7 @@
                             "type": "glance"
                         },
                         {
-                            "entity": "media_player.bedroom_tv",
+                            "entity": "media_player.main_bedroom_tv",
                             "type": "media-control"
                         },
                         {
@@ -266,12 +268,20 @@
                                         }
                                     ],
                                     "type": "horizontal-stack"
+                                },
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.epson_xp_7100_series_uptime"
+                                        }
+                                    ]
                                 }
                             ],
                             "type": "vertical-stack"
                         },
                         {
-                            "entity": "media_player.speaker_pair",
+                            "entity": "media_player.office_speaker_pair",
                             "type": "media-control"
                         }
                     ],
@@ -314,7 +324,5 @@
                 }
             ]
         }
-    },
-    "key": "lovelace.lovelace_upstairs",
-    "version": 1
+    }
 }
