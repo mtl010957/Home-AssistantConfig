@@ -1590,33 +1590,6 @@
             },
             {
                 "config_entries": [
-                    "0fdcbc83449ee59b42979255c1fa635e"
-                ],
-                "connections": [
-                    [
-                        "upnp",
-                        "uuid:3ddcd1d3-2380-45f5-b069-244bfe763ed8"
-                    ]
-                ],
-                "identifiers": [
-                    [
-                        "upnp",
-                        "uuid:3ddcd1d3-2380-45f5-b069-244bfe763ed8"
-                    ]
-                ],
-                "manufacturer": "ASUSTeK Computer Inc.",
-                "model": "RT-AC66U_B1",
-                "name": "RT-AC66U_B1-3ED8",
-                "sw_version": null,
-                "entry_type": null,
-                "id": "679544e65f9533f1fb4b9a4883e125e8",
-                "via_device_id": null,
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
                     "00a98b2aa68641ba8b48ba08fcbb26bb"
                 ],
                 "connections": [
@@ -1791,6 +1764,55 @@
                 "sw_version": "30",
                 "entry_type": null,
                 "id": "77ea7e8e39715881866784bb68da74ed",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "db36ff7d1a8de1925da886f93160344e"
+                ],
+                "connections": [
+                    [
+                        "upnp",
+                        "uuid:3ddcd1d3-2380-45f5-b069-244bfe763ed8"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "upnp",
+                        "uuid:3ddcd1d3-2380-45f5-b069-244bfe763ed8"
+                    ]
+                ],
+                "manufacturer": "ASUSTeK Computer Inc.",
+                "model": "RT-AC66U_B1",
+                "name": "RT-AC66U_B1-3ED8",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "fad9a8618bc4f6383429341c490b5575",
+                "via_device_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "57ba80cf34a7596284aa327e5cd4d04d"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mobile_app",
+                        "16562871e89c1b99"
+                    ]
+                ],
+                "manufacturer": "VANTOP",
+                "model": "Z10",
+                "name": "Z10",
+                "sw_version": "28",
+                "entry_type": null,
+                "id": "c92da80a5d2ec67213973599b6631874",
                 "via_device_id": null,
                 "area_id": null,
                 "name_by_user": null,

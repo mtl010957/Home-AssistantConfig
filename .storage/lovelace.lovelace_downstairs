@@ -365,19 +365,10 @@
                         },
                         {
                             "entity": "cover.family_room_blinds",
-                            "hold_action": {
-                                "action": "more-info"
-                            },
                             "show_icon": true,
                             "show_name": true,
-                            "tap_action": {
-                                "action": "call-service",
-                                "service": "cover.toggle_cover_tilt",
-                                "service_data": {
-                                    "entity_id": "cover.family_room_blinds"
-                                }
-                            },
-                            "type": "button"
+                            "type": "button",
+                            "show_state": false
                         }
                     ],
                     "path": "family-room",
@@ -557,7 +548,7 @@
                                                 "action": "call-service",
                                                 "service": "cover.toggle_cover_tilt",
                                                 "service_data": {
-                                                    "entity_id": "cover.family_room_sesw_blinds"
+                                                    "entity_id": "cover.living_room_nw_ctr_blinds"
                                                 }
                                             },
                                             "type": "entity-button"
@@ -572,7 +563,7 @@
                                                 "action": "call-service",
                                                 "service": "cover.toggle_cover_tilt",
                                                 "service_data": {
-                                                    "entity_id": "cover.family_room_swse_blinds"
+                                                    "entity_id": "cover.living_room_ctr_blinds"
                                                 }
                                             },
                                             "type": "entity-button"
@@ -587,7 +578,7 @@
                                                 "action": "call-service",
                                                 "service": "cover.toggle_cover_tilt",
                                                 "service_data": {
-                                                    "entity_id": "cover.family_room_swnw_blinds"
+                                                    "entity_id": "cover.living_room_se_ctr_blinds"
                                                 }
                                             },
                                             "type": "entity-button"
@@ -601,7 +592,7 @@
                                                 "action": "call-service",
                                                 "service": "cover.toggle_cover_tilt",
                                                 "service_data": {
-                                                    "entity_id": "cover.family_room_nwsw_blinds"
+                                                    "entity_id": "cover.living_room_se_blinds"
                                                 }
                                             },
                                             "type": "entity-button",
@@ -680,18 +671,8 @@
                         },
                         {
                             "entity": "cover.living_room_blinds",
-                            "hold_action": {
-                                "action": "more-info"
-                            },
                             "show_icon": true,
                             "show_name": true,
-                            "tap_action": {
-                                "action": "call-service",
-                                "service": "cover.toggle_cover_tilt",
-                                "service_data": {
-                                    "entity_id": "cover.living_room_blinds"
-                                }
-                            },
                             "type": "button"
                         }
                     ],
