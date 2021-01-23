@@ -30,9 +30,9 @@
         "sensor": {
             "478eb31aeaa5549457365609df125021dc957a0d034e3ba8c76cadefcb35cc39_battery_level": {
                 "unique_id": "battery_level",
-                "state": 61,
+                "state": 79,
                 "type": "sensor",
-                "icon": "mdi:battery-60",
+                "icon": "mdi:battery-70",
                 "attributes": {},
                 "name": "Battery Level",
                 "device_class": "battery",
