@@ -83,7 +83,7 @@
                 "manufacturer": "hacs.xyz",
                 "model": "",
                 "name": "HACS",
-                "sw_version": "1.10.0",
+                "sw_version": "1.10.1",
                 "entry_type": "service",
                 "id": "a6390213c6084f2394864c2845d012ee",
                 "via_device_id": null,
@@ -1813,6 +1813,33 @@
                 "sw_version": "28",
                 "entry_type": null,
                 "id": "c92da80a5d2ec67213973599b6631874",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "00a98b2aa68641ba8b48ba08fcbb26bb"
+                ],
+                "connections": [
+                    [
+                        "zigbee",
+                        "None"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "zha",
+                        "None"
+                    ]
+                ],
+                "manufacturer": "ZHA",
+                "model": "XBee = Digi XBee Zigbee radios: Digi XBee Series 2, 2C, 3",
+                "name": "Zigbee Coordinator",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "0bd04d2510e5c5af36d940864963bf7c",
                 "via_device_id": null,
                 "area_id": null,
                 "name_by_user": null,

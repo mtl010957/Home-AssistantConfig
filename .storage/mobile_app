@@ -30,9 +30,9 @@
         "sensor": {
             "478eb31aeaa5549457365609df125021dc957a0d034e3ba8c76cadefcb35cc39_battery_level": {
                 "unique_id": "battery_level",
-                "state": 82,
+                "state": 61,
                 "type": "sensor",
-                "icon": "mdi:battery-80",
+                "icon": "mdi:battery-60",
                 "attributes": {},
                 "name": "Battery Level",
                 "device_class": "battery",
@@ -72,9 +72,9 @@
             },
             "ad47fb9f38b9e345999168ea397384de2faf576b000c601514410e363a96a49f_battery_level": {
                 "unique_id": "battery_level",
-                "state": 100,
+                "state": 99,
                 "type": "sensor",
-                "icon": "mdi:battery",
+                "icon": "mdi:battery-90",
                 "attributes": {},
                 "name": "Battery Level",
                 "device_class": "battery",
@@ -84,9 +84,9 @@
             },
             "ad47fb9f38b9e345999168ea397384de2faf576b000c601514410e363a96a49f_battery_state": {
                 "unique_id": "battery_state",
-                "state": "full",
+                "state": "charging",
                 "type": "sensor",
-                "icon": "mdi:battery-charging",
+                "icon": "mdi:battery-plus",
                 "attributes": {},
                 "name": "Battery State",
                 "webhook_id": "ad47fb9f38b9e345999168ea397384de2faf576b000c601514410e363a96a49f",
