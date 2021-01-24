@@ -4,6 +4,7 @@
 !.gitignore
 !*.sh
 !README.md
+!asuswrt
 !binary_sensor
 !camera
 !fan
@@ -33,3 +34,4 @@ nest.conf
 !.storage/lovelace.lovelace_desert
 !.storage/lovelace_dashboards
 !.storage/lovelace_resources
+!.storage/mobile_app
