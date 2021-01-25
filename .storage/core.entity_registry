@@ -7498,7 +7498,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "Pixel 4a Battery Level",
-                "original_icon": "mdi:battery-90"
+                "original_icon": "mdi:battery-80"
             },
             {
                 "entity_id": "sensor.pixel_4a_battery_state",
@@ -7515,7 +7515,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Battery State",
-                "original_icon": "mdi:battery-minus"
+                "original_icon": "mdi:battery-plus"
             },
             {
                 "entity_id": "binary_sensor.pixel_4a_is_charging",
@@ -7532,7 +7532,7 @@
                 "device_class": "plug",
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Is Charging",
-                "original_icon": "mdi:power-plug-off"
+                "original_icon": "mdi:power-plug"
             },
             {
                 "entity_id": "sensor.pixel_4a_charger_type",
@@ -7549,7 +7549,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Charger Type",
-                "original_icon": "mdi:battery"
+                "original_icon": "mdi:power-plug"
             },
             {
                 "entity_id": "sensor.pixel_4a_battery_health",
