@@ -603,8 +603,11 @@
       | float  }}'
   condition: []
   action:
-  - entity_id: switch.humidifier_power
-    service: switch.turn_off
+  - type: turn_off
+    device_id: cbfd393800a549f18ffe84e0f6b6be6f
+    entity_id: switch.humidifier_power
+    domain: switch
+  mode: single
 - id: '1578620814432'
   alias: Humidifier on below set point
   description: ''
@@ -617,8 +620,11 @@
     before: 08:00:00
     condition: time
   action:
-  - entity_id: switch.humidifier_power
-    service: switch.turn_on
+  - type: turn_on
+    device_id: cbfd393800a549f18ffe84e0f6b6be6f
+    entity_id: switch.humidifier_power
+    domain: switch
+  mode: single
 - id: '1581365990144'
   alias: Humidifier on at 20:00
   description: ''
@@ -630,8 +636,11 @@
     value_template: '{{ states(''sensor.main_bedroom_humidity'') | float < states(''sensor.humidifier_on'')
       | float }}'
   action:
-  - entity_id: switch.humidifier_power
-    service: switch.turn_on
+  - type: turn_on
+    device_id: cbfd393800a549f18ffe84e0f6b6be6f
+    entity_id: switch.humidifier_power
+    domain: switch
+  mode: single
 - id: '1581437260727'
   alias: Work Morning Fall-Winter
   description: ''
@@ -667,8 +676,11 @@
     platform: time
   condition: []
   action:
-  - entity_id: switch.humidifier_power
-    service: switch.turn_off
+  - type: turn_off
+    device_id: cbfd393800a549f18ffe84e0f6b6be6f
+    entity_id: switch.humidifier_power
+    domain: switch
+  mode: single
 - id: '1583938382449'
   alias: Garage lights on when doors opened
   description: ''
