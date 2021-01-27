@@ -1744,33 +1744,6 @@
             },
             {
                 "config_entries": [
-                    "db36ff7d1a8de1925da886f93160344e"
-                ],
-                "connections": [
-                    [
-                        "upnp",
-                        "uuid:3ddcd1d3-2380-45f5-b069-244bfe763ed8"
-                    ]
-                ],
-                "identifiers": [
-                    [
-                        "upnp",
-                        "uuid:3ddcd1d3-2380-45f5-b069-244bfe763ed8"
-                    ]
-                ],
-                "manufacturer": "ASUSTeK Computer Inc.",
-                "model": "RT-AC66U_B1",
-                "name": "RT-AC66U_B1-3ED8",
-                "sw_version": null,
-                "entry_type": null,
-                "id": "fad9a8618bc4f6383429341c490b5575",
-                "via_device_id": null,
-                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
                     "57ba80cf34a7596284aa327e5cd4d04d"
                 ],
                 "connections": [],
@@ -1815,6 +1788,33 @@
                 "id": "4986df3aa5350855f45008a5f76fe947",
                 "via_device_id": null,
                 "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "c64c52a7ff66be42705e40f5ce234891"
+                ],
+                "connections": [
+                    [
+                        "upnp",
+                        "uuid:3ddcd1d3-2380-45f5-b069-244bfe763ed8"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "upnp",
+                        "uuid:3ddcd1d3-2380-45f5-b069-244bfe763ed8"
+                    ]
+                ],
+                "manufacturer": "ASUSTeK Computer Inc.",
+                "model": "RT-AC66U_B1",
+                "name": "RT-AC66U_B1-3ED8",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "212a9dc425be54ab116fcf4240cfcf62",
+                "via_device_id": null,
+                "area_id": "ae8548e9d7b24e11b7d5670a4da86499",
                 "name_by_user": null,
                 "disabled_by": null
             }
