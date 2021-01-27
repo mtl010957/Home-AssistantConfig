@@ -616,9 +616,9 @@
     value_template: '{{ states(''sensor.main_bedroom_humidity'') | float < states(''sensor.humidifier_on'')
       | float  }}'
   condition:
-  - after: '22:00:00'
-    before: 08:00:00
-    condition: time
+  - condition: time
+    after: 05:00:00
+    before: '21:00:00'
   action:
   - type: turn_on
     device_id: cbfd393800a549f18ffe84e0f6b6be6f
@@ -626,10 +626,10 @@
     domain: switch
   mode: single
 - id: '1581365990144'
-  alias: Humidifier on at 20:00
+  alias: Humidifier on at 05:00
   description: ''
   trigger:
-  - at: '20:00:00'
+  - at: 05:00:00
     platform: time
   condition:
   - condition: template
@@ -669,10 +669,10 @@
     entity_id: climate.thermostat
   mode: single
 - id: '1581601374878'
-  alias: Humidifier off at 08:00
+  alias: Humidifier off at 21:00
   description: ''
   trigger:
-  - at: 08:00:00
+  - at: '21:00:00'
     platform: time
   condition: []
   action:

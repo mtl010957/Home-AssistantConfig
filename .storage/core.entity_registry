@@ -459,7 +459,7 @@
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
-                "original_name": "Humidifier off at 08:00",
+                "original_name": "Humidifier off at 21:00",
                 "original_icon": null
             },
             {
@@ -697,7 +697,7 @@
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
-                "original_name": "Humidifier on at 20:00",
+                "original_name": "Humidifier on at 05:00",
                 "original_icon": null
             },
             {
@@ -7498,7 +7498,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "Pixel 4a Battery Level",
-                "original_icon": "mdi:battery-80"
+                "original_icon": "mdi:battery-90"
             },
             {
                 "entity_id": "sensor.pixel_4a_battery_state",
@@ -7515,7 +7515,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Battery State",
-                "original_icon": "mdi:battery-plus"
+                "original_icon": "mdi:battery-minus"
             },
             {
                 "entity_id": "binary_sensor.pixel_4a_is_charging",
@@ -7532,7 +7532,7 @@
                 "device_class": "plug",
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Is Charging",
-                "original_icon": "mdi:power-plug"
+                "original_icon": "mdi:power-plug-off"
             },
             {
                 "entity_id": "sensor.pixel_4a_charger_type",
@@ -7549,7 +7549,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Charger Type",
-                "original_icon": "mdi:power-plug"
+                "original_icon": "mdi:battery"
             },
             {
                 "entity_id": "sensor.pixel_4a_battery_health",
