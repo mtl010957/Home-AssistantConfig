@@ -102,6 +102,8 @@ include:
     - sensor.esprouter_e7cc33_stations
     - sensor.esprouter_e7cc33_rssi
     - sensor.ikea_of_sweden_tradfri_remote_control_239115fe_power
+    - sensor.nm02_sv1_light_sensor
+    - sensor.nm03_sv1_light_sensor
     # switches
     - switch.family_room_ceiling_fan_light
     - switch.living_room_lamp_module

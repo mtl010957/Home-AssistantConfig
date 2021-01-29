@@ -7822,6 +7822,40 @@
                 "unit_of_measurement": null,
                 "original_name": "Notify Humidifier Out Of Water",
                 "original_icon": null
+            },
+            {
+                "entity_id": "sensor.nm03_sv1_light_sensor",
+                "config_entry_id": "e1efa85aced04f95bc58dc5f248bf376",
+                "device_id": "2bab1b706cff40359bbe36c356ee18d8",
+                "area_id": null,
+                "unique_id": "bcddc29ca95f-adc",
+                "platform": "mqtt",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "V",
+                "original_name": "NM03_SV1 Light Sensor",
+                "original_icon": "mdi:flash"
+            },
+            {
+                "entity_id": "sensor.nm02_sv1_light_sensor",
+                "config_entry_id": "e1efa85aced04f95bc58dc5f248bf376",
+                "device_id": "6792d04f64544b2f96bf1ba9855e2e5b",
+                "area_id": null,
+                "unique_id": "807d3a3c5c6b-adc",
+                "platform": "mqtt",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "V",
+                "original_name": "NM02_SV1 Light Sensor",
+                "original_icon": "mdi:flash"
             }
         ]
     }
