@@ -7788,6 +7788,40 @@
                 "unit_of_measurement": "B",
                 "original_name": "RT-AC66U_B1-3ED8 B received",
                 "original_icon": "mdi:server-network"
+            },
+            {
+                "entity_id": "media_player.caravan",
+                "config_entry_id": "3225d3fe461d6d8d30d93e0b5a551af5",
+                "device_id": "c4964649298862928c48530dd0188a31",
+                "area_id": null,
+                "unique_id": "17081e82-98e3-62fa-c4c5-f1287e4c35b2",
+                "platform": "cast",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 152461,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "Caravan",
+                "original_icon": null
+            },
+            {
+                "entity_id": "automation.notify_humidifier_out_of_water",
+                "config_entry_id": null,
+                "device_id": null,
+                "area_id": null,
+                "unique_id": "1611941697472",
+                "platform": "automation",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "Notify Humidifier Out Of Water",
+                "original_icon": null
             }
         ]
     }

@@ -1154,3 +1154,27 @@
     entity_id: switch.front_outdoor_xmas_lights
     domain: switch
   mode: single
+- id: '1611941697472'
+  alias: Notify Humidifier Out Of Water
+  description: ''
+  trigger:
+  - platform: template
+    value_template: '{{ states(''sensor.main_bedroom_humidity'') | float < states(''sensor.humidifier_on'')
+      | float  }}'
+    for: 00:05:00
+  condition:
+  - condition: device
+    type: is_on
+    device_id: cbfd393800a549f18ffe84e0f6b6be6f
+    entity_id: switch.humidifier_power
+    domain: switch
+    for:
+      hours: 0
+      minutes: 4
+      seconds: 0
+  action:
+  - service: notify.mobile_app_pixel_4a
+    data:
+      title: Humidifier Water
+      message: Humidifier is out of water.
+  mode: single
