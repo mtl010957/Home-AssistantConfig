@@ -374,10 +374,6 @@
                             ],
                             "title": "Caravan",
                             "type": "horizontal-stack"
-                        },
-                        {
-                            "entity": "media_player.caravan",
-                            "type": "media-control"
                         }
                     ],
                     "path": "caravan",
