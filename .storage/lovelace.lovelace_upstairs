@@ -29,40 +29,6 @@
                             "type": "horizontal-stack"
                         },
                         {
-                            "entities": [
-                                {
-                                    "entity": "switch.humidifier_power",
-                                    "name": "Power",
-                                    "state_color": true
-                                },
-                                {
-                                    "entity": "sensor.humidifier_on",
-                                    "icon": "mdi:water",
-                                    "name": "On Below"
-                                },
-                                {
-                                    "entity": "sensor.humidifier_off",
-                                    "icon": "mdi:water-off",
-                                    "name": "Off Above"
-                                },
-                                {
-                                    "entity": "input_number.humidity_at_0_degf",
-                                    "name": "% at 0 \u00b0F"
-                                },
-                                {
-                                    "entity": "input_number.humidifier_temperature_gain",
-                                    "name": "Gain %"
-                                },
-                                {
-                                    "entity": "input_number.humidifier_turn_on_deadband",
-                                    "name": "Deadband %"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Humidifier",
-                            "type": "entities"
-                        },
-                        {
                             "cards": [
                                 {
                                     "entity": "light.bedside_lamp_bulb",
@@ -283,6 +249,40 @@
                         {
                             "entity": "media_player.office_speaker_pair",
                             "type": "media-control"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.humidifier_power",
+                                    "name": "Power",
+                                    "state_color": true
+                                },
+                                {
+                                    "entity": "sensor.humidifier_on",
+                                    "icon": "mdi:water",
+                                    "name": "On Below"
+                                },
+                                {
+                                    "entity": "sensor.humidifier_off",
+                                    "icon": "mdi:water-off",
+                                    "name": "Off Above"
+                                },
+                                {
+                                    "entity": "input_number.humidity_at_0_degf",
+                                    "name": "% at 0 \u00b0F"
+                                },
+                                {
+                                    "entity": "input_number.humidifier_temperature_gain",
+                                    "name": "Gain %"
+                                },
+                                {
+                                    "entity": "input_number.humidifier_turn_on_deadband",
+                                    "name": "Deadband %"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Humidifier",
+                            "type": "entities"
                         }
                     ],
                     "path": "office",

@@ -599,7 +599,7 @@
   description: ''
   trigger:
   - platform: template
-    value_template: '{{ states(''sensor.main_bedroom_humidity'') | float > states(''sensor.humidifier_off'')
+    value_template: '{{ states(''sensor.office_humidity'') | float > states(''sensor.humidifier_off'')
       | float  }}'
   condition: []
   action:
@@ -613,7 +613,7 @@
   description: ''
   trigger:
   - platform: template
-    value_template: '{{ states(''sensor.main_bedroom_humidity'') | float < states(''sensor.humidifier_on'')
+    value_template: '{{ states(''sensor.office_humidity'') | float < states(''sensor.humidifier_on'')
       | float  }}'
   condition:
   - condition: time
