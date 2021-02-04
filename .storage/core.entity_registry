@@ -7422,14 +7422,14 @@
                 "area_id": null,
                 "unique_id": "498f8983-6b7a-fd6a-5a7f-51bb6100e390",
                 "platform": "cast",
-                "name": null,
+                "name": "Family Room TV",
                 "icon": null,
                 "disabled_by": null,
                 "capabilities": {},
                 "supported_features": 152461,
                 "device_class": null,
                 "unit_of_measurement": null,
-                "original_name": "Family Room TV",
+                "original_name": "Family Room TV 2",
                 "original_icon": null
             },
             {
@@ -7481,7 +7481,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "Pixel 4a Battery Level",
-                "original_icon": "mdi:battery-90"
+                "original_icon": "mdi:battery-70"
             },
             {
                 "entity_id": "sensor.pixel_4a_battery_state",
@@ -7856,6 +7856,57 @@
                 "unit_of_measurement": "V",
                 "original_name": "NM02_SV1 Light Sensor",
                 "original_icon": "mdi:flash"
+            },
+            {
+                "entity_id": "camera.3629_cam_1",
+                "config_entry_id": "37a8ae779fa648401f6de4234dfebfef",
+                "device_id": null,
+                "area_id": null,
+                "unique_id": "00626E69269A",
+                "platform": "foscam",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "3629 Cam 1",
+                "original_icon": null
+            },
+            {
+                "entity_id": "camera.3629_cam_3",
+                "config_entry_id": "7f1b57f64894fefc9921a85dd102ac06",
+                "device_id": null,
+                "area_id": null,
+                "unique_id": "00626E82585D",
+                "platform": "foscam",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "3629 Cam 3",
+                "original_icon": null
+            },
+            {
+                "entity_id": "camera.3629_cam_2",
+                "config_entry_id": "1fde2962fb488ae5e7ab1d5a3511a84a",
+                "device_id": null,
+                "area_id": null,
+                "unique_id": "00626E6926B6",
+                "platform": "foscam",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "3629 Cam 2",
+                "original_icon": null
             }
         ]
     }
