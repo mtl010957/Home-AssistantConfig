@@ -685,51 +685,68 @@
   alias: Garage lights on when doors opened
   description: ''
   trigger:
-  - entity_id: binary_sensor.garage_door
-    from: 'off'
-    platform: state
-    to: 'on'
-  - entity_id: binary_sensor.garage_in_door
-    from: 'off'
-    platform: state
-    to: 'on'
+  - type: turned_on
+    platform: device
+    device_id: a67fb5f1ee3f4a57a338786db4ac61a3
+    entity_id: binary_sensor.garage_door_sensor
+    domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: 653b58242ddd475fa47b906fdc469822
+    entity_id: binary_sensor.garage_inside_door_sensor
+    domain: binary_sensor
   condition: []
   action:
-  - data: {}
+  - type: turn_on
+    device_id: 6f257e741b564746b69eca3a6eae1985
     entity_id: switch.garage_light
-    service: switch.turn_on
+    domain: switch
+  mode: single
 - id: '1583939404713'
   alias: Garage lights off when no motion for 10 minutes with doors closed
   description: ''
   trigger:
-  - entity_id: binary_sensor.garage_motion
-    for: 00:10:00
-    platform: state
-    to: 'off'
+  - type: no_motion
+    platform: device
+    device_id: 0297d19b6ceb409693273a05449045dc
+    entity_id: binary_sensor.garage_motion
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 10
+      seconds: 0
+      milliseconds: 0
   condition:
   - condition: state
     entity_id: group.garage_doors
     state: 'off'
   action:
-  - data: {}
+  - type: turn_off
+    device_id: 6f257e741b564746b69eca3a6eae1985
     entity_id: switch.garage_light
-    service: switch.turn_off
+    domain: switch
+  mode: single
 - id: '1583940295594'
   alias: Garage lights on with motion
   description: ''
   trigger:
-  - entity_id: binary_sensor.garage_motion
-    from: 'off'
-    platform: state
-    to: 'on'
+  - type: motion
+    platform: device
+    device_id: 0297d19b6ceb409693273a05449045dc
+    entity_id: binary_sensor.garage_motion
+    domain: binary_sensor
   condition:
-  - condition: state
+  - condition: device
+    type: is_off
+    device_id: 6f257e741b564746b69eca3a6eae1985
     entity_id: switch.garage_light
-    state: 'off'
+    domain: switch
   action:
-  - data: {}
+  - type: turn_on
+    device_id: 6f257e741b564746b69eca3a6eae1985
     entity_id: switch.garage_light
-    service: switch.turn_on
+    domain: switch
+  mode: single
 - id: '1584656811875'
   alias: Garage lights off when door closed if no motion
   description: ''
@@ -740,13 +757,22 @@
     platform: state
     to: 'off'
   condition:
-  - condition: state
+  - type: is_no_motion
+    condition: device
+    device_id: 0297d19b6ceb409693273a05449045dc
     entity_id: binary_sensor.garage_motion
-    state: 'off'
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 25
+      milliseconds: 0
   action:
-  - data: {}
+  - type: turn_off
+    device_id: 6f257e741b564746b69eca3a6eae1985
     entity_id: switch.garage_light
-    service: switch.turn_off
+    domain: switch
+  mode: single
 - id: '1585672107503'
   alias: Purge recorder database
   description: ''
