@@ -67,8 +67,8 @@ dtparam=sd_poll_once=on
 dtparam=audio=off
 
 # Disable all radios
-dtparam=disable-wifi
-dtparam=disable-bt
+dtoverlay=disable-wifi
+dtoverlay=disable-bt
 
 
 [all]
