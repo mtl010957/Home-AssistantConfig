@@ -491,7 +491,8 @@
   - data:
       message: The temperature in the office is below 50 degrees
       title: Office Temperature Low
-    service: notify.hangouts_notify
+    service: notify.notify
+  mode: single
 - id: '1572633741649'
   alias: UPS Notify Offline
   description: ''
@@ -815,7 +816,8 @@
   - data:
       message: There is a fire downstairs, get to safety!
       title: FIRE Downstairs!
-    service: notify.hangouts_notify
+    service: notify.notify
+  mode: single
 - id: '1589220124517'
   alias: Notify CO Downstairs
   description: ''
@@ -830,7 +832,8 @@
   - data:
       message: There is high CO detected downstairs, get to fresh air!
       title: CO Downstairs!
-    service: notify.hangouts_notify
+    service: notify.notify
+  mode: single
 - id: '1589220235995'
   alias: Notify CO Upstairs
   description: ''
@@ -845,7 +848,8 @@
   - data:
       message: There is high CO detected upstairs, get to fresh air!
       title: CO Upstairs!
-    service: notify.hangouts_notify
+    service: notify.notify
+  mode: single
 - id: '1589220336564'
   alias: Notify Fire Upstairs
   description: ''
@@ -860,7 +864,8 @@
   - data:
       message: There is a fire upstairs, get to safety!
       title: FIRE Upstairs!
-    service: notify.hangouts_notify
+    service: notify.notify
+  mode: single
 - id: '1589220971925'
   alias: Notify Fire Family Room
   description: ''
@@ -875,7 +880,8 @@
   - data:
       message: There is a fire in the family room, get to safety!
       title: FIRE In Family Room!
-    service: notify.hangouts_notify
+    service: notify.notify
+  mode: single
 - id: '1589221081422'
   alias: Notify CO Family Room
   description: ''
@@ -890,12 +896,13 @@
   - data:
       message: There is high CO detected in the family room, get to fresh air!
       title: CO In Family Room!
-    service: notify.hangouts_notify
+    service: notify.notify
+  mode: single
 - id: '1589227167980'
   alias: Notify Battery Low Downstairs Smoke Alarm
   description: ''
   trigger:
-  - below: 75
+  - below: 80
     device_id: fcbbefffc26a4249a4e27f01bbf24105
     domain: sensor
     entity_id: sensor.downstairs_smoke_alarm_battery_level
@@ -910,13 +917,13 @@
   - data:
       message: The downstairs smoke alarm battery is low, please replace it ASAP.
       title: Downstairs Smoke Alarm Battery Low
-    service: notify.hangouts_notify
+    service: notify.notify
   mode: single
 - id: '1589227293445'
   alias: Notify Battery Low Upstairs Smoke Alarm
   description: ''
   trigger:
-  - below: 75
+  - below: 80
     device_id: 4e811fdefdea408ebf121abe13e8bb8f
     domain: sensor
     entity_id: sensor.upstairs_smoke_alarm_battery_level
@@ -931,7 +938,7 @@
   - data:
       message: The upstairs smoke alarm battery is low, please replace it ASAP.
       title: Upstairs Smoke Alarm Battery Low
-    service: notify.hangouts_notify
+    service: notify.notify
   mode: single
 - id: '1589562649239'
   alias: Living Room Blinds Remote Open
@@ -965,7 +972,7 @@
   alias: Notify Battery Low Family Room Smoke Alarm
   description: ''
   trigger:
-  - below: 75
+  - below: 80
     device_id: c3cc29801bfd4f25802b05085241dca2
     domain: sensor
     entity_id: sensor.family_room_smoke_alarm_battery_level
@@ -980,7 +987,7 @@
   - data:
       message: The family room smoke alarm battery is low, please replace it ASAP.
       title: Family Room Smoke Alarm Battery Low
-    service: notify.hangouts_notify
+    service: notify.notify
   mode: single
 - id: '1589813195543'
   alias: Blinds Open at Sunrise if Armed Away
@@ -1199,7 +1206,7 @@
       minutes: 4
       seconds: 0
   action:
-  - service: notify.mobile_app_pixel_4a
+  - service: notify.notify
     data:
       title: Humidifier Water
       message: Humidifier is out of water.
