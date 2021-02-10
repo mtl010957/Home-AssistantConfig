@@ -5,9 +5,9 @@
         "binary_sensor": {
             "478eb31aeaa5549457365609df125021dc957a0d034e3ba8c76cadefcb35cc39_is_charging": {
                 "unique_id": "is_charging",
-                "state": true,
+                "state": false,
                 "type": "binary_sensor",
-                "icon": "mdi:power-plug",
+                "icon": "mdi:power-plug-off",
                 "attributes": {},
                 "name": "Is Charging",
                 "device_class": "plug",
@@ -30,9 +30,9 @@
         "sensor": {
             "478eb31aeaa5549457365609df125021dc957a0d034e3ba8c76cadefcb35cc39_battery_level": {
                 "unique_id": "battery_level",
-                "state": 90,
+                "state": 100,
                 "type": "sensor",
-                "icon": "mdi:battery-90",
+                "icon": "mdi:battery",
                 "attributes": {},
                 "name": "Battery Level",
                 "device_class": "battery",
@@ -42,9 +42,9 @@
             },
             "478eb31aeaa5549457365609df125021dc957a0d034e3ba8c76cadefcb35cc39_battery_state": {
                 "unique_id": "battery_state",
-                "state": "charging",
+                "state": "discharging",
                 "type": "sensor",
-                "icon": "mdi:battery-plus",
+                "icon": "mdi:battery-minus",
                 "attributes": {},
                 "name": "Battery State",
                 "webhook_id": "478eb31aeaa5549457365609df125021dc957a0d034e3ba8c76cadefcb35cc39",
@@ -52,9 +52,9 @@
             },
             "478eb31aeaa5549457365609df125021dc957a0d034e3ba8c76cadefcb35cc39_charger_type": {
                 "unique_id": "charger_type",
-                "state": "ac",
+                "state": "none",
                 "type": "sensor",
-                "icon": "mdi:power-plug",
+                "icon": "mdi:battery",
                 "attributes": {},
                 "name": "Charger Type",
                 "webhook_id": "478eb31aeaa5549457365609df125021dc957a0d034e3ba8c76cadefcb35cc39",
