@@ -375,14 +375,14 @@
                             "cards": [
                                 {
                                     "type": "gauge",
-                                    "entity": "sensor.nm03_sv1_light_sensor",
+                                    "entity": "sensor.family_room_swse_light_sensor",
                                     "min": 0,
                                     "max": 1,
                                     "name": "Inside Light"
                                 },
                                 {
                                     "type": "gauge",
-                                    "entity": "sensor.nm02_sv1_light_sensor",
+                                    "entity": "sensor.family_room_sene_light_sensor",
                                     "min": 0,
                                     "max": 1,
                                     "name": "Outside Light"

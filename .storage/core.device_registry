@@ -1201,7 +1201,7 @@
                 "manufacturer": "espressif",
                 "model": "PLATFORMIO_NODEMCUV2",
                 "name": "nm01_sv1",
-                "sw_version": "esphome v1.17.0-dev Jan 31 2021, 17:15:28",
+                "sw_version": "esphome v1.17.0-dev Feb 11 2021, 11:53:49",
                 "entry_type": null,
                 "id": "3f2e1d3be7a049f08d4d1bfe39c87fc4",
                 "via_device_id": null,
