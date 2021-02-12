@@ -1209,3 +1209,29 @@
       title: Humidifier Water
       message: Humidifier is out of water.
   mode: single
+- id: '1613156506603'
+  alias: Notify HA Stopped
+  description: ''
+  trigger:
+  - platform: event
+    event_type: homeassistant_stop
+  condition: []
+  action:
+  - service: notify.notify
+    data:
+      title: HA Has Stopped
+      Message: HA has stopped
+  mode: single
+- id: '1613156571890'
+  alias: Notify HA Started
+  description: ''
+  trigger:
+  - platform: event
+    event_type: homeassistant_start
+  condition: []
+  action:
+  - service: notify.notify
+    data:
+      title: HA Has Started
+      message: HA has started
+  mode: single
