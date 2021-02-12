@@ -1,5 +1,5 @@
 auto_purge: true
-purge_keep_days: 3
+purge_keep_days: 2
 db_url: !secret recorder_db_url
 include:
   entities:
@@ -30,7 +30,6 @@ include:
     - binary_sensor.upstairs_co_detected
     - binary_sensor.upstairs_smoke_detected
     - binary_sensor.upstairs_smoke_alarm_test
-    - binary_sensor.esprouter_e7cc33_online
     # climate
     - climate.thermostat
     # covers
@@ -44,8 +43,6 @@ include:
     - cover.living_room_ctr_blinds
     - cover.living_room_nw_ctr_blinds
     - cover.living_room_nw_blinds
-    # device_trackers
-    - device_tracker.pixel_2
     # fans
     - fan.house_fan
     - fan.family_room_ceiling_fan
@@ -99,11 +96,9 @@ include:
     - sensor.ups_status
     - sensor.ups_input_voltage
     - sensor.upstairs_smoke_alarm_battery_level
-    - sensor.esprouter_e7cc33_stations
-    - sensor.esprouter_e7cc33_rssi
     - sensor.ikea_of_sweden_tradfri_remote_control_239115fe_power
-    - sensor.nm02_sv1_light_sensor
-    - sensor.nm03_sv1_light_sensor
+    - sensor.family_room_senw_light_sensor
+    - sensor.family_room_swse_light_sensor
     # switches
     - switch.family_room_ceiling_fan_light
     - switch.living_room_lamp_module
@@ -117,7 +112,7 @@ include:
     - switch.back_outdoor_xmas_lights
     - switch.front_outdoor_xmas_lights
     # weather
-    - weather.ktpk
+    - weather.kptk_hourly
 exclude:
   event_types:
     - alexa_smart_home

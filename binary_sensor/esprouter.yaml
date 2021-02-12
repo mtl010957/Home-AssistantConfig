@@ -1,5 +1,0 @@
-- platform: mqtt
-  state_topic: "WiFi/ESPRouter_e7cc33/system/status"
-  payload_on: "online"
-  payload_off: "offline"
-  name: "ESPRouter E7CC33 Online"
