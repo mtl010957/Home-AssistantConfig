@@ -610,16 +610,14 @@
     domain: switch
   mode: single
 - id: '1578620814432'
-  alias: Humidifier on below set point
+  alias: Humidifier on below set point and heating
   description: ''
   trigger:
   - platform: template
     value_template: '{{ states(''sensor.office_humidity'') | float < states(''sensor.humidifier_on'')
-      | float  }}'
-  condition:
-  - condition: time
-    after: 05:00:00
-    before: '21:00:00'
+      | float  and state_attr(''climate.thermostat'', ''hvac_action'') == ''heating''
+      }}'
+  condition: []
   action:
   - type: turn_on
     device_id: cbfd393800a549f18ffe84e0f6b6be6f
