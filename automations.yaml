@@ -1134,8 +1134,8 @@
   alias: Notify HA Stopped
   description: ''
   trigger:
-  - platform: event
-    event_type: homeassistant_stop
+  - platform: homeassistant
+    event: shutdown
   condition: []
   action:
   - service: notify.notify
@@ -1147,8 +1147,8 @@
   alias: Notify HA Started
   description: ''
   trigger:
-  - platform: event
-    event_type: homeassistant_start
+  - platform: homeassistant
+    event: start
   condition: []
   action:
   - service: notify.notify
