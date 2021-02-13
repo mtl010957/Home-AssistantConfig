@@ -7481,7 +7481,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "Pixel 4a Battery Level",
-                "original_icon": "mdi:battery-70"
+                "original_icon": "mdi:battery-80"
             },
             {
                 "entity_id": "sensor.pixel_4a_battery_state",
@@ -8054,7 +8054,7 @@
                 "name": null,
                 "icon": null,
                 "disabled_by": null,
-                "capabilities": null,
+                "capabilities": {},
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
@@ -8071,7 +8071,7 @@
                 "name": null,
                 "icon": null,
                 "disabled_by": null,
-                "capabilities": null,
+                "capabilities": {},
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
