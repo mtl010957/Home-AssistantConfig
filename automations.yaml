@@ -236,24 +236,6 @@
   - data: {}
     entity_id: all
     service: cover.close_cover_tilt
-- id: '1552938556370'
-  alias: Grow Lamp on at 06:00 AM
-  trigger:
-  - at: 06:00:00
-    platform: time
-  condition: []
-  action:
-  - entity_id: switch.grow_lamp
-    service: switch.turn_on
-- id: '1552938778764'
-  alias: Grow Lamp off at 08:00 PM
-  trigger:
-  - at: '20:00:00'
-    platform: time
-  condition: []
-  action:
-  - entity_id: switch.grow_lamp
-    service: switch.turn_off
 - id: '1560461893289'
   alias: Security Lighting On Close Blinds
   trigger:
@@ -521,67 +503,6 @@
       message: The UPS has come back ONLINE
       title: UPS ONLINE
     service: notify.hangouts_notify
-- id: '1576173820669'
-  alias: Bird bath heater off at sunset
-  description: ''
-  trigger:
-  - event: sunset
-    platform: sun
-  condition:
-  - condition: state
-    entity_id: switch.l_5
-    state: 'on'
-  action:
-  - alias: ''
-    data: {}
-    entity_id: switch.l_5
-    service: switch.turn_off
-- id: '1576174004779'
-  alias: Bird bath heater off above 32 degrees
-  description: ''
-  trigger:
-  - above: '32'
-    entity_id: sensor.dark_sky_temperature
-    platform: numeric_state
-  condition:
-  - condition: state
-    entity_id: switch.l_5
-    state: 'on'
-  action:
-  - data: {}
-    entity_id: switch.l_5
-    service: switch.turn_off
-- id: '1576174236299'
-  alias: Bird bath heater on below freezing daytime
-  description: ''
-  trigger:
-  - below: '32'
-    entity_id: sensor.dark_sky_temperature
-    platform: numeric_state
-  condition:
-  - after: sunrise
-    before: sunset
-    condition: sun
-  - condition: state
-    entity_id: switch.l_5
-    state: 'off'
-  action:
-  - data: {}
-    entity_id: switch.l_5
-    service: switch.turn_on
-- id: '1576243291952'
-  alias: Bird bath heater on at sunrise below freezing
-  description: ''
-  trigger:
-  - event: sunrise
-    platform: sun
-  condition:
-  - below: '32'
-    condition: numeric_state
-    entity_id: sensor.dark_sky_temperature
-  action:
-  - entity_id: switch.l_5
-    service: switch.turn_on
 - id: '1578535843455'
   alias: Garage latch off when door open
   description: ''
@@ -661,7 +582,7 @@
       entity_id: sensor.season
       state: winter
   action:
-  - scene: scene.work_morning_winter
+  - scene: scene.work_morning
   - service: climate.set_temperature
     data:
       temperature: 70
@@ -1134,7 +1055,7 @@
       entity_id: sensor.season
       state: summer
   action:
-  - scene: scene.work_morning_summer
+  - scene: scene.work_morning
   mode: single
 - id: '1609723691654'
   alias: Tag Garage Latch is scanned
@@ -1234,4 +1155,50 @@
     data:
       title: HA Has Started
       message: HA has started
+  mode: single
+- id: '1613235141934'
+  alias: Xmas Season Start
+  description: Enable Xmas related automations
+  trigger:
+  - platform: time
+    at: 00:00:00
+  condition:
+  - condition: template
+    value_template: '{{ now().day == 1 and now().month == 12 }}'
+  action:
+  - service: automation.turn_on
+    data: {}
+    entity_id: automation.xmas_lights_off_after_sunrise
+  - service: automation.turn_on
+    data: {}
+    entity_id: automation.xmas_lights_off_at_11_00_pm
+  - service: automation.turn_on
+    data: {}
+    entity_id: automation.xmas_lights_on_at_05_00_am
+  - service: automation.turn_on
+    data: {}
+    entity_id: automation.xmas_lights_on_at_dusk
+  mode: single
+- id: '1613235512761'
+  alias: Xmas Season End
+  description: Disable Xmas related automations
+  trigger:
+  - platform: time
+    at: 00:00:00
+  condition:
+  - condition: template
+    value_template: '{{ now().day == 1 and now().month == 2 }}'
+  action:
+  - service: automation.turn_off
+    data: {}
+    entity_id: automation.xmas_lights_off_after_sunrise
+  - service: automation.turn_off
+    data: {}
+    entity_id: automation.xmas_lights_off_at_11_00_pm
+  - service: automation.turn_off
+    data: {}
+    entity_id: automation.xmas_lights_on_at_05_00_am
+  - service: automation.turn_off
+    data: {}
+    entity_id: automation.xmas_lights_on_at_dusk
   mode: single

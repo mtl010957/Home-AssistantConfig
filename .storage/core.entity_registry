@@ -412,23 +412,6 @@
                 "original_icon": null
             },
             {
-                "entity_id": "automation.grow_lamp_on_at_06_00_am",
-                "config_entry_id": null,
-                "device_id": null,
-                "area_id": null,
-                "unique_id": "1552938556370",
-                "platform": "automation",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "Grow Lamp on at 06:00 AM",
-                "original_icon": null
-            },
-            {
                 "entity_id": "automation.3629cam4_up",
                 "config_entry_id": null,
                 "device_id": null,
@@ -548,57 +531,6 @@
                 "original_icon": null
             },
             {
-                "entity_id": "automation.bird_bath_heater_on_at_sunrise_below_freezing",
-                "config_entry_id": null,
-                "device_id": null,
-                "area_id": null,
-                "unique_id": "1576243291952",
-                "platform": "automation",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "Bird bath heater on at sunrise below freezing",
-                "original_icon": null
-            },
-            {
-                "entity_id": "automation.bird_bath_heater_off_at_sunset",
-                "config_entry_id": null,
-                "device_id": null,
-                "area_id": null,
-                "unique_id": "1576173820669",
-                "platform": "automation",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "Bird bath heater off at sunset",
-                "original_icon": null
-            },
-            {
-                "entity_id": "automation.bird_bath_heater_off_above_32_degrees",
-                "config_entry_id": null,
-                "device_id": null,
-                "area_id": null,
-                "unique_id": "1576174004779",
-                "platform": "automation",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "Bird bath heater off above 32 degrees",
-                "original_icon": null
-            },
-            {
                 "entity_id": "automation.camera_motion_and_floods_on_armed_away",
                 "config_entry_id": null,
                 "device_id": null,
@@ -715,23 +647,6 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Humidifier on below set point and heating",
-                "original_icon": null
-            },
-            {
-                "entity_id": "automation.bird_bath_heater_on_below_freezing_daytime",
-                "config_entry_id": null,
-                "device_id": null,
-                "area_id": null,
-                "unique_id": "1576174236299",
-                "platform": "automation",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "Bird bath heater on below freezing daytime",
                 "original_icon": null
             },
             {
@@ -953,23 +868,6 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Family Room Ceiling Fan Remote Medium",
-                "original_icon": null
-            },
-            {
-                "entity_id": "automation.grow_lamp_off_at_08_00_pm",
-                "config_entry_id": null,
-                "device_id": null,
-                "area_id": null,
-                "unique_id": "1552938778764",
-                "platform": "automation",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "Grow Lamp off at 08:00 PM",
                 "original_icon": null
             },
             {
@@ -7229,40 +7127,6 @@
                 "original_icon": null
             },
             {
-                "entity_id": "scene.work_morning_winter",
-                "config_entry_id": null,
-                "device_id": null,
-                "area_id": null,
-                "unique_id": "1609619528381",
-                "platform": "homeassistant",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "Work Morning Winter",
-                "original_icon": "mdi:hospital-building"
-            },
-            {
-                "entity_id": "scene.work_morning_summer",
-                "config_entry_id": null,
-                "device_id": null,
-                "area_id": null,
-                "unique_id": "1609622616283",
-                "platform": "homeassistant",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "Work Morning Summer",
-                "original_icon": "mdi:hospital-building"
-            },
-            {
                 "entity_id": "automation.work_morning_spring_summer",
                 "config_entry_id": null,
                 "device_id": null,
@@ -7481,7 +7345,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "Pixel 4a Battery Level",
-                "original_icon": "mdi:battery-80"
+                "original_icon": "mdi:battery"
             },
             {
                 "entity_id": "sensor.pixel_4a_battery_state",
@@ -7498,7 +7362,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Battery State",
-                "original_icon": "mdi:battery-minus"
+                "original_icon": "mdi:battery-charging"
             },
             {
                 "entity_id": "binary_sensor.pixel_4a_is_charging",
@@ -7515,7 +7379,7 @@
                 "device_class": "plug",
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Is Charging",
-                "original_icon": "mdi:power-plug-off"
+                "original_icon": "mdi:power-plug"
             },
             {
                 "entity_id": "sensor.pixel_4a_charger_type",
@@ -7532,7 +7396,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 4a Charger Type",
-                "original_icon": "mdi:battery"
+                "original_icon": "mdi:power-plug"
             },
             {
                 "entity_id": "sensor.pixel_4a_battery_health",
@@ -8076,6 +7940,57 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Notify HA Started",
+                "original_icon": null
+            },
+            {
+                "entity_id": "scene.work_morning",
+                "config_entry_id": null,
+                "device_id": null,
+                "area_id": null,
+                "unique_id": "1613234587274",
+                "platform": "homeassistant",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "Work Morning",
+                "original_icon": "mdi:hospital-building"
+            },
+            {
+                "entity_id": "automation.xmas_season_start",
+                "config_entry_id": null,
+                "device_id": null,
+                "area_id": null,
+                "unique_id": "1613235141934",
+                "platform": "automation",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "Xmas Season Start",
+                "original_icon": null
+            },
+            {
+                "entity_id": "automation.xmas_season_end",
+                "config_entry_id": null,
+                "device_id": null,
+                "area_id": null,
+                "unique_id": "1613235512761",
+                "platform": "automation",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "Xmas Season End",
                 "original_icon": null
             }
         ]

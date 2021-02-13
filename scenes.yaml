@@ -1,22 +1,20 @@
-- id: '1609619528381'
-  name: Work Morning Winter
+- id: '1613234587274'
+  name: Work Morning
   entities:
-    switch.back_outdoor_xmas_lights:
-      friendly_name: Back Outdoor Xmas Lights
-      icon: mdi:string-lights
-      state: 'on'
-    light.front_outdoor_xmas_lights_green_led:
-      friendly_name: Front Outdoor Xmas Lights Green LED
+    light.family_room_sene_blinds_blue_led:
+      friendly_name: Family Room SE-NE Blinds Blue LED
       supported_features: 41
       state: 'off'
-    switch.front_outdoor_xmas_lights_restart:
-      friendly_name: Front Outdoor Xmas Lights Restart
+    switch.family_room_sene_blinds_restart:
+      friendly_name: Family Room SE-NE Blinds Restart
       icon: mdi:restart
       state: 'off'
-    switch.front_outdoor_xmas_lights:
-      friendly_name: Front Outdoor Xmas Lights
-      icon: mdi:string-lights
-      state: 'on'
+    cover.family_room_sene_blinds:
+      current_tilt_position: 60
+      friendly_name: Family Room SE-NE Blinds
+      supported_features: 240
+      device_class: shutter
+      state: open
     light.family_room_nwsw_blinds_blue_led:
       friendly_name: Family Room NW-SW Blinds Blue LED
       supported_features: 41
@@ -31,20 +29,6 @@
       friendly_name: Family Room NW-SW Blinds Restart
       icon: mdi:restart
       state: 'off'
-    light.family_room_sene_blinds_blue_led:
-      friendly_name: Family Room SE-NE Blinds Blue LED
-      supported_features: 41
-      state: 'off'
-    switch.family_room_sene_blinds_restart:
-      friendly_name: Family Room SE-NE Blinds Restart
-      icon: mdi:restart
-      state: 'off'
-    cover.family_room_sene_blinds:
-      current_tilt_position: 60
-      friendly_name: Family Room SE-NE Blinds
-      supported_features: 240
-      device_class: shutter
-      state: open
     light.family_room_sesw_blinds_blue_led:
       friendly_name: Family Room SE-SW Blinds Blue LED
       supported_features: 41
@@ -87,20 +71,6 @@
       supported_features: 240
       device_class: shutter
       state: open
-    cover.living_room_ctr_blinds:
-      current_tilt_position: 60
-      friendly_name: Living Room CTR Blinds
-      supported_features: 240
-      device_class: shutter
-      state: open
-    light.living_room_ctr_blinds_blue_led:
-      friendly_name: Living Room CTR Blinds Blue LED
-      supported_features: 41
-      state: 'off'
-    switch.living_room_ctr_blinds_restart:
-      friendly_name: Living Room CTR Blinds Restart
-      icon: mdi:restart
-      state: 'off'
     cover.living_room_nw_blinds:
       current_tilt_position: 60
       friendly_name: Living Room NW Blinds
@@ -129,100 +99,6 @@
       supported_features: 240
       device_class: shutter
       state: open
-    light.living_room_nw_ctr_blinds_blue_led:
-      friendly_name: Living Room NW CTR Blinds Blue LED
-      supported_features: 41
-      state: 'off'
-    switch.living_room_nw_ctr_blinds_restart:
-      friendly_name: Living Room NW CTR Blinds Restart
-      icon: mdi:restart
-      state: 'off'
-    cover.living_room_nw_ctr_blinds:
-      current_tilt_position: 60
-      friendly_name: Living Room NW CTR Blinds
-      supported_features: 240
-      device_class: shutter
-      state: open
-    light.living_room_se_ctr_blinds_blue_led:
-      friendly_name: Living Room SE CTR Blinds Blue LED
-      supported_features: 41
-      state: 'off'
-    switch.living_room_se_ctr_blinds_restart:
-      friendly_name: Living Room SE CTR Blinds Restart
-      icon: mdi:restart
-      state: 'off'
-    cover.living_room_se_ctr_blinds:
-      current_tilt_position: 60
-      friendly_name: Living Room SE CTR Blinds
-      supported_features: 240
-      device_class: shutter
-      state: open
-  icon: mdi:hospital-building
-- id: '1609622616283'
-  name: Work Morning Summer
-  entities:
-    cover.family_room_nwsw_blinds:
-      current_tilt_position: 60
-      friendly_name: Family Room NW-SW Blinds
-      supported_features: 240
-      device_class: shutter
-      state: open
-    light.family_room_sene_blinds_blue_led:
-      friendly_name: Family Room SE-NE Blinds Blue LED
-      supported_features: 41
-      state: 'off'
-    switch.family_room_sene_blinds_restart:
-      friendly_name: Family Room SE-NE Blinds Restart
-      icon: mdi:restart
-      state: 'off'
-    cover.family_room_sene_blinds:
-      current_tilt_position: 60
-      friendly_name: Family Room SE-NE Blinds
-      supported_features: 240
-      device_class: shutter
-      state: open
-    light.family_room_sesw_blinds_blue_led:
-      friendly_name: Family Room SE-SW Blinds Blue LED
-      supported_features: 41
-      state: 'off'
-    switch.family_room_sesw_blinds_restart:
-      friendly_name: Family Room SE-SW Blinds Restart
-      icon: mdi:restart
-      state: 'off'
-    cover.family_room_sesw_blinds:
-      current_tilt_position: 60
-      friendly_name: Family Room SE-SW Blinds
-      supported_features: 240
-      device_class: shutter
-      state: open
-    light.family_room_swnw_blinds_blue_led:
-      friendly_name: Family Room SW-NW Blinds Blue LED
-      supported_features: 41
-      state: 'off'
-    switch.family_room_swnw_blinds_restart:
-      friendly_name: Family Room SW-NW Blinds Restart
-      icon: mdi:restart
-      state: 'off'
-    cover.family_room_swnw_blinds:
-      current_tilt_position: 60
-      friendly_name: Family Room SW-NW Blinds
-      supported_features: 240
-      device_class: shutter
-      state: open
-    light.family_room_swse_blinds_blue_led:
-      friendly_name: Family Room SW-SE Blinds Blue LED
-      supported_features: 41
-      state: 'off'
-    switch.family_room_swse_blinds_restart:
-      friendly_name: Family Room SW-SE Blinds Restart
-      icon: mdi:restart
-      state: 'off'
-    cover.family_room_swse_blinds:
-      current_tilt_position: 60
-      friendly_name: Family Room SW-SE Blinds
-      supported_features: 240
-      device_class: shutter
-      state: open
     cover.living_room_ctr_blinds:
       current_tilt_position: 60
       friendly_name: Living Room CTR Blinds
@@ -237,20 +113,6 @@
       friendly_name: Living Room CTR Blinds Restart
       icon: mdi:restart
       state: 'off'
-    cover.living_room_nw_blinds:
-      current_tilt_position: 60
-      friendly_name: Living Room NW Blinds
-      supported_features: 240
-      device_class: shutter
-      state: open
-    light.living_room_nw_blinds_blue_led:
-      friendly_name: Living Room NW Blinds Blue LED
-      supported_features: 41
-      state: 'off'
-    switch.living_room_nw_blinds_restart:
-      friendly_name: Living Room NW Blinds Restart
-      icon: mdi:restart
-      state: 'off'
     light.living_room_nw_ctr_blinds_blue_led:
       friendly_name: Living Room NW CTR Blinds Blue LED
       supported_features: 41
@@ -262,20 +124,6 @@
     cover.living_room_nw_ctr_blinds:
       current_tilt_position: 60
       friendly_name: Living Room NW CTR Blinds
-      supported_features: 240
-      device_class: shutter
-      state: open
-    light.living_room_se_blinds_blue_led:
-      friendly_name: Living Room SE Blinds Blue LED
-      supported_features: 41
-      state: 'off'
-    switch.living_room_se_blinds_restart:
-      friendly_name: Living Room SE Blinds Restart
-      icon: mdi:restart
-      state: 'off'
-    cover.living_room_se_blinds:
-      current_tilt_position: 60
-      friendly_name: Living Room SE Blinds
       supported_features: 240
       device_class: shutter
       state: open
