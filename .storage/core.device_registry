@@ -83,7 +83,7 @@
                 "manufacturer": "hacs.xyz",
                 "model": "",
                 "name": "HACS",
-                "sw_version": "1.11.2",
+                "sw_version": "1.11.3",
                 "entry_type": "service",
                 "id": "a6390213c6084f2394864c2845d012ee",
                 "via_device_id": null,
