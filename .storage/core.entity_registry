@@ -7992,6 +7992,23 @@
                 "unit_of_measurement": null,
                 "original_name": "Xmas Season End",
                 "original_icon": null
+            },
+            {
+                "entity_id": "automation.make_site",
+                "config_entry_id": null,
+                "device_id": null,
+                "area_id": null,
+                "unique_id": "1613262858760",
+                "platform": "automation",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "Make Site",
+                "original_icon": null
             }
         ]
     }

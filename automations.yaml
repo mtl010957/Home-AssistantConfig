@@ -1202,3 +1202,18 @@
     data: {}
     entity_id: automation.xmas_lights_on_at_dusk
   mode: single
+- id: '1613262858760'
+  alias: Make Site
+  description: ''
+  trigger:
+  - platform: time
+    at: 00:25:00
+  condition:
+  - condition: time
+    after: 00:00:00
+    before: 01:00:00
+  action:
+  - service: hassio.addon_start
+    data:
+      addon: d73562e8_make_site
+  mode: single
