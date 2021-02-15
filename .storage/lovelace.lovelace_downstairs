@@ -701,14 +701,14 @@
                                     "type": "gauge",
                                     "entity": "sensor.living_room_nw_ctr_light_sensor",
                                     "min": 0,
-                                    "max": 100,
+                                    "max": 1,
                                     "name": "Inside Light"
                                 },
                                 {
                                     "type": "gauge",
                                     "entity": "sensor.living_room_se_ctr_light_sensor",
                                     "min": 0,
-                                    "max": 100,
+                                    "max": 1,
                                     "name": "Outside Light"
                                 }
                             ]
