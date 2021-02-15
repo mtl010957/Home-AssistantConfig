@@ -97,7 +97,7 @@ include:
     - sensor.ups_input_voltage
     - sensor.upstairs_smoke_alarm_battery_level
     - sensor.ikea_of_sweden_tradfri_remote_control_239115fe_power
-    - sensor.family_room_senw_light_sensor
+    - sensor.family_room_sene_light_sensor
     - sensor.family_room_swse_light_sensor
     - sensor.living_room_nw_ctr_light_sensor
     - sensor.living_room_se_ctr_light_sensor

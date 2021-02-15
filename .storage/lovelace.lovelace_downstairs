@@ -378,14 +378,24 @@
                                     "entity": "sensor.family_room_swse_light_sensor",
                                     "min": 0,
                                     "max": 1,
-                                    "name": "Inside Light"
+                                    "name": "Inside Light",
+                                    "severity": {
+                                        "green": 0,
+                                        "yellow": 0.3,
+                                        "red": 0.7
+                                    }
                                 },
                                 {
                                     "type": "gauge",
                                     "entity": "sensor.family_room_sene_light_sensor",
                                     "min": 0,
                                     "max": 1,
-                                    "name": "Outside Light"
+                                    "name": "Outside Light",
+                                    "severity": {
+                                        "green": 0,
+                                        "yellow": 0.3,
+                                        "red": 0.7
+                                    }
                                 }
                             ]
                         }
@@ -702,14 +712,24 @@
                                     "entity": "sensor.living_room_nw_ctr_light_sensor",
                                     "min": 0,
                                     "max": 1,
-                                    "name": "Inside Light"
+                                    "name": "Inside Light",
+                                    "severity": {
+                                        "green": 0,
+                                        "yellow": 0.3,
+                                        "red": 0.7
+                                    }
                                 },
                                 {
                                     "type": "gauge",
                                     "entity": "sensor.living_room_se_ctr_light_sensor",
                                     "min": 0,
                                     "max": 1,
-                                    "name": "Outside Light"
+                                    "name": "Outside Light",
+                                    "severity": {
+                                        "green": 0,
+                                        "yellow": 0.3,
+                                        "red": 0.7
+                                    }
                                 }
                             ]
                         }
