@@ -99,6 +99,8 @@ include:
     - sensor.ikea_of_sweden_tradfri_remote_control_239115fe_power
     - sensor.family_room_senw_light_sensor
     - sensor.family_room_swse_light_sensor
+    - sensor.living_room_nw_ctr_light_sensor
+    - sensor.living_room_se_ctr_light_sensor
     # switches
     - switch.family_room_ceiling_fan_light
     - switch.living_room_lamp_module

@@ -693,6 +693,25 @@
                             "show_icon": true,
                             "show_name": true,
                             "type": "button"
+                        },
+                        {
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.living_room_nw_ctr_light_sensor",
+                                    "min": 0,
+                                    "max": 100,
+                                    "name": "Inside Light"
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.living_room_se_ctr_light_sensor",
+                                    "min": 0,
+                                    "max": 100,
+                                    "name": "Outside Light"
+                                }
+                            ]
                         }
                     ],
                     "path": "living-room",
