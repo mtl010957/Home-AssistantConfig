@@ -62,14 +62,12 @@ dtparam=sd_poll_once=on
 
 # Additional overlays and parameters are documented /boot/overlays/README
 
-# Enable audio (loads snd_bcm2835)
-#dtparam=audio=on
+# Disable audio (loads snd_bcm2835)
 dtparam=audio=off
 
 # Disable all radios
 dtoverlay=disable-wifi
 dtoverlay=disable-bt
-
 
 [all]
 #dtoverlay=vc4-fkms-v3d
