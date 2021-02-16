@@ -1191,12 +1191,6 @@
   action:
   - service: automation.turn_off
     data: {}
-    entity_id: automation.xmas_lights_off_after_sunrise
-  - service: automation.turn_off
-    data: {}
-    entity_id: automation.xmas_lights_off_at_11_00_pm
-  - service: automation.turn_off
-    data: {}
     entity_id: automation.xmas_lights_on_at_05_00_am
   - service: automation.turn_off
     data: {}

@@ -117,13 +117,21 @@ include:
     - weather.kptk_hourly
 exclude:
   event_types:
-    - alexa_smart_home
     - component_loaded
+    - core_config_updated
     - device_registry_updated
+    - entity_registry_updated
     - hacs/config
     - hacs/reload
     - hacs/repository
     - hacs/status
+    - hacs/stage
+    - lovelace_updated
     - panels_updated
+    - persistent_notifications_updated
     - platform_discovered
-    - timer_out_of_sync
+    - scene_reloaded
+    - service_registered
+    - service_removed
+    - themes_updated
+    - user_removed
