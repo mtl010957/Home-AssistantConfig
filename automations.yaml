@@ -587,6 +587,10 @@
     data:
       temperature: 70
     entity_id: climate.thermostat
+  - type: turn_on
+    device_id: 9536dc3f7ae24ca4becaa28866474d00
+    entity_id: switch.back_outdoor_xmas_lights
+    domain: switch
   mode: single
 - id: '1581601374878'
   alias: Humidifier off at 21:00
