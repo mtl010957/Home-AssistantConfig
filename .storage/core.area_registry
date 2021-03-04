@@ -74,6 +74,18 @@
             {
                 "name": "Desert Guest Room",
                 "id": "desert_guest_room"
+            },
+            {
+                "name": "Desert",
+                "id": "desert"
+            },
+            {
+                "name": "Desert Front Porch",
+                "id": "desert_front_porch"
+            },
+            {
+                "name": "Desert Living Room",
+                "id": "desert_living_room"
             }
         ]
     }
