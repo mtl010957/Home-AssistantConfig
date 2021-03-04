@@ -21,7 +21,7 @@
                 "entry_type": null,
                 "id": "16398d829c294e22875b65cf407a4ae8",
                 "via_device_id": null,
-                "area_id": null,
+                "area_id": "desert_living_room",
                 "name_by_user": null,
                 "disabled_by": null
             },
@@ -43,7 +43,7 @@
                 "entry_type": null,
                 "id": "91ae9631e2af4dd6bd596e94b02cc7d6",
                 "via_device_id": null,
-                "area_id": null,
+                "area_id": "desert",
                 "name_by_user": null,
                 "disabled_by": null
             },
@@ -65,7 +65,7 @@
                 "entry_type": null,
                 "id": "2a4b324a5fb44db0b7cf65e3114d3b7b",
                 "via_device_id": null,
-                "area_id": null,
+                "area_id": "desert_front_porch",
                 "name_by_user": null,
                 "disabled_by": null
             },
