@@ -1817,6 +1817,244 @@
                 "area_id": null,
                 "name_by_user": null,
                 "disabled_by": "user"
+            },
+            {
+                "config_entries": [
+                    "d0b78469c71165f82af1a4daa2eb4ee7"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "asuswrt",
+                        "AsusWRT"
+                    ]
+                ],
+                "manufacturer": "Asus",
+                "model": "Asus Router",
+                "name": "AsusWRT",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "f0360cc4f1eaf7611b5e18aa2fb95492",
+                "via_device_id": null,
+                "area_id": "desert_guest_room",
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "d0b78469c71165f82af1a4daa2eb4ee7"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "ac:d1:b8:20:8b:86"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "asuswrt",
+                        "AC:D1:B8:20:8B:86"
+                    ]
+                ],
+                "manufacturer": "AsusWRT Tracked device",
+                "model": null,
+                "name": "pegsnewcomputer",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "1420407c15abf7eb73ca826426360b4e",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "d0b78469c71165f82af1a4daa2eb4ee7"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "98:d8:63:0b:96:01"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "asuswrt",
+                        "98:D8:63:0B:96:01"
+                    ]
+                ],
+                "manufacturer": "AsusWRT Tracked device",
+                "model": null,
+                "name": "HF-LPT120",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "24f9677e66f30a34e2b3e2b4f0c3ffee",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "d0b78469c71165f82af1a4daa2eb4ee7"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "18:b4:30:8c:b4:54"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "asuswrt",
+                        "18:B4:30:8C:B4:54"
+                    ]
+                ],
+                "manufacturer": "AsusWRT Tracked device",
+                "model": null,
+                "name": "Nest-B454",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "2413f7de728474df2d81c55ec320ce66",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "d0b78469c71165f82af1a4daa2eb4ee7"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "40:9f:38:ea:01:23"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "asuswrt",
+                        "40:9F:38:EA:01:23"
+                    ]
+                ],
+                "manufacturer": "AsusWRT Tracked device",
+                "model": null,
+                "name": "hap-EA0123",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "6a774fd1b9b8e46be52bb72f2616bf47",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "d0b78469c71165f82af1a4daa2eb4ee7"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "40:9f:38:c5:23:49"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "asuswrt",
+                        "40:9F:38:C5:23:49"
+                    ]
+                ],
+                "manufacturer": "AsusWRT Tracked device",
+                "model": null,
+                "name": "hap-C52349",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "058a91e949afb1f5fbc107e377662de3",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "d0b78469c71165f82af1a4daa2eb4ee7"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "80:c5:f2:1b:df:32"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "asuswrt",
+                        "80:C5:F2:1B:DF:32"
+                    ]
+                ],
+                "manufacturer": "AsusWRT Tracked device",
+                "model": null,
+                "name": "hap-1BDF32",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "ecc89a323e70650acdf6567584f9251b",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "d0b78469c71165f82af1a4daa2eb4ee7"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "c4:1c:ff:6c:9b:03"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "asuswrt",
+                        "C4:1C:FF:6C:9B:03"
+                    ]
+                ],
+                "manufacturer": "AsusWRT Tracked device",
+                "model": null,
+                "name": "viziocastdisplay",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "d9f51b68927681ab612ead8a9b933730",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "d0b78469c71165f82af1a4daa2eb4ee7"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "c4:1c:ff:4a:37:e7"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "asuswrt",
+                        "C4:1C:FF:4A:37:E7"
+                    ]
+                ],
+                "manufacturer": "AsusWRT Tracked device",
+                "model": null,
+                "name": "viziocastdisplay",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "152aa25dc953a925a1bec340208211b2",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
             }
         ],
         "deleted_devices": [

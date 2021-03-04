@@ -89,3 +89,10 @@
     ignore_availability: true
     name: https://www.rvtripwizard.com/ics_hash/73421/M0YvY3ppQ2FjLy94bzN4TlU4YlVGUT09
     track: true
+
+- cal_id: addressbook#contacts@group.v.calendar.google.com
+  entities:
+  - device_id: birthdays
+    ignore_availability: true
+    name: Birthdays
+    track: true

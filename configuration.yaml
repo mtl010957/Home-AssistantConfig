@@ -19,9 +19,6 @@ google: !include google.yaml
 # Logger setup
 logger: !include logger.yaml
 
-# Nest Stuff
-nest: !include nest.yaml
-
 # Enables support for tracking state changes over time.
 recorder: !include recorder.yaml
 
@@ -53,7 +50,4 @@ notify: !include notify.yaml
 sensor: !include_dir_merge_list sensor
 
 switch: !include_dir_merge_list switch
-
-# ASUS Routers
-asuswrt: !include asuswrt/desert.yaml
 

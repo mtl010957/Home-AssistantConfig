@@ -1,76 +1,80 @@
 {
+    "version": 1,
+    "key": "core.area_registry",
     "data": {
         "areas": [
             {
-                "id": "ba35ea6dc22d42808e3dc7511c49bfe6",
-                "name": "Living Room"
+                "name": "Living Room",
+                "id": "ba35ea6dc22d42808e3dc7511c49bfe6"
             },
             {
-                "id": "994d07af5955428c961b2448d9bcf261",
-                "name": "Kitchen"
+                "name": "Kitchen",
+                "id": "994d07af5955428c961b2448d9bcf261"
             },
             {
-                "id": "30065008d98541db8a0e1a665260b650",
-                "name": "Bedroom"
+                "name": "Bedroom",
+                "id": "30065008d98541db8a0e1a665260b650"
             },
             {
-                "id": "ae8548e9d7b24e11b7d5670a4da86499",
-                "name": "Family Room"
+                "name": "Family Room",
+                "id": "ae8548e9d7b24e11b7d5670a4da86499"
             },
             {
-                "id": "be918af12ae344be9d3936091fc54a20",
-                "name": "Garage"
+                "name": "Garage",
+                "id": "be918af12ae344be9d3936091fc54a20"
             },
             {
-                "id": "a9551ad1cd4c4f63ab8c697ff8949be5",
-                "name": "Main Bedroom"
+                "name": "Main Bedroom",
+                "id": "a9551ad1cd4c4f63ab8c697ff8949be5"
             },
             {
-                "id": "316107820cce4630be06041fc14816e3",
-                "name": "Office"
+                "name": "Office",
+                "id": "316107820cce4630be06041fc14816e3"
             },
             {
-                "id": "66b0e5549f8b45ef8d7c37400cec0237",
-                "name": "Caravan"
+                "name": "Caravan",
+                "id": "66b0e5549f8b45ef8d7c37400cec0237"
             },
             {
-                "id": "0fe4b21cbf874ef3b141cffeca700b1d",
-                "name": "Attic"
+                "name": "Attic",
+                "id": "0fe4b21cbf874ef3b141cffeca700b1d"
             },
             {
-                "id": "34c603d253c649ccb4430b96d906f5a8",
-                "name": "Guest Room"
+                "name": "Guest Room",
+                "id": "34c603d253c649ccb4430b96d906f5a8"
             },
             {
-                "id": "d66690d909184fc39c8ef0e3559befea",
-                "name": "Dining Room"
+                "name": "Dining Room",
+                "id": "d66690d909184fc39c8ef0e3559befea"
             },
             {
-                "id": "74a49ece870947fc998a78d2e088b47f",
-                "name": "Utility Room"
+                "name": "Utility Room",
+                "id": "74a49ece870947fc998a78d2e088b47f"
             },
             {
-                "id": "dc451399bee647789f50e8317344517e",
-                "name": "Back Yard"
+                "name": "Back Yard",
+                "id": "dc451399bee647789f50e8317344517e"
             },
             {
-                "id": "ef79dc2fd72045778494fbbced8dcf7b",
-                "name": "Front Yard"
+                "name": "Front Yard",
+                "id": "ef79dc2fd72045778494fbbced8dcf7b"
             },
             {
-                "id": "2f62b68890ee49f1b08273ad89d15bad",
-                "name": "Outdoor"
+                "name": "Outdoor",
+                "id": "2f62b68890ee49f1b08273ad89d15bad"
             },
             {
-                "id": "fb89b524d9f34166bd038247f8d434b7",
-                "name": "Upstairs"
+                "name": "Upstairs",
+                "id": "fb89b524d9f34166bd038247f8d434b7"
             },
             {
-                "id": "bebd4b239b054e2da7abe614ba924f32",
-                "name": "Downstairs"
+                "name": "Downstairs",
+                "id": "bebd4b239b054e2da7abe614ba924f32"
+            },
+            {
+                "name": "Desert Guest Room",
+                "id": "desert_guest_room"
             }
         ]
-    },
-    "key": "core.area_registry",
-    "version": 1
+    }
 }
