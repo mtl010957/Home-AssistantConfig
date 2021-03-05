@@ -2055,6 +2055,60 @@
                 "area_id": null,
                 "name_by_user": null,
                 "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "d0b78469c71165f82af1a4daa2eb4ee7"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "ea:f8:0c:76:49:ad"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "asuswrt",
+                        "EA:F8:0C:76:49:AD"
+                    ]
+                ],
+                "manufacturer": "AsusWRT Tracked device",
+                "model": null,
+                "name": "Gerry",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "085e06ed1278cc42f3160af713b48122",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "d0b78469c71165f82af1a4daa2eb4ee7"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "b8:63:4d:53:85:6c"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "asuswrt",
+                        "B8:63:4D:53:85:6C"
+                    ]
+                ],
+                "manufacturer": "AsusWRT Tracked device",
+                "model": null,
+                "name": "Cheryls-phone",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "fde258c38735f9ecfc1c3cc902495b4e",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
             }
         ],
         "deleted_devices": [
