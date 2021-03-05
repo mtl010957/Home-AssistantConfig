@@ -71,28 +71,6 @@
             },
             {
                 "config_entries": [
-                    "47badf5aab2343108f4ab45cd4e1e3bb"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "hacs",
-                        "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd"
-                    ]
-                ],
-                "manufacturer": "hacs.xyz",
-                "model": "",
-                "name": "HACS",
-                "sw_version": "1.11.3",
-                "entry_type": "service",
-                "id": "a6390213c6084f2394864c2845d012ee",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null
-            },
-            {
-                "config_entries": [
                     "de284e3b58a141aeb7547a2926ad6b12"
                 ],
                 "connections": [],
@@ -2105,6 +2083,28 @@
                 "sw_version": null,
                 "entry_type": null,
                 "id": "fde258c38735f9ecfc1c3cc902495b4e",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "39a97bbcee027e411d5b644b873c149e"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "hacs",
+                        "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd"
+                    ]
+                ],
+                "manufacturer": "hacs.xyz",
+                "model": "",
+                "name": "HACS",
+                "sw_version": "1.11.3",
+                "entry_type": "service",
+                "id": "a6390213c6084f2394864c2845d012ee",
                 "via_device_id": null,
                 "area_id": null,
                 "name_by_user": null,

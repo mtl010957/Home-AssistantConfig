@@ -310,23 +310,6 @@
                 "original_icon": null
             },
             {
-                "entity_id": "sensor.hacs",
-                "config_entry_id": "47badf5aab2343108f4ab45cd4e1e3bb",
-                "device_id": "a6390213c6084f2394864c2845d012ee",
-                "area_id": null,
-                "unique_id": "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd",
-                "platform": "hacs",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": "pending update(s)",
-                "original_name": "hacs",
-                "original_icon": "hacs:hacs"
-            },
-            {
                 "entity_id": "person.susan_loeffler",
                 "config_entry_id": null,
                 "device_id": null,
@@ -8243,7 +8226,7 @@
                 "name": null,
                 "icon": null,
                 "disabled_by": null,
-                "capabilities": null,
+                "capabilities": {},
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
@@ -8260,12 +8243,29 @@
                 "name": null,
                 "icon": null,
                 "disabled_by": null,
-                "capabilities": null,
+                "capabilities": {},
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Cheryls-phone",
                 "original_icon": null
+            },
+            {
+                "entity_id": "sensor.hacs",
+                "config_entry_id": "39a97bbcee027e411d5b644b873c149e",
+                "device_id": "a6390213c6084f2394864c2845d012ee",
+                "area_id": null,
+                "unique_id": "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd",
+                "platform": "hacs",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "pending update(s)",
+                "original_name": "hacs",
+                "original_icon": "hacs:hacs"
             }
         ]
     }
