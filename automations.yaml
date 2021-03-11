@@ -1215,3 +1215,36 @@
     data:
       addon: d73562e8_make_site
   mode: single
+- id: '1615473655208'
+  alias: IKEA Switch On
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 5c:02:72:ff:fe:43:89:58
+      command: 'on'
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 1d313fdd3a2b45ee854fd45736c3dcc0
+    entity_id: light.garage_attic_link_bulb
+    domain: light
+    brightness_pct: 100
+  mode: single
+- id: '1615473763082'
+  alias: IKEA Switch Off
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 5c:02:72:ff:fe:43:89:58
+      command: 'off'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 1d313fdd3a2b45ee854fd45736c3dcc0
+    entity_id: light.garage_attic_link_bulb
+    domain: light
+  mode: single
