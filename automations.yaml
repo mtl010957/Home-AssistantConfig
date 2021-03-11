@@ -1090,26 +1090,6 @@
   - service: hassio.host_reboot
     data: {}
   mode: single
-- id: '1610374307992'
-  alias: IKEA Remote On-Off
-  description: ''
-  trigger:
-  - platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: bc:33:ac:ff:fe:15:91:23
-      command: toggle
-  condition: []
-  action:
-  - type: toggle
-    device_id: 9536dc3f7ae24ca4becaa28866474d00
-    entity_id: switch.back_outdoor_xmas_lights
-    domain: switch
-  - type: toggle
-    device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
-    entity_id: switch.front_outdoor_xmas_lights
-    domain: switch
-  mode: single
 - id: '1611941697472'
   alias: Notify Humidifier Out Of Water
   description: ''
@@ -1215,15 +1195,55 @@
     data:
       addon: d73562e8_make_site
   mode: single
-- id: '1615473655208'
-  alias: IKEA Switch On
+- id: '1615489626883'
+  alias: IKEA Switch 2 On
   description: ''
   trigger:
-  - platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 5c:02:72:ff:fe:43:89:58
-      command: 'on'
+  - device_id: 4658744562af10ebb6d6f1439997bbbb
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_on
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 9536dc3f7ae24ca4becaa28866474d00
+    entity_id: switch.back_outdoor_xmas_lights
+    domain: switch
+  - type: turn_on
+    device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
+    entity_id: switch.front_outdoor_xmas_lights
+    domain: switch
+  mode: single
+- id: '1615489724866'
+  alias: IKEA Switch 2 Off
+  description: ''
+  trigger:
+  - device_id: 4658744562af10ebb6d6f1439997bbbb
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_off
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 9536dc3f7ae24ca4becaa28866474d00
+    entity_id: switch.back_outdoor_xmas_lights
+    domain: switch
+  - type: turn_off
+    device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
+    entity_id: switch.front_outdoor_xmas_lights
+    domain: switch
+  mode: single
+- id: '1615489889198'
+  alias: IKEA Switch 1 On
+  description: ''
+  trigger:
+  - device_id: ef124cae49aa319f12b5ba9eb6f9ae9a
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_on
   condition: []
   action:
   - type: turn_on
@@ -1232,19 +1252,103 @@
     domain: light
     brightness_pct: 100
   mode: single
-- id: '1615473763082'
-  alias: IKEA Switch Off
+- id: '1615489929655'
+  alias: IKEA Switch 1 Off
   description: ''
   trigger:
-  - platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 5c:02:72:ff:fe:43:89:58
-      command: 'off'
+  - device_id: ef124cae49aa319f12b5ba9eb6f9ae9a
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_off
   condition: []
   action:
   - type: turn_off
     device_id: 1d313fdd3a2b45ee854fd45736c3dcc0
     entity_id: light.garage_attic_link_bulb
     domain: light
+  mode: single
+- id: '1615490149516'
+  alias: IKEA Remote 1 Toggle
+  description: ''
+  trigger:
+  - device_id: 439888cd2429e60eae9b9c512836115b
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_on
+  condition: []
+  action:
+  - type: toggle
+    device_id: ad38b2b29eb24331b68fbae50ee3316a
+    entity_id: switch.family_room_ceiling_fan_light
+    domain: switch
+  mode: single
+- id: '1615490246403'
+  alias: IKEA Remote 1 Dim Up
+  description: ''
+  trigger:
+  - device_id: 439888cd2429e60eae9b9c512836115b
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: dim_up
+  condition: []
+  action:
+  - service: fan.set_speed
+    data:
+      speed: medium
+    target:
+      device_id: f743120b85da4c02b68c18c65965b2c3
+  mode: single
+- id: '1615490288906'
+  alias: IKEA Remote 1 Dim Down
+  description: ''
+  trigger:
+  - device_id: 439888cd2429e60eae9b9c512836115b
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: dim_down
+  condition: []
+  action:
+  - service: fan.set_speed
+    data:
+      speed: 'off'
+    target:
+      device_id: f743120b85da4c02b68c18c65965b2c3
+  mode: single
+- id: '1615490343030'
+  alias: IKEA Remote 1 Left
+  description: ''
+  trigger:
+  - device_id: 439888cd2429e60eae9b9c512836115b
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: left
+  condition: []
+  action:
+  - service: fan.set_speed
+    data:
+      speed: low
+    target:
+      device_id: f743120b85da4c02b68c18c65965b2c3
+  mode: single
+- id: '1615490382353'
+  alias: IKEA Remote 1 Right
+  description: ''
+  trigger:
+  - device_id: 439888cd2429e60eae9b9c512836115b
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: right
+  condition: []
+  action:
+  - service: fan.set_speed
+    data:
+      speed: high
+    target:
+      device_id: f743120b85da4c02b68c18c65965b2c3
   mode: single
