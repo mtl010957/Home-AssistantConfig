@@ -1352,3 +1352,87 @@
     target:
       device_id: f743120b85da4c02b68c18c65965b2c3
   mode: single
+- id: '1615600528797'
+  alias: IKEA Remote 2 Dim Up
+  description: ''
+  trigger:
+  - device_id: 2cb4f85bb1b5a58967706c99a0680da9
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: dim_up
+  condition: []
+  action:
+  - service: fan.set_speed
+    data:
+      speed: medium
+    target:
+      device_id: 6d21f24f1bc24bee85172a5327b56fda
+  mode: single
+- id: '1615600580812'
+  alias: IKEA Remote 2 Dim Down
+  description: ''
+  trigger:
+  - device_id: 2cb4f85bb1b5a58967706c99a0680da9
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: dim_down
+  condition: []
+  action:
+  - service: fan.set_speed
+    data:
+      speed: 'off'
+    target:
+      device_id: 6d21f24f1bc24bee85172a5327b56fda
+  mode: single
+- id: '1615600620342'
+  alias: IKEA Remote 2 Left
+  description: ''
+  trigger:
+  - device_id: 2cb4f85bb1b5a58967706c99a0680da9
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: left
+  condition: []
+  action:
+  - service: fan.set_speed
+    data:
+      speed: low
+    target:
+      device_id: 6d21f24f1bc24bee85172a5327b56fda
+  mode: single
+- id: '1615600668050'
+  alias: IKEA Remote 2 Right
+  description: ''
+  trigger:
+  - device_id: 2cb4f85bb1b5a58967706c99a0680da9
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: right
+  condition: []
+  action:
+  - service: fan.set_speed
+    data:
+      speed: high
+    target:
+      device_id: 6d21f24f1bc24bee85172a5327b56fda
+  mode: single
+- id: '1615600712856'
+  alias: IKEA Remote 2 Toggle
+  description: ''
+  trigger:
+  - device_id: 2cb4f85bb1b5a58967706c99a0680da9
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_on
+  condition: []
+  action:
+  - type: toggle
+    device_id: 2f410060429a42f78888722f30b8959c
+    entity_id: light.bedside_lamp_bulb
+    domain: light
+  mode: single
