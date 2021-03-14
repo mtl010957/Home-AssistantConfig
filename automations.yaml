@@ -1000,30 +1000,6 @@
   - service: script.turn_on_xmas_lights
     data: {}
   mode: single
-- id: '1608163895748'
-  alias: Xmas lights on remote
-  description: ''
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.fan_remote_1h
-    to: 'on'
-  condition: []
-  action:
-  - service: script.turn_on_xmas_lights
-    data: {}
-  mode: single
-- id: '1608164010627'
-  alias: Xmas lights off remote
-  description: ''
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.fan_remote_4h
-    to: 'on'
-  condition: []
-  action:
-  - service: script.turn_off_xmas_lights
-    data: {}
-  mode: single
 - id: '1609352755365'
   alias: Tag Play Alt 98.7 is scanned
   description: ''
