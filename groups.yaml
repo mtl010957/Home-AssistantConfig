@@ -3,8 +3,3 @@ family:
   entities:
     - person.michael_loeffler
     - person.susan_loeffler
-garage_doors:
-  name: "Garage Doors"
-  entities:
-    - binary_sensor.garage_door
-    - binary_sensor.garage_in_door

@@ -641,9 +641,16 @@
       seconds: 0
       milliseconds: 0
   condition:
-  - condition: state
-    entity_id: group.garage_doors
-    state: 'off'
+  - type: is_off
+    condition: device
+    device_id: a67fb5f1ee3f4a57a338786db4ac61a3
+    entity_id: binary_sensor.garage_door_sensor
+    domain: binary_sensor
+  - type: is_off
+    condition: device
+    device_id: 653b58242ddd475fa47b906fdc469822
+    entity_id: binary_sensor.garage_inside_door_sensor
+    domain: binary_sensor
   action:
   - type: turn_off
     device_id: 6f257e741b564746b69eca3a6eae1985
@@ -675,11 +682,16 @@
   alias: Garage lights off when door closed if no motion
   description: ''
   trigger:
-  - entity_id: group.garage_doors
-    for: 00:00:30
-    from: 'on'
-    platform: state
-    to: 'off'
+  - type: turned_off
+    platform: device
+    device_id: a67fb5f1ee3f4a57a338786db4ac61a3
+    entity_id: binary_sensor.garage_door_sensor
+    domain: binary_sensor
+  - type: turned_off
+    platform: device
+    device_id: 653b58242ddd475fa47b906fdc469822
+    entity_id: binary_sensor.garage_inside_door_sensor
+    domain: binary_sensor
   condition:
   - type: is_no_motion
     condition: device
@@ -691,6 +703,16 @@
       minutes: 0
       seconds: 25
       milliseconds: 0
+  - type: is_off
+    condition: device
+    device_id: a67fb5f1ee3f4a57a338786db4ac61a3
+    entity_id: binary_sensor.garage_door_sensor
+    domain: binary_sensor
+  - type: is_off
+    condition: device
+    device_id: 653b58242ddd475fa47b906fdc469822
+    entity_id: binary_sensor.garage_inside_door_sensor
+    domain: binary_sensor
   action:
   - type: turn_off
     device_id: 6f257e741b564746b69eca3a6eae1985
