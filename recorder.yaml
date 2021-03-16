@@ -104,6 +104,7 @@ include:
     - switch.irrigation_control_front_yard
     - switch.back_outdoor_xmas_lights
     - switch.front_outdoor_xmas_lights
+    - switch.hot_water_recirc
     # weather
     - weather.kptk_hourly
 exclude:

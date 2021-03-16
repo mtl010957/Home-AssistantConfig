@@ -575,6 +575,19 @@
     data:
       temperature: 70
     entity_id: climate.thermostat
+  - type: turn_on
+    device_id: 5cb0866abc084bd9aa75cb01a36d94b1
+    entity_id: switch.hot_water_recirc
+    domain: switch
+  - delay:
+      hours: 0
+      minutes: 10
+      seconds: 0
+      milliseconds: 0
+  - type: turn_off
+    device_id: 5cb0866abc084bd9aa75cb01a36d94b1
+    entity_id: switch.hot_water_recirc
+    domain: switch
   mode: single
 - id: '1581601374878'
   alias: Humidifier off at 21:00
@@ -1362,4 +1375,29 @@
       | timestamp_custom(''%Y-%m-%d'') ~ '' 06:00:00'') }}'
   action:
   - service: script.turn_on_xmas_lights
+  mode: single
+- id: '1615923844588'
+  alias: Hot Water Recirc morning when Home
+  description: ''
+  trigger:
+  - platform: time
+    at: 06:30:00
+  condition:
+  - condition: state
+    entity_id: group.family
+    state: home
+  action:
+  - type: turn_on
+    device_id: 5cb0866abc084bd9aa75cb01a36d94b1
+    entity_id: switch.hot_water_recirc
+    domain: switch
+  - delay:
+      hours: 0
+      minutes: 10
+      seconds: 0
+      milliseconds: 0
+  - type: turn_off
+    device_id: 5cb0866abc084bd9aa75cb01a36d94b1
+    entity_id: switch.hot_water_recirc
+    domain: switch
   mode: single
