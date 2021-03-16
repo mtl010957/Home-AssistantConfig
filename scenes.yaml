@@ -141,4 +141,15 @@
       supported_features: 240
       device_class: shutter
       state: open
+    light.front_yard_light_green_led:
+      friendly_name: Front Yard Light Green LED
+      supported_features: 41
+      state: 'off'
+    switch.front_yard_light_restart:
+      friendly_name: Front Yard Light Restart
+      icon: mdi:restart
+      state: 'off'
+    switch.front_yard_light:
+      friendly_name: Front Yard Light
+      state: 'off'
   icon: mdi:hospital-building

@@ -9,9 +9,11 @@
       | float }}'
   condition: []
   action:
-  - data: {}
-    entity_id: fan.house_fan
-    service: fan.turn_off
+  - type: turn_off
+    device_id: e98ba1007257472b94ec68076912820e
+    entity_id: switch.house_fan_switch_module_switch
+    domain: switch
+  mode: single
 - id: '1500947016373'
   alias: Camera Motion and Floods On Armed Away
   trigger:
@@ -19,16 +21,16 @@
     platform: state
     to: armed_away
   action:
-  - entity_id: switch.foscam_cam1_motion
-    service: switch.turn_on
-  - entity_id: switch.foscam_cam2_motion
-    service: switch.turn_on
-  - entity_id: switch.foscam_cam3_motion
-    service: switch.turn_on
-  - entity_id: switch.generic_cam4_motion
-    service: switch.turn_on
-  - entity_id: switch.front_yard_light
-    service: switch.turn_on
+  - service: switch.turn_on
+    data: {}
+    target:
+      entity_id:
+      - switch.foscam_cam1_motion
+      - switch.foscam_cam2_motion
+      - switch.foscam_cam3_motion
+      - switch.generic_cam4_motion
+      - switch.front_yard_light
+  mode: single
 - id: '1500947016399'
   alias: Camera Motion and Floods On Armed Night
   trigger:
@@ -36,12 +38,14 @@
     platform: state
     to: armed_night
   action:
-  - entity_id: switch.foscam_cam1_motion
-    service: switch.turn_on
-  - entity_id: switch.foscam_cam2_motion
-    service: switch.turn_on
-  - entity_id: switch.front_yard_light
-    service: switch.turn_on
+  - service: switch.turn_on
+    data: {}
+    target:
+      entity_id:
+      - switch.foscam_cam1_motion
+      - switch.foscam_cam2_motion
+      - switch.front_yard_light
+  mode: single
 - id: '1500947000000'
   alias: Camera Motion On Armed Home
   trigger:
@@ -49,10 +53,13 @@
     platform: state
     to: armed_home
   action:
-  - entity_id: switch.foscam_cam1_motion
-    service: switch.turn_on
-  - entity_id: switch.foscam_cam2_motion
-    service: switch.turn_on
+  - service: switch.turn_on
+    data: {}
+    target:
+      entity_id:
+      - switch.foscam_cam1_motion
+      - switch.foscam_cam2_motion
+  mode: single
 - id: '1500948466889'
   alias: Camera Motion and Floods Off Disarmed
   trigger:
@@ -60,16 +67,15 @@
     platform: state
     to: disarmed
   action:
-  - entity_id: switch.foscam_cam1_motion
-    service: switch.turn_off
-  - entity_id: switch.foscam_cam2_motion
-    service: switch.turn_off
-  - entity_id: switch.foscam_cam3_motion
-    service: switch.turn_off
-  - entity_id: switch.generic_cam4_motion
-    service: switch.turn_off
-  - entity_id: switch.front_yard_light
-    service: switch.turn_off
+  - service: switch.turn_off
+    target:
+      entity_id:
+      - switch.foscam_cam1_motion
+      - switch.foscam_cam2_motion
+      - switch.foscam_cam3_motion
+      - switch.generic_cam4_motion
+      - switch.front_yard_light
+  mode: single
 - id: '1800999911110'
   alias: 3629cam4 Up
   trigger:
@@ -91,6 +97,7 @@
     service: switch.turn_off
   - entity_id: switch.generic_cam4_down
     service: switch.turn_off
+  mode: single
 - id: '1800999911112'
   alias: 3629cam4 Down
   trigger:
@@ -110,6 +117,7 @@
   action:
   - entity_id: switch.generic_cam4_left
     service: switch.turn_on
+  mode: single
 - id: '1800999911114'
   alias: 3629cam4 Left Right Stop
   trigger:
@@ -122,6 +130,7 @@
     service: switch.turn_off
   - entity_id: switch.generic_cam4_right
     service: switch.turn_off
+  mode: single
 - id: '1800999911115'
   alias: 3629cam4 Right
   trigger:
@@ -131,6 +140,7 @@
   action:
   - entity_id: switch.generic_cam4_right
     service: switch.turn_on
+  mode: single
 - id: '1533419985023'
   alias: Irrigation Run
   trigger:
@@ -144,18 +154,27 @@
     entity_id: switch.irrigation_control_enable
     state: 'on'
   action:
-  - entity_id: switch.irrigation_control_back_yard
-    service: switch.turn_on
+  - type: turn_on
+    device_id: 57673a6ec02649a3a76d73e5d17ca744
+    entity_id: switch.irrigation_control_back_yard
+    domain: switch
   - delay: '{{ states(''input_number.zone_1_run_minutes'') | multiply(60) | timestamp_custom(''%H:%M:%S'',False)
       }}'
-  - entity_id: switch.irrigation_control_back_yard
-    service: switch.turn_off
-  - entity_id: switch.irrigation_control_front_yard
-    service: switch.turn_on
+  - type: turn_off
+    device_id: 57673a6ec02649a3a76d73e5d17ca744
+    entity_id: switch.irrigation_control_back_yard
+    domain: switch
+  - type: turn_on
+    device_id: 57673a6ec02649a3a76d73e5d17ca744
+    entity_id: switch.irrigation_control_front_yard
+    domain: switch
   - delay: '{{ states(''input_number.zone_3_run_minutes'') | multiply(60) | timestamp_custom(''%H:%M:%S'',False)
       }}'
-  - entity_id: switch.irrigation_control_front_yard
-    service: switch.turn_off
+  - type: turn_off
+    device_id: 57673a6ec02649a3a76d73e5d17ca744
+    entity_id: switch.irrigation_control_front_yard
+    domain: switch
+  mode: single
 - id: '1545515732471'
   alias: Front Yard Light on at 11:00 PM
   trigger:
@@ -163,19 +182,24 @@
     platform: time
   condition: []
   action:
-  - data: {}
+  - type: turn_on
+    device_id: 8d8de4c32fc84734af376c764700e31f
     entity_id: switch.front_yard_light
-    service: switch.turn_on
+    domain: switch
+  mode: single
 - id: '1545515874358'
-  alias: Front Yard Light off at 04:30 AM
+  alias: Front Yard Light off 30 min before sunrise
   trigger:
-  - at: 04:30
-    platform: time
+  - platform: sun
+    event: sunrise
+    offset: 00:30:00
   condition: []
   action:
-  - data: {}
+  - type: turn_off
+    device_id: 8d8de4c32fc84734af376c764700e31f
     entity_id: switch.front_yard_light
-    service: switch.turn_off
+    domain: switch
+  mode: single
 - id: '1548612260526'
   alias: Irrigation Enable
   trigger:
@@ -188,6 +212,7 @@
     domain: switch
     entity_id: switch.irrigation_control_enable
     type: turn_on
+  mode: single
 - id: '1548612882816'
   alias: Irrigation Disable
   trigger:
@@ -200,6 +225,7 @@
     domain: switch
     entity_id: switch.irrigation_control_enable
     type: turn_off
+  mode: single
 - id: '1548862723503'
   alias: Power On Utility
   trigger:
@@ -209,9 +235,11 @@
     to: Online
   condition: []
   action:
-  - data: {}
-    entity_id: switch.utility_power
-    service: switch.turn_on
+  - type: turn_on
+    device_id: 61344d8b56db43388bf5cc133786843b
+    entity_id: switch.utility_power_relay
+    domain: switch
+  mode: single
 - id: '1552222922150'
   alias: Blinds Open Before Sunrise If Home
   trigger:
@@ -226,6 +254,7 @@
   - data: {}
     entity_id: all
     service: cover.open_cover_tilt
+  mode: single
 - id: '1552245394001'
   alias: Blinds Close at 11:00 PM
   trigger:
@@ -236,6 +265,7 @@
   - data: {}
     entity_id: all
     service: cover.close_cover_tilt
+  mode: single
 - id: '1560461893289'
   alias: Security Lighting On Close Blinds
   trigger:
@@ -265,62 +295,6 @@
   - delay: 00:{{ (range(5, 25) | random) }}:00
   - service: script.security_lighting_off
   mode: single
-- id: '1562957476111'
-  alias: Family Room Ceiling Fan Remote Stop
-  trigger:
-  - device_id: 46b35f49b60e40bdb51cb453517d898c
-    domain: binary_sensor
-    entity_id: binary_sensor.fan_remote_stop
-    platform: device
-    type: turned_on
-  condition: []
-  action:
-  - data:
-      speed: 'off'
-    entity_id: fan.family_room_ceiling_fan
-    service: fan.set_speed
-- id: '1562957684896'
-  alias: Family Room Ceiling Fan Remote Hi
-  trigger:
-  - device_id: 46b35f49b60e40bdb51cb453517d898c
-    domain: binary_sensor
-    entity_id: binary_sensor.fan_remote_hi
-    platform: device
-    type: turned_on
-  condition: []
-  action:
-  - data:
-      speed: high
-    entity_id: fan.family_room_ceiling_fan
-    service: fan.set_speed
-- id: '1562958033989'
-  alias: Family Room Ceiling Fan Remote Medium
-  trigger:
-  - device_id: 46b35f49b60e40bdb51cb453517d898c
-    domain: binary_sensor
-    entity_id: binary_sensor.fan_remote_med
-    platform: device
-    type: turned_on
-  condition: []
-  action:
-  - data:
-      speed: medium
-    entity_id: fan.family_room_ceiling_fan
-    service: fan.set_speed
-- id: '1562958094562'
-  alias: Family Room Ceiling Fan Remote Low
-  trigger:
-  - device_id: 46b35f49b60e40bdb51cb453517d898c
-    domain: binary_sensor
-    entity_id: binary_sensor.fan_remote_low
-    platform: device
-    type: turned_on
-  condition: []
-  action:
-  - data:
-      speed: low
-    entity_id: fan.family_room_ceiling_fan
-    service: fan.set_speed
 - id: '1563648409962'
   alias: Security Arm Night
   trigger:
@@ -335,8 +309,10 @@
     state: disarmed
   action:
   - data: {}
-    entity_id: alarm_control_panel.3629_alarm
     service: alarm_control_panel.alarm_arm_night
+    target:
+      entity_id: alarm_control_panel.3629_alarm
+  mode: single
 - id: '1563648489927'
   alias: Security Disarm Home Morning
   trigger:
@@ -351,8 +327,10 @@
     state: armed_night
   action:
   - data: {}
-    entity_id: alarm_control_panel.3629_alarm
     service: alarm_control_panel.alarm_disarm
+    target:
+      entity_id: alarm_control_panel.3629_alarm
+  mode: single
 - id: '1563648590512'
   alias: Security Arm Away
   trigger:
@@ -363,8 +341,9 @@
   condition: []
   action:
   - data: {}
-    entity_id: alarm_control_panel.3629_alarm
     service: alarm_control_panel.alarm_arm_away
+    target:
+      entity_id: alarm_control_panel.3629_alarm
   mode: single
 - id: '1563648678608'
   alias: Security Disarm Return Home
@@ -376,8 +355,10 @@
   condition: []
   action:
   - data: {}
-    entity_id: alarm_control_panel.3629_alarm
     service: alarm_control_panel.alarm_disarm
+    target:
+      entity_id: alarm_control_panel.3629_alarm
+  mode: single
 - id: '1572629564877'
   alias: Security Notify Front Door Opened
   description: ''
@@ -391,10 +372,11 @@
     entity_id: alarm_control_panel.3629_alarm
     state: armed_away
   action:
-  - data:
+  - service: notify.notify
+    data:
       message: The front door has been open for more than one minute
       title: Front Door Opened
-    service: notify.hangouts_notify
+  mode: single
 - id: '1572629774481'
   alias: Security Notify Back Door Opened
   description: ''
@@ -408,10 +390,11 @@
     entity_id: alarm_control_panel.3629_alarm
     state: armed_away
   action:
-  - data:
-      message: The back door has been open for more than one minute
+  - service: notify.notify
+    data:
+      message: The back door has been opened for more than one minute
       title: Back Door Opened
-    service: notify.hangouts_notify
+  mode: single
 - id: '1572629944102'
   alias: Security Notify Garage Door Opened
   description: ''
@@ -424,10 +407,11 @@
     entity_id: alarm_control_panel.3629_alarm
     state: armed_away
   action:
-  - data:
+  - service: notify.notify
+    data:
       message: The garage door has been open for more than one minute
       title: Garage Door Opened
-    service: notify.hangouts_notify
+  mode: single
 - id: '1572630307272'
   alias: Security Notify Family Room Motion
   description: ''
@@ -441,10 +425,11 @@
     entity_id: alarm_control_panel.3629_alarm
     state: armed_away
   action:
-  - data:
+  - service: notify.notify
+    data:
       message: Motion has been detected in the Family Room
       title: Family Room Motion Detected
-    service: notify.hangouts_notify
+  mode: single
 - id: '1572630414451'
   alias: Security Notify Main Bedroom Motion
   description: ''
@@ -457,10 +442,11 @@
     entity_id: alarm_control_panel.3629_alarm
     state: armed_away
   action:
-  - data:
+  - service: notify.notify
+    data:
       message: Motion has been detected in the Main Bedroom
       title: Main Bedroom Motion Detected
-    service: notify.hangouts_notify
+  mode: single
 - id: '1572631200037'
   alias: Notify Temperature Low Office
   description: ''
@@ -513,8 +499,10 @@
     to: 'on'
   condition: []
   action:
-  - entity_id: switch.garage_latch
-    service: switch.turn_off
+  - type: turn_off
+    device_id: 7ec89b1bd00d47248701a5eedbf3a331
+    entity_id: switch.garage_latch
+    domain: switch
   mode: single
 - id: '1578620613401'
   alias: Humidifier off above set point
@@ -587,10 +575,6 @@
     data:
       temperature: 70
     entity_id: climate.thermostat
-  - type: turn_on
-    device_id: 9536dc3f7ae24ca4becaa28866474d00
-    entity_id: switch.back_outdoor_xmas_lights
-    domain: switch
   mode: single
 - id: '1581601374878'
   alias: Humidifier off at 21:00
@@ -733,20 +717,7 @@
       keep_days: 1
       repack: true
     service: recorder.purge
-- id: '1587480575094'
-  alias: Family Room Ceiling Fan Remote Light
-  description: ''
-  trigger:
-  - device_id: 46b35f49b60e40bdb51cb453517d898c
-    domain: binary_sensor
-    entity_id: binary_sensor.fan_remote_light
-    platform: device
-    type: turned_on
-  condition: []
-  action:
-  - data: {}
-    entity_id: switch.family_room_ceiling_fan_light
-    service: switch.toggle
+  mode: single
 - id: '1589219972504'
   alias: Notify Fire Downstairs
   description: ''
@@ -885,34 +856,6 @@
       title: Upstairs Smoke Alarm Battery Low
     service: notify.notify
   mode: single
-- id: '1589562649239'
-  alias: Living Room Blinds Remote Open
-  description: ''
-  trigger:
-  - device_id: 46b35f49b60e40bdb51cb453517d898c
-    domain: binary_sensor
-    entity_id: binary_sensor.fan_remote_4h
-    platform: device
-    type: turned_on
-  condition: []
-  action:
-  - data: {}
-    entity_id: cover.living_room_blinds
-    service: cover.open_cover_tilt
-- id: '1589563247159'
-  alias: Living Room Blinds Remote Close
-  description: ''
-  trigger:
-  - device_id: 46b35f49b60e40bdb51cb453517d898c
-    domain: binary_sensor
-    entity_id: binary_sensor.fan_remote_8h
-    platform: device
-    type: turned_on
-  condition: []
-  action:
-  - data: {}
-    entity_id: cover.living_room_blinds
-    service: cover.close_cover_tilt
 - id: '1589565473182'
   alias: Notify Battery Low Family Room Smoke Alarm
   description: ''
@@ -958,24 +901,11 @@
       ''timestamp'') | timestamp_custom(''%H:%M'', False) }}'
   condition: []
   action:
-  - data: {}
+  - device_id: f743120b85da4c02b68c18c65965b2c3
+    domain: fan
     entity_id: fan.family_room_ceiling_fan
-    service: fan.turn_off
-- id: '1594043498917'
-  alias: Living Room Blinds Remote 100%
-  description: ''
-  trigger:
-  - device_id: 46b35f49b60e40bdb51cb453517d898c
-    domain: binary_sensor
-    entity_id: binary_sensor.fan_remote_2h
-    platform: device
-    type: turned_on
-  condition: []
-  action:
-  - data:
-      tilt_position: 100
-    entity_id: cover.living_room_blinds
-    service: cover.set_cover_tilt_position
+    type: turn_off
+  mode: single
 - id: '1608157965895'
   alias: Xmas lights on at dusk
   description: ''
@@ -1124,6 +1054,7 @@
     data:
       title: HA Has Stopped
       Message: HA has stopped
+      message: HA Has Stopped
   mode: single
 - id: '1613156571890'
   alias: Notify HA Started
@@ -1150,16 +1081,13 @@
   action:
   - service: automation.turn_on
     data: {}
-    entity_id: automation.xmas_lights_off_after_sunrise
-  - service: automation.turn_on
-    data: {}
-    entity_id: automation.xmas_lights_off_at_11_00_pm
-  - service: automation.turn_on
-    data: {}
-    entity_id: automation.xmas_lights_on_at_05_00_am
-  - service: automation.turn_on
-    data: {}
-    entity_id: automation.xmas_lights_on_at_dusk
+    target:
+      entity_id:
+      - automation.xmas_lights_off_after_sunrise
+      - automation.xmas_lights_off_at_11_00_pm
+      - automation.xmas_lights_on_at_05_00_am
+      - automation.xmas_lights_on_at_dusk
+      - automation.xmas_lights_work_morning
   mode: single
 - id: '1613235512761'
   alias: Xmas Season End
@@ -1173,25 +1101,11 @@
   action:
   - service: automation.turn_off
     data: {}
-    entity_id: automation.xmas_lights_on_at_05_00_am
-  - service: automation.turn_off
-    data: {}
-    entity_id: automation.xmas_lights_on_at_dusk
-  mode: single
-- id: '1613262858760'
-  alias: Make Site
-  description: ''
-  trigger:
-  - platform: time
-    at: 00:25:00
-  condition:
-  - condition: time
-    after: 00:00:00
-    before: 01:00:00
-  action:
-  - service: hassio.addon_start
-    data:
-      addon: d73562e8_make_site
+    target:
+      entity_id:
+      - automation.xmas_lights_on_at_05_00_am
+      - automation.xmas_lights_on_at_dusk
+      - automation.xmas_lights_work_morning
   mode: single
 - id: '1615489626883'
   alias: IKEA Switch 2 On
@@ -1433,4 +1347,19 @@
     device_id: 2f410060429a42f78888722f30b8959c
     entity_id: light.bedside_lamp_bulb
     domain: light
+  mode: single
+- id: '1615904968574'
+  alias: Xmas Lights Work Morning
+  description: ''
+  trigger:
+  - at: 04:00:00
+    platform: time
+  condition:
+  - condition: template
+    value_template: '{{ is_state_attr(''calendar.susan'', ''message'', ''Work'') }}'
+  - condition: template
+    value_template: '{{ is_state_attr(''calendar.susan'', ''start_time'', as_timestamp(now())
+      | timestamp_custom(''%Y-%m-%d'') ~ '' 06:00:00'') }}'
+  action:
+  - service: script.turn_on_xmas_lights
   mode: single
