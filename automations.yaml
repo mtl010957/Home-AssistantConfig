@@ -1131,14 +1131,31 @@
     subtype: turn_on
   condition: []
   action:
-  - type: turn_on
-    device_id: 9536dc3f7ae24ca4becaa28866474d00
-    entity_id: switch.back_outdoor_xmas_lights
-    domain: switch
-  - type: turn_on
-    device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
-    entity_id: switch.front_outdoor_xmas_lights
-    domain: switch
+  - device_id: 4565c2edfb9842a1896dd5139be87fe1
+    domain: cover
+    entity_id: cover.family_room_nwsw_blinds
+    type: set_tilt_position
+    position: 60
+  - device_id: 3f2e1d3be7a049f08d4d1bfe39c87fc4
+    domain: cover
+    entity_id: cover.family_room_sene_blinds
+    type: set_tilt_position
+    position: 60
+  - device_id: 6792d04f64544b2f96bf1ba9855e2e5b
+    domain: cover
+    entity_id: cover.family_room_sesw_blinds
+    type: set_tilt_position
+    position: 60
+  - device_id: 01b25cc1a9ff49c997bcd154e5b683f8
+    domain: cover
+    entity_id: cover.family_room_swnw_blinds
+    type: set_tilt_position
+    position: 60
+  - device_id: 2bab1b706cff40359bbe36c356ee18d8
+    domain: cover
+    entity_id: cover.family_room_swse_blinds
+    type: set_tilt_position
+    position: 60
   mode: single
 - id: '1615489724866'
   alias: IKEA Switch 2 Off
@@ -1151,14 +1168,31 @@
     subtype: turn_off
   condition: []
   action:
-  - type: turn_off
-    device_id: 9536dc3f7ae24ca4becaa28866474d00
-    entity_id: switch.back_outdoor_xmas_lights
-    domain: switch
-  - type: turn_off
-    device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
-    entity_id: switch.front_outdoor_xmas_lights
-    domain: switch
+  - device_id: 4565c2edfb9842a1896dd5139be87fe1
+    domain: cover
+    entity_id: cover.family_room_nwsw_blinds
+    type: set_tilt_position
+    position: 5
+  - device_id: 3f2e1d3be7a049f08d4d1bfe39c87fc4
+    domain: cover
+    entity_id: cover.family_room_sene_blinds
+    type: set_tilt_position
+    position: 5
+  - device_id: 6792d04f64544b2f96bf1ba9855e2e5b
+    domain: cover
+    entity_id: cover.family_room_sesw_blinds
+    type: set_tilt_position
+    position: 5
+  - device_id: 01b25cc1a9ff49c997bcd154e5b683f8
+    domain: cover
+    entity_id: cover.family_room_swnw_blinds
+    type: set_tilt_position
+    position: 5
+  - device_id: 2bab1b706cff40359bbe36c356ee18d8
+    domain: cover
+    entity_id: cover.family_room_swse_blinds
+    type: set_tilt_position
+    position: 5
   mode: single
 - id: '1615489889198'
   alias: IKEA Switch 1 On
