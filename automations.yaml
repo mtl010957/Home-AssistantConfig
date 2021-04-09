@@ -29,7 +29,6 @@
       - switch.foscam_cam2_motion
       - switch.foscam_cam3_motion
       - switch.generic_cam4_motion
-      - switch.front_yard_light
   mode: single
 - id: '1500947016399'
   alias: Camera Motion and Floods On Armed Night
