@@ -21,6 +21,7 @@ include:
     - binary_sensor.updater
     - binary_sensor.upstairs_co_detected
     - binary_sensor.upstairs_smoke_detected
+    - binary_sensor.rpi_power_status
     # climate
     - climate.thermostat
     # covers
