@@ -93,6 +93,9 @@ include:
     - sensor.family_room_swse_light_sensor
     - sensor.living_room_nw_ctr_light_sensor
     - sensor.living_room_se_ctr_light_sensor
+    - sensor.desert_living_room_temperature
+    - sensor.desert_living_room_humidity
+    - sensor.desert_corrected_barometer_inhg
     # switches
     - switch.family_room_ceiling_fan_light
     - switch.living_room_lamp_module
