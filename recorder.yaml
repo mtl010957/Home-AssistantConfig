@@ -52,6 +52,7 @@ include:
     - light.guest_room_lamp_bulb
     - light.office_light_bulb
     - light.living_room_lamp_dimmer
+    - light.bedside_lamp_bulb
     - light.main_bedroom_nw_ceiling_lights
     - light.main_bedroom_se_ceiling_lights
     # persons
