@@ -97,6 +97,9 @@ include:
     - sensor.desert_living_room_temperature
     - sensor.desert_living_room_humidity
     - sensor.desert_corrected_barometer_inhg
+    - sensor.cam1_motion_detect
+    - sensor.cam2_motion_detect
+    - sensor.cam3_motion_detect
     # switches
     - switch.family_room_ceiling_fan_light
     - switch.living_room_lamp_module
