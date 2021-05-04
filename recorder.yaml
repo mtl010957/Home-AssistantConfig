@@ -113,6 +113,9 @@ include:
     - switch.back_outdoor_xmas_lights
     - switch.front_outdoor_xmas_lights
     - switch.hot_water_recirc
+    - switch.desert_desert_guest_room_desk_lamp
+    - switch.desert_desert_living_room_lamp
+    - switch.desert_desert_main_bedroom_lamp
     # weather
     - weather.kptk_hourly
 exclude:
