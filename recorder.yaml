@@ -27,6 +27,7 @@ include:
     # covers
     - cover.family_room_sene_blinds
     - cover.family_room_nwsw_blinds
+    - cover.family_room_nwne_blinds
     - cover.family_room_sesw_blinds
     - cover.family_room_swnw_blinds
     - cover.family_room_swse_blinds
