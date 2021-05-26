@@ -1,25 +1,8 @@
----
-# This automation makes the 2-button IKEA switch control cover tilt
-
-# | Button      | Action               |
-# | ----------- | -------------------  |
-# | on (short)  | Open the cover tilt  |
-# | off (short) | Close the cover tilt |
-# | on (long)   | Increase tilt angle  |
-# | off (long)  | Decrease tilt angle  |
-#
-# Based on https://github.com/niro1987/homeassistant-config/blob/master/blueprints/automation/niro1987/zha_ikea_tradfri_2button_remote_brightness.yaml
-
 blueprint:
-  source_url: https://github.com/
-  
+  source_url: https://github.com/mtl010957/Home-AssistantConfig/blob/master/blueprints/zha_ikea_2button_switch_cover_tilt.yaml
   name: ZHA - IKEA - 2 Button Remote - Cover Tilt Control
-
-  description: >-
-    This automation makes the 2-button IKEA remote control cover tilt.
-
+  description: This automation makes the 2-button IKEA remote control cover tilt.
   domain: automation
-
   input:
     remote:
       name: IKEA TRADFRI 2-button remote control
@@ -35,71 +18,81 @@ blueprint:
       selector:
         entity:
           domain: cover
-
+    loop_delay:
+      name: Loop Delay
+      description: Loop Delay in Milliseconds
+      default: 500
+      selector:
+        number:
+          min: 100
+          max: 1000
+          unit_of_measurement: milliseconds
+          mode: box
+          step: 100
+    step_size:
+      name: Step Size
+      description: Step Size for Cover Movement
+      default: 2
+      selector:
+        number:
+          min: 1
+          max: 10
+          mode: box
+          step: 1
 mode: restart
 max_exceeded: silent
-
+variables:
+  the_cover: !input 'cover'
+  steps: !input 'step_size'
 trigger:
-  - platform: event
-    event_type: zha_event
-    event_data:
-      device_id: !input remote
-
+- platform: event
+  event_type: zha_event
+  event_data:
+    device_id: !input 'remote'
 action:
-  - choose:
-      # Short-Press the on button
-      - conditions:
-          - condition: template
-            value_template: '{{ trigger.event.data.command == "on" }}'
+- choose:
+  - conditions:
+    - condition: template
+      value_template: '{{ trigger.event.data.command == "on" }}'
+    sequence:
+    - service: cover.open_cover_tilt
+      target:
+        entity_id: !input 'cover'
+  - conditions:
+    - condition: template
+      value_template: '{{ trigger.event.data.command == "move_with_on_off" }}'
+    sequence:
+    - repeat:
+        while: []
         sequence:
-          - service: cover.open_cover_tilt
-            target:
-              entity_id: !input cover
-
-      # Long-Press the on button
-      - conditions:
-          - condition: template
-            value_template: '{{ trigger.event.data.command == "move_with_on_off" }}'
+        - service: cover.set_cover_tilt_position
+          target:
+            entity_id: !input 'cover'
+          data:
+            tilt_position: '{{ state_attr(the_cover,"current_tilt_position") +
+              steps }}'
+        - delay:
+            milliseconds: !input 'loop_delay'
+  - conditions:
+    - condition: template
+      value_template: '{{ trigger.event.data.command == "off" }}'
+    sequence:
+    - service: cover.close_cover_tilt
+      target:
+        entity_id: !input 'cover'
+  - conditions:
+    - condition: template
+      value_template: '{{ trigger.event.data.command == "move" }}'
+    sequence:
+    - repeat:
+        while: []
         sequence:
-          - repeat:
-              while: []
-              sequence:
-                - service: cover.set_cover_tilt_position
-                  target:
-                    entity_id: !input cover
-                  data:
-                    tilt_position: >-
-                      {{ state_attr(!input cover,"current_tilt_position") + 1
-                      }}
-                - delay:
-                    milliseconds: 1000
-
-      # Short-Press the off button
-      - conditions:
-          - condition: template
-            value_template: '{{ trigger.event.data.command == "off" }}'
-        sequence:
-          - service: cover.close_cover_tilt
-            target:
-              entity_id: !input cover
-
-      # Long-Press the off button
-      - conditions:
-          - condition: template
-            value_template: '{{ trigger.event.data.command == "move" }}'
-        sequence:
-          - repeat:
-              while: []
-              sequence:
-                - service: cover.set_cover_tilt_position
-                  target:
-                    entity_id: !input cover
-                  data:
-                    tilt_position: >-
-                      {{ state_attr(!input cover,"current_tilt_position") - 1
-                      }}
-                - delay:
-                    milliseconds: 1000
-
-    # Any other event will cancel the repeat loops (i.e. releasing the [on|off] button)
-    default: []
+        - service: cover.set_cover_tilt_position
+          target:
+            entity_id: !input 'cover'
+          data:
+            tilt_position: '{{ state_attr(the_cover,"current_tilt_position") -
+              steps }}'
+        - delay:
+            milliseconds: !input 'loop_delay'
+  default: []
