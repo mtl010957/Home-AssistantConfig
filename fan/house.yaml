@@ -3,7 +3,6 @@
     house_fan:
       friendly_name: "House Fan"
       value_template: "{{ states('switch.house_fan_switch_module_switch') }}"
-      speeds: ["off","low","high"]
       turn_on:
         service: switch.turn_on
         data:
