@@ -574,19 +574,21 @@
     data:
       temperature: 70
     entity_id: climate.thermostat
-  - type: turn_on
-    device_id: 5cb0866abc084bd9aa75cb01a36d94b1
-    entity_id: switch.hot_water_recirc
-    domain: switch
+  - device_id: a77074c758856cfb06fbcf0eef68c72a
+    domain: climate
+    entity_id: climate.hot_water_recirc_control_setting
+    type: set_hvac_mode
+    hvac_mode: auto
   - delay:
       hours: 0
       minutes: 10
       seconds: 0
       milliseconds: 0
-  - type: turn_off
-    device_id: 5cb0866abc084bd9aa75cb01a36d94b1
-    entity_id: switch.hot_water_recirc
-    domain: switch
+  - device_id: a77074c758856cfb06fbcf0eef68c72a
+    domain: climate
+    entity_id: climate.hot_water_recirc_control_setting
+    type: set_hvac_mode
+    hvac_mode: 'off'
   mode: single
 - id: '1581601374878'
   alias: Humidifier off at 21:00
@@ -1346,19 +1348,21 @@
     entity_id: group.family
     state: home
   action:
-  - type: turn_on
-    device_id: 5cb0866abc084bd9aa75cb01a36d94b1
-    entity_id: switch.hot_water_recirc
-    domain: switch
+  - device_id: a77074c758856cfb06fbcf0eef68c72a
+    domain: climate
+    entity_id: climate.hot_water_recirc_control_setting
+    type: set_hvac_mode
+    hvac_mode: auto
   - delay:
       hours: 0
       minutes: 10
       seconds: 0
       milliseconds: 0
-  - type: turn_off
-    device_id: 5cb0866abc084bd9aa75cb01a36d94b1
-    entity_id: switch.hot_water_recirc
-    domain: switch
+  - device_id: a77074c758856cfb06fbcf0eef68c72a
+    domain: climate
+    entity_id: climate.hot_water_recirc_control_setting
+    type: set_hvac_mode
+    hvac_mode: 'off'
   mode: single
 - id: '1622043871309'
   alias: IKEA Switch 2 NW-NE
