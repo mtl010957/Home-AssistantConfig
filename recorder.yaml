@@ -25,6 +25,7 @@ include:
     - binary_sensor.desert_rpi_power_status
     # climate
     - climate.thermostat
+    - climate.hot_water_recirc_control_setting
     # covers
     - cover.family_room_sene_blinds
     - cover.family_room_nwsw_blinds
@@ -102,6 +103,7 @@ include:
     - sensor.cam1_motion_detect
     - sensor.cam2_motion_detect
     - sensor.cam3_motion_detect
+    - sensor.hot_water_recirc_control_temperature
     # switches
     - switch.family_room_ceiling_fan_light
     - switch.living_room_lamp_module
@@ -114,10 +116,10 @@ include:
     - switch.irrigation_control_front_yard
     - switch.back_outdoor_xmas_lights
     - switch.front_outdoor_xmas_lights
-    - switch.hot_water_recirc
     - switch.desert_desert_guest_room_desk_lamp
     - switch.desert_desert_living_room_lamp
     - switch.desert_desert_main_bedroom_lamp
+    - switch.hot_water_recirc_control_relay
     # weather
     - weather.kptk_hourly
 exclude:
