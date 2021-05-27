@@ -1361,11 +1361,56 @@
     domain: switch
   mode: single
 - id: '1622043871309'
-  alias: IKEA Switch 2 Cover Control
+  alias: IKEA Switch 2 NW-NE
   description: ''
   use_blueprint:
     path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
     input:
       remote: 4658744562af10ebb6d6f1439997bbbb
       cover: cover.family_room_nwne_blinds
+      loop_delay: 700
+- id: '1622125330280'
+  alias: IKEA Switch 2 SW-SE
+  description: ''
+  use_blueprint:
+    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
+    input:
+      remote: 4658744562af10ebb6d6f1439997bbbb
+      cover: cover.family_room_swse_blinds
+      loop_delay: 700
+- id: '1622125358509'
+  alias: IKEA Switch 2 SW-NW
+  description: ''
+  use_blueprint:
+    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
+    input:
+      remote: 4658744562af10ebb6d6f1439997bbbb
+      cover: cover.family_room_swnw_blinds
+      loop_delay: 700
+- id: '1622125386859'
+  alias: IKEA Switch 2 SE-SW
+  description: ''
+  use_blueprint:
+    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
+    input:
+      remote: 4658744562af10ebb6d6f1439997bbbb
+      cover: cover.family_room_sesw_blinds
+      loop_delay: 700
+- id: '1622125566865'
+  alias: IKEA Switch 2 SE-NE
+  description: ''
+  use_blueprint:
+    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
+    input:
+      remote: 4658744562af10ebb6d6f1439997bbbb
+      cover: cover.family_room_sene_blinds
+      loop_delay: 700
+- id: '1622125617532'
+  alias: IKEA Switch 2 NW-SW
+  description: ''
+  use_blueprint:
+    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
+    input:
+      remote: 4658744562af10ebb6d6f1439997bbbb
+      cover: cover.family_room_nwsw_blinds
       loop_delay: 700
