@@ -2,6 +2,8 @@
   name: Work Morning
   entities:
     light.family_room_sene_blinds_blue_led:
+      supported_color_modes:
+      - brightness
       friendly_name: Family Room SE-NE Blinds Blue LED
       supported_features: 41
       state: 'off'
@@ -16,6 +18,8 @@
       device_class: shutter
       state: open
     light.family_room_nwsw_blinds_blue_led:
+      supported_color_modes:
+      - brightness
       friendly_name: Family Room NW-SW Blinds Blue LED
       supported_features: 41
       state: 'off'
@@ -30,6 +34,8 @@
       icon: mdi:restart
       state: 'off'
     light.family_room_sesw_blinds_blue_led:
+      supported_color_modes:
+      - brightness
       friendly_name: Family Room SE-SW Blinds Blue LED
       supported_features: 41
       state: 'off'
@@ -44,6 +50,8 @@
       device_class: shutter
       state: open
     light.family_room_swnw_blinds_blue_led:
+      supported_color_modes:
+      - brightness
       friendly_name: Family Room SW-NW Blinds Blue LED
       supported_features: 41
       state: 'off'
@@ -58,6 +66,8 @@
       device_class: shutter
       state: open
     light.family_room_swse_blinds_blue_led:
+      supported_color_modes:
+      - brightness
       friendly_name: Family Room SW-SE Blinds Blue LED
       supported_features: 41
       state: 'off'
@@ -78,6 +88,8 @@
       device_class: shutter
       state: open
     light.living_room_nw_blinds_blue_led:
+      supported_color_modes:
+      - brightness
       friendly_name: Living Room NW Blinds Blue LED
       supported_features: 41
       state: 'off'
@@ -86,6 +98,8 @@
       icon: mdi:restart
       state: 'off'
     light.living_room_se_blinds_blue_led:
+      supported_color_modes:
+      - brightness
       friendly_name: Living Room SE Blinds Blue LED
       supported_features: 41
       state: 'off'
@@ -106,6 +120,8 @@
       device_class: shutter
       state: open
     light.living_room_ctr_blinds_blue_led:
+      supported_color_modes:
+      - brightness
       friendly_name: Living Room CTR Blinds Blue LED
       supported_features: 41
       state: 'off'
@@ -114,6 +130,8 @@
       icon: mdi:restart
       state: 'off'
     light.living_room_nw_ctr_blinds_blue_led:
+      supported_color_modes:
+      - brightness
       friendly_name: Living Room NW CTR Blinds Blue LED
       supported_features: 41
       state: 'off'
@@ -128,6 +146,8 @@
       device_class: shutter
       state: open
     light.living_room_se_ctr_blinds_blue_led:
+      supported_color_modes:
+      - brightness
       friendly_name: Living Room SE CTR Blinds Blue LED
       supported_features: 41
       state: 'off'
@@ -142,6 +162,8 @@
       device_class: shutter
       state: open
     light.front_yard_light_green_led:
+      supported_color_modes:
+      - brightness
       friendly_name: Front Yard Light Green LED
       supported_features: 41
       state: 'off'
@@ -152,4 +174,11 @@
     switch.front_yard_light:
       friendly_name: Front Yard Light
       state: 'off'
+    alarm_control_panel.3629_alarm:
+      code_format:
+      changed_by:
+      code_arm_required: true
+      friendly_name: 3629 Alarm
+      supported_features: 31
+      state: disarmed
   icon: mdi:hospital-building

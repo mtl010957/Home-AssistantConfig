@@ -31,25 +31,13 @@
       - switch.generic_cam4_motion
   mode: single
 - id: '1500947016399'
-  alias: Camera Motion and Floods On Armed Night
+  alias: Camera Motion and Floods On Armed Night or Home
   trigger:
   - entity_id: alarm_control_panel.3629_alarm
     platform: state
     to: armed_night
-  action:
-  - service: switch.turn_on
-    data: {}
-    target:
-      entity_id:
-      - switch.foscam_cam1_motion
-      - switch.foscam_cam2_motion
-      - switch.front_yard_light
-  mode: single
-- id: '1500947000000'
-  alias: Camera Motion On Armed Home
-  trigger:
-  - entity_id: alarm_control_panel.3629_alarm
-    platform: state
+  - platform: state
+    entity_id: alarm_control_panel.3629_alarm
     to: armed_home
   action:
   - service: switch.turn_on
@@ -58,6 +46,7 @@
       entity_id:
       - switch.foscam_cam1_motion
       - switch.foscam_cam2_motion
+      - switch.front_yard_light
   mode: single
 - id: '1500948466889'
   alias: Camera Motion and Floods Off Disarmed
@@ -174,20 +163,8 @@
     entity_id: switch.irrigation_control_front_yard
     domain: switch
   mode: single
-- id: '1545515732471'
-  alias: Front Yard Light on at 11:00 PM
-  trigger:
-  - at: '23:00'
-    platform: time
-  condition: []
-  action:
-  - type: turn_on
-    device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: switch.front_yard_light
-    domain: switch
-  mode: single
 - id: '1545515874358'
-  alias: Front Yard Light off 30 min before sunrise
+  alias: Floods off 30 min before sunrise
   trigger:
   - platform: sun
     event: sunrise
@@ -367,9 +344,17 @@
     platform: state
     to: open
   condition:
-  - condition: state
-    entity_id: alarm_control_panel.3629_alarm
-    state: armed_away
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: alarm_control_panel.3629_alarm
+      state: armed_away
+    - condition: state
+      entity_id: alarm_control_panel.3629_alarm
+      state: armed_home
+    - condition: state
+      entity_id: alarm_control_panel.3629_alarm
+      state: armed_night
   action:
   - service: notify.notify
     data:
@@ -385,9 +370,17 @@
     platform: state
     to: open
   condition:
-  - condition: state
-    entity_id: alarm_control_panel.3629_alarm
-    state: armed_away
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: alarm_control_panel.3629_alarm
+      state: armed_away
+    - condition: state
+      entity_id: alarm_control_panel.3629_alarm
+      state: armed_home
+    - condition: state
+      entity_id: alarm_control_panel.3629_alarm
+      state: armed_night
   action:
   - service: notify.notify
     data:
@@ -402,9 +395,17 @@
     platform: state
     to: open
   condition:
-  - condition: state
-    entity_id: alarm_control_panel.3629_alarm
-    state: armed_away
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: alarm_control_panel.3629_alarm
+      state: armed_away
+    - condition: state
+      entity_id: alarm_control_panel.3629_alarm
+      state: armed_home
+    - condition: state
+      entity_id: alarm_control_panel.3629_alarm
+      state: armed_night
   action:
   - service: notify.notify
     data:
@@ -549,7 +550,7 @@
     domain: switch
   mode: single
 - id: '1581437260727'
-  alias: Work Morning Fall-Winter
+  alias: Work Morning Fall-Winter-Spring
   description: ''
   trigger:
   - at: 04:00:00
@@ -568,6 +569,9 @@
     - condition: state
       entity_id: sensor.season
       state: winter
+    - condition: state
+      entity_id: sensor.season
+      state: spring
   action:
   - scene: scene.work_morning
   - service: climate.set_temperature
@@ -981,7 +985,7 @@
       media_content_type: music
   mode: single
 - id: '1609622832605'
-  alias: Work Morning Spring-Summer
+  alias: Work Morning Summer
   description: ''
   trigger:
   - at: 04:00:00
@@ -992,14 +996,9 @@
   - condition: template
     value_template: '{{ is_state_attr(''calendar.susan'', ''start_time'', as_timestamp(now())
       | timestamp_custom(''%Y-%m-%d'') ~ '' 06:00:00'') }}'
-  - condition: or
-    conditions:
-    - condition: state
-      entity_id: sensor.season
-      state: spring
-    - condition: state
-      entity_id: sensor.season
-      state: summer
+  - condition: state
+    entity_id: sensor.season
+    state: summer
   action:
   - scene: scene.work_morning
   mode: single
@@ -1055,20 +1054,6 @@
     data:
       title: Humidifier Water
       message: Humidifier is out of water.
-  mode: single
-- id: '1613156506603'
-  alias: Notify HA Stopped
-  description: ''
-  trigger:
-  - platform: homeassistant
-    event: shutdown
-  condition: []
-  action:
-  - service: notify.notify
-    data:
-      title: HA Has Stopped
-      Message: HA has stopped
-      message: HA Has Stopped
   mode: single
 - id: '1613156571890'
   alias: Notify HA Started
@@ -1182,10 +1167,10 @@
   condition: []
   action:
   - service: fan.set_speed
-    data:
-      speed: medium
     target:
       device_id: f743120b85da4c02b68c18c65965b2c3
+    data:
+      speed: medium
   mode: single
 - id: '1615490288906'
   alias: IKEA Remote 1 Dim Down
@@ -1199,10 +1184,10 @@
   condition: []
   action:
   - service: fan.set_speed
-    data:
-      speed: 'off'
     target:
       device_id: f743120b85da4c02b68c18c65965b2c3
+    data:
+      speed: 'off'
   mode: single
 - id: '1615490343030'
   alias: IKEA Remote 1 Left
@@ -1338,7 +1323,7 @@
   - service: script.turn_on_xmas_lights
   mode: single
 - id: '1615923844588'
-  alias: Hot Water Recirc morning when Home
+  alias: Hot Water Recirc Morning Home
   description: ''
   trigger:
   - platform: time
@@ -1418,3 +1403,28 @@
       remote: 4658744562af10ebb6d6f1439997bbbb
       cover: cover.family_room_nwsw_blinds
       loop_delay: 700
+- id: '1622210603950'
+  alias: Security Notify Garage Inside Door Opened
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.garage_inside_door_sensor
+    platform: state
+    to: open
+  condition:
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: alarm_control_panel.3629_alarm
+      state: armed_away
+    - condition: state
+      entity_id: alarm_control_panel.3629_alarm
+      state: armed_home
+    - condition: state
+      entity_id: alarm_control_panel.3629_alarm
+      state: armed_night
+  action:
+  - service: notify.notify
+    data:
+      message: The garage inside door has been open for more than one minute
+      title: Garage Inside Door Opened
+  mode: single

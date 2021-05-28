@@ -37,7 +37,7 @@ security_lighting_on:
     domain: light
     brightness_pct: 100
   mode: single
-  icon: mdi:spotlight-beam
+  icon: mdi:lightbulb
 security_lighting_off:
   alias: Security Lighting Off
   sequence:
@@ -65,7 +65,7 @@ security_lighting_off:
     entity_id: light.bedside_lamp_bulb
     domain: light
   mode: single
-  icon: mdi:spotlight-beam
+  icon: mdi:lightbulb
 irrigation_zone_1_run:
   alias: Irrigation Zone 1 Run
   sequence:
@@ -124,12 +124,3 @@ turn_off_xmas_lights:
     domain: switch
   mode: single
   icon: mdi:string-lights
-increase_family_room_blinds_tilt_by_1:
-  alias: Increase Family Room Blinds Tilt By 1
-  sequence:
-  - service: cover.set_cover_tilt_position
-    entity_id: cover.family_room_nwne_blinds
-    data:
-      tilt_position: '{{ state_attr("cover.family_room_nwne_blinds","current_tilt_position")
-        + 1 }}'
-  mode: single
