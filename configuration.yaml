@@ -47,6 +47,8 @@ fan: !include_dir_merge_list fan
 # Hangouts Notifications
 notify: !include notify.yaml
 
+number: !include_dir_merge_list number
+
 sensor: !include_dir_merge_list sensor
 
 switch: !include_dir_merge_list switch
