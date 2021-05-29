@@ -1,5 +1,5 @@
 - platform: mqtt
-  name: "DM06_REB1 Rotary Encoder Setting"
+  name: "Living Room Blinds Manual Control Rotary Encoder Setting"
   command_topic: "dm06_reb1/sensor/dm06_reb1_set_rotary_encoder/command"
   state_topic: "dm06_reb1/sensor/dm06_reb1_set_rotary_encoder/state"
   retain: true
