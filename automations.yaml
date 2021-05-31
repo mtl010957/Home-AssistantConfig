@@ -179,10 +179,22 @@
 - id: '1548612260526'
   alias: Irrigation Enable
   trigger:
-  - platform: template
-    value_template: '{{ now().month > 4 and now().month < 9 and states(''sensor.precipitation_probability_today'')
-      | int < states(''input_number.irrigation_enable_below_precip'') | int }}'
-  condition: []
+  - platform: time_pattern
+    minutes: /5
+    hours: '*'
+    seconds: '0'
+  condition:
+  - condition: template
+    value_template: '{{ states(''sensor.precipitation_probability_today'') | int <
+      states(''input_number.irrigation_enable_below_precip'') | int }}'
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: sensor.season
+      state: spring
+    - condition: state
+      entity_id: sensor.season
+      state: summer
   action:
   - device_id: 57673a6ec02649a3a76d73e5d17ca744
     domain: switch
@@ -192,10 +204,14 @@
 - id: '1548612882816'
   alias: Irrigation Disable
   trigger:
-  - platform: template
-    value_template: '{{ (now().month <= 4 or now().month >=9) or states(''sensor.precipitation_probability_today'')
-      | int >= states(''input_number.irrigation_enable_below_precip'') | int }}'
-  condition: []
+  - platform: time_pattern
+    hours: '*'
+    minutes: /5
+    seconds: '30'
+  condition:
+  - condition: template
+    value_template: '{{ states(''sensor.precipitation_probability_today'') | int >=
+      states(''input_number.irrigation_enable_below_precip'') | int }}'
   action:
   - device_id: 57673a6ec02649a3a76d73e5d17ca744
     domain: switch
