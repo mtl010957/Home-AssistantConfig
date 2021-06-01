@@ -179,14 +179,10 @@
 - id: '1548612260526'
   alias: Irrigation Enable
   trigger:
-  - platform: time_pattern
-    minutes: /5
-    hours: '*'
-    seconds: '0'
-  condition:
-  - condition: template
+  - platform: template
     value_template: '{{ states(''sensor.precipitation_probability_today'') | int <
       states(''input_number.irrigation_enable_below_precip'') | int }}'
+  condition:
   - condition: or
     conditions:
     - condition: state
@@ -204,14 +200,10 @@
 - id: '1548612882816'
   alias: Irrigation Disable
   trigger:
-  - platform: time_pattern
-    hours: '*'
-    minutes: /5
-    seconds: '30'
-  condition:
-  - condition: template
+  - platform: template
     value_template: '{{ states(''sensor.precipitation_probability_today'') | int >=
       states(''input_number.irrigation_enable_below_precip'') | int }}'
+  condition: []
   action:
   - device_id: 57673a6ec02649a3a76d73e5d17ca744
     domain: switch
@@ -244,8 +236,20 @@
     state: home
   action:
   - data: {}
-    entity_id: all
     service: cover.open_cover_tilt
+    target:
+      device_id:
+      - 01b25cc1a9ff49c997bcd154e5b683f8
+      - 6792d04f64544b2f96bf1ba9855e2e5b
+      - 2bab1b706cff40359bbe36c356ee18d8
+      - 3f2e1d3be7a049f08d4d1bfe39c87fc4
+      - 4565c2edfb9842a1896dd5139be87fe1
+      - 1db5ad540690ccb5876fb4ceb1907912
+      - abf3c9fea2e9422482ebac790b87643b
+      - afeedf06916c460680efcd14027f18af
+      - 28c408aeffa1431ab8135271d9e05835
+      - 800d8ada96f04f2e95461f3f93c6d3a8
+      - e0df26504d514ce2ae20e20ce379cd99
   mode: single
 - id: '1552245394001'
   alias: Blinds Close at 11:00 PM
@@ -255,8 +259,20 @@
   condition: []
   action:
   - data: {}
-    entity_id: all
     service: cover.close_cover_tilt
+    target:
+      device_id:
+      - 01b25cc1a9ff49c997bcd154e5b683f8
+      - 6792d04f64544b2f96bf1ba9855e2e5b
+      - 2bab1b706cff40359bbe36c356ee18d8
+      - 3f2e1d3be7a049f08d4d1bfe39c87fc4
+      - 4565c2edfb9842a1896dd5139be87fe1
+      - 1db5ad540690ccb5876fb4ceb1907912
+      - abf3c9fea2e9422482ebac790b87643b
+      - afeedf06916c460680efcd14027f18af
+      - 28c408aeffa1431ab8135271d9e05835
+      - 800d8ada96f04f2e95461f3f93c6d3a8
+      - e0df26504d514ce2ae20e20ce379cd99
   mode: single
 - id: '1560461893289'
   alias: Security Lighting On Close Blinds
@@ -710,6 +726,16 @@
     device_id: 653b58242ddd475fa47b906fdc469822
     entity_id: binary_sensor.garage_inside_door_sensor
     domain: binary_sensor
+  - type: no_motion
+    platform: device
+    device_id: 0297d19b6ceb409693273a05449045dc
+    entity_id: binary_sensor.garage_motion
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 25
+      milliseconds: 0
   condition:
   - type: is_no_motion
     condition: device
@@ -923,8 +949,20 @@
     state: armed_away
   action:
   - data: {}
-    entity_id: all
     service: cover.open_cover_tilt
+    target:
+      device_id:
+      - abf3c9fea2e9422482ebac790b87643b
+      - afeedf06916c460680efcd14027f18af
+      - 28c408aeffa1431ab8135271d9e05835
+      - 800d8ada96f04f2e95461f3f93c6d3a8
+      - e0df26504d514ce2ae20e20ce379cd99
+      - 01b25cc1a9ff49c997bcd154e5b683f8
+      - 6792d04f64544b2f96bf1ba9855e2e5b
+      - 2bab1b706cff40359bbe36c356ee18d8
+      - 3f2e1d3be7a049f08d4d1bfe39c87fc4
+      - 4565c2edfb9842a1896dd5139be87fe1
+      - 1db5ad540690ccb5876fb4ceb1907912
   mode: single
 - id: '1591192185107'
   alias: Family Room Ceiling Fan Stop After Time
@@ -1456,7 +1494,7 @@
     for:
       hours: 0
       minutes: 0
-      seconds: 1
+      seconds: 0
       milliseconds: 0
   condition: []
   action:
@@ -1494,7 +1532,7 @@
     for:
       hours: 0
       minutes: 0
-      seconds: 3
+      seconds: 2
       milliseconds: 0
   condition: []
   action:
