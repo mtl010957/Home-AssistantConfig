@@ -733,8 +733,8 @@
     domain: binary_sensor
     for:
       hours: 0
-      minutes: 0
-      seconds: 25
+      minutes: 5
+      seconds: 0
       milliseconds: 0
   condition:
   - type: is_no_motion
@@ -744,8 +744,8 @@
     domain: binary_sensor
     for:
       hours: 0
-      minutes: 0
-      seconds: 25
+      minutes: 5
+      seconds: 0
       milliseconds: 0
   - type: is_off
     condition: device
