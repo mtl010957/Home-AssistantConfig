@@ -8,6 +8,7 @@
 !binary_sensor
 !blueprints
 !camera
+!climate
 !fan
 !input_number
 !light
