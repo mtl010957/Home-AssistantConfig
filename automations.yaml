@@ -1566,6 +1566,11 @@
     entity_id: sun.sun
     attribute: elevation
     below: '60'
+  - condition: numeric_state
+    entity_id: sun.sun
+    attribute: azimuth
+    above: '45'
+    below: '225'
   action:
   - service: cover.set_cover_tilt_position
     target:
