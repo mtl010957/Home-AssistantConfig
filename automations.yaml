@@ -1551,3 +1551,45 @@
       entity_id: number.living_room_blinds_manual_control_rotary_encoder_setting
       value: '{{ state_attr("cover.living_room_blinds","current_tilt_position") }}'
   mode: single
+- id: '1623681989728'
+  alias: SE Blinds follow morning sun elevation
+  description: ''
+  trigger:
+  - platform: time_pattern
+    minutes: /5
+    seconds: '0'
+    hours: '*'
+  condition:
+  - condition: sun
+    after: sunrise
+  - condition: numeric_state
+    entity_id: sun.sun
+    attribute: elevation
+    below: '60'
+  action:
+  - service: cover.set_cover_tilt_position
+    target:
+      device_id:
+      - 3f2e1d3be7a049f08d4d1bfe39c87fc4
+      - 6792d04f64544b2f96bf1ba9855e2e5b
+    data:
+      tilt_position: '{{ ( ( 90 - state_attr("sun.sun", "elevation") ) * 50 / 90 )
+        | round }}'
+  mode: single
+- id: '1623690279936'
+  alias: SE Blinds open after morning sun
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sun.sun
+    attribute: elevation
+    above: '60'
+    for: 00:02:00
+  condition: []
+  action:
+  - service: cover.open_cover_tilt
+    target:
+      device_id:
+      - 3f2e1d3be7a049f08d4d1bfe39c87fc4
+      - 6792d04f64544b2f96bf1ba9855e2e5b
+  mode: single
