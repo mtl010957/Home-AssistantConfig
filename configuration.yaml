@@ -10,6 +10,12 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 #history: !include history.yaml
 
+# Required http setup for reverse proxy
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 172.30.33.0/24  # Add the IP address of the proxy server
+    
 # Discover some devices automatically
 discovery:
 
