@@ -494,33 +494,36 @@
     service: notify.notify
   mode: single
 - id: '1572633741649'
-  alias: UPS Notify Offline
+  alias: Notify UPS On Battery
   description: ''
   trigger:
   - entity_id: sensor.ups_status
-    from: Online
     platform: state
-    to: Offline
+    to: On Battery Battery Discharging
   condition: []
   action:
-  - data:
-      message: The UPS has gone OFFLINE
-      title: UPS OFFLINE
-    service: notify.hangouts_notify
+  - service: notify.notify
+    data:
+      message: UPS is On Battery
+      title: UPS ON BATTERY
+  mode: single
 - id: '1572633832196'
-  alias: UPS Notify Online
+  alias: Notify UPS Online
   description: ''
   trigger:
   - entity_id: sensor.ups_status
-    from: Offline
     platform: state
     to: Online
+  - platform: state
+    entity_id: sensor.ups_status
+    to: Online Battery Charging
   condition: []
   action:
-  - data:
-      message: The UPS has come back ONLINE
+  - service: notify.notify
+    data:
+      message: The UPS is back Online
       title: UPS ONLINE
-    service: notify.hangouts_notify
+  mode: single
 - id: '1578535843455'
   alias: Garage latch off when door open
   description: ''
@@ -1597,4 +1600,16 @@
       device_id:
       - 3f2e1d3be7a049f08d4d1bfe39c87fc4
       - 6792d04f64544b2f96bf1ba9855e2e5b
+  mode: single
+- id: '1624070707135'
+  alias: Let's Encrypt Renewal
+  description: ''
+  trigger:
+  - platform: time
+    at: '3:20'
+  condition: []
+  action:
+  - service: hassio.addon_restart
+    data:
+      addon: core_letsencrypt
   mode: single
