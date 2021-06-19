@@ -91,6 +91,10 @@ include:
     - sensor.outdoor_temperature
     - sensor.ups_status
     - sensor.ups_input_voltage
+    - sensor.ups_battery_charge
+    - sensor.ups_d_status
+    - sensor.ups_d_input_voltage
+    - sensor.ups_d_battery_charge
     - sensor.upstairs_smoke_alarm_battery_level
     - sensor.ikea_of_sweden_tradfri_remote_control_239115fe_power
     - sensor.family_room_sene_light_sensor
