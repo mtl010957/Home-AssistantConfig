@@ -622,7 +622,7 @@
     domain: climate
     entity_id: climate.hot_water_recirc_control_setting
     type: set_hvac_mode
-    hvac_mode: auto
+    hvac_mode: heat_cool
   - delay:
       hours: 0
       minutes: 10
@@ -1051,6 +1051,21 @@
     state: summer
   action:
   - scene: scene.work_morning
+  - device_id: a77074c758856cfb06fbcf0eef68c72a
+    domain: climate
+    entity_id: climate.hot_water_recirc_control_setting
+    type: set_hvac_mode
+    hvac_mode: heat_cool
+  - delay:
+      hours: 0
+      minutes: 10
+      seconds: 0
+      milliseconds: 0
+  - device_id: a77074c758856cfb06fbcf0eef68c72a
+    domain: climate
+    entity_id: climate.hot_water_recirc_control_setting
+    type: set_hvac_mode
+    hvac_mode: 'off'
   mode: single
 - id: '1609723691654'
   alias: Tag Garage Latch is scanned
@@ -1387,7 +1402,7 @@
     domain: climate
     entity_id: climate.hot_water_recirc_control_setting
     type: set_hvac_mode
-    hvac_mode: auto
+    hvac_mode: heat_cool
   - delay:
       hours: 0
       minutes: 10
