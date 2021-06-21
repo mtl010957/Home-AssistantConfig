@@ -31,13 +31,13 @@
       device_class: problem
       value_template: >-
         {{ states("sensor.garage_door_sensor_alarm_level")|int == 255 and states("sensor.garage_door_sensor_burglar")|int == 3 }}
-    garage_in_door:
-      friendly_name: Garage In Door
+    garage_inside_door:
+      friendly_name: Garage Inside Door
       device_class: door
       value_template: >-
         {{ states("sensor.garage_inside_door_sensor_alarm_level")|int == 255 and states("sensor.garage_inside_door_sensor_burglar")|int == 2 }}
-    garage_in_door_tamper:
-      friendly_name: Garage In Door Tamper
+    garage_inside_door_tamper:
+      friendly_name: Garage Inside Door Tamper
       device_class: problem
       value_template: >-
         {{ states("sensor.garage_inside_door_sensor_alarm_level")|int == 255 and states("sensor.garage_inside_door_sensor_burglar")|int == 3 }}

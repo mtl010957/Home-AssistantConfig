@@ -371,10 +371,11 @@
   alias: Security Notify Front Door Opened
   description: ''
   trigger:
-  - entity_id: binary_sensor.front_door
+  - platform: state
+    entity_id: binary_sensor.front_door
+    from: 'off'
+    to: 'on'
     for: 00:01:00
-    platform: state
-    to: open
   condition:
   - condition: or
     conditions:
@@ -397,10 +398,11 @@
   alias: Security Notify Back Door Opened
   description: ''
   trigger:
-  - entity_id: binary_sensor.back_door
+  - platform: state
+    entity_id: binary_sensor.back_door
+    from: 'off'
+    to: 'on'
     for: 00:01:00
-    platform: state
-    to: open
   condition:
   - condition: or
     conditions:
@@ -423,9 +425,11 @@
   alias: Security Notify Garage Door Opened
   description: ''
   trigger:
-  - entity_id: binary_sensor.garage_door
-    platform: state
-    to: open
+  - platform: state
+    entity_id: binary_sensor.garage_door
+    from: 'off'
+    to: 'on'
+    for: 00:01:00
   condition:
   - condition: or
     conditions:
@@ -445,12 +449,12 @@
       title: Garage Door Opened
   mode: single
 - id: '1572630307272'
-  alias: Security Notify Family Room Motion
+  alias: Security Notify Office Motion
   description: ''
   trigger:
-  - entity_id: binary_sensor.family_room_motion
+  - platform: state
+    entity_id: binary_sensor.office_motion
     from: 'off'
-    platform: state
     to: 'on'
   condition:
   - condition: state
@@ -459,15 +463,16 @@
   action:
   - service: notify.notify
     data:
-      message: Motion has been detected in the Family Room
-      title: Family Room Motion Detected
+      message: Motion has been detected in the Office
+      title: Office Motion Detected
   mode: single
 - id: '1572630414451'
   alias: Security Notify Main Bedroom Motion
   description: ''
   trigger:
-  - entity_id: binary_sensor.main_bedroom_motion
-    platform: state
+  - platform: state
+    entity_id: binary_sensor.main_bedroom_motion
+    from: 'off'
     to: 'on'
   condition:
   - condition: state
@@ -646,16 +651,14 @@
   alias: Garage lights on when doors opened
   description: ''
   trigger:
-  - type: turned_on
-    platform: device
-    device_id: a67fb5f1ee3f4a57a338786db4ac61a3
-    entity_id: binary_sensor.garage_door_sensor
-    domain: binary_sensor
-  - type: turned_on
-    platform: device
-    device_id: 653b58242ddd475fa47b906fdc469822
-    entity_id: binary_sensor.garage_inside_door_sensor
-    domain: binary_sensor
+  - platform: state
+    entity_id: binary_sensor.garage_door
+    from: 'off'
+    to: 'on'
+  - platform: state
+    entity_id: binary_sensor.garage_inside_door
+    from: 'off'
+    to: 'on'
   condition: []
   action:
   - type: turn_on
@@ -678,16 +681,12 @@
       seconds: 0
       milliseconds: 0
   condition:
-  - type: is_off
-    condition: device
-    device_id: a67fb5f1ee3f4a57a338786db4ac61a3
-    entity_id: binary_sensor.garage_door_sensor
-    domain: binary_sensor
-  - type: is_off
-    condition: device
-    device_id: 653b58242ddd475fa47b906fdc469822
-    entity_id: binary_sensor.garage_inside_door_sensor
-    domain: binary_sensor
+  - condition: state
+    entity_id: binary_sensor.garage_door
+    state: 'off'
+  - condition: state
+    entity_id: binary_sensor.garage_inside_door
+    state: 'off'
   action:
   - type: turn_off
     device_id: 6f257e741b564746b69eca3a6eae1985
@@ -719,16 +718,14 @@
   alias: Garage lights off when door closed if no motion
   description: ''
   trigger:
-  - type: turned_off
-    platform: device
-    device_id: a67fb5f1ee3f4a57a338786db4ac61a3
-    entity_id: binary_sensor.garage_door_sensor
-    domain: binary_sensor
-  - type: turned_off
-    platform: device
-    device_id: 653b58242ddd475fa47b906fdc469822
-    entity_id: binary_sensor.garage_inside_door_sensor
-    domain: binary_sensor
+  - platform: state
+    entity_id: binary_sensor.garage_door
+    from: 'on'
+    to: 'off'
+  - platform: state
+    entity_id: binary_sensor.garage_inside_door
+    from: 'on'
+    to: 'off'
   - type: no_motion
     platform: device
     device_id: 0297d19b6ceb409693273a05449045dc
@@ -750,16 +747,12 @@
       minutes: 5
       seconds: 0
       milliseconds: 0
-  - type: is_off
-    condition: device
-    device_id: a67fb5f1ee3f4a57a338786db4ac61a3
-    entity_id: binary_sensor.garage_door_sensor
-    domain: binary_sensor
-  - type: is_off
-    condition: device
-    device_id: 653b58242ddd475fa47b906fdc469822
-    entity_id: binary_sensor.garage_inside_door_sensor
-    domain: binary_sensor
+  - condition: state
+    entity_id: binary_sensor.garage_door
+    state: 'off'
+  - condition: state
+    entity_id: binary_sensor.garage_inside_door
+    state: 'off'
   action:
   - type: turn_off
     device_id: 6f257e741b564746b69eca3a6eae1985
@@ -1464,9 +1457,11 @@
   alias: Security Notify Garage Inside Door Opened
   description: ''
   trigger:
-  - entity_id: binary_sensor.garage_inside_door_sensor
-    platform: state
-    to: open
+  - platform: state
+    entity_id: binary_sensor.garage_inside_door
+    from: 'off'
+    to: 'on'
+    for: 00:01:00
   condition:
   - condition: or
     conditions:
