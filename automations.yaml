@@ -623,16 +623,6 @@
     entity_id: climate.hot_water_recirc_control_setting
     type: set_hvac_mode
     hvac_mode: heat_cool
-  - delay:
-      hours: 0
-      minutes: 10
-      seconds: 0
-      milliseconds: 0
-  - device_id: a77074c758856cfb06fbcf0eef68c72a
-    domain: climate
-    entity_id: climate.hot_water_recirc_control_setting
-    type: set_hvac_mode
-    hvac_mode: 'off'
   mode: single
 - id: '1581601374878'
   alias: Humidifier off at 21:00
@@ -1056,16 +1046,6 @@
     entity_id: climate.hot_water_recirc_control_setting
     type: set_hvac_mode
     hvac_mode: heat_cool
-  - delay:
-      hours: 0
-      minutes: 10
-      seconds: 0
-      milliseconds: 0
-  - device_id: a77074c758856cfb06fbcf0eef68c72a
-    domain: climate
-    entity_id: climate.hot_water_recirc_control_setting
-    type: set_hvac_mode
-    hvac_mode: 'off'
   mode: single
 - id: '1609723691654'
   alias: Tag Garage Latch is scanned
@@ -1388,7 +1368,7 @@
   - service: script.turn_on_xmas_lights
   mode: single
 - id: '1615923844588'
-  alias: Hot Water Recirc Morning Home
+  alias: Hot Water Recirc On Morning Home
   description: ''
   trigger:
   - platform: time
@@ -1397,22 +1377,18 @@
   - condition: state
     entity_id: group.family
     state: home
+  - condition: device
+    device_id: a77074c758856cfb06fbcf0eef68c72a
+    domain: climate
+    entity_id: climate.hot_water_recirc_control_setting
+    type: is_hvac_mode
+    hvac_mode: 'off'
   action:
   - device_id: a77074c758856cfb06fbcf0eef68c72a
     domain: climate
     entity_id: climate.hot_water_recirc_control_setting
     type: set_hvac_mode
     hvac_mode: heat_cool
-  - delay:
-      hours: 0
-      minutes: 10
-      seconds: 0
-      milliseconds: 0
-  - device_id: a77074c758856cfb06fbcf0eef68c72a
-    domain: climate
-    entity_id: climate.hot_water_recirc_control_setting
-    type: set_hvac_mode
-    hvac_mode: 'off'
   mode: single
 - id: '1622043871309'
   alias: IKEA Switch 2 NW-NE
@@ -1622,4 +1598,24 @@
   - service: hassio.addon_restart
     data:
       addon: core_letsencrypt
+  mode: single
+- id: '1624404207012'
+  alias: Hot Water Recirc Off Night
+  description: ''
+  trigger:
+  - platform: time
+    at: '23:00:00'
+  condition:
+  - condition: device
+    device_id: a77074c758856cfb06fbcf0eef68c72a
+    domain: climate
+    entity_id: climate.hot_water_recirc_control_setting
+    type: is_hvac_mode
+    hvac_mode: heat_cool
+  action:
+  - device_id: a77074c758856cfb06fbcf0eef68c72a
+    domain: climate
+    entity_id: climate.hot_water_recirc_control_setting
+    type: set_hvac_mode
+    hvac_mode: 'off'
   mode: single
