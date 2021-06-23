@@ -618,11 +618,11 @@
     data:
       temperature: 70
     entity_id: climate.thermostat
-  - device_id: a77074c758856cfb06fbcf0eef68c72a
-    domain: climate
-    entity_id: climate.hot_water_recirc_control_setting
-    type: set_hvac_mode
-    hvac_mode: heat_cool
+  - service: automation.trigger
+    target:
+      entity_id: automation.hot_water_recirc_morning_when_home
+    data:
+      skip_condition: true
   mode: single
 - id: '1581601374878'
   alias: Humidifier off at 21:00
@@ -1041,11 +1041,9 @@
     state: summer
   action:
   - scene: scene.work_morning
-  - device_id: a77074c758856cfb06fbcf0eef68c72a
-    domain: climate
-    entity_id: climate.hot_water_recirc_control_setting
-    type: set_hvac_mode
-    hvac_mode: heat_cool
+  - service: automation.trigger
+    target:
+      entity_id: automation.hot_water_recirc_morning_when_home
   mode: single
 - id: '1609723691654'
   alias: Tag Garage Latch is scanned
