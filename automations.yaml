@@ -537,7 +537,13 @@
     from: 'off'
     platform: state
     to: 'on'
-  condition: []
+    for: 00:00:02
+  condition:
+  - condition: device
+    type: is_on
+    device_id: 7ec89b1bd00d47248701a5eedbf3a331
+    entity_id: switch.garage_latch
+    domain: switch
   action:
   - type: turn_off
     device_id: 7ec89b1bd00d47248701a5eedbf3a331
