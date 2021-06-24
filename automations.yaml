@@ -1609,13 +1609,7 @@
   trigger:
   - platform: time
     at: '23:00:00'
-  condition:
-  - condition: device
-    device_id: a77074c758856cfb06fbcf0eef68c72a
-    domain: climate
-    entity_id: climate.hot_water_recirc_control_setting
-    type: is_hvac_mode
-    hvac_mode: heat_cool
+  condition: []
   action:
   - device_id: a77074c758856cfb06fbcf0eef68c72a
     domain: climate
