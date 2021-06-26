@@ -1381,12 +1381,6 @@
   - condition: state
     entity_id: group.family
     state: home
-  - condition: device
-    device_id: a77074c758856cfb06fbcf0eef68c72a
-    domain: climate
-    entity_id: climate.hot_water_recirc_control_setting
-    type: is_hvac_mode
-    hvac_mode: 'off'
   action:
   - device_id: a77074c758856cfb06fbcf0eef68c72a
     domain: climate
@@ -1616,4 +1610,27 @@
     entity_id: climate.hot_water_recirc_control_setting
     type: set_hvac_mode
     hvac_mode: 'off'
+  mode: single
+- id: '1624562703474'
+  alias: Hot Water Recirc Disable when Hot Water Running
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.hot_water_recirc_control_temperature_meter
+    above: '0.7'
+  condition: []
+  action:
+  - device_id: a77074c758856cfb06fbcf0eef68c72a
+    domain: climate
+    entity_id: climate.hot_water_recirc_control_setting
+    type: set_hvac_mode
+    hvac_mode: 'off'
+  - delay:
+      hours: 0
+      minutes: 10
+      seconds: 0
+      milliseconds: 0
+  - service: automation.trigger
+    target:
+      entity_id: automation.hot_water_recirc_morning_when_home
   mode: single
