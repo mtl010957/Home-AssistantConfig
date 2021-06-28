@@ -112,6 +112,7 @@ include:
     - sensor.cam2_motion_detect
     - sensor.cam3_motion_detect
     - sensor.hot_water_recirc_control_temperature
+    - sensor.hot_water_recirc_control_temperature_meter
     # switches
     - switch.family_room_ceiling_fan_light
     - switch.living_room_lamp_module
