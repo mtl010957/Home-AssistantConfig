@@ -1655,3 +1655,24 @@
     data:
       hvac_mode: cool
   mode: single
+- id: '1624913583112'
+  alias: House Fan Control Disable
+  description: ''
+  trigger:
+  - platform: template
+    value_template: '{{ states("sensor.outdoor_temperature") | round >= state_attr("climate.house_fan_thermostat","temperature")
+      | round }}'
+  - type: value
+    platform: device
+    device_id: f1da704df4dd4da69ef980d105f8d710
+    entity_id: sensor.outdoor_temperature
+    domain: sensor
+    below: 60
+  condition: []
+  action:
+  - service: climate.set_hvac_mode
+    target:
+      entity_id: climate.house_fan_thermostat
+    data:
+      hvac_mode: 'off'
+  mode: single
