@@ -5,19 +5,15 @@ include:
   entities:
     # binary_sensors
     - binary_sensor.back_door
-    - binary_sensor.back_door_sensor
     - binary_sensor.downstairs_co_detected
     - binary_sensor.downstairs_smoke_detected
     - binary_sensor.family_room_co_detected
     - binary_sensor.family_room_smoke_detected
     - binary_sensor.front_door
-    - binary_sensor.front_door_sensor
     - binary_sensor.front_yard_camera_front_porch_person_detected
     - binary_sensor.front_yard_camera_front_porch_porch_activity
     - binary_sensor.garage_door
-    - binary_sensor.garage_goor_sensor
     - binary_sensor.garage_inside_door
-    - binary_sensor.garage_inside_door_sensor
     - binary_sensor.garage_motion
     - binary_sensor.living_room_camera_person_detected
     - binary_sensor.main_bedroom_motion
@@ -100,7 +96,11 @@ include:
     - sensor.desert_ups_d_input_voltage
     - sensor.desert_ups_d_battery_charge
     - sensor.upstairs_smoke_alarm_battery_level
-    - sensor.ikea_of_sweden_tradfri_remote_control_239115fe_power
+    - sensor.ikea_remote_1_power
+    - sensor.ikea_remote_2_power
+    - sensor.ikea_switch_1_power
+    - sensor.ikea_switch_2_power
+    - sensor.ikea_switch_3_power
     - sensor.family_room_sene_light_sensor
     - sensor.family_room_swse_light_sensor
     - sensor.living_room_nw_ctr_light_sensor

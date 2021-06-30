@@ -1676,3 +1676,48 @@
     data:
       hvac_mode: 'off'
   mode: single
+- id: '1625069282209'
+  alias: IKEA Switch 3 NW
+  description: ''
+  use_blueprint:
+    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
+    input:
+      remote: 313f4dda0566182ac3c2c9d73c1559e6
+      cover: cover.living_room_nw_blinds
+      loop_delay: 700
+- id: '1625069333301'
+  alias: IKEA Switch 3 NW CTR
+  description: ''
+  use_blueprint:
+    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
+    input:
+      remote: 313f4dda0566182ac3c2c9d73c1559e6
+      cover: cover.living_room_nw_ctr_blinds
+      loop_delay: 700
+- id: '1625069363112'
+  alias: IKEA Switch 3 CTR
+  description: ''
+  use_blueprint:
+    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
+    input:
+      remote: 313f4dda0566182ac3c2c9d73c1559e6
+      cover: cover.living_room_ctr_blinds
+      loop_delay: 700
+- id: '1625069394173'
+  alias: IKEA Switch 3 SE CTR
+  description: ''
+  use_blueprint:
+    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
+    input:
+      remote: 313f4dda0566182ac3c2c9d73c1559e6
+      cover: cover.living_room_se_ctr_blinds
+      loop_delay: 700
+- id: '1625069431867'
+  alias: IKEA Switch 3 SE
+  description: ''
+  use_blueprint:
+    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
+    input:
+      remote: 313f4dda0566182ac3c2c9d73c1559e6
+      cover: cover.living_room_se_blinds
+      loop_delay: 700
