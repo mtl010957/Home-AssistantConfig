@@ -513,7 +513,7 @@
       title: UPS ON BATTERY
   mode: single
 - id: '1572633832196'
-  alias: Notify UPS Online
+  alias: Notify and Utility Power On UPS Online
   description: ''
   trigger:
   - entity_id: sensor.ups_status
@@ -528,6 +528,10 @@
     data:
       message: The UPS is back Online
       title: UPS ONLINE
+  - type: turn_on
+    device_id: 61344d8b56db43388bf5cc133786843b
+    entity_id: switch.utility_power_relay
+    domain: switch
   mode: single
 - id: '1578535843455'
   alias: Garage latch off when door open
