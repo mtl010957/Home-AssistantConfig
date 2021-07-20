@@ -1,3 +1,6 @@
 light.living_room_lamp_dimmer:
   ignored: false
   polling_intensity: 0
+switch.house_fan_switch_module_switch:
+  ignored: false
+  polling_intensity: 1
