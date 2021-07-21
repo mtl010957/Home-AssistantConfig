@@ -254,18 +254,9 @@
   - data: {}
     service: cover.close_cover_tilt
     target:
-      device_id:
-      - 01b25cc1a9ff49c997bcd154e5b683f8
-      - 6792d04f64544b2f96bf1ba9855e2e5b
-      - 2bab1b706cff40359bbe36c356ee18d8
-      - 3f2e1d3be7a049f08d4d1bfe39c87fc4
-      - 4565c2edfb9842a1896dd5139be87fe1
-      - 1db5ad540690ccb5876fb4ceb1907912
-      - abf3c9fea2e9422482ebac790b87643b
-      - afeedf06916c460680efcd14027f18af
-      - 28c408aeffa1431ab8135271d9e05835
-      - 800d8ada96f04f2e95461f3f93c6d3a8
-      - e0df26504d514ce2ae20e20ce379cd99
+      area_id:
+      - ae8548e9d7b24e11b7d5670a4da86499
+      - ba35ea6dc22d42808e3dc7511c49bfe6
   mode: single
 - id: '1560461893289'
   alias: Security Lighting On Close Blinds
@@ -940,18 +931,9 @@
   - data: {}
     service: cover.open_cover_tilt
     target:
-      device_id:
-      - abf3c9fea2e9422482ebac790b87643b
-      - afeedf06916c460680efcd14027f18af
-      - 28c408aeffa1431ab8135271d9e05835
-      - 800d8ada96f04f2e95461f3f93c6d3a8
-      - e0df26504d514ce2ae20e20ce379cd99
-      - 01b25cc1a9ff49c997bcd154e5b683f8
-      - 6792d04f64544b2f96bf1ba9855e2e5b
-      - 2bab1b706cff40359bbe36c356ee18d8
-      - 3f2e1d3be7a049f08d4d1bfe39c87fc4
-      - 4565c2edfb9842a1896dd5139be87fe1
-      - 1db5ad540690ccb5876fb4ceb1907912
+      area_id:
+      - ae8548e9d7b24e11b7d5670a4da86499
+      - ba35ea6dc22d42808e3dc7511c49bfe6
   mode: single
 - id: '1591192185107'
   alias: Family Room Ceiling Fan Stop After Time
@@ -1385,60 +1367,6 @@
     type: set_hvac_mode
     hvac_mode: heat
   mode: single
-- id: '1622043871309'
-  alias: IKEA Switch 2 NW-NE
-  description: ''
-  use_blueprint:
-    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
-    input:
-      remote: 4658744562af10ebb6d6f1439997bbbb
-      cover: cover.family_room_nwne_blinds
-      loop_delay: 700
-- id: '1622125330280'
-  alias: IKEA Switch 2 SW-SE
-  description: ''
-  use_blueprint:
-    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
-    input:
-      remote: 4658744562af10ebb6d6f1439997bbbb
-      cover: cover.family_room_swse_blinds
-      loop_delay: 700
-- id: '1622125358509'
-  alias: IKEA Switch 2 SW-NW
-  description: ''
-  use_blueprint:
-    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
-    input:
-      remote: 4658744562af10ebb6d6f1439997bbbb
-      cover: cover.family_room_swnw_blinds
-      loop_delay: 700
-- id: '1622125386859'
-  alias: IKEA Switch 2 SE-SW
-  description: ''
-  use_blueprint:
-    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
-    input:
-      remote: 4658744562af10ebb6d6f1439997bbbb
-      cover: cover.family_room_sesw_blinds
-      loop_delay: 700
-- id: '1622125566865'
-  alias: IKEA Switch 2 SE-NE
-  description: ''
-  use_blueprint:
-    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
-    input:
-      remote: 4658744562af10ebb6d6f1439997bbbb
-      cover: cover.family_room_sene_blinds
-      loop_delay: 700
-- id: '1622125617532'
-  alias: IKEA Switch 2 NW-SW
-  description: ''
-  use_blueprint:
-    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
-    input:
-      remote: 4658744562af10ebb6d6f1439997bbbb
-      cover: cover.family_room_nwsw_blinds
-      loop_delay: 700
 - id: '1622210603950'
   alias: Security Notify Garage Inside Door Opened
   description: ''
@@ -1673,51 +1601,6 @@
     data:
       hvac_mode: 'off'
   mode: single
-- id: '1625069282209'
-  alias: IKEA Switch 3 NW
-  description: ''
-  use_blueprint:
-    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
-    input:
-      remote: 313f4dda0566182ac3c2c9d73c1559e6
-      cover: cover.living_room_nw_blinds
-      loop_delay: 700
-- id: '1625069333301'
-  alias: IKEA Switch 3 NW CTR
-  description: ''
-  use_blueprint:
-    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
-    input:
-      remote: 313f4dda0566182ac3c2c9d73c1559e6
-      cover: cover.living_room_nw_ctr_blinds
-      loop_delay: 700
-- id: '1625069363112'
-  alias: IKEA Switch 3 CTR
-  description: ''
-  use_blueprint:
-    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
-    input:
-      remote: 313f4dda0566182ac3c2c9d73c1559e6
-      cover: cover.living_room_ctr_blinds
-      loop_delay: 700
-- id: '1625069394173'
-  alias: IKEA Switch 3 SE CTR
-  description: ''
-  use_blueprint:
-    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
-    input:
-      remote: 313f4dda0566182ac3c2c9d73c1559e6
-      cover: cover.living_room_se_ctr_blinds
-      loop_delay: 700
-- id: '1625069431867'
-  alias: IKEA Switch 3 SE
-  description: ''
-  use_blueprint:
-    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
-    input:
-      remote: 313f4dda0566182ac3c2c9d73c1559e6
-      cover: cover.living_room_se_blinds
-      loop_delay: 700
 - id: '1626786783561'
   alias: Security Lighting Cancel Disarmed
   description: ''
@@ -1848,3 +1731,23 @@
     entity_id: switch.utility_power_relay
     domain: switch
   mode: single
+- id: '1626896844476'
+  alias: IKEA Switch 2 - Family Room Blinds
+  description: ''
+  use_blueprint:
+    path: mtl010957/zha_ikea_2button_switch_multi_cover_tilt.yaml
+    input:
+      remote: 4658744562af10ebb6d6f1439997bbbb
+      covers:
+        area_id: ae8548e9d7b24e11b7d5670a4da86499
+      loop_delay: 700
+- id: '1626897635342'
+  alias: IKEA Switch 3 - Living Room Blinds
+  description: ''
+  use_blueprint:
+    path: mtl010957/zha_ikea_2button_switch_multi_cover_tilt.yaml
+    input:
+      remote: 313f4dda0566182ac3c2c9d73c1559e6
+      covers:
+        area_id: ba35ea6dc22d42808e3dc7511c49bfe6
+      loop_delay: 700
