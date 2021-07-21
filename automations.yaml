@@ -1731,23 +1731,21 @@
     entity_id: switch.utility_power_relay
     domain: switch
   mode: single
-- id: '1626896844476'
-  alias: IKEA Switch 2 - Family Room Blinds
-  description: ''
-  use_blueprint:
-    path: mtl010957/zha_ikea_2button_switch_multi_cover_tilt.yaml
-    input:
-      remote: 4658744562af10ebb6d6f1439997bbbb
-      covers:
-        area_id: ae8548e9d7b24e11b7d5670a4da86499
-      loop_delay: 700
-- id: '1626897635342'
+- id: '1626899198765'
   alias: IKEA Switch 3 - Living Room Blinds
   description: ''
   use_blueprint:
-    path: mtl010957/zha_ikea_2button_switch_multi_cover_tilt.yaml
+    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
     input:
       remote: 313f4dda0566182ac3c2c9d73c1559e6
-      covers:
-        area_id: ba35ea6dc22d42808e3dc7511c49bfe6
+      cover: cover.living_room_blinds
+      loop_delay: 700
+- id: '1626899624940'
+  alias: IKEA Switch 2 - Family Room Blinds
+  description: ''
+  use_blueprint:
+    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
+    input:
+      remote: 4658744562af10ebb6d6f1439997bbbb
+      cover: cover.family_room_blinds
       loop_delay: 700
