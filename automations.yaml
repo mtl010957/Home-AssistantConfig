@@ -1833,3 +1833,18 @@
       - switch.garage_light
       - switch.living_room_lamp_module
   mode: single
+- id: '1626893038399'
+  alias: Utility Power On if Off for more than 5 min
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: switch.utility_power_relay
+    to: 'off'
+    for: 00:05:00
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 61344d8b56db43388bf5cc133786843b
+    entity_id: switch.utility_power_relay
+    domain: switch
+  mode: single
