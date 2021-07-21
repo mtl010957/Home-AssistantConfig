@@ -1,6 +1,21 @@
 light.living_room_lamp_dimmer:
   ignored: false
-  polling_intensity: 0
+  polling_intensity: 5
 switch.house_fan_switch_module_switch:
   ignored: false
   polling_intensity: 1
+light.dining_room_ceiling_light:
+  ignored: false
+  polling_intensity: 5
+light.family_room_nw_ceiling_lights:
+  ignored: false
+  polling_intensity: 5
+light.family_room_se_ceiling_lights:
+  ignored: false
+  polling_intensity: 5
+light.main_bedroom_nw_ceiling_lights:
+  ignored: false
+  polling_intensity: 5
+light.main_bedroom_se_ceiling_lights:
+  ignored: false
+  polling_intensity: 5
