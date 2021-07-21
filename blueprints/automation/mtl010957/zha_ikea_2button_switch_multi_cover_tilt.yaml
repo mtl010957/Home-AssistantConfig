@@ -1,6 +1,6 @@
 blueprint:
   source_url: https://github.com/mtl010957/Home-AssistantConfig/blob/master/blueprints/zha_ikea_2button_switch_cover_tilt.yaml
-  name: ZHA - IKEA - 2 Button Remote - Cover Tilt Control
+  name: ZHA - IKEA - 2 Button Remote - Multi Cover Tilt Control
   description: This automation makes the 2-button IKEA remote control multiple covers tilt.
   domain: automation
   input:
