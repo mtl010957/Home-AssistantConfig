@@ -1542,7 +1542,7 @@
   trigger:
   - platform: numeric_state
     entity_id: sensor.hot_water_recirc_control_temperature_meter
-    above: '0.7'
+    above: '0.8'
   condition: []
   action:
   - device_id: a77074c758856cfb06fbcf0eef68c72a
