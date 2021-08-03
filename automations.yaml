@@ -1753,3 +1753,32 @@
       remote: 4658744562af10ebb6d6f1439997bbbb
       cover: cover.family_room_blinds
       loop_delay: 700
+- id: '1628008841148'
+  alias: Floods Off when Susan Comes Home Late
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: person.susan_loeffler
+    from: away
+    to: home
+  condition:
+  - condition: device
+    type: is_on
+    device_id: 8d8de4c32fc84734af376c764700e31f
+    entity_id: switch.front_yard_light
+    domain: switch
+  action:
+  - type: turn_off
+    device_id: 8d8de4c32fc84734af376c764700e31f
+    entity_id: switch.front_yard_light
+    domain: switch
+  - delay:
+      hours: 0
+      minutes: 10
+      seconds: 0
+      milliseconds: 0
+  - type: turn_on
+    device_id: 8d8de4c32fc84734af376c764700e31f
+    entity_id: switch.front_yard_light
+    domain: switch
+  mode: single
