@@ -1780,3 +1780,71 @@
     entity_id: switch.front_yard_light
     domain: switch
   mode: single
+- id: '1628012626514'
+  alias: IKEA Remote 2 Dim Down Hold
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zha_event
+    event_data:
+      device_id: 2cb4f85bb1b5a58967706c99a0680da9
+      command: move
+  condition: []
+  action:
+  - service: fan.decrease_speed
+    target:
+      device_id: 6d21f24f1bc24bee85172a5327b56fda
+    data:
+      percentage_step: 10
+  mode: single
+- id: '1628012840399'
+  alias: IKEA Remote 2 Dim Up Hold
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zha_event
+    event_data:
+      device_id: 2cb4f85bb1b5a58967706c99a0680da9
+      command: move_with_on_off
+  condition: []
+  action:
+  - service: fan.increase_speed
+    target:
+      device_id: 6d21f24f1bc24bee85172a5327b56fda
+    data:
+      percentage_step: 10
+  mode: single
+- id: '1628015212899'
+  alias: IKEA Remote 1 Dim Down Hold
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zha_event
+    event_data:
+      device_id: 439888cd2429e60eae9b9c512836115b
+      command: move
+  condition: []
+  action:
+  - service: fan.decrease_speed
+    data:
+      percentage_step: 10
+    target:
+      device_id: f743120b85da4c02b68c18c65965b2c3
+  mode: single
+- id: '1628015289843'
+  alias: IKEA Remote 1 Dim Up Hold
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zha_event
+    event_data:
+      device_id: 439888cd2429e60eae9b9c512836115b
+      command: move_with_on_off
+  condition: []
+  action:
+  - service: fan.increase_speed
+    data:
+      percentage_step: 10
+    target:
+      device_id: f743120b85da4c02b68c18c65965b2c3
+  mode: single
