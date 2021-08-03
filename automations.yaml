@@ -1472,17 +1472,16 @@
     seconds: '0'
     hours: '*'
   condition:
-  - condition: sun
-    after: sunrise
   - condition: numeric_state
     entity_id: sun.sun
     attribute: elevation
     below: '60'
+    above: '0'
   - condition: numeric_state
     entity_id: sun.sun
     attribute: azimuth
-    below: '225'
     above: '80'
+    below: '210'
   action:
   - service: cover.set_cover_tilt_position
     target:
@@ -1497,6 +1496,11 @@
   alias: SE Blinds open after morning sun
   description: ''
   trigger:
+  - platform: numeric_state
+    entity_id: sun.sun
+    attribute: azimuth
+    above: '210'
+    for: 00:02:00
   - platform: numeric_state
     entity_id: sun.sun
     attribute: elevation
