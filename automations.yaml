@@ -1194,11 +1194,11 @@
     subtype: dim_up
   condition: []
   action:
-  - service: fan.set_speed
+  - service: fan.set_percentage
     target:
       device_id: f743120b85da4c02b68c18c65965b2c3
     data:
-      speed: medium
+      percentage: 66
   mode: single
 - id: '1615490288906'
   alias: IKEA Remote 1 Dim Down
@@ -1211,11 +1211,10 @@
     subtype: dim_down
   condition: []
   action:
-  - service: fan.set_speed
-    target:
-      device_id: f743120b85da4c02b68c18c65965b2c3
-    data:
-      speed: 'off'
+  - device_id: f743120b85da4c02b68c18c65965b2c3
+    domain: fan
+    entity_id: fan.family_room_ceiling_fan
+    type: turn_off
   mode: single
 - id: '1615490343030'
   alias: IKEA Remote 1 Left
@@ -1228,11 +1227,11 @@
     subtype: left
   condition: []
   action:
-  - service: fan.set_speed
-    data:
-      speed: low
+  - service: fan.set_percentage
     target:
       device_id: f743120b85da4c02b68c18c65965b2c3
+    data:
+      percentage: 33
   mode: single
 - id: '1615490382353'
   alias: IKEA Remote 1 Right
@@ -1245,11 +1244,11 @@
     subtype: right
   condition: []
   action:
-  - service: fan.set_speed
-    data:
-      speed: high
+  - service: fan.set_percentage
     target:
       device_id: f743120b85da4c02b68c18c65965b2c3
+    data:
+      percentage: 100
   mode: single
 - id: '1615600528797'
   alias: IKEA Remote 2 Dim Up
@@ -1262,11 +1261,11 @@
     subtype: dim_up
   condition: []
   action:
-  - service: fan.set_speed
-    data:
-      speed: medium
+  - service: fan.set_percentage
     target:
       device_id: 6d21f24f1bc24bee85172a5327b56fda
+    data:
+      percentage: 66
   mode: single
 - id: '1615600580812'
   alias: IKEA Remote 2 Dim Down
@@ -1279,11 +1278,10 @@
     subtype: dim_down
   condition: []
   action:
-  - service: fan.set_speed
-    data:
-      speed: 'off'
-    target:
-      device_id: 6d21f24f1bc24bee85172a5327b56fda
+  - device_id: 6d21f24f1bc24bee85172a5327b56fda
+    domain: fan
+    entity_id: fan.main_bedroom_ceiling_fan
+    type: turn_off
   mode: single
 - id: '1615600620342'
   alias: IKEA Remote 2 Left
@@ -1296,11 +1294,11 @@
     subtype: left
   condition: []
   action:
-  - service: fan.set_speed
-    data:
-      speed: low
+  - service: fan.set_percentage
     target:
       device_id: 6d21f24f1bc24bee85172a5327b56fda
+    data:
+      percentage: 33
   mode: single
 - id: '1615600668050'
   alias: IKEA Remote 2 Right
@@ -1313,11 +1311,11 @@
     subtype: right
   condition: []
   action:
-  - service: fan.set_speed
-    data:
-      speed: high
+  - service: fan.set_percentage
     target:
       device_id: 6d21f24f1bc24bee85172a5327b56fda
+    data:
+      percentage: 100
   mode: single
 - id: '1615600712856'
   alias: IKEA Remote 2 Toggle
