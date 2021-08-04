@@ -1,0 +1,94 @@
+blueprint:
+  source_url: https://github.com/mtl010957/Home-AssistantConfig/blob/master/blueprints/zha_ikea_2button_switch_cover_tilt.yaml
+  name: ZHA - IKEA - 2 Button Remote - Multi Cover Tilt Control
+  description: This automation makes the 2-button IKEA remote control multiple covers tilt.
+  domain: automation
+  input:
+    remote:
+      name: IKEA TRADFRI 2-button remote control
+      description: Select the remote control you wish to use.
+      selector:
+        device:
+          integration: zha
+          manufacturer: IKEA of Sweden
+          model: TRADFRI on/off switch
+    covers:
+      name: Cover
+      description: Select the covers you wish to control.
+      selector:
+        target:
+          entity:
+            domain: cover
+    loop_delay:
+      name: Loop Delay
+      description: Loop Delay in Milliseconds
+      default: 500
+      selector:
+        number:
+          min: 100
+          max: 1000
+          unit_of_measurement: milliseconds
+          mode: box
+          step: 100
+    step_size:
+      name: Step Size
+      description: Step Size for Cover Movement
+      default: 2
+      selector:
+        number:
+          min: 1
+          max: 10
+          mode: box
+          step: 1
+mode: restart
+max_exceeded: silent
+variables:
+  steps: !input 'step_size'
+trigger:
+- platform: event
+  event_type: zha_event
+  event_data:
+    device_id: !input 'remote'
+action:
+- choose:
+  - conditions:
+    - condition: template
+      value_template: '{{ trigger.event.data.command == "on" }}'
+    sequence:
+    - service: cover.open_cover_tilt
+      target: !input 'covers'
+  - conditions:
+    - condition: template
+      value_template: '{{ trigger.event.data.command == "move_with_on_off" }}'
+    sequence:
+    - repeat:
+        while: []
+        sequence:
+        - service: cover.set_cover_tilt_position
+          target: !input 'covers'
+          data:
+            tilt_position: '{{ state_attr(the_cover,"current_tilt_position") +
+              steps }}'
+        - delay:
+            milliseconds: !input 'loop_delay'
+  - conditions:
+    - condition: template
+      value_template: '{{ trigger.event.data.command == "off" }}'
+    sequence:
+    - service: cover.close_cover_tilt
+      target: !input 'covers'
+  - conditions:
+    - condition: template
+      value_template: '{{ trigger.event.data.command == "move" }}'
+    sequence:
+    - repeat:
+        while: []
+        sequence:
+        - service: cover.set_cover_tilt_position
+          target: !input 'covers'
+          data:
+            tilt_position: '{{ state_attr(the_cover,"current_tilt_position") -
+              steps }}'
+        - delay:
+            milliseconds: !input 'loop_delay'
+  default: []
