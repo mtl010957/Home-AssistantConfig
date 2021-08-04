@@ -1,0 +1,4 @@
+- platform: derivative
+  name: Hot Water Recirc Control Temperature Meter
+  source: sensor.hot_water_recirc_control_temperature
+  unit_time: s
