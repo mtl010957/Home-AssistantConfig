@@ -5,6 +5,7 @@
         seconds: 0
     sensor:
       - name: DTE Energy Price
+        unique_id: dte_energy_price
         unit_of_measurement: "$"
         icon: mdi:currency-usd
         state_class: measurement
