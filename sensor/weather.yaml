@@ -1,9 +1,0 @@
-- platform: template
-  sensors:
-    precipitation_probability_today:
-      unit_of_measurement: "%"
-      value_template: '{{ state_attr("weather.kptk_daynight","forecast")[0].precipitation_probability }}'
-      friendly_name: "Precipitation Probability Today"
-    forecast_today:
-      value_template: '{{ state_attr("weather.kptk_daynight","forecast")[0].detailed_description }}'
-      friendly_name: "Forecast Today"

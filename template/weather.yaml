@@ -1,0 +1,10 @@
+  - sensor:
+      - unique_id: precipitation_probability_today
+        name: "Precipitation Probability Today"
+        unit_of_measurement: "%"
+        state: >
+          {{ state_attr("weather.kptk_daynight","forecast")[0].precipitation_probability }}
+      - unique_id: forecast_today
+        name: "Forecast Today"
+        state: >
+          {{ state_attr("weather.kptk_daynight","forecast")[0].detailed_description }}
