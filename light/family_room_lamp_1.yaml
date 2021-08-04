@@ -1,6 +1,5 @@
 - platform: group
   name: Family Room Lamp 1
-  icon: mdi:lamp
   entities:
     - light.family_room_link_bulb_1
     - light.family_room_link_bulb_2
