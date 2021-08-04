@@ -1,0 +1,30 @@
+  - sensor:
+      - unique_id: furnace_nw_zone_return_temperature_f
+        name: "Furnace NW Zone Return Temperature ºF"
+        device_class: temperature
+        unit_of_measurement: 'ºF'
+        icon: "mdi:thermometer"
+        state: >
+          {{ (states('sensor.furnace_nw_zone_return_temperature') | float * 9.0/5.0+32.0) | round(1) }}
+      - unique_id: furnace_se_zone_return_temperature_f
+        name: "Furnace SE Zone Return Temperature ºF"
+        device_class: temperature
+        unit_of_measurement: 'ºF'
+        icon: "mdi:thermometer"
+        state: >
+          {{ (states('sensor.furnace_se_zone_return_temperature') | float * 9.0/5.0+32.0) | round(1) }}
+      - unique_id: furnace_supply_temperature_f
+        name: "Furnace Supply Temperature ºF"
+        device_class: temperature
+        unit_of_measurement: 'ºF'
+        icon: "mdi:thermometer"
+        state: >
+          {{ (states('sensor.furnace_supply_temperature') | float * 9.0/5.0+32.0) | round(1) }}
+      - unique_id: furnace_flue_temperature_f
+        name: "Furnace Flue Temperature ºF"
+        device_class: temperature
+        unit_of_measurement: 'ºF'
+        icon: "mdi:thermometer"
+        state: >
+          {{ (states('sensor.furnace_flue_temperature') | float * 9.0/5.0+32.0) | round(1) }}
+
