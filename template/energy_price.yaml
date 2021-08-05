@@ -14,10 +14,10 @@
           {% if false %}
             {## Critical Peak ##}
             {{ 0.91424 + 0.035760 + 0.003220 + 0.066110 }}
-          {% elif now().weekday() > 0 and now().weekday() < 6 and now().hour > 15 and now().hour <= 19 %}
+          {% elif now().weekday() > 0 and now().weekday() < 6 and now().hour >= 15 and now().hour < 19 %}
             {## On-Peak ##}
             {{ 0.13025 + 0.035760 + 0.003220 + 0.066110 }}
-          {% elif now().weekday() > 0 and now().weekday() < 6 and ((now().hour > 7 and now().hour <= 15) or (now().hour > 19 and now().hour <= 23)) %}
+          {% elif now().weekday() > 0 and now().weekday() < 6 and ((now().hour >= 7 and now().hour < 15) or (now().hour > 19 and now().hour <= 23)) %}
             {## Mid-Peak ##}
             {{ 0.05645 + 0.035760 + 0.003220 + 0.066110 }}
           {% else %}
