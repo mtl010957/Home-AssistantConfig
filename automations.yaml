@@ -1848,3 +1848,105 @@
     target:
       device_id: f743120b85da4c02b68c18c65965b2c3
   mode: single
+- id: '1628685914215'
+  alias: Energy Usage Mid Peak
+  description: ''
+  trigger:
+  - platform: time
+    at: input_datetime.energy_mid_peak_time_morning
+  - platform: time
+    at: input_datetime.energy_mid_peak_time_evening
+  condition:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  - condition: state
+    entity_id: sensor.dte_energy_used_hourly_critical_peak
+    state: paused
+    attribute: status
+  action:
+  - service: utility_meter.select_tariff
+    target:
+      entity_id: utility_meter.dte_energy_used_hourly
+    data:
+      tariff: mid_peak
+  mode: single
+- id: '1628686959403'
+  alias: Energy Usage On Peak
+  description: ''
+  trigger:
+  - platform: time
+    at: input_datetime.energy_on_peak_time
+  condition:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  - condition: state
+    entity_id: sensor.dte_energy_used_hourly_critical_peak
+    state: paused
+    attribute: status
+  action:
+  - service: utility_meter.select_tariff
+    target:
+      entity_id: utility_meter.dte_energy_used_hourly
+    data:
+      tariff: on_peak
+  mode: single
+- id: '1628687260650'
+  alias: Energy Usage Off Peak
+  description: ''
+  trigger:
+  - platform: time
+    at: input_datetime.energy_off_peak_time
+  condition:
+  - condition: state
+    entity_id: sensor.dte_energy_used_hourly_critical_peak
+    state: paused
+    attribute: status
+  action:
+  - service: utility_meter.select_tariff
+    target:
+      entity_id: utility_meter.dte_energy_used_hourly
+    data:
+      tariff: off_peak
+  mode: single
+- id: '1628687622317'
+  alias: Energy Usage Critical Peak Start
+  description: ''
+  trigger:
+  - platform: time
+    at: input_datetime.energy_critical_peak_start_date_time
+  condition: []
+  action:
+  - service: utility_meter.select_tariff
+    target:
+      entity_id: utility_meter.dte_energy_used_hourly
+    data:
+      tariff: critical_peak
+  mode: single
+- id: '1628687797296'
+  alias: Energy Usage Critical Peak Stop
+  description: ''
+  trigger:
+  - platform: time
+    at: input_datetime.energy_critical_peak_end_date_time
+  condition:
+  - condition: state
+    entity_id: sensor.dte_energy_used_hourly_critical_peak
+    state: collecting
+    attribute: status
+  action:
+  - service: utility_meter.select_tariff
+    target:
+      entity_id: utility_meter.dte_energy_used_hourly
+    data:
+      tariff: off_peak
+  mode: single
