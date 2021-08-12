@@ -75,9 +75,15 @@ include:
     - sensor.downstairs_smoke_alarm_battery_level
     - sensor.dte_energy_bridge_summary
     - sensor.dte_energy_bridge
-    - sensor.dte_energy_price
     - sensor.dte_energy_used
-    - sensor.dte_energy_used_cost
+    - sensor.dte_energy_used_hourly_critical_peak
+    - sensor.dte_energy_used_hourly_critical_peak_cost
+    - sensor.dte_energy_used_hourly_mid_peak
+    - sensor.dte_energy_used_hourly_mid_peak_cost
+    - sensor.dte_energy_used_hourly_off_peak
+    - sensor.dte_energy_used_hourly_off_peak_cost
+    - sensor.dte_energy_used_hourly_on_peak
+    - sensor.dte_energy_used_hourly_on_peak_cost
     - sensor.family_room_humidity
     - sensor.corrected_barometer_inhg
     - sensor.family_room_temperature
@@ -145,6 +151,8 @@ include:
     - switch.desert_desert_living_room_lamp
     - switch.desert_desert_main_bedroom_lamp
     - switch.hot_water_recirc_control_relay
+    # utility meter
+    - utility_meter.dte_energy_used_hourly
     # weather
     - weather.kptk_hourly
 exclude:
