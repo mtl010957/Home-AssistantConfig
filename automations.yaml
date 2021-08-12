@@ -1479,7 +1479,7 @@
     entity_id: sun.sun
     attribute: azimuth
     above: '80'
-    below: '210'
+    below: '200'
   action:
   - service: cover.set_cover_tilt_position
     target:
@@ -1497,7 +1497,7 @@
   - platform: numeric_state
     entity_id: sun.sun
     attribute: azimuth
-    above: '210'
+    above: '200'
     for: 00:02:00
   - platform: numeric_state
     entity_id: sun.sun
