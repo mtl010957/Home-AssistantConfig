@@ -34,6 +34,8 @@ switch.generic_cam4_set_3:
   icon: mdi:content-save-settings
 switch.generic_cam4_set_4:
   icon: mdi:content-save-settings
+switch.generic_cam4_hpatrol:
+  icon: mdi:orbit-variant
 switch.desert_living_room_camera:
   icon: mdi:camcorder
   friendly_name: Desert Living Room Camera Switch
