@@ -18,6 +18,22 @@ switch.generic_cam4_left:
   icon: mdi:arrow-left
 switch.generic_cam4_right:
   icon: mdi:arrow-right
+switch.generic_cam4_call_1:
+  icon: mdi:pan
+switch.generic_cam4_call_2:
+  icon: mdi:pan
+switch.generic_cam4_call_3:
+  icon: mdi:pan
+switch.generic_cam4_call_4:
+  icon: mdi:pan
+switch.generic_cam4_set_1:
+  icon: mdi:content-save-settings
+switch.generic_cam4_set_2:
+  icon: mdi:content-save-settings
+switch.generic_cam4_set_3:
+  icon: mdi:content-save-settings
+switch.generic_cam4_set_4:
+  icon: mdi:content-save-settings
 switch.desert_living_room_camera:
   icon: mdi:camcorder
   friendly_name: Desert Living Room Camera Switch
