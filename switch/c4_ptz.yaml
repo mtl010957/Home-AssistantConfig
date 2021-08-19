@@ -21,12 +21,12 @@
       command_on: '/config/scripts/c4_ptz.sh on right'
       command_off: '/config/scripts/c4_ptz.sh off right'
     #Switch for iSmart PTZ horizontal patrol
-    generic_cam4_right:
+    generic_cam4_hpatrol:
       friendly_name: "3629Cam4 PTZ HPatrol"
       command_on: '/config/scripts/c4_ptz.sh on hpatrol'
       command_off: '/config/scripts/c4_ptz.sh off hpatrol'
     #Switch for iSmart PTZ right
-    generic_cam4_right:
+    generic_cam4_vpatrol:
       friendly_name: "3629Cam4 PTZ VPatrol"
       command_on: '/config/scripts/c4_ptz.sh on vpatrol'
       command_off: '/config/scripts/c4_ptz.sh off vpatrol'
