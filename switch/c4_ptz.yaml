@@ -25,7 +25,7 @@
       friendly_name: "3629Cam4 PTZ HPatrol"
       command_on: '/config/scripts/c4_ptz.sh on hpatrol'
       command_off: '/config/scripts/c4_ptz.sh off hpatrol'
-    #Switch for iSmart PTZ right
+    #Switch for iSmart PTZ vertical patrol
     generic_cam4_vpatrol:
       friendly_name: "3629Cam4 PTZ VPatrol"
       command_on: '/config/scripts/c4_ptz.sh on vpatrol'
