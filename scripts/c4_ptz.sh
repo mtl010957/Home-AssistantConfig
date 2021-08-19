@@ -27,6 +27,22 @@ elif [ "$1" = "off" ] && [ "$2" = "right" ]
 then
   COMMAND=7
 fi
+elif [ "$1" = "on" ] && [ "$2" = "vpatrol" ]
+then
+  COMMAND=26
+fi
+elif [ "$1" = "off" ] && [ "$2" = "vpatrol" ]
+then
+  COMMAND=27
+fi
+elif [ "$1" = "on" ] && [ "$2" = "hpatrol" ]
+then
+  COMMAND=28
+fi
+elif [ "$1" = "off" ] && [ "$2" = "hpatrol" ]
+then
+  COMMAND=29
+fi
 
 #echo "$CAM4_URL/decoder_control.cgi?user=$CAM4_USR&pwd=$CAM4_PWD&command=$COMMAND&onestep=0"
 curl -k "$CAM4_URL/decoder_control.cgi?user=$CAM4_USR&pwd=$CAM4_PWD&command=$COMMAND&onestep=0"
