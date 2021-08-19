@@ -1950,3 +1950,35 @@
     data:
       tariff: off_peak
   mode: single
+- id: '1629391369948'
+  alias: Momentary Switches
+  description: Turn any switch into a momentary switch
+  trigger:
+  - platform: state
+    entity_id:
+    - switch.generic_cam4_call_1
+    - switch.generic_cam4_call_2
+    - switch.generic_cam4_call_3
+    - switch.generic_cam4_call_4
+    - switch.generic_cam4_set_1
+    - switch.generic_cam4_set_2
+    - switch.generic_cam4_set_3
+    - switch.generic_cam4_set_4
+    from: 'off'
+    to: 'on'
+    for: 00:00:01
+  condition: []
+  action:
+  - service: switch.turn_off
+    data: {}
+    target:
+      entity_id:
+      - switch.generic_cam4_call_1
+      - switch.generic_cam4_call_2
+      - switch.generic_cam4_call_3
+      - switch.generic_cam4_call_4
+      - switch.generic_cam4_set_1
+      - switch.generic_cam4_set_2
+      - switch.generic_cam4_set_3
+      - switch.generic_cam4_set_4
+  mode: single
