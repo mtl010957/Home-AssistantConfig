@@ -26,19 +26,15 @@ then
 elif [ "$1" = "off" ] && [ "$2" = "right" ]
 then
   COMMAND=7
-fi
 elif [ "$1" = "on" ] && [ "$2" = "vpatrol" ]
 then
   COMMAND=26
-fi
 elif [ "$1" = "off" ] && [ "$2" = "vpatrol" ]
 then
   COMMAND=27
-fi
 elif [ "$1" = "on" ] && [ "$2" = "hpatrol" ]
 then
   COMMAND=28
-fi
 elif [ "$1" = "off" ] && [ "$2" = "hpatrol" ]
 then
   COMMAND=29
