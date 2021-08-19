@@ -1,0 +1,9 @@
+  dte_energy_used_hourly:
+    name: "DTE Energy Used Hourly"
+    source: sensor.dte_energy_used
+    cycle: hourly
+    tariffs:
+      - 'Off Peak'
+      - 'Mid Peak'
+      - 'On Peak'
+      - 'Critical Peak'

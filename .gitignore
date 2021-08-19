@@ -19,6 +19,7 @@
 !switch
 !template
 !themes
+!utility_meter
 !weather
 !www
 !.storage/core.area_registry
