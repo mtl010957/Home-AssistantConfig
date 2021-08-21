@@ -1873,7 +1873,7 @@
     target:
       entity_id: utility_meter.dte_energy_used_hourly
     data:
-      tariff: mid_peak
+      tariff: Mid Peak
   mode: single
 - id: '1628686959403'
   alias: Energy Usage On Peak
@@ -1898,7 +1898,7 @@
     target:
       entity_id: utility_meter.dte_energy_used_hourly
     data:
-      tariff: on_peak
+      tariff: On Peak
   mode: single
 - id: '1628687260650'
   alias: Energy Usage Off Peak
@@ -1916,7 +1916,7 @@
     target:
       entity_id: utility_meter.dte_energy_used_hourly
     data:
-      tariff: off_peak
+      tariff: Off Peak
   mode: single
 - id: '1628687622317'
   alias: Energy Usage Critical Peak Start
@@ -1930,7 +1930,7 @@
     target:
       entity_id: utility_meter.dte_energy_used_hourly
     data:
-      tariff: critical_peak
+      tariff: Critical Peak
   mode: single
 - id: '1628687797296'
   alias: Energy Usage Critical Peak Stop
@@ -1948,7 +1948,7 @@
     target:
       entity_id: utility_meter.dte_energy_used_hourly
     data:
-      tariff: off_peak
+      tariff: Off Peak
   mode: single
 - id: '1629391369948'
   alias: Momentary Switches
