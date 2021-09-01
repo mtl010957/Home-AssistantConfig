@@ -1512,18 +1512,6 @@
       - 3f2e1d3be7a049f08d4d1bfe39c87fc4
       - 6792d04f64544b2f96bf1ba9855e2e5b
   mode: single
-- id: '1624070707135'
-  alias: Let's Encrypt Renewal
-  description: ''
-  trigger:
-  - platform: time
-    at: '3:20'
-  condition: []
-  action:
-  - service: hassio.addon_restart
-    data:
-      addon: core_letsencrypt
-  mode: single
 - id: '1624404207012'
   alias: Hot Water Recirc Off Night
   description: ''
@@ -1982,3 +1970,15 @@
       - switch.generic_cam4_set_3
       - switch.generic_cam4_set_4
   mode: single
+- id: '1630505270910'
+  alias: Renew Let's Encrypt Certificate
+  description: ''
+  use_blueprint:
+    path: mcnovy/renew_ssl_cert_homeassistant.yaml
+    input:
+      cert_expiry_sensor: sensor.cert_expiry_timestamp_ha_mtl_svn_dyndns_home_com
+      time_to_check_cert: '3:20:00'
+      send_notification: true
+      notification_device: 77ea7e8e39715881866784bb68da74ed
+      notification_title: Encryption Certificate Renewed Successfully
+      notification_message: HA Home encryption certificate has been successfully renewed!
