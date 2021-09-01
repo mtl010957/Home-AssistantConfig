@@ -96,3 +96,10 @@
     ignore_availability: true
     name: Birthdays
     track: true
+
+- cal_id: gmskiclub1@gmail.com
+  entities:
+  - device_id: gmskiclub1_gmail_com
+    ignore_availability: true
+    name: gmskiclub1@gmail.com
+    track: true
