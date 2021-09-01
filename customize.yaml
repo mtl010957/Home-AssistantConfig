@@ -48,3 +48,19 @@ cover.living_room_blinds:
   device_class: blind
 cover.family_room_blinds:
   device_class: blind
+sensor.dte_energy_used_hourly_critical_peak:
+  friendly_name: "DTE Energy Used Critical Peak"
+sensor.dte_energy_used_hourly_critical_peak_cost:
+  friendly_name: "DTE Energy Used Critical Peak Cost"
+sensor.dte_energy_used_hourly_mid_peak:
+  friendly_name: "DTE Energy Used Mid Peak"
+sensor.dte_energy_used_hourly_mid_peak_cost:
+  friendly_name: "DTE Energy Used Mid Peak Cost"
+sensor.dte_energy_used_hourly_off_peak:
+  friendly_name: "DTE Energy Used Off Peak"
+sensor.dte_energy_used_hourly_off_peak_cost:
+  friendly_name: "DTE Energy Used Off Peak Cost"
+sensor.dte_energy_used_hourly_on_peak:
+  friendly_name: "DTE Energy Used On Peak"
+sensor.dte_energy_used_hourly_on_peak_cost:
+  friendly_name: "DTE Energy Used On Peak Cost"
