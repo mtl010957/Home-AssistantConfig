@@ -2,13 +2,13 @@
   fans:
     house_fan:
       friendly_name: "House Fan"
-      value_template: "{{ states('switch.house_fan_switch_module_switch') }}"
+      value_template: "{{ states('switch.house_fan_switch') }}"
       turn_on:
         service: switch.turn_on
         data:
-          entity_id: switch.house_fan_switch_module_switch
+          entity_id: switch.house_fan_switch
       turn_off:
         service: switch.turn_off
         data:
-          entity_id: switch.house_fan_switch_module_switch
+          entity_id: switch.house_fan_switch
 
