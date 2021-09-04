@@ -64,3 +64,15 @@ sensor.dte_energy_used_hourly_on_peak:
   friendly_name: DTE On Peak
 sensor.dte_energy_used_hourly_on_peak_cost:
   friendly_name: DTE On Peak Cost
+binary_sensor.front_door_sensor_any:
+  device_class: door
+binary_sensor.back_door_sensor_any:
+  device_class: door
+binary_sensor.garage_door_sensor_any:
+  device_class: garage_door
+binary_sensor.garage_inside_door_sensor_any:
+  device_class: door
+binary_sensor.office_motion_sensor_any:
+  device_class: motion
+binary_sensor.main_bedroom_motion_sensor_any:
+  device_class: motion

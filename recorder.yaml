@@ -4,20 +4,20 @@ db_url: !secret recorder_db_url
 include:
   entities:
     # binary_sensors
-    - binary_sensor.back_door
+    - binary_sensor.back_door_sensor_any
     - binary_sensor.downstairs_co_detected
     - binary_sensor.downstairs_smoke_detected
     - binary_sensor.family_room_co_detected
     - binary_sensor.family_room_smoke_detected
-    - binary_sensor.front_door
+    - binary_sensor.front_door_sensor_any
     - binary_sensor.front_yard_camera_front_porch_person_detected
     - binary_sensor.front_yard_camera_front_porch_porch_activity
-    - binary_sensor.garage_door
-    - binary_sensor.garage_inside_door
+    - binary_sensor.garage_door_sensor_any
+    - binary_sensor.garage_inside_door_sensor_any
     - binary_sensor.garage_motion
     - binary_sensor.living_room_camera_person_detected
-    - binary_sensor.main_bedroom_motion
-    - binary_sensor.office_motion
+    - binary_sensor.main_bedroom_motion_sensor_any
+    - binary_sensor.office_motion_sensor_any
     - binary_sensor.updater
     - binary_sensor.upstairs_co_detected
     - binary_sensor.upstairs_smoke_detected
@@ -93,6 +93,7 @@ include:
     - sensor.furnace_supply_temperature_f
     - sensor.garage_humidity
     - sensor.garage_temperature
+    - sensor.house_fan_switch_electric_consumed_kwh
     - sensor.humidifier_off
     - sensor.humidifier_on
     - sensor.main_bedroom_humidity

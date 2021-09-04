@@ -356,7 +356,7 @@
   description: ''
   trigger:
   - platform: state
-    entity_id: binary_sensor.front_door
+    entity_id: binary_sensor.front_door_sensor_any
     from: 'off'
     to: 'on'
     for: 00:01:00
@@ -383,7 +383,7 @@
   description: ''
   trigger:
   - platform: state
-    entity_id: binary_sensor.back_door
+    entity_id: binary_sensor.back_door_sensor_any
     from: 'off'
     to: 'on'
     for: 00:01:00
@@ -410,7 +410,7 @@
   description: ''
   trigger:
   - platform: state
-    entity_id: binary_sensor.garage_door
+    entity_id: binary_sensor.garage_door_sensor_any
     from: 'off'
     to: 'on'
     for: 00:01:00
@@ -521,7 +521,7 @@
   alias: Garage latch off when door open
   description: ''
   trigger:
-  - entity_id: binary_sensor.garage_door
+  - entity_id: binary_sensor.garage_door_sensor_any
     from: 'off'
     platform: state
     to: 'on'
@@ -636,11 +636,11 @@
   description: ''
   trigger:
   - platform: state
-    entity_id: binary_sensor.garage_door
+    entity_id: binary_sensor.garage_door_sensor_any
     from: 'off'
     to: 'on'
   - platform: state
-    entity_id: binary_sensor.garage_inside_door
+    entity_id: binary_sensor.garage_inside_door_sensor_any
     from: 'off'
     to: 'on'
   condition: []
@@ -666,10 +666,10 @@
       milliseconds: 0
   condition:
   - condition: state
-    entity_id: binary_sensor.garage_door
+    entity_id: binary_sensor.garage_door_sensor_any
     state: 'off'
   - condition: state
-    entity_id: binary_sensor.garage_inside_door
+    entity_id: binary_sensor.garage_inside_door_sensor_any
     state: 'off'
   action:
   - type: turn_off
@@ -703,11 +703,11 @@
   description: ''
   trigger:
   - platform: state
-    entity_id: binary_sensor.garage_door
+    entity_id: binary_sensor.garage_door_sensor_any
     from: 'on'
     to: 'off'
   - platform: state
-    entity_id: binary_sensor.garage_inside_door
+    entity_id: binary_sensor.garage_inside_door_sensor_any
     from: 'on'
     to: 'off'
   - type: no_motion
@@ -732,10 +732,10 @@
       seconds: 0
       milliseconds: 0
   - condition: state
-    entity_id: binary_sensor.garage_door
+    entity_id: binary_sensor.garage_door_sensor_any
     state: 'off'
   - condition: state
-    entity_id: binary_sensor.garage_inside_door
+    entity_id: binary_sensor.garage_inside_door_sensor_any
     state: 'off'
   action:
   - type: turn_off
@@ -1196,7 +1196,7 @@
   action:
   - service: fan.set_percentage
     target:
-      device_id: f743120b85da4c02b68c18c65965b2c3
+      entity_id: fan.family_room_ceiling_fan
     data:
       percentage: 66
   mode: single
@@ -1211,10 +1211,9 @@
     subtype: dim_down
   condition: []
   action:
-  - device_id: f743120b85da4c02b68c18c65965b2c3
-    domain: fan
-    entity_id: fan.family_room_ceiling_fan
-    type: turn_off
+  - service: fan.turn_off
+    target:
+      entity_id: fan.family_room_ceiling_fan
   mode: single
 - id: '1615490343030'
   alias: IKEA Remote 1 Left
@@ -1229,7 +1228,7 @@
   action:
   - service: fan.set_percentage
     target:
-      device_id: f743120b85da4c02b68c18c65965b2c3
+      entity_id: fan.family_room_ceiling_fan
     data:
       percentage: 33
   mode: single
@@ -1246,7 +1245,7 @@
   action:
   - service: fan.set_percentage
     target:
-      device_id: f743120b85da4c02b68c18c65965b2c3
+      entity_id: fan.family_room_ceiling_fan
     data:
       percentage: 100
   mode: single
@@ -1262,10 +1261,10 @@
   condition: []
   action:
   - service: fan.set_percentage
-    target:
-      device_id: 6d21f24f1bc24bee85172a5327b56fda
     data:
       percentage: 66
+    target:
+      entity_id: fan.main_bedroom_ceiling_fan
   mode: single
 - id: '1615600580812'
   alias: IKEA Remote 2 Dim Down
@@ -1278,10 +1277,9 @@
     subtype: dim_down
   condition: []
   action:
-  - device_id: 6d21f24f1bc24bee85172a5327b56fda
-    domain: fan
-    entity_id: fan.main_bedroom_ceiling_fan
-    type: turn_off
+  - service: fan.turn_off
+    target:
+      entity_id: fan.main_bedroom_ceiling_fan
   mode: single
 - id: '1615600620342'
   alias: IKEA Remote 2 Left
@@ -1296,7 +1294,7 @@
   action:
   - service: fan.set_percentage
     target:
-      device_id: 6d21f24f1bc24bee85172a5327b56fda
+      entity_id: fan.main_bedroom_ceiling_fan
     data:
       percentage: 33
   mode: single
@@ -1313,7 +1311,7 @@
   action:
   - service: fan.set_percentage
     target:
-      device_id: 6d21f24f1bc24bee85172a5327b56fda
+      entity_id: fan.main_bedroom_ceiling_fan
     data:
       percentage: 100
   mode: single
@@ -1370,7 +1368,7 @@
   description: ''
   trigger:
   - platform: state
-    entity_id: binary_sensor.garage_inside_door
+    entity_id: binary_sensor.garage_inside_door_sensor_any
     from: 'off'
     to: 'on'
     for: 00:01:00
@@ -1781,7 +1779,7 @@
   action:
   - service: fan.decrease_speed
     target:
-      device_id: 6d21f24f1bc24bee85172a5327b56fda
+      entity_id: fan.main_bedroom_ceiling_fan
     data:
       percentage_step: 10
   mode: single
@@ -1798,7 +1796,7 @@
   action:
   - service: fan.increase_speed
     target:
-      device_id: 6d21f24f1bc24bee85172a5327b56fda
+      entity_id: fan.main_bedroom_ceiling_fan
     data:
       percentage_step: 10
   mode: single
@@ -1817,7 +1815,7 @@
     data:
       percentage_step: 10
     target:
-      device_id: f743120b85da4c02b68c18c65965b2c3
+      entity_id: fan.family_room_ceiling_fan
   mode: single
 - id: '1628015289843'
   alias: IKEA Remote 1 Dim Up Hold
@@ -1834,7 +1832,7 @@
     data:
       percentage_step: 10
     target:
-      device_id: f743120b85da4c02b68c18c65965b2c3
+      entity_id: fan.family_room_ceiling_fan
   mode: single
 - id: '1628685914215'
   alias: Energy Usage Mid Peak
