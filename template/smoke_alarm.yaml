@@ -1,46 +1,31 @@
   - binary_sensor:
-      - unique_id: upstairs_smoke_detected
-        name: Upstairs Smoke Detected
+      - unique_id: garage_smoke_detected
+        name: Garage Smoke Detected
         device_class: smoke
         state: >-
-          {{ is_state('sensor.upstairs_smoke_alarm_alarmlevel', '255') and is_state('sensor.upstairs_smoke_alarm_alarmtype', '1') }}
-      - unique_id: upstairs_co_detected
-        name: Upstairs CO Detected
+          {{ is_state('sensor.garage_smoke_alarm_alarmlevel', '255') and is_state('sensor.garage_smoke_alarm_alarmtype', '1') }}
+      - unique_id: garage_co_detected
+        name: Garage CO Detected
         device_class: smoke
         state: >-
-          {{ is_state('sensor.upstairs_smoke_alarm_alarmlevel', '255') and is_state('sensor.upstairs_smoke_alarm_alarmtype', '2') }}
-      - unique_id: upstairs_smoke_alarm_test
-        name: Upstairs Smoke Alarm Test
+          {{ is_state('sensor.garage_smoke_alarm_alarmlevel', '255') and is_state('sensor.garage_smoke_alarm_alarmtype', '2') }}
+      - unique_id: garage_smoke_alarm_test
+        name: Garage Smoke Alarm Test
         device_class: smoke
         state: >-
-          {{ is_state('sensor.upstairs_smoke_alarm_alarmlevel', '0') and is_state('sensor.upstairs_smoke_alarm_alarmtype', '12') }}
-      - unique_id: downstairs_smoke_detected
-        name: Downstairs Smoke Detected
+          {{ is_state('sensor.garage_smoke_alarm_alarmlevel', '0') and is_state('sensor.garage_smoke_alarm_alarmtype', '12') }}
+      - unique_id: laundry_smoke_detected
+        name: Laundry Smoke Detected
         device_class: smoke
         state: >-
-          {{ is_state('sensor.downstairs_smoke_alarm_alarmlevel', '255') and is_state('sensor.downstairs_smoke_alarm_alarmtype', '1') }}
-      - unique_id: downstairs_co_detected
-        name: Downstairs CO Detected
+          {{ is_state('sensor.laundry_smoke_alarm_alarmlevel', '255') and is_state('sensor.laundry_smoke_alarm_alarmtype', '1') }}
+      - unique_id: laundry_co_detected
+        name: Laundry CO Detected
         device_class: smoke
         state: >-
-          {{ is_state('sensor.downstairs_smoke_alarm_alarmlevel', '255') and is_state('sensor.downstairs_smoke_alarm_alarmtype', '2') }}
-      - unique_id: downstairs_smoke_alarm_test
-        name: Downstairs Smoke Alarm Test
+          {{ is_state('sensor.laundry_smoke_alarm_alarmlevel', '255') and is_state('sensor.laundry_smoke_alarm_alarmtype', '2') }}
+      - unique_id: laundry_smoke_alarm_test
+        name: Laundry Smoke Alarm Test
         device_class: smoke
         state: >-
-          {{ is_state('sensor.downstairs_smoke_alarm_alarmlevel', '0') and is_state('sensor.downstairs_smoke_alarm_alarmtype', '12') }}
-      - unique_id: family_room_smoke_detected
-        name: Family Room Smoke Detected
-        device_class: smoke
-        state: >-
-          {{ is_state('sensor.family_room_smoke_alarm_alarmlevel', '255') and is_state('sensor.family_room_smoke_alarm_alarmtype', '1') }}
-      - unique_id: family_room_co_detected
-        name: Family Room CO Detected
-        device_class: smoke
-        state: >-
-          {{ is_state('sensor.family_room_smoke_alarm_alarmlevel', '255') and is_state('sensor.family_room_smoke_alarm_alarmtype', '2') }}
-      - unique_id: family_room_smoke_alarm_test
-        name: Family Room Smoke Alarm Test
-        device_class: smoke
-        state: >-
-          {{ is_state('sensor.family_room_smoke_alarm_alarmlevel', '0') and is_state('sensor.family_room_smoke_alarm_alarmtype', '12') }}
+          {{ is_state('sensor.laundry_smoke_alarm_alarmlevel', '0') and is_state('sensor.laundry_smoke_alarm_alarmtype', '12') }}
