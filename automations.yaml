@@ -759,30 +759,30 @@
     service: recorder.purge
   mode: single
 - id: '1589219972504'
-  alias: Notify Fire Downstairs
+  alias: Notify Smoke Downstairs
   description: ''
   trigger:
-  - entity_id: binary_sensor.downstairs_smoke_detected
-    for: 00:00:10
-    from: 'off'
-    platform: state
-    to: 'on'
+  - type: smoke
+    platform: device
+    device_id: 58fbbf4958e8c695c1d6557bd9314591
+    entity_id: binary_sensor.downstairs_smoke_co_alarm_smoke_alarm_smoke_detected
+    domain: binary_sensor
   condition: []
   action:
   - data:
-      message: There is a fire downstairs, get to safety!
-      title: FIRE Downstairs!
+      message: There is smoke downstairs, get to safety!
+      title: SMOKE Downstairs!
     service: notify.notify
   mode: single
 - id: '1589220124517'
   alias: Notify CO Downstairs
   description: ''
   trigger:
-  - entity_id: binary_sensor.downstairs_co_detected
-    for: 00:00:10
-    from: 'off'
-    platform: state
-    to: 'on'
+  - type: gas
+    platform: device
+    device_id: 58fbbf4958e8c695c1d6557bd9314591
+    entity_id: binary_sensor.downstairs_smoke_co_alarm_co_alarm_carbon_monoxide_detected
+    domain: binary_sensor
   condition: []
   action:
   - data:
@@ -791,10 +791,10 @@
     service: notify.notify
   mode: single
 - id: '1589220235995'
-  alias: Notify CO Upstairs
+  alias: Notify CO Garage
   description: ''
   trigger:
-  - entity_id: binary_sensor.upstairs_co_detected
+  - entity_id: binary_sensor.garage_co_detected
     for: 00:00:10
     from: 'off'
     platform: state
@@ -802,15 +802,15 @@
   condition: []
   action:
   - data:
-      message: There is high CO detected upstairs, get to fresh air!
-      title: CO Upstairs!
+      message: There is high CO detected in the garage, get to fresh air!
+      title: CO In Garage!
     service: notify.notify
   mode: single
 - id: '1589220336564'
-  alias: Notify Fire Upstairs
+  alias: Notify Smoke Garage
   description: ''
   trigger:
-  - entity_id: binary_sensor.upstairs_smoke_detected
+  - entity_id: binary_sensor.garage_smoke_detected
     for: 00:00:10
     from: 'off'
     platform: state
@@ -818,35 +818,35 @@
   condition: []
   action:
   - data:
-      message: There is a fire upstairs, get to safety!
-      title: FIRE Upstairs!
+      message: There is smoke in the garage, get to safety!
+      title: SMOKE In Garage!
     service: notify.notify
   mode: single
 - id: '1589220971925'
-  alias: Notify Fire Family Room
+  alias: Notify Smoke Family Room
   description: ''
   trigger:
-  - entity_id: binary_sensor.family_room_fire_detected
-    for: 00:00:10
-    from: 'off'
-    platform: state
-    to: 'on'
+  - type: smoke
+    platform: device
+    device_id: 11f2e28d1b01442ce3484060cceb5221
+    entity_id: binary_sensor.family_room_smoke_co_alarm_smoke_alarm_smoke_detected
+    domain: binary_sensor
   condition: []
   action:
   - data:
-      message: There is a fire in the family room, get to safety!
-      title: FIRE In Family Room!
+      message: There is smoke in the family room, get to safety!
+      title: SMOKE In Family Room!
     service: notify.notify
   mode: single
 - id: '1589221081422'
   alias: Notify CO Family Room
   description: ''
   trigger:
-  - entity_id: binary_sensor.family_room_co_detected
-    for: 00:00:10
-    from: 'off'
-    platform: state
-    to: 'on'
+  - type: gas
+    platform: device
+    device_id: 11f2e28d1b01442ce3484060cceb5221
+    entity_id: binary_sensor.family_room_smoke_co_alarm_co_alarm_carbon_monoxide_detected
+    domain: binary_sensor
   condition: []
   action:
   - data:
@@ -855,66 +855,54 @@
     service: notify.notify
   mode: single
 - id: '1589227167980'
-  alias: Notify Battery Low Downstairs Smoke Alarm
+  alias: Notify Battery Low Downstairs Smoke/CO Alarm
   description: ''
   trigger:
-  - below: 80
-    device_id: fcbbefffc26a4249a4e27f01bbf24105
-    domain: sensor
-    entity_id: sensor.downstairs_smoke_alarm_battery_level
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 10
+  - type: battery_level
     platform: device
-    type: battery_level
+    device_id: 58fbbf4958e8c695c1d6557bd9314591
+    entity_id: sensor.downstairs_smoke_co_alarm_battery_level
+    domain: sensor
+    below: 75
   condition: []
   action:
   - data:
-      message: The downstairs smoke alarm battery is low, please replace it ASAP.
-      title: Downstairs Smoke Alarm Battery Low
+      message: The downstairs smoke/co alarm battery is low, please replace it ASAP.
+      title: Downstairs Smoke/CO Alarm Battery Low
     service: notify.notify
   mode: single
 - id: '1589227293445'
-  alias: Notify Battery Low Upstairs Smoke Alarm
+  alias: Notify Battery Low Upstairs Smoke/CO Alarm
   description: ''
   trigger:
-  - below: 80
-    device_id: 4e811fdefdea408ebf121abe13e8bb8f
-    domain: sensor
-    entity_id: sensor.upstairs_smoke_alarm_battery_level
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 10
+  - type: battery_level
     platform: device
-    type: battery_level
+    device_id: e5f6747932258108523afc914457adc5
+    entity_id: sensor.upstairs_smoke_co_alarm_battery_level
+    domain: sensor
+    below: 75
   condition: []
   action:
   - data:
-      message: The upstairs smoke alarm battery is low, please replace it ASAP.
-      title: Upstairs Smoke Alarm Battery Low
+      message: The upstairs smoke/co alarm battery is low, please replace it ASAP.
+      title: Upstairs Smoke/CO Alarm Battery Low
     service: notify.notify
   mode: single
 - id: '1589565473182'
-  alias: Notify Battery Low Family Room Smoke Alarm
+  alias: Notify Battery Low Family Room Smoke/CO Alarm
   description: ''
   trigger:
-  - below: 80
-    device_id: c3cc29801bfd4f25802b05085241dca2
-    domain: sensor
-    entity_id: sensor.family_room_smoke_alarm_battery_level
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 10
+  - type: battery_level
     platform: device
-    type: battery_level
+    device_id: 11f2e28d1b01442ce3484060cceb5221
+    entity_id: sensor.family_room_smoke_co_alarm_battery_level
+    domain: sensor
+    below: 75
   condition: []
   action:
   - data:
-      message: The family room smoke alarm battery is low, please replace it ASAP.
-      title: Family Room Smoke Alarm Battery Low
+      message: The family room smoke/co alarm battery is low, please replace it ASAP.
+      title: Family Room Smoke/CO Alarm Battery Low
     service: notify.notify
   mode: single
 - id: '1589813195543'
@@ -1980,3 +1968,95 @@
       notification_device: 77ea7e8e39715881866784bb68da74ed
       notification_title: Encryption Certificate Renewed Successfully
       notification_message: HA Home encryption certificate has been successfully renewed!
+- id: '1630938392774'
+  alias: Notify Battery Low Garage Smoke/CO Alarm
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.garage_smoke_alarm_battery_level
+    below: '75'
+  condition: []
+  action:
+  - data:
+      message: The garage smoke/co alarm battery is low, please replace it ASAP.
+      title: Garage Smoke/CO Alarm Battery Low
+    service: notify.notify
+  mode: single
+- id: '1630938436914'
+  alias: Notify Battery Low Laundry Smoke/CO Alarm
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.laundry_smoke_alarm_battery_level
+    below: '75'
+  condition: []
+  action:
+  - data:
+      message: The laundry smoke/co alarm battery is low, please replace it ASAP.
+      title: Laundry Smoke/CO Alarm Battery Low
+    service: notify.notify
+  mode: single
+- id: '1630938647108'
+  alias: Notify CO Laundry
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.laundry_co_detected
+    for: 00:00:10
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      message: There is high CO detected in the laundry, get to fresh air!
+      title: CO In Laundry!
+    service: notify.notify
+  mode: single
+- id: '1630938727907'
+  alias: Notify CO Upstairs
+  description: ''
+  trigger:
+  - type: gas
+    platform: device
+    device_id: e5f6747932258108523afc914457adc5
+    entity_id: binary_sensor.upstairs_smoke_co_alarm_co_alarm_carbon_monoxide_detected
+    domain: binary_sensor
+  condition: []
+  action:
+  - data:
+      message: There is high CO detected upstairs, get to fresh air!
+      title: CO Upstairs!
+    service: notify.notify
+  mode: single
+- id: '1630939046461'
+  alias: Notify Smoke Laundry
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.laundry_smoke_detected
+    for: 00:00:10
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      message: There is smoke in the laundry, get to safety!
+      title: SMOKE In Laundry!
+    service: notify.notify
+  mode: single
+- id: '1630939153913'
+  alias: Notify Smoke Upstairs
+  description: ''
+  trigger:
+  - type: smoke
+    platform: device
+    device_id: e5f6747932258108523afc914457adc5
+    entity_id: binary_sensor.upstairs_smoke_co_alarm_smoke_alarm_smoke_detected
+    domain: binary_sensor
+  condition: []
+  action:
+  - data:
+      message: There is smoke upstairs, get to safety!
+      title: SMOKE Upstairs!
+    service: notify.notify
+  mode: single

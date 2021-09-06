@@ -5,22 +5,26 @@ include:
   entities:
     # binary_sensors
     - binary_sensor.back_door_sensor_any
-    - binary_sensor.downstairs_co_detected
-    - binary_sensor.downstairs_smoke_detected
-    - binary_sensor.family_room_co_detected
-    - binary_sensor.family_room_smoke_detected
+    - binary_sensor.downstairs_smoke_co_alarm_co_alarm_carbon_monoxide_detected
+    - binary_sensor.downstairs_smoke_co_alarm_smoke_alarm_smoke_detected
+    - binary_sensor.family_room_smoke_co_alarm_co_alarm_carbon_monoxide_detected
+    - binary_sensor.family_room_smoke_co_alarm_smoke_alarm_smoke_detected
     - binary_sensor.front_door_sensor_any
     - binary_sensor.front_yard_camera_front_porch_person_detected
     - binary_sensor.front_yard_camera_front_porch_porch_activity
     - binary_sensor.garage_door_sensor_any
     - binary_sensor.garage_inside_door_sensor_any
     - binary_sensor.garage_motion
+    - binary_sensor.garage_co_detected
+    - binary_sensor.garage_smoke_detected
     - binary_sensor.living_room_camera_person_detected
+    - binary_sensor.laundry_co_detected
+    - binary_sensor.laundry_smoke_detected
     - binary_sensor.main_bedroom_motion_sensor_any
     - binary_sensor.office_motion_sensor_any
     - binary_sensor.updater
-    - binary_sensor.upstairs_co_detected
-    - binary_sensor.upstairs_smoke_detected
+    - binary_sensor.upstairs_smoke_co_alarm_co_alarm_carbon_monoxide_detected
+    - binary_sensor.upstairs_smoke_co_alarm_smoke_alarm_smoke_detected
     - binary_sensor.rpi_power_status
     - binary_sensor.desert_rpi_power_status
     # climate
@@ -72,7 +76,6 @@ include:
     - sensor.office_humidity
     - sensor.caravan_temperature
     - sensor.caravan_humidity
-    - sensor.downstairs_smoke_alarm_battery_level
     - sensor.dte_energy_bridge_summary
     - sensor.dte_energy_bridge
     - sensor.dte_energy_used
@@ -84,18 +87,22 @@ include:
     - sensor.dte_energy_used_hourly_off_peak_cost
     - sensor.dte_energy_used_hourly_on_peak
     - sensor.dte_energy_used_hourly_on_peak_cost
+    - sensor.downstairs_smoke_co_alarm_battery_level
     - sensor.family_room_humidity
     - sensor.corrected_barometer_inhg
     - sensor.family_room_temperature
+    - sensor.family_room_smoke_co_alarm_battery_level
     - sensor.furnace_flue_temperature_f
     - sensor.furnace_nw_zone_return_temperature_f
     - sensor.furnace_se_zone_return_temperature_f
     - sensor.furnace_supply_temperature_f
     - sensor.garage_humidity
     - sensor.garage_temperature
+    - sensor.garage_smoke_alarm_battery_level
     - sensor.house_fan_switch_electric_consumed_kwh
     - sensor.humidifier_off
     - sensor.humidifier_on
+    - sensor.laundry_smoke_alarm_battery_level
     - sensor.main_bedroom_humidity
     - sensor.main_bedroom_temperature
     - sensor.outdoor_humidity
@@ -103,10 +110,10 @@ include:
     - sensor.ups_status
     - sensor.ups_input_voltage
     - sensor.ups_battery_charge
+    - sensor.upstairs_smoke_co_alarm_battery_level
     - sensor.desert_ups_d_status
     - sensor.desert_ups_d_input_voltage
     - sensor.desert_ups_d_battery_charge
-    - sensor.upstairs_smoke_alarm_battery_level
     - sensor.ikea_remote_1_power
     - sensor.ikea_remote_2_power
     - sensor.ikea_switch_1_power
