@@ -3,3 +3,40 @@ family:
   entities:
     - person.michael_loeffler
     - person.susan_loeffler
+family_room_smoke_co:
+  name: Family Room Smoke/CO
+  icon: mdi:alert-circle
+  entities:
+    - binary_sensor.family_room_smoke_co_alarm_co_alarm_carbon_monoxide_detected
+    - binary_sensor.family_room_smoke_co_alarm_co_alarm_replacement_required_end_of_life
+    - binary_sensor.family_room_smoke_co_alarm_low_battery_level
+    - binary_sensor.family_room_smoke_co_alarm_smoke_alarm_smoke_detected
+    - binary_sensor.family_room_smoke_co_alarm_system_system_hardware_failure
+downstairs_smoke_co:
+  name: Downstairs Smoke/CO
+  entities:
+    - binary_sensor.downstairs_smoke_co_alarm_co_alarm_carbon_monoxide_detected
+    - binary_sensor.downstairs_smoke_co_alarm_co_alarm_replacement_required_end_of_life
+    - binary_sensor.downstairs_smoke_co_alarm_low_battery_level
+    - binary_sensor.downstairs_smoke_co_alarm_smoke_alarm_smoke_detected
+    - binary_sensor.downstairs_smoke_co_alarm_system_system_hardware_failure
+upstairs_smoke_co:
+  name: Upstairs Smoke/CO
+  entities:
+    - binary_sensor.upstairs_smoke_co_alarm_co_alarm_carbon_monoxide_detected
+    - binary_sensor.upstairs_smoke_co_alarm_co_alarm_replacement_required_end_of_life
+    - binary_sensor.upstairs_smoke_co_alarm_low_battery_level
+    - binary_sensor.upstairs_smoke_co_alarm_smoke_alarm_smoke_detected
+    - binary_sensor.upstairs_smoke_co_alarm_system_system_hardware_failure
+garage_smoke_co:
+  name: Garage Smoke/CO
+  entities:
+    - binary_sensor.garage_co_detected
+    - binary_sensor.garage_smoke_alarm_low_battery_level
+    - binary_sensor.garage_smoke_detected
+laundry_smoke_co:
+  name: Laundry Smoke/CO
+  entities:
+    - binary_sensor.laundry_co_detected
+    - binary_sensor.laundry_smoke_alarm_low_battery_level
+    - binary_sensor.laundry_smoke_detected
