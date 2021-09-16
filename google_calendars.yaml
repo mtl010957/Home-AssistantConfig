@@ -103,3 +103,10 @@
     ignore_availability: true
     name: gmskiclub1@gmail.com
     track: true
+
+- cal_id: 6dtvhamlpgq6vupk4dac218e4h2aq3bm@import.calendar.google.com
+  entities:
+  - device_id: https_www_rvtripwizard_com_ics_hash_73421_b2jpzw5rczb0wlh1ofrgndzsmxz0ut09
+    ignore_availability: true
+    name: https://www.rvtripwizard.com/ics_hash/73421/b2JpZW5rczB0Wlh1OFRGNDZSMXZ0UT09
+    track: true
