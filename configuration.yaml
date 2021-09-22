@@ -27,9 +27,6 @@ logger: !include logger.yaml
 # Enables support for tracking state changes over time.
 recorder: !include recorder.yaml
 
-# NEW streaming support
-stream:
-
 # Various manually defined devices
 # Alarm panel
 alarm_control_panel: !include alarm_control_panel.yaml
