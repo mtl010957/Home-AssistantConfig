@@ -8,7 +8,6 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
-#history: !include history.yaml
 
 # Required http setup for reverse proxy
 http:
