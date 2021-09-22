@@ -110,3 +110,10 @@
     ignore_availability: true
     name: https://www.rvtripwizard.com/ics_hash/73421/b2JpZW5rczB0Wlh1OFRGNDZSMXZ0UT09
     track: true
+
+- cal_id: lcfeplaitdtd4n49bhqr7l8u8e9200r4@import.calendar.google.com
+  entities:
+  - device_id: https_www_rvtripwizard_com_ics_hash_73421_cupbrvdxnwzeu0nptedptjdeqkmzqt09
+    ignore_availability: true
+    name: https://www.rvtripwizard.com/ics_hash/73421/cUpBRVdXNWZEU0NpTEdpTjdEQkMzQT09
+    track: true
