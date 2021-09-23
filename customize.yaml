@@ -76,3 +76,5 @@ binary_sensor.office_motion_sensor_any:
   device_class: motion
 binary_sensor.main_bedroom_motion_sensor_any:
   device_class: motion
+sensor.cpu_temperature:
+  device_class: temperature
