@@ -1,16 +1,16 @@
   - platform: command_line
     name: Cam1 Motion Detect
     command: '/config/scripts/c1_md.sh'
-    scan_interval: 5
-    command_timeout: 3
+    scan_interval: 8
+    command_timeout: 5
   - platform: command_line
     name: Cam2 Motion Detect
     command: '/config/scripts/c2_md.sh'
-    scan_interval: 5
-    command_timeout: 3
+    scan_interval: 8
+    command_timeout: 5
   - platform: command_line
     name: Cam3 Motion Detect
     command: '/config/scripts/c3_md.sh'
-    scan_interval: 5
-    command_timeout: 3
+    scan_interval: 8
+    command_timeout: 5
     
