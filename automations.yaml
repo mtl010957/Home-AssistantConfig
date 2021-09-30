@@ -1511,12 +1511,15 @@
       - 6792d04f64544b2f96bf1ba9855e2e5b
   mode: single
 - id: '1624404207012'
-  alias: Hot Water Recirc Off Night
+  alias: Hot Water Recirc Off Night Home
   description: ''
   trigger:
   - platform: time
     at: '23:00:00'
-  condition: []
+  condition:
+  - condition: state
+    entity_id: group.family
+    state: home
   action:
   - device_id: a77074c758856cfb06fbcf0eef68c72a
     domain: climate
@@ -2071,4 +2074,78 @@
       message: There is smoke upstairs, get to safety!
       title: SMOKE Upstairs!
     service: notify.notify
+  mode: single
+- id: '1633014637999'
+  alias: Hot Water Recirc Away On
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: group.family
+    from: home
+    to: away
+    for:
+      hours: 2
+      minutes: 0
+      seconds: 0
+      milliseconds: 0
+  condition: []
+  action:
+  - device_id: a77074c758856cfb06fbcf0eef68c72a
+    domain: climate
+    entity_id: climate.hot_water_recirc_control_setting
+    type: set_preset_mode
+    preset_mode: away
+  - device_id: a77074c758856cfb06fbcf0eef68c72a
+    domain: climate
+    entity_id: climate.hot_water_recirc_control_setting
+    type: set_hvac_mode
+    hvac_mode: heat
+  mode: single
+- id: '1633014865653'
+  alias: Hot Water Recirc Home Day
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: group.family
+    from: away
+    to: home
+  condition:
+  - condition: time
+    after: 06:30:00
+    before: '23:00:00'
+  action:
+  - device_id: a77074c758856cfb06fbcf0eef68c72a
+    domain: climate
+    entity_id: climate.hot_water_recirc_control_setting
+    type: set_preset_mode
+    preset_mode: none
+  - device_id: a77074c758856cfb06fbcf0eef68c72a
+    domain: climate
+    entity_id: climate.hot_water_recirc_control_setting
+    type: set_hvac_mode
+    hvac_mode: heat
+  mode: single
+- id: '1633014926358'
+  alias: Hot Water Recirc Home Night
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: group.family
+    from: away
+    to: home
+  condition:
+  - condition: time
+    after: '23:00:00'
+    before: 06:30:00
+  action:
+  - device_id: a77074c758856cfb06fbcf0eef68c72a
+    domain: climate
+    entity_id: climate.hot_water_recirc_control_setting
+    type: set_preset_mode
+    preset_mode: none
+  - device_id: a77074c758856cfb06fbcf0eef68c72a
+    domain: climate
+    entity_id: climate.hot_water_recirc_control_setting
+    type: set_hvac_mode
+    hvac_mode: 'off'
   mode: single
