@@ -336,7 +336,7 @@
       entity_id: alarm_control_panel.3629_alarm
   mode: single
 - id: '1563648590512'
-  alias: Security Arm Away
+  alias: Security Arm Not Home
   trigger:
   - entity_id: group.family
     from: home
@@ -2076,18 +2076,18 @@
     service: notify.notify
   mode: single
 - id: '1633014637999'
-  alias: Hot Water Recirc Away On
+  alias: Hot Water Recirc Not Home On
   description: ''
   trigger:
   - platform: state
     entity_id: group.family
-    from: home
-    to: away
+    to: not_home
     for:
       hours: 2
       minutes: 0
       seconds: 0
       milliseconds: 0
+    from: home
   condition: []
   action:
   - device_id: a77074c758856cfb06fbcf0eef68c72a
@@ -2107,7 +2107,7 @@
   trigger:
   - platform: state
     entity_id: group.family
-    from: away
+    from: not_home
     to: home
   condition:
   - condition: time
@@ -2131,7 +2131,7 @@
   trigger:
   - platform: state
     entity_id: group.family
-    from: away
+    from: not_home
     to: home
   condition:
   - condition: time
