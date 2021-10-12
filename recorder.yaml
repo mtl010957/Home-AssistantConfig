@@ -65,6 +65,7 @@ include:
     # persons
     - person.michael_loeffler
     - person.susan_loeffler
+    - person.sarah_mulrenin
     # sensors
     - sensor.last_boot
     - sensor.load_1m
