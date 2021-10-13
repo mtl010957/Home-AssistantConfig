@@ -282,9 +282,9 @@
     state: armed_away
   action:
   - data: {}
-    service: script.security_lighting_on
-  - data: {}
     service: script.close_all_blinds
+  - data: {}
+    service: script.security_lighting_on
   mode: single
 - id: '1560462571547'
   alias: Security Lighting Off
