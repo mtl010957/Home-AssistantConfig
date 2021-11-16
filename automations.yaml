@@ -484,13 +484,13 @@
   alias: Notify Temperature Low Office
   description: ''
   trigger:
-  - below: '50.0'
-    entity_id: sensor.office_temperature
+  - entity_id: sensor.office_temperature
     platform: numeric_state
+    below: '45'
   condition: []
   action:
   - data:
-      message: The temperature in the office is below 50 degrees
+      message: The temperature in the office is below 45 degrees
       title: Office Temperature Low
     service: notify.notify
   mode: single
