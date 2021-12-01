@@ -2149,3 +2149,19 @@
     type: set_hvac_mode
     hvac_mode: 'off'
   mode: single
+- id: '1638294700278'
+  alias: Mounts
+  description: ''
+  trigger:
+  - platform: homeassistant
+    event: start
+  condition: []
+  action:
+  - service: shell_command.mount_3629cam1_record
+  - service: shell_command.mount_3629cam1_snap
+  - service: shell_command.mount_3629cam2_record
+  - service: shell_command.mount_3629cam2_snap
+  - service: shell_command.mount_3629cam3_record
+  - service: shell_command.mount_3629cam3_snap
+  - service: shell_command.mount_3629cam4
+  mode: single

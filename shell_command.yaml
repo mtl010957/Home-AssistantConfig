@@ -1,0 +1,7 @@
+  mount_3629cam1_snap: mount 192.168.13.5:/mnt/HD/HD_a2/3629cam1/C1_00626E69269A/snap /config/www/3629cam1/C1_00626E69269A/snap
+  mount_3629cam1_record: mount 192.168.13.5:/mnt/HD/HD_a2/3629cam1/C1_00626E69269A/record /config/www/3629cam1/C1_00626E69269A/record
+  mount_3629cam2_snap: mount 192.168.13.5:/mnt/HD/HD_a2/3629cam2/C1_00626E6926B6/snap /config/www/3629cam2/C1_00626E6926B6/snap
+  mount_3629cam2_record: mount 192.168.13.5:/mnt/HD/HD_a2/3629cam2/C1_00626E6926B6/record /config/www/3629cam2/C1_00626E6926B6/record
+  mount_3629cam3_snap: mount 192.168.13.5:/mnt/HD/HD_a2/3629cam3/C1_00626E82585D/snap /config/www/3629cam3/C1_00626E82585D/snap
+  mount_3629cam3_record: mount 192.168.13.5:/mnt/HD/HD_a2/3629cam3/C1_00626E82585D/record /config/www/3629cam3/C1_00626E82585D/record
+  mount_3629cam4: mount 192.168.13.5:/mnt/HD/HD_a2/3629cam4 /config/www/3629cam4
