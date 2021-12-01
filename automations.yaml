@@ -555,7 +555,7 @@
   description: ''
   trigger:
   - platform: template
-    value_template: '{{ states(''sensor.office_humidity'') | float > states(''sensor.humidifier_off'')
+    value_template: '{{ states(''sensor.office_humidity'') | float > states(''sensor.humidifier_off_point'')
       | float  }}'
   condition: []
   action:
@@ -569,7 +569,7 @@
   description: ''
   trigger:
   - platform: template
-    value_template: '{{ states(''sensor.office_humidity'') | float < states(''sensor.humidifier_on'')
+    value_template: '{{ states(''sensor.office_humidity'') | float < states(''sensor.humidifier_on_point'')
       | float  and state_attr(''climate.thermostat'', ''hvac_action'') == ''heating''
       }}'
   condition: []
@@ -587,7 +587,7 @@
     platform: time
   condition:
   - condition: template
-    value_template: '{{ states(''sensor.main_bedroom_humidity'') | float < states(''sensor.humidifier_on'')
+    value_template: '{{ states(''sensor.office_humidity'') | float < states(''sensor.humidifier_on_point'')
       | float }}'
   action:
   - type: turn_on
@@ -1064,7 +1064,7 @@
   description: ''
   trigger:
   - platform: template
-    value_template: '{{ states(''sensor.main_bedroom_humidity'') | float < states(''sensor.humidifier_on'')
+    value_template: '{{ states(''sensor.office_humidity'') | float < states(''sensor.humidifier_on_point'')
       | float  }}'
     for: 00:05:00
   condition:
@@ -2157,11 +2157,8 @@
     event: start
   condition: []
   action:
-  - service: shell_command.mount_3629cam1_record
-  - service: shell_command.mount_3629cam1_snap
-  - service: shell_command.mount_3629cam2_record
-  - service: shell_command.mount_3629cam2_snap
-  - service: shell_command.mount_3629cam3_record
-  - service: shell_command.mount_3629cam3_snap
+  - service: shell_command.mount_3629cam1
+  - service: shell_command.mount_3629cam2
+  - service: shell_command.mount_3629cam3
   - service: shell_command.mount_3629cam4
   mode: single
