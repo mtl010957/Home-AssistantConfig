@@ -1,0 +1,2 @@
+mkdir -p /config/www/3629cam1/C1_00626E69269A/snap && mount 192.168.13.5:/mnt/HD/HD_a2/3629cam1/C1_00626E69269A/snap /config/www/3629cam1/C1_00626E69269A/snap
+mkdir -p /config/www/3629cam1/C1_00626E69269A/record && mount 192.168.13.5:/mnt/HD/HD_a2/3629cam1/C1_00626E69269A/record /config/www/3629cam1/C1_00626E69269A/record
