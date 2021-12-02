@@ -2162,3 +2162,54 @@
   - service: shell_command.mount_3629cam3
   - service: shell_command.mount_3629cam4
   mode: single
+- id: '1638397083007'
+  alias: Unmount
+  description: ''
+  trigger:
+  - platform: homeassistant
+    event: shutdown
+  condition: []
+  action:
+  - service: shell_command.unmount_3629cam1
+  - service: shell_command.unmount_3629cam2
+  - service: shell_command.unmount_3629cam3
+  - service: shell_command.unmount_3629cam4
+  mode: single
+- id: '1638450752881'
+  alias: Make Site
+  description: ''
+  trigger:
+  - platform: time
+    at: 00:02:00
+  condition:
+  - condition: numeric_state
+    entity_id: sensor.3629cam1_record
+    attribute: number_of_files
+    above: '0'
+  - condition: numeric_state
+    entity_id: sensor.3629cam1_snap
+    attribute: number_of_files
+    above: '0'
+  - condition: numeric_state
+    entity_id: sensor.3629cam2_record
+    attribute: number_of_files
+    above: '0'
+  - condition: numeric_state
+    entity_id: sensor.3629cam2_snap
+    attribute: number_of_files
+    above: '0'
+  - condition: numeric_state
+    entity_id: sensor.3629cam3_record
+    attribute: number_of_files
+    above: '0'
+  - condition: numeric_state
+    entity_id: sensor.3629cam3_snap
+    attribute: number_of_files
+    above: '0'
+  - condition: numeric_state
+    entity_id: sensor.3629cam4_record
+    attribute: number_of_files
+    above: '0'
+  action:
+  - service: shell_command.make_site
+  mode: single

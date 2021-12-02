@@ -1,0 +1,12 @@
+  - platform: files
+    folder: /config/www/3629cam3/C1_00626E82585D/snap
+    filter: '*/*.jpg'
+    name: 3629cam3_snap
+    sort: date
+    recursive: False
+  - platform: files
+    folder: /config/www/3629cam3/C1_00626E82585D/record
+    filter: '*/*.mp4'
+    name: 3629cam3_record
+    sort: date
+    recursive: False

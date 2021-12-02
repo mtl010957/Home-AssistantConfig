@@ -1,0 +1,6 @@
+  - platform: files
+    folder: /config/www/3629cam4
+    filter: '*/*.mp4'
+    name: 3629cam4_record
+    sort: date
+    recursive: False

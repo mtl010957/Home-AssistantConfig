@@ -1,5 +1,9 @@
-  mount_3629cam1: mount 192.168.13.5:/mnt/HD/HD_a2/3629cam1/C1_00626E69269A /config/www/3629cam1/C1_00626E69269A
-  mount_3629cam2: mount 192.168.13.5:/mnt/HD/HD_a2/3629cam2/C1_00626E6926B6 /config/www/3629cam2/C1_00626E6926B6
-  mount_3629cam3: mount 192.168.13.5:/mnt/HD/HD_a2/3629cam3/C1_00626E82585D /config/www/3629cam3/C1_00626E82585D
-  mount_3629cam4: mount 192.168.13.5:/mnt/HD/HD_a2/3629cam4 /config/www/3629cam4
+  mount_3629cam1: mount -t nfs 192.168.13.5:/mnt/HD/HD_a2/3629cam1/C1_00626E69269A /config/www/3629cam1/C1_00626E69269A -o rw,nolock,timeo=600
+  mount_3629cam2: mount -t nfs 192.168.13.5:/mnt/HD/HD_a2/3629cam2/C1_00626E6926B6 /config/www/3629cam2/C1_00626E6926B6 -o rw,nolock,timeo=600
+  mount_3629cam3: mount -t nfs 192.168.13.5:/mnt/HD/HD_a2/3629cam3/C1_00626E82585D /config/www/3629cam3/C1_00626E82585D -o rw,nolock,timeo=600
+  mount_3629cam4: mount -t nfs 192.168.13.5:/mnt/HD/HD_a2/3629cam4 /config/www/3629cam4 -o rw,nolock,timeo=600
+  unmount_3629cam1: umount /config/www/3629cam1/C1_00626E69269A
+  unmount_3629cam2: umount /config/www/3629cam2/C1_00626E6926B6
+  unmount_3629cam3: umount /config/www/3629cam3/C1_00626E82585D
+  unmount_3629cam4: umount /config/www/3629cam4
   make_site: bash /config/scripts/make_site.sh
