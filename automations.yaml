@@ -1115,6 +1115,7 @@
       - automation.xmas_lights_on_at_05_00_am
       - automation.xmas_lights_on_at_dusk
       - automation.xmas_lights_work_morning
+      - automation.xmas_lights_on_energy_summary_over_1kw_4am_to_sunrise_not_armed_away
   mode: single
 - id: '1613235512761'
   alias: Xmas Season End
@@ -1133,6 +1134,7 @@
       - automation.xmas_lights_on_at_05_00_am
       - automation.xmas_lights_on_at_dusk
       - automation.xmas_lights_work_morning
+      - automation.xmas_lights_on_energy_summary_over_1kw_4am_to_sunrise_not_armed_away
   mode: single
 - id: '1615489889198'
   alias: IKEA Switch 1 On
@@ -2212,4 +2214,24 @@
     above: '0'
   action:
   - service: shell_command.make_site
+  mode: single
+- id: '1638539297335'
+  alias: Xmas Lights On Energy Summary Over 1KW 4AM to Sunrise Not Armed Away
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.dte_energy_bridge_summary
+    above: '1000'
+  condition:
+  - condition: time
+    after: 04:00:00
+  - condition: sun
+    before: sunrise
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: alarm_control_panel.3629_alarm
+      state: armed_away
+  action:
+  - service: script.turn_on_xmas_lights
   mode: single
