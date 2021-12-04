@@ -1180,10 +1180,9 @@
     subtype: turn_on
   condition: []
   action:
-  - type: toggle
-    device_id: ad38b2b29eb24331b68fbae50ee3316a
-    entity_id: switch.family_room_ceiling_fan_light
-    domain: switch
+  - service: homeassistant.toggle
+    target:
+      entity_id: group.outdoor_christmas_lights
   mode: single
 - id: '1615490246403'
   alias: IKEA Remote 1 Dim Up
@@ -2234,24 +2233,4 @@
       state: armed_away
   action:
   - service: script.turn_on_xmas_lights
-  mode: single
-- id: '1638580083434'
-  alias: IKEA Remote 1 Toggle Long Press
-  description: ''
-  trigger:
-  - device_id: 439888cd2429e60eae9b9c512836115b
-    domain: zha
-    platform: device
-    type: remote_button_long_press
-    subtype: turn_on
-  condition: []
-  action:
-  - type: toggle
-    device_id: 9536dc3f7ae24ca4becaa28866474d00
-    entity_id: switch.back_outdoor_xmas_lights
-    domain: switch
-  - type: toggle
-    device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
-    entity_id: switch.front_outdoor_xmas_lights
-    domain: switch
   mode: single

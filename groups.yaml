@@ -4,3 +4,8 @@ family:
     - person.michael_loeffler
     - person.susan_loeffler
     - person.sarah_mulrenin
+outdoor_christmas_lights:
+  name: 'Outdoor Christmas Lights'
+  entities:
+    - switch.back_outdoor_xmas_lights
+    - switch.front_outdoor_xmas_lights
