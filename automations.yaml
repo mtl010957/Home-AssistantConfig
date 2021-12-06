@@ -985,11 +985,11 @@
     data: {}
   mode: single
 - id: '1608158400934'
-  alias: Xmas lights on at 05:00 AM
+  alias: Xmas lights on at 06:00 AM
   description: ''
   trigger:
   - platform: time
-    at: 05:00:00
+    at: 06:00:00
   condition: []
   action:
   - service: script.turn_on_xmas_lights
