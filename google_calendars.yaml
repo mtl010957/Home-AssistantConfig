@@ -124,3 +124,10 @@
     ignore_availability: true
     name: Home Assistant Devs
     track: true
+
+- cal_id: a54sd7grehjffc6h2e4ji8srdbke48bg@import.calendar.google.com
+  entities:
+  - device_id: events_metro_detroit_fun_n_fitness_for_49_s
+    ignore_availability: true
+    name: Events - Metro Detroit Fun n Fitness for 49's+
+    track: true
