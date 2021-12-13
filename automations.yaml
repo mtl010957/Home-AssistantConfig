@@ -2234,3 +2234,27 @@
   action:
   - service: script.turn_on_xmas_lights
   mode: single
+- id: '1639409820437'
+  alias: Hot Water Recirc On Energy Summary Over 1KW 4AM to Sunrise Not Armed Away
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.dte_energy_bridge_summary
+    above: '1000'
+  condition:
+  - condition: time
+    after: 04:00:00
+  - condition: sun
+    before: sunrise
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: alarm_control_panel.3629_alarm
+      state: armed_away
+  action:
+  - device_id: a77074c758856cfb06fbcf0eef68c72a
+    domain: climate
+    entity_id: climate.hot_water_recirc_control_setting
+    type: set_hvac_mode
+    hvac_mode: heat
+  mode: single
