@@ -3,32 +3,40 @@
     #Switch for iSmart PTZ set position 1
     generic_cam4_set_1:
       friendly_name: "3629Cam4 PTZ Set Position 1"
+      icon_template: mdi:content-save-settings
       command_on: '/config/scripts/c4_sit.sh 1 set'
     #Switch for iSmart PTZ set position 2
     generic_cam4_set_2:
       friendly_name: "3629Cam4 PTZ Set Position 2"
+      icon_template: mdi:content-save-settings
       command_on: '/config/scripts/c4_sit.sh 2 set'
     #Switch for iSmart PTZ set position 3
     generic_cam4_set_3:
       friendly_name: "3629Cam4 PTZ Set Position 3"
+      icon_template: mdi:content-save-settings
       command_on: '/config/scripts/c4_sit.sh 3 set'
     #Switch for iSmart PTZ set position 4
     generic_cam4_set_4:
       friendly_name: "3629Cam4 PTZ Set Position 4"
+      icon_template: mdi:content-save-settings
       command_on: '/config/scripts/c4_sit.sh 4 set'
     #Switch for iSmart PTZ call position 1
     generic_cam4_call_1:
       friendly_name: "3629Cam4 PTZ Call Position 1"
+      icon_template: mdi:pan
       command_on: '/config/scripts/c4_sit.sh 1 call'
     #Switch for iSmart PTZ call position 2
     generic_cam4_call_2:
       friendly_name: "3629Cam4 PTZ Call Position 2"
+      icon_template: mdi:pan
       command_on: '/config/scripts/c4_sit.sh 2 call'
     #Switch for iSmart PTZ call position 3
     generic_cam4_call_3:
       friendly_name: "3629Cam4 PTZ Call Position 3"
+      icon_template: mdi:pan
       command_on: '/config/scripts/c4_sit.sh 3 call'
     #Switch for iSmart PTZ call position 4
     generic_cam4_call_4:
       friendly_name: "3629Cam4 PTZ Call Position 4"
+      icon_template: mdi:pan
       command_on: '/config/scripts/c4_sit.sh 4 call'

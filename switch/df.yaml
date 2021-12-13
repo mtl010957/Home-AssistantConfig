@@ -2,6 +2,8 @@
 - platform: template
   switches:
     desert_front_porch_camera:
+      icon_template: mdi:camcorder
+      friendly_name: Desert Front Porch Camera Switch
       value_template: "{{ is_state('camera.front_yard_front_porch','recording') }}"
       turn_on:
         service: camera.turn_on

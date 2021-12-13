@@ -5,6 +5,7 @@
     #Switch for Foscam Motion Detection
     foscam_cam3_motion:
       friendly_name: "3629Cam3 Motion Enable"
+      icon_template: mdi:run
       command_on: '/config/scripts/c3.sh on'
       command_off: '/config/scripts/c3.sh off'
       command_state: '/config/scripts/c3.sh'

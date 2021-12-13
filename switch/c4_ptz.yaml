@@ -3,31 +3,37 @@
     #Switch for iSmart PTZ up
     generic_cam4_up:
       friendly_name: "3629Cam4 PTZ Up"
+      icon_template: mdi:arrow-up
       command_on: '/config/scripts/c4_ptz.sh on up'
       command_off: '/config/scripts/c4_ptz.sh off up'
     #Switch for iSmart PTZ down
     generic_cam4_down:
       friendly_name: "3629Cam4 PTZ Down"
+      icon_template: mdi:arrow-down
       command_on: '/config/scripts/c4_ptz.sh on down'
       command_off: '/config/scripts/c4_ptz.sh off down'
     #Switch for iSmart PTZ left
     generic_cam4_left:
       friendly_name: "3629Cam4 PTZ Left"
+      icon_template: mdi:arrow-left
       command_on: '/config/scripts/c4_ptz.sh on left'
       command_off: '/config/scripts/c4_ptz.sh off left'
     #Switch for iSmart PTZ right
     generic_cam4_right:
       friendly_name: "3629Cam4 PTZ Right"
+      icon_template: mdi:arrow-right
       command_on: '/config/scripts/c4_ptz.sh on right'
       command_off: '/config/scripts/c4_ptz.sh off right'
     #Switch for iSmart PTZ horizontal patrol
     generic_cam4_hpatrol:
       friendly_name: "3629Cam4 PTZ HPatrol"
+      icon_template: mdi:arrow-left-right-bold
       command_on: '/config/scripts/c4_ptz.sh on hpatrol'
       command_off: '/config/scripts/c4_ptz.sh off hpatrol'
     #Switch for iSmart PTZ vertical patrol
     generic_cam4_vpatrol:
       friendly_name: "3629Cam4 PTZ VPatrol"
+      icon_template: mdi:arrow-up-down-bold
       command_on: '/config/scripts/c4_ptz.sh on vpatrol'
       command_off: '/config/scripts/c4_ptz.sh off vpatrol'
 

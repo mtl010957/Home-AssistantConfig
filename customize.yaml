@@ -1,53 +1,3 @@
-binary_sensor.fire_and_co_smoke_detected:
-  friendly_name: Smoke Detected
-binary_sensor.fire_and_co_co_detected:
-  friendly_name: CO Detected
-switch.foscam_cam1_motion:
-  icon: mdi:run
-switch.foscam_cam2_motion:
-  icon: mdi:run
-switch.foscam_cam3_motion:
-  icon: mdi:run
-switch.generic_cam4_motion:
-  icon: mdi:run
-switch.generic_cam4_up:
-  icon: mdi:arrow-up
-switch.generic_cam4_down:
-  icon: mdi:arrow-down
-switch.generic_cam4_left:
-  icon: mdi:arrow-left
-switch.generic_cam4_right:
-  icon: mdi:arrow-right
-switch.generic_cam4_call_1:
-  icon: mdi:pan
-switch.generic_cam4_call_2:
-  icon: mdi:pan
-switch.generic_cam4_call_3:
-  icon: mdi:pan
-switch.generic_cam4_call_4:
-  icon: mdi:pan
-switch.generic_cam4_set_1:
-  icon: mdi:content-save-settings
-switch.generic_cam4_set_2:
-  icon: mdi:content-save-settings
-switch.generic_cam4_set_3:
-  icon: mdi:content-save-settings
-switch.generic_cam4_set_4:
-  icon: mdi:content-save-settings
-switch.generic_cam4_hpatrol:
-  icon: mdi:arrow-left-right-bold
-switch.generic_cam4_vpatrol:
-  icon: mdi:arrow-up-down-bold
-switch.desert_living_room_camera:
-  icon: mdi:camcorder
-  friendly_name: Desert Living Room Camera Switch
-switch.desert_front_porch_camera:
-  icon: mdi:camcorder
-  friendly_name: Desert Front Porch Camera Switch
-cover.living_room_blinds:
-  device_class: blind
-cover.family_room_blinds:
-  device_class: blind
 sensor.dte_energy_used_hourly_critical_peak:
   friendly_name: DTE Critical Peak
 sensor.dte_energy_used_hourly_critical_peak_cost:
@@ -76,5 +26,7 @@ binary_sensor.office_motion_sensor_any:
   device_class: motion
 binary_sensor.main_bedroom_motion_sensor_any:
   device_class: motion
-sensor.cpu_temperature:
-  device_class: temperature
+cover.living_room_blinds:
+  device_class: blind
+cover.family_room_blinds:
+  device_class: blind
