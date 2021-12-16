@@ -62,6 +62,7 @@ include:
     - light.bedside_lamp_bulb
     - light.main_bedroom_nw_ceiling_lights
     - light.main_bedroom_se_ceiling_lights
+    - light.back_outdoor_xmas_lights
     # persons
     - person.michael_loeffler
     - person.susan_loeffler
@@ -154,7 +155,6 @@ include:
     - switch.irrigation_control_back_yard
     - switch.irrigation_control_enable
     - switch.irrigation_control_front_yard
-    - switch.back_outdoor_xmas_lights
     - switch.front_outdoor_xmas_lights
     - switch.desert_desert_guest_room_desk_lamp
     - switch.desert_desert_living_room_lamp

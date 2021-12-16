@@ -1660,10 +1660,10 @@
       - light.main_bedroom_se_ceiling_lights
       - light.office_light_bulb
       - light.family_room_lamp_2
+      - light.back_outdoor_xmas_lights
   - service: switch.turn_off
     target:
       entity_id:
-      - switch.back_outdoor_xmas_lights
       - switch.family_room_ceiling_fan_light
       - switch.front_outdoor_xmas_lights
       - switch.front_yard_light
@@ -1698,10 +1698,10 @@
       - light.main_bedroom_nw_ceiling_lights
       - light.main_bedroom_se_ceiling_lights
       - light.office_light_bulb
+      - light.back_outdoor_xmas_lights
   - service: switch.turn_on
     target:
       entity_id:
-      - switch.back_outdoor_xmas_lights
       - switch.family_room_ceiling_fan_light
       - switch.front_outdoor_xmas_lights
       - switch.front_yard_light
@@ -2257,4 +2257,68 @@
     entity_id: climate.hot_water_recirc_control_setting
     type: set_hvac_mode
     hvac_mode: heat
+  mode: single
+- id: '1639658878788'
+  alias: Xmas lights brighten before sunrise
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+    offset: '-20'
+  condition:
+  - condition: device
+    type: is_on
+    device_id: bdbbe6a28928d1626bb3a130d1d02512
+    entity_id: light.back_outdoor_xmas_lights
+    domain: light
+  action:
+  - service: light.turn_on
+    target:
+      entity_id: light.back_outdoor_xmas_lights
+    data:
+      transition: 300
+      brightness_pct: 55
+  - delay:
+      hours: 0
+      minutes: 5
+      seconds: 0
+      milliseconds: 0
+  - service: light.turn_on
+    target:
+      entity_id: light.back_outdoor_xmas_lights
+    data:
+      transition: 300
+      brightness_pct: 100
+  mode: single
+- id: '1639659709214'
+  alias: Xmas lights dim after sunset
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: '20'
+  condition:
+  - condition: device
+    type: is_on
+    device_id: bdbbe6a28928d1626bb3a130d1d02512
+    entity_id: light.back_outdoor_xmas_lights
+    domain: light
+  action:
+  - service: light.turn_on
+    target:
+      entity_id: light.back_outdoor_xmas_lights
+    data:
+      transition: 300
+      brightness_pct: 55
+  - delay:
+      hours: 0
+      minutes: 5
+      seconds: 0
+      milliseconds: 0
+  - service: light.turn_on
+    data:
+      transition: 300
+      brightness_pct: 10
+    target:
+      entity_id: light.back_outdoor_xmas_lights
   mode: single
