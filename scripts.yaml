@@ -99,12 +99,13 @@ open_all_blinds:
   mode: single
   icon: mdi:window-shutter
 turn_on_xmas_lights:
-  alias: Turn on Xmas lights
+  alias: Turn on Xmas lights 100%
   sequence:
   - type: turn_on
     device_id: bdbbe6a28928d1626bb3a130d1d02512
     entity_id: light.back_outdoor_xmas_lights
     domain: light
+    brightness_pct: 100
   - type: turn_on
     device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
     entity_id: switch.front_outdoor_xmas_lights
@@ -119,6 +120,20 @@ turn_off_xmas_lights:
     entity_id: light.back_outdoor_xmas_lights
     domain: light
   - type: turn_off
+    device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
+    entity_id: switch.front_outdoor_xmas_lights
+    domain: switch
+  mode: single
+  icon: mdi:string-lights
+turn_on_xmas_lights_10:
+  alias: Turn on Xmas lights 10%
+  sequence:
+  - type: turn_on
+    device_id: bdbbe6a28928d1626bb3a130d1d02512
+    entity_id: light.back_outdoor_xmas_lights
+    domain: light
+    brightness_pct: 10
+  - type: turn_on
     device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
     entity_id: switch.front_outdoor_xmas_lights
     domain: switch

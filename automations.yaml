@@ -992,8 +992,7 @@
     at: 06:00:00
   condition: []
   action:
-  - service: script.turn_on_xmas_lights
-    data: {}
+  - service: script.turn_on_xmas_lights_10
   mode: single
 - id: '1609352755365'
   alias: Tag Play Alt 98.7 is scanned
@@ -1345,7 +1344,7 @@
     value_template: '{{ is_state_attr(''calendar.susan'', ''start_time'', as_timestamp(now())
       | timestamp_custom(''%Y-%m-%d'') ~ '' 06:00:00'') }}'
   action:
-  - service: script.turn_on_xmas_lights
+  - service: script.turn_on_xmas_lights_10
   mode: single
 - id: '1615923844588'
   alias: Hot Water Recirc On Morning Home
@@ -2232,7 +2231,7 @@
       entity_id: alarm_control_panel.3629_alarm
       state: armed_away
   action:
-  - service: script.turn_on_xmas_lights
+  - service: script.turn_on_xmas_lights_10
   mode: single
 - id: '1639409820437'
   alias: Hot Water Recirc On Energy Summary Over 1KW 4AM to Sunrise Not Armed Away
