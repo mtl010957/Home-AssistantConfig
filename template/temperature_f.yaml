@@ -1,4 +1,5 @@
   - sensor:
+      # nm15t4m_0xdc000008e3b1ab28
       - unique_id: furnace_nw_zone_return_temperature_f
         name: "Furnace NW Zone Return Temperature ºF"
         device_class: temperature
@@ -6,6 +7,7 @@
         icon: "mdi:thermometer"
         state: >
           {{ (states('sensor.furnace_nw_zone_return_temperature') | float * 9.0/5.0+32.0) | round(1) }}
+      # nm15t4m_0xde000008e2b6af28
       - unique_id: furnace_se_zone_return_temperature_f
         name: "Furnace SE Zone Return Temperature ºF"
         device_class: temperature
@@ -13,6 +15,7 @@
         icon: "mdi:thermometer"
         state: >
           {{ (states('sensor.furnace_se_zone_return_temperature') | float * 9.0/5.0+32.0) | round(1) }}
+      # nm15t4m_0xc400000a01299728
       - unique_id: furnace_supply_temperature_f
         name: "Furnace Supply Temperature ºF"
         device_class: temperature
@@ -20,6 +23,7 @@
         icon: "mdi:thermometer"
         state: >
           {{ (states('sensor.furnace_supply_temperature') | float * 9.0/5.0+32.0) | round(1) }}
+      # nm15t4m_0x7b00000a00bbb128
       - unique_id: furnace_flue_temperature_f
         name: "Furnace Flue Temperature ºF"
         device_class: temperature
