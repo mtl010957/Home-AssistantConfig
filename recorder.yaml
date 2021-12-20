@@ -27,6 +27,7 @@ include:
     - binary_sensor.upstairs_smoke_co_alarm_smoke_alarm_smoke_detected
     - binary_sensor.rpi_power_status
     - binary_sensor.desert_rpi_power_status
+    - binary_sensor.furnace_relief_valve_warning
     # climate
     - climate.thermostat
     - climate.hot_water_recirc_control_setting

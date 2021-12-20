@@ -2317,3 +2317,22 @@
     target:
       entity_id: light.back_outdoor_xmas_lights
   mode: single
+- id: '1639933441309'
+  alias: Notify Furnace Pressure Release Overflow
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.furnace_relief_valve_warning
+    platform: state
+    to: 'on'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 30
+  condition: []
+  action:
+  - service: notify.notify
+    data:
+      message: Furnace pressure relief valve is releasing water and the catch pan
+        is filling, check ASAP!
+      title: Furnace Pressure Relief Warning
+  mode: single
