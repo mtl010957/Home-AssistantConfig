@@ -23,6 +23,8 @@ google: !include google.yaml
 
 # Logger setup
 logger: !include logger.yaml
+system_log:
+  fire_event: true
 
 # Enables support for tracking state changes over time.
 recorder: !include recorder.yaml

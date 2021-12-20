@@ -2336,3 +2336,22 @@
         is filling, check ASAP!
       title: Furnace Pressure Relief Warning
   mode: single
+- id: '1640015570768'
+  alias: Check and Reload Tuya Integration
+  description: ''
+  trigger:
+  - platform: event
+    event_type: system_log_event
+    event_data:
+      level: ERROR
+      name: tuya_iot
+  condition:
+  - condition: template
+    value_template: '{{ "error while get mqtt config" in trigger.event.data.message[0]
+      }}'
+  action:
+  - service: homeassistant.reload_config_entry
+    target:
+      entity_id:
+      - light.back_outdoor_xmas_lights
+  mode: single
