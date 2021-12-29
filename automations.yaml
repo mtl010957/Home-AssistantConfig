@@ -356,6 +356,10 @@
     from: not_home
     platform: state
     to: home
+  - platform: zone
+    entity_id: person.michael_loeffler
+    zone: zone.home
+    event: enter
   condition: []
   action:
   - data: {}
@@ -1606,6 +1610,10 @@
       entity_id:
       - script.security_lighting_on
       - script.security_lighting_off
+  - type: turn_off
+    device_id: 8d8de4c32fc84734af376c764700e31f
+    entity_id: switch.front_yard_light
+    domain: switch
   mode: single
 - id: '1626789324636'
   alias: Blinds Open Energy Summary Over 1KW 4AM to Sunrise Not Armed Away
