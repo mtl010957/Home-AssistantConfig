@@ -30,3 +30,7 @@ cover.living_room_blinds:
   device_class: blind
 cover.family_room_blinds:
   device_class: blind
+zone.home:
+  radius: 200
+zone.desert_home:
+  icon: mdi:cactus
