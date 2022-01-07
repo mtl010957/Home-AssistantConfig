@@ -2363,3 +2363,30 @@
       entity_id:
       - light.back_outdoor_xmas_lights
   mode: single
+- id: '1641585551163'
+  alias: Hot Water Recirc On When Very Cold
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.outdoor_temperature
+    below: '0'
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+  - platform: numeric_state
+    entity_id: weather.kptk_hourly
+    attribute: temperature
+    below: '0'
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+  condition: []
+  action:
+  - device_id: a77074c758856cfb06fbcf0eef68c72a
+    domain: climate
+    entity_id: climate.hot_water_recirc_control_setting
+    type: set_hvac_mode
+    hvac_mode: heat
+  mode: single
