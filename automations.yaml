@@ -1485,9 +1485,9 @@
   action:
   - service: cover.set_cover_tilt_position
     target:
-      device_id:
-      - 3f2e1d3be7a049f08d4d1bfe39c87fc4
-      - 6792d04f64544b2f96bf1ba9855e2e5b
+      entity_id:
+      - cover.family_room_swnw_blinds
+      - cover.family_room_sene_blinds
     data:
       tilt_position: '{{ ( ( 90 - state_attr("sun.sun", "elevation") ) * 50 / 90 )
         | round }}'
@@ -1510,9 +1510,9 @@
   action:
   - service: cover.open_cover_tilt
     target:
-      device_id:
-      - 3f2e1d3be7a049f08d4d1bfe39c87fc4
-      - 6792d04f64544b2f96bf1ba9855e2e5b
+      entity_id:
+      - cover.family_room_swnw_blinds
+      - cover.family_room_sene_blinds
   mode: single
 - id: '1624404207012'
   alias: Hot Water Recirc Off Night Home
