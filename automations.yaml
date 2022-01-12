@@ -1486,8 +1486,8 @@
   - service: cover.set_cover_tilt_position
     target:
       entity_id:
-      - cover.family_room_swnw_blinds
       - cover.family_room_sene_blinds
+      - cover.family_room_sesw_blinds
     data:
       tilt_position: '{{ ( ( 90 - state_attr("sun.sun", "elevation") ) * 50 / 90 )
         | round }}'
@@ -1511,8 +1511,8 @@
   - service: cover.open_cover_tilt
     target:
       entity_id:
-      - cover.family_room_swnw_blinds
       - cover.family_room_sene_blinds
+      - cover.family_room_sesw_blinds
   mode: single
 - id: '1624404207012'
   alias: Hot Water Recirc Off Night Home
@@ -1622,6 +1622,10 @@
   - platform: numeric_state
     entity_id: sensor.dte_energy_bridge_summary
     above: '1000'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 30
   condition:
   - condition: time
     after: 04:00:00
@@ -1632,6 +1636,9 @@
     - condition: state
       entity_id: alarm_control_panel.3629_alarm
       state: armed_away
+  - condition: state
+    entity_id: cover.family_room_blinds
+    state: closed
   action:
   - service: cover.open_cover_tilt
     target:
