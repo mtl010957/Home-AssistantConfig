@@ -2405,3 +2405,15 @@
     type: set_hvac_mode
     hvac_mode: heat
   mode: single
+- id: '1642188205188'
+  alias: Move CAM4 FTP JPG
+  description: ''
+  trigger:
+  - platform: time_pattern
+    hours: '*'
+    minutes: /5
+    seconds: '0'
+  condition: []
+  action:
+  - service: shell_command.move_cam4_ftp_jpg
+  mode: single
