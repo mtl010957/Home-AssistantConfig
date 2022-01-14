@@ -2172,10 +2172,14 @@
     event: start
   condition: []
   action:
-  - service: shell_command.mount_3629cam1
-  - service: shell_command.mount_3629cam2
-  - service: shell_command.mount_3629cam3
-  - service: shell_command.mount_3629cam4
+  - service: shell_command.mount_3629cam1_record
+  - service: shell_command.mount_3629cam1_snap
+  - service: shell_command.mount_3629cam2_record
+  - service: shell_command.mount_3629cam2_snap
+  - service: shell_command.mount_3629cam3_record
+  - service: shell_command.mount_3629cam3_snap
+  - service: shell_command.mount_3629cam4_record
+  - service: shell_command.mount_3629cam4_snap
   mode: single
 - id: '1638397083007'
   alias: Unmount
@@ -2185,10 +2189,14 @@
     event: shutdown
   condition: []
   action:
-  - service: shell_command.unmount_3629cam1
-  - service: shell_command.unmount_3629cam2
-  - service: shell_command.unmount_3629cam3
-  - service: shell_command.unmount_3629cam4
+  - service: shell_command.unmount_3629cam1_record
+  - service: shell_command.unmount_3629cam1_snap
+  - service: shell_command.unmount_3629cam2_record
+  - service: shell_command.unmount_3629cam2_snap
+  - service: shell_command.unmount_3629cam3_record
+  - service: shell_command.unmount_3629cam3_snap
+  - service: shell_command.unmount_3629cam4_record
+  - service: shell_command.unmount_3629cam4_snap
   mode: single
 - id: '1638450752881'
   alias: Make Site

@@ -1,0 +1,6 @@
+  - platform: folder
+    folder: /config/www/3629cam3/3629cam3_snap
+    filter: '*/*.jpg'
+  - platform: folder
+    folder: /config/www/3629cam3/3629cam3_record
+    filter: '*/*.mp4'

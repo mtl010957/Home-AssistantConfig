@@ -1,9 +1,17 @@
-  mount_3629cam1: mount -t nfs 192.168.13.5:/mnt/HD/HD_a2/3629cam1/C1_00626E69269A /config/www/3629cam1/C1_00626E69269A -o rw,nolock,timeo=600
-  mount_3629cam2: mount -t nfs 192.168.13.5:/mnt/HD/HD_a2/3629cam2/C1_00626E6926B6 /config/www/3629cam2/C1_00626E6926B6 -o rw,nolock,timeo=600
-  mount_3629cam3: mount -t nfs 192.168.13.5:/mnt/HD/HD_a2/3629cam3/C1_00626E82585D /config/www/3629cam3/C1_00626E82585D -o rw,nolock,timeo=600
-  mount_3629cam4: mount -t nfs 192.168.13.5:/mnt/HD/HD_a2/3629cam4 /config/www/3629cam4 -o rw,nolock,timeo=600
-  unmount_3629cam1: umount /config/www/3629cam1/C1_00626E69269A
-  unmount_3629cam2: umount /config/www/3629cam2/C1_00626E6926B6
-  unmount_3629cam3: umount /config/www/3629cam3/C1_00626E82585D
-  unmount_3629cam4: umount /config/www/3629cam4
+  mount_3629cam1_snap: mount -t nfs 192.168.13.5:/mnt/HD/HD_a2/3629cam1/C1_00626E69269A/snap /config/www/3629cam1/3629cam1_snap -o rw,nolock,timeo=600
+  mount_3629cam1_record: mount -t nfs 192.168.13.5:/mnt/HD/HD_a2/3629cam1/C1_00626E69269A/record /config/www/3629cam1/3629cam1_record -o rw,nolock,timeo=600
+  mount_3629cam2_snap: mount -t nfs 192.168.13.5:/mnt/HD/HD_a2/3629cam2/C1_00626E6926B6/snap /config/www/3629cam2/3629cam2_snap -o rw,nolock,timeo=600
+  mount_3629cam2_record: mount -t nfs 192.168.13.5:/mnt/HD/HD_a2/3629cam2/C1_00626E6926B6/record /config/www/3629cam2/3629cam2_record -o rw,nolock,timeo=600
+  mount_3629cam3_snap: mount -t nfs 192.168.13.5:/mnt/HD/HD_a2/3629cam3/C1_00626E82585D/snap /config/www/3629cam3/3629cam3_snap -o rw,nolock,timeo=600
+  mount_3629cam3_record: mount -t nfs 192.168.13.5:/mnt/HD/HD_a2/3629cam3/C1_00626E82585D/record /config/www/3629cam3/3629cam3_record -o rw,nolock,timeo=600
+  mount_3629cam4_snap: mount -t nfs 192.168.13.5:/mnt/HD/HD_a2/3629cam4 /config/www/3629cam4/3629cam4_snap -o rw,nolock,timeo=600
+  mount_3629cam4_record: mount -t nfs 192.168.13.5:/mnt/HD/HD_a2/3629cam4 /config/www/3629cam4/3629cam4_record -o rw,nolock,timeo=600
+  unmount_3629cam1_snap: umount /config/www/3629cam1/3629cam1_snap
+  unmount_3629cam1_record: umount /config/www/3629cam1/3629cam1_record
+  unmount_3629cam2_snap: umount /config/www/3629cam2/3629cam2_snap
+  unmount_3629cam2_record: umount /config/www/3629cam2/3629cam2_record
+  unmount_3629cam3_snap: umount /config/www/3629cam3/3629cam3_snap
+  unmount_3629cam3_record: umount /config/www/3629cam3/3629cam3_record
+  unmount_3629cam4_snap: umount /config/www/3629cam4/3629cam4_snap
+  unmount_3629cam4_record: umount /config/www/3629cam4/3629cam4_record
   make_site: bash /config/scripts/make_site.sh
