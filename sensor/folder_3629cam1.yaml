@@ -1,6 +1,6 @@
   - platform: folder
     folder: /config/www/3629cam1/3629cam1_snap
-    filter: '*/*.jpg'
+    filter: 'latest_30d/*.jpg'
   - platform: folder
     folder: /config/www/3629cam1/3629cam1_record
-    filter: '*/*.mp4'
+    filter: 'latest_30d/*.mp4'
