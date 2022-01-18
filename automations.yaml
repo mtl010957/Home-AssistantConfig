@@ -2397,6 +2397,13 @@
       hours: 0
       minutes: 5
       seconds: 0
+  - platform: numeric_state
+    entity_id: sensor.kptk_wind_chill
+    below: '-20'
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
   condition: []
   action:
   - device_id: a77074c758856cfb06fbcf0eef68c72a
