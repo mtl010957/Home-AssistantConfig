@@ -4,8 +4,20 @@ close_all_blinds:
   mode: single
   sequence:
   - data: {}
-    entity_id: all
     service: cover.close_cover_tilt
+    target:
+      entity_id:
+      - cover.family_room_nwne_blinds
+      - cover.family_room_swnw_blinds
+      - cover.family_room_swse_blinds
+      - cover.family_room_sene_blinds
+      - cover.family_room_nwsw_blinds
+      - cover.family_room_sesw_blinds
+      - cover.living_room_se_blinds
+      - cover.living_room_se_ctr_blinds
+      - cover.living_room_ctr_blinds
+      - cover.living_room_nw_ctr_blinds
+      - cover.living_room_nw_blinds
 security_lighting_on:
   alias: Security Lighting On
   sequence:
@@ -93,9 +105,21 @@ irrigation_zone_3_run:
 open_all_blinds:
   alias: Open all blinds
   sequence:
-  - data:
-      entity_id: all
+  - data: {}
     service: cover.open_cover_tilt
+    target:
+      entity_id:
+      - cover.family_room_nwne_blinds
+      - cover.family_room_swnw_blinds
+      - cover.family_room_swse_blinds
+      - cover.family_room_sene_blinds
+      - cover.family_room_nwsw_blinds
+      - cover.family_room_sesw_blinds
+      - cover.living_room_se_blinds
+      - cover.living_room_se_ctr_blinds
+      - cover.living_room_ctr_blinds
+      - cover.living_room_nw_ctr_blinds
+      - cover.living_room_nw_blinds
   mode: single
   icon: mdi:window-shutter
 turn_on_xmas_lights:
