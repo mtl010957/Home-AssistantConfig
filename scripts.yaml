@@ -21,61 +21,47 @@ close_all_blinds:
 security_lighting_on:
   alias: Security Lighting On
   sequence:
-  - type: turn_on
-    device_id: fe41f1020bdf4e74840c084f3a91f438
-    entity_id: switch.living_room_lamp_module
-    domain: switch
+  - service: switch.turn_on
+    target:
+      entity_id: switch.living_room_lamp_module
   - delay: 00:{{ (range(1, 5) | random) }}:00
-  - type: turn_on
-    device_id: 1e5e4752a3384f1bb579e0bf9fabb6a6
-    entity_id: light.family_room_lamp_bulb_1
-    domain: light
-    brightness_pct: 100
-  - type: turn_on
-    device_id: c7ed60af146d440385d25a1b4f32ba02
-    entity_id: light.family_room_link_bulb_1
-    domain: light
-    brightness_pct: 100
+  - service: light.turn_on
+    target:
+      entity_id: light.family_room_lamps
+    data:
+      brightness_pct: 100
   - delay: 00:{{ (range(5, 15) | random) }}:00
-  - type: turn_on
-    device_id: a3a53ae5cdcf40ffae17d4e396c93d27
-    entity_id: light.office_light_bulb
-    domain: light
-    brightness_pct: 100
+  - service: light.turn_on
+    target:
+      entity_id: light.office_light_bulb
+    data:
+      brightness_pct: 100
   - delay: 00:{{ (range(1, 5) | random) }}:00
-  - type: turn_on
-    device_id: 2f410060429a42f78888722f30b8959c
-    entity_id: light.bedside_lamp_bulb
-    domain: light
-    brightness_pct: 100
+  - service: light.turn_on
+    target:
+      entity_id: light.bedside_lamp_bulb
+    data:
+      brightness_pct: 100
   mode: single
   icon: mdi:lightbulb
 security_lighting_off:
   alias: Security Lighting Off
   sequence:
-  - type: turn_off
-    device_id: 1e5e4752a3384f1bb579e0bf9fabb6a6
-    entity_id: light.family_room_lamp_bulb_1
-    domain: light
-  - type: turn_off
-    device_id: c7ed60af146d440385d25a1b4f32ba02
-    entity_id: light.family_room_link_bulb_1
-    domain: light
+  - service: switch.turn_off
+    target:
+      entity_id: switch.living_room_lamp_module
   - delay: 00:{{ (range(1, 5) | random) }}:00
-  - type: turn_off
-    device_id: fe41f1020bdf4e74840c084f3a91f438
-    entity_id: switch.living_room_lamp_module
-    domain: switch
+  - service: light.turn_off
+    target:
+      entity_id: light.family_room_lamps
   - delay: 00:{{ (range(5, 15) | random) }}:00
-  - type: turn_off
-    device_id: a3a53ae5cdcf40ffae17d4e396c93d27
-    entity_id: light.office_light_bulb
-    domain: light
+  - service: light.turn_off
+    target:
+      entity_id: light.office_light_bulb
   - delay: 00:{{ (range(1, 5) | random) }}:00
-  - type: turn_off
-    device_id: 2f410060429a42f78888722f30b8959c
-    entity_id: light.bedside_lamp_bulb
-    domain: light
+  - service: light.turn_off
+    target:
+      entity_id: light.bedside_lamp_bulb
   mode: single
   icon: mdi:lightbulb
 irrigation_zone_1_run:
