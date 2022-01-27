@@ -1,0 +1,7 @@
+- platform: group
+  name: Family Room Lamps
+  entities:
+    - light.family_room_link_bulb_1
+    - light.family_room_link_bulb_2
+    - light.family_room_lamp_bulb_1
+    - light.family_room_lamp_bulb_2
