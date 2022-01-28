@@ -14,5 +14,5 @@
   unmount_3629cam3_record: umount /config/www/3629cam3/3629cam3_record
   unmount_3629cam4_snap: umount /config/www/3629cam4/3629cam4_snap
   unmount_3629cam4_record: umount /config/www/3629cam4/3629cam4_record
-  make_site: bash /config/scripts/make_site.sh
+  make_site_bg: bash /config/scripts/make_site_bg.sh
   move_cam4_ftp_jpg: bash /config/scripts/move_cam4_ftp_jpg.sh

@@ -2183,37 +2183,9 @@
   trigger:
   - platform: time
     at: 00:02:00
-  condition:
-  - condition: numeric_state
-    entity_id: sensor.3629cam1_record
-    attribute: number_of_files
-    above: '0'
-  - condition: numeric_state
-    entity_id: sensor.3629cam1_snap
-    attribute: number_of_files
-    above: '0'
-  - condition: numeric_state
-    entity_id: sensor.3629cam2_record
-    attribute: number_of_files
-    above: '0'
-  - condition: numeric_state
-    entity_id: sensor.3629cam2_snap
-    attribute: number_of_files
-    above: '0'
-  - condition: numeric_state
-    entity_id: sensor.3629cam3_record
-    attribute: number_of_files
-    above: '0'
-  - condition: numeric_state
-    entity_id: sensor.3629cam3_snap
-    attribute: number_of_files
-    above: '0'
-  - condition: numeric_state
-    entity_id: sensor.3629cam4_record
-    attribute: number_of_files
-    above: '0'
+  condition: []
   action:
-  - service: shell_command.make_site
+  - service: shell_command.make_site_bg
   mode: single
 - id: '1638539297335'
   alias: Xmas Lights On Energy Summary Over 1KW 4AM to Sunrise Not Armed Away
