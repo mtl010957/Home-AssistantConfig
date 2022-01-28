@@ -3,8 +3,16 @@
         name: "Precipitation Probability Today"
         unit_of_measurement: "%"
         state: >
-          {{ state_attr("weather.kptk_daynight","forecast")[0].precipitation_probability }}
+            {% if state_attr("weather.kptk_daynight","forecast") -%}
+                {{ state_attr("weather.kptk_daynight","forecast")[0].precipitation_probability }}
+            {%- else -%}
+                0
+            {%- endif %}
       - unique_id: forecast_today
         name: "Forecast Today"
         state: >
-          {{ state_attr("weather.kptk_daynight","forecast")[0].detailed_description }}
+            {% if state_attr("weather.kptk_daynight","forecast") -%}
+                {{ state_attr("weather.kptk_daynight","forecast")[0].detailed_description }}
+            {%- else -%}
+                Not Available
+            {%- endif %}
