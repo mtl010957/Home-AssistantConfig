@@ -30,6 +30,12 @@ cover.living_room_blinds:
   device_class: blind
 cover.family_room_blinds:
   device_class: blind
+cover.family_room_se_blinds:
+  device_class: blind
+cover.family_room_sw_blinds:
+  device_class: blind
+cover.family_room_nw_blinds:
+  device_class: blind
 zone.home:
   radius: 400
 zone.desert_home:
