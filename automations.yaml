@@ -1548,8 +1548,9 @@
   description: ''
   trigger:
   - platform: template
-    value_template: '{{ states("sensor.outdoor_temperature") | round < state_attr("climate.house_fan_thermostat","temperature")
-      | round }}'
+    value_template: '{{ states("sensor.outdoor_temperature") | round(0,"round-to-even","undefined")
+      < state_attr("climate.house_fan_thermostat","temperature") | round(0,"round-to-even","undefined")
+      }}'
   condition:
   - type: is_value
     condition: device
@@ -1569,8 +1570,9 @@
   description: ''
   trigger:
   - platform: template
-    value_template: '{{ states("sensor.outdoor_temperature") | round >= state_attr("climate.house_fan_thermostat","temperature")
-      | round }}'
+    value_template: '{{ states("sensor.outdoor_temperature") | round(0,"round-to-even","undefined")
+      >= state_attr("climate.house_fan_thermostat","temperature") | round(0,"round-to-even","undefined")
+      }}'
   - type: value
     platform: device
     device_id: f1da704df4dd4da69ef980d105f8d710
