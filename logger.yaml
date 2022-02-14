@@ -1,6 +1,7 @@
 default: warning
 logs:
-  homeassistant.components.shell_command: debug
+  homeassistant.components.nws.weather: debug
+#  homeassistant.components.shell_command: debug
 #  homeassistant.components.zha.core.device: debug
 #  zigpy.application: debug
 #  zigpy.appdb: debug
