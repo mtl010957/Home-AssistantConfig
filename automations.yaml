@@ -5,8 +5,8 @@
     entity_id: sensor.main_bedroom_temperature
     for: 00:00:10
     platform: numeric_state
-    value_template: '{{ states(''sensor.main_bedroom_temperature'') | float - states(''input_number.fan_off_below_temp'')
-      | float }}'
+    value_template: '{{ states(''sensor.main_bedroom_temperature'') | float(default=0) - states(''input_number.fan_off_below_temp'')
+      | float(default=0) }}'
   condition: []
   action:
   - type: turn_off
@@ -549,8 +549,8 @@
   description: ''
   trigger:
   - platform: template
-    value_template: '{{ states(''sensor.office_humidity'') | float > states(''sensor.humidifier_off_point'')
-      | float  }}'
+    value_template: '{{ states(''sensor.office_humidity'') | float(default=0) > states(''sensor.humidifier_off_point'')
+      | float(default=0)  }}'
   condition: []
   action:
   - type: turn_off
@@ -563,9 +563,9 @@
   description: ''
   trigger:
   - platform: template
-    value_template: '{{ states(''sensor.office_humidity'') | float < states(''sensor.humidifier_on_point'')
-      | float  and state_attr(''climate.thermostat'', ''hvac_action'') == ''heating''
-      }}'
+    value_template: '{{ states(''sensor.office_humidity'') | float(default=0) < states(''sensor.humidifier_on_point'')
+      | float(default=0)  and state_attr(''climate.thermostat'', ''hvac_action'')
+      == ''heating'' }}'
   condition: []
   action:
   - type: turn_on
@@ -581,8 +581,8 @@
     platform: time
   condition:
   - condition: template
-    value_template: '{{ states(''sensor.office_humidity'') | float < states(''sensor.humidifier_on_point'')
-      | float }}'
+    value_template: '{{ states(''sensor.office_humidity'') | float(default=0) < states(''sensor.humidifier_on_point'')
+      | float(default=0) }}'
   action:
   - type: turn_on
     device_id: cbfd393800a549f18ffe84e0f6b6be6f
@@ -1052,8 +1052,8 @@
   description: ''
   trigger:
   - platform: template
-    value_template: '{{ states(''sensor.office_humidity'') | float < states(''sensor.humidifier_on_point'')
-      | float  }}'
+    value_template: '{{ states(''sensor.office_humidity'') | float(default=0) < states(''sensor.humidifier_on_point'')
+      | float(default=0)  }}'
     for: 00:05:00
   condition:
   - condition: device
