@@ -5,8 +5,8 @@
     entity_id: sensor.main_bedroom_temperature
     for: 00:00:10
     platform: numeric_state
-    value_template: '{{ states(''sensor.main_bedroom_temperature'') | float(default=0) - states(''input_number.fan_off_below_temp'')
-      | float(default=0) }}'
+    value_template: '{{ states(''sensor.main_bedroom_temperature'') | float(default=0)
+      - states(''input_number.fan_off_below_temp'') | float(default=0) }}'
   condition: []
   action:
   - type: turn_off
@@ -549,8 +549,8 @@
   description: ''
   trigger:
   - platform: template
-    value_template: '{{ states(''sensor.office_humidity'') | float(default=0) > states(''sensor.humidifier_off_point'')
-      | float(default=0)  }}'
+    value_template: '{{ states(''sensor.office_humidity'') | float(default=0) >= states(''sensor.humidifier_off_point'')
+      | float(default=0) }}'
   condition: []
   action:
   - type: turn_off
@@ -564,9 +564,18 @@
   trigger:
   - platform: template
     value_template: '{{ states(''sensor.office_humidity'') | float(default=0) < states(''sensor.humidifier_on_point'')
-      | float(default=0)  and state_attr(''climate.thermostat'', ''hvac_action'')
-      == ''heating'' }}'
-  condition: []
+      | float(default=0) }}'
+    id: humidity_low
+  - platform: state
+    entity_id: climate.thermostat
+    attribute: hvac_action
+    to: heating
+    id: heating
+  condition:
+  - condition: trigger
+    id: humidity_low
+  - condition: trigger
+    id: heating
   action:
   - type: turn_on
     device_id: cbfd393800a549f18ffe84e0f6b6be6f
