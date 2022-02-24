@@ -12,7 +12,7 @@
         name: "Forecast Today"
         state: >
             {% if state_attr("weather.kptk_daynight","forecast") -%}
-                {{ state_attr("weather.kptk_daynight","forecast")[0].detailed_description }}
+                {{ state_attr("weather.kptk_daynight","forecast")[0].detailed_description | truncate }}
             {%- else -%}
                 Not Available
             {%- endif %}
