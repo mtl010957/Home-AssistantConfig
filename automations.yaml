@@ -579,25 +579,17 @@
     domain: switch
   mode: single
 - id: '1581365990144'
-  alias: Humidifier on at 05:00
+  alias: Humidifier enable at 05:00
   description: ''
   trigger:
   - at: 05:00:00
     platform: time
-  condition:
-  - condition: template
-    value_template: '{{ states(''sensor.office_humidity'') | float(default=0) < states(''sensor.humidifier_on_point'')
-      | float(default=0) }}'
-  - condition: not
-    conditions:
-    - condition: state
-      entity_id: climate.thermostat
-      state: 'off'
+  condition: []
   action:
-  - type: turn_on
-    device_id: cbfd393800a549f18ffe84e0f6b6be6f
-    entity_id: switch.humidifier_power
-    domain: switch
+  - service: automation.turn_on
+    data: {}
+    target:
+      entity_id: automation.humidifier_on_below_set_point
   mode: single
 - id: '1581437260727'
   alias: Work Morning Fall-Winter-Spring
@@ -635,17 +627,17 @@
       skip_condition: true
   mode: single
 - id: '1581601374878'
-  alias: Humidifier off at 21:00
+  alias: Humidifier disable at 21:00
   description: ''
   trigger:
   - at: '21:00:00'
     platform: time
   condition: []
   action:
-  - type: turn_off
-    device_id: cbfd393800a549f18ffe84e0f6b6be6f
-    entity_id: switch.humidifier_power
-    domain: switch
+  - service: automation.turn_off
+    data: {}
+    target:
+      entity_id: automation.humidifier_on_below_set_point
   mode: single
 - id: '1583938382449'
   alias: Garage lights on when doors opened
