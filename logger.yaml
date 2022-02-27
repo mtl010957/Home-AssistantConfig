@@ -1,5 +1,5 @@
 default: warning
-logs:
+#logs:
 #  homeassistant.components.nws: debug
 #  homeassistant.components.shell_command: debug
 #  homeassistant.components.zha.core.device: debug
