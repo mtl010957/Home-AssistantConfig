@@ -65,6 +65,7 @@ include:
     - light.main_bedroom_se_ceiling_lights
     - light.back_outdoor_xmas_lights
     # media_players
+    - media_player.caravan_tv
     - media_player.family_room_tv
     - media_player.main_bedroom_tv
     # persons
