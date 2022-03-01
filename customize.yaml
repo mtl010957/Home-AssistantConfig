@@ -40,3 +40,12 @@ zone.home:
   radius: 400
 zone.desert_home:
   icon: mdi:cactus
+light.family_room_lamp_1:
+  icon: mdi:lamp
+light.family_room_lamp_2:
+  icon: mdi:lamp
+light.family_room_lamps:
+  icon: mdi:lamps
+switch.generic_cam4_hpatrol:
+  icon: mdi:axis-z-rotate-clockwise
+  
