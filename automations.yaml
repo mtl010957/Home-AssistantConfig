@@ -1484,7 +1484,7 @@
     entity_id: sun.sun
     attribute: azimuth
     above: '80'
-    below: '200'
+    below: '190'
   action:
   - service: cover.set_cover_tilt_position
     target:
@@ -1501,8 +1501,8 @@
   - platform: numeric_state
     entity_id: sun.sun
     attribute: azimuth
-    above: '200'
     for: 00:02:00
+    above: '190'
   - platform: numeric_state
     entity_id: sun.sun
     attribute: elevation
@@ -1513,6 +1513,7 @@
   - service: cover.open_cover_tilt
     target:
       entity_id: cover.family_room_se_blinds
+    data: {}
   mode: single
 - id: '1624404207012'
   alias: Hot Water Recirc Off Night Home
