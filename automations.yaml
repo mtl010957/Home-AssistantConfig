@@ -566,12 +566,21 @@
     value_template: '{{ states(''sensor.office_humidity'') | float(default=0) < states(''sensor.humidifier_on_point'')
       | float(default=0) }}'
     id: humidity_low
+  - type: humidity
+    platform: device
+    device_id: 720e3c978cd8ce49f57ca55ff42a4677
+    entity_id: sensor.office_humidity
+    domain: sensor
+    below: 40
   condition:
   - condition: not
     conditions:
     - condition: state
       entity_id: climate.thermostat
       state: 'off'
+  - condition: template
+    value_template: '{{ states(''sensor.office_humidity'') | float(default=0) < states(''sensor.humidifier_on_point'')
+      | float(default=0) }}'
   action:
   - type: turn_on
     device_id: cbfd393800a549f18ffe84e0f6b6be6f
