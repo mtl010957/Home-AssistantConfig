@@ -17,6 +17,12 @@
         icon: "mdi:gauge"
         state: >
           {{ state_attr('cover.family_room_swse_blinds', 'current_tilt_position') }}
+      - unique_id: family_room_swctr_blinds_tilt_position
+        name: "Family Room SW-CTR Blinds Tilt Position"
+        unit_of_measurement: '%'
+        icon: "mdi:gauge"
+        state: >
+          {{ state_attr('cover.family_room_swctr_blinds', 'current_tilt_position') }}
       - unique_id: family_room_swnw_blinds_tilt_position
         name: "Family Room SW-NW Blinds Tilt Position"
         unit_of_measurement: '%'
