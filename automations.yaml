@@ -1145,11 +1145,12 @@
   alias: IKEA Switch 1 On
   description: ''
   trigger:
-  - device_id: ef124cae49aa319f12b5ba9eb6f9ae9a
-    domain: zha
-    platform: device
-    type: remote_button_short_press
-    subtype: turn_on
+  - platform: device
+    domain: mqtt
+    device_id: bd4d2d94b5a8296f790314491be1ae82
+    type: action
+    subtype: 'on'
+    discovery_id: 0x5c0272fffe438958 action_on
   condition: []
   action:
   - type: turn_on
@@ -1162,11 +1163,12 @@
   alias: IKEA Switch 1 Off
   description: ''
   trigger:
-  - device_id: ef124cae49aa319f12b5ba9eb6f9ae9a
-    domain: zha
-    platform: device
-    type: remote_button_short_press
-    subtype: turn_off
+  - platform: device
+    domain: mqtt
+    device_id: bd4d2d94b5a8296f790314491be1ae82
+    type: action
+    subtype: 'off'
+    discovery_id: 0x5c0272fffe438958 action_off
   condition: []
   action:
   - type: turn_off
@@ -1178,26 +1180,29 @@
   alias: IKEA Remote 1 Toggle
   description: ''
   trigger:
-  - device_id: 439888cd2429e60eae9b9c512836115b
-    domain: zha
-    platform: device
-    type: remote_button_short_press
-    subtype: turn_on
+  - platform: device
+    domain: mqtt
+    device_id: 1d27ca3563f3dbd03993d1ee95dd6c2f
+    type: action
+    subtype: toggle
+    discovery_id: 0xbc33acfffe159123 action_toggle
   condition: []
   action:
   - service: homeassistant.toggle
+    data: {}
     target:
-      entity_id: group.outdoor_christmas_lights
+      entity_id: fan.family_room_ceiling_fan
   mode: single
 - id: '1615490246403'
   alias: IKEA Remote 1 Dim Up
   description: ''
   trigger:
-  - device_id: 439888cd2429e60eae9b9c512836115b
-    domain: zha
-    platform: device
-    type: remote_button_short_press
-    subtype: dim_up
+  - platform: device
+    domain: mqtt
+    device_id: 1d27ca3563f3dbd03993d1ee95dd6c2f
+    type: action
+    subtype: brightness_up_click
+    discovery_id: 0xbc33acfffe159123 action_brightness_up_click
   condition: []
   action:
   - service: fan.set_percentage
@@ -1210,26 +1215,29 @@
   alias: IKEA Remote 1 Dim Down
   description: ''
   trigger:
-  - device_id: 439888cd2429e60eae9b9c512836115b
-    domain: zha
-    platform: device
-    type: remote_button_short_press
-    subtype: dim_down
+  - platform: device
+    domain: mqtt
+    device_id: 1d27ca3563f3dbd03993d1ee95dd6c2f
+    type: action
+    subtype: brightness_down_click
+    discovery_id: 0xbc33acfffe159123 action_brightness_down_click
   condition: []
   action:
   - service: fan.turn_off
     target:
       entity_id: fan.family_room_ceiling_fan
+    data: {}
   mode: single
 - id: '1615490343030'
   alias: IKEA Remote 1 Left
   description: ''
   trigger:
-  - device_id: 439888cd2429e60eae9b9c512836115b
-    domain: zha
-    platform: device
-    type: remote_button_short_press
-    subtype: left
+  - platform: device
+    domain: mqtt
+    device_id: 1d27ca3563f3dbd03993d1ee95dd6c2f
+    type: action
+    subtype: arrow_left_click
+    discovery_id: 0xbc33acfffe159123 action_arrow_left_click
   condition: []
   action:
   - service: fan.set_percentage
@@ -1242,11 +1250,12 @@
   alias: IKEA Remote 1 Right
   description: ''
   trigger:
-  - device_id: 439888cd2429e60eae9b9c512836115b
-    domain: zha
-    platform: device
-    type: remote_button_short_press
-    subtype: right
+  - platform: device
+    domain: mqtt
+    device_id: 1d27ca3563f3dbd03993d1ee95dd6c2f
+    type: action
+    subtype: arrow_right_click
+    discovery_id: 0xbc33acfffe159123 action_arrow_right_click
   condition: []
   action:
   - service: fan.set_percentage
@@ -1259,11 +1268,12 @@
   alias: IKEA Remote 2 Dim Up
   description: ''
   trigger:
-  - device_id: 2cb4f85bb1b5a58967706c99a0680da9
-    domain: zha
-    platform: device
-    type: remote_button_short_press
-    subtype: dim_up
+  - platform: device
+    domain: mqtt
+    device_id: ac0e424cfbd6feb81c66a49b9a609e4d
+    type: action
+    subtype: brightness_up_click
+    discovery_id: 0x60a423fffee42af2 action_brightness_up_click
   condition: []
   action:
   - service: fan.set_percentage
@@ -1276,26 +1286,29 @@
   alias: IKEA Remote 2 Dim Down
   description: ''
   trigger:
-  - device_id: 2cb4f85bb1b5a58967706c99a0680da9
-    domain: zha
-    platform: device
-    type: remote_button_short_press
-    subtype: dim_down
+  - platform: device
+    domain: mqtt
+    device_id: ac0e424cfbd6feb81c66a49b9a609e4d
+    type: action
+    subtype: brightness_down_click
+    discovery_id: 0x60a423fffee42af2 action_brightness_down_click
   condition: []
   action:
   - service: fan.turn_off
     target:
       entity_id: fan.main_bedroom_ceiling_fan
+    data: {}
   mode: single
 - id: '1615600620342'
   alias: IKEA Remote 2 Left
   description: ''
   trigger:
-  - device_id: 2cb4f85bb1b5a58967706c99a0680da9
-    domain: zha
-    platform: device
-    type: remote_button_short_press
-    subtype: left
+  - platform: device
+    domain: mqtt
+    device_id: ac0e424cfbd6feb81c66a49b9a609e4d
+    type: action
+    subtype: arrow_left_click
+    discovery_id: 0x60a423fffee42af2 action_arrow_left_click
   condition: []
   action:
   - service: fan.set_percentage
@@ -1308,11 +1321,12 @@
   alias: IKEA Remote 2 Right
   description: ''
   trigger:
-  - device_id: 2cb4f85bb1b5a58967706c99a0680da9
-    domain: zha
-    platform: device
-    type: remote_button_short_press
-    subtype: right
+  - platform: device
+    domain: mqtt
+    device_id: ac0e424cfbd6feb81c66a49b9a609e4d
+    type: action
+    subtype: arrow_right_click
+    discovery_id: 0x60a423fffee42af2 action_arrow_right_click
   condition: []
   action:
   - service: fan.set_percentage
@@ -1325,11 +1339,12 @@
   alias: IKEA Remote 2 Toggle
   description: ''
   trigger:
-  - device_id: 2cb4f85bb1b5a58967706c99a0680da9
-    domain: zha
-    platform: device
-    type: remote_button_short_press
-    subtype: turn_on
+  - platform: device
+    domain: mqtt
+    device_id: ac0e424cfbd6feb81c66a49b9a609e4d
+    type: action
+    subtype: toggle
+    discovery_id: 0x60a423fffee42af2 action_toggle
   condition: []
   action:
   - type: toggle
@@ -1649,11 +1664,12 @@
   alias: IKEA Switch 4 Off
   description: ''
   trigger:
-  - device_id: b3b4860ebb04ea35875d7106f501301b
-    domain: zha
-    platform: device
-    type: remote_button_short_press
-    subtype: turn_off
+  - platform: device
+    domain: mqtt
+    device_id: d022563409ba1029898bebf110a4ebc3
+    type: action
+    subtype: 'off'
+    discovery_id: 0x5c0272fffe3f32ed action_off
   condition: []
   action:
   - service: light.turn_off
@@ -1674,6 +1690,7 @@
       - light.office_light_bulb
       - light.family_room_lamp_2
       - light.back_outdoor_xmas_lights
+    data: {}
   - service: switch.turn_off
     target:
       entity_id:
@@ -1682,16 +1699,18 @@
       - switch.front_yard_light
       - switch.garage_light
       - switch.living_room_lamp_module
+    data: {}
   mode: single
 - id: '1626811175205'
   alias: IKEA Switch 4 On
   description: ''
   trigger:
-  - device_id: b3b4860ebb04ea35875d7106f501301b
-    domain: zha
-    platform: device
-    type: remote_button_short_press
-    subtype: turn_on
+  - platform: device
+    domain: mqtt
+    device_id: d022563409ba1029898bebf110a4ebc3
+    type: action
+    subtype: 'on'
+    discovery_id: 0x5c0272fffe3f32ed action_on
   condition: []
   action:
   - service: light.turn_on
@@ -1712,6 +1731,7 @@
       - light.main_bedroom_se_ceiling_lights
       - light.office_light_bulb
       - light.back_outdoor_xmas_lights
+    data: {}
   - service: switch.turn_on
     target:
       entity_id:
@@ -1720,6 +1740,7 @@
       - switch.front_yard_light
       - switch.garage_light
       - switch.living_room_lamp_module
+    data: {}
   mode: single
 - id: '1626893038399'
   alias: Utility Power On if Off for more than 5 min
@@ -1736,24 +1757,6 @@
     entity_id: switch.utility_power_relay
     domain: switch
   mode: single
-- id: '1626899198765'
-  alias: IKEA Switch 3 - Living Room Blinds
-  description: ''
-  use_blueprint:
-    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
-    input:
-      remote: 313f4dda0566182ac3c2c9d73c1559e6
-      cover: cover.living_room_blinds
-      loop_delay: 700
-- id: '1626899624940'
-  alias: IKEA Switch 2 - Family Room Blinds
-  description: ''
-  use_blueprint:
-    path: mtl010957/zha_ikea_2button_switch_cover_tilt.yaml
-    input:
-      remote: 4658744562af10ebb6d6f1439997bbbb
-      cover: cover.family_room_blinds
-      loop_delay: 700
 - id: '1628008841148'
   alias: Floods Off when Susan Comes Home Late
   description: ''
@@ -1787,11 +1790,12 @@
   alias: IKEA Remote 2 Dim Down Hold
   description: ''
   trigger:
-  - platform: event
-    event_type: zha_event
-    event_data:
-      device_id: 2cb4f85bb1b5a58967706c99a0680da9
-      command: move
+  - platform: device
+    domain: mqtt
+    device_id: ac0e424cfbd6feb81c66a49b9a609e4d
+    type: action
+    subtype: brightness_down_hold
+    discovery_id: 0x60a423fffee42af2 action_brightness_down_hold
   condition: []
   action:
   - service: fan.decrease_speed
@@ -1804,11 +1808,12 @@
   alias: IKEA Remote 2 Dim Up Hold
   description: ''
   trigger:
-  - platform: event
-    event_type: zha_event
-    event_data:
-      device_id: 2cb4f85bb1b5a58967706c99a0680da9
-      command: move_with_on_off
+  - platform: device
+    domain: mqtt
+    device_id: ac0e424cfbd6feb81c66a49b9a609e4d
+    type: action
+    subtype: brightness_up_hold
+    discovery_id: 0x60a423fffee42af2 action_brightness_up_hold
   condition: []
   action:
   - service: fan.increase_speed
@@ -1821,11 +1826,12 @@
   alias: IKEA Remote 1 Dim Down Hold
   description: ''
   trigger:
-  - platform: event
-    event_type: zha_event
-    event_data:
-      device_id: 439888cd2429e60eae9b9c512836115b
-      command: move
+  - platform: device
+    domain: mqtt
+    device_id: 1d27ca3563f3dbd03993d1ee95dd6c2f
+    type: action
+    subtype: brightness_down_hold
+    discovery_id: 0xbc33acfffe159123 action_brightness_down_hold
   condition: []
   action:
   - service: fan.decrease_speed
@@ -1838,11 +1844,12 @@
   alias: IKEA Remote 1 Dim Up Hold
   description: ''
   trigger:
-  - platform: event
-    event_type: zha_event
-    event_data:
-      device_id: 439888cd2429e60eae9b9c512836115b
-      command: move_with_on_off
+  - platform: device
+    domain: mqtt
+    device_id: 1d27ca3563f3dbd03993d1ee95dd6c2f
+    type: action
+    subtype: brightness_up_hold
+    discovery_id: 0xbc33acfffe159123 action_brightness_up_hold
   condition: []
   action:
   - service: fan.increase_speed
@@ -2394,4 +2401,182 @@
   condition: []
   action:
   - service: shell_command.move_cam4_ftp_jpg
+  mode: single
+- id: '1646521910164'
+  alias: IKEA Switch 2 On
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: 598f8a95bb581d7a415f29ed23da2a0c
+    type: action
+    subtype: 'on'
+    discovery_id: 0x5c0272fffe3e6624 action_on
+  condition: []
+  action:
+  - service: cover.open_cover_tilt
+    data: {}
+    target:
+      entity_id:
+      - cover.family_room_blinds
+  mode: single
+- id: '1646521997227'
+  alias: IKEA Switch 2 Off
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: 598f8a95bb581d7a415f29ed23da2a0c
+    type: action
+    subtype: 'off'
+    discovery_id: 0x5c0272fffe3e6624 action_off
+  condition: []
+  action:
+  - service: cover.close_cover_tilt
+    data: {}
+    target:
+      entity_id:
+      - cover.family_room_blinds
+  mode: single
+- id: '1646522271801'
+  alias: IKEA Switch 2 Hold Up
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: 598f8a95bb581d7a415f29ed23da2a0c
+    type: action
+    subtype: brightness_move_up
+    discovery_id: 0x5c0272fffe3e6624 action_brightness_move_up
+  condition: []
+  action:
+  - repeat:
+      while: []
+      sequence:
+      - service: cover.set_cover_tilt_position
+        data:
+          tilt_position: '{{ state_attr("cover.family_room_blinds","current_tilt_position")
+            + 2 }}'
+        target:
+          entity_id: cover.family_room_blinds
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 0
+          milliseconds: 700
+  mode: single
+- id: '1646522488233'
+  alias: IKEA Switch 2 Hold Down
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: 598f8a95bb581d7a415f29ed23da2a0c
+    type: action
+    subtype: brightness_move_down
+    discovery_id: 0x5c0272fffe3e6624 action_brightness_move_down
+  condition: []
+  action:
+  - repeat:
+      while: []
+      sequence:
+      - service: cover.set_cover_tilt_position
+        data:
+          tilt_position: '{{ state_attr("cover.family_room_blinds","current_tilt_position")
+            - 2 }}'
+        target:
+          entity_id: cover.family_room_blinds
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 0
+          milliseconds: 700
+  mode: single
+- id: '1646522683985'
+  alias: IKEA Switch 3 Hold Down
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: 4212a40fda8f168a2540a09ab1aa5a2a
+    type: action
+    subtype: brightness_move_down
+    discovery_id: 0x5c0272fffe57ad6d action_brightness_move_down
+  condition: []
+  action:
+  - repeat:
+      while: []
+      sequence:
+      - service: cover.set_cover_tilt_position
+        data:
+          tilt_position: '{{ state_attr("cover.living_room_blinds","current_tilt_position")
+            - 2 }}'
+        target:
+          entity_id: cover.living_room_blinds
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 0
+          milliseconds: 700
+  mode: single
+- id: '1646522781333'
+  alias: IKEA Switch 3 Hold Up
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: 4212a40fda8f168a2540a09ab1aa5a2a
+    type: action
+    subtype: brightness_move_up
+    discovery_id: 0x5c0272fffe57ad6d action_brightness_move_up
+  condition: []
+  action:
+  - repeat:
+      while: []
+      sequence:
+      - service: cover.set_cover_tilt_position
+        data:
+          tilt_position: '{{ state_attr("cover.living_room_blinds","current_tilt_position")
+            + 2 }}'
+        target:
+          entity_id: cover.living_room_blinds
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 0
+          milliseconds: 700
+  mode: single
+- id: '1646522827363'
+  alias: IKEA Switch 3 Off
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: 4212a40fda8f168a2540a09ab1aa5a2a
+    type: action
+    subtype: 'off'
+    discovery_id: 0x5c0272fffe57ad6d action_off
+  condition: []
+  action:
+  - service: cover.close_cover_tilt
+    data: {}
+    target:
+      entity_id: cover.living_room_blinds
+  mode: single
+- id: '1646522873343'
+  alias: IKEA Switch 3 On
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: 4212a40fda8f168a2540a09ab1aa5a2a
+    type: action
+    subtype: 'on'
+    discovery_id: 0x5c0272fffe57ad6d action_on
+  condition: []
+  action:
+  - service: cover.open_cover_tilt
+    data: {}
+    target:
+      entity_id: cover.living_room_blinds
   mode: single
