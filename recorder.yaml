@@ -33,11 +33,12 @@ include:
     - climate.hot_water_recirc_control_setting
     # covers
     - cover.family_room_sene_blinds
+    - cover.family_room_sesw_blinds
+    - cover.family_room_swse_blinds
+    - cover.family_room_swctr_blinds
+    - cover.family_room_swnw_blinds
     - cover.family_room_nwsw_blinds
     - cover.family_room_nwne_blinds
-    - cover.family_room_sesw_blinds
-    - cover.family_room_swnw_blinds
-    - cover.family_room_swse_blinds
     - cover.living_room_se_blinds
     - cover.living_room_se_ctr_blinds
     - cover.living_room_ctr_blinds
@@ -123,20 +124,21 @@ include:
     - sensor.desert_ups_d_status
     - sensor.desert_ups_d_input_voltage
     - sensor.desert_ups_d_battery_charge
-    - sensor.ikea_remote_1_power
-    - sensor.ikea_remote_2_power
-    - sensor.ikea_switch_1_power
-    - sensor.ikea_switch_2_power
-    - sensor.ikea_switch_3_power
-    - sensor.ikea_switch_4_power
+    - sensor.ikea_remote_1_battery
+    - sensor.ikea_remote_2_battery
+    - sensor.ikea_switch_1_battery
+    - sensor.ikea_switch_2_battery
+    - sensor.ikea_switch_3_battery
+    - sensor.ikea_switch_4_battery
     - sensor.family_room_sene_light_sensor
     - sensor.family_room_swse_light_sensor
-    - sensor.family_room_nwne_blinds_tilt_position
-    - sensor.family_room_nwsw_blinds_tilt_position
     - sensor.family_room_sene_blinds_tilt_position
     - sensor.family_room_sesw_blinds_tilt_position
-    - sensor.family_room_swnw_blinds_tilt_position
     - sensor.family_room_swse_blinds_tilt_position
+    - sensor.family_room_swctr_blinds_tilt_position
+    - sensor.family_room_swnw_blinds_tilt_position
+    - sensor.family_room_nwsw_blinds_tilt_position
+    - sensor.family_room_nwne_blinds_tilt_position
     - sensor.living_room_nw_ctr_light_sensor
     - sensor.living_room_se_ctr_light_sensor
     - sensor.living_room_ctr_blinds_tilt_position
