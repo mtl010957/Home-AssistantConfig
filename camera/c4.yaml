@@ -1,4 +1,0 @@
-- platform: mjpeg
-  name: "3629 Cam 4"
-  mjpeg_url: !secret generic_cam4_url
-
