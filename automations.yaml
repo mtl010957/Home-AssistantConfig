@@ -1188,10 +1188,10 @@
     discovery_id: 0xbc33acfffe159123 action_toggle
   condition: []
   action:
-  - service: homeassistant.toggle
-    data: {}
-    target:
-      entity_id: fan.family_room_ceiling_fan
+  - type: toggle
+    device_id: ad38b2b29eb24331b68fbae50ee3316a
+    entity_id: switch.family_room_ceiling_fan_light
+    domain: switch
   mode: single
 - id: '1615490246403'
   alias: IKEA Remote 1 Dim Up
