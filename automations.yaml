@@ -1634,19 +1634,20 @@
     domain: switch
   mode: single
 - id: '1626789324636'
-  alias: Blinds Open Energy Summary Over 1KW 4AM to Sunrise Not Armed Away
+  alias: Blinds Open Energy Summary Over 900W 4AM to Sunrise Not Armed Away
   description: ''
   trigger:
   - platform: numeric_state
     entity_id: sensor.dte_energy_bridge_summary
-    above: '1000'
+    above: '900'
     for:
       hours: 0
       minutes: 0
-      seconds: 30
+      seconds: 0
   condition:
   - condition: time
     after: 04:00:00
+    before: 00:00:00
   - condition: sun
     before: sunrise
   - condition: not
@@ -1659,6 +1660,7 @@
     state: closed
   action:
   - service: script.open_all_blinds
+    data: {}
   mode: single
 - id: '1626810840417'
   alias: IKEA Switch 4 Off
@@ -2235,15 +2237,16 @@
   - service: script.turn_on_xmas_lights_10
   mode: single
 - id: '1639409820437'
-  alias: Hot Water Recirc On Energy Summary Over 1KW 4AM to Sunrise Not Armed Away
+  alias: Hot Water Recirc On Energy Summary Over 900W 4AM to Sunrise Not Armed Away
   description: ''
   trigger:
   - platform: numeric_state
     entity_id: sensor.dte_energy_bridge_summary
-    above: '1000'
+    above: '900'
   condition:
   - condition: time
     after: 04:00:00
+    before: 00:00:00
   - condition: sun
     before: sunrise
   - condition: not
