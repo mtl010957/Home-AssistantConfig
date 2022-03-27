@@ -4,12 +4,12 @@
         unit_of_measurement: "%"
         device_class: humidity
         state: >
-          {{ [[(states('sensor.outdoor_temperature') | float * states('input_number.humidifier_temperature_gain') | float / 100.0 + states('input_number.humidity_at_0_degf') | float) | round(1), 40.0] | min, 15.0] | max }}
+          {{ [[(states('sensor.outdoor_temperature') | float(default=0.0) * states('input_number.humidifier_temperature_gain') | float(default=0.0) / 100.0 + states('input_number.humidity_at_0_degf') | float(default=0.0)) | round(1), 40.0] | min, 15.0] | max }}
 
       - unique_id: humidifier_on_point
         name: "Humidifier On Point"
         unit_of_measurement: "%"
         device_class: humidity
         state: >
-          {{ (states('sensor.humidifier_off_point') | float * (1.0 - states('input_number.humidifier_turn_on_deadband') | float / 100.0)) | round(1) }}
+          {{ (states('sensor.humidifier_off_point') | float(default=0.0) * (1.0 - states('input_number.humidifier_turn_on_deadband') | float(default=0.0) / 100.0)) | round(1) }}
 
