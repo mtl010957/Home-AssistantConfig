@@ -2526,3 +2526,28 @@
           brightness_step_pct: -10
         target:
           entity_id: light.family_room_lamps
+- id: '1648489660966'
+  alias: Tuya Knob 1 Controller
+  description: ''
+  use_blueprint:
+    path: mtl010957/moes_rotary.yaml
+    input:
+      switch: sensor.tuya_knob_1_action
+      toggle:
+      - service: light.toggle
+        data: {}
+        target:
+          entity_id: light.family_room_lamps
+      short_press: []
+      brightness_step_up:
+      - service: light.turn_on
+        data:
+          brightness_step_pct: 5
+        target:
+          entity_id: light.family_room_lamps
+      brightness_step_down:
+      - service: light.turn_on
+        data:
+          brightness_step_pct: -5
+        target:
+          entity_id: light.family_room_lamps
