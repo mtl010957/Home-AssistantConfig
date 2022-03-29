@@ -2502,30 +2502,42 @@
           seconds: 0
           milliseconds: 500
 - id: '1648144001705'
-  alias: Cube 1 Controller
+  alias: Aqara Cube 1 Controller
   description: ''
   use_blueprint:
     path: SirGoodenough/Zigbee2MQTT - Xiaomi Cube Controller.yaml
     input:
-      remote: sensor.cube_1_action
-      doubletap_face_0: []
-      slide_face_0:
-      - service: light.toggle
+      remote: sensor.aqara_cube_1_action
+      doubletap_face_0:
+      - service: light.turn_on
         data: {}
         target:
-          entity_id: light.family_room_lamps
-      rotate_cw_face_0:
-      - service: light.turn_on
-        data:
-          brightness_step_pct: 10
+          area_id:
+          - d66690d909184fc39c8ef0e3559befea
+          - ae8548e9d7b24e11b7d5670a4da86499
+          - be918af12ae344be9d3936091fc54a20
+          - 34c603d253c649ccb4430b96d906f5a8
+          - 994d07af5955428c961b2448d9bcf261
+          - ba35ea6dc22d42808e3dc7511c49bfe6
+          - a9551ad1cd4c4f63ab8c697ff8949be5
+          - 316107820cce4630be06041fc14816e3
+      slide_face_0: []
+      rotate_cw_face_0: []
+      rotate_ccw_face_0: []
+      shake:
+      - service: light.turn_off
+        data: {}
         target:
-          entity_id: light.family_room_lamps
-      rotate_ccw_face_0:
-      - service: light.turn_on
-        data:
-          brightness_step_pct: -10
-        target:
-          entity_id: light.family_room_lamps
+          area_id:
+          - d66690d909184fc39c8ef0e3559befea
+          - ae8548e9d7b24e11b7d5670a4da86499
+          - be918af12ae344be9d3936091fc54a20
+          - 34c603d253c649ccb4430b96d906f5a8
+          - 994d07af5955428c961b2448d9bcf261
+          - ba35ea6dc22d42808e3dc7511c49bfe6
+          - a9551ad1cd4c4f63ab8c697ff8949be5
+          - 316107820cce4630be06041fc14816e3
+      doubletap_any: []
 - id: '1648489660966'
   alias: Tuya Knob 1 Controller
   description: ''
