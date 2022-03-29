@@ -1674,34 +1674,10 @@
     discovery_id: 0x5c0272fffe3f32ed action_off
   condition: []
   action:
-  - service: light.turn_off
-    target:
-      entity_id:
-      - light.back_porch_light
-      - light.bedside_lamp_bulb
-      - light.dining_room_ceiling_light
-      - light.family_room_lamp_1
-      - light.family_room_nw_ceiling_lights
-      - light.family_room_se_ceiling_lights
-      - light.front_porch_light
-      - light.garage_attic_link_bulb
-      - light.guest_room_lamp_bulb
-      - light.living_room_lamp_dimmer
-      - light.main_bedroom_nw_ceiling_lights
-      - light.main_bedroom_se_ceiling_lights
-      - light.office_light_bulb
-      - light.family_room_lamp_2
-      - light.back_outdoor_xmas_lights
+  - service: cover.open_cover_tilt
     data: {}
-  - service: switch.turn_off
     target:
-      entity_id:
-      - switch.family_room_ceiling_fan_light
-      - switch.front_outdoor_xmas_lights
-      - switch.front_yard_light
-      - switch.garage_light
-      - switch.living_room_lamp_module
-    data: {}
+      entity_id: cover.living_room_nw_blinds
   mode: single
 - id: '1626811175205'
   alias: IKEA Switch 4 On
@@ -1715,34 +1691,11 @@
     discovery_id: 0x5c0272fffe3f32ed action_on
   condition: []
   action:
-  - service: light.turn_on
+  - service: cover.set_cover_tilt_position
+    data:
+      tilt_position: 100
     target:
-      entity_id:
-      - light.back_porch_light
-      - light.bedside_lamp_bulb
-      - light.dining_room_ceiling_light
-      - light.family_room_lamp_1
-      - light.family_room_lamp_2
-      - light.family_room_nw_ceiling_lights
-      - light.family_room_se_ceiling_lights
-      - light.front_porch_light
-      - light.garage_attic_link_bulb
-      - light.guest_room_lamp_bulb
-      - light.living_room_lamp_dimmer
-      - light.main_bedroom_nw_ceiling_lights
-      - light.main_bedroom_se_ceiling_lights
-      - light.office_light_bulb
-      - light.back_outdoor_xmas_lights
-    data: {}
-  - service: switch.turn_on
-    target:
-      entity_id:
-      - switch.family_room_ceiling_fan_light
-      - switch.front_outdoor_xmas_lights
-      - switch.front_yard_light
-      - switch.garage_light
-      - switch.living_room_lamp_module
-    data: {}
+      entity_id: cover.living_room_nw_blinds
   mode: single
 - id: '1626893038399'
   alias: Utility Power On if Off for more than 5 min
@@ -2521,6 +2474,9 @@
           - ba35ea6dc22d42808e3dc7511c49bfe6
           - a9551ad1cd4c4f63ab8c697ff8949be5
           - 316107820cce4630be06041fc14816e3
+          device_id:
+          - fd2a79d8e6a9e4cf919315c82983a32f
+          - 11fadf4bb1cb06b9a37bca6d7b596ae7
       slide_face_0: []
       rotate_cw_face_0: []
       rotate_ccw_face_0: []
@@ -2537,6 +2493,9 @@
           - ba35ea6dc22d42808e3dc7511c49bfe6
           - a9551ad1cd4c4f63ab8c697ff8949be5
           - 316107820cce4630be06041fc14816e3
+          device_id:
+          - fd2a79d8e6a9e4cf919315c82983a32f
+          - 11fadf4bb1cb06b9a37bca6d7b596ae7
       doubletap_any: []
 - id: '1648489660966'
   alias: Tuya Knob 1 Controller
