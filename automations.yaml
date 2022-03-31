@@ -195,14 +195,9 @@
     value_template: '{{ states(''sensor.precipitation_probability_today'') | int <
       states(''input_number.irrigation_enable_below_precip'') | int }}'
   condition:
-  - condition: or
-    conditions:
-    - condition: state
-      entity_id: sensor.season
-      state: spring
-    - condition: state
-      entity_id: sensor.season
-      state: summer
+  - condition: state
+    entity_id: sensor.season
+    state: summer
   action:
   - device_id: 57673a6ec02649a3a76d73e5d17ca744
     domain: switch
