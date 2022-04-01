@@ -1,0 +1,44 @@
+'0xf0d1b80000035834':
+  friendly_name: Family Room Lamp Bulb 1
+  legacy: false
+  optimistic: true
+  retain: true
+'0xf0d1b80000034f87':
+  friendly_name: Family Room Lamp Bulb 2
+  legacy: false
+  optimistic: true
+  retain: true
+'0x7ce52400001327cf':
+  friendly_name: Family Room Link Bulb 1
+  legacy: false
+  optimistic: true
+  retain: true
+'0x7ce5240000146fd6':
+  friendly_name: Family Room Link Bulb 2
+  legacy: false
+  optimistic: true
+  retain: true
+'0xf0d1b80000049891':
+  friendly_name: Guest Room Lamp Bulb
+'0x841826000004d206':
+  friendly_name: Bedside Lamp Bulb
+'0xf0d1b8000004ae2c':
+  friendly_name: Office Light Bulb
+'0x7ce524000013612c':
+  friendly_name: Garage Attic Link Bulb
+'0xbc33acfffe159123':
+  friendly_name: IKEA Remote 1
+'0x5c0272fffe3e6624':
+  friendly_name: IKEA Switch 2
+'0x5c0272fffe438958':
+  friendly_name: IKEA Switch 1
+'0x5c0272fffe57ad6d':
+  friendly_name: IKEA Switch 3
+'0x5c0272fffe3f32ed':
+  friendly_name: IKEA Switch 4
+'0x60a423fffee42af2':
+  friendly_name: IKEA Remote 2
+'0x00158d0007998e81':
+  friendly_name: Aqara Cube 1
+'0x84ba20fffe8d618c':
+  friendly_name: Tuya Knob 1

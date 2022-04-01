@@ -1,0 +1,46 @@
+external_converters: []
+devices:
+  - devices.yaml
+groups:
+  - groups.yaml
+homeassistant: true
+permit_join: false
+mqtt:
+  base_topic: zigbee2mqtt
+  user: addons
+  password: faehi2VaiL1pohj8OhsaeNaeph3IeKeisaokoo7shaip3vi1phahsheeQu3Wa7ai
+  server: mqtt://core-mosquitto:1883
+serial:
+  port: >-
+    /dev/serial/by-id/usb-ITead_Sonoff_Zigbee_3.0_USB_Dongle_Plus_7a296bb65c3bec11bc5d9c957a0af07f-if00-port0
+advanced:
+  log_level: debug
+  pan_id: 6754
+  channel: 11
+  network_key:
+    - 1
+    - 3
+    - 5
+    - 7
+    - 9
+    - 11
+    - 13
+    - 15
+    - 0
+    - 2
+    - 4
+    - 6
+    - 8
+    - 10
+    - 12
+    - 13
+  availability_blocklist: []
+  availability_passlist: []
+device_options: {}
+blocklist: []
+passlist: []
+queue: {}
+frontend:
+  port: 8099
+experimental: {}
+availability: false
