@@ -1949,11 +1949,12 @@
     path: mcnovy/renew_ssl_cert_homeassistant.yaml
     input:
       cert_expiry_sensor: sensor.cert_expiry_timestamp_ha_mtl_svn_dyndns_home_com
-      time_to_check_cert: '3:20:00'
+      time_to_check_cert: 03:20:00
       send_notification: true
       notification_device: 77ea7e8e39715881866784bb68da74ed
       notification_title: Encryption Certificate Renewed Successfully
       notification_message: HA Home encryption certificate has been successfully renewed!
+      renew_date: 20
 - id: '1630938392774'
   alias: Notify Battery Low Garage Smoke/CO Alarm
   description: ''
@@ -2472,6 +2473,12 @@
           device_id:
           - fd2a79d8e6a9e4cf919315c82983a32f
           - 11fadf4bb1cb06b9a37bca6d7b596ae7
+      - service: switch.turn_on
+        data: {}
+        target:
+          device_id:
+          - 0c1cce990f9a9a7945b0ed35dae83b79
+          - ad38b2b29eb24331b68fbae50ee3316a
       slide_face_0: []
       rotate_cw_face_0: []
       rotate_ccw_face_0: []
@@ -2491,6 +2498,12 @@
           device_id:
           - fd2a79d8e6a9e4cf919315c82983a32f
           - 11fadf4bb1cb06b9a37bca6d7b596ae7
+      - service: switch.turn_off
+        data: {}
+        target:
+          device_id:
+          - ad38b2b29eb24331b68fbae50ee3316a
+          - 0c1cce990f9a9a7945b0ed35dae83b79
       doubletap_any: []
 - id: '1648489660966'
   alias: Tuya Knob 1 Controller
