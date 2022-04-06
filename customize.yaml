@@ -14,38 +14,10 @@ sensor.dte_energy_used_hourly_on_peak:
   friendly_name: DTE On Peak
 sensor.dte_energy_used_hourly_on_peak_cost:
   friendly_name: DTE On Peak Cost
-binary_sensor.front_door_sensor_any:
-  device_class: door
-binary_sensor.back_door_sensor_any:
-  device_class: door
-binary_sensor.garage_door_sensor_any:
-  device_class: garage_door
-binary_sensor.garage_inside_door_sensor_any:
-  device_class: door
-binary_sensor.office_motion_sensor_any:
-  device_class: motion
-binary_sensor.main_bedroom_motion_sensor_any:
-  device_class: motion
-cover.living_room_blinds:
-  device_class: blind
-cover.family_room_blinds:
-  device_class: blind
-cover.family_room_se_blinds:
-  device_class: blind
-cover.family_room_sw_blinds:
-  device_class: blind
-cover.family_room_nw_blinds:
-  device_class: blind
 zone.home:
   radius: 400
 zone.desert_home:
   icon: mdi:cactus
-light.family_room_lamp_1:
-  icon: mdi:lamp
-light.family_room_lamp_2:
-  icon: mdi:lamp
-light.family_room_lamps:
-  icon: mdi:lamps
 switch.generic_cam4_hpatrol:
   icon: mdi:axis-z-rotate-clockwise
   

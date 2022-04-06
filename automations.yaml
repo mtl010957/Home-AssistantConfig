@@ -1849,16 +1849,17 @@
     - wed
     - thu
     - fri
+    before: 00:00:00
   - condition: state
     entity_id: sensor.dte_energy_used_hourly_critical_peak
     state: paused
     attribute: status
   action:
   - service: utility_meter.select_tariff
-    target:
-      entity_id: utility_meter.dte_energy_used_hourly
     data:
       tariff: On Peak
+    target:
+      entity_id: utility_meter.dte_energy_used_hourly
   mode: single
 - id: '1628687260650'
   alias: Energy Usage Off Peak
