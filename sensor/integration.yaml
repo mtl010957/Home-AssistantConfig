@@ -1,5 +1,0 @@
-  - platform: integration
-    source: sensor.dte_energy_bridge
-    name: DTE Energy Used
-    unit_prefix: k
-    round: 2
