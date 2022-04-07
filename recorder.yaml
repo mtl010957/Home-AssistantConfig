@@ -102,10 +102,10 @@ include:
     - sensor.corrected_barometer_inhg
     - sensor.family_room_temperature
     - sensor.family_room_smoke_co_alarm_battery_level
-    - sensor.furnace_flue_temperature_f
-    - sensor.furnace_nw_zone_return_temperature_f
-    - sensor.furnace_se_zone_return_temperature_f
-    - sensor.furnace_supply_temperature_f
+    - sensor.furnace_flue_temperature
+    - sensor.furnace_nw_zone_return_temperature
+    - sensor.furnace_se_zone_return_temperature
+    - sensor.furnace_supply_temperature
     - sensor.garage_humidity
     - sensor.garage_temperature
     - sensor.garage_smoke_alarm_battery_level
