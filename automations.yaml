@@ -1825,16 +1825,17 @@
     - wed
     - thu
     - fri
+    before: 00:00:00
   - condition: state
     entity_id: sensor.dte_energy_used_hourly_critical_peak
     state: paused
     attribute: status
   action:
-  - service: utility_meter.select_tariff
-    target:
-      entity_id: utility_meter.dte_energy_used_hourly
+  - service: select.select_option
     data:
-      tariff: Mid Peak
+      option: Mid Peak
+    target:
+      entity_id: select.dte_energy_used_hourly
   mode: single
 - id: '1628686959403'
   alias: Energy Usage On Peak
@@ -1851,16 +1852,17 @@
     - thu
     - fri
     before: 00:00:00
+    after: 00:00:00
   - condition: state
     entity_id: sensor.dte_energy_used_hourly_critical_peak
     state: paused
     attribute: status
   action:
-  - service: utility_meter.select_tariff
+  - service: select.select_option
     data:
-      tariff: On Peak
+      option: On Peak
     target:
-      entity_id: utility_meter.dte_energy_used_hourly
+      entity_id: select.dte_energy_used_hourly
   mode: single
 - id: '1628687260650'
   alias: Energy Usage Off Peak
@@ -1874,11 +1876,11 @@
     state: paused
     attribute: status
   action:
-  - service: utility_meter.select_tariff
-    target:
-      entity_id: utility_meter.dte_energy_used_hourly
+  - service: select.select_option
     data:
-      tariff: Off Peak
+      option: Off Peak
+    target:
+      entity_id: select.dte_energy_used_hourly
   mode: single
 - id: '1628687622317'
   alias: Energy Usage Critical Peak Start
@@ -1888,11 +1890,11 @@
     at: input_datetime.energy_critical_peak_start_date_time
   condition: []
   action:
-  - service: utility_meter.select_tariff
-    target:
-      entity_id: utility_meter.dte_energy_used_hourly
+  - service: select.select_option
     data:
-      tariff: Critical Peak
+      option: Critical Peak
+    target:
+      entity_id: select.dte_energy_used_hourly
   mode: single
 - id: '1628687797296'
   alias: Energy Usage Critical Peak Stop
@@ -1906,11 +1908,11 @@
     state: collecting
     attribute: status
   action:
-  - service: utility_meter.select_tariff
-    target:
-      entity_id: utility_meter.dte_energy_used_hourly
+  - service: select.select_option
     data:
-      tariff: Off Peak
+      option: Off Peak
+    target:
+      entity_id: select.dte_energy_used_hourly
   mode: single
 - id: '1629391369948'
   alias: Momentary Switches
