@@ -2,5 +2,5 @@
   name: CPU Temperature
   command: "cat /sys/class/thermal/thermal_zone0/temp"
   # If errors occur, make sure configuration file is encoded as UTF-8
-  unit_of_measurement: "°C"
-  value_template: '{{ value | multiply(0.001) | round(1) }}'
+  unit_of_measurement: "°F"
+  value_template: '{{ value | multiply(0.0018) + 32 | round(1) }}'
