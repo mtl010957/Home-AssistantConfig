@@ -1,90 +1,13 @@
 - id: '1613234587274'
   name: Work Morning
   entities:
-    light.family_room_sene_blinds_blue_led:
-      supported_color_modes:
-      - brightness
-      friendly_name: Family Room SE-NE Blinds Blue LED
-      supported_features: 41
-      state: 'off'
-    cover.family_room_sene_blinds:
-      current_tilt_position: 60
-      device_class: blind
-      friendly_name: Family Room SE-NE Blinds
-      supported_features: 240
-      state: open
-    light.family_room_nwsw_blinds_blue_led:
-      supported_color_modes:
-      - brightness
-      friendly_name: Family Room NW-SW Blinds Blue LED
-      supported_features: 41
-      state: 'off'
-    cover.family_room_nwsw_blinds:
-      current_tilt_position: 60
-      device_class: blind
-      friendly_name: Family Room NW-SW Blinds
-      supported_features: 240
-      state: open
-    light.family_room_sesw_blinds_blue_led:
-      supported_color_modes:
-      - brightness
-      friendly_name: Family Room SE-SW Blinds Blue LED
-      supported_features: 41
-      state: 'off'
-    cover.family_room_sesw_blinds:
-      current_tilt_position: 60
-      device_class: blind
-      friendly_name: Family Room SE-SW Blinds
-      supported_features: 240
-      state: open
-    light.family_room_swnw_blinds_blue_led:
-      supported_color_modes:
-      - brightness
-      friendly_name: Family Room SW-NW Blinds Blue LED
-      supported_features: 41
-      state: 'off'
-    cover.family_room_swnw_blinds:
-      current_tilt_position: 60
-      device_class: blind
-      friendly_name: Family Room SW-NW Blinds
-      supported_features: 240
-      state: open
-    light.family_room_swse_blinds_blue_led:
-      supported_color_modes:
-      - brightness
-      friendly_name: Family Room SW-SE Blinds Blue LED
-      supported_features: 41
-      state: 'off'
-    cover.family_room_swse_blinds:
-      current_tilt_position: 60
-      device_class: blind
-      friendly_name: Family Room SW-SE Blinds
-      supported_features: 240
-      state: open
-    cover.living_room_nw_blinds:
-      current_tilt_position: 5
-      device_class: blind
-      friendly_name: Living Room NW Blinds
-      supported_features: 240
-      state: closed
-    light.living_room_nw_blinds_blue_led:
-      supported_color_modes:
-      - brightness
-      friendly_name: Living Room NW Blinds Blue LED
-      supported_features: 41
-      state: 'off'
-    light.living_room_se_blinds_blue_led:
-      supported_color_modes:
-      - brightness
-      friendly_name: Living Room SE Blinds Blue LED
-      supported_features: 41
-      state: 'off'
-    cover.living_room_se_blinds:
-      current_tilt_position: 60
-      device_class: blind
-      friendly_name: Living Room SE Blinds
-      supported_features: 240
-      state: open
+    alarm_control_panel.3629_alarm:
+      code_format:
+      changed_by:
+      code_arm_required: true
+      friendly_name: 3629 Alarm
+      supported_features: 63
+      state: disarmed
     cover.living_room_ctr_blinds:
       current_tilt_position: 60
       device_class: blind
@@ -95,6 +18,18 @@
       supported_color_modes:
       - brightness
       friendly_name: Living Room CTR Blinds Blue LED
+      supported_features: 41
+      state: 'off'
+    cover.living_room_nw_blinds:
+      current_tilt_position: 100
+      device_class: blind
+      friendly_name: Living Room NW Blinds
+      supported_features: 240
+      state: open
+    light.living_room_nw_blinds_blue_led:
+      supported_color_modes:
+      - brightness
+      friendly_name: Living Room NW Blinds Blue LED
       supported_features: 41
       state: 'off'
     light.living_room_nw_ctr_blinds_blue_led:
@@ -109,6 +44,18 @@
       friendly_name: Living Room NW CTR Blinds
       supported_features: 240
       state: open
+    light.living_room_se_blinds_blue_led:
+      supported_color_modes:
+      - brightness
+      friendly_name: Living Room SE Blinds Blue LED
+      supported_features: 41
+      state: 'off'
+    cover.living_room_se_blinds:
+      current_tilt_position: 60
+      device_class: blind
+      friendly_name: Living Room SE Blinds
+      supported_features: 240
+      state: open
     light.living_room_se_ctr_blinds_blue_led:
       supported_color_modes:
       - brightness
@@ -121,23 +68,6 @@
       friendly_name: Living Room SE CTR Blinds
       supported_features: 240
       state: open
-    light.front_yard_light_green_led:
-      supported_color_modes:
-      - brightness
-      friendly_name: Front Yard Light Green LED
-      supported_features: 41
-      state: 'off'
-    switch.front_yard_light:
-      icon: mdi:spotlight-beam
-      friendly_name: Front Yard Light
-      state: 'off'
-    alarm_control_panel.3629_alarm:
-      code_format:
-      changed_by:
-      code_arm_required: true
-      friendly_name: 3629 Alarm
-      supported_features: 63
-      state: disarmed
     cover.family_room_nwne_blinds:
       current_tilt_position: 60
       device_class: blind
@@ -148,6 +78,42 @@
       supported_color_modes:
       - brightness
       friendly_name: Family Room NW-NE Blinds Blue LED
+      supported_features: 41
+      state: 'off'
+    light.family_room_nwsw_blinds_blue_led:
+      supported_color_modes:
+      - brightness
+      friendly_name: Family Room NW-SW Blinds Blue LED
+      supported_features: 41
+      state: 'off'
+    cover.family_room_nwsw_blinds:
+      current_tilt_position: 60
+      device_class: blind
+      friendly_name: Family Room NW-SW Blinds
+      supported_features: 240
+      state: open
+    cover.family_room_sene_blinds:
+      current_tilt_position: 60
+      device_class: blind
+      friendly_name: Family Room SE-NE Blinds
+      supported_features: 240
+      state: open
+    light.family_room_sene_blinds_blue_led:
+      supported_color_modes:
+      - brightness
+      friendly_name: Family Room SE-NE Blinds Blue LED
+      supported_features: 41
+      state: 'off'
+    cover.family_room_sesw_blinds:
+      current_tilt_position: 60
+      device_class: blind
+      friendly_name: Family Room SE-SW Blinds
+      supported_features: 240
+      state: open
+    light.family_room_sesw_blinds_blue_led:
+      supported_color_modes:
+      - brightness
+      friendly_name: Family Room SE-SW Blinds Blue LED
       supported_features: 41
       state: 'off'
     light.family_room_swctr_blinds_blue_led:
@@ -162,4 +128,28 @@
       friendly_name: Family Room SW-CTR Blinds
       supported_features: 240
       state: open
+    light.family_room_swnw_blinds_blue_led:
+      supported_color_modes:
+      - brightness
+      friendly_name: Family Room SW-NW Blinds Blue LED
+      supported_features: 41
+      state: 'off'
+    cover.family_room_swnw_blinds:
+      current_tilt_position: 60
+      device_class: blind
+      friendly_name: Family Room SW-NW Blinds
+      supported_features: 240
+      state: open
+    cover.family_room_swse_blinds:
+      current_tilt_position: 60
+      device_class: blind
+      friendly_name: Family Room SW-SE Blinds
+      supported_features: 240
+      state: open
+    light.family_room_swse_blinds_blue_led:
+      supported_color_modes:
+      - brightness
+      friendly_name: Family Room SW-SE Blinds Blue LED
+      supported_features: 41
+      state: 'off'
   icon: mdi:hospital-building
