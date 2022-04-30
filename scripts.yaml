@@ -7,8 +7,8 @@ close_all_blinds:
     service: cover.close_cover_tilt
     target:
       entity_id:
-      - cover.family_room_blinds
       - cover.living_room_blinds
+      - cover.family_room_blinds
 security_lighting_on:
   alias: Security Lighting On
   sequence:
