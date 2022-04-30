@@ -192,8 +192,8 @@
   alias: Irrigation Enable
   trigger:
   - platform: template
-    value_template: '{{ states(''sensor.precipitation_probability_today'') | int <
-      states(''input_number.irrigation_enable_below_precip'') | int }}'
+    value_template: '{{ states(''sensor.precipitation_probability_today'') | int(default=0)
+      < states(''input_number.irrigation_enable_below_precip'') | int(default=0) }}'
   condition:
   - condition: state
     entity_id: sensor.season
