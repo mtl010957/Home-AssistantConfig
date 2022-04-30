@@ -1,0 +1,8 @@
+  - binary_sensor:
+      unique_id: is_dst
+      name: "is DST"
+      state: "{{ now().timetuple().tm_isdst > 0 }}"
+    trigger:
+      platform: time_pattern
+      hours: '*'
+      minutes: '*'
