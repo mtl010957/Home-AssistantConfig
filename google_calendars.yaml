@@ -131,3 +131,31 @@
     ignore_availability: true
     name: Events - Metro Detroit Fun n Fitness for 49's+
     track: true
+
+- cal_id: m241io7q26bqaokc30oifq6deocdro2a@import.calendar.google.com
+  entities:
+  - device_id: https_tripwizard_rvlife_com_ics_hash_73421_uxlzv0nmsg9vcnzorwpwtkdprkx5zz09
+    ignore_availability: true
+    name: https://tripwizard.rvlife.com/ics_hash/73421/UXlZV0NmSG9VcnZoRWpWTkdpRkx5Zz09
+    track: true
+
+- cal_id: 0fijll0kand0c0fpgsig8l5m54@group.calendar.google.com
+  entities:
+  - device_id: maryland_2022_april
+    ignore_availability: true
+    name: Maryland 2022 April
+    track: true
+
+- cal_id: ig63euaoptc2p3goe9v1vqbi6jadij0q@import.calendar.google.com
+  entities:
+  - device_id: https_tripwizard_rvlife_com_app_visit_vfjmtjn3m25yv05hcgf3ze1jtdbpdz09
+    ignore_availability: true
+    name: https://tripwizard.rvlife.com/app/visit/VFJMTjN3M25yV05hcGF3ZE1JTDBpdz09
+    track: true
+
+- cal_id: 8m998kkatoo7plt12rjbasoeuk@group.calendar.google.com
+  entities:
+  - device_id: maryland_2022_april
+    ignore_availability: true
+    name: Maryland 2022 April
+    track: true
