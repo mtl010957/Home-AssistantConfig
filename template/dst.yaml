@@ -5,4 +5,4 @@
     trigger:
       platform: time_pattern
       hours: '*'
-      minutes: '*'
+      minutes: 1
