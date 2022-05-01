@@ -159,3 +159,10 @@
     ignore_availability: true
     name: Maryland 2022 April
     track: true
+
+- cal_id: 014hsl0nl7pra950bap6prcnf461n317@import.calendar.google.com
+  entities:
+  - device_id: https_tripwizard_rvlife_com_ics_hash_73421_uktuy1him0w1slv0evrmv1dru2lrut09
+    ignore_availability: true
+    name: https://tripwizard.rvlife.com/ics_hash/73421/UktuY1hiM0w1SlV0eVRMV1drU2lRUT09
+    track: true
