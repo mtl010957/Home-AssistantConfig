@@ -16,3 +16,5 @@
   unmount_3629cam4_record: umount /config/www/3629cam4/3629cam4_record
   make_site_bg: bash /config/scripts/make_site_bg.sh
   move_cam4_ftp_jpg: bash /config/scripts/move_cam4_ftp_jpg.sh
+  c4_est: bash /config/scripts/c4_tz_offset.sh 18000
+  c4_edt: bash /config/scripts/c4_tz_offset.sh 14400
