@@ -43,6 +43,8 @@ climate: !include_dir_merge_list climate
 # Device tracking
 device_tracker: !include device_tracker.yaml
 
+generic_hygrostat: !include generic_hygrostat.yaml
+
 # Hangouts Notifications
 notify: !include notify.yaml
 
