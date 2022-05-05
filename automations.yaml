@@ -539,61 +539,21 @@
     entity_id: switch.garage_latch
     domain: switch
   mode: single
-- id: '1578620613401'
-  alias: Humidifier off above set point
-  description: ''
-  trigger:
-  - platform: template
-    value_template: '{{ states(''sensor.office_humidity'') | float(default=0) >= states(''sensor.humidifier_off_point'')
-      | float(default=0) }}'
-  condition: []
-  action:
-  - type: turn_off
-    device_id: cbfd393800a549f18ffe84e0f6b6be6f
-    entity_id: switch.humidifier_power
-    domain: switch
-  mode: single
-- id: '1578620814432'
-  alias: Humidifier on below set point
-  description: ''
-  trigger:
-  - platform: template
-    value_template: '{{ states(''sensor.office_humidity'') | float(default=0) < states(''sensor.humidifier_on_point'')
-      | float(default=0) }}'
-    id: humidity_low
-  - type: humidity
-    platform: device
-    device_id: 720e3c978cd8ce49f57ca55ff42a4677
-    entity_id: sensor.office_humidity
-    domain: sensor
-    below: 40
-  condition:
-  - condition: not
-    conditions:
-    - condition: state
-      entity_id: climate.thermostat
-      state: 'off'
-  - condition: template
-    value_template: '{{ states(''sensor.office_humidity'') | float(default=0) < states(''sensor.humidifier_on_point'')
-      | float(default=0) }}'
-  action:
-  - type: turn_on
-    device_id: cbfd393800a549f18ffe84e0f6b6be6f
-    entity_id: switch.humidifier_power
-    domain: switch
-  mode: single
 - id: '1581365990144'
-  alias: Humidifier enable at 05:00
+  alias: Humidifier enable at 05:00 if thermostat on
   description: ''
   trigger:
   - at: 05:00:00
     platform: time
-  condition: []
+  condition:
+  - condition: state
+    entity_id: climate.thermostat
+    state: heat
   action:
-  - service: automation.turn_on
+  - service: humidifier.turn_on
     data: {}
     target:
-      entity_id: automation.humidifier_on_below_set_point
+      entity_id: humidifier.office_humidifier
   mode: single
 - id: '1581437260727'
   alias: Work Morning Fall-Winter-Spring
@@ -650,10 +610,10 @@
     platform: time
   condition: []
   action:
-  - service: automation.turn_off
+  - service: humidifier.turn_off
     data: {}
     target:
-      entity_id: automation.humidifier_on_below_set_point
+      entity_id: humidifier.office_humidifier
   mode: single
 - id: '1583938382449'
   alias: Garage lights on when doors opened
@@ -2573,4 +2533,64 @@
   action:
   - service: shell_command.c4_est
     data: {}
+  mode: single
+- id: '1651769147081'
+  alias: Humidifier Adjust for Temperature
+  description: ''
+  trigger:
+  - platform: time_pattern
+    hours: '*'
+    minutes: '*'
+    seconds: '20'
+  condition:
+  - condition: state
+    entity_id: humidifier.office_humidifier
+    attribute: mode
+    state: normal
+  action:
+  - service: humidifier.set_humidity
+    data_template:
+      entity_id: humidifier.office_humidifier
+      humidity: '{{ states("sensor.humidifier_off_point") | int(default=20) }}'
+  mode: single
+- id: '1651789621693'
+  alias: Humidifier Set Away Mode
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: group.family
+    to: not_home
+    for:
+      hours: 2
+      minutes: 0
+      seconds: 0
+    from: home
+  condition: []
+  action:
+  - service: humidifier.set_mode
+    data:
+      mode: away
+    target:
+      entity_id: humidifier.office_humidifier
+  mode: single
+- id: '1651789695739'
+  alias: Humidifier Set Nornal Mode
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - group.family
+    to: home
+    for:
+      hours: 0
+      minutes: 10
+      seconds: 0
+    from: not_home
+  condition: []
+  action:
+  - service: humidifier.set_mode
+    data:
+      mode: normal
+    target:
+      entity_id: humidifier.office_humidifier
   mode: single
