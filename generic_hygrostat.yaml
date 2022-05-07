@@ -1,7 +1,7 @@
   - name: Office Humidifier
     humidifier: switch.humidifier_power
     target_sensor: sensor.office_humidity
-    min_humidity: 20
+    min_humidity: 10
     max_humidity: 50
     target_humidity: 30
     dry_tolerance: 6
