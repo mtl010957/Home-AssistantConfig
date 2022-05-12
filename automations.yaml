@@ -1,19 +1,3 @@
-- id: '1497804129147'
-  alias: House fan off below setpoint
-  trigger:
-  - below: '0'
-    entity_id: sensor.main_bedroom_temperature
-    for: 00:00:10
-    platform: numeric_state
-    value_template: '{{ states(''sensor.main_bedroom_temperature'') | float(default=0)
-      - states(''input_number.fan_off_below_temp'') | float(default=0) }}'
-  condition: []
-  action:
-  - type: turn_off
-    device_id: e98ba1007257472b94ec68076912820e
-    entity_id: switch.house_fan_switch_module_switch
-    domain: switch
-  mode: single
 - id: '1500947016373'
   alias: Camera Motion and Floods On Armed Away
   trigger:
@@ -1549,9 +1533,9 @@
       < state_attr("climate.house_fan_thermostat","temperature") | round(0,"round-to-even","undefined")
       }}'
   condition:
-  - type: is_value
+  - type: is_temperature
     condition: device
-    device_id: f1da704df4dd4da69ef980d105f8d710
+    device_id: 767bf0db6d37b6dd82ea7b9f28bec3c5
     entity_id: sensor.outdoor_temperature
     domain: sensor
     above: 60
@@ -1570,9 +1554,9 @@
     value_template: '{{ states("sensor.outdoor_temperature") | round(0,"round-to-even","undefined")
       >= state_attr("climate.house_fan_thermostat","temperature") | round(0,"round-to-even","undefined")
       }}'
-  - type: value
+  - type: temperature
     platform: device
-    device_id: f1da704df4dd4da69ef980d105f8d710
+    device_id: 767bf0db6d37b6dd82ea7b9f28bec3c5
     entity_id: sensor.outdoor_temperature
     domain: sensor
     below: 60
@@ -2593,4 +2577,74 @@
       mode: normal
     target:
       entity_id: humidifier.office_humidifier
+  mode: single
+- id: '1652383371263'
+  alias: House Fan Control Set Away Mode On
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - alarm_control_panel.3629_alarm
+    to: armed_away
+    for:
+      hours: 2
+      minutes: 0
+      seconds: 0
+  condition:
+  - condition: state
+    entity_id: climate.house_fan_thermostat
+    state: 'on'
+  action:
+  - service: climate.set_preset_mode
+    data:
+      preset_mode: away
+    target:
+      entity_id: climate.house_fan_thermostat
+  - service: climate.turn_on
+    data: {}
+    target:
+      entity_id: climate.house_fan_thermostat
+  mode: single
+- id: '1652383477063'
+  alias: House Fan Control Set None Mode
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - alarm_control_panel.3629_alarm
+    from: armed_away
+  condition: []
+  action:
+  - service: climate.set_preset_mode
+    data:
+      preset_mode: none
+    target:
+      entity_id: climate.house_fan_thermostat
+  mode: single
+- id: '1652384609272'
+  alias: House Fan Control Set Away Mode Off
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - alarm_control_panel.3629_alarm
+    to: armed_away
+    for:
+      hours: 2
+      minutes: 0
+      seconds: 0
+  condition:
+  - condition: state
+    entity_id: climate.house_fan_thermostat
+    state: 'off'
+  action:
+  - service: climate.set_preset_mode
+    data:
+      preset_mode: away
+    target:
+      entity_id: climate.house_fan_thermostat
+  - service: climate.turn_off
+    data: {}
+    target:
+      entity_id: climate.house_fan_thermostat
   mode: single
