@@ -166,3 +166,10 @@
     ignore_availability: true
     name: https://tripwizard.rvlife.com/ics_hash/73421/UktuY1hiM0w1SlV0eVRMV1drU2lRUT09
     track: true
+
+- cal_id: div4bn40u60jvmodjsmdb3mb5hu81m7k@import.calendar.google.com
+  entities:
+  - device_id: https_tripwizard_rvlife_com_ics_hash_73421_elzvwghqszjprkeybm52k05yugw5ut09
+    ignore_availability: true
+    name: https://tripwizard.rvlife.com/ics_hash/73421/elZvWGhQSzJPRkEybm52K05YUGw5UT09
+    track: true
