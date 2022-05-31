@@ -1528,10 +1528,10 @@
   alias: House Fan Control Enable
   description: ''
   trigger:
-  - platform: template
-    value_template: '{{ (states("sensor.outdoor_temperature") | round(0,"round-to-even","undefined"))
-      < (state_attr("climate.house_fan_thermostat","temperature") | round(0,"round-to-even","undefined"))
-      }}'
+  - platform: time_pattern
+    hours: '*'
+    minutes: /5
+    seconds: '45'
   condition:
   - type: is_temperature
     condition: device
@@ -1539,6 +1539,10 @@
     entity_id: sensor.outdoor_temperature
     domain: sensor
     above: 60
+  - condition: template
+    value_template: '{{ (states(''sensor.outdoor_temperature'') | round(0,''round-to-even'',''undefined'')
+      | int(default=80)) < (state_attr(''climate.house_fan_thermostat'',''temperature'')
+      | round(0,''round-to-even'',''undefined'')) }}'
   action:
   - service: climate.set_hvac_mode
     target:
@@ -1550,17 +1554,20 @@
   alias: House Fan Control Disable
   description: ''
   trigger:
-  - platform: template
-    value_template: '{{ (states("sensor.outdoor_temperature") | round(0,"round-to-even","undefined"))
-      >= (state_attr("climate.house_fan_thermostat","temperature") | round(0,"round-to-even","undefined"))
-      }}'
-  - type: temperature
-    platform: device
-    device_id: 767bf0db6d37b6dd82ea7b9f28bec3c5
-    entity_id: sensor.outdoor_temperature
-    domain: sensor
-    below: 60
-  condition: []
+  - platform: time_pattern
+    hours: '*'
+    minutes: /5
+    seconds: '45'
+  condition:
+  - condition: or
+    conditions:
+    - condition: numeric_state
+      entity_id: sensor.outdoor_temperature
+      below: '60'
+    - condition: template
+      value_template: '{{ (states("sensor.outdoor_temperature") | round(0,"round-to-even","undefined")
+        | int(default=80)) >= (state_attr("climate.house_fan_thermostat","temperature")
+        | round(0,"round-to-even","undefined")) }}'
   action:
   - service: climate.set_hvac_mode
     target:
