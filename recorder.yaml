@@ -110,6 +110,9 @@ include:
     - sensor.garage_temperature
     - sensor.garage_smoke_alarm_battery_level
     - sensor.house_fan_switch_electric_consumed_kwh
+    - sensor.house_fan_switch_electric_consumed_a
+    - sensor.house_fan_switch_electric_consumed_v
+    - sensor.house_fan_switch_electric_consumed_w
     - sensor.humidifier_off_point
     - sensor.humidifier_on_point
     - sensor.laundry_smoke_alarm_battery_level

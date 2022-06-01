@@ -18,9 +18,6 @@ http:
 # Discover some devices automatically
 discovery:
 
-#Google Calendar
-google: !include google.yaml
-
 # Logger setup
 logger: !include logger.yaml
 system_log:
@@ -45,10 +42,10 @@ device_tracker: !include device_tracker.yaml
 
 generic_hygrostat: !include generic_hygrostat.yaml
 
+mqtt: !include mqtt.yaml
+
 # Hangouts Notifications
 notify: !include notify.yaml
-
-number: !include_dir_merge_list number
 
 sensor: !include_dir_merge_list sensor
 
