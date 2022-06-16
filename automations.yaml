@@ -1107,7 +1107,7 @@
   condition: []
   action:
   - type: turn_on
-    device_id: 1d313fdd3a2b45ee854fd45736c3dcc0
+    device_id: c7971fa07e2ace87e4b18540885a1434
     entity_id: light.garage_attic_link_bulb
     domain: light
     brightness_pct: 100
@@ -1125,7 +1125,7 @@
   condition: []
   action:
   - type: turn_off
-    device_id: 1d313fdd3a2b45ee854fd45736c3dcc0
+    device_id: c7971fa07e2ace87e4b18540885a1434
     entity_id: light.garage_attic_link_bulb
     domain: light
   mode: single
@@ -1542,7 +1542,7 @@
   - condition: template
     value_template: '{{ (states(''sensor.outdoor_temperature'') | round(0,''round-to-even'',''undefined'')
       | int(default=80)) < (states(''sensor.main_bedroom_temperature'') | round(0,''round-to-even'',''undefined'')
-      | int(default=80) - 2) }}'
+      | int(default=80) - 1) }}'
   action:
   - service: climate.set_hvac_mode
     target:
@@ -1567,7 +1567,7 @@
     - condition: template
       value_template: '{{ (states("sensor.outdoor_temperature") | round(0,"round-to-even","undefined")
         | int(default=80)) >= (states("sensor.main_bedroom_temperature") | round(0,"round-to-even","undefined")
-        | int(default=80) - 2) }}'
+        | int(default=80) - 1) }}'
   action:
   - service: climate.set_hvac_mode
     target:
