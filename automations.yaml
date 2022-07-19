@@ -1533,12 +1533,9 @@
     minutes: /5
     seconds: '45'
   condition:
-  - type: is_temperature
-    condition: device
-    device_id: 767bf0db6d37b6dd82ea7b9f28bec3c5
+  - condition: numeric_state
     entity_id: sensor.outdoor_temperature
-    domain: sensor
-    above: 60
+    above: '60'
   - condition: template
     value_template: '{{ (states(''sensor.outdoor_temperature'') | round(0,''round-to-even'',''undefined'')
       | int(default=80)) < (states(''sensor.main_bedroom_temperature'') | round(0,''round-to-even'',''undefined'')
