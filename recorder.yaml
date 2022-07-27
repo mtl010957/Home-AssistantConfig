@@ -82,6 +82,7 @@ include:
     - sensor.cpu_temperature
     - sensor.asuswrt_load_avg_1m
     - sensor.asuswrt_load_avg_5m
+    - sensor.guest_room_temperature
     - sensor.guest_room_humidity
     - sensor.office_temperature
     - sensor.office_humidity
