@@ -14,5 +14,4 @@
 - platform: ping
   consider_home: 00:30:00
   hosts:
-    iphonex: 192.168.13.235
-    iphone: 192.168.13.252
+    iphone: 192.168.13.140
