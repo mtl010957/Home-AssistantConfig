@@ -159,6 +159,16 @@ include:
     - sensor.cam3_motion_detect
     - sensor.hot_water_recirc_control_temperature
     - sensor.hot_water_recirc_control_temperature_meter
+    - sensor.caravan_freezer_battery
+    - sensor.caravan_freezer_dew_point
+    - sensor.caravan_freezer_humidity
+    - sensor.caravan_freezer_signal_strength
+    - sensor.caravan_freezer_temperature
+    - sensor.caravan_refrigerator_battery
+    - sensor.caravan_refrigerator_dew_point
+    - sensor.caravan_refrigerator_humidity
+    - sensor.caravan_refrigerator_signal_strength
+    - sensor.caravan_refrigerator_temperature
     # switches
     - switch.family_room_ceiling_fan_light
     - switch.living_room_lamp_module
