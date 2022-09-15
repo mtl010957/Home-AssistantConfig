@@ -14,4 +14,5 @@
 - platform: ping
   consider_home: 00:30:00
   hosts:
-    iphone: 192.168.13.140
+    susans-iphone: 192.168.13.140
+    sarahs-iphone: 192.168.13.252
