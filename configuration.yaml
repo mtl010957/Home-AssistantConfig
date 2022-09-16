@@ -37,9 +37,6 @@ camera: !include_dir_merge_list camera
 # Generic Thermostat for attic fan
 climate: !include_dir_merge_list climate
 
-# Device tracking
-device_tracker: !include device_tracker.yaml
-
 generic_hygrostat: !include generic_hygrostat.yaml
 
 mqtt: !include mqtt.yaml
