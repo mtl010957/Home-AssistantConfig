@@ -1,0 +1,54 @@
+- platform: template
+  switches: 
+    13821cam1_left:
+      value_template: > 
+        {% if is_state('switch.13821cam1_left','on') %}
+          false
+        {% endif %}
+      turn_on:
+        service: onvif.ptz
+        data:
+          entity_id: camera.lakefront_mainstream
+          move_mode: ContinuousMove
+          continuous_duration: 0.01
+          pan: RIGHT
+      turn_off:
+    13821cam1_right:
+      value_template: > 
+        {% if is_state('switch.13821cam1_right','on') %}
+          false
+        {% endif %}
+      turn_on:
+        service: onvif.ptz
+        data:
+          entity_id: camera.lakefront_mainstream
+          move_mode: ContinuousMove
+          continuous_duration: 0.01
+          pan: LEFT
+      turn_off:
+    13821cam1_up:
+      value_template: > 
+        {% if is_state('switch.13821cam1_up','on') %}
+          false
+        {% endif %}
+      turn_on:
+        service: onvif.ptz
+        data:
+          entity_id: camera.lakefront_mainstream
+          move_mode: ContinuousMove
+          continuous_duration: 0.01
+          tilt: UP
+      turn_off:
+    13821cam1_down:
+      value_template: > 
+        {% if is_state('switch.13821cam1_down','on') %}
+          false
+        {% endif %}
+      turn_on:
+        service: onvif.ptz
+        data:
+          entity_id: camera.lakefront_mainstream
+          move_mode: ContinuousMove
+          continuous_duration: 0.01
+          tilt: DOWN
+      turn_off:
