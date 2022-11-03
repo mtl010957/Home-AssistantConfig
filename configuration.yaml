@@ -30,10 +30,6 @@ recorder: !include recorder.yaml
 # Alarm panel
 alarm_control_panel: !include alarm_control_panel.yaml
 
-binary_sensor: !include_dir_merge_list binary_sensor
-
-camera: !include_dir_merge_list camera
-
 # Generic Thermostat for attic fan
 climate: !include_dir_merge_list climate
 
