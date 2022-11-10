@@ -159,19 +159,6 @@
     entity_id: switch.irrigation_control_front_yard
     domain: switch
   mode: single
-- id: '1545515874358'
-  alias: Floods off 30 min before sunrise
-  trigger:
-  - platform: sun
-    event: sunrise
-    offset: 00:30:00
-  condition: []
-  action:
-  - type: turn_off
-    device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: switch.front_yard_light
-    domain: switch
-  mode: single
 - id: '1548612260526'
   alias: Irrigation Enable
   trigger:
