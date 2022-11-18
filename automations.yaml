@@ -188,20 +188,6 @@
     entity_id: switch.irrigation_control_enable
     type: turn_off
   mode: single
-- id: '1548862723503'
-  alias: Power On Utility
-  trigger:
-  - entity_id: sensor.ups_status
-    for: 00:00:10
-    platform: state
-    to: Online
-  condition: []
-  action:
-  - type: turn_on
-    device_id: 61344d8b56db43388bf5cc133786843b
-    entity_id: switch.utility_power_relay
-    domain: switch
-  mode: single
 - id: '1552222922150'
   alias: Blinds Open Before Sunrise If Not Armed Away
   trigger:
@@ -484,10 +470,6 @@
     data:
       message: The UPS is back Online
       title: UPS ONLINE
-  - type: turn_on
-    device_id: 61344d8b56db43388bf5cc133786843b
-    entity_id: switch.utility_power_relay
-    domain: switch
   mode: single
 - id: '1578535843455'
   alias: Garage latch off when door open
@@ -1641,21 +1623,6 @@
       tilt_position: 100
     target:
       entity_id: cover.living_room_nw_blinds
-  mode: single
-- id: '1626893038399'
-  alias: Utility Power On if Off for more than 5 min
-  description: ''
-  trigger:
-  - platform: state
-    entity_id: switch.utility_power_relay
-    to: 'off'
-    for: 00:05:00
-  condition: []
-  action:
-  - type: turn_on
-    device_id: 61344d8b56db43388bf5cc133786843b
-    entity_id: switch.utility_power_relay
-    domain: switch
   mode: single
 - id: '1628008841148'
   alias: Floods Off when Susan Comes Home Late
