@@ -1,0 +1,72 @@
+- platform: template
+  switches: 
+    3629cam5_left:
+      value_template: > 
+        {% if is_state('switch.3629cam5_left','on') %}
+          false
+        {% endif %}
+      turn_on:
+        service: amcrest.ptz_control
+        data:
+          entity_id: camera.3629_cam_5
+          movement: right
+          travel_time: 0.05
+      turn_off:
+    3629cam5_right:
+      value_template: > 
+        {% if is_state('switch.3629cam5_right','on') %}
+          false
+        {% endif %}
+      turn_on:
+        service: amcrest.ptz_control
+        data:
+          entity_id: camera.3629_cam_5
+          movement: left
+          travel_time: 0.05
+      turn_off:
+    3629cam5_up:
+      value_template: > 
+        {% if is_state('switch.3629cam5_up','on') %}
+          false
+        {% endif %}
+      turn_on:
+        service: amcrest.ptz_control
+        data:
+          entity_id: camera.3629_cam_5
+          movement: up
+          travel_time: 0.05
+      turn_off:
+    3629cam5_down:
+      value_template: > 
+        {% if is_state('switch.3629cam5_down','on') %}
+          false
+        {% endif %}
+      turn_on:
+        service: amcrest.ptz_control
+        data:
+          entity_id: camera.3629_cam_5
+          movement: down
+          travel_time: 0.05
+      turn_off:
+    3629cam5_call_pos_1:
+      value_template: > 
+        {% if is_state('switch.3629cam5_call_pos_1','on') %}
+          false
+        {% endif %}
+      turn_on:
+        service: amcrest.goto_preset
+        data:
+          entity_id: camera.3629_cam_5
+          preset: 1
+      turn_off:
+    3629cam5_call_pos_2:
+      value_template: > 
+        {% if is_state('switch.3629cam5_call_pos_2','on') %}
+          false
+        {% endif %}
+      turn_on:
+        service: amcrest.goto_preset
+        data:
+          entity_id: camera.3629_cam_5
+          preset: 2
+      turn_off:

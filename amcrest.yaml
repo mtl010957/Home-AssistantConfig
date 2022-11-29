@@ -1,0 +1,9 @@
+- host: !secret amcrest1_ip
+  username: !secret amcrest1_username
+  password: !secret amcrest1_password
+  name: "3629 Cam 5"
+  binary_sensors:
+    - online
+    - motion_detected
+  sensors:
+    - ptz_preset
