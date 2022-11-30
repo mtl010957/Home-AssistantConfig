@@ -9,7 +9,7 @@
         service: amcrest.ptz_control
         data:
           entity_id: camera.3629_cam_5
-          movement: right
+          movement: left
           travel_time: 0.05
       turn_off:
     3629cam5_right:
@@ -21,7 +21,7 @@
         service: amcrest.ptz_control
         data:
           entity_id: camera.3629_cam_5
-          movement: left
+          movement: right
           travel_time: 0.05
       turn_off:
     3629cam5_up:
@@ -69,4 +69,26 @@
         data:
           entity_id: camera.3629_cam_5
           preset: 2
+      turn_off:
+    3629cam5_call_pos_3:
+      value_template: > 
+        {% if is_state('switch.3629cam5_call_pos_3','on') %}
+          false
+        {% endif %}
+      turn_on:
+        service: amcrest.goto_preset
+        data:
+          entity_id: camera.3629_cam_5
+          preset: 3
+      turn_off:
+    3629cam5_call_pos_4:
+      value_template: > 
+        {% if is_state('switch.3629cam5_call_pos_4','on') %}
+          false
+        {% endif %}
+      turn_on:
+        service: amcrest.goto_preset
+        data:
+          entity_id: camera.3629_cam_5
+          preset: 4
       turn_off:
