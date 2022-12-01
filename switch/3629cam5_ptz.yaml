@@ -1,7 +1,9 @@
 - platform: template
   switches: 
     3629cam5_left:
+      unique_id: 3629cam5_left
       friendly_name: "3629 Cam 5 Left"
+      icon_template: "mdi:arrow-left-bold"
       value_template: > 
         {% if is_state('switch.3629cam5_left','on') %}
           false
@@ -14,7 +16,9 @@
           travel_time: 0.05
       turn_off:
     3629cam5_right:
+      unique_id: 3629cam5_right
       friendly_name: "3629 Cam 5 Right"
+      icon_template: "mdi:arrow-right-bold"
       value_template: > 
         {% if is_state('switch.3629cam5_right','on') %}
           false
@@ -27,7 +31,9 @@
           travel_time: 0.05
       turn_off:
     3629cam5_up:
+      unique_id: 3629cam5_up
       friendly_name: "3629 Cam 5 Up"
+      icon_template: "mdi:arrow-up-bold"
       value_template: > 
         {% if is_state('switch.3629cam5_up','on') %}
           false
@@ -40,7 +46,9 @@
           travel_time: 0.05
       turn_off:
     3629cam5_down:
+      unique_id: 3629cam5_down
       friendly_name: "3629 Cam 5 Down"
+      icon_template: "mdi:arrow-down-bold"
       value_template: > 
         {% if is_state('switch.3629cam5_down','on') %}
           false
@@ -53,7 +61,9 @@
           travel_time: 0.05
       turn_off:
     3629cam5_call_pos_1:
+      unique_id: 3629cam5_call_pos_1
       friendly_name: "3629 Cam 5 Call Position 1"
+      icon_template: "mdi:numeric-1-box-outline"
       value_template: > 
         {% if is_state('switch.3629cam5_call_pos_1','on') %}
           false
@@ -65,7 +75,9 @@
           preset: 1
       turn_off:
     3629cam5_call_pos_2:
+      unique_id: 3629cam5_call_pos_2
       friendly_name: "3629 Cam 5 Call Position 2"
+      icon_template: "mdi:numeric-2-box-outline"
       value_template: > 
         {% if is_state('switch.3629cam5_call_pos_2','on') %}
           false
@@ -77,7 +89,9 @@
           preset: 2
       turn_off:
     3629cam5_call_pos_3:
+      unique_id: 3629cam5_call_pos_3
       friendly_name: "3629 Cam 5 Call Position 3"
+      icon_template: "mdi:numeric-3-box-outline"
       value_template: > 
         {% if is_state('switch.3629cam5_call_pos_3','on') %}
           false
@@ -89,7 +103,9 @@
           preset: 3
       turn_off:
     3629cam5_call_pos_4:
+      unique_id: 3629cam5_call_pos_4
       friendly_name: "3629 Cam 5 Call Position 4"
+      icon_template: "mdi:numeric-4-box-outline"
       value_template: > 
         {% if is_state('switch.3629cam5_call_pos_4','on') %}
           false
