@@ -4,8 +4,9 @@
   switches:
     #Switch for Foscam Motion Detection
     foscam_cam2_motion:
-      friendly_name: "3629Cam2 Motion Enable"
-      icon_template: mdi:run
+      unique_id: foscam_cam2_motion
+      friendly_name: "3629 Cam 2 Motion Enable"
+      icon_template: "mdi:run"
       command_on: '/config/scripts/c2.sh on'
       command_off: '/config/scripts/c2.sh off'
       command_state: '/config/scripts/c2.sh'
