@@ -1,6 +1,7 @@
 - platform: template
   switches: 
     13821cam1_left:
+      friendly_name: "13821 Cam 1 Left"
       value_template: > 
         {% if is_state('switch.13821cam1_left','on') %}
           false
@@ -14,6 +15,7 @@
           pan: RIGHT
       turn_off:
     13821cam1_right:
+      friendly_name: "13821 Cam 1 Right"
       value_template: > 
         {% if is_state('switch.13821cam1_right','on') %}
           false
@@ -27,6 +29,7 @@
           pan: LEFT
       turn_off:
     13821cam1_up:
+      friendly_name: "13821 Cam 1 Up"
       value_template: > 
         {% if is_state('switch.13821cam1_up','on') %}
           false
@@ -40,6 +43,7 @@
           tilt: UP
       turn_off:
     13821cam1_down:
+      friendly_name: "13821 Cam 1 Down"
       value_template: > 
         {% if is_state('switch.13821cam1_down','on') %}
           false
