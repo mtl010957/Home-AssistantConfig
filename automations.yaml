@@ -2627,7 +2627,7 @@
     below: 280
   - condition: state
     entity_id: media_player.family_room_tv
-    state: idle
+    state: 'off'
   action:
   - service: cover.set_cover_tilt_position
     target:
@@ -2663,7 +2663,7 @@
   condition:
   - condition: state
     entity_id: media_player.family_room_tv
-    state: idle
+    state: 'off'
   action:
   - service: cover.open_cover_tilt
     data: {}
