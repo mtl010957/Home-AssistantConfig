@@ -30,6 +30,9 @@ include:
     - binary_sensor.furnace_relief_valve_warning
     # climate
     - climate.thermostat
+    - climate.living_room_thermostat
+    - sensor.living_room_thermostat_humidity
+    - sensor.living_room_thermostat_temperature
     - climate.hot_water_recirc_control_setting
     # covers
     - cover.family_room_sene_blinds

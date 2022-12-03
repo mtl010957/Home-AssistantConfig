@@ -455,7 +455,7 @@
       title: UPS ON BATTERY
   mode: single
 - id: '1572633832196'
-  alias: Notify and Utility Power On UPS Online
+  alias: Notify UPS Online
   description: ''
   trigger:
   - entity_id: sensor.ups_status
@@ -538,7 +538,9 @@
   - service: climate.set_temperature
     data:
       temperature: 70
-    entity_id: climate.thermostat
+    target:
+      entity_id:
+      - climate.living_room_thermostat
   - service: automation.trigger
     target:
       entity_id: automation.hot_water_recirc_morning_when_home
@@ -1114,6 +1116,13 @@
     device_id: ad38b2b29eb24331b68fbae50ee3316a
     entity_id: switch.family_room_ceiling_fan_light
     domain: switch
+    enabled: false
+  - service: light.toggle
+    data: {}
+    target:
+      device_id:
+      - 63cd121363a5b01a151866cd34b1b5d9
+      - 8b90b436c1854e4fa6d18dc2c9e076a7
   mode: single
 - id: '1615490246403'
   alias: IKEA Remote 1 Dim Up
@@ -2596,4 +2605,70 @@
     data: {}
     target:
       entity_id: climate.house_fan_thermostat
+  mode: single
+- id: '1670023332108'
+  alias: West Blinds Follow Afternoon Sun Elevation
+  description: ''
+  trigger:
+  - platform: time_pattern
+    minutes: /5
+    seconds: '0'
+    hours: '*'
+  condition:
+  - condition: numeric_state
+    entity_id: sun.sun
+    attribute: elevation
+    below: '60'
+    above: '6'
+  - condition: numeric_state
+    entity_id: sun.sun
+    attribute: azimuth
+    above: 170
+    below: 280
+  - condition: state
+    entity_id: media_player.family_room_tv
+    state: idle
+  action:
+  - service: cover.set_cover_tilt_position
+    target:
+      entity_id:
+      - cover.family_room_swnw_blinds
+      - cover.family_room_nwsw_blinds
+    data:
+      tilt_position: '{{ ( ( 90 - state_attr("sun.sun", "elevation") ) * 50 / 90 )
+        | round }}'
+  mode: single
+- id: '1670023899865'
+  alias: West Blinds Open After Sunset
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sun.sun
+    attribute: azimuth
+    for:
+      hours: 0
+      minutes: 2
+      seconds: 0
+      milliseconds: 0
+    above: 170
+  - platform: numeric_state
+    entity_id: sun.sun
+    attribute: elevation
+    for:
+      hours: 0
+      minutes: 2
+      seconds: 0
+      milliseconds: 0
+    below: 6
+  condition:
+  - condition: state
+    entity_id: media_player.family_room_tv
+    state: idle
+  action:
+  - service: cover.open_cover_tilt
+    data: {}
+    target:
+      entity_id:
+      - cover.family_room_swnw_blinds
+      - cover.family_room_nwsw_blinds
   mode: single
