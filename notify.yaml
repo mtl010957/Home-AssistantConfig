@@ -1,4 +1,0 @@
-- platform: hangouts
-  name: hangouts_notify
-  default_conversations:
-    - id: !secret hangouts_notify_conversation
