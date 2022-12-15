@@ -1292,10 +1292,11 @@
   - condition: template
     value_template: '{{ is_state_attr(''calendar.susan'', ''message'', ''Work'') }}'
   - condition: template
-    value_template: '{{ is_state_attr(''calendar.susan'', ''start_time'', as_timestamp(now())
-      | timestamp_custom(''%Y-%m-%d'') ~ '' 06:00:00'') }}'
+    value_template: '{{ is_state_attr(''calendar.susan'', ''start_time'', (as_timestamp(today_at("06:00:00"))
+      | timestamp_custom(''%Y-%m-%d %H:%M:%S''))) }}'
   action:
   - service: script.turn_on_xmas_lights_10
+    data: {}
   mode: single
 - id: '1615923844588'
   alias: Hot Water Recirc On Morning Home
