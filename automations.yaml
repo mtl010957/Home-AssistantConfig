@@ -516,11 +516,10 @@
     platform: time
   condition:
   - condition: template
-    value_template: '"{{ is_state_attr(''calendar.susan'', ''message'', ''Work'')
-      }}"'
+    value_template: '{{ is_state_attr(''calendar.susan'', ''message'', ''Work'') }}'
   - condition: template
-    value_template: '{{ is_state_attr(''calendar.susan'', ''start_time'', as_timestamp(now())
-      | timestamp_custom(''%Y-%m-%d'') ~ '' 06:00:00'') }}'
+    value_template: '{{ is_state_attr(''calendar.susan'', ''start_time'', (as_timestamp(today_at("06:00:00"))
+      | timestamp_custom(''%Y-%m-%d %H:%M:%S''))) }}'
   - condition: or
     conditions:
     - condition: state
@@ -940,8 +939,8 @@
   - condition: template
     value_template: '{{ is_state_attr(''calendar.susan'', ''message'', ''Work'') }}'
   - condition: template
-    value_template: '{{ is_state_attr(''calendar.susan'', ''start_time'', as_timestamp(now())
-      | timestamp_custom(''%Y-%m-%d'') ~ '' 06:00:00'') }}'
+    value_template: '{{ is_state_attr(''calendar.susan'', ''start_time'', (as_timestamp(today_at("06:00:00"))
+      | timestamp_custom(''%Y-%m-%d %H:%M:%S''))) }}'
   - condition: state
     entity_id: sensor.season
     state: summer
