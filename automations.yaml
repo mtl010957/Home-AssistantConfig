@@ -2629,8 +2629,7 @@
   - service: cover.set_cover_tilt_position
     target:
       entity_id:
-      - cover.family_room_swnw_blinds
-      - cover.family_room_nwsw_blinds
+      - cover.family_room_w_blinds
     data:
       tilt_position: '{{ ( ( 90 - state_attr("sun.sun", "elevation") ) * 50 / 90 )
         | round }}'
@@ -2662,7 +2661,5 @@
   - service: cover.open_cover_tilt
     data: {}
     target:
-      entity_id:
-      - cover.family_room_swnw_blinds
-      - cover.family_room_nwsw_blinds
+      entity_id: cover.family_room_w_blinds
   mode: single
