@@ -86,8 +86,8 @@ open_all_blinds:
     service: cover.open_cover_tilt
     target:
       entity_id:
-      - cover.family_room_blinds
       - cover.living_room_blinds
+      - cover.family_room_blinds
   mode: single
   icon: mdi:window-shutter
 turn_on_xmas_lights:
