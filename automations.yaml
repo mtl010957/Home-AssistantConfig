@@ -213,25 +213,34 @@
   - service: script.close_all_blinds
   mode: single
 - id: '1560461893289'
-  alias: Security Lighting On Close Blinds
+  alias: Security Lighting On
+  description: ''
   trigger:
   - event: sunset
     offset: -00:30:00
     platform: sun
+  - platform: state
+    entity_id:
+    - alarm_control_panel.3629_alarm
+    to: armed_away
   condition:
   - condition: state
     entity_id: alarm_control_panel.3629_alarm
     state: armed_away
+  - condition: sun
+    after: sunset
+    after_offset: -00:30:00
+  - condition: time
+    before: '21:37:00'
+    after: 00:00:00
   action:
-  - data: {}
-    service: script.close_all_blinds
   - data: {}
     service: script.security_lighting_on
   mode: single
 - id: '1560462571547'
   alias: Security Lighting Off
   trigger:
-  - at: '21:37'
+  - at: '21:37:00'
     platform: time
   condition:
   - condition: state
@@ -240,6 +249,7 @@
   action:
   - delay: 00:{{ (range(5, 25) | random) }}:00
   - service: script.security_lighting_off
+    data: {}
   mode: single
 - id: '1563648409962'
   alias: Security Arm Night
@@ -2662,4 +2672,28 @@
     data: {}
     target:
       entity_id: cover.family_room_w_blinds
+  mode: single
+- id: '1672407471509'
+  alias: Blinds Close Before Sunset if Armed Away
+  description: ''
+  trigger:
+  - event: sunset
+    offset: -00:30:00
+    platform: sun
+  - platform: state
+    entity_id:
+    - alarm_control_panel.3629_alarm
+    to: armed_away
+  condition:
+  - condition: state
+    entity_id: alarm_control_panel.3629_alarm
+    state: armed_away
+  - condition: sun
+    after: sunset
+    after_offset: -00:30:00
+  - condition: sun
+    before: sunrise
+  action:
+  - data: {}
+    service: script.close_all_blinds
   mode: single
