@@ -186,6 +186,12 @@ include:
     - sensor.refrigerator_outlet_power
     - sensor.refrigerator_outlet_voltage
     - sensor.refrigerator_outlet_current
+    - sensor.fresh_tank_humidity
+    - sensor.fresh_tank_temperature
+    - sensor.plumbing_compartment_humidity
+    - sensor.plumbing_compartment_temperature
+    - sensor.outside_caravan_humidity
+    - sensor.outside_caravan_temperature
     # switches
     - switch.family_room_ceiling_fan_light
     - switch.living_room_lamp_module
