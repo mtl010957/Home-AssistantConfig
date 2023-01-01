@@ -2697,3 +2697,29 @@
   - data: {}
     service: script.close_all_blinds
   mode: single
+- id: '1672584988331'
+  alias: 'Router LEDs On Daytime '
+  description: ''
+  trigger:
+  - platform: time
+    at: 09:00:00
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 555561f99948ddd9a7905c92169f6d67
+    entity_id: light.rt_ac68u_led
+    domain: light
+  mode: single
+- id: '1672585429023'
+  alias: Router LEDs Off Nighttime
+  description: ''
+  trigger:
+  - platform: time
+    at: '21:00:00'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 555561f99948ddd9a7905c92169f6d67
+    entity_id: light.rt_ac68u_led
+    domain: light
+  mode: single
