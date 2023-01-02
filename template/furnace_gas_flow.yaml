@@ -4,7 +4,7 @@
         unit_of_measurement: 'ft³/min'
         icon: "mdi:gauge"
         state: >
-          {% if states('sensor.furnace_flue_temperature_meter') | float > 0.0 -%}
+          {% if is_state('climate.living_room_thermostat','heating') and states('sensor.furnace_flue_temperature_meter') | float > 0.0 -%}
             2.41804
           {%- else -%}
             0.0
