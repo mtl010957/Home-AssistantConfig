@@ -112,6 +112,7 @@ include:
     - sensor.furnace_nw_zone_return_temperature
     - sensor.furnace_se_zone_return_temperature
     - sensor.furnace_supply_temperature
+    - sensor.furnace_gas_flow
     - sensor.garage_humidity
     - sensor.garage_temperature
     - sensor.garage_smoke_alarm_battery_level

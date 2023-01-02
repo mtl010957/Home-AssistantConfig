@@ -1,0 +1,11 @@
+  - sensor:
+      - unique_id: furnace_gas_flow
+        name: "Furnace Gas Flow"
+        unit_of_measurement: 'ft³/min'
+        icon: "mdi:gauge"
+        state: >
+          {% if states('sensor.furnace_flue_temperature_meter') | float > 0.0 -%}
+            2.41804
+          {%- else -%}
+            0.0
+          {%- endif %}
