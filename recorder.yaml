@@ -108,6 +108,7 @@ include:
     - sensor.family_room_temperature
     - sensor.family_room_smoke_co_alarm_battery_level
     - sensor.furnace_flue_temperature
+    - sensor.furnace_flue_temperature_meter
     - sensor.furnace_nw_zone_return_temperature
     - sensor.furnace_se_zone_return_temperature
     - sensor.furnace_supply_temperature
