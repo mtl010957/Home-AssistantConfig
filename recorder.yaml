@@ -114,6 +114,7 @@ include:
     - sensor.furnace_supply_temperature
     - sensor.furnace_gas_flow
     - sensor.furnace_gas_used
+    - sensor.furnace_gas_used_cost
     - sensor.garage_humidity
     - sensor.garage_temperature
     - sensor.garage_smoke_alarm_battery_level
