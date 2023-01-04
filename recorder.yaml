@@ -196,6 +196,8 @@ include:
     - sensor.plumbing_compartment_temperature
     - sensor.outside_caravan_humidity
     - sensor.outside_caravan_temperature
+    - sensor.gray_tank_humidity
+    - sensor.gray_tank_temperature
     # switches
     - switch.family_room_ceiling_fan_light
     - switch.living_room_lamp_module
