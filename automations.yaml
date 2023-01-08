@@ -2691,7 +2691,6 @@
   - condition: sun
     after: sunset
     after_offset: -00:30:00
-  - condition: sun
     before: sunrise
   action:
   - data: {}
