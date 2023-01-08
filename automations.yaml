@@ -2680,18 +2680,10 @@
   - event: sunset
     offset: -00:30:00
     platform: sun
-  - platform: state
-    entity_id:
-    - alarm_control_panel.3629_alarm
-    to: armed_away
   condition:
   - condition: state
     entity_id: alarm_control_panel.3629_alarm
     state: armed_away
-  - condition: sun
-    after: sunset
-    after_offset: -00:30:00
-    before: sunrise
   action:
   - data: {}
     service: script.close_all_blinds
@@ -2721,4 +2713,21 @@
     device_id: 555561f99948ddd9a7905c92169f6d67
     entity_id: light.rt_ac68u_led
     domain: light
+  mode: single
+- id: '1673190937973'
+  alias: Blinds Close When Armed Away After Just Before Sunset
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - alarm_control_panel.3629_alarm
+    to: armed_away
+  condition:
+  - condition: sun
+    after: sunset
+    after_offset: -00:30:00
+    before: sunrise
+  action:
+  - data: {}
+    service: script.close_all_blinds
   mode: single
