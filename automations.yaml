@@ -2697,7 +2697,7 @@
   condition: []
   action:
   - type: turn_on
-    device_id: 555561f99948ddd9a7905c92169f6d67
+    device_id: b7ec839866ca4d223c2a50bb516a3a6e
     entity_id: light.rt_ac68u_led
     domain: light
   mode: single
@@ -2710,7 +2710,7 @@
   condition: []
   action:
   - type: turn_off
-    device_id: 555561f99948ddd9a7905c92169f6d67
+    device_id: b7ec839866ca4d223c2a50bb516a3a6e
     entity_id: light.rt_ac68u_led
     domain: light
   mode: single
