@@ -2,7 +2,6 @@
       - unique_id: furnace_gas_flow
         name: "Furnace Gas Flow"
         unit_of_measurement: 'ft³/min'
-        device_class: gas
         icon: "mdi:gauge"
         state: >
           {% if is_state_attr('climate.living_room_thermostat','hvac_action','heating') and states('sensor.furnace_flue_temperature_meter') | float > 0.0 -%}
