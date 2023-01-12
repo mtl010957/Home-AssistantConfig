@@ -1,11 +1,11 @@
   - sensor:
       - unique_id: furnace_gas_flow
         name: "Furnace Gas Flow"
-        unit_of_measurement: 'CCF'
+        unit_of_measurement: 'ft³'
         icon: "mdi:gauge"
         state: >
           {% if is_state_attr('climate.living_room_thermostat','hvac_action','heating') and states('sensor.furnace_flue_temperature_meter') | float > 0.0 -%}
-            0.0241804
+            2.41804
           {%- else -%}
             0.0
           {%- endif %}
