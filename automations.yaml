@@ -2731,3 +2731,60 @@
   - data: {}
     service: script.close_all_blinds
   mode: single
+- id: '1673966516951'
+  alias: Notify Beer Fridge Low Voltage
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.beer_fridge_outlet_voltage
+    for:
+      hours: 0
+      minutes: 30
+      seconds: 0
+    below: 110
+  condition: []
+  action:
+  - service: notify.notify
+    data:
+      title: Beer Fridge Voltage Low
+      message: Beer Fridge voltage has been low for more than 30 minutes, check the
+        power connection!
+  mode: single
+- id: '1673966604993'
+  alias: Notify Refrigerator Low Voltage
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.refrigerator_outlet_voltage
+    for:
+      hours: 0
+      minutes: 30
+      seconds: 0
+    below: 110
+  condition: []
+  action:
+  - service: notify.notify
+    data:
+      title: Refrigerator Voltage Low
+      message: Refrigerator voltage has been low for more than 30 minutes, check the
+        power connection!
+  mode: single
+- id: '1673966741860'
+  alias: Notify Freezer Low Voltage
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.freezer_outlet_voltage
+    for:
+      hours: 0
+      minutes: 30
+      seconds: 0
+    below: 110
+  condition: []
+  action:
+  - service: notify.notify
+    data:
+      title: Freezer Voltage Low
+      message: Freezer voltage has been low for more than 30 minutes, check the power
+        connection!
+  mode: single
