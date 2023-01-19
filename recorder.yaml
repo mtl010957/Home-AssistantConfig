@@ -28,6 +28,7 @@ include:
     - binary_sensor.rpi_power_status
     - binary_sensor.desert_rpi_power_status
     - binary_sensor.furnace_relief_valve_warning
+    - binary_sensor.furnace_burner_valve
     # climate
     - climate.thermostat
     - climate.living_room_thermostat
