@@ -4,7 +4,7 @@
         unit_of_measurement: 'CCF/min'
         icon: "mdi:gauge"
         state: >
-          {% if is_state_attr('climate.living_room_thermostat','hvac_action','heating') and states('sensor.furnace_flue_temperature_meter') | float > 0.0 -%}
+          {% if is_state_attr('climate.living_room_thermostat','hvac_action','heating') and is_state('binary_sensor.furnace_burner_valve','on') -%}
             0.0241804
           {%- else -%}
             0.0
