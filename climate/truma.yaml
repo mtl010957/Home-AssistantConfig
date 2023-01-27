@@ -1,0 +1,31 @@
+  - platform: generic_thermostat
+    name: Truma
+    unique_id: truma_thermostat
+    heater: input_boolean.truma_button
+    target_sensor: sensor.truma_current_temp_room
+    min_temp: 40
+    max_temp: 86
+    ac_mode: false
+    cold_tolerance: 1.0
+    hot_tolerance: 0
+    min_cycle_duration:
+      seconds: 120
+    away_temp: 50
+    sleep_temp: 63
+    comfort_temp: 70
+    home_temp: 68
+    precision: 1.0
+
+  - platform: generic_thermostat
+    name: Truma Water
+    unique_id: truma_water_thermostat
+    heater: input_boolean.truma_button
+    target_sensor: sensor.truma_current_temp_water
+    min_temp: 68
+    max_temp: 392
+    ac_mode: false
+    cold_tolerance: 1.0
+    hot_tolerance: 0
+    min_cycle_duration:
+      seconds: 120
+    precision: 1.0
