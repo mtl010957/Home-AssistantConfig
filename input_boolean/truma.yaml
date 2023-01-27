@@ -1,0 +1,24 @@
+  truma_button:
+    name: "TRUMA Pseudo"
+  truma_switch:
+    name: "TRUMA State"
+  truma_fan_mode:
+    name: "TRUMA Fan high"
+  truma_heat_el1:
+    name: "TRUMA El1"
+  truma_heat_el2:
+    name: "TRUMA El2"
+  truma_heat_mix1:
+    name: "TRUMA Mix1"
+  truma_heat_mix2:
+    name: "TRUMA Mix2"
+  truma_heat_gas:
+    name: "TRUMA Gas"
+  truma_water_switch:
+    name: "TRUMA Water Heater"
+  truma_water_eco:
+    name: "TRUMA Water Eco"
+  truma_water_hot:
+    name: "TRUMA Water Hot"
+  truma_water_boost:
+    name: "TRUMA Water Boost"
