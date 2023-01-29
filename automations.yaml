@@ -3374,3 +3374,17 @@
     target:
       entity_id: input_boolean.truma_water_switch
   mode: single
+- id: '1675009918532'
+  alias: TRUMA Button Restart
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_button.truma_restart
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: service/truma/set/reboot
+      payload: '1'
+  mode: single
