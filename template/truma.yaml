@@ -3,7 +3,7 @@
         unique_id: truma_target_temp_water_named
       # Converted to Fahrenheit degrees
         state: >
-          {% set temp = states('sensor.truma_target_temp_water') | float %}
+          {% set temp = states('sensor.truma_target_temp_water') | float(default=32) %}
           {% if temp == 32  %}
           off
           {% elif temp == 104 %}
