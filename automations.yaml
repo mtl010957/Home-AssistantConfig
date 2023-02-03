@@ -1125,13 +1125,14 @@
     device_id: ad38b2b29eb24331b68fbae50ee3316a
     entity_id: switch.family_room_ceiling_fan_light
     domain: switch
-    enabled: false
+    enabled: true
   - service: light.toggle
     data: {}
     target:
       device_id:
       - 63cd121363a5b01a151866cd34b1b5d9
       - 8b90b436c1854e4fa6d18dc2c9e076a7
+    enabled: false
   mode: single
 - id: '1615490246403'
   alias: IKEA Remote 1 Dim Up
