@@ -806,12 +806,9 @@
   alias: Notify Battery Low Downstairs Smoke/CO Alarm
   description: ''
   trigger:
-  - type: battery_level
-    platform: device
-    device_id: 58fbbf4958e8c695c1d6557bd9314591
+  - platform: numeric_state
     entity_id: sensor.downstairs_smoke_co_alarm_battery_level
-    domain: sensor
-    below: 75
+    below: 80
   condition: []
   action:
   - data:
@@ -823,12 +820,9 @@
   alias: Notify Battery Low Upstairs Smoke/CO Alarm
   description: ''
   trigger:
-  - type: battery_level
-    platform: device
-    device_id: e5f6747932258108523afc914457adc5
+  - platform: numeric_state
     entity_id: sensor.upstairs_smoke_co_alarm_battery_level
-    domain: sensor
-    below: 75
+    below: 80
   condition: []
   action:
   - data:
@@ -840,12 +834,9 @@
   alias: Notify Battery Low Family Room Smoke/CO Alarm
   description: ''
   trigger:
-  - type: battery_level
-    platform: device
-    device_id: 11f2e28d1b01442ce3484060cceb5221
+  - platform: numeric_state
     entity_id: sensor.family_room_smoke_co_alarm_battery_level
-    domain: sensor
-    below: 75
+    below: 80
   condition: []
   action:
   - data:
@@ -1901,7 +1892,7 @@
   trigger:
   - platform: numeric_state
     entity_id: sensor.garage_smoke_alarm_battery_level
-    below: '75'
+    below: 80
   condition: []
   action:
   - data:
@@ -1915,7 +1906,7 @@
   trigger:
   - platform: numeric_state
     entity_id: sensor.laundry_smoke_alarm_battery_level
-    below: '75'
+    below: 80
   condition: []
   action:
   - data:
