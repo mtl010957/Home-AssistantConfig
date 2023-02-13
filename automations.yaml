@@ -2785,3 +2785,39 @@
       message: Freezer voltage has been low for more than 30 minutes, check the power
         connection!
   mode: single
+- id: '1676311936402'
+  alias: IKEA Remote 3 Controller
+  description: ''
+  use_blueprint:
+    path: EPMatt/ikea_e1524_e1810.yaml
+    input:
+      integration: Zigbee2MQTT
+      controller_entity: sensor.ikea_remote_3_action
+      helper_last_controller_event: input_text.ikea_remote_3_last_event
+      action_button_center_short:
+      - service: light.toggle
+        data: {}
+        target:
+          entity_id:
+          - light.main_bedroom_nw_ceiling_lights
+          - light.main_bedroom_se_ceiling_lights
+      action_button_up_long:
+      - service: light.turn_on
+        data:
+          brightness_step_pct: 5
+        target:
+          entity_id:
+          - light.main_bedroom_nw_ceiling_lights
+          - light.main_bedroom_se_ceiling_lights
+      action_button_down_long:
+      - service: light.turn_on
+        data:
+          brightness_step_pct: -5
+        target:
+          entity_id:
+          - light.main_bedroom_nw_ceiling_lights
+          - light.main_bedroom_se_ceiling_lights
+      button_up_long_loop: true
+      button_up_long_max_loop_repeats: 20
+      button_down_long_loop: true
+      button_down_long_max_loop_repeats: 20
