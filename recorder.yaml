@@ -198,6 +198,9 @@ include:
     - sensor.caravan_outside_caravan_temperature
     - sensor.caravan_gray_tank_humidity
     - sensor.caravan_gray_tank_temperature
+    - sensor.water_meter_water_flow
+    - sensor.water_meter_water_used
+    - sensor.water_meter_water_used_cost
     # switches
     - switch.family_room_ceiling_fan_light
     - switch.living_room_lamp_module
