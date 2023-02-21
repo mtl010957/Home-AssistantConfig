@@ -191,9 +191,10 @@
 - id: '1552222922150'
   alias: Blinds Open Before Sunrise If Not Armed Away
   trigger:
-  - event: sunrise
-    offset: -00:65:00
-    platform: sun
+  - platform: numeric_state
+    entity_id: sun.sun
+    attribute: elevation
+    above: -3
   condition:
   - condition: not
     conditions:
@@ -202,6 +203,7 @@
       state: armed_away
   action:
   - service: script.open_all_blinds
+    data: {}
   mode: single
 - id: '1552245394001'
   alias: Blinds Close at 11:00 PM
