@@ -1435,6 +1435,11 @@
     attribute: azimuth
     above: '80'
     below: '190'
+  - condition: numeric_state
+    entity_id: cover.family_room_se_blinds
+    attribute: current_tilt_position
+    above: 10
+    below: 90
   action:
   - service: cover.set_cover_tilt_position
     target:
