@@ -2828,3 +2828,21 @@
       button_up_long_max_loop_repeats: 20
       button_down_long_loop: true
       button_down_long_max_loop_repeats: 20
+- id: '1677967541736'
+  alias: Water Meter Restart And Notify When Stuck
+  description: ''
+  trigger:
+  - platform: template
+    value_template: '{{ (now() - states.sensor.water_meter_field_strength_x.last_changed).seconds
+      > 180 }}'
+  condition: []
+  action:
+  - service: button.press
+    data: {}
+    target:
+      entity_id: button.water_meter_restart
+  - service: notify.caravannotify
+    data:
+      message: Water Meter Restarted
+      title: Water Meter Restart
+  mode: single
