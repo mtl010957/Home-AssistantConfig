@@ -2329,6 +2329,9 @@
           minutes: 0
           seconds: 0
           milliseconds: 500
+      action_button_up_double:
+      - service: script.sw_blinds_block_afternoon_sun
+        data: {}
 - id: '1648035294985'
   alias: IKEA Switch 3 Controller
   description: ''
