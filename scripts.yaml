@@ -131,3 +131,15 @@ turn_on_xmas_lights_10:
     domain: switch
   mode: single
   icon: mdi:string-lights
+sw_blinds_block_afternoon_sun:
+  alias: SW Blinds Block Afternoon Sun
+  sequence:
+  - service: cover.set_cover_tilt_position
+    data:
+      tilt_position: 100
+    target:
+      device_id:
+      - 4565c2edfb9842a1896dd5139be87fe1
+      - 01b25cc1a9ff49c997bcd154e5b683f8
+  mode: single
+  icon: mdi:blinds-horizontal-closed
