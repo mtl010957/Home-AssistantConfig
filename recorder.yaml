@@ -26,6 +26,7 @@ include:
     - binary_sensor.upstairs_smoke_co_alarm_co_alarm_carbon_monoxide_detected
     - binary_sensor.upstairs_smoke_co_alarm_smoke_alarm_smoke_detected
     - binary_sensor.rpi_power_status
+    - binary_sensor.caravan_rpi_power_status
     - binary_sensor.desert_rpi_power_status
     - binary_sensor.furnace_relief_valve_warning
     - binary_sensor.furnace_burner_valve
@@ -201,6 +202,7 @@ include:
     - sensor.water_meter_water_flow
     - sensor.water_meter_water_used
     - sensor.water_meter_water_used_cost
+    - sensor.water_meter_field_strength_x
     # switches
     - switch.family_room_ceiling_fan_light
     - switch.living_room_lamp_module
