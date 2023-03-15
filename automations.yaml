@@ -1303,15 +1303,12 @@
     data: {}
   mode: single
 - id: '1615923844588'
-  alias: Hot Water Recirc On Morning Home
+  alias: Hot Water Recirc On Morning
   description: ''
   trigger:
   - platform: time
     at: 06:30:00
-  condition:
-  - condition: state
-    entity_id: group.family
-    state: home
+  condition: []
   action:
   - device_id: a77074c758856cfb06fbcf0eef68c72a
     domain: climate
@@ -1471,15 +1468,12 @@
     data: {}
   mode: single
 - id: '1624404207012'
-  alias: Hot Water Recirc Off Night Home
+  alias: Hot Water Recirc Off Night
   description: ''
   trigger:
   - platform: time
     at: '23:00:00'
-  condition:
-  - condition: state
-    entity_id: group.family
-    state: home
+  condition: []
   action:
   - device_id: a77074c758856cfb06fbcf0eef68c72a
     domain: climate
@@ -1986,7 +1980,7 @@
     service: notify.notify
   mode: single
 - id: '1633014637999'
-  alias: Hot Water Recirc Not Home On
+  alias: Hot Water Recirc Not Home
   description: ''
   trigger:
   - platform: state
@@ -1999,53 +1993,25 @@
     from: home
   condition: []
   action:
-  - service: climate.set_temperature
+  - service: climate.set_preset_mode
     data:
-      target_temp_high: 80
-      target_temp_low: 55
-      hvac_mode: heat
+      preset_mode: away
     target:
       entity_id: climate.hot_water_recirc_control_setting
   mode: single
 - id: '1633014865653'
-  alias: Hot Water Recirc Home Day
+  alias: Hot Water Recirc Home
   description: ''
   trigger:
   - platform: state
     entity_id: group.family
     from: not_home
     to: home
-  condition:
-  - condition: time
-    after: 06:30:00
-    before: '23:00:00'
+  condition: []
   action:
-  - service: climate.set_temperature
+  - service: climate.set_preset_mode
     data:
-      target_temp_high: 110
-      target_temp_low: 90
-      hvac_mode: heat
-    target:
-      entity_id: climate.hot_water_recirc_control_setting
-  mode: single
-- id: '1633014926358'
-  alias: Hot Water Recirc Home Night
-  description: ''
-  trigger:
-  - platform: state
-    entity_id: group.family
-    from: not_home
-    to: home
-  condition:
-  - condition: time
-    after: '23:00:00'
-    before: 06:30:00
-  action:
-  - service: climate.set_temperature
-    data:
-      target_temp_high: 110
-      target_temp_low: 90
-      hvac_mode: 'off'
+      preset_mode: home
     target:
       entity_id: climate.hot_water_recirc_control_setting
   mode: single
@@ -2114,7 +2080,7 @@
   - service: script.turn_on_xmas_lights_10
   mode: single
 - id: '1639409820437'
-  alias: Hot Water Recirc On Energy Summary Over 900W 4AM to Sunrise Not Armed Away
+  alias: Hot Water Recirc On Energy Summary Over 900W 4AM to 11PM
   description: ''
   trigger:
   - platform: numeric_state
@@ -2123,14 +2089,7 @@
   condition:
   - condition: time
     after: 04:00:00
-    before: 00:00:00
-  - condition: sun
-    before: sunrise
-  - condition: not
-    conditions:
-    - condition: state
-      entity_id: alarm_control_panel.3629_alarm
-      state: armed_away
+    before: '23:00:00'
   action:
   - device_id: a77074c758856cfb06fbcf0eef68c72a
     domain: climate
