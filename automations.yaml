@@ -8,6 +8,11 @@
   - service: switch.turn_on
     target:
       entity_id: switch.generic_cam4_call_1
+    data: {}
+  - service: amcrest.goto_preset
+    data:
+      entity_id: camera.3629_cam_5
+      preset: 2
   - delay:
       hours: 0
       minutes: 1
@@ -56,9 +61,15 @@
       - switch.foscam_cam3_motion
       - switch.generic_cam4_motion
       - switch.front_yard_light
+    data: {}
   - service: switch.turn_on
     target:
       entity_id: switch.generic_cam4_call_2
+    data: {}
+  - service: amcrest.goto_preset
+    data:
+      entity_id: camera.3629_cam_5
+      preset: 1
   mode: single
 - id: '1800999911110'
   alias: 3629cam4 Up
