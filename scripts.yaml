@@ -184,5 +184,5 @@ backup_desert:
       - a0d7b954_nut
       - cebe7a76_hassio_google_drive_backup
       compressed: true
-      homeassistant: false
+      homeassistant: true
   mode: single
