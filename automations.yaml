@@ -1894,7 +1894,7 @@
       cert_expiry_sensor: sensor.cert_expiry_timestamp_ha_mtl_svn_dyndns_home_com
       time_to_check_cert: 03:20:00
       send_notification: true
-      notification_device: 77ea7e8e39715881866784bb68da74ed
+      notification_device: fa361a2696a8b273260f6adfbaab5e5a
       notification_title: Encryption Certificate Renewed Successfully
       notification_message: HA Home encryption certificate has been successfully renewed!
       renew_date: 20
@@ -2412,7 +2412,6 @@
   use_blueprint:
     path: mtl010957/moes_rotary.yaml
     input:
-      switch: sensor.tuya_knob_1_action
       toggle:
       - service: light.toggle
         data: {}
@@ -2431,6 +2430,7 @@
           brightness_step_pct: -5
         target:
           entity_id: light.family_room_lamps
+      switch: sensor.tuya_knob_1_action
 - id: '1651371950242'
   alias: Cam4 Set EDT
   description: ''
@@ -2818,4 +2818,51 @@
     data:
       message: Water Meter Restarted
       title: Water Meter Restart
+  mode: single
+- id: '1679943720135'
+  alias: 3629cam6 GoTo Preset
+  description: ''
+  trigger:
+  - platform: webhook
+    webhook_id: -sXnAhhbTMmI5dmtyftZMwOsk
+  condition: []
+  action:
+  - service: onvif.ptz
+    data:
+      move_mode: GotoPreset
+      preset: '{{ trigger.data.preset }}'
+    target:
+      entity_id: camera.3629_cam_6_mainstreamprofile
+  mode: single
+- id: '1679944587033'
+  alias: 3629cam6 Pan
+  description: ''
+  trigger:
+  - platform: webhook
+    webhook_id: -XRFr6RycUkwhYFnXsHssTS2K
+  condition: []
+  action:
+  - service: onvif.ptz
+    data:
+      continuous_duration: 0.1
+      move_mode: ContinuousMove
+      pan: '{{ trigger.data.pan }}'
+    target:
+      entity_id: camera.3629_cam_6_mainstreamprofile
+  mode: single
+- id: '1679944832151'
+  alias: 3629cam6 Tilt
+  description: ''
+  trigger:
+  - platform: webhook
+    webhook_id: -9qfUlat4MdY-g3_oeCYdEWvh
+  condition: []
+  action:
+  - service: onvif.ptz
+    data:
+      continuous_duration: 0.1
+      move_mode: ContinuousMove
+      tilt: '{{ trigger.data.tilt }}'
+    target:
+      entity_id: camera.3629_cam_6_mainstreamprofile
   mode: single
