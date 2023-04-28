@@ -15,6 +15,13 @@ security_lighting_on:
   - service: switch.turn_on
     target:
       entity_id: switch.living_room_lamp_module
+    data: {}
+  - delay: 00:{{ (range(1, 5) | random) }}:00
+  - service: light.caravanturn_on
+    data:
+      brightness_pct: 100
+    target:
+      entity_id: light.guest_room_lamp_bulb
   - delay: 00:{{ (range(1, 5) | random) }}:00
   - service: light.turn_on
     target:
@@ -41,18 +48,27 @@ security_lighting_off:
   - service: switch.turn_off
     target:
       entity_id: switch.living_room_lamp_module
+    data: {}
+  - delay: 00:{{ (range(1, 5) | random) }}:00
+  - service: light.turn_off
+    data: {}
+    target:
+      entity_id: light.guest_room_lamp_bulb
   - delay: 00:{{ (range(1, 5) | random) }}:00
   - service: light.turn_off
     target:
       entity_id: light.family_room_lamps
+    data: {}
   - delay: 00:{{ (range(5, 15) | random) }}:00
   - service: light.turn_off
     target:
       entity_id: light.office_light_bulb
+    data: {}
   - delay: 00:{{ (range(1, 5) | random) }}:00
   - service: light.turn_off
     target:
       entity_id: light.bedside_lamp_bulb
+    data: {}
   mode: single
   icon: mdi:lightbulb
 irrigation_zone_1_run:
