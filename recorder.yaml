@@ -91,8 +91,6 @@ include:
     - sensor.guest_room_humidity
     - sensor.office_temperature
     - sensor.office_humidity
-    - sensor.caravan_caravan_temperature
-    - sensor.caravan_caravan_humidity
     - sensor.dte_energy_bridge_summary
     - sensor.dte_energy_bridge
     - sensor.dte_energy_used
@@ -134,9 +132,6 @@ include:
     - sensor.ups_input_voltage
     - sensor.ups_battery_charge
     - sensor.upstairs_smoke_co_alarm_battery_level
-    - sensor.desert_ups_d_status
-    - sensor.desert_ups_d_input_voltage
-    - sensor.desert_ups_d_battery_charge
     - sensor.ikea_remote_1_battery
     - sensor.ikea_remote_2_battery
     - sensor.ikea_switch_1_battery
@@ -159,26 +154,11 @@ include:
     - sensor.living_room_nw_ctr_blinds_tilt_position
     - sensor.living_room_se_blinds_tilt_position
     - sensor.living_room_se_ctr_blinds_tilt_position
-    - sensor.desert_living_room_temperature
-    - sensor.desert_living_room_humidity
-    - sensor.desert_corrected_barometer_inhg
     - sensor.cam1_motion_detect
     - sensor.cam2_motion_detect
     - sensor.cam3_motion_detect
     - sensor.hot_water_recirc_control_temperature
     - sensor.hot_water_recirc_control_temperature_meter
-    - sensor.caravan_freezer_battery
-    - sensor.caravan_freezer_dew_point
-    - sensor.caravan_freezer_humidity
-    - sensor.caravan_freezer_signal_strength
-    - sensor.caravan_freezer_temperature
-    - sensor.caravan_refrigerator_battery
-    - sensor.caravan_refrigerator_dew_point
-    - sensor.caravan_refrigerator_humidity
-    - sensor.caravan_refrigerator_signal_strength
-    - sensor.caravan_refrigerator_temperature
-    - sensor.desert_refrigerator_outlet_power
-    - sensor.desert_refrigerator_outlet_daily_energy
     - sensor.freezer_outlet_daily_energy
     - sensor.freezer_outlet_power
     - sensor.freezer_outlet_voltage
@@ -191,18 +171,34 @@ include:
     - sensor.refrigerator_outlet_power
     - sensor.refrigerator_outlet_voltage
     - sensor.refrigerator_outlet_current
-    - sensor.caravan_fresh_tank_humidity
+    - sensor.water_meter_water_flow
+    - sensor.water_meter_water_used
+    - sensor.water_meter_water_used_cost
+    - sensor.water_meter_field_strength_x
+    # caravan sensors
+    - sensor.caravan_caravan_temperature
+    - sensor.caravan_caravan_humidity
     - sensor.caravan_fresh_tank_temperature
     - sensor.caravan_plumbing_compartment_humidity
     - sensor.caravan_plumbing_compartment_temperature
     - sensor.caravan_outside_caravan_humidity
     - sensor.caravan_outside_caravan_temperature
-    - sensor.caravan_gray_tank_humidity
     - sensor.caravan_gray_tank_temperature
-    - sensor.water_meter_water_flow
-    - sensor.water_meter_water_used
-    - sensor.water_meter_water_used_cost
-    - sensor.water_meter_field_strength_x
+    - sensor.caravan_propane_sensor_temperature
+    - sensor.caravan_freezer_humidity
+    - sensor.caravan_freezer_temperature
+    - sensor.caravan_refrigerator_humidity
+    - sensor.caravan_refrigerator_temperature
+    # desert sensors
+    - sensor.desert_refrigerator_outlet_power
+    - sensor.desert_refrigerator_outlet_daily_energy
+    - sensor.desert_ups_d_status
+    - sensor.desert_ups_d_input_voltage
+    - sensor.desert_ups_d_battery_charge
+    - sensor.desert_living_room_temperature
+    - sensor.desert_living_room_humidity
+    - sensor.desert_corrected_barometer_inhg
+    
     # switches
     - switch.family_room_ceiling_fan_light
     - switch.living_room_lamp_module
@@ -214,9 +210,9 @@ include:
     - switch.irrigation_control_enable
     - switch.irrigation_control_front_yard
     - switch.front_outdoor_xmas_lights
-    - switch.desert_desert_guest_room_desk_lamp
-    - switch.desert_desert_living_room_lamp
-    - switch.desert_desert_main_bedroom_lamp
+    - switch.desert_guest_room_lamp
+    - switch.desert_living_room_lamp
+    - switch.desert_main_bedroom_lamp
     - switch.hot_water_recirc_control_relay
     # utility meter
     - utility_meter.dte_energy_used_hourly
