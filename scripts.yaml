@@ -17,11 +17,11 @@ security_lighting_on:
       entity_id: switch.living_room_lamp_module
     data: {}
   - delay: 00:{{ (range(1, 5) | random) }}:00
-  - service: light.caravanturn_on
+  - service: light.turn_on
     data:
       brightness_pct: 100
     target:
-      entity_id: light.guest_room_lamp_bulb
+      device_id: 0362fab09a27e3af33a03b7a87816af8
   - delay: 00:{{ (range(1, 5) | random) }}:00
   - service: light.turn_on
     target:
