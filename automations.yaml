@@ -2825,6 +2825,10 @@
   trigger:
   - platform: webhook
     webhook_id: -sXnAhhbTMmI5dmtyftZMwOsk
+    allowed_methods:
+    - POST
+    - PUT
+    local_only: true
   condition: []
   action:
   - service: onvif.ptz
