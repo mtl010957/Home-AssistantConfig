@@ -2814,10 +2814,8 @@
     data: {}
     target:
       entity_id: button.water_meter_restart
-  - service: notify.caravannotify
-    data:
-      message: Water Meter Restarted
-      title: Water Meter Restart
+  - service: notify.notify
+    data: {}
   mode: single
 - id: '1679943720135'
   alias: 3629cam6 GoTo Preset
