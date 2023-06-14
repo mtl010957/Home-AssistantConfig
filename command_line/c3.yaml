@@ -1,0 +1,11 @@
+# Replace admin and password with an "Admin" privileged Foscam user
+# Replace ipaddress with the local IP address of your Foscam
+- switch:
+    #Switch for Foscam Motion Detection
+    name: foscam_cam3_motion
+    unique_id: foscam_cam3_motion
+    icon: "mdi:run"
+    command_on: '/config/scripts/c3.sh on'
+    command_off: '/config/scripts/c3.sh off'
+    command_state: '/config/scripts/c3.sh'
+    value_template: '{{ value == "1" }}'
