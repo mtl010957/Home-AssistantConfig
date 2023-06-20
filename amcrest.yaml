@@ -7,6 +7,9 @@
     - motion_detected
   sensors:
     - ptz_preset
+    - sdcard
+  switches:
+    - privacy_mode
 - host: !secret 3629cam7_ip
   username: !secret 3629cam7_username
   password: !secret 3629cam7_password
@@ -16,3 +19,6 @@
     - motion_detected
   sensors:
     - ptz_preset
+    - sdcard
+  switches:
+    - privacy_mode
