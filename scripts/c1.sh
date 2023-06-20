@@ -9,7 +9,8 @@ elif [ "$1" = "off" ]
 then
   curl -k "$CAM1_URL/cgi-bin/CGIProxy.fcgi?cmd=setMotionDetectConfig&isEnable=0&usr=$CAM1_USR&pwd=$CAM1_PWD"
 else
-  curl -k --silent "$CAM1_URL/cgi-bin/CGIProxy.fcgi?cmd=getMotionDetectConfig&usr=$CAM1_USR&pwd=$CAM1_PWD" | grep -oP "(?<=isEnable>).*?(?=</isEnable>)"
+  curl -k --silent "$CAM1_URL/cgi-bin/CGIProxy.fcgi?cmd=getMotionDetectConfig&usr=$CAM1_USR&pwd=$CAM1_PWD" | grep "<isEnable>.</isEnable>" | sed 's| *<isEnable>||' | sed 's|</isEnable>||'
+#  curl -k --silent "$CAM1_URL/cgi-bin/CGIProxy.fcgi?cmd=getMotionDetectConfig&usr=$CAM1_USR&pwd=$CAM1_PWD" | grep -oP "(?<=isEnable>).*?(?=</isEnable>)"
 fi
 exit 0
 
