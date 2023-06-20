@@ -7,6 +7,7 @@
     command_off: '/config/scripts/c4_motion.sh off'
     command_state: '/config/scripts/c4_motion.sh'
     value_template: '{{ value == "1" }}'
+    scan_interval: 00:01
 - switch:
     #Switch for iSmart PTZ up
     name: generic_cam4_up

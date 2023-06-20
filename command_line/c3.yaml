@@ -9,3 +9,4 @@
     command_off: '/config/scripts/c3.sh off'
     command_state: '/config/scripts/c3.sh'
     value_template: '{{ value == "1" }}'
+    scan_interval: 00:01
