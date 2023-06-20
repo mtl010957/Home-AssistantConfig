@@ -178,6 +178,11 @@ include:
     # caravan sensors
     - sensor.caravan_caravan_temperature
     - sensor.caravan_caravan_humidity
+    - sensor.caravan_fresh_tank_liquid_level_sensor_1
+    - sensor.caravan_fresh_tank_liquid_level_sensor_2
+    - sensor.caravan_fresh_tank_liquid_level_sensor_3
+    - sensor.caravan_fresh_tank_temperature
+    - sensor.caravan_fresh_tank_humidity
     - sensor.caravan_fresh_tank_old_temperature
     - sensor.caravan_fresh_tank_old_humidity
     - sensor.caravan_plumbing_compartment_humidity
@@ -185,6 +190,9 @@ include:
     - sensor.caravan_outside_caravan_humidity
     - sensor.caravan_outside_caravan_temperature
     - sensor.caravan_gray_tank_temperature
+    - sensor.caravan_black_tank_level
+    - sensor.caravan_black_tank_percent
+    - sensor.caravan_black_tank_temperature
     - sensor.caravan_propane_sensor_temperature
     - sensor.caravan_freezer_humidity
     - sensor.caravan_freezer_temperature
