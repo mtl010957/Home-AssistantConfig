@@ -34,8 +34,6 @@
   friendly_name: IKEA Switch 3
 '0x5c0272fffe3f32ed':
   friendly_name: IKEA Switch 4
-'0x00158d0007998e81':
-  friendly_name: Aqara Cube 1
 '0x84ba20fffe8d618c':
   friendly_name: Tuya Knob 1
 '0x60a423fffee42af2':
@@ -44,3 +42,5 @@
   friendly_name: IKEA Remote 3
 '0x5c0272fffe3e6624':
   friendly_name: IKEA Switch 2
+'0x00158d0007998e81':
+  friendly_name: Aqara Cube 1
