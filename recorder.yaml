@@ -30,6 +30,10 @@ include:
     - binary_sensor.desert_rpi_power_status
     - binary_sensor.furnace_relief_valve_warning
     - binary_sensor.furnace_burner_valve
+    - binary_sensor.3629_cam_5_motion_detected
+    - binary_sensor.3629_cam_6_cell_motion_detection
+    - binary_sensor.3629_cam_7_motion_detected
+    - binary_sensor.3629_cam_8_cell_motion_detection
     # climate
     - climate.thermostat
     - climate.living_room_thermostat
