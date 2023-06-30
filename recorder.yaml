@@ -121,10 +121,10 @@ include:
     - sensor.garage_humidity
     - sensor.garage_temperature
     - sensor.garage_smoke_alarm_battery_level
-    - sensor.house_fan_switch_electric_consumed_kwh
-    - sensor.house_fan_switch_electric_consumed_a
-    - sensor.house_fan_switch_electric_consumed_v
-    - sensor.house_fan_switch_electric_consumed_w
+    - sensor.house_fan_switch_electric_consumed_kwh_2
+    - sensor.house_fan_switch_electric_consumed_a_2
+    - sensor.house_fan_switch_electric_consumed_v_2
+    - sensor.house_fan_switch_electric_consumed_w_2
     - sensor.humidifier_off_point
     - sensor.humidifier_on_point
     - sensor.laundry_smoke_alarm_battery_level
