@@ -1,12 +1,11 @@
 #!/bin/bash
 
-cam=$1
-dir=`date +%Y%m%d`
-. /config/shell_secrets.sh
+datedir=$1
+cam=$2
+echo ${datedir}
 echo ${cam}
-echo ${dir}
 
-cd /media/${cam}/${dir}/record
+cd /media/${cam}/${datedir}/record
 for infile in `ls *.264`
 do
   outfile=`basename ${infile} .264`.mp4
