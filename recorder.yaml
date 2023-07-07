@@ -204,6 +204,9 @@ include:
     - sensor.caravan_refrigerator_humidity
     - sensor.caravan_refrigerator_temperature
     - sensor.caravan_level_sensor_temperature
+    - sensor.caravan_solar_charge_controller_battery_temperature
+    - sensor.caravan_solar_charge_controller_device_temperature
+    - sensor.caravan_solar_charge_controller_power_components_temperature
     # desert sensors
     - sensor.desert_refrigerator_outlet_power
     - sensor.desert_refrigerator_outlet_daily_energy
