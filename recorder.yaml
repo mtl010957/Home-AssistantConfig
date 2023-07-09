@@ -207,6 +207,8 @@ include:
     - sensor.caravan_solar_charge_controller_battery_temperature
     - sensor.caravan_solar_charge_controller_device_temperature
     - sensor.caravan_solar_charge_controller_power_components_temperature
+    - sensor.caravan_solar_charge_controller_array_input_power
+    - sensor.caravan_solar_charge_controller_charging_power
     # desert sensors
     - sensor.desert_refrigerator_outlet_power
     - sensor.desert_refrigerator_outlet_daily_energy
