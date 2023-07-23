@@ -183,13 +183,11 @@ include:
     - binary_sensor.caravan_fresh_tank_liquid_level_sensor_1
     - binary_sensor.caravan_fresh_tank_liquid_level_sensor_2
     - binary_sensor.caravan_fresh_tank_liquid_level_sensor_3
-    - sensor.caravan_caravan_temperature
-    - sensor.caravan_caravan_humidity
+    - sensor.caravan_bedroom_climate_temperature
+    - sensor.caravan_bedroom_climate_humidity
     - sensor.caravan_fresh_tank_percent
     - sensor.caravan_fresh_tank_temperature
     - sensor.caravan_fresh_tank_humidity
-    - sensor.caravan_fresh_tank_old_temperature
-    - sensor.caravan_fresh_tank_old_humidity
     - sensor.caravan_plumbing_compartment_humidity
     - sensor.caravan_plumbing_compartment_temperature
     - sensor.caravan_outside_caravan_humidity
