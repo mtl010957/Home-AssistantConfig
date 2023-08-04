@@ -2471,7 +2471,7 @@
       entity_id: humidifier.office_humidifier
   mode: single
 - id: '1652383371263'
-  alias: 'House Fan Control Set Away Mode Cool '
+  alias: House Fan Control Set Away Mode
   description: ''
   trigger:
   - platform: state
@@ -2482,19 +2482,11 @@
       hours: 2
       minutes: 0
       seconds: 0
-  condition:
-  - condition: state
-    entity_id: climate.house_fan_thermostat
-    state: cool
+  condition: []
   action:
   - service: climate.set_preset_mode
     data:
       preset_mode: away
-    target:
-      entity_id: climate.house_fan_thermostat
-  - service: climate.set_hvac_mode
-    data:
-      hvac_mode: cool
     target:
       entity_id: climate.house_fan_thermostat
   mode: single
@@ -2511,33 +2503,6 @@
   - service: climate.set_preset_mode
     data:
       preset_mode: none
-    target:
-      entity_id: climate.house_fan_thermostat
-  mode: single
-- id: '1652384609272'
-  alias: House Fan Control Set Away Mode Off
-  description: ''
-  trigger:
-  - platform: state
-    entity_id:
-    - alarm_control_panel.3629_alarm
-    to: armed_away
-    for:
-      hours: 2
-      minutes: 0
-      seconds: 0
-  condition:
-  - condition: state
-    entity_id: climate.house_fan_thermostat
-    state: 'off'
-  action:
-  - service: climate.set_preset_mode
-    data:
-      preset_mode: away
-    target:
-      entity_id: climate.house_fan_thermostat
-  - service: climate.turn_off
-    data: {}
     target:
       entity_id: climate.house_fan_thermostat
   mode: single
