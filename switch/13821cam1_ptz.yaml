@@ -11,10 +11,11 @@
       turn_on:
         service: onvif.ptz
         data:
-          entity_id: camera.lakefront_mainstream
+          continuous_duration: 0.1
           move_mode: ContinuousMove
-          continuous_duration: 0.01
-          pan: RIGHT
+          pan: "LEFT"
+        target:
+          entity_id: camera.13821_cam_1_mainstreamprofile
       turn_off:
     13821cam1_right:
       unique_id: 13821cam1_right
@@ -27,10 +28,11 @@
       turn_on:
         service: onvif.ptz
         data:
-          entity_id: camera.lakefront_mainstream
+          continuous_duration: 0.1
           move_mode: ContinuousMove
-          continuous_duration: 0.01
-          pan: LEFT
+          pan: "RIGHT"
+        target:
+          entity_id: camera.13821_cam_1_mainstreamprofile
       turn_off:
     13821cam1_up:
       unique_id: 13821cam1_up
@@ -43,10 +45,11 @@
       turn_on:
         service: onvif.ptz
         data:
-          entity_id: camera.lakefront_mainstream
+          continuous_duration: 0.1
           move_mode: ContinuousMove
-          continuous_duration: 0.01
-          tilt: UP
+          tilt: "UP"
+        target:
+          entity_id: camera.13821_cam_1_mainstreamprofile
       turn_off:
     13821cam1_down:
       unique_id: 13821cam1_down
@@ -59,8 +62,73 @@
       turn_on:
         service: onvif.ptz
         data:
-          entity_id: camera.lakefront_mainstream
+          continuous_duration: 0.1
           move_mode: ContinuousMove
-          continuous_duration: 0.01
-          tilt: DOWN
+          tilt: "DOWN"
+        target:
+          entity_id: camera.13821_cam_1_mainstreamprofile
+      turn_off:
+    13821cam1_call_pos_1:
+      unique_id: 13821cam1_call_pos_1
+      friendly_name: "13821 Cam 1 Call Position 1"
+      icon_template: "mdi:numeric-1-box-outline"
+      value_template: > 
+        {% if is_state('switch.13821cam1_call_pos_1','on') %}
+          false
+        {% endif %}
+      turn_on:
+        service: onvif.ptz
+        data:
+          move_mode: GotoPreset
+          preset: "Preset001"
+        target:
+          entity_id: camera.13821_cam_1_mainstreamprofile
+      turn_off:
+    13821cam1_call_pos_2:
+      unique_id: 13821cam1_call_pos_2
+      friendly_name: "13821 Cam 1 Call Position 2"
+      icon_template: "mdi:numeric-2-box-outline"
+      value_template: > 
+        {% if is_state('switch.13821cam1_call_pos_2','on') %}
+          false
+        {% endif %}
+      turn_on:
+        service: onvif.ptz
+        data:
+          move_mode: GotoPreset
+          preset: "Preset002"
+        target:
+          entity_id: camera.13821_cam_1_mainstreamprofile
+      turn_off:
+    13821cam1_call_pos_3:
+      unique_id: 13821cam1_call_pos_3
+      friendly_name: "13821 Cam 1 Call Position 3"
+      icon_template: "mdi:numeric-3-box-outline"
+      value_template: > 
+        {% if is_state('switch.13821cam1_call_pos_3','on') %}
+          false
+        {% endif %}
+      turn_on:
+        service: onvif.ptz
+        data:
+          move_mode: GotoPreset
+          preset: "Preset003"
+        target:
+          entity_id: camera.13821_cam_1_mainstreamprofile
+      turn_off:
+    13821cam1_call_pos_4:
+      unique_id: 13821cam1_call_pos_4
+      friendly_name: "13821 Cam 1 Call Position 4"
+      icon_template: "mdi:numeric-4-box-outline"
+      value_template: > 
+        {% if is_state('switch.13821cam1_call_pos_4','on') %}
+          false
+        {% endif %}
+      turn_on:
+        service: onvif.ptz
+        data:
+          move_mode: GotoPreset
+          preset: "Preset004"
+        target:
+          entity_id: camera.13821_cam_1_mainstreamprofile
       turn_off:
