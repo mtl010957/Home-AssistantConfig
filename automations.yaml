@@ -5,6 +5,12 @@
     platform: state
     to: armed_away
   action:
+  - service: switch.turn_off
+    data: {}
+    target:
+      entity_id:
+      - switch.3629_cam_5_privacy_mode
+      - switch.3629_cam_7_privacy_mode
   - service: amcrest.goto_preset
     data:
       entity_id: camera.3629_cam_7
@@ -2793,4 +2799,22 @@
       tilt: '{{ trigger.data.tilt }}'
     target:
       entity_id: camera.3629_cam_6_mainstreamprofile
+  mode: single
+- id: '1691765448954'
+  alias: Reload ONVIF Camera Integration After Camera Restarts
+  description: ''
+  trigger:
+  - platform: time_pattern
+    hours: '04'
+    minutes: '02'
+    seconds: '30'
+  condition: []
+  action:
+  - service: homeassistant.reload_config_entry
+    data: {}
+    target:
+      entity_id:
+      - camera.3629_cam_6_mainstreamprofile
+      - camera.3629_cam_8_mainstreamprofile
+      - camera.13821_cam_1_mainstreamprofile
   mode: single
