@@ -2818,3 +2818,16 @@
       - camera.3629_cam_8_mainstreamprofile
       - camera.13821_cam_1_mainstreamprofile
   mode: single
+- id: '1691769032132'
+  alias: Reload ASUS Router Integration After Router Reboot
+  description: ''
+  trigger:
+  - platform: time
+    at: 03:40:00
+  condition: []
+  action:
+  - service: homeassistant.reload_config_entry
+    data: {}
+    target:
+      device_id: 26fc3769507b64f26a42a0410863765c
+  mode: single
