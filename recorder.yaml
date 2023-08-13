@@ -34,6 +34,7 @@ include:
     - binary_sensor.3629_cam_6_cell_motion_detection
     - binary_sensor.3629_cam_7_motion_detected
     - binary_sensor.3629_cam_8_cell_motion_detection
+    - binary_sensor.13821_cam_1_cell_motion_detection
     # climate
     - climate.thermostat
     - climate.living_room_thermostat
