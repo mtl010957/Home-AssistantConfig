@@ -2806,7 +2806,7 @@
   trigger:
   - platform: time_pattern
     hours: '04'
-    minutes: '02'
+    minutes: '22'
     seconds: '30'
   condition: []
   action:
