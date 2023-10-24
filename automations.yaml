@@ -2736,7 +2736,8 @@
     target:
       entity_id: button.water_meter_restart
   - service: notify.notify
-    data: {}
+    data:
+      message: Water meter reset
   mode: single
 - id: '1679943720135'
   alias: 3629cam6 GoTo Preset
