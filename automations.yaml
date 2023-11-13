@@ -65,71 +65,6 @@
       - switch.3629_cam_5_privacy_mode
       - switch.3629_cam_7_privacy_mode
   mode: single
-- id: '1800999911110'
-  alias: 3629cam4 Up
-  trigger:
-  - below: '-0.1'
-    entity_id: input_number.3629cam4_up_down
-    platform: numeric_state
-  action:
-  - entity_id: switch.generic_cam4_up
-    service: switch.turn_on
-- id: '1800999911111'
-  alias: 3629cam4 Up Down Stop
-  trigger:
-  - above: '-0.1'
-    below: '0.1'
-    entity_id: input_number.3629cam4_up_down
-    platform: numeric_state
-  action:
-  - entity_id: switch.generic_cam4_up
-    service: switch.turn_off
-  - entity_id: switch.generic_cam4_down
-    service: switch.turn_off
-  mode: single
-- id: '1800999911112'
-  alias: 3629cam4 Down
-  trigger:
-  - above: '0.1'
-    entity_id: input_number.3629cam4_up_down
-    platform: numeric_state
-  action:
-  - entity_id: switch.generic_cam4_down
-    service: switch.turn_on
-  mode: single
-- id: '1800999911113'
-  alias: 3629cam4 Left
-  trigger:
-  - below: '-0.1'
-    entity_id: input_number.3629cam4_left_right
-    platform: numeric_state
-  action:
-  - entity_id: switch.generic_cam4_left
-    service: switch.turn_on
-  mode: single
-- id: '1800999911114'
-  alias: 3629cam4 Left Right Stop
-  trigger:
-  - above: '-0.1'
-    below: '0.1'
-    entity_id: input_number.3629cam4_left_right
-    platform: numeric_state
-  action:
-  - entity_id: switch.generic_cam4_left
-    service: switch.turn_off
-  - entity_id: switch.generic_cam4_right
-    service: switch.turn_off
-  mode: single
-- id: '1800999911115'
-  alias: 3629cam4 Right
-  trigger:
-  - above: '0.1'
-    entity_id: input_number.3629cam4_left_right
-    platform: numeric_state
-  action:
-  - entity_id: switch.generic_cam4_right
-    service: switch.turn_on
-  mode: single
 - id: '1533419985023'
   alias: Irrigation Run
   trigger:
@@ -873,10 +808,10 @@
       ''timestamp'') | timestamp_custom(''%H:%M'', False) }}'
   condition: []
   action:
-  - device_id: f743120b85da4c02b68c18c65965b2c3
+  - type: turn_off
+    device_id: 6be605538ba3c2090244ab6e739d0565
+    entity_id: b31f6ac123245c4fd8899f0540e2756e
     domain: fan
-    entity_id: fan.family_room_ceiling_fan
-    type: turn_off
   mode: single
 - id: '1608157965895'
   alias: Xmas lights on at dusk
@@ -1287,8 +1222,8 @@
   condition: []
   action:
   - type: toggle
-    device_id: 2f410060429a42f78888722f30b8959c
-    entity_id: light.bedside_lamp_bulb
+    device_id: 9ae5e2c7ce24aa1ff636bd0cd53f3dba
+    entity_id: 50463c93bc7ad352cbb32ca029c3636f
     domain: light
   mode: single
 - id: '1615904968574'
@@ -1347,76 +1282,6 @@
     data:
       message: The garage inside door has been open for more than one minute
       title: Garage Inside Door Opened
-  mode: single
-- id: '1622303541777'
-  alias: Living Room Blinds Manual Sync
-  description: ''
-  trigger:
-  - type: turned_on
-    platform: device
-    device_id: 1088744891254b82bc3d03f1b7e066d8
-    entity_id: binary_sensor.dm06_reb1_button
-    domain: binary_sensor
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 0
-      milliseconds: 0
-  condition: []
-  action:
-  - service: number.set_value
-    data:
-      entity_id: number.living_room_blinds_manual_control_rotary_encoder_setting
-      value: '{{ state_attr("cover.living_room_blinds","current_tilt_position") }}'
-  mode: single
-- id: '1622304128728'
-  alias: Living Room Blinds Manual Adjust
-  description: ''
-  trigger:
-  - platform: event
-    event_type: state_changed
-    event_data:
-      entity_id: sensor.living_room_blinds_manual_control_rotary_encoder
-  condition: []
-  action:
-  - service: cover.set_cover_tilt_position
-    target:
-      entity_id: cover.living_room_blinds
-    data:
-      tilt_position: '{{ states("sensor.living_room_blinds_manual_control_rotary_encoder")
-        }}'
-  mode: single
-- id: '1622307605618'
-  alias: Living Room Blinds Manual Open
-  description: ''
-  trigger:
-  - type: turned_on
-    platform: device
-    device_id: 1088744891254b82bc3d03f1b7e066d8
-    entity_id: binary_sensor.living_room_blinds_manual_control_button
-    domain: binary_sensor
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 2
-      milliseconds: 0
-  condition: []
-  action:
-  - service: cover.set_cover_tilt_position
-    target:
-      entity_id:
-      - cover.living_room_blinds
-    data:
-      tilt_position: 60
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 1
-      milliseconds: 0
-  - service: number.set_value
-    data:
-      entity_id: number.living_room_blinds_manual_control_rotary_encoder_setting
-      value: '{{ state_attr("cover.living_room_blinds","current_tilt_position") }}'
   mode: single
 - id: '1623681989728'
   alias: SE Blinds follow morning sun elevation
@@ -2075,9 +1940,9 @@
     offset: '-20'
   condition:
   - condition: device
-    type: is_on
-    device_id: bdbbe6a28928d1626bb3a130d1d02512
-    entity_id: light.back_outdoor_xmas_lights
+    type: is_off
+    device_id: 63cd121363a5b01a151866cd34b1b5d9
+    entity_id: 1077d219ab9278b70a392d588cbe9c02
     domain: light
   action:
   - service: light.turn_on
@@ -2105,9 +1970,9 @@
     offset: '20'
   condition:
   - condition: device
-    type: is_on
-    device_id: bdbbe6a28928d1626bb3a130d1d02512
-    entity_id: light.back_outdoor_xmas_lights
+    type: is_off
+    device_id: 63cd121363a5b01a151866cd34b1b5d9
+    entity_id: 1077d219ab9278b70a392d588cbe9c02
     domain: light
   action:
   - service: light.turn_on
@@ -2197,18 +2062,6 @@
     entity_id: climate.hot_water_recirc_control_setting
     type: set_hvac_mode
     hvac_mode: heat
-  mode: single
-- id: '1642188205188'
-  alias: Move CAM4 FTP JPG
-  description: ''
-  trigger:
-  - platform: time_pattern
-    hours: '*'
-    minutes: /5
-    seconds: '0'
-  condition: []
-  action:
-  - service: shell_command.move_cam4_ftp_jpg
   mode: single
 - id: '1648033982730'
   alias: IKEA Switch 2 Controller
@@ -2387,32 +2240,6 @@
         target:
           entity_id: light.family_room_lamps
       switch: sensor.tuya_knob_1_action
-- id: '1651371950242'
-  alias: Cam4 Set EDT
-  description: ''
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.is_dst
-    from: 'false'
-    to: 'true'
-  condition: []
-  action:
-  - service: shell_command.c4_edt
-    data: {}
-  mode: single
-- id: '1651371985405'
-  alias: Cam4 Set EST
-  description: ''
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.is_dst
-    from: 'true'
-    to: 'false'
-  condition: []
-  action:
-  - service: shell_command.c4_est
-    data: {}
-  mode: single
 - id: '1651769147081'
   alias: Humidifier Adjust for Temperature
   description: ''
