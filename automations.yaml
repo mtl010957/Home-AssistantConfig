@@ -2422,8 +2422,8 @@
   condition: []
   action:
   - type: turn_on
-    device_id: b7ec839866ca4d223c2a50bb516a3a6e
-    entity_id: light.rt_ac68u_led
+    device_id: 26fc3769507b64f26a42a0410863765c
+    entity_id: 1e70c5e26c2c66f9f49c29f9a6960c57
     domain: light
   mode: single
 - id: '1672585429023'
@@ -2435,8 +2435,8 @@
   condition: []
   action:
   - type: turn_off
-    device_id: b7ec839866ca4d223c2a50bb516a3a6e
-    entity_id: light.rt_ac68u_led
+    device_id: 26fc3769507b64f26a42a0410863765c
+    entity_id: 1e70c5e26c2c66f9f49c29f9a6960c57
     domain: light
   mode: single
 - id: '1673190937973'
