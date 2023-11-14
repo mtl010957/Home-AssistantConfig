@@ -18,6 +18,8 @@ zone.home:
   radius: 400
 zone.desert_home:
   icon: mdi:cactus
+zone.caravan_home:
+  radius: 1
 switch.generic_cam4_hpatrol:
   icon: mdi:axis-z-rotate-clockwise
 sensor.furnace_gas_used:
