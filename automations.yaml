@@ -24,11 +24,10 @@
       minutes: 1
       seconds: 0
       milliseconds: 0
-  - service: switch.turn_on
-    data: {}
-    target:
-      entity_id:
-      - switch.front_yard_light
+  - type: turn_on
+    device_id: 8d8de4c32fc84734af376c764700e31f
+    entity_id: 7edd4bb6afe5ff12486ca071f0727757
+    domain: switch
   mode: single
 - id: '1500947016399'
   alias: Camera Motion and Floods On Armed Night or Home
@@ -40,11 +39,10 @@
     entity_id: alarm_control_panel.3629_alarm
     to: armed_home
   action:
-  - service: switch.turn_on
-    data: {}
-    target:
-      entity_id:
-      - switch.front_yard_light
+  - type: turn_on
+    device_id: 8d8de4c32fc84734af376c764700e31f
+    entity_id: 7edd4bb6afe5ff12486ca071f0727757
+    domain: switch
   mode: single
 - id: '1500948466889'
   alias: Camera Motion and Floods Off Disarmed
