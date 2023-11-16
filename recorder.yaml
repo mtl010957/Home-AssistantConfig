@@ -3,6 +3,7 @@ purge_keep_days: 2
 db_url: !secret recorder_db_url
 include:
   entities:
+    - alarm_control_panel.3629_alarm
     # binary_sensors
     - binary_sensor.back_door_sensor_any
     - binary_sensor.downstairs_smoke_co_alarm_co_alarm_carbon_monoxide_detected
@@ -180,6 +181,10 @@ include:
     - sensor.water_meter_water_used
     - sensor.water_meter_water_used_cost
     - sensor.water_meter_field_strength_x
+    - sensor.front_yard_camera_outlet_daily_energy
+    - sensor.front_yard_camera_outlet_power
+    - sensor.front_yard_camera_outlet_voltage
+    - sensor.front_yard_camera_outlet_current
     # caravan sensors
     - binary_sensor.caravan_fresh_tank_liquid_level_sensor_1
     - binary_sensor.caravan_fresh_tank_liquid_level_sensor_2
