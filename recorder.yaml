@@ -223,6 +223,8 @@ include:
     - sensor.caravan_gj_12v200ah_soc
     - sensor.caravan_gj_12v200ah_voltage
     - sensor.caravan_gj_12v200ah_current
+    - sensor.caravan_gj_12v200ah_battery_temperature
+    - sensor.caravan_gj_12v200ah_bms_temperature
     - sensor.caravan_converter_bus_voltage
     - sensor.caravan_converter_current
     - sensor.caravan_converter_energy
