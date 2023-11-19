@@ -1,7 +1,0 @@
-  - sensor:
-      - unique_id: gas_price
-        name: "Gas Price"
-        unit_of_measurement: '$/CCF'
-        icon: "mdi:currency-usd"
-        state: >
-          {{ states('sensor.gas_total_price_per_mcf') | float / 10.0 }}

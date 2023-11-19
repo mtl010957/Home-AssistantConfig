@@ -1,7 +1,0 @@
-  - sensor:
-      - unique_id: humidifier_off_point
-        name: "Humidifier Off Point"
-        unit_of_measurement: "%"
-        device_class: humidity
-        state: >
-          {{ [[(states('sensor.outdoor_temperature') | float(default=0.0) * states('input_number.humidifier_temperature_gain') | float(default=0.0) / 100.0 + states('input_number.humidity_at_0_degf') | float(default=0.0)) | round(1), 40.0] | min, 15.0] | max }}
