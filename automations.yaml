@@ -198,11 +198,11 @@
     platform: time
   condition:
   - condition: state
-    entity_id: group.family
-    state: home
-  - condition: state
     entity_id: alarm_control_panel.3629_alarm
     state: disarmed
+  - condition: numeric_state
+    entity_id: zone.home
+    above: 0
   action:
   - data: {}
     service: alarm_control_panel.alarm_arm_night
@@ -216,11 +216,11 @@
     platform: time
   condition:
   - condition: state
-    entity_id: group.family
-    state: home
-  - condition: state
     entity_id: alarm_control_panel.3629_alarm
     state: armed_night
+  - condition: numeric_state
+    entity_id: zone.home
+    above: 0
   action:
   - data: {}
     service: alarm_control_panel.alarm_disarm
@@ -230,10 +230,10 @@
 - id: '1563648590512'
   alias: Security Arm Not Home
   trigger:
-  - entity_id: group.family
-    from: home
-    platform: state
-    to: not_home
+  - platform: numeric_state
+    entity_id:
+    - zone.home
+    below: 1
   condition: []
   action:
   - data: {}
@@ -244,14 +244,14 @@
 - id: '1563648678608'
   alias: Security Disarm Return Home
   trigger:
-  - entity_id: group.family
-    from: not_home
-    platform: state
-    to: home
   - platform: zone
     entity_id: person.michael_loeffler
     zone: zone.home
     event: enter
+  - platform: numeric_state
+    entity_id:
+    - zone.home
+    above: 0
   condition: []
   action:
   - data: {}
