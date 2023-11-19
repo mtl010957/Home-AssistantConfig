@@ -110,7 +110,7 @@ include:
     - sensor.dte_energy_used_hourly_on_peak_cost
     - sensor.downstairs_smoke_co_alarm_battery_level
     - sensor.family_room_humidity
-    - sensor.corrected_barometer_inhg
+    - sensor.corrected_barometer
     - sensor.family_room_temperature
     - sensor.family_room_smoke_co_alarm_battery_level
     - sensor.furnace_flue_temperature

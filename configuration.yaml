@@ -4,10 +4,9 @@ homeassistant:
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
-group: !include groups.yaml
 automation: !include automations.yaml
-script: !include scripts.yaml
 scene: !include scenes.yaml
+script: !include scripts.yaml
 
 # Required http setup for reverse proxy
 http:
@@ -44,5 +43,3 @@ sensor: !include_dir_merge_list sensor
 shell_command: !include shell_command.yaml
 
 switch: !include_dir_merge_list switch
-
-template: !include_dir_merge_list template
