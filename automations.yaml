@@ -979,8 +979,6 @@
       - automation.xmas_lights_on_at_dusk
       - automation.xmas_lights_work_morning
       - automation.xmas_lights_on_energy_summary_over_1kw_4am_to_sunrise_not_armed_away
-      - automation.xmas_lights_dim_at_sunset
-      - automation.xmas_lights_level_follows_sun
   mode: single
 - id: '1613235512761'
   alias: Xmas Season End
@@ -1000,8 +998,6 @@
       - automation.xmas_lights_on_at_dusk
       - automation.xmas_lights_work_morning
       - automation.xmas_lights_on_energy_summary_over_1kw_4am_to_sunrise_not_armed_away
-      - automation.xmas_lights_dim_at_sunset
-      - automation.xmas_lights_level_follows_sun
       - automation.xmas_lights_off_at_11_00_pm
       - automation.xmas_lights_off_after_sunrise
   mode: single
@@ -2653,4 +2649,24 @@
     data: {}
     target:
       device_id: 26fc3769507b64f26a42a0410863765c
+  mode: single
+- id: '1700587190314'
+  alias: Xmas Lights Sun Angle Brightness
+  description: ''
+  trigger:
+  - platform: time_pattern
+    hours: '*'
+    minutes: /2
+    seconds: '0'
+  condition:
+  - condition: state
+    entity_id: light.back_outdoor_xmas_lights
+    state: 'on'
+  action:
+  - service: light.turn_on
+    data:
+      brightness_pct: '{{ states(''sensor.sun_elevation_based_light_brightness'')
+        | float(default=0.0) }}'
+    target:
+      entity_id: light.back_outdoor_xmas_lights
   mode: single
