@@ -967,7 +967,7 @@
     at: 00:00:00
   condition:
   - condition: template
-    value_template: '{{ now().day == 1 and now().month == 12 }}'
+    value_template: '{{ now().day == 24 and now().month == 11 }}'
   action:
   - service: automation.turn_on
     data: {}
@@ -988,7 +988,7 @@
     at: 00:00:00
   condition:
   - condition: template
-    value_template: '{{ now().day == 1 and now().month == 2 }}'
+    value_template: '{{ now().day == 2 and now().month == 2 }}'
   action:
   - service: automation.turn_off
     data: {}
@@ -1925,66 +1925,6 @@
     type: set_hvac_mode
     hvac_mode: heat
   mode: single
-- id: '1639658878788'
-  alias: Xmas lights brighten before sunrise
-  description: ''
-  trigger:
-  - platform: sun
-    event: sunrise
-    offset: '-20'
-  condition:
-  - condition: device
-    type: is_off
-    device_id: 63cd121363a5b01a151866cd34b1b5d9
-    entity_id: 1077d219ab9278b70a392d588cbe9c02
-    domain: light
-  action:
-  - service: light.turn_on
-    target:
-      entity_id: light.back_outdoor_xmas_lights
-    data:
-      brightness_pct: 55
-  - delay:
-      hours: 0
-      minutes: 5
-      seconds: 0
-      milliseconds: 0
-  - service: light.turn_on
-    target:
-      entity_id: light.back_outdoor_xmas_lights
-    data:
-      brightness_pct: 100
-  mode: single
-- id: '1639659709214'
-  alias: Xmas lights dim after sunset
-  description: ''
-  trigger:
-  - platform: sun
-    event: sunset
-    offset: '20'
-  condition:
-  - condition: device
-    type: is_off
-    device_id: 63cd121363a5b01a151866cd34b1b5d9
-    entity_id: 1077d219ab9278b70a392d588cbe9c02
-    domain: light
-  action:
-  - service: light.turn_on
-    target:
-      entity_id: light.back_outdoor_xmas_lights
-    data:
-      brightness_pct: 55
-  - delay:
-      hours: 0
-      minutes: 5
-      seconds: 0
-      milliseconds: 0
-  - service: light.turn_on
-    data:
-      brightness_pct: 10
-    target:
-      entity_id: light.back_outdoor_xmas_lights
-  mode: single
 - id: '1639933441309'
   alias: Notify Furnace Pressure Release Overflow
   description: ''
@@ -2669,4 +2609,25 @@
         | float(default=0.0) }}'
     target:
       entity_id: light.back_outdoor_xmas_lights
+  mode: single
+- id: '1700602096098'
+  alias: Xmas Lights Button
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: d8ab8c1ffdecef1e4dd60d62c2ccf068
+    type: click
+    subtype: single
+    discovery_id: 0x00158d00094648e7 click_single
+  condition: []
+  action:
+  - type: toggle
+    device_id: 63cd121363a5b01a151866cd34b1b5d9
+    entity_id: 1077d219ab9278b70a392d588cbe9c02
+    domain: light
+  - type: toggle
+    device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
+    entity_id: 8aacc0d9b482da0c55f5ebb8c9aad55a
+    domain: switch
   mode: single
