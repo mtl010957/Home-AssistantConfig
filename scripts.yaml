@@ -109,10 +109,11 @@ open_all_blinds:
 turn_on_xmas_lights:
   alias: Turn on Xmas lights 100%
   sequence:
-  - type: turn_off
+  - type: turn_on
     device_id: 63cd121363a5b01a151866cd34b1b5d9
     entity_id: 1077d219ab9278b70a392d588cbe9c02
     domain: light
+    brightness_pct: 100
   - type: turn_on
     device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
     entity_id: switch.front_outdoor_xmas_lights
@@ -135,10 +136,11 @@ turn_off_xmas_lights:
 turn_on_xmas_lights_10:
   alias: Turn on Xmas lights 10%
   sequence:
-  - type: turn_off
+  - type: turn_on
     device_id: 63cd121363a5b01a151866cd34b1b5d9
     entity_id: 1077d219ab9278b70a392d588cbe9c02
     domain: light
+    brightness_pct: 10
   - type: turn_on
     device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
     entity_id: switch.front_outdoor_xmas_lights
