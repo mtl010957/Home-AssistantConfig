@@ -252,7 +252,10 @@
     entity_id:
     - zone.home
     above: 0
-  condition: []
+  condition:
+  - condition: state
+    entity_id: alarm_control_panel.3629_alarm
+    state: armed_away
   action:
   - data: {}
     service: alarm_control_panel.alarm_disarm
