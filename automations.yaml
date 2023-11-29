@@ -2634,3 +2634,147 @@
     entity_id: 8aacc0d9b482da0c55f5ebb8c9aad55a
     domain: switch
   mode: single
+- id: '1701278095569'
+  alias: IKEA Switch 5 On
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: 7e09d94d87e253455ca5dd71359827f0
+    type: action
+    subtype: 'on'
+    discovery_id: 0x5cc7c1fffe86e9cf action_on
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 11fadf4bb1cb06b9a37bca6d7b596ae7
+    entity_id: 5c9f7d325eb5d31c4f2e01ae2170ec78
+    domain: light
+  - type: turn_on
+    device_id: fd2a79d8e6a9e4cf919315c82983a32f
+    entity_id: 4299874278624449c3d5d808f6caf1af
+    domain: light
+  mode: single
+- id: '1701278237996'
+  alias: IKEA Switch 5 Off
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: 7e09d94d87e253455ca5dd71359827f0
+    type: action
+    subtype: 'off'
+    discovery_id: 0x5cc7c1fffe86e9cf action_off
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 11fadf4bb1cb06b9a37bca6d7b596ae7
+    entity_id: 5c9f7d325eb5d31c4f2e01ae2170ec78
+    domain: light
+  - type: turn_off
+    device_id: fd2a79d8e6a9e4cf919315c82983a32f
+    entity_id: 4299874278624449c3d5d808f6caf1af
+    domain: light
+  mode: single
+- id: '1701278561361'
+  alias: IKEA Switch 5 Brightness Stop
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: 7e09d94d87e253455ca5dd71359827f0
+    type: action
+    subtype: brightness_stop
+    discovery_id: 0x5cc7c1fffe86e9cf action_brightness_stop
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 29ff68d0e2faf832d7d1c1c6498a6d2f
+    entity_id: 3c385963952524e09e1634bacafd574f
+    domain: switch
+  - type: turn_off
+    device_id: 6fe7af154d27cf65628d832399d30166
+    entity_id: 31ebb16cae42a9755382aa9f84543d64
+    domain: switch
+  mode: single
+- id: '1701284117527'
+  alias: Siren On
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_button.siren
+  condition: []
+  action:
+  - device_id: 29ff68d0e2faf832d7d1c1c6498a6d2f
+    domain: select
+    entity_id: 43c816c75fc7472bb4f69997b325f43e
+    type: select_last
+  - type: turn_on
+    device_id: 29ff68d0e2faf832d7d1c1c6498a6d2f
+    entity_id: 3c385963952524e09e1634bacafd574f
+    domain: switch
+  mode: single
+- id: '1701284510551'
+  alias: Chime On
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_button.chime
+  condition: []
+  action:
+  - device_id: 29ff68d0e2faf832d7d1c1c6498a6d2f
+    domain: select
+    entity_id: 43c816c75fc7472bb4f69997b325f43e
+    type: select_first
+  - type: turn_on
+    device_id: 29ff68d0e2faf832d7d1c1c6498a6d2f
+    entity_id: 3c385963952524e09e1634bacafd574f
+    domain: switch
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  - type: turn_off
+    device_id: 29ff68d0e2faf832d7d1c1c6498a6d2f
+    entity_id: 3c385963952524e09e1634bacafd574f
+    domain: switch
+  mode: single
+- id: '1701285468263'
+  alias: IKEA Switch 5 Brightness Move Up
+  description: Panic Alarm
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: 7e09d94d87e253455ca5dd71359827f0
+    type: action
+    subtype: brightness_move_up
+    discovery_id: 0x5cc7c1fffe86e9cf action_brightness_move_up
+  condition: []
+  action:
+  - service: automation.trigger
+    data:
+      skip_condition: true
+    target:
+      entity_id: automation.siren_on
+  - type: turn_on
+    device_id: 6fe7af154d27cf65628d832399d30166
+    entity_id: 31ebb16cae42a9755382aa9f84543d64
+    domain: switch
+  - type: turn_on
+    device_id: 11fadf4bb1cb06b9a37bca6d7b596ae7
+    entity_id: 5c9f7d325eb5d31c4f2e01ae2170ec78
+    domain: light
+    brightness_pct: 100
+  - type: turn_on
+    device_id: fd2a79d8e6a9e4cf919315c82983a32f
+    entity_id: 4299874278624449c3d5d808f6caf1af
+    domain: light
+    brightness_pct: 100
+  - type: turn_on
+    device_id: 8d8de4c32fc84734af376c764700e31f
+    entity_id: 7edd4bb6afe5ff12486ca071f0727757
+    domain: switch
+  mode: single
