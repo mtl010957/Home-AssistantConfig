@@ -110,55 +110,41 @@ turn_on_xmas_lights:
   alias: Turn on Xmas lights 100%
   sequence:
   - type: turn_on
-    device_id: 63cd121363a5b01a151866cd34b1b5d9
-    entity_id: 1077d219ab9278b70a392d588cbe9c02
+    device_id: b2002d8b08a9a1927c2532bd668d7d2e
+    entity_id: 1f83b68093b2ed6c17f1aa565452342b
     domain: light
     brightness_pct: 100
   - type: turn_on
     device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
     entity_id: switch.front_outdoor_xmas_lights
     domain: switch
-  - type: turn_on
-    device_id: 7d67010cb6b28f2ae220ad82fca6868f
-    entity_id: 55f47b092da99c8762183823b182e7a8
-    domain: light
-    brightness_pct: 100
   mode: single
   icon: mdi:string-lights
 turn_off_xmas_lights:
   alias: Turn off Xmas lights
   sequence:
   - type: turn_off
-    device_id: 63cd121363a5b01a151866cd34b1b5d9
-    entity_id: 1077d219ab9278b70a392d588cbe9c02
+    device_id: b2002d8b08a9a1927c2532bd668d7d2e
+    entity_id: 1f83b68093b2ed6c17f1aa565452342b
     domain: light
   - type: turn_off
     device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
     entity_id: switch.front_outdoor_xmas_lights
     domain: switch
-  - type: turn_off
-    device_id: 7d67010cb6b28f2ae220ad82fca6868f
-    entity_id: 55f47b092da99c8762183823b182e7a8
-    domain: light
   mode: single
   icon: mdi:string-lights
 turn_on_xmas_lights_10:
   alias: Turn on Xmas lights 10%
   sequence:
   - type: turn_on
-    device_id: 63cd121363a5b01a151866cd34b1b5d9
-    entity_id: 1077d219ab9278b70a392d588cbe9c02
+    device_id: b2002d8b08a9a1927c2532bd668d7d2e
+    entity_id: 1f83b68093b2ed6c17f1aa565452342b
     domain: light
     brightness_pct: 10
   - type: turn_on
     device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
     entity_id: switch.front_outdoor_xmas_lights
     domain: switch
-  - type: turn_on
-    device_id: 7d67010cb6b28f2ae220ad82fca6868f
-    entity_id: 55f47b092da99c8762183823b182e7a8
-    domain: light
-    brightness_pct: 10
   mode: single
   icon: mdi:string-lights
 sw_blinds_block_afternoon_sun:
