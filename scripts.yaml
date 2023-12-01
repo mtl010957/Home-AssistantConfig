@@ -118,6 +118,11 @@ turn_on_xmas_lights:
     device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
     entity_id: switch.front_outdoor_xmas_lights
     domain: switch
+  - type: turn_on
+    device_id: 7d67010cb6b28f2ae220ad82fca6868f
+    entity_id: 55f47b092da99c8762183823b182e7a8
+    domain: light
+    brightness_pct: 100
   mode: single
   icon: mdi:string-lights
 turn_off_xmas_lights:
@@ -131,6 +136,10 @@ turn_off_xmas_lights:
     device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
     entity_id: switch.front_outdoor_xmas_lights
     domain: switch
+  - type: turn_off
+    device_id: 7d67010cb6b28f2ae220ad82fca6868f
+    entity_id: 55f47b092da99c8762183823b182e7a8
+    domain: light
   mode: single
   icon: mdi:string-lights
 turn_on_xmas_lights_10:
@@ -145,6 +154,11 @@ turn_on_xmas_lights_10:
     device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
     entity_id: switch.front_outdoor_xmas_lights
     domain: switch
+  - type: turn_on
+    device_id: 7d67010cb6b28f2ae220ad82fca6868f
+    entity_id: 55f47b092da99c8762183823b182e7a8
+    domain: light
+    brightness_pct: 10
   mode: single
   icon: mdi:string-lights
 sw_blinds_block_afternoon_sun:

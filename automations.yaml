@@ -2605,6 +2605,14 @@
   - condition: state
     entity_id: light.back_outdoor_xmas_lights
     state: 'on'
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: light.back_outdoor_xmas_lights
+      state: 'on'
+    - condition: state
+      entity_id: light.back_yard_xmas_lights
+      state: 'on'
   action:
   - service: light.turn_on
     data:
@@ -2612,6 +2620,12 @@
         | float(default=0.0) }}'
     target:
       entity_id: light.back_outdoor_xmas_lights
+  - service: light.turn_on
+    data:
+      brightness_pct: '{{ states(''sensor.sun_elevation_based_light_brightness'')
+        | float(default=0.0) }}'
+    target:
+      entity_id: light.back_yard_xmas_lights
   mode: single
 - id: '1700602096098'
   alias: Xmas Lights Button
@@ -2633,6 +2647,10 @@
     device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
     entity_id: 8aacc0d9b482da0c55f5ebb8c9aad55a
     domain: switch
+  - type: toggle
+    device_id: 7d67010cb6b28f2ae220ad82fca6868f
+    entity_id: 55f47b092da99c8762183823b182e7a8
+    domain: light
   mode: single
 - id: '1701278095569'
   alias: IKEA Switch 5 On
