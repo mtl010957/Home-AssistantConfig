@@ -259,6 +259,8 @@ include:
     - utility_meter.dte_energy_used_hourly
     # weather
     - weather.kptk_hourly
+    # zone
+    - zone.home
 exclude:
   event_types:
     - component_loaded
