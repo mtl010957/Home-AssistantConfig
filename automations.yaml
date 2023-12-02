@@ -815,7 +815,7 @@
     domain: fan
   mode: single
 - id: '1608157965895'
-  alias: Xmas lights on at dusk
+  alias: Xmas Lights On At Dusk
   description: ''
   trigger:
   - platform: sun
@@ -827,7 +827,7 @@
     data: {}
   mode: single
 - id: '1608158115532'
-  alias: Xmas lights off at 11:00 PM
+  alias: Xmas Lights Off At 11:00 PM
   description: ''
   trigger:
   - platform: time
@@ -838,7 +838,7 @@
     data: {}
   mode: single
 - id: '1608158234233'
-  alias: Xmas lights off after sunrise
+  alias: Xmas Lights Off After Sunrise
   description: ''
   trigger:
   - platform: sun
@@ -850,7 +850,7 @@
     data: {}
   mode: single
 - id: '1608158400934'
-  alias: Xmas lights on at 06:00 AM
+  alias: Xmas Lights On At 06:00 AM
   description: ''
   trigger:
   - platform: time
@@ -858,6 +858,7 @@
   condition: []
   action:
   - service: script.turn_on_xmas_lights_10
+    data: {}
   mode: single
 - id: '1609352755365'
   alias: Tag Play Alt 98.7 is scanned
