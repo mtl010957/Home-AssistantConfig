@@ -26,8 +26,8 @@
       milliseconds: 0
   - type: turn_on
     device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: 7edd4bb6afe5ff12486ca071f0727757
-    domain: switch
+    entity_id: 096b2cde60ed66158df8cf1aa85acadd
+    domain: light
   mode: single
 - id: '1500947016399'
   alias: Camera Motion and Floods On Armed Night or Home
@@ -41,8 +41,8 @@
   action:
   - type: turn_on
     device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: 7edd4bb6afe5ff12486ca071f0727757
-    domain: switch
+    entity_id: 096b2cde60ed66158df8cf1aa85acadd
+    domain: light
   mode: single
 - id: '1500948466889'
   alias: Camera Motion and Floods Off Disarmed
@@ -51,17 +51,16 @@
     platform: state
     to: disarmed
   action:
-  - service: switch.turn_off
-    target:
-      entity_id:
-      - switch.front_yard_light
-    data: {}
   - service: switch.turn_on
     data: {}
     target:
       entity_id:
       - switch.3629_cam_5_privacy_mode
       - switch.3629_cam_7_privacy_mode
+  - type: turn_off
+    device_id: 8d8de4c32fc84734af376c764700e31f
+    entity_id: 096b2cde60ed66158df8cf1aa85acadd
+    domain: light
   mode: single
 - id: '1533419985023'
   alias: Irrigation Run
@@ -383,7 +382,8 @@
   alias: Notify Temperature Low Office
   description: ''
   trigger:
-  - entity_id: sensor.office_temperature
+  - entity_id:
+    - sensor.office_climate_temperature
     platform: numeric_state
     below: '45'
   condition: []
@@ -1383,11 +1383,11 @@
     seconds: '45'
   condition:
   - condition: numeric_state
-    entity_id: sensor.outdoor_temperature
+    entity_id: sensor.outdoor_climate_temperature
     above: '60'
   - condition: template
-    value_template: '{{ (states(''sensor.outdoor_temperature'') | round(0,''round-to-even'',''undefined'')
-      | int(default=80)) < (states(''sensor.main_bedroom_temperature'') | round(0,''round-to-even'',''undefined'')
+    value_template: '{{ (states(''sensor.outdoor_climate_temperature'') | round(0,''round-to-even'',''undefined'')
+      | int(default=80)) < (states(''sensor.main_bedroom_climate_temperature'') | round(0,''round-to-even'',''undefined'')
       | int(default=80) - 1) }}'
   action:
   - service: climate.set_hvac_mode
@@ -1408,11 +1408,11 @@
   - condition: or
     conditions:
     - condition: numeric_state
-      entity_id: sensor.outdoor_temperature
+      entity_id: sensor.outdoor_climate_temperature
       below: '60'
     - condition: template
-      value_template: '{{ (states("sensor.outdoor_temperature") | round(0,"round-to-even","undefined")
-        | int(default=80)) >= (states("sensor.main_bedroom_temperature") | round(0,"round-to-even","undefined")
+      value_template: '{{ (states("sensor.outdoor_climate_temperature") | round(0,"round-to-even","undefined")
+        | int(default=80)) >= (states("sensor.main_bedroom_climate_temperature") | round(0,"round-to-even","undefined")
         | int(default=80) - 1) }}'
   action:
   - service: climate.set_hvac_mode
@@ -1435,10 +1435,11 @@
       entity_id:
       - script.security_lighting_on
       - script.security_lighting_off
+    data: {}
   - type: turn_off
     device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: switch.front_yard_light
-    domain: switch
+    entity_id: 096b2cde60ed66158df8cf1aa85acadd
+    domain: light
   mode: single
 - id: '1626789324636'
   alias: Blinds Open Energy Summary Over 900W 4AM to Sunrise Not Armed Away
@@ -1513,13 +1514,13 @@
   - condition: device
     type: is_on
     device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: switch.front_yard_light
-    domain: switch
+    entity_id: light.front_yard_light
+    domain: light
   action:
   - type: turn_off
     device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: switch.front_yard_light
-    domain: switch
+    entity_id: light.front_yard_light
+    domain: light
   - delay:
       hours: 0
       minutes: 10
@@ -1527,8 +1528,8 @@
       milliseconds: 0
   - type: turn_on
     device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: switch.front_yard_light
-    domain: switch
+    entity_id: light.front_yard_light
+    domain: light
   mode: single
 - id: '1628012626514'
   alias: IKEA Remote 2 Dim Down Hold
@@ -1972,7 +1973,7 @@
   description: ''
   trigger:
   - platform: numeric_state
-    entity_id: sensor.outdoor_temperature
+    entity_id: sensor.outdoor_climate_temperature
     below: '0'
     for:
       hours: 0
@@ -2632,8 +2633,8 @@
     domain: light
   - type: toggle
     device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
-    entity_id: 8aacc0d9b482da0c55f5ebb8c9aad55a
-    domain: switch
+    entity_id: 0e92f6edee822e6cee30b18a6e8165ef
+    domain: light
   mode: single
 - id: '1701278095569'
   alias: IKEA Switch 5 On
@@ -2776,6 +2777,6 @@
     brightness_pct: 100
   - type: turn_on
     device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: 7edd4bb6afe5ff12486ca071f0727757
-    domain: switch
+    entity_id: 096b2cde60ed66158df8cf1aa85acadd
+    domain: light
   mode: single

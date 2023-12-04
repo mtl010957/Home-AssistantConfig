@@ -93,8 +93,8 @@ include:
     - sensor.cpu_temperature
     - sensor.asuswrt_load_avg_1m
     - sensor.asuswrt_load_avg_5m
-    - sensor.guest_room_temperature
-    - sensor.guest_room_humidity
+    - sensor.guest_room_climate_temperature
+    - sensor.guest_room_climate_humidity
     - sensor.office_temperature
     - sensor.office_humidity
     - sensor.dte_energy_bridge_summary
@@ -109,9 +109,9 @@ include:
     - sensor.dte_energy_used_hourly_on_peak
     - sensor.dte_energy_used_hourly_on_peak_cost
     - sensor.downstairs_smoke_co_alarm_battery_level
-    - sensor.family_room_humidity
+    - sensor.family_room_climate_humidity
     - sensor.corrected_barometer
-    - sensor.family_room_temperature
+    - sensor.family_room_climate_temperature
     - sensor.family_room_smoke_co_alarm_battery_level
     - sensor.furnace_temperature_probe_1
     - sensor.furnace_temperature_probe_2
@@ -132,10 +132,10 @@ include:
     - sensor.humidifier_off_point
     - sensor.humidifier_on_point
     - sensor.laundry_smoke_alarm_battery_level
-    - sensor.main_bedroom_humidity
-    - sensor.main_bedroom_temperature
-    - sensor.outdoor_humidity
-    - sensor.outdoor_temperature
+    - sensor.main_bedroom_climate_humidity
+    - sensor.main_bedroom_climate_temperature
+    - sensor.outdoor_climate_humidity
+    - sensor.outdoor_climate_temperature
     - sensor.ups_status
     - sensor.ups_input_voltage
     - sensor.ups_battery_charge
