@@ -95,8 +95,8 @@ include:
     - sensor.asuswrt_load_avg_5m
     - sensor.guest_room_climate_temperature
     - sensor.guest_room_climate_humidity
-    - sensor.office_temperature
-    - sensor.office_humidity
+    - sensor.office_climate_temperature
+    - sensor.office_climate_humidity
     - sensor.dte_energy_bridge_summary
     - sensor.dte_energy_bridge
     - sensor.dte_energy_used
