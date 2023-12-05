@@ -2,7 +2,7 @@
     unique_id: house_fan_thermostat
     name: House Fan Thermostat
     heater: fan.house_fan_switch
-    target_sensor: sensor.main_bedroom_temperature
+    target_sensor: sensor.main_bedroom_climate_temperature
     min_temp: 70.0
     max_temp: 100.0
     ac_mode: true

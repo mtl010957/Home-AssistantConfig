@@ -1057,13 +1057,6 @@
     entity_id: switch.family_room_ceiling_fan_light
     domain: switch
     enabled: true
-  - service: light.toggle
-    data: {}
-    target:
-      device_id:
-      - 63cd121363a5b01a151866cd34b1b5d9
-      - 8b90b436c1854e4fa6d18dc2c9e076a7
-    enabled: false
   mode: single
 - id: '1615490246403'
   alias: IKEA Remote 1 Dim Up
@@ -1387,8 +1380,8 @@
     above: '60'
   - condition: template
     value_template: '{{ (states(''sensor.outdoor_climate_temperature'') | round(0,''round-to-even'',''undefined'')
-      | int(default=80)) < (states(''sensor.main_bedroom_climate_temperature'') | round(0,''round-to-even'',''undefined'')
-      | int(default=80) - 1) }}'
+      | int(default=80)) < (states(''sensor.main_bedroom_climate_temperature'') |
+      round(0,''round-to-even'',''undefined'') | int(default=80) - 1) }}'
   action:
   - service: climate.set_hvac_mode
     target:
@@ -1412,8 +1405,8 @@
       below: '60'
     - condition: template
       value_template: '{{ (states("sensor.outdoor_climate_temperature") | round(0,"round-to-even","undefined")
-        | int(default=80)) >= (states("sensor.main_bedroom_climate_temperature") | round(0,"round-to-even","undefined")
-        | int(default=80) - 1) }}'
+        | int(default=80)) >= (states("sensor.main_bedroom_climate_temperature") |
+        round(0,"round-to-even","undefined") | int(default=80) - 1) }}'
   action:
   - service: climate.set_hvac_mode
     target:
