@@ -26,7 +26,7 @@
       milliseconds: 0
   - type: turn_on
     device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: 096b2cde60ed66158df8cf1aa85acadd
+    entity_id: 8f5716f8d9e01ab1b765cd0076eaae04
     domain: light
   mode: single
 - id: '1500947016399'
@@ -41,8 +41,8 @@
   action:
   - type: turn_on
     device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: 096b2cde60ed66158df8cf1aa85acadd
-    domain: light
+    entity_id: 5b339fbb50d6218ef6b9ef8da314defd
+    domain: switch
   mode: single
 - id: '1500948466889'
   alias: Camera Motion and Floods Off Disarmed
@@ -59,7 +59,7 @@
       - switch.3629_cam_7_privacy_mode
   - type: turn_off
     device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: 096b2cde60ed66158df8cf1aa85acadd
+    entity_id: 8f5716f8d9e01ab1b765cd0076eaae04
     domain: light
   mode: single
 - id: '1533419985023'
@@ -1431,7 +1431,7 @@
     data: {}
   - type: turn_off
     device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: 096b2cde60ed66158df8cf1aa85acadd
+    entity_id: 8f5716f8d9e01ab1b765cd0076eaae04
     domain: light
   mode: single
 - id: '1626789324636'
@@ -2626,7 +2626,7 @@
     domain: light
   - type: toggle
     device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
-    entity_id: 0e92f6edee822e6cee30b18a6e8165ef
+    entity_id: 87ca97494cdaa95e7483ce9e959f736d
     domain: light
   mode: single
 - id: '1701278095569'
@@ -2770,6 +2770,6 @@
     brightness_pct: 100
   - type: turn_on
     device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: 096b2cde60ed66158df8cf1aa85acadd
+    entity_id: 8f5716f8d9e01ab1b765cd0076eaae04
     domain: light
   mode: single
