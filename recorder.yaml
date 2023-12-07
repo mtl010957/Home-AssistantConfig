@@ -122,8 +122,8 @@ include:
     - sensor.furnace_gas_used
     - sensor.furnace_gas_used_cost
     - sensor.gas_meter
-    - sensor.garage_humidity
-    - sensor.garage_temperature
+    - sensor.garage_climate_humidity
+    - sensor.garage_climate_temperature
     - sensor.garage_smoke_alarm_battery_level
     - sensor.house_fan_switch_electric_consumed_kwh_2
     - sensor.house_fan_switch_electric_consumed_a_2
