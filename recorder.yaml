@@ -132,6 +132,8 @@ include:
     - sensor.humidifier_off_point
     - sensor.humidifier_on_point
     - sensor.laundry_smoke_alarm_battery_level
+    - sensor.living_room_humidity
+    - sensor.living_room_temperature
     - sensor.main_bedroom_climate_humidity
     - sensor.main_bedroom_climate_temperature
     - sensor.outdoor_climate_humidity
