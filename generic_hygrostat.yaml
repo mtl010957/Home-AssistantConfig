@@ -1,4 +1,5 @@
   - name: Office Humidifier
+    unique_id: office_humidifier
     humidifier: switch.humidifier_power
     target_sensor: sensor.office_humidity
     min_humidity: 10
