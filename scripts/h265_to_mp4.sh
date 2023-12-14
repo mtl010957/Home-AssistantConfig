@@ -11,5 +11,5 @@ do
   outfile=`basename ${infile} .265`.mp4
   echo ${infile}
   echo ${outfile}
-  ffmpeg -y -i ${infile} -c copy ${outfile} && rm ${infile}
+  ffmpeg -y -i ${infile} ${outfile} && rm ${infile}
 done

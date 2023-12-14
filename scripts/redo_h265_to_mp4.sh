@@ -1,29 +1,7 @@
 #!/bin/bash
-/config/scripts/h265_to_mp4.sh 20231128 3629cam6
-/config/scripts/h265_to_mp4.sh 20231128 3629cam8
-/config/scripts/h265_to_mp4.sh 20231129 3629cam6
-/config/scripts/h265_to_mp4.sh 20231129 3629cam8
-/config/scripts/h265_to_mp4.sh 20231130 3629cam6
-/config/scripts/h265_to_mp4.sh 20231130 3629cam8
-/config/scripts/h265_to_mp4.sh 20231201 3629cam6
-/config/scripts/h265_to_mp4.sh 20231201 3629cam8
-/config/scripts/h265_to_mp4.sh 20231202 3629cam6
-/config/scripts/h265_to_mp4.sh 20231202 3629cam8
-/config/scripts/h265_to_mp4.sh 20231203 3629cam6
-/config/scripts/h265_to_mp4.sh 20231203 3629cam8
-/config/scripts/h265_to_mp4.sh 20231204 3629cam6
-/config/scripts/h265_to_mp4.sh 20231204 3629cam8
-/config/scripts/h265_to_mp4.sh 20231205 3629cam6
-/config/scripts/h265_to_mp4.sh 20231205 3629cam8
-/config/scripts/h265_to_mp4.sh 20231206 3629cam6
-/config/scripts/h265_to_mp4.sh 20231206 3629cam8
-/config/scripts/h265_to_mp4.sh 20231207 3629cam6
-/config/scripts/h265_to_mp4.sh 20231207 3629cam8
-/config/scripts/h265_to_mp4.sh 20231208 3629cam6
-/config/scripts/h265_to_mp4.sh 20231208 3629cam8
-/config/scripts/h265_to_mp4.sh 20231209 3629cam6
-/config/scripts/h265_to_mp4.sh 20231209 3629cam8
-/config/scripts/h265_to_mp4.sh 20231210 3629cam6
-/config/scripts/h265_to_mp4.sh 20231210 3629cam8
-/config/scripts/h265_to_mp4.sh 20231211 3629cam6
-/config/scripts/h265_to_mp4.sh 20231211 3629cam8
+
+. /config/shell_secrets.sh
+datedir=20231116
+
+/config/scripts/get_cam_265_records.sh ${datedir} /media/3629cam6 ${USR_3629CAM6} ${PWD_3629CAM6} ${URL_3629CAM6} && /config/scripts/h265_to_mp4.sh ${datedir} 3629cam6
+/config/scripts/get_cam_265_records.sh ${datedir} /media/3629cam8 ${USR_3629CAM8} ${PWD_3629CAM8} ${URL_3629CAM8} && /config/scripts/h265_to_mp4.sh ${datedir} 3629cam8
