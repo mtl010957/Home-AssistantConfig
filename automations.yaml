@@ -2773,3 +2773,19 @@
     entity_id: 8f5716f8d9e01ab1b765cd0076eaae04
     domain: light
   mode: single
+- id: '1702770376381'
+  alias: Doorbell Chime
+  description: ''
+  trigger:
+  - platform: device
+    device_id: 3c384c8956944d10f9c173a3c40bcf02
+    domain: nest
+    type: doorbell_chime
+  condition: []
+  action:
+  - service: automation.trigger
+    target:
+      entity_id: automation.chime_on
+    data:
+      skip_condition: true
+  mode: single
