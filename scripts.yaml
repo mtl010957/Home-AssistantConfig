@@ -124,13 +124,13 @@ turn_off_xmas_lights:
   alias: Turn Off Xmas Lights
   sequence:
   - type: turn_off
-    device_id: b2002d8b08a9a1927c2532bd668d7d2e
-    entity_id: 1f83b68093b2ed6c17f1aa565452342b
-    domain: light
-  - type: turn_off
     device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
     entity_id: c9d614139d904b82b6c3aa5396200990
     domain: switch
+  - type: turn_off
+    device_id: b2002d8b08a9a1927c2532bd668d7d2e
+    entity_id: 1f83b68093b2ed6c17f1aa565452342b
+    domain: light
   mode: single
   icon: mdi:string-lights
 turn_on_xmas_lights_10:
