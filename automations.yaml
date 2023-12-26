@@ -2595,7 +2595,7 @@
   - platform: time_pattern
     hours: '*'
     minutes: /2
-    seconds: '0'
+    seconds: '30'
   condition:
   - condition: state
     entity_id: light.back_outdoor_xmas_lights
