@@ -241,7 +241,7 @@ include:
     - sensor.desert_ups_d_battery_charge
     - sensor.desert_living_room_temperature
     - sensor.desert_living_room_humidity
-    - sensor.desert_corrected_barometer_inhg
+    - sensor.desert_corrected_barometer
     
     # switches
     - switch.family_room_ceiling_fan_light
