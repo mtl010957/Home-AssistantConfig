@@ -189,6 +189,11 @@ include:
     - sensor.front_yard_camera_outlet_power
     - sensor.front_yard_camera_outlet_voltage
     - sensor.front_yard_camera_outlet_current
+    - sensor.nas_cpu_load_1
+    - sensor.nas_cpu_load_15
+    - sensor.nas_cpu_load_5
+    - sensor.nas_cpu_temperature
+    - sensor.nas_fan_speed
     # caravan sensors
     - binary_sensor.caravan_fresh_tank_liquid_level_sensor_1
     - binary_sensor.caravan_fresh_tank_liquid_level_sensor_2
