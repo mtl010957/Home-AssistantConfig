@@ -194,6 +194,7 @@ include:
     - sensor.nas_cpu_load_5
     - sensor.nas_cpu_temperature
     - sensor.nas_fan_speed
+    - sensor.nas_md1_percent_used
     # caravan sensors
     - binary_sensor.caravan_fresh_tank_liquid_level_sensor_1
     - binary_sensor.caravan_fresh_tank_liquid_level_sensor_2
