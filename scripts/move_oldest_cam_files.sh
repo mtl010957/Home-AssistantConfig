@@ -4,6 +4,7 @@ camdir=$1
 backupcamdir=$2
 
 oldestdate=`ls -rt ${camdir} | head -n1`
+ls -al ${backupcamdir}
 
 if [ -d ${backupcamdir} ]
 then
