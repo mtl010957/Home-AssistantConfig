@@ -18,10 +18,6 @@
   legacy: false
   optimistic: true
   retain: true
-'0xf0d1b80000049891':
-  friendly_name: Guest Room Lamp Bulb
-'0x841826000004d206':
-  friendly_name: Bedside Lamp Bulb
 '0xf0d1b8000004ae2c':
   friendly_name: Office Light Bulb
 '0x7ce524000013612c':
@@ -42,5 +38,16 @@
   friendly_name: IKEA Remote 3
 '0x5c0272fffe3e6624':
   friendly_name: IKEA Switch 2
+'0xf0d1b80000049891':
+  friendly_name: Guest Room Lamp Bulb
+'0x841826000004d206':
+  friendly_name: Bedside Lamp Bulb
 '0x00158d0007998e81':
   friendly_name: Aqara Cube 1
+  legacy: true
+'0x00158d00094648e7':
+  friendly_name: Aqara Switch 1
+'0x5cc7c1fffe86e9cf':
+  friendly_name: IKEA Switch 5
+'0x5cc7c1fffe6229f3':
+  friendly_name: IKEA Switch 6
