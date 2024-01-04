@@ -2789,3 +2789,45 @@
     data:
       skip_condition: true
   mode: single
+- id: '1704388292073'
+  alias: IKEA Switch 6 On
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: 66ce4854a8d4b12b6d797308ac243209
+    type: action
+    subtype: 'on'
+    discovery_id: 0x5cc7c1fffe6229f3 action_on
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 4e5e0f5cb909ea1597d60eedd210e112
+    entity_id: acde81b920871f0c88b34905dfe4dd10
+    domain: light
+  - type: turn_on
+    device_id: 8634cb8bb78921b89b81f5cbde731504
+    entity_id: f971d08a1c0a25ebe2166d30e401d12f
+    domain: light
+  mode: single
+- id: '1704388384803'
+  alias: IKEA Switch 6 Off
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: 66ce4854a8d4b12b6d797308ac243209
+    type: action
+    subtype: 'off'
+    discovery_id: 0x5cc7c1fffe6229f3 action_off
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 4e5e0f5cb909ea1597d60eedd210e112
+    entity_id: acde81b920871f0c88b34905dfe4dd10
+    domain: light
+  - type: turn_off
+    device_id: 8634cb8bb78921b89b81f5cbde731504
+    entity_id: f971d08a1c0a25ebe2166d30e401d12f
+    domain: light
+  mode: single
