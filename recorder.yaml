@@ -239,6 +239,8 @@ include:
     - sensor.caravan_converter_current
     - sensor.caravan_converter_energy
     - sensor.caravan_converter_power
+    - sensor.caravan_pump_water_meter_pressure_sensor
+    - sensor.caravan_pump_water_meter_flow_rate
     # desert sensors
     - sensor.desert_refrigerator_outlet_power
     - sensor.desert_refrigerator_outlet_daily_energy
