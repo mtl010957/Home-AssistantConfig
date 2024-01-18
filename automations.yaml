@@ -453,7 +453,7 @@
     platform: time
   condition:
   - condition: state
-    entity_id: climate.thermostat
+    entity_id: climate.living_room_thermostat
     state: heat
   action:
   - service: humidifier.turn_on

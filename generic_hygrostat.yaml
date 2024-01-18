@@ -5,8 +5,8 @@
     min_humidity: 10
     max_humidity: 50
     target_humidity: 30
-    dry_tolerance: 6
-    wet_tolerance: 0
+    dry_tolerance: 3
+    wet_tolerance: 3
     device_class: "humidifier"
     min_cycle_duration:
       seconds: 5
