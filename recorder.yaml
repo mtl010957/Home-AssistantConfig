@@ -250,6 +250,9 @@ include:
     - sensor.desert_living_room_temperature
     - sensor.desert_living_room_humidity
     - sensor.desert_corrected_barometer
+    # lakefront sensors
+    - sensor.lakefront_relay_and_climate_humidity
+    - sensor.lakefront_relay_and_climate_temperature
     
     # switches
     - switch.family_room_ceiling_fan_light
