@@ -224,11 +224,11 @@ include:
     - sensor.caravan_refrigerator_humidity
     - sensor.caravan_refrigerator_temperature
     - sensor.caravan_level_sensor_temperature
-    - sensor.caravan_solar_charge_controller_battery_temperature
-    - sensor.caravan_solar_charge_controller_device_temperature
-    - sensor.caravan_solar_charge_controller_power_components_temperature
-    - sensor.caravan_solar_charge_controller_array_input_power
-    - sensor.caravan_solar_charge_controller_charging_power
+    - sensor.caravan_solar_battery_temperature
+    - sensor.caravan_solar_device_temperature
+    - sensor.caravan_solar_power_components_temperature
+    - sensor.caravan_solar_array_input_power
+    - sensor.caravan_solar_charging_power
     - sensor.caravan_gj_12v200ah_power
     - sensor.caravan_gj_12v200ah_soc
     - sensor.caravan_gj_12v200ah_voltage
