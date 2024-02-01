@@ -13,6 +13,7 @@ do
   h264file=`basename ${infile} .264`.h264
   audiotsfile=`basename ${infile} .264`.audio.ts.txt
   videotsfile=`basename ${infile} .264`.video.ts.txt
+  echo ${cam}
   echo ${infile}
   echo ${outfile}
   /config/scripts/conv264 ${infile}
