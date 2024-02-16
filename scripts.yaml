@@ -172,7 +172,6 @@ new_script:
       addons:
       - core_configurator
       - cebe7a76_hassio_google_drive_backup
-      - core_mariadb
       - core_mosquitto
       - core_ssh
       - a0d7b954_phpmyadmin

@@ -2162,13 +2162,13 @@
       brightness_step_up:
       - service: light.turn_on
         data:
-          brightness_step_pct: 5
+          brightness_step_pct: 10
         target:
           entity_id: light.family_room_lamps
       brightness_step_down:
       - service: light.turn_on
         data:
-          brightness_step_pct: -5
+          brightness_step_pct: -10
         target:
           entity_id: light.family_room_lamps
       switch: sensor.tuya_knob_1_action
@@ -2830,4 +2830,54 @@
     device_id: 8634cb8bb78921b89b81f5cbde731504
     entity_id: f971d08a1c0a25ebe2166d30e401d12f
     domain: light
+  mode: single
+- id: '1707586076066'
+  alias: Caravan Backup
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: hassio.caravanbackup_partial
+    data:
+      folders:
+      - ssl
+      - share
+      name: Partial Backup {{ (as_timestamp(now()) | timestamp_custom('%Y-%m-%d %H:%M:%S'))
+        }}
+      addons:
+      - core_configurator
+      - 2d5c2698_gpsd2mqtt
+      - cebe7a76_hassio_google_drive_backup
+      - 27a7e4aa_increase_swap_addon
+      - core_mosquitto
+      - core_ssh
+      - a0d7b954_phpmyadmin
+      compressed: true
+      homeassistant: true
+  mode: single
+- id: '1707586930465'
+  alias: Desert Backup
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: hassio.desertbackup_partial
+    data:
+      folders:
+      - ssl
+      - share
+      name: Partial Backup {{ (as_timestamp(now()) | timestamp_custom('%Y-%m-%d %H:%M:%S'))
+        }}
+      addons:
+      - core_mosquitto
+      - core_letsencrypt
+      - core_nginx_proxy
+      - core_ssh
+      - core_mariadb
+      - a0d7b954_phpmyadmin
+      - core_configurator
+      - a0d7b954_nut
+      - cebe7a76_hassio_google_drive_backup
+      compressed: true
+      homeassistant: true
   mode: single
