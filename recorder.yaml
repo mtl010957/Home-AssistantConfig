@@ -181,6 +181,7 @@ include:
     - sensor.refrigerator_outlet_power
     - sensor.refrigerator_outlet_voltage
     - sensor.refrigerator_outlet_current
+    - sensor.water_meter
     - sensor.water_meter_water_flow
     - sensor.water_meter_water_used
     - sensor.water_meter_water_used_cost
