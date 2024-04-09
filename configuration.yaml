@@ -43,3 +43,5 @@ sensor: !include_dir_merge_list sensor
 shell_command: !include shell_command.yaml
 
 switch: !include_dir_merge_list switch
+
+template: !include_dir_merge_list template

@@ -2881,3 +2881,18 @@
       compressed: true
       homeassistant: true
   mode: single
+- id: '1712676374910'
+  alias: _TEMPORARY fix for NWS refresh
+  description: ''
+  trigger:
+  - platform: time_pattern
+    minutes: /10
+  condition: []
+  action:
+  - service: homeassistant.reload_config_entry
+    target:
+      entity_id:
+      - weather.kptk_daynight
+      - weather.kslh_daynight
+    data: {}
+  mode: single
