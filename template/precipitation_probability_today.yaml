@@ -1,6 +1,6 @@
   - trigger:
       - platform: time_pattern
-        minutes: "30"
+        minutes: 30
     action:
       - service: weather.get_forecasts
         data:
