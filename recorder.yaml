@@ -136,6 +136,13 @@ include:
     - sensor.living_room_temperature
     - sensor.main_bedroom_climate_humidity
     - sensor.main_bedroom_climate_temperature
+    - sensor.main_bedroom_air_eco2
+    - sensor.main_bedroom_air_humidity
+    - sensor.main_bedroom_air_particulate_matter_1_0mm_concentration
+    - sensor.main_bedroom_air_particulate_matter_10_0mm_concentration
+    - sensor.main_bedroom_air_particulate_matter_2_5mm_concentration
+    - sensor.main_bedroom_air_temperature
+    - sensor.main_bedroom_air_total_volatile_organic_compounds
     - sensor.outdoor_climate_humidity
     - sensor.outdoor_climate_temperature
     - sensor.ups_status
@@ -181,6 +188,14 @@ include:
     - sensor.refrigerator_outlet_power
     - sensor.refrigerator_outlet_voltage
     - sensor.refrigerator_outlet_current
+    - sensor.family_room_tv_outlet_daily_energy
+    - sensor.family_room_tv_outlet_power
+    - sensor.family_room_tv_outlet_voltage
+    - sensor.family_room_tv_outlet_current
+    - sensor.main_bedroom_tv_outlet_daily_energy
+    - sensor.main_bedroom_tv_outlet_power
+    - sensor.main_bedroom_tv_outlet_voltage
+    - sensor.main_bedroom_tv_outlet_current
     - sensor.water_meter
     - sensor.water_meter_water_flow
     - sensor.water_meter_water_used
