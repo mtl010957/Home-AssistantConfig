@@ -197,3 +197,15 @@
   - device_id: https_tripwizard_rvlife_com_ics_hash_73421_z1h5u2syedvxuxzfbuuyt0prnlhozz09
     ignore_availability: true
     name: https://tripwizard.rvlife.com/ics_hash/73421/Z1h5U2syeDVxUXZFbUUyT0pRNlhOZz09
+
+- cal_id: 4nvoqecev6org00e9ehp5bvmebvj84sg@import.calendar.google.com
+  entities:
+  - device_id: https_tripwizard_rvlife_com_ics_hash_73421_rtrzwhe0snrxm1vbmuxnn3g3djnwdz09
+    ignore_availability: true
+    name: https://tripwizard.rvlife.com/ics_hash/73421/RTRZWHE0SnRxM1VBMUxnN3g3djNwdz09
+
+- cal_id: 0odsrfdj1lmboib8sqjtt71b4m0nm0qp@import.calendar.google.com
+  entities:
+  - device_id: https_tripwizard_rvlife_com_ics_hash_73421_q1lqa1nnvwzhdktyuxhaslfunujout09
+    ignore_availability: true
+    name: https://tripwizard.rvlife.com/ics_hash/73421/Q1lQa1NNVWZhdktyUXhaSlFuNUJoUT09
