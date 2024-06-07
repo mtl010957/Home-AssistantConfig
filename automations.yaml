@@ -233,7 +233,13 @@
     entity_id:
     - zone.home
     below: 1
-  condition: []
+  condition:
+  - condition: state
+    entity_id: binary_sensor.main_bedroom_presence
+    state: 'off'
+  - condition: state
+    entity_id: binary_sensor.family_room_presence
+    state: 'off'
   action:
   - data: {}
     service: alarm_control_panel.alarm_arm_away
@@ -251,6 +257,18 @@
     entity_id:
     - zone.home
     above: 0
+  - platform: state
+    entity_id:
+    - binary_sensor.family_room_presence
+    to: 'on'
+  - platform: state
+    entity_id:
+    - binary_sensor.main_bedroom_presence
+    to: 'on'
+  - platform: state
+    entity_id:
+    - person.susan_loeffler
+    to: home
   condition:
   - condition: state
     entity_id: alarm_control_panel.3629_alarm
