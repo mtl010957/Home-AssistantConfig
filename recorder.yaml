@@ -126,6 +126,7 @@ include:
     - sensor.garage_climate_temperature
     - sensor.garage_smoke_alarm_battery_level
     - sensor.house_fan_energy
+    - sensor.house_fan_daily_energy
     - sensor.house_fan_power
     - sensor.house_fan_current
     - sensor.house_fan_voltage
