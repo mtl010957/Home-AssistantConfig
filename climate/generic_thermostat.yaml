@@ -6,7 +6,7 @@
     min_temp: 70.0
     max_temp: 100.0
     ac_mode: true
-    target_temp: 80.0
+    home_temp: 80.0
     # For AC mode, degrees below set point until it turns off
     cold_tolerance: 0.0
     # For AC mode, degrees above set point until it turns on
