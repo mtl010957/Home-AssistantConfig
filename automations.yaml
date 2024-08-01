@@ -143,13 +143,17 @@
     data: {}
   mode: single
 - id: '1552245394001'
-  alias: Blinds Close at 11:00 PM
+  alias: Blinds Close Armed Night
+  description: ''
   trigger:
-  - at: '23:00:00'
-    platform: time
+  - platform: state
+    entity_id:
+    - alarm_control_panel.3629_alarm
+    to: armed_night
   condition: []
   action:
   - service: script.close_all_blinds
+    data: {}
   mode: single
 - id: '1560461893289'
   alias: Security Lighting On
@@ -1398,8 +1402,8 @@
     above: '60'
   - condition: template
     value_template: '{{ (states(''sensor.outdoor_climate_temperature'') | round(0,''round-to-even'',''undefined'')
-      | int(default=80)) < (states(''sensor.main_bedroom_climate_temperature'') |
-      round(0,''round-to-even'',''undefined'') | int(default=80) - 1) }}'
+      | int(default=80)) <= (state_attr(''climate.house_fan_thermostat'',''temperature'')
+      | round(0,''round-to-even'',''undefined'') | int(default=80) - 1) }}'
   action:
   - service: climate.set_hvac_mode
     target:
@@ -1414,7 +1418,7 @@
   - platform: time_pattern
     hours: '*'
     minutes: /5
-    seconds: '45'
+    seconds: '55'
   condition:
   - condition: or
     conditions:
@@ -1422,9 +1426,9 @@
       entity_id: sensor.outdoor_climate_temperature
       below: '60'
     - condition: template
-      value_template: '{{ (states("sensor.outdoor_climate_temperature") | round(0,"round-to-even","undefined")
-        | int(default=80)) >= (states("sensor.main_bedroom_climate_temperature") |
-        round(0,"round-to-even","undefined") | int(default=80) - 1) }}'
+      value_template: '{{ (states(''sensor.outdoor_climate_temperature'') | round(0,''round-to-even'',''undefined'')
+        | int(default=80)) > (state_attr(''climate.house_fan_thermostat'',''temperature'')
+        | round(0,''round-to-even'',''undefined'') | int(default=80) - 1) }}'
   action:
   - service: climate.set_hvac_mode
     target:
@@ -1760,7 +1764,7 @@
       cert_expiry_sensor: sensor.cert_expiry_timestamp_ha_mtl_svn_dyndns_home_com
       time_to_check_cert: 03:20:00
       send_notification: true
-      notification_device: fa361a2696a8b273260f6adfbaab5e5a
+      notification_device: f85e0acdcd878d394373ef8d3f04ba21
       notification_title: Encryption Certificate Renewed Successfully
       notification_message: HA Home encryption certificate has been successfully renewed!
       renew_date: 20

@@ -10,7 +10,7 @@
     # For AC mode, degrees below set point until it turns off
     cold_tolerance: 0.0
     # For AC mode, degrees above set point until it turns on
-    hot_tolerance: 5.0
+    hot_tolerance: 3.0
     min_cycle_duration:
       minutes: 10
     initial_hvac_mode: "off"
