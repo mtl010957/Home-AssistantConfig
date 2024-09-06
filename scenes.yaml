@@ -1,1 +1,138 @@
-[]
+- id: '1725636211807'
+  name: 'Away Behavior Disabled '
+  entities:
+    automation.blinds_close_at_11_00_pm:
+      id: '1552245394001'
+      last_triggered: '2024-06-16T03:00:00.142759+00:00'
+      mode: single
+      current: 0
+      friendly_name: Blinds Close Armed Night
+      state: 'off'
+    automation.blinds_open_at_dawn:
+      id: '1552222922150'
+      last_triggered: '2024-06-16T09:43:38.170331+00:00'
+      mode: single
+      current: 0
+      friendly_name: Blinds Open Before Sunrise If Not Armed Away
+      state: 'off'
+    automation.blinds_open_energy_summary_over_1kw_4am_to_sunrise_not_armed_away:
+      id: '1626789324636'
+      last_triggered: '2024-06-14T09:34:00.934593+00:00'
+      mode: single
+      current: 0
+      friendly_name: Blinds Open Energy Summary Over 900W 4AM to Sunrise Not Armed
+        Away
+      state: 'off'
+    automation.security_arm_away:
+      id: '1563648590512'
+      last_triggered: '2024-09-02T12:05:55.570478+00:00'
+      mode: single
+      current: 0
+      friendly_name: Security Arm Not Home
+      state: 'off'
+    automation.blinds_close_before_sunset_if_armed_away:
+      id: '1672407471509'
+      last_triggered: '2024-09-01T23:39:14.292032+00:00'
+      mode: single
+      current: 0
+      friendly_name: Blinds Close Before Sunset if Armed Away
+      state: 'off'
+    automation.blinds_close_when_armed_away_after_sunset:
+      id: '1673190937973'
+      last_triggered: '2024-08-31T01:53:02.087173+00:00'
+      mode: single
+      current: 0
+      friendly_name: Blinds Close When Armed Away After Just Before Sunset
+      state: 'off'
+    automation.blinds_open_at_sunrise_if_armed_away:
+      id: '1589813195543'
+      last_triggered: '2024-08-31T10:55:47.848369+00:00'
+      mode: single
+      current: 0
+      friendly_name: Blinds Open at Sunrise if Armed Away
+      state: 'off'
+  icon: mdi:home-off
+  metadata:
+    automation.blinds_close_at_11_00_pm:
+      entity_only: true
+    automation.blinds_open_at_dawn:
+      entity_only: true
+    automation.blinds_open_energy_summary_over_1kw_4am_to_sunrise_not_armed_away:
+      entity_only: true
+    automation.security_arm_away:
+      entity_only: true
+    automation.blinds_close_before_sunset_if_armed_away:
+      entity_only: true
+    automation.blinds_close_when_armed_away_after_sunset:
+      entity_only: true
+    automation.blinds_open_at_sunrise_if_armed_away:
+      entity_only: true
+- id: '1725636586248'
+  name: 'Away Behavior Enabled '
+  entities:
+    automation.blinds_close_at_11_00_pm:
+      id: '1552245394001'
+      last_triggered: '2024-06-16T03:00:00.142759+00:00'
+      mode: single
+      current: 0
+      friendly_name: Blinds Close Armed Night
+      state: 'on'
+    automation.blinds_open_at_dawn:
+      id: '1552222922150'
+      last_triggered: '2024-06-16T09:43:38.170331+00:00'
+      mode: single
+      current: 0
+      friendly_name: Blinds Open Before Sunrise If Not Armed Away
+      state: 'on'
+    automation.blinds_open_energy_summary_over_1kw_4am_to_sunrise_not_armed_away:
+      id: '1626789324636'
+      last_triggered: '2024-06-14T09:34:00.934593+00:00'
+      mode: single
+      current: 0
+      friendly_name: Blinds Open Energy Summary Over 900W 4AM to Sunrise Not Armed
+        Away
+      state: 'on'
+    automation.security_arm_away:
+      id: '1563648590512'
+      last_triggered: '2024-09-02T12:05:55.570478+00:00'
+      mode: single
+      current: 0
+      friendly_name: Security Arm Not Home
+      state: 'on'
+    automation.blinds_close_before_sunset_if_armed_away:
+      id: '1672407471509'
+      last_triggered: '2024-09-01T23:39:14.292032+00:00'
+      mode: single
+      current: 0
+      friendly_name: Blinds Close Before Sunset if Armed Away
+      state: 'on'
+    automation.blinds_close_when_armed_away_after_sunset:
+      id: '1673190937973'
+      last_triggered: '2024-08-31T01:53:02.087173+00:00'
+      mode: single
+      current: 0
+      friendly_name: Blinds Close When Armed Away After Just Before Sunset
+      state: 'on'
+    automation.blinds_open_at_sunrise_if_armed_away:
+      id: '1589813195543'
+      last_triggered: '2024-08-31T10:55:47.848369+00:00'
+      mode: single
+      current: 0
+      friendly_name: Blinds Open at Sunrise if Armed Away
+      state: 'on'
+  icon: mdi:home-automation
+  metadata:
+    automation.blinds_close_at_11_00_pm:
+      entity_only: true
+    automation.blinds_open_at_dawn:
+      entity_only: true
+    automation.blinds_open_energy_summary_over_1kw_4am_to_sunrise_not_armed_away:
+      entity_only: true
+    automation.security_arm_away:
+      entity_only: true
+    automation.blinds_close_before_sunset_if_armed_away:
+      entity_only: true
+    automation.blinds_close_when_armed_away_after_sunset:
+      entity_only: true
+    automation.blinds_open_at_sunrise_if_armed_away:
+      entity_only: true
