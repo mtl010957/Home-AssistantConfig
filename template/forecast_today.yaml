@@ -11,6 +11,6 @@
     sensor:
       - name: Forecast Today
         unique_id: forecast_today
-        state: "{{ daynight['weather.kptk_daynight'].forecast[0].detailed_description | truncate(255) }}"
+        state: "{{ daynight['weather.kptk_daynight'].forecast[0].condition }}"
         attributes:
-          forecast: "{{ daynight['weather.kptk_daynight'].forecast[0].detailed_description }}"
+          forecast: "{{ daynight['weather.kptk_daynight'].forecast[0].condition }}"
