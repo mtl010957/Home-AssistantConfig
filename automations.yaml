@@ -1,66 +1,56 @@
 - id: '1500947016373'
-  alias: Camera Motion and Floods On Armed Away
-  trigger:
+  alias: Camera Motion On Armed Away
+  description: ''
+  triggers:
   - entity_id: alarm_control_panel.3629_alarm
-    platform: state
     to: armed_away
-  action:
-  - service: switch.turn_off
-    data: {}
+    trigger: state
+  actions:
+  - data: {}
     target:
       entity_id:
       - switch.3629_cam_5_privacy_mode
       - switch.3629_cam_7_privacy_mode
-  - service: amcrest.goto_preset
-    data:
+    action: switch.turn_off
+  - data:
       entity_id: camera.3629_cam_7
       preset: 1
-  - service: amcrest.goto_preset
-    data:
+    action: amcrest.goto_preset
+  - data:
       entity_id: camera.3629_cam_5
       preset: 2
-  - delay:
-      hours: 0
-      minutes: 1
-      seconds: 0
-      milliseconds: 0
-  - type: turn_on
-    device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: 8f5716f8d9e01ab1b765cd0076eaae04
-    domain: light
+    action: amcrest.goto_preset
   mode: single
 - id: '1500947016399'
-  alias: Camera Motion and Floods On Armed Night or Home
-  trigger:
+  alias: Floods On Armed Night or Home
+  description: ''
+  triggers:
   - entity_id: alarm_control_panel.3629_alarm
-    platform: state
     to: armed_night
-  - platform: state
-    entity_id: alarm_control_panel.3629_alarm
+    trigger: state
+  - entity_id: alarm_control_panel.3629_alarm
     to: armed_home
-  action:
+    trigger: state
+  actions:
   - type: turn_on
     device_id: 8d8de4c32fc84734af376c764700e31f
     entity_id: 5b339fbb50d6218ef6b9ef8da314defd
     domain: switch
   mode: single
 - id: '1500948466889'
-  alias: Camera Motion and Floods Off Disarmed
-  trigger:
+  alias: Camera Motion Off Disarmed
+  description: ''
+  triggers:
   - entity_id: alarm_control_panel.3629_alarm
-    platform: state
     to: disarmed
-  action:
-  - service: switch.turn_on
-    data: {}
+    trigger: state
+  actions:
+  - data: {}
     target:
       entity_id:
       - switch.3629_cam_5_privacy_mode
       - switch.3629_cam_7_privacy_mode
-  - type: turn_off
-    device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: 8f5716f8d9e01ab1b765cd0076eaae04
-    domain: light
+    action: switch.turn_on
   mode: single
 - id: '1533419985023'
   alias: Irrigation Run
@@ -158,15 +148,15 @@
 - id: '1560461893289'
   alias: Security Lighting On
   description: ''
-  trigger:
+  triggers:
   - event: sunset
     offset: -00:30:00
-    platform: sun
-  - platform: state
-    entity_id:
+    trigger: sun
+  - entity_id:
     - alarm_control_panel.3629_alarm
     to: armed_away
-  condition:
+    trigger: state
+  conditions:
   - condition: state
     entity_id: alarm_control_panel.3629_alarm
     state: armed_away
@@ -176,23 +166,33 @@
   - condition: time
     before: '21:37:00'
     after: 00:00:00
-  action:
+  actions:
   - data: {}
-    service: script.security_lighting_on
+    action: script.security_lighting_on
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: light.front_yard_light
   mode: single
 - id: '1560462571547'
   alias: Security Lighting Off
-  trigger:
+  triggers:
   - at: '21:37:00'
-    platform: time
-  condition:
+    trigger: time
+  conditions:
   - condition: state
     entity_id: alarm_control_panel.3629_alarm
     state: armed_away
-  action:
+  actions:
   - delay: 00:{{ (range(5, 25) | random) }}:00
-  - service: script.security_lighting_off
+  - data: {}
+    action: script.security_lighting_off
+  - action: light.turn_off
+    metadata: {}
     data: {}
+    target:
+      entity_id: light.front_yard_light
   mode: single
 - id: '1563648409962'
   alias: Security Arm Night
@@ -614,17 +614,16 @@
 - id: '1584656811875'
   alias: Garage lights off when door closed if no motion
   description: ''
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.garage_door_sensor_any
+  triggers:
+  - entity_id: binary_sensor.garage_door_sensor_any
     from: 'on'
     to: 'off'
-  - platform: state
-    entity_id: binary_sensor.garage_inside_door_sensor_any
+    trigger: state
+  - entity_id: binary_sensor.garage_inside_door_sensor_any
     from: 'on'
     to: 'off'
+    trigger: state
   - type: no_motion
-    platform: device
     device_id: 0297d19b6ceb409693273a05449045dc
     entity_id: binary_sensor.garage_motion
     domain: binary_sensor
@@ -633,7 +632,9 @@
       minutes: 5
       seconds: 0
       milliseconds: 0
-  condition:
+    trigger: device
+    enabled: true
+  conditions:
   - type: is_no_motion
     condition: device
     device_id: 0297d19b6ceb409693273a05449045dc
@@ -650,7 +651,7 @@
   - condition: state
     entity_id: binary_sensor.garage_inside_door_sensor_any
     state: 'off'
-  action:
+  actions:
   - type: turn_off
     device_id: 6f257e741b564746b69eca3a6eae1985
     entity_id: switch.garage_light
@@ -2633,15 +2634,15 @@
 - id: '1700602096098'
   alias: Xmas Lights Button
   description: ''
-  trigger:
-  - platform: device
-    domain: mqtt
+  triggers:
+  - domain: mqtt
     device_id: d8ab8c1ffdecef1e4dd60d62c2ccf068
     type: click
     subtype: single
     discovery_id: 0x00158d00094648e7 click_single
-  condition: []
-  action:
+    trigger: device
+  conditions: []
+  actions:
   - type: toggle
     device_id: b2002d8b08a9a1927c2532bd668d7d2e
     entity_id: 1f83b68093b2ed6c17f1aa565452342b
@@ -2650,6 +2651,7 @@
     device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
     entity_id: 87ca97494cdaa95e7483ce9e959f736d
     domain: light
+    enabled: false
   mode: single
 - id: '1701278095569'
   alias: IKEA Switch 5 On
