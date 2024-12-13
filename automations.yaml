@@ -2905,3 +2905,16 @@
       compressed: true
       homeassistant: true
   mode: single
+- id: '1734025701704'
+  alias: Reload Nest Thermostat After Router Reboot
+  description: ''
+  triggers:
+  - trigger: time
+    at: 02:45:00
+  conditions: []
+  actions:
+  - action: homeassistant.reload_config_entry
+    target:
+      entity_id: climate.living_room_thermostat
+    data: {}
+  mode: single
