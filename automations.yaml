@@ -470,18 +470,18 @@
 - id: '1581365990144'
   alias: Humidifier enable at 05:00 if thermostat on
   description: ''
-  trigger:
+  triggers:
   - at: 05:00:00
-    platform: time
-  condition:
+    trigger: time
+  conditions:
   - condition: state
     entity_id: climate.living_room_thermostat
     state: heat
-  action:
-  - service: humidifier.turn_on
-    data: {}
+  actions:
+  - data: {}
+    action: humidifier.turn_on
     target:
-      entity_id: humidifier.office_humidifier
+      entity_id: humidifier.main_bedroom_humidifier
   mode: single
 - id: '1581437260727'
   alias: Work Morning Fall-Winter-Spring
@@ -534,15 +534,15 @@
 - id: '1581601374878'
   alias: Humidifier disable at 21:00
   description: ''
-  trigger:
+  triggers:
   - at: '21:00:00'
-    platform: time
-  condition: []
-  action:
-  - service: humidifier.turn_off
-    data: {}
+    trigger: time
+  conditions: []
+  actions:
+  - data: {}
+    action: humidifier.turn_off
     target:
-      entity_id: humidifier.office_humidifier
+      entity_id: humidifier.main_bedroom_humidifier
   mode: single
 - id: '1583938382449'
   alias: Garage lights on when doors opened
@@ -873,15 +873,15 @@
     data: {}
   mode: single
 - id: '1608158400934'
-  alias: Xmas Lights On At 06:00 AM
+  alias: Xmas Lights On AM
   description: ''
-  trigger:
-  - platform: time
-    at: 06:00:00
-  condition: []
-  action:
-  - service: script.turn_on_xmas_lights_10
-    data: {}
+  triggers:
+  - at: 07:00:00
+    trigger: time
+  conditions: []
+  actions:
+  - data: {}
+    action: script.turn_on_xmas_lights_10
   mode: single
 - id: '1609352755365'
   alias: Tag Play Alt 98.7 is scanned
@@ -1765,7 +1765,7 @@
       cert_expiry_sensor: sensor.cert_expiry_timestamp_ha_mtl_svn_dyndns_home_com
       time_to_check_cert: 03:20:00
       send_notification: true
-      notification_device: f85e0acdcd878d394373ef8d3f04ba21
+      notification_device: a13a5c1c59aaf6f70b604da5b2824cb7
       notification_title: Encryption Certificate Renewed Successfully
       notification_message: HA Home encryption certificate has been successfully renewed!
       renew_date: 20
@@ -2117,129 +2117,50 @@
           minutes: 0
           seconds: 0
           milliseconds: 500
-- id: '1648144001705'
-  alias: Aqara Cube 1 Controller
-  description: ''
-  use_blueprint:
-    path: SirGoodenough/Zigbee2MQTT - Xiaomi Cube Controller.yaml
-    input:
-      remote: sensor.aqara_cube_1_action
-      doubletap_face_0:
-      - service: switch.turn_on
-        data: {}
-        target:
-          entity_id:
-          - switch.living_room_lamp_module
-          - switch.family_room_ceiling_fan_light
-      - service: light.turn_on
-        data: {}
-        target:
-          entity_id:
-          - light.bedside_lamp_bulb
-          - light.dining_room_ceiling_light
-          - light.family_room_lamps
-          - light.family_room_nw_ceiling_lights
-          - light.family_room_se_ceiling_lights
-          - light.guest_room_lamp_bulb
-          - light.living_room_lamp_dimmer
-          - light.office_light_bulb
-          - light.main_bedroom_nw_ceiling_lights
-          - light.main_bedroom_se_ceiling_lights
-      slide_face_0: []
-      rotate_cw_face_0: []
-      rotate_ccw_face_0: []
-      shake:
-      - service: switch.turn_off
-        data: {}
-        target:
-          entity_id:
-          - switch.family_room_ceiling_fan_light
-          - switch.living_room_lamp_module
-      - service: light.turn_off
-        data: {}
-        target:
-          entity_id:
-          - light.bedside_lamp_bulb
-          - light.dining_room_ceiling_light
-          - light.family_room_lamps
-          - light.family_room_nw_ceiling_lights
-          - light.family_room_se_ceiling_lights
-          - light.guest_room_lamp_bulb
-          - light.living_room_lamp_dimmer
-          - light.office_light_bulb
-          - light.main_bedroom_nw_ceiling_lights
-          - light.main_bedroom_se_ceiling_lights
-      doubletap_any: []
-- id: '1648489660966'
-  alias: Tuya Knob 1 Controller
-  description: ''
-  use_blueprint:
-    path: mtl010957/moes_rotary.yaml
-    input:
-      toggle:
-      - service: light.toggle
-        data: {}
-        target:
-          entity_id: light.family_room_lamps
-      short_press: []
-      brightness_step_up:
-      - service: light.turn_on
-        data:
-          brightness_step_pct: 10
-        target:
-          entity_id: light.family_room_lamps
-      brightness_step_down:
-      - service: light.turn_on
-        data:
-          brightness_step_pct: -10
-        target:
-          entity_id: light.family_room_lamps
-      switch: sensor.tuya_knob_1_action
 - id: '1651769147081'
   alias: Humidifier Adjust for Temperature
   description: ''
-  trigger:
-  - platform: time_pattern
-    hours: '*'
+  triggers:
+  - hours: '*'
     minutes: '*'
     seconds: '20'
-  condition:
+    trigger: time_pattern
+  conditions:
   - condition: state
-    entity_id: humidifier.office_humidifier
+    entity_id: humidifier.main_bedroom_humidifier
     attribute: mode
     state: normal
-  action:
-  - service: humidifier.set_humidity
-    data_template:
-      entity_id: humidifier.office_humidifier
+  actions:
+  - data_template:
+      entity_id: humidifier.main_bedroom_humidifier
       humidity: '{{ states("sensor.humidifier_off_point") | int(default=20) }}'
+    action: humidifier.set_humidity
   mode: single
 - id: '1651789621693'
   alias: Humidifier Set Away Mode
   description: ''
-  trigger:
-  - platform: state
-    entity_id:
+  triggers:
+  - entity_id:
     - alarm_control_panel.3629_alarm
     to: armed_away
     for:
       hours: 2
       minutes: 0
       seconds: 0
-  condition: []
-  action:
-  - service: humidifier.set_mode
-    data:
+    trigger: state
+  conditions: []
+  actions:
+  - data:
       mode: away
+    action: humidifier.set_mode
     target:
-      entity_id: humidifier.office_humidifier
+      entity_id: humidifier.main_bedroom_humidifier
   mode: single
 - id: '1651789695739'
   alias: Humidifier Set Nornal Mode
   description: ''
-  trigger:
-  - platform: state
-    entity_id:
+  triggers:
+  - entity_id:
     - group.family
     to: home
     for:
@@ -2247,13 +2168,14 @@
       minutes: 10
       seconds: 0
     from: not_home
-  condition: []
-  action:
-  - service: humidifier.set_mode
-    data:
+    trigger: state
+  conditions: []
+  actions:
+  - data:
       mode: normal
+    action: humidifier.set_mode
     target:
-      entity_id: humidifier.office_humidifier
+      entity_id: humidifier.main_bedroom_humidifier
   mode: single
 - id: '1652383371263'
   alias: House Fan Control Set Away Mode
@@ -2637,9 +2559,8 @@
   triggers:
   - domain: mqtt
     device_id: d8ab8c1ffdecef1e4dd60d62c2ccf068
-    type: click
+    type: action
     subtype: single
-    discovery_id: 0x00158d00094648e7 click_single
     trigger: device
   conditions: []
   actions:
@@ -2651,7 +2572,7 @@
     device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
     entity_id: 87ca97494cdaa95e7483ce9e959f736d
     domain: light
-    enabled: false
+    enabled: true
   mode: single
 - id: '1701278095569'
   alias: IKEA Switch 5 On
@@ -2917,4 +2838,70 @@
     target:
       entity_id: climate.living_room_thermostat
     data: {}
+  mode: single
+- id: '1736696765993'
+  alias: Aqara Magic Cube Shake
+  description: ''
+  use_blueprint:
+    path: SirGoodenough/Zigbee2MQTT-Xiaomi_Cube_Controller_MQTT_Triggered.yaml
+    input:
+      topic: zigbee2mqtt/Aqara Cube 1
+      shake:
+      - action: light.toggle
+        metadata: {}
+        data: {}
+        target:
+          entity_id: light.bedside_lamp_bulb
+- id: '1736716599593'
+  alias: Tuya Knob 1 Toggle
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 806c9da297b1aa082af2a11eff308718
+    type: action
+    subtype: toggle
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.toggle
+    metadata: {}
+    data: {}
+    target:
+      entity_id: light.family_room_lamps
+  mode: single
+- id: '1736717069220'
+  alias: Tuya Knob 1 Brightness Down
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 806c9da297b1aa082af2a11eff308718
+    type: action
+    subtype: brightness_step_down
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      brightness_step_pct: -5
+    target:
+      entity_id: light.family_room_lamps
+  mode: single
+- id: '1736717286292'
+  alias: Tuya Knob 1 Brightness Up
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 806c9da297b1aa082af2a11eff308718
+    type: action
+    subtype: brightness_step_up
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      brightness_step_pct: 5
+    target:
+      entity_id: light.family_room_lamps
   mode: single
