@@ -1,7 +1,7 @@
-  - name: Office Humidifier
-    unique_id: office_humidifier
+  - name: Main Bedroom Humidifier
+    unique_id: main_bedroom_humidifier
     humidifier: switch.humidifier_power
-    target_sensor: sensor.office_climate_humidity
+    target_sensor: sensor.main_bedroom_climate_humidity
     min_humidity: 10
     max_humidity: 50
     target_humidity: 30
