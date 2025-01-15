@@ -2018,105 +2018,6 @@
     type: set_hvac_mode
     hvac_mode: heat
   mode: single
-- id: '1648033982730'
-  alias: IKEA Switch 2 Controller
-  description: ''
-  use_blueprint:
-    path: EPMatt/ikea_e1743.yaml
-    input:
-      integration: Zigbee2MQTT
-      controller_entity: sensor.ikea_switch_2_action
-      helper_last_controller_event: input_text.ikea_switch_2_last_event
-      action_button_up_short:
-      - service: cover.open_cover_tilt
-        data: {}
-        target:
-          entity_id: cover.family_room_blinds
-      action_button_down_short:
-      - service: cover.close_cover_tilt
-        data: {}
-        target:
-          entity_id: cover.family_room_blinds
-      button_down_long_loop: true
-      button_down_long_max_loop_repeats: 100
-      action_button_down_long:
-      - service: cover.set_cover_tilt_position
-        data:
-          tilt_position: '{{ state_attr("cover.family_room_blinds","current_tilt_position")
-            - 1 }}'
-        target:
-          entity_id: cover.family_room_blinds
-      - delay:
-          hours: 0
-          minutes: 0
-          seconds: 0
-          milliseconds: 500
-      button_up_long_max_loop_repeats: 100
-      button_up_long_loop: true
-      action_button_up_long:
-      - service: cover.set_cover_tilt_position
-        data:
-          tilt_position: '{{ state_attr("cover.family_room_blinds","current_tilt_position")
-            + 1 }}'
-        target:
-          entity_id: cover.family_room_blinds
-      - delay:
-          hours: 0
-          minutes: 0
-          seconds: 0
-          milliseconds: 500
-      action_button_up_double:
-      - service: script.sw_blinds_block_afternoon_sun
-        data: {}
-- id: '1648035294985'
-  alias: IKEA Switch 3 Controller
-  description: ''
-  use_blueprint:
-    path: EPMatt/ikea_e1743.yaml
-    input:
-      integration: Zigbee2MQTT
-      controller_entity: sensor.ikea_switch_3_action
-      helper_last_controller_event: input_text.ikea_switch_3_last_event
-      action_button_up_short:
-      - service: cover.open_cover_tilt
-        data: {}
-        target:
-          entity_id:
-          - cover.living_room_blinds
-      action_button_down_short:
-      - service: cover.close_cover_tilt
-        data: {}
-        target:
-          entity_id:
-          - cover.living_room_blinds
-      button_down_long_loop: true
-      button_down_long_max_loop_repeats: 100
-      action_button_down_long:
-      - service: cover.set_cover_tilt_position
-        data:
-          tilt_position: '{{ state_attr("cover.living_room_blinds","current_tilt_position")
-            - 1 }}'
-        target:
-          entity_id: cover.living_room_blinds
-      - delay:
-          hours: 0
-          minutes: 0
-          seconds: 0
-          milliseconds: 500
-      button_up_long_max_loop_repeats: 100
-      button_up_long_loop: true
-      action_button_up_long:
-      - service: cover.set_cover_tilt_position
-        data:
-          tilt_position: '{{ state_attr("cover.living_room_blinds","current_tilt_position")
-            + 1 }}'
-        target:
-          entity_id: cover.living_room_blinds
-      - delay:
-          hours: 0
-          minutes: 0
-          seconds: 0
-          milliseconds: 500
 - id: '1651769147081'
   alias: Humidifier Adjust for Temperature
   description: ''
@@ -2161,14 +2062,14 @@
   description: ''
   triggers:
   - entity_id:
-    - group.family
-    to: home
+    - alarm_control_panel.3629_alarm
     for:
       hours: 0
       minutes: 10
       seconds: 0
-    from: not_home
     trigger: state
+    from: armed_away
+    to:
   conditions: []
   actions:
   - data:
@@ -2390,42 +2291,6 @@
       message: Freezer voltage has been low for more than 30 minutes, check the power
         connection!
   mode: single
-- id: '1676311936402'
-  alias: IKEA Remote 3 Controller
-  description: ''
-  use_blueprint:
-    path: EPMatt/ikea_e1524_e1810.yaml
-    input:
-      integration: Zigbee2MQTT
-      controller_entity: sensor.ikea_remote_3_action
-      helper_last_controller_event: input_text.ikea_remote_3_last_event
-      action_button_center_short:
-      - service: light.toggle
-        data: {}
-        target:
-          entity_id:
-          - light.main_bedroom_nw_ceiling_lights
-          - light.main_bedroom_se_ceiling_lights
-      action_button_up_long:
-      - service: light.turn_on
-        data:
-          brightness_step_pct: 5
-        target:
-          entity_id:
-          - light.main_bedroom_nw_ceiling_lights
-          - light.main_bedroom_se_ceiling_lights
-      action_button_down_long:
-      - service: light.turn_on
-        data:
-          brightness_step_pct: -5
-        target:
-          entity_id:
-          - light.main_bedroom_nw_ceiling_lights
-          - light.main_bedroom_se_ceiling_lights
-      button_up_long_loop: true
-      button_up_long_max_loop_repeats: 20
-      button_down_long_loop: true
-      button_down_long_max_loop_repeats: 20
 - id: '1677967541736'
   alias: Water Meter Restart And Notify When Stuck
   description: ''
@@ -2839,19 +2704,6 @@
       entity_id: climate.living_room_thermostat
     data: {}
   mode: single
-- id: '1736696765993'
-  alias: Aqara Magic Cube Shake
-  description: ''
-  use_blueprint:
-    path: SirGoodenough/Zigbee2MQTT-Xiaomi_Cube_Controller_MQTT_Triggered.yaml
-    input:
-      topic: zigbee2mqtt/Aqara Cube 1
-      shake:
-      - action: light.toggle
-        metadata: {}
-        data: {}
-        target:
-          entity_id: light.bedside_lamp_bulb
 - id: '1736716599593'
   alias: Tuya Knob 1 Toggle
   description: ''
@@ -2904,4 +2756,130 @@
       brightness_step_pct: 5
     target:
       entity_id: light.family_room_lamps
+  mode: single
+- id: '1736718779654'
+  alias: IKEA Switch 2 On
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 598f8a95bb581d7a415f29ed23da2a0c
+    type: action
+    subtype: 'on'
+    trigger: device
+  conditions: []
+  actions:
+  - action: cover.open_cover_tilt
+    metadata: {}
+    data: {}
+    target:
+      entity_id: cover.family_room_blinds
+  mode: single
+- id: '1736718920342'
+  alias: IKEA Switch 2 Off
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 598f8a95bb581d7a415f29ed23da2a0c
+    type: action
+    subtype: 'off'
+    trigger: device
+  conditions: []
+  actions:
+  - action: cover.close_cover_tilt
+    metadata: {}
+    data: {}
+    target:
+      entity_id: cover.family_room_blinds
+  mode: single
+- id: '1736723143519'
+  alias: IKEA Switch 3 On
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 4212a40fda8f168a2540a09ab1aa5a2a
+    type: action
+    subtype: 'on'
+    trigger: device
+  conditions: []
+  actions:
+  - action: cover.open_cover_tilt
+    metadata: {}
+    data: {}
+    target:
+      entity_id: cover.living_room_blinds
+  mode: single
+- id: '1736723220379'
+  alias: IKEA Switch 3 Off
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 4212a40fda8f168a2540a09ab1aa5a2a
+    type: action
+    subtype: 'off'
+    trigger: device
+  conditions: []
+  actions:
+  - action: cover.close_cover_tilt
+    metadata: {}
+    data: {}
+    target:
+      entity_id: cover.living_room_blinds
+  mode: single
+- id: '1736902708183'
+  alias: Aqara Cube 1 Shake
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: cd2ce8e183fd2e26d747193eaf0651b8
+    type: action
+    subtype: shake
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      device_id:
+      - 89623a628829316126c198861feb7312
+      - 6f257e741b564746b69eca3a6eae1985
+      - 8634cb8bb78921b89b81f5cbde731504
+      - 4e5e0f5cb909ea1597d60eedd210e112
+      - ad38b2b29eb24331b68fbae50ee3316a
+      - 99fd9317a4436057d9ea782e1d97c80f
+      - 607e22cc045ff0934805bcc5a982f628
+      - 9ae5e2c7ce24aa1ff636bd0cd53f3dba
+      - 91ffc5cd28e478e88a0a8113dd633f7f
+      - 0c1cce990f9a9a7945b0ed35dae83b79
+      entity_id:
+      - light.family_room_lamps
+  mode: single
+- id: '1736903196700'
+  alias: Aqara Cube 1 Tap
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: cd2ce8e183fd2e26d747193eaf0651b8
+    type: action
+    subtype: tap
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      device_id:
+      - 89623a628829316126c198861feb7312
+      - 6f257e741b564746b69eca3a6eae1985
+      - 8634cb8bb78921b89b81f5cbde731504
+      - 4e5e0f5cb909ea1597d60eedd210e112
+      - ad38b2b29eb24331b68fbae50ee3316a
+      - 99fd9317a4436057d9ea782e1d97c80f
+      - 607e22cc045ff0934805bcc5a982f628
+      - 9ae5e2c7ce24aa1ff636bd0cd53f3dba
+      - 91ffc5cd28e478e88a0a8113dd633f7f
+      - 0c1cce990f9a9a7945b0ed35dae83b79
+      entity_id:
+      - light.family_room_lamps
   mode: single
