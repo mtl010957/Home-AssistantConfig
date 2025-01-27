@@ -952,12 +952,16 @@
 - id: '1611941697472'
   alias: Notify Humidifier Out Of Water
   description: ''
-  trigger:
-  - platform: template
-    value_template: '{{ states(''sensor.office_humidity'') | float(default=0) < states(''sensor.humidifier_on_point'')
-      | float(default=0)  }}'
-    for: 00:05:00
-  condition:
+  triggers:
+  - value_template: '{{ states(''sensor_main_bedroom_humidity'') | float(default=0)
+      < states(''sensor.humidifier_on_point'') | float(default=0)  }}'
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+      milliseconds: 0
+    trigger: template
+  conditions:
   - condition: device
     type: is_on
     device_id: cbfd393800a549f18ffe84e0f6b6be6f
@@ -967,11 +971,11 @@
       hours: 0
       minutes: 4
       seconds: 0
-  action:
-  - service: notify.notify
-    data:
+  actions:
+  - data:
       title: Humidifier Water
       message: Humidifier is out of water.
+    action: notify.notify
   mode: single
 - id: '1613156571890'
   alias: Notify HA Started
