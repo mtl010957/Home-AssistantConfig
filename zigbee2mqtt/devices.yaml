@@ -42,12 +42,11 @@
   friendly_name: Guest Room Lamp Bulb
 '0x841826000004d206':
   friendly_name: Bedside Lamp Bulb
-'0x00158d0007998e81':
-  friendly_name: Aqara Cube 1
-  legacy: true
 '0x00158d00094648e7':
   friendly_name: Aqara Switch 1
 '0x5cc7c1fffe86e9cf':
   friendly_name: IKEA Switch 5
 '0x5cc7c1fffe6229f3':
   friendly_name: IKEA Switch 6
+'0x00158d0007998e81':
+  friendly_name: Aqara Cube 1

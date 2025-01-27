@@ -1,10 +1,9 @@
-external_converters: []
 devices:
   - devices.yaml
 groups:
   - groups.yaml
-homeassistant: true
-permit_join: false
+homeassistant:
+  enabled: true
 mqtt:
   base_topic: zigbee2mqtt
   user: addons
@@ -13,6 +12,7 @@ mqtt:
 serial:
   port: >-
     /dev/serial/by-id/usb-ITead_Sonoff_Zigbee_3.0_USB_Dongle_Plus_7a296bb65c3bec11bc5d9c957a0af07f-if00-port0
+  adapter: zstack
 advanced:
   log_level: debug
   pan_id: 6754
@@ -34,13 +34,13 @@ advanced:
     - 10
     - 12
     - 13
-  availability_blocklist: []
-  availability_passlist: []
 device_options: {}
 blocklist: []
 passlist: []
 queue: {}
 frontend:
+  enabled: true
   port: 8099
-experimental: {}
-availability: false
+availability:
+  enabled: false
+version: 4
