@@ -34,8 +34,6 @@ climate: !include_dir_merge_list climate
 
 command_line: !include_dir_merge_list command_line
 
-generic_hygrostat: !include generic_hygrostat.yaml
-
 mqtt: !include mqtt.yaml
 
 sensor: !include_dir_merge_list sensor

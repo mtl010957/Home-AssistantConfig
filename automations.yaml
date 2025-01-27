@@ -2033,8 +2033,7 @@
   conditions:
   - condition: state
     entity_id: humidifier.main_bedroom_humidifier
-    attribute: mode
-    state: normal
+    state: 'on'
   actions:
   - data_template:
       entity_id: humidifier.main_bedroom_humidifier
@@ -2042,7 +2041,7 @@
     action: humidifier.set_humidity
   mode: single
 - id: '1651789621693'
-  alias: Humidifier Set Away Mode
+  alias: Humidifier Off When Away
   description: ''
   triggers:
   - entity_id:
@@ -2055,14 +2054,13 @@
     trigger: state
   conditions: []
   actions:
-  - data:
-      mode: away
-    action: humidifier.set_mode
+  - action: humidifier.turn_off
     target:
       entity_id: humidifier.main_bedroom_humidifier
+    data: {}
   mode: single
 - id: '1651789695739'
-  alias: Humidifier Set Nornal Mode
+  alias: Humidifier On Return Home
   description: ''
   triggers:
   - entity_id:
@@ -2074,13 +2072,15 @@
     trigger: state
     from: armed_away
     to:
-  conditions: []
+  conditions:
+  - condition: state
+    entity_id: climate.living_room_thermostat
+    state: heat
   actions:
-  - data:
-      mode: normal
-    action: humidifier.set_mode
+  - action: humidifier.turn_on
     target:
       entity_id: humidifier.main_bedroom_humidifier
+    data: {}
   mode: single
 - id: '1652383371263'
   alias: House Fan Control Set Away Mode
