@@ -1,5 +1,5 @@
 - id: '1500947016373'
-  alias: Camera Motion On Armed Away
+  alias: Camera On Armed Away
   description: ''
   triggers:
   - entity_id: alarm_control_panel.3629_alarm
@@ -38,7 +38,7 @@
     domain: switch
   mode: single
 - id: '1500948466889'
-  alias: Camera Motion Off Disarmed
+  alias: Camera Privacy Disarmed
   description: ''
   triggers:
   - entity_id: alarm_control_panel.3629_alarm
@@ -1370,14 +1370,24 @@
     hvac_mode: 'off'
   mode: single
 - id: '1624562703474'
-  alias: Hot Water Recirc Disable when Hot Water Running
+  alias: Hot Water Recirc Disable when Water Running
   description: ''
-  trigger:
-  - platform: numeric_state
-    entity_id: sensor.hot_water_recirc_control_temperature_meter
+  triggers:
+  - entity_id: sensor.hot_water_recirc_control_temperature_meter
     above: '0.8'
-  condition: []
-  action:
+    trigger: numeric_state
+  - type: volume_flow_rate
+    device_id: bb48b1b457c779673f0eaea1a5315acc
+    entity_id: 5f48ab4a4c0939e3a98001d87bc20391
+    domain: sensor
+    trigger: device
+    above: 0.5
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 5
+  conditions: []
+  actions:
   - device_id: a77074c758856cfb06fbcf0eef68c72a
     domain: climate
     entity_id: climate.hot_water_recirc_control_setting
@@ -1385,13 +1395,12 @@
     hvac_mode: 'off'
   - delay:
       hours: 0
-      minutes: 15
+      minutes: 5
       seconds: 0
-      milliseconds: 0
-  - service: automation.trigger
-    target:
+  - target:
       entity_id: automation.hot_water_recirc_morning_when_home
     data: {}
+    action: automation.trigger
   mode: single
 - id: '1624901024135'
   alias: House Fan Control Enable
@@ -1727,38 +1736,6 @@
       option: Off Peak
     target:
       entity_id: select.dte_energy_used_hourly
-  mode: single
-- id: '1629391369948'
-  alias: Momentary Switches
-  description: Turn any switch into a momentary switch
-  trigger:
-  - platform: state
-    entity_id:
-    - switch.generic_cam4_call_1
-    - switch.generic_cam4_call_2
-    - switch.generic_cam4_call_3
-    - switch.generic_cam4_call_4
-    - switch.generic_cam4_set_1
-    - switch.generic_cam4_set_2
-    - switch.generic_cam4_set_3
-    - switch.generic_cam4_set_4
-    from: 'off'
-    to: 'on'
-    for: 00:00:01
-  condition: []
-  action:
-  - service: switch.turn_off
-    data: {}
-    target:
-      entity_id:
-      - switch.generic_cam4_call_1
-      - switch.generic_cam4_call_2
-      - switch.generic_cam4_call_3
-      - switch.generic_cam4_call_4
-      - switch.generic_cam4_set_1
-      - switch.generic_cam4_set_2
-      - switch.generic_cam4_set_3
-      - switch.generic_cam4_set_4
   mode: single
 - id: '1630505270910'
   alias: Renew Let's Encrypt Certificate
@@ -2374,20 +2351,20 @@
 - id: '1691765448954'
   alias: Reload ONVIF Camera Integration After Camera Restarts
   description: ''
-  trigger:
-  - platform: time_pattern
-    hours: '04'
-    minutes: '22'
+  triggers:
+  - hours: '04'
+    minutes: '44'
     seconds: '30'
-  condition: []
-  action:
-  - service: homeassistant.reload_config_entry
-    data: {}
+    trigger: time_pattern
+  conditions: []
+  actions:
+  - data: {}
     target:
       entity_id:
       - camera.3629_cam_6_mainstreamprofile
       - camera.3629_cam_8_mainstreamprofile
       - camera.13821_cam_1_mainstreamprofile
+    action: homeassistant.reload_config_entry
   mode: single
 - id: '1691769032132'
   alias: Reload ASUS Router Integration After Router Reboot
