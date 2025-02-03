@@ -211,7 +211,7 @@ include:
     - sensor.nas_cpu_load_5
     - sensor.nas_cpu_temperature
     - sensor.nas_fan_speed
-    - sensor.nas_md1_percent_used
+    - sensor.nas_md0_percent_used
     - sensor.sensor_power_daily_energy
     - sensor.utility_power_daily_energy
     - sensor.pi_power_daily_energy
