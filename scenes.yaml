@@ -3,7 +3,7 @@
   entities:
     automation.blinds_close_before_sunset_if_armed_away:
       id: '1672407471509'
-      last_triggered: '2024-11-27T21:34:44.168286+00:00'
+      last_triggered: '2025-02-21T22:45:50.257163+00:00'
       mode: single
       current: 0
       friendly_name: Blinds Close Before Sunset if Armed Away
@@ -17,17 +17,31 @@
       state: 'off'
     automation.blinds_open_at_sunrise_if_armed_away:
       id: '1589813195543'
-      last_triggered: '2024-11-20T12:29:44.646002+00:00'
+      last_triggered: '2025-02-17T12:25:04.256020+00:00'
       mode: single
       current: 0
       friendly_name: Blinds Open at Sunrise if Armed Away
       state: 'off'
     automation.security_lighting_on:
       id: '1560461893289'
-      last_triggered: '2024-11-27T21:34:44.178978+00:00'
+      last_triggered: '2025-02-21T22:45:50.267481+00:00'
       mode: single
       current: 0
       friendly_name: Security Lighting On
+      state: 'off'
+    automation.living_room_thermostat_eco_armed_away:
+      id: '1740332597130'
+      friendly_name: Living Room Thermostat Eco Armed Away
+      last_triggered: '2025-02-23T17:45:27.540295+00:00'
+      mode: single
+      current: 0
+      state: 'off'
+    automation.living_room_thermostat_normal_disarmed:
+      id: '1740332798926'
+      last_triggered: '2025-02-23T17:47:23.500082+00:00'
+      mode: single
+      current: 0
+      friendly_name: Living Room Thermostat Normal Disarmed
       state: 'off'
   icon: mdi:home-off
   metadata:
@@ -39,12 +53,16 @@
       entity_only: true
     automation.security_lighting_on:
       entity_only: true
+    automation.living_room_thermostat_eco_armed_away:
+      entity_only: true
+    automation.living_room_thermostat_normal_disarmed:
+      entity_only: true
 - id: '1725636586248'
   name: 'Away Behavior Enabled '
   entities:
     automation.blinds_close_before_sunset_if_armed_away:
       id: '1672407471509'
-      last_triggered: '2024-11-27T21:34:44.168286+00:00'
+      last_triggered: '2025-02-21T22:45:50.257163+00:00'
       mode: single
       current: 0
       friendly_name: Blinds Close Before Sunset if Armed Away
@@ -58,17 +76,31 @@
       state: 'on'
     automation.blinds_open_at_sunrise_if_armed_away:
       id: '1589813195543'
-      last_triggered: '2024-11-20T12:29:44.646002+00:00'
+      last_triggered: '2025-02-17T12:25:04.256020+00:00'
       mode: single
       current: 0
       friendly_name: Blinds Open at Sunrise if Armed Away
       state: 'on'
     automation.security_lighting_on:
       id: '1560461893289'
-      last_triggered: '2024-11-27T21:34:44.178978+00:00'
+      last_triggered: '2025-02-21T22:45:50.267481+00:00'
       mode: single
       current: 0
       friendly_name: Security Lighting On
+      state: 'on'
+    automation.living_room_thermostat_eco_armed_away:
+      id: '1740332597130'
+      friendly_name: Living Room Thermostat Eco Armed Away
+      last_triggered: '2025-02-23T17:45:27.540295+00:00'
+      mode: single
+      current: 0
+      state: 'on'
+    automation.living_room_thermostat_normal_disarmed:
+      id: '1740332798926'
+      last_triggered: '2025-02-23T17:47:23.500082+00:00'
+      mode: single
+      current: 0
+      friendly_name: Living Room Thermostat Normal Disarmed
       state: 'on'
   icon: mdi:home-automation
   metadata:
@@ -79,4 +111,8 @@
     automation.blinds_open_at_sunrise_if_armed_away:
       entity_only: true
     automation.security_lighting_on:
+      entity_only: true
+    automation.living_room_thermostat_eco_armed_away:
+      entity_only: true
+    automation.living_room_thermostat_normal_disarmed:
       entity_only: true

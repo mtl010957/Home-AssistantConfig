@@ -2356,7 +2356,10 @@
     minutes: '44'
     seconds: '30'
     trigger: time_pattern
-  conditions: []
+  conditions:
+  - condition: time
+    weekday:
+    - fri
   actions:
   - data: {}
     target:
@@ -2813,4 +2816,96 @@
       - 0c1cce990f9a9a7945b0ed35dae83b79
       entity_id:
       - light.family_room_lamps
+  mode: single
+- id: '1740330705094'
+  alias: Calendar Away Sensing
+  description: ''
+  triggers:
+  - trigger: calendar
+    entity_id: calendar.michael_t_loeffler_gmail_com
+    event: start
+    offset: 0:0:0
+  conditions:
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: calendar.michael_t_loeffler_gmail_com
+      attribute: message
+      state: Away
+    - condition: state
+      entity_id: calendar.michael_t_loeffler_gmail_com
+      attribute: message
+      state: Tucson
+    - condition: template
+      value_template: '{{ state_attr(''calendar.michael_t_loeffler_gmail_com'',''message'')
+        is match(''Away'') }}'
+  actions:
+  - action: scene.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: scene.away_behavior_enabled
+  mode: single
+- id: '1740332597130'
+  alias: Living Room Thermostat Eco Armed Away
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - alarm_control_panel.3629_alarm
+    to: armed_away
+  conditions: []
+  actions:
+  - action: climate.set_preset_mode
+    metadata: {}
+    data:
+      preset_mode: eco
+    target:
+      entity_id: climate.living_room_thermostat
+  mode: single
+- id: '1740332798926'
+  alias: Living Room Thermostat Normal Disarmed
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - alarm_control_panel.3629_alarm
+    to: disarmed
+  conditions: []
+  actions:
+  - action: climate.set_preset_mode
+    metadata: {}
+    data:
+      preset_mode: none
+    target:
+      entity_id: climate.living_room_thermostat
+  mode: single
+- id: '1740334593104'
+  alias: Calendar Return Sensing
+  description: ''
+  triggers:
+  - trigger: calendar
+    entity_id: calendar.michael_t_loeffler_gmail_com
+    event: end
+    offset: 0:0:0
+  conditions:
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: calendar.michael_t_loeffler_gmail_com
+      attribute: message
+      state: Away
+    - condition: state
+      entity_id: calendar.michael_t_loeffler_gmail_com
+      attribute: message
+      state: Tucson
+    - condition: template
+      value_template: '{{ state_attr(''calendar.michael_t_loeffler_gmail_com'',''message'')
+        is match(''Away'') }}'
+  actions:
+  - action: scene.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: scene.away_behavior_disabled
   mode: single
