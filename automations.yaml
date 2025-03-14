@@ -468,11 +468,14 @@
     domain: switch
   mode: single
 - id: '1581365990144'
-  alias: Humidifier enable at 05:00 if thermostat on
+  alias: Humidifier On Disarmed if Thermostat On
   description: ''
   triggers:
-  - at: 05:00:00
-    trigger: time
+  - trigger: state
+    entity_id:
+    - alarm_control_panel.3629_alarm
+    from: armed_night
+    to: disarmed
   conditions:
   - condition: state
     entity_id: climate.living_room_thermostat
@@ -532,7 +535,7 @@
       entity_id: cover.living_room_nw_blinds
   mode: single
 - id: '1581601374878'
-  alias: Humidifier disable at 21:00
+  alias: Humidifier Off at 21:00
   description: ''
   triggers:
   - at: '21:00:00'
@@ -1261,13 +1264,22 @@
     data: {}
   mode: single
 - id: '1615923844588'
-  alias: Hot Water Recirc On Morning
+  alias: Hot Water Recirc Enable Disarmed
   description: ''
-  trigger:
-  - platform: time
-    at: 06:30:00
-  condition: []
-  action:
+  triggers:
+  - trigger: state
+    entity_id:
+    - alarm_control_panel.3629_alarm
+    to: disarmed
+    from: armed_night
+  conditions:
+  - type: is_volume_flow_rate
+    condition: device
+    device_id: bb48b1b457c779673f0eaea1a5315acc
+    entity_id: 5f48ab4a4c0939e3a98001d87bc20391
+    domain: sensor
+    below: 0.1
+  actions:
   - device_id: a77074c758856cfb06fbcf0eef68c72a
     domain: climate
     entity_id: climate.hot_water_recirc_control_setting
@@ -1356,13 +1368,15 @@
     data: {}
   mode: single
 - id: '1624404207012'
-  alias: Hot Water Recirc Off Night
+  alias: Hot Water Recirc Disable Armed Night
   description: ''
-  trigger:
-  - platform: time
-    at: '23:00:00'
-  condition: []
-  action:
+  triggers:
+  - trigger: state
+    entity_id:
+    - alarm_control_panel.3629_alarm
+    to: armed_night
+  conditions: []
+  actions:
   - device_id: a77074c758856cfb06fbcf0eef68c72a
     domain: climate
     entity_id: climate.hot_water_recirc_control_setting
@@ -1370,12 +1384,9 @@
     hvac_mode: 'off'
   mode: single
 - id: '1624562703474'
-  alias: Hot Water Recirc Disable when Water Running
+  alias: Hot Water Recirc Disable Running
   description: ''
   triggers:
-  - entity_id: sensor.hot_water_recirc_control_temperature_meter
-    above: '0.8'
-    trigger: numeric_state
   - type: volume_flow_rate
     device_id: bb48b1b457c779673f0eaea1a5315acc
     entity_id: 5f48ab4a4c0939e3a98001d87bc20391
@@ -1393,14 +1404,6 @@
     entity_id: climate.hot_water_recirc_control_setting
     type: set_hvac_mode
     hvac_mode: 'off'
-  - delay:
-      hours: 0
-      minutes: 5
-      seconds: 0
-  - target:
-      entity_id: automation.hot_water_recirc_morning_when_home
-    data: {}
-    action: automation.trigger
   mode: single
 - id: '1624901024135'
   alias: House Fan Control Enable
@@ -1845,38 +1848,39 @@
 - id: '1633014637999'
   alias: Hot Water Recirc Not Home
   description: ''
-  trigger:
-  - platform: state
-    entity_id: group.family
-    to: not_home
+  triggers:
+  - entity_id:
+    - alarm_control_panel.3629_alarm
     for:
       hours: 2
       minutes: 0
       seconds: 0
-    from: home
-  condition: []
-  action:
-  - service: climate.set_preset_mode
-    data:
+    trigger: state
+    to: armed_away
+  conditions: []
+  actions:
+  - data:
       preset_mode: away
     target:
       entity_id: climate.hot_water_recirc_control_setting
+    action: climate.set_preset_mode
   mode: single
 - id: '1633014865653'
   alias: Hot Water Recirc Home
   description: ''
-  trigger:
-  - platform: state
-    entity_id: group.family
-    from: not_home
-    to: home
-  condition: []
-  action:
-  - service: climate.set_preset_mode
-    data:
+  triggers:
+  - entity_id:
+    - alarm_control_panel.3629_alarm
+    trigger: state
+    from: armed_away
+    to:
+  conditions: []
+  actions:
+  - data:
       preset_mode: home
     target:
       entity_id: climate.hot_water_recirc_control_setting
+    action: climate.set_preset_mode
   mode: single
 - id: '1638450752881'
   alias: Make Site
@@ -1910,22 +1914,22 @@
   - service: script.turn_on_xmas_lights_10
   mode: single
 - id: '1639409820437'
-  alias: Hot Water Recirc On Energy Summary Over 900W 4AM to 11PM
+  alias: Security Disarm Energy Summary Over 900W 4AM to 7AM
   description: ''
-  trigger:
-  - platform: numeric_state
-    entity_id: sensor.dte_energy_bridge_summary
+  triggers:
+  - entity_id: sensor.dte_energy_bridge_summary
     above: '900'
-  condition:
+    trigger: numeric_state
+  conditions:
   - condition: time
     after: 04:00:00
-    before: '23:00:00'
-  action:
-  - device_id: a77074c758856cfb06fbcf0eef68c72a
-    domain: climate
-    entity_id: climate.hot_water_recirc_control_setting
-    type: set_hvac_mode
-    hvac_mode: heat
+    before: 07:00:00
+  actions:
+  - action: alarm_control_panel.alarm_disarm
+    metadata: {}
+    data: {}
+    target:
+      entity_id: alarm_control_panel.3629_alarm
   mode: single
 - id: '1639933441309'
   alias: Notify Furnace Pressure Release Overflow
@@ -1964,40 +1968,6 @@
     target:
       entity_id:
       - light.back_outdoor_xmas_lights
-  mode: single
-- id: '1641585551163'
-  alias: Hot Water Recirc On When Very Cold
-  description: ''
-  trigger:
-  - platform: numeric_state
-    entity_id: sensor.outdoor_climate_temperature
-    below: '0'
-    for:
-      hours: 0
-      minutes: 5
-      seconds: 0
-  - platform: numeric_state
-    entity_id: weather.kptk_hourly
-    attribute: temperature
-    below: '0'
-    for:
-      hours: 0
-      minutes: 5
-      seconds: 0
-  - platform: numeric_state
-    entity_id: sensor.kptk_wind_chill
-    below: '-20'
-    for:
-      hours: 0
-      minutes: 5
-      seconds: 0
-  condition: []
-  action:
-  - device_id: a77074c758856cfb06fbcf0eef68c72a
-    domain: climate
-    entity_id: climate.hot_water_recirc_control_setting
-    type: set_hvac_mode
-    hvac_mode: heat
   mode: single
 - id: '1651769147081'
   alias: Humidifier Adjust for Temperature
@@ -2908,4 +2878,27 @@
     data: {}
     target:
       entity_id: scene.away_behavior_disabled
+  mode: single
+- id: '1741102212780'
+  alias: Hot Water Recirc Enable Not Running
+  description: ''
+  triggers:
+  - type: volume_flow_rate
+    device_id: bb48b1b457c779673f0eaea1a5315acc
+    entity_id: 5f48ab4a4c0939e3a98001d87bc20391
+    domain: sensor
+    trigger: device
+    below: 0.4
+  conditions:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: alarm_control_panel.3629_alarm
+      state: armed_night
+  actions:
+  - device_id: a77074c758856cfb06fbcf0eef68c72a
+    domain: climate
+    entity_id: climate.hot_water_recirc_control_setting
+    type: set_hvac_mode
+    hvac_mode: heat
   mode: single
