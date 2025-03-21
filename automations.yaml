@@ -2394,17 +2394,16 @@
     enabled: true
   mode: single
 - id: '1701278095569'
-  alias: IKEA Switch 5 On
+  alias: IKEA Switch 6 On
   description: ''
-  trigger:
-  - platform: device
-    domain: mqtt
-    device_id: 7e09d94d87e253455ca5dd71359827f0
+  triggers:
+  - domain: mqtt
+    device_id: 66ce4854a8d4b12b6d797308ac243209
     type: action
     subtype: 'on'
-    discovery_id: 0x5cc7c1fffe86e9cf action_on
-  condition: []
-  action:
+    trigger: device
+  conditions: []
+  actions:
   - type: turn_on
     device_id: 11fadf4bb1cb06b9a37bca6d7b596ae7
     entity_id: 5c9f7d325eb5d31c4f2e01ae2170ec78
@@ -2415,17 +2414,16 @@
     domain: light
   mode: single
 - id: '1701278237996'
-  alias: IKEA Switch 5 Off
+  alias: IKEA Switch 6 Off
   description: ''
-  trigger:
-  - platform: device
-    domain: mqtt
-    device_id: 7e09d94d87e253455ca5dd71359827f0
+  triggers:
+  - domain: mqtt
+    device_id: 66ce4854a8d4b12b6d797308ac243209
     type: action
-    subtype: 'off'
-    discovery_id: 0x5cc7c1fffe86e9cf action_off
-  condition: []
-  action:
+    subtype: 'on'
+    trigger: device
+  conditions: []
+  actions:
   - type: turn_off
     device_id: 11fadf4bb1cb06b9a37bca6d7b596ae7
     entity_id: 5c9f7d325eb5d31c4f2e01ae2170ec78
@@ -2436,17 +2434,16 @@
     domain: light
   mode: single
 - id: '1701278561361'
-  alias: IKEA Switch 5 Brightness Stop
+  alias: IKEA Switch 6 Brightness Stop
   description: ''
-  trigger:
-  - platform: device
-    domain: mqtt
-    device_id: 7e09d94d87e253455ca5dd71359827f0
+  triggers:
+  - domain: mqtt
+    device_id: 66ce4854a8d4b12b6d797308ac243209
     type: action
-    subtype: brightness_stop
-    discovery_id: 0x5cc7c1fffe86e9cf action_brightness_stop
-  condition: []
-  action:
+    subtype: 'on'
+    trigger: device
+  conditions: []
+  actions:
   - type: turn_off
     device_id: 29ff68d0e2faf832d7d1c1c6498a6d2f
     entity_id: 3c385963952524e09e1634bacafd574f
@@ -2502,22 +2499,21 @@
     domain: switch
   mode: single
 - id: '1701285468263'
-  alias: IKEA Switch 5 Brightness Move Up
+  alias: IKEA Switch 6 Brightness Move Up
   description: Panic Alarm
-  trigger:
-  - platform: device
-    domain: mqtt
-    device_id: 7e09d94d87e253455ca5dd71359827f0
+  triggers:
+  - domain: mqtt
+    device_id: 66ce4854a8d4b12b6d797308ac243209
     type: action
-    subtype: brightness_move_up
-    discovery_id: 0x5cc7c1fffe86e9cf action_brightness_move_up
-  condition: []
-  action:
-  - service: automation.trigger
-    data:
+    subtype: 'on'
+    trigger: device
+  conditions: []
+  actions:
+  - data:
       skip_condition: true
     target:
       entity_id: automation.siren_on
+    action: automation.trigger
   - type: turn_on
     device_id: 6fe7af154d27cf65628d832399d30166
     entity_id: 31ebb16cae42a9755382aa9f84543d64
@@ -2554,17 +2550,16 @@
       skip_condition: true
   mode: single
 - id: '1704388292073'
-  alias: IKEA Switch 6 On
+  alias: IKEA Switch 5 On
   description: ''
-  trigger:
-  - platform: device
-    domain: mqtt
-    device_id: 66ce4854a8d4b12b6d797308ac243209
+  triggers:
+  - domain: mqtt
+    device_id: 7e09d94d87e253455ca5dd71359827f0
     type: action
     subtype: 'on'
-    discovery_id: 0x5cc7c1fffe6229f3 action_on
-  condition: []
-  action:
+    trigger: device
+  conditions: []
+  actions:
   - type: turn_on
     device_id: 4e5e0f5cb909ea1597d60eedd210e112
     entity_id: acde81b920871f0c88b34905dfe4dd10
@@ -2575,17 +2570,16 @@
     domain: light
   mode: single
 - id: '1704388384803'
-  alias: IKEA Switch 6 Off
+  alias: IKEA Switch 5 Off
   description: ''
-  trigger:
-  - platform: device
-    domain: mqtt
-    device_id: 66ce4854a8d4b12b6d797308ac243209
+  triggers:
+  - domain: mqtt
+    device_id: 7e09d94d87e253455ca5dd71359827f0
     type: action
     subtype: 'off'
-    discovery_id: 0x5cc7c1fffe6229f3 action_off
-  condition: []
-  action:
+    trigger: device
+  conditions: []
+  actions:
   - type: turn_off
     device_id: 4e5e0f5cb909ea1597d60eedd210e112
     entity_id: acde81b920871f0c88b34905dfe4dd10
@@ -2902,3 +2896,72 @@
     type: set_hvac_mode
     hvac_mode: heat
   mode: single
+- id: '1742562599633'
+  alias: IKEA Switch 5 Brightness
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 7e09d94d87e253455ca5dd71359827f0
+    type: action
+    subtype: brightness_move_up
+    trigger: device
+    id: up
+  - domain: mqtt
+    device_id: 7e09d94d87e253455ca5dd71359827f0
+    type: action
+    subtype: brightness_stop
+    trigger: device
+    id: stop
+  - domain: mqtt
+    device_id: 7e09d94d87e253455ca5dd71359827f0
+    type: action
+    subtype: brightness_move_down
+    trigger: device
+    id: down
+  conditions: []
+  actions:
+  - repeat:
+      sequence:
+      - if:
+        - condition: trigger
+          id:
+          - up
+        then:
+        - sequence:
+          - action: light.turn_on
+            metadata: {}
+            data:
+              brightness_step_pct: 5
+            target:
+              device_id:
+              - 4e5e0f5cb909ea1597d60eedd210e112
+              - 8634cb8bb78921b89b81f5cbde731504
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 0
+              milliseconds: 250
+      - if:
+        - condition: trigger
+          id:
+          - down
+        then:
+        - sequence:
+          - action: light.turn_on
+            metadata: {}
+            data:
+              brightness_step_pct: -5
+            target:
+              device_id:
+              - 4e5e0f5cb909ea1597d60eedd210e112
+              - 8634cb8bb78921b89b81f5cbde731504
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 0
+              milliseconds: 250
+      until:
+      - condition: trigger
+        id:
+        - stop
+  mode: restart
