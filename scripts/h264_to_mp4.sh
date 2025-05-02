@@ -27,5 +27,5 @@ do
   /config/scripts/conv264 ${infile}
   ffmpeg -i ${wavfile} -y ${mp3file}
   mkvmerge --output ${mkvfile} --timestamps "0:${videotsfile}" ${h264file} ${mp3file}
-  ffmpeg -i ${mkvfile} ${outfile} && rm ${infile} ${wavfile} ${mp3file} ${mkvfile} ${h264file} ${audiotsfile} ${videotsfile}
+  ffmpeg -i ${mkvfile} -y ${outfile} && rm ${infile} ${wavfile} ${mp3file} ${mkvfile} ${h264file} ${audiotsfile} ${videotsfile}
 done
