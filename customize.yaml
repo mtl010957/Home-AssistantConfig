@@ -18,4 +18,3 @@ zone.desert_home:
   icon: mdi:cactus
 sensor.furnace_gas_used:
   device_class: gas
-  

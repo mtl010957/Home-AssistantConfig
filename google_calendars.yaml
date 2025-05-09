@@ -215,3 +215,9 @@
   - device_id: https_tripwizard_rvlife_com_ics_hash_73421_zzz5ufvxqxlhqjfzng1qaxzwci94qt09
     ignore_availability: true
     name: https://tripwizard.rvlife.com/ics_hash/73421/ZzZ5UFVXQXlhQjFZNG1QaXZwci94QT09
+
+- cal_id: 065q1d4cmin7eficme6b2eakqp4dmbja@import.calendar.google.com
+  entities:
+  - device_id: https_tripwizard_rvlife_com_ics_hash_73421_m2ozlzndow1lbgljaeo4ytdkk2nbzz09
+    ignore_availability: true
+    name: https://tripwizard.rvlife.com/ics_hash/73421/M2ozLzNDOW1LbGljaEo4YTdkK2NBZz09

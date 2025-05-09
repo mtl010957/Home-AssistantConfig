@@ -2848,24 +2848,26 @@
   alias: Calendar Return Sensing
   description: ''
   triggers:
-  - trigger: calendar
-    entity_id: calendar.michael_t_loeffler_gmail_com
-    event: end
-    offset: 0:0:0
+  - trigger: time_pattern
+    hours: '0'
+    minutes: '0'
+    seconds: '30'
   conditions:
-  - condition: or
+  - condition: not
     conditions:
-    - condition: state
-      entity_id: calendar.michael_t_loeffler_gmail_com
-      attribute: message
-      state: Away
-    - condition: state
-      entity_id: calendar.michael_t_loeffler_gmail_com
-      attribute: message
-      state: Tucson
-    - condition: template
-      value_template: '{{ state_attr(''calendar.michael_t_loeffler_gmail_com'',''message'')
-        is match(''Away'') }}'
+    - condition: or
+      conditions:
+      - condition: state
+        entity_id: calendar.michael_t_loeffler_gmail_com
+        attribute: message
+        state: Away
+      - condition: state
+        entity_id: calendar.michael_t_loeffler_gmail_com
+        attribute: message
+        state: Tucson
+      - condition: template
+        value_template: '{{ state_attr(''calendar.michael_t_loeffler_gmail_com'',''message'')
+          is match(''Away'') }}'
   actions:
   - action: scene.turn_on
     metadata: {}
