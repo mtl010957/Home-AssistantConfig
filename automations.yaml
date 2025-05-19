@@ -447,25 +447,25 @@
       title: UPS ONLINE
   mode: single
 - id: '1578535843455'
-  alias: Garage latch off when door open
+  alias: Garage Door Lock After Open
   description: ''
-  trigger:
+  triggers:
   - entity_id: binary_sensor.garage_door_sensor_any
     from: 'off'
-    platform: state
     to: 'on'
     for: 00:00:02
-  condition:
+    trigger: state
+  conditions:
   - condition: device
-    type: is_on
     device_id: 7ec89b1bd00d47248701a5eedbf3a331
-    entity_id: switch.garage_latch
-    domain: switch
-  action:
-  - type: turn_off
-    device_id: 7ec89b1bd00d47248701a5eedbf3a331
-    entity_id: switch.garage_latch
-    domain: switch
+    domain: lock
+    entity_id: c82ce81d227228065f9a17bb20a46e24
+    type: is_unlocked
+  actions:
+  - device_id: 7ec89b1bd00d47248701a5eedbf3a331
+    domain: lock
+    entity_id: c82ce81d227228065f9a17bb20a46e24
+    type: lock
   mode: single
 - id: '1581365990144'
   alias: Humidifier On Disarmed if Thermostat On
