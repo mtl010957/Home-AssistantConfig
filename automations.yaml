@@ -117,33 +117,39 @@
   mode: single
 - id: '1552222922150'
   alias: Blinds Open Before Sunrise If Not Armed Away
-  trigger:
-  - platform: numeric_state
-    entity_id: sun.sun
+  triggers:
+  - entity_id: sun.sun
     attribute: elevation
     above: -3
-  condition:
+    trigger: numeric_state
+  conditions:
   - condition: not
     conditions:
     - condition: state
       entity_id: alarm_control_panel.3629_alarm
       state: armed_away
-  action:
-  - service: script.open_all_blinds
-    data: {}
+  - condition: state
+    entity_id: climate.living_room_thermostat
+    state: heat
+  actions:
+  - data: {}
+    action: script.open_all_blinds
   mode: single
 - id: '1552245394001'
   alias: Blinds Close Armed Night
   description: ''
-  trigger:
-  - platform: state
-    entity_id:
+  triggers:
+  - entity_id:
     - alarm_control_panel.3629_alarm
     to: armed_night
-  condition: []
-  action:
-  - service: script.close_all_blinds
-    data: {}
+    trigger: state
+  conditions:
+  - condition: state
+    entity_id: climate.living_room_thermostat
+    state: heat
+  actions:
+  - data: {}
+    action: script.close_all_blinds
   mode: single
 - id: '1560461893289'
   alias: Security Lighting On
@@ -1408,50 +1414,64 @@
 - id: '1624901024135'
   alias: House Fan Control Enable
   description: ''
-  trigger:
-  - platform: time_pattern
-    hours: '*'
+  triggers:
+  - hours: '*'
     minutes: /5
     seconds: '45'
-  condition:
+    trigger: time_pattern
+  conditions:
   - condition: numeric_state
     entity_id: sensor.outdoor_climate_temperature
     above: '60'
-  - condition: template
-    value_template: '{{ (states(''sensor.outdoor_climate_temperature'') | round(0,''round-to-even'',''undefined'')
-      | int(default=80)) <= (state_attr(''climate.house_fan_thermostat'',''temperature'')
-      | round(0,''round-to-even'',''undefined'') | int(default=80) - 1) }}'
-  action:
-  - service: climate.set_hvac_mode
-    target:
+  - condition: numeric_state
+    entity_id: sensor.outdoor_climate_temperature
+    below: sensor.main_bedroom_climate_temperature
+  - condition: or
+    conditions:
+    - condition: numeric_state
+      entity_id: sensor.outdoor_temperature_change
+      below: -0.1
+    - condition: numeric_state
+      entity_id: sensor.outdoor_climate_temperature
+      below: sensor.house_fan_set_temperature
+  actions:
+  - target:
       entity_id: climate.house_fan_thermostat
     data:
       hvac_mode: cool
+    action: climate.set_hvac_mode
   mode: single
 - id: '1624913583112'
   alias: House Fan Control Disable
   description: ''
-  trigger:
-  - platform: time_pattern
-    hours: '*'
+  triggers:
+  - hours: '*'
     minutes: /5
     seconds: '55'
-  condition:
+    trigger: time_pattern
+  conditions:
   - condition: or
     conditions:
     - condition: numeric_state
       entity_id: sensor.outdoor_climate_temperature
       below: '60'
-    - condition: template
-      value_template: '{{ (states(''sensor.outdoor_climate_temperature'') | round(0,''round-to-even'',''undefined'')
-        | int(default=80)) > (state_attr(''climate.house_fan_thermostat'',''temperature'')
-        | round(0,''round-to-even'',''undefined'') | int(default=80) - 1) }}'
-  action:
-  - service: climate.set_hvac_mode
-    target:
+    - condition: numeric_state
+      entity_id: sensor.outdoor_climate_temperature
+      above: sensor.main_bedroom_climate_temperature
+    - condition: and
+      conditions:
+      - condition: numeric_state
+        entity_id: sensor.outdoor_temperature_change
+        above: 0.1
+      - condition: numeric_state
+        entity_id: sensor.outdoor_climate_temperature
+        above: sensor.house_fan_set_temperature
+  actions:
+  - target:
       entity_id: climate.house_fan_thermostat
     data:
       hvac_mode: 'off'
+    action: climate.set_hvac_mode
   mode: single
 - id: '1626786783561'
   alias: Security Lighting Cancel Disarmed
@@ -1476,15 +1496,15 @@
 - id: '1626789324636'
   alias: Blinds Open Energy Summary Over 900W 4AM to Sunrise Not Armed Away
   description: ''
-  trigger:
-  - platform: numeric_state
-    entity_id: sensor.dte_energy_bridge_summary
+  triggers:
+  - entity_id: sensor.dte_energy_bridge_summary
     above: '900'
     for:
       hours: 0
       minutes: 0
       seconds: 0
-  condition:
+    trigger: numeric_state
+  conditions:
   - condition: time
     after: 03:30:00
     before: 08:00:00
@@ -1495,9 +1515,12 @@
     - condition: state
       entity_id: alarm_control_panel.3629_alarm
       state: armed_away
-  action:
-  - service: script.open_all_blinds
-    data: {}
+  - condition: state
+    entity_id: climate.living_room_thermostat
+    state: heat
+  actions:
+  - data: {}
+    action: script.open_all_blinds
   mode: single
 - id: '1626810840417'
   alias: IKEA Switch 4 Off
@@ -2050,20 +2073,20 @@
       entity_id: climate.house_fan_thermostat
   mode: single
 - id: '1652383477063'
-  alias: House Fan Control Set None Mode
+  alias: House Fan Control Set Home Mode
   description: ''
-  trigger:
-  - platform: state
-    entity_id:
+  triggers:
+  - entity_id:
     - alarm_control_panel.3629_alarm
     from: armed_away
-  condition: []
-  action:
-  - service: climate.set_preset_mode
-    data:
-      preset_mode: none
+    trigger: state
+  conditions: []
+  actions:
+  - data:
+      preset_mode: home
     target:
       entity_id: climate.house_fan_thermostat
+    action: climate.set_preset_mode
   mode: single
 - id: '1670023332108'
   alias: West Blinds Follow Afternoon Sun Elevation
