@@ -215,6 +215,16 @@ include:
     - sensor.sensor_power_daily_energy
     - sensor.utility_power_daily_energy
     - sensor.pi_power_daily_energy
+    - sensor.kitchen_lights_energy
+    - sensor.kitchen_lights_power
+    - sensor.lh_end_cabinet_light_energy
+    - sensor.lh_end_cabinet_light_power
+    - sensor.upper_cabinet_light_energy
+    - sensor.upper_cabinet_light_power
+    - sensor.corner_cabinet_light_energy
+    - sensor.corner_cabinet_light_power
+    - sensor.rh_end_cabinet_light_energy
+    - sensor.rh_end_cabinet_light_power
     # caravan sensors
     - binary_sensor.caravan_fresh_tank_liquid_level_sensor_1
     - binary_sensor.caravan_fresh_tank_liquid_level_sensor_2
