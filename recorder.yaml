@@ -39,6 +39,7 @@ include:
     # climate
     - climate.thermostat
     - climate.living_room_thermostat
+    - climate.house_fan_thermostat
     - sensor.living_room_thermostat_humidity
     - sensor.living_room_thermostat_temperature
     - climate.hot_water_recirc_control_setting
