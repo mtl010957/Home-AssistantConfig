@@ -748,34 +748,34 @@
 - id: '1589220971925'
   alias: Notify Smoke Family Room
   description: ''
-  trigger:
+  triggers:
   - type: smoke
-    platform: device
-    device_id: 11f2e28d1b01442ce3484060cceb5221
-    entity_id: binary_sensor.family_room_smoke_co_alarm_smoke_alarm_smoke_detected
+    device_id: 7c091719d610182cf6b326865d8644d5
+    entity_id: 33e2037c69ac694ad1f84823a2eb2d31
     domain: binary_sensor
-  condition: []
-  action:
+    trigger: device
+  conditions: []
+  actions:
   - data:
       message: There is smoke in the family room, get to safety!
       title: SMOKE In Family Room!
-    service: notify.notify
+    action: notify.notify
   mode: single
 - id: '1589221081422'
   alias: Notify CO Family Room
   description: ''
-  trigger:
-  - type: gas
-    platform: device
-    device_id: 11f2e28d1b01442ce3484060cceb5221
-    entity_id: binary_sensor.family_room_smoke_co_alarm_co_alarm_carbon_monoxide_detected
+  triggers:
+  - type: co
+    device_id: 7c091719d610182cf6b326865d8644d5
+    entity_id: 9ffa0f083929339bbf28c4425b696229
     domain: binary_sensor
-  condition: []
-  action:
+    trigger: device
+  conditions: []
+  actions:
   - data:
       message: There is high CO detected in the family room, get to fresh air!
       title: CO In Family Room!
-    service: notify.notify
+    action: notify.notify
   mode: single
 - id: '1589227167980'
   alias: Notify Battery Low Downstairs Smoke/CO Alarm
@@ -1426,14 +1426,11 @@
   - condition: numeric_state
     entity_id: sensor.outdoor_climate_temperature
     below: sensor.main_bedroom_climate_temperature
-  - condition: or
-    conditions:
-    - condition: numeric_state
-      entity_id: sensor.outdoor_temperature_change
-      below: -0.1
-    - condition: numeric_state
-      entity_id: sensor.outdoor_climate_temperature
-      below: sensor.house_fan_set_temperature
+  - type: is_powered
+    condition: device
+    device_id: 24c9be090c0b37e35ee50ddb8b829dd2
+    entity_id: 8f598d9865ac993b61d5d2fcc9eb9b08
+    domain: binary_sensor
   actions:
   - target:
       entity_id: climate.house_fan_thermostat
@@ -1458,14 +1455,11 @@
     - condition: numeric_state
       entity_id: sensor.outdoor_climate_temperature
       above: sensor.main_bedroom_climate_temperature
-    - condition: and
-      conditions:
-      - condition: numeric_state
-        entity_id: sensor.outdoor_temperature_change
-        above: 0.1
-      - condition: numeric_state
-        entity_id: sensor.outdoor_climate_temperature
-        above: sensor.house_fan_set_temperature
+    - type: is_not_powered
+      condition: device
+      device_id: 24c9be090c0b37e35ee50ddb8b829dd2
+      entity_id: 8f598d9865ac993b61d5d2fcc9eb9b08
+      domain: binary_sensor
   actions:
   - target:
       entity_id: climate.house_fan_thermostat
@@ -2990,3 +2984,71 @@
         id:
         - stop
   mode: restart
+- id: '1753219642168'
+  alias: Main Bedroom Light Switches Input 1 On
+  description: ''
+  triggers:
+  - type: powered
+    device_id: f3bf2b3c0c915edd826240294ef93e2d
+    entity_id: 5b54dd8b036274217848709fde7022bc
+    domain: binary_sensor
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      device_id: 4e5e0f5cb909ea1597d60eedd210e112
+  mode: single
+- id: '1753219791692'
+  alias: Main Bedroom Light Switches Input 1 Off
+  description: ''
+  triggers:
+  - type: not_powered
+    device_id: f3bf2b3c0c915edd826240294ef93e2d
+    entity_id: 5b54dd8b036274217848709fde7022bc
+    domain: binary_sensor
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      device_id: 4e5e0f5cb909ea1597d60eedd210e112
+  mode: single
+- id: '1753219865224'
+  alias: Main Bedroom Light Switches Input 2 On
+  description: ''
+  triggers:
+  - type: powered
+    device_id: f3bf2b3c0c915edd826240294ef93e2d
+    entity_id: 82597f0576d10b4526f24929e183af0d
+    domain: binary_sensor
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      device_id: 8634cb8bb78921b89b81f5cbde731504
+  mode: single
+- id: '1753219932083'
+  alias: Main Bedroom Light Switches Input 2 Off
+  description: ''
+  triggers:
+  - type: not_powered
+    device_id: f3bf2b3c0c915edd826240294ef93e2d
+    entity_id: 82597f0576d10b4526f24929e183af0d
+    domain: binary_sensor
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      device_id: 8634cb8bb78921b89b81f5cbde731504
+  mode: single
