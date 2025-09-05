@@ -2,3 +2,4 @@
 platform: manual
 name: "3629 Alarm"
 code_arm_required: false
+unique_id: "3629_alarm"
