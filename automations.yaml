@@ -750,8 +750,8 @@
   description: ''
   triggers:
   - type: smoke
-    device_id: 7c091719d610182cf6b326865d8644d5
-    entity_id: 33e2037c69ac694ad1f84823a2eb2d31
+    device_id: a108b5538201395f2d4a9232ccb3a99d
+    entity_id: 49592f218023e574a164bde2ccc1bccf
     domain: binary_sensor
     trigger: device
   conditions: []
@@ -766,8 +766,8 @@
   description: ''
   triggers:
   - type: co
-    device_id: 7c091719d610182cf6b326865d8644d5
-    entity_id: 9ffa0f083929339bbf28c4425b696229
+    device_id: a108b5538201395f2d4a9232ccb3a99d
+    entity_id: 2421215324870de26d1ec832c9ad4e48
     domain: binary_sensor
     trigger: device
   conditions: []
@@ -1132,20 +1132,20 @@
 - id: '1615490343030'
   alias: IKEA Remote 1 Left
   description: ''
-  trigger:
-  - platform: device
-    domain: mqtt
+  triggers:
+  - domain: mqtt
     device_id: 1d27ca3563f3dbd03993d1ee95dd6c2f
     type: action
     subtype: arrow_left_click
     discovery_id: 0xbc33acfffe159123 action_arrow_left_click
-  condition: []
-  action:
-  - service: fan.set_percentage
-    target:
+    trigger: device
+  conditions: []
+  actions:
+  - target:
       entity_id: fan.family_room_ceiling_fan
     data:
-      percentage: 33
+      percentage: 32
+    action: fan.set_percentage
   mode: single
 - id: '1615490382353'
   alias: IKEA Remote 1 Right
@@ -1203,20 +1203,20 @@
 - id: '1615600620342'
   alias: IKEA Remote 2 Left
   description: ''
-  trigger:
-  - platform: device
-    domain: mqtt
+  triggers:
+  - domain: mqtt
     device_id: ac0e424cfbd6feb81c66a49b9a609e4d
     type: action
     subtype: arrow_left_click
     discovery_id: 0x60a423fffee42af2 action_arrow_left_click
-  condition: []
-  action:
-  - service: fan.set_percentage
-    target:
+    trigger: device
+  conditions: []
+  actions:
+  - target:
       entity_id: fan.main_bedroom_ceiling_fan
     data:
-      percentage: 33
+      percentage: 32
+    action: fan.set_percentage
   mode: single
 - id: '1615600668050'
   alias: IKEA Remote 2 Right
