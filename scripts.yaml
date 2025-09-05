@@ -12,63 +12,75 @@ close_all_blinds:
 security_lighting_on:
   alias: Security Lighting On
   sequence:
-  - service: switch.turn_on
+  - action: light.turn_on
+    metadata: {}
+    data: {}
     target:
+      entity_id: light.kitchen_lights
+  - delay: 00:{{ (range(1, 5) | random) }}:00
+  - target:
       entity_id: switch.living_room_lamp_module
     data: {}
+    action: switch.turn_on
   - delay: 00:{{ (range(1, 5) | random) }}:00
-  - service: light.turn_on
-    data:
+  - data:
       brightness_pct: 100
     target:
       device_id: 0362fab09a27e3af33a03b7a87816af8
+    action: light.turn_on
   - delay: 00:{{ (range(1, 5) | random) }}:00
-  - service: light.turn_on
-    target:
+  - target:
       entity_id: light.family_room_lamps
     data:
       brightness_pct: 100
+    action: light.turn_on
   - delay: 00:{{ (range(5, 15) | random) }}:00
-  - service: light.turn_on
-    target:
+  - target:
       entity_id: light.office_light_bulb
     data:
       brightness_pct: 100
+    action: light.turn_on
   - delay: 00:{{ (range(1, 5) | random) }}:00
-  - service: light.turn_on
-    target:
+  - target:
       entity_id: light.bedside_lamp_bulb
     data:
       brightness_pct: 100
+    action: light.turn_on
   mode: single
   icon: mdi:lightbulb
 security_lighting_off:
   alias: Security Lighting Off
   sequence:
-  - service: switch.turn_off
+  - action: light.turn_off
+    metadata: {}
+    data: {}
     target:
+      entity_id: light.kitchen_lights
+  - delay: 00:{{ (range(1, 5) | random) }}:00
+  - target:
       entity_id: switch.living_room_lamp_module
     data: {}
+    action: switch.turn_off
   - delay: 00:{{ (range(1, 5) | random) }}:00
-  - service: light.turn_off
-    data: {}
+  - data: {}
     target:
       entity_id: light.guest_room_lamp_bulb
+    action: light.turn_off
   - delay: 00:{{ (range(1, 5) | random) }}:00
-  - service: light.turn_off
-    target:
+  - target:
       entity_id: light.family_room_lamps
     data: {}
+    action: light.turn_off
   - delay: 00:{{ (range(5, 15) | random) }}:00
-  - service: light.turn_off
-    target:
+  - target:
       entity_id: light.office_light_bulb
     data: {}
+    action: light.turn_off
   - delay: 00:{{ (range(1, 5) | random) }}:00
-  - service: light.turn_off
-    target:
+  - target:
       entity_id: light.bedside_lamp_bulb
     data: {}
+    action: light.turn_off
   mode: single
   icon: mdi:lightbulb
 irrigation_zone_1_run:
