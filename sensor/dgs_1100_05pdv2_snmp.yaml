@@ -1,52 +1,52 @@
   - platform: snmp
-    host: 192.168.13.13
+    host: 192.168.13.16
     baseoid: 1.3.6.1.2.1.1.1.0
-    unique_id: dgs_1100_08_device_type
-    name: "DGS-1100-08 Device Type"
+    unique_id: dgs_1100_05pdv2_device_type
+    name: "DGS-1100-05PDV2 Device Type"
     default_value: ""
     accept_errors: true
     icon: mdi:lan
   - platform: snmp
-    host: 192.168.13.13
+    host: 192.168.13.16
     baseoid: 1.3.6.1.2.1.1.5.0
-    unique_id: dgs_1100_08_name
-    name: "DGS-1100-08 Name"
+    unique_id: dgs_1100_05pdv2_name
+    name: "DGS-1100-05PDV2 Name"
     default_value: ""
     accept_errors: true
     icon: mdi:lan
   - platform: snmp
-    host: 192.168.13.13
+    host: 192.168.13.16
     baseoid: 1.3.6.1.2.1.1.6.0
-    unique_id: dgs_1100_08_location
-    name: "DGS-1100-08 Location"
+    unique_id: dgs_1100_05pdv2_location
+    name: "DGS-1100-05PDV2 Location"
     default_value: ""
     accept_errors: true
     icon: mdi:lan
   - platform: snmp
-    host: 192.168.13.13
+    host: 192.168.13.16
     baseoid: 1.3.6.1.2.1.1.3.0
-    unique_id: dgs_1100_08_uptime
-    name: "DGS-1100-08 Uptime"
+    unique_id: dgs_1100_05pdv2_uptime
+    name: "DGS-1100-05PDV2 Uptime"
     default_value: 0
     accept_errors: true
     icon: mdi:clock
     unit_of_measurement: "minutes"
     value_template: "{{((value | int) / 6000) | int}}"
   - platform: snmp
-    host: 192.168.13.13
+    host: 192.168.13.16
     baseoid: 1.3.6.1.2.1.2.2.1.10.1
-    unique_id: dgs_1100_08_eth1_kbytes_in
-    name: "DGS-1100-08 ETH1 KBytes In"
+    unique_id: dgs_1100_05pdv2_eth1_kbytes_in
+    name: "DGS-1100-05PDV2 ETH1 KBytes In"
     default_value: 0
     accept_errors: true
     device_class: data_size
     unit_of_measurement: "kbytes"
     value_template: "{{((value | int) / 1000) | int}}"
   - platform: snmp
-    host: 192.168.13.13
+    host: 192.168.13.16
     baseoid: 1.3.6.1.2.1.2.2.1.16.1
-    unique_id: dgs_1100_08_eth1_kbytes_out
-    name: "DGS-1100-08 ETH1 KBytes Out"
+    unique_id: dgs_1100_05pdv2_eth1_kbytes_out
+    name: "DGS-1100-05PDV2 ETH1 KBytes Out"
     default_value: 0
     accept_errors: true
     device_class: data_size
