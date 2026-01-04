@@ -33,8 +33,8 @@
     trigger: state
   actions:
   - type: turn_on
-    device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: 5b339fbb50d6218ef6b9ef8da314defd
+    device_id: 0fd96d923bb0322dcedd884810d0e3f3
+    entity_id: 4dc7a198e5d9a7345bbc20d739b25a50
     domain: switch
   mode: single
 - id: '1500948466889'
@@ -175,11 +175,6 @@
   actions:
   - data: {}
     action: script.security_lighting_on
-  - action: light.turn_on
-    metadata: {}
-    data: {}
-    target:
-      entity_id: light.front_yard_light
   mode: single
 - id: '1560462571547'
   alias: Security Lighting Off
@@ -194,11 +189,6 @@
   - delay: 00:{{ (range(5, 25) | random) }}:00
   - data: {}
     action: script.security_lighting_off
-  - action: light.turn_off
-    metadata: {}
-    data: {}
-    target:
-      entity_id: light.front_yard_light
   mode: single
 - id: '1563648409962'
   alias: Security Arm Night
@@ -258,36 +248,39 @@
   mode: single
 - id: '1563648678608'
   alias: Security Disarm Return Home
-  trigger:
-  - platform: zone
-    entity_id: person.michael_loeffler
+  triggers:
+  - entity_id: person.michael_loeffler
     zone: zone.home
     event: enter
-  - platform: numeric_state
-    entity_id:
+    trigger: zone
+  - entity_id:
     - zone.home
     above: 0
-  - platform: state
-    entity_id:
+    trigger: numeric_state
+  - entity_id:
     - binary_sensor.family_room_presence
     to: 'on'
-  - platform: state
-    entity_id:
+    trigger: state
+  - entity_id:
     - binary_sensor.main_bedroom_presence
     to: 'on'
-  - platform: state
-    entity_id:
+    trigger: state
+  - entity_id:
     - person.susan_loeffler
     to: home
-  condition:
+    trigger: state
+  conditions:
   - condition: state
     entity_id: alarm_control_panel.3629_alarm
     state: armed_away
-  action:
+  - condition: time
+    after: 06:00:00
+    before: '23:00:00'
+  actions:
   - data: {}
-    service: alarm_control_panel.alarm_disarm
     target:
       entity_id: alarm_control_panel.3629_alarm
+    action: alarm_control_panel.alarm_disarm
   mode: single
 - id: '1572629564877'
   alias: Security Notify Front Door Opened
@@ -1470,22 +1463,23 @@
 - id: '1626786783561'
   alias: Security Lighting Cancel Disarmed
   description: ''
-  trigger:
-  - platform: state
-    entity_id: alarm_control_panel.3629_alarm
+  triggers:
+  - entity_id: alarm_control_panel.3629_alarm
     to: disarmed
-  condition: []
-  action:
-  - service: script.turn_off
-    target:
+    trigger: state
+  conditions: []
+  actions:
+  - target:
       entity_id:
       - script.security_lighting_on
       - script.security_lighting_off
     data: {}
-  - type: turn_off
-    device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: 8f5716f8d9e01ab1b765cd0076eaae04
-    domain: light
+    action: script.turn_off
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: light.front_yard_light
   mode: single
 - id: '1626789324636'
   alias: Blinds Open Energy Summary Over 900W 4AM to Sunrise Not Armed Away
@@ -1554,31 +1548,31 @@
 - id: '1628008841148'
   alias: Floods Off when Susan Comes Home Late
   description: ''
-  trigger:
-  - platform: state
-    entity_id: person.susan_loeffler
+  triggers:
+  - entity_id: person.susan_loeffler
     from: away
     to: home
-  condition:
+    trigger: state
+  conditions:
   - condition: device
     type: is_on
-    device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: light.front_yard_light
-    domain: light
-  action:
+    device_id: 0fd96d923bb0322dcedd884810d0e3f3
+    entity_id: 4dc7a198e5d9a7345bbc20d739b25a50
+    domain: switch
+  actions:
   - type: turn_off
-    device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: light.front_yard_light
-    domain: light
+    device_id: 0fd96d923bb0322dcedd884810d0e3f3
+    entity_id: 4dc7a198e5d9a7345bbc20d739b25a50
+    domain: switch
   - delay:
       hours: 0
       minutes: 10
       seconds: 0
       milliseconds: 0
   - type: turn_on
-    device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: light.front_yard_light
-    domain: light
+    device_id: 0fd96d923bb0322dcedd884810d0e3f3
+    entity_id: 4dc7a198e5d9a7345bbc20d739b25a50
+    domain: switch
   mode: single
 - id: '1628012626514'
   alias: IKEA Remote 2 Dim Down Hold
@@ -2162,26 +2156,26 @@
 - id: '1672584988331'
   alias: 'Router LEDs On Daytime '
   description: ''
-  trigger:
-  - platform: time
-    at: 09:00:00
-  condition: []
-  action:
+  triggers:
+  - at: 09:00:00
+    trigger: time
+  conditions: []
+  actions:
   - type: turn_on
-    device_id: 26fc3769507b64f26a42a0410863765c
+    device_id: 8fd74ccdc915f3c6a1883bbc79c3b618
     entity_id: 1e70c5e26c2c66f9f49c29f9a6960c57
     domain: light
   mode: single
 - id: '1672585429023'
   alias: Router LEDs Off Nighttime
   description: ''
-  trigger:
-  - platform: time
-    at: '21:00:00'
-  condition: []
-  action:
+  triggers:
+  - at: '21:00:00'
+    trigger: time
+  conditions: []
+  actions:
   - type: turn_off
-    device_id: 26fc3769507b64f26a42a0410863765c
+    device_id: 8fd74ccdc915f3c6a1883bbc79c3b618
     entity_id: 1e70c5e26c2c66f9f49c29f9a6960c57
     domain: light
   mode: single
@@ -2352,22 +2346,22 @@
     target:
       entity_id:
       - camera.3629_cam_6_mainstreamprofile
-      - camera.3629_cam_8_mainstreamprofile
       - camera.13821_cam_1_mainstreamprofile
+      - camera.3629_cam_8_mainstreamprofile_2
     action: homeassistant.reload_config_entry
   mode: single
 - id: '1691769032132'
   alias: Reload ASUS Router Integration After Router Reboot
   description: ''
-  trigger:
-  - platform: time
-    at: 03:40:00
-  condition: []
-  action:
-  - service: homeassistant.reload_config_entry
-    data: {}
+  triggers:
+  - at: 03:40:00
+    trigger: time
+  conditions: []
+  actions:
+  - data: {}
+    action: homeassistant.reload_config_entry
     target:
-      device_id: 26fc3769507b64f26a42a0410863765c
+      device_id: 8fd74ccdc915f3c6a1883bbc79c3b618
   mode: single
 - id: '1700587190314'
   alias: Xmas Lights Sun Angle Brightness
@@ -2390,7 +2384,7 @@
       entity_id: light.back_outdoor_xmas_lights
   mode: single
 - id: '1700602096098'
-  alias: Xmas Lights Button
+  alias: Xmas Lights Button Single
   description: ''
   triggers:
   - domain: mqtt
@@ -2401,14 +2395,20 @@
   conditions: []
   actions:
   - type: toggle
-    device_id: b2002d8b08a9a1927c2532bd668d7d2e
-    entity_id: 1f83b68093b2ed6c17f1aa565452342b
-    domain: light
-  - type: toggle
     device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
     entity_id: 87ca97494cdaa95e7483ce9e959f736d
     domain: light
     enabled: true
+  - action: light.toggle
+    metadata: {}
+    target:
+      device_id: f9e34b5552f10bdad7afcf634886782f
+    data: {}
+  - action: light.toggle
+    metadata: {}
+    target:
+      device_id: 81d98d43a856d3542121f752c7d74f9e
+    data: {}
   mode: single
 - id: '1701278095569'
   alias: IKEA Switch 6 On
@@ -2545,10 +2545,11 @@
     entity_id: 4299874278624449c3d5d808f6caf1af
     domain: light
     brightness_pct: 100
-  - type: turn_on
-    device_id: 8d8de4c32fc84734af376c764700e31f
-    entity_id: 8f5716f8d9e01ab1b765cd0076eaae04
-    domain: light
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: light.front_yard_light
   mode: single
 - id: '1702770376381'
   alias: Doorbell Chime
@@ -3051,4 +3052,91 @@
     data: {}
     target:
       device_id: 8634cb8bb78921b89b81f5cbde731504
+  mode: single
+- id: '1758129674862'
+  alias: Floods On Armed Away
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - alarm_control_panel.3629_alarm
+    to: armed_away
+    for:
+      hours: 0
+      minutes: 30
+      seconds: 0
+  conditions: []
+  actions:
+  - type: turn_on
+    device_id: 0fd96d923bb0322dcedd884810d0e3f3
+    entity_id: 4dc7a198e5d9a7345bbc20d739b25a50
+    domain: switch
+  mode: single
+- id: '1758130306047'
+  alias: Security Arm Night Return Home Late
+  description: ''
+  triggers:
+  - entity_id: person.michael_loeffler
+    zone: zone.home
+    event: enter
+    trigger: zone
+  - entity_id:
+    - zone.home
+    above: 0
+    trigger: numeric_state
+  - entity_id:
+    - binary_sensor.family_room_presence
+    to: 'on'
+    trigger: state
+  - entity_id:
+    - binary_sensor.main_bedroom_presence
+    to: 'on'
+    trigger: state
+  - entity_id:
+    - person.susan_loeffler
+    to: home
+    trigger: state
+  conditions:
+  - condition: state
+    entity_id: alarm_control_panel.3629_alarm
+    state: armed_away
+  - condition: time
+    after: '23:00:00'
+    before: 06:00:00
+  actions:
+  - action: alarm_control_panel.alarm_arm_night
+    data: {}
+  mode: single
+- id: '1758130715884'
+  alias: 'Floods Off Disarmed '
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - alarm_control_panel.3629_alarm
+    to: disarmed
+  conditions: []
+  actions:
+  - type: turn_off
+    device_id: 0fd96d923bb0322dcedd884810d0e3f3
+    entity_id: 4dc7a198e5d9a7345bbc20d739b25a50
+    domain: switch
+  mode: single
+- id: '1766499865275'
+  alias: Xmas Lights Button Hold
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: d8ab8c1ffdecef1e4dd60d62c2ccf068
+    type: action
+    subtype: hold
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.toggle
+    metadata: {}
+    target:
+      device_id: f9e34b5552f10bdad7afcf634886782f
+    data:
+      brightness_pct: 10
   mode: single
