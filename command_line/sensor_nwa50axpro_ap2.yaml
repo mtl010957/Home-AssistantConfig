@@ -1,0 +1,36 @@
+  - sensor:
+      name: NWA50AX PRO AP2 CPU Usage
+      command: '/config/scripts/nwa50axpro_show_cpu_status.sh 2'
+      unit_of_measurement: "%"
+      unique_id: nwa50axpro_ap2_cpu_usage
+      scan_interval: 60
+  - sensor:
+      name: NWA50AX PRO AP2 Memory Usage
+      command: '/config/scripts/nwa50axpro_show_mem_status.sh 2'
+      unit_of_measurement: "%"
+      unique_id: nwa50axpro_ap2_mem_usage
+      scan_interval: 60
+  - sensor:
+      name: NWA50AX PRO AP2 2.4GHz Client Count
+      command: '/config/scripts/nwa50axpro_show_wireless-hal_station_number_slot.sh 2 Slot1'
+      unit_of_measurement: "count"
+      unique_id: nwa50axpro_ap2_2_4ghz_client_count
+      scan_interval: 60
+  - sensor:
+      name: NWA50AX PRO AP2 5GHz Client Count
+      command: '/config/scripts/nwa50axpro_show_wireless-hal_station_number_slot.sh 2 Slot2'
+      unit_of_measurement: "count"
+      unique_id: nwa50axpro_ap2_5ghz_client_count
+      scan_interval: 60
+  - sensor:
+      name: NWA50AX PRO AP2 System Uptime
+      command: '/config/scripts/nwa50axpro_show_system_uptime.sh 2'
+      unit_of_measurement: "days"
+      unique_id: nwa50axpro_ap2_system_uptime
+      scan_interval: 3600
+  - sensor:
+      name: NWA50AX PRO AP2 Location
+      command: '/config/scripts/nwa50axpro_show_snmp_status_location.sh 2'
+      unique_id: nwa50axpro_ap2_location
+      scan_interval: 3600
+      
