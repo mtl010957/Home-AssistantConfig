@@ -233,6 +233,9 @@ include:
     - sensor.front_yard_light_energy
     - sensor.front_yard_light_power
     - sensor.front_yard_light_voltage
+    - sensor.solar_battery_charger_bus_voltage
+    - sensor.solar_battery_charger_current
+    - sensor.solar_battery_charger_power
     # lakefront sensors
     - sensor.lakefront_relay_and_climate_humidity
     - sensor.lakefront_relay_and_climate_temperature
