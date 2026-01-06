@@ -366,38 +366,44 @@
 - id: '1572630307272'
   alias: Security Notify Office Motion
   description: ''
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.office_motion
-    from: 'off'
-    to: 'on'
-  condition:
+  triggers:
+  - entity_id:
+    - binary_sensor.office_motion_sensor_any
+    from:
+    - 'off'
+    to:
+    - 'on'
+    trigger: state
+  conditions:
   - condition: state
     entity_id: alarm_control_panel.3629_alarm
     state: armed_away
-  action:
-  - service: notify.notify
-    data:
+  actions:
+  - data:
       message: Motion has been detected in the Office
       title: Office Motion Detected
+    action: notify.notify
   mode: single
 - id: '1572630414451'
   alias: Security Notify Main Bedroom Motion
   description: ''
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.main_bedroom_motion
-    from: 'off'
-    to: 'on'
-  condition:
+  triggers:
+  - entity_id:
+    - binary_sensor.main_bedroom_motion_sensor_any
+    from:
+    - 'off'
+    to:
+    - 'on'
+    trigger: state
+  conditions:
   - condition: state
     entity_id: alarm_control_panel.3629_alarm
     state: armed_away
-  action:
-  - service: notify.notify
-    data:
+  actions:
+  - data:
       message: Motion has been detected in the Main Bedroom
       title: Main Bedroom Motion Detected
+    action: notify.notify
   mode: single
 - id: '1572631200037'
   alias: Notify Temperature Low Office
@@ -888,16 +894,19 @@
 - id: '1609352755365'
   alias: Tag Play Alt 98.7 is scanned
   description: ''
-  trigger:
-  - platform: tag
-    tag_id: 82482dc8-74e0-483d-a7ce-c82d9b31eb08
-  condition: []
-  action:
-  - service: media_player.play_media
-    data:
-      entity_id: media_player.speaker_pair
-      media_content_id: https://17683.live.streamtheworld.com/WDZHFMAAC_SC?sbmid=7f9670a7-6b98-4daf-b9fb-45e8db5bafac
-      media_content_type: music
+  triggers:
+  - tag_id: 82482dc8-74e0-483d-a7ce-c82d9b31eb08
+    trigger: tag
+  conditions: []
+  actions:
+  - data:
+      media:
+        media_content_id: https://17683.live.streamtheworld.com/WDZHFMAAC_SC?sbmid=7f9670a7-6b98-4daf-b9fb-45e8db5bafac
+        media_content_type: music
+        metadata: {}
+    action: media_player.play_media
+    target:
+      entity_id: media_player.office_pair
   mode: single
 - id: '1609622832605'
   alias: Work Morning Summer
@@ -925,15 +934,15 @@
 - id: '1609723691654'
   alias: Tag Garage Latch is scanned
   description: ''
-  trigger:
-  - platform: tag
-    tag_id: 1806f93b-d481-4eca-9716-91647b715913
-  condition: []
-  action:
-  - type: turn_on
-    device_id: 7ec89b1bd00d47248701a5eedbf3a331
-    entity_id: switch.garage_latch
-    domain: switch
+  triggers:
+  - tag_id: 1806f93b-d481-4eca-9716-91647b715913
+    trigger: tag
+  conditions: []
+  actions:
+  - device_id: 7ec89b1bd00d47248701a5eedbf3a331
+    domain: lock
+    entity_id: c82ce81d227228065f9a17bb20a46e24
+    type: unlock
   mode: single
 - id: '1609793361731'
   alias: Reboot Weekly
@@ -956,7 +965,7 @@
   description: ''
   triggers:
   - value_template: '{{ states(''sensor_main_bedroom_humidity'') | float(default=0)
-      < states(''sensor.humidifier_on_point'') | float(default=0)  }}'
+      < states(''sensor.humidifier_off_point'') | float(default=0)  }}'
     for:
       hours: 0
       minutes: 5
@@ -2347,7 +2356,7 @@
       entity_id:
       - camera.3629_cam_6_mainstreamprofile
       - camera.13821_cam_1_mainstreamprofile
-      - camera.3629_cam_8_mainstreamprofile_2
+      - camera.3629_cam_8_mainstreamprofile
     action: homeassistant.reload_config_entry
   mode: single
 - id: '1691769032132'
@@ -3139,4 +3148,50 @@
       device_id: f9e34b5552f10bdad7afcf634886782f
     data:
       brightness_pct: 10
+  mode: single
+- id: '1767715050652'
+  alias: Notify Furnace Pressure Low
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - sensor.furnace_temperature_probe_3
+    - sensor.furnace_pressure_sensor
+  conditions:
+  - condition: template
+    value_template: "{## Low Pressure Limit ##}\n{%  set m = 0.0472 -%}\n{%- set b
+      = 3.6944 -%}\n{%- set temp = states(\"sensor.furnace_temperature_probe_3\")
+      | float -%}\n{%- set pres = states(\"sensor.furnace_pressure_sensor\") | float
+      -%}\n{%- if (pres < (m * temp) + b) -%}\n  true\n{%- else -%}\n  false\n{%-
+      endif %}\n"
+  actions:
+  - action: notify.mobile_app_pixel_8a
+    metadata: {}
+    data:
+      message: Furnace pressure ({{ states("sensor.furnace_pressure_sensor") }}) is
+        below low limit
+      title: Furnace Pressure Low
+  mode: single
+- id: '1767717461100'
+  alias: Notify Furnace Pressure High
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - sensor.furnace_temperature_probe_3
+    - sensor.furnace_pressure_sensor
+  conditions:
+  - condition: template
+    value_template: "{## High Pressure Limit ##}\n{%  set m = 0.04167 -%}\n{%- set
+      b = 11.0833 -%}\n{%- set temp = states(\"sensor.furnace_temperature_probe_3\")
+      | float -%}\n{%- set pres = states(\"sensor.furnace_pressure_sensor\") | float
+      -%}\n{%- if (pres > (m * temp) + b) -%}\n  true\n{%- else -%}\n  false\n{%-
+      endif %}\n"
+  actions:
+  - action: notify.mobile_app_pixel_8a
+    metadata: {}
+    data:
+      message: Furnace pressure ({{ states("sensor.furnace_pressure_sensor") }}) is
+        above high limit
+      title: Furnace Pressure High
   mode: single
