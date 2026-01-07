@@ -120,6 +120,8 @@ include:
     - sensor.furnace_temperature_probe_3
     - sensor.furnace_temperature_probe_4
     - sensor.furnace_pressure_sensor
+    - sensor.furnace_pressure_high_limit
+    - sensor.furnace_pressure_low_limit
     - sensor.furnace_gas_flow
     - sensor.furnace_gas_used
     - sensor.furnace_gas_used_cost
