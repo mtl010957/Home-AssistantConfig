@@ -13,24 +13,24 @@
       unique_id: nwa50axpro_ap2_mem_usage
       scan_interval: 60
   - sensor:
-      name: NWA50AX PRO AP2 2.4GHz Client Count
+      name: NWA50AX PRO AP2 2.4GHz Clients
       command: '/config/scripts/nwa50axpro_show_wlan_slot_list_all_sta_json.sh 2 slot1'
       value_template: '{{ value_json.clients | length }}'
       json_attributes:
         - "clients"
       unit_of_measurement: "count"
       icon: mdi:wifi
-      unique_id: nwa50axpro_ap2_2_4ghz_client_count
+      unique_id: nwa50axpro_ap2_2_4ghz_clients
       scan_interval: 60
   - sensor:
-      name: NWA50AX PRO AP2 5GHz Client Count
+      name: NWA50AX PRO AP2 5GHz Clients
       command: '/config/scripts/nwa50axpro_show_wlan_slot_list_all_sta_json.sh 2 slot2'
       value_template: '{{ value_json.clients | length }}'
       json_attributes:
         - "clients"
       unit_of_measurement: "count"
       icon: mdi:access-point
-      unique_id: nwa50axpro_ap2_5ghz_client_count
+      unique_id: nwa50axpro_ap2_5ghz_clients
       scan_interval: 60
   - sensor:
       name: NWA50AX PRO AP2 System Uptime
