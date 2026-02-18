@@ -160,15 +160,15 @@ include:
     - sensor.ikea_switch_2_battery
     - sensor.ikea_switch_3_battery
     - sensor.ikea_switch_4_battery
-    - sensor.family_room_sene_light_sensor
-    - sensor.family_room_swse_light_sensor
-    - sensor.family_room_sene_blinds_tilt_position
-    - sensor.family_room_sesw_blinds_tilt_position
-    - sensor.family_room_swse_blinds_tilt_position
-    - sensor.family_room_swctr_blinds_tilt_position
-    - sensor.family_room_swnw_blinds_tilt_position
-    - sensor.family_room_nwsw_blinds_tilt_position
-    - sensor.family_room_nwne_blinds_tilt_position
+    - sensor.family_room_se_ne_light_sensor
+    - sensor.family_room_sw_se_light_sensor
+    - sensor.family_room_se_ne_blinds_tilt_position
+    - sensor.family_room_se_sw_blinds_tilt_position
+    - sensor.family_room_sw_se_blinds_tilt_position
+    - sensor.family_room_sw_ctr_blinds_tilt_position
+    - sensor.family_room_sw_nw_blinds_tilt_position
+    - sensor.family_room_nw_sw_blinds_tilt_position
+    - sensor.family_room_nw_ne_blinds_tilt_position
     - sensor.living_room_nw_ctr_light_sensor
     - sensor.living_room_se_ctr_light_sensor
     - sensor.living_room_ctr_blinds_tilt_position
