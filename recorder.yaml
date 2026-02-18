@@ -201,6 +201,10 @@ include:
     - sensor.main_bedroom_tv_outlet_power
     - sensor.main_bedroom_tv_outlet_voltage
     - sensor.main_bedroom_tv_outlet_current
+    - sensor.humidifier_power_active_current
+    - sensor.humidifier_power_energy
+    - sensor.humidifier_power_power
+    - sensor.humidifier_power_voltage
     - sensor.water_meter
     - sensor.water_meter_water_flow
     - sensor.water_meter_water_used
@@ -235,6 +239,10 @@ include:
     - sensor.front_yard_light_energy
     - sensor.front_yard_light_power
     - sensor.front_yard_light_voltage
+    - sensor.garage_light_active_current
+    - sensor.garage_light_energy
+    - sensor.garage_light_power
+    - sensor.garage_light_voltage
     - sensor.solar_battery_charger_bus_voltage
     - sensor.solar_battery_charger_current
     - sensor.solar_battery_charger_power
