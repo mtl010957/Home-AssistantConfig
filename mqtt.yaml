@@ -1,9 +1,3 @@
-  number:
-    - name: "Living Room Blinds Manual Control Rotary Encoder Setting"
-      unique_id: living_room_blinds_manual_control_rotary_encoder_setting
-      command_topic: "dm06_reb1/sensor/dm06_reb1_set_rotary_encoder/command"
-      state_topic: "dm06_reb1/sensor/dm06_reb1_set_rotary_encoder/state"
-      retain: true
   sensor:
     - name: "DTE Energy Bridge"
       unique_id: dte_energy_bridge
