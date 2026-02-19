@@ -193,10 +193,10 @@ include:
     - sensor.refrigerator_outlet_power
     - sensor.refrigerator_outlet_voltage
     - sensor.refrigerator_outlet_current
-    - sensor.family_room_tv_outlet_daily_energy
+    - sensor.family_room_tv_outlet_active_current
+    - sensor.family_room_tv_outlet_energy
     - sensor.family_room_tv_outlet_power
     - sensor.family_room_tv_outlet_voltage
-    - sensor.family_room_tv_outlet_current
     - sensor.main_bedroom_tv_outlet_active_current
     - sensor.main_bedroom_tv_outlet_energy
     - sensor.main_bedroom_tv_outlet_power
@@ -244,17 +244,21 @@ include:
     - sensor.rh_end_cabinet_light_power
     - sensor.kptk_relative_humidity
     - sensor.kptk_temperature
-    - sensor.front_yard_light_active_current
-    - sensor.front_yard_light_energy
-    - sensor.front_yard_light_power
-    - sensor.front_yard_light_voltage
-    - sensor.garage_light_active_current
-    - sensor.garage_light_energy
-    - sensor.garage_light_power
-    - sensor.garage_light_voltage
+    - sensor.front_yard_light_outlet_active_current
+    - sensor.front_yard_light_outlet_energy
+    - sensor.front_yard_light_outlet_power
+    - sensor.front_yard_light_outlet_voltage
+    - sensor.garage_light_outlet_active_current
+    - sensor.garage_light_outlet_energy
+    - sensor.garage_light_outlet_power
+    - sensor.garage_light_outlet_voltage
     - sensor.solar_battery_charger_bus_voltage
     - sensor.solar_battery_charger_current
     - sensor.solar_battery_charger_power
+    - sensor.xmas_tree_lights_outlet_active_current
+    - sensor.xmas_tree_lights_outlet_energy
+    - sensor.xmas_tree_lights_outlet_power
+    - sensor.xmas_tree_lights_outlet_voltage
     # lakefront sensors
     - sensor.lakefront_relay_and_climate_humidity
     - sensor.lakefront_relay_and_climate_temperature
