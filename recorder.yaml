@@ -181,18 +181,18 @@ include:
     - sensor.cam3_motion_detect
     - sensor.hot_water_recirc_control_temperature
     - sensor.hot_water_recirc_control_temperature_meter
-    - sensor.freezer_outlet_daily_energy
+    - sensor.freezer_outlet_active_current
+    - sensor.freezer_outlet_energy
     - sensor.freezer_outlet_power
     - sensor.freezer_outlet_voltage
-    - sensor.freezer_outlet_current
-    - sensor.beer_fridge_outlet_daily_energy
+    - sensor.beer_fridge_outlet_active_current
+    - sensor.beer_fridge_outlet_energy
     - sensor.beer_fridge_outlet_power
     - sensor.beer_fridge_outlet_voltage
-    - sensor.beer_fridge_outlet_current
-    - sensor.refrigerator_outlet_daily_energy
+    - sensor.refrigerator_outlet_active_current
+    - sensor.refrigerator_outlet_energy
     - sensor.refrigerator_outlet_power
     - sensor.refrigerator_outlet_voltage
-    - sensor.refrigerator_outlet_current
     - sensor.family_room_tv_outlet_active_current
     - sensor.family_room_tv_outlet_energy
     - sensor.family_room_tv_outlet_power
@@ -210,10 +210,10 @@ include:
     - sensor.water_meter_water_used
     - sensor.water_meter_water_used_cost
     - sensor.water_meter_field_strength_x
-    - sensor.front_yard_camera_outlet_daily_energy
+    - sensor.front_yard_camera_outlet_active_current
+    - sensor.front_yard_camera_outlet_energy
     - sensor.front_yard_camera_outlet_power
     - sensor.front_yard_camera_outlet_voltage
-    - sensor.front_yard_camera_outlet_current
     - sensor.nas_cpu_load_1
     - sensor.nas_cpu_load_15
     - sensor.nas_cpu_load_5
@@ -259,6 +259,14 @@ include:
     - sensor.xmas_tree_lights_outlet_energy
     - sensor.xmas_tree_lights_outlet_power
     - sensor.xmas_tree_lights_outlet_voltage
+    - sensor.front_xmas_lights_outlet_active_current
+    - sensor.front_xmas_lights_outlet_energy
+    - sensor.front_xmas_lights_outlet_power
+    - sensor.front_xmas_lights_outlet_voltage
+    - sensor.router_outlet_current
+    - sensor.router_outlet_energy
+    - sensor.router_outlet_power
+    - sensor.router_outlet_voltage
     # lakefront sensors
     - sensor.lakefront_relay_and_climate_humidity
     - sensor.lakefront_relay_and_climate_temperature
