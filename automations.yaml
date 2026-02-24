@@ -408,48 +408,35 @@
 - id: '1572631200037'
   alias: Notify Temperature Low Office
   description: ''
-  trigger:
+  triggers:
   - entity_id:
     - sensor.office_climate_temperature
-    platform: numeric_state
     below: '45'
-  condition: []
-  action:
+    trigger: numeric_state
+  conditions: []
+  actions:
   - data:
       message: The temperature in the office is below 45 degrees
       title: Office Temperature Low
-    service: notify.notify
+      data:
+        clickAction: entityId:sensor.office_climate_temperature
+    action: notify.mobile_app_pixel_8a
   mode: single
 - id: '1572633741649'
-  alias: Notify UPS On Battery
+  alias: Notify UPS Status Change
   description: ''
-  trigger:
-  - entity_id: sensor.ups_status
-    platform: state
-    to: On Battery Battery Discharging
-  condition: []
-  action:
-  - service: notify.notify
+  triggers:
+  - entity_id:
+    - sensor.ups_status
+    trigger: state
+  conditions: []
+  actions:
+  - action: notify.mobile_app_pixel_8a
     data:
-      message: UPS is On Battery
-      title: UPS ON BATTERY
-  mode: single
-- id: '1572633832196'
-  alias: Notify UPS Online
-  description: ''
-  trigger:
-  - entity_id: sensor.ups_status
-    platform: state
-    to: Online
-  - platform: state
-    entity_id: sensor.ups_status
-    to: Online Battery Charging
-  condition: []
-  action:
-  - service: notify.notify
-    data:
-      message: The UPS is back Online
-      title: UPS ONLINE
+      message: 'UPS status: {{ states(''sensor.ups_status'') }}'
+      title: UPS Status
+      data:
+        clickAction: entityId:sensor.ups_status
   mode: single
 - id: '1578535843455'
   alias: Garage Door Lock After Open
@@ -489,7 +476,7 @@
   - data: {}
     action: humidifier.turn_on
     target:
-      entity_id: humidifier.main_bedroom_humidifier
+      entity_id: humidifier.humidifier
   mode: single
 - id: '1581437260727'
   alias: Work Morning Fall-Winter-Spring
@@ -550,33 +537,33 @@
   - data: {}
     action: humidifier.turn_off
     target:
-      entity_id: humidifier.main_bedroom_humidifier
+      entity_id: humidifier.humidifier
   mode: single
 - id: '1583938382449'
   alias: Garage lights on when doors opened
   description: ''
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.garage_door_sensor_any
+  triggers:
+  - entity_id: binary_sensor.garage_door_sensor_any
     from: 'off'
     to: 'on'
-  - platform: state
-    entity_id: binary_sensor.garage_inside_door_sensor_any
+    trigger: state
+  - entity_id: binary_sensor.garage_inside_door_sensor_any
     from: 'off'
     to: 'on'
-  condition: []
-  action:
-  - type: turn_on
-    device_id: 6f257e741b564746b69eca3a6eae1985
-    entity_id: switch.garage_light
-    domain: switch
+    trigger: state
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.garage_light
+    data: {}
   mode: single
 - id: '1583939404713'
   alias: Garage lights off when no motion for 10 minutes with doors closed
   description: ''
-  trigger:
+  triggers:
   - type: no_motion
-    platform: device
     device_id: 0297d19b6ceb409693273a05449045dc
     entity_id: binary_sensor.garage_motion
     domain: binary_sensor
@@ -585,39 +572,42 @@
       minutes: 10
       seconds: 0
       milliseconds: 0
-  condition:
+    trigger: device
+  conditions:
   - condition: state
     entity_id: binary_sensor.garage_door_sensor_any
     state: 'off'
   - condition: state
     entity_id: binary_sensor.garage_inside_door_sensor_any
     state: 'off'
-  action:
-  - type: turn_off
-    device_id: 6f257e741b564746b69eca3a6eae1985
-    entity_id: switch.garage_light
-    domain: switch
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    target:
+      entity_id: light.garage_light
+    data: {}
   mode: single
 - id: '1583940295594'
   alias: Garage lights on with motion
   description: ''
-  trigger:
+  triggers:
   - type: motion
-    platform: device
     device_id: 0297d19b6ceb409693273a05449045dc
     entity_id: binary_sensor.garage_motion
     domain: binary_sensor
-  condition:
-  - condition: device
-    type: is_off
-    device_id: 6f257e741b564746b69eca3a6eae1985
-    entity_id: switch.garage_light
-    domain: switch
-  action:
-  - type: turn_on
-    device_id: 6f257e741b564746b69eca3a6eae1985
-    entity_id: switch.garage_light
-    domain: switch
+    trigger: device
+  conditions:
+  - condition: light.is_off
+    target:
+      entity_id: light.garage_light
+    options:
+      behavior: any
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.garage_light
+    data: {}
   mode: single
 - id: '1584656811875'
   alias: Garage lights off when door closed if no motion
@@ -660,10 +650,11 @@
     entity_id: binary_sensor.garage_inside_door_sensor_any
     state: 'off'
   actions:
-  - type: turn_off
-    device_id: 6f257e741b564746b69eca3a6eae1985
-    entity_id: switch.garage_light
-    domain: switch
+  - action: light.turn_off
+    metadata: {}
+    target:
+      entity_id: light.garage_light
+    data: {}
   mode: single
 - id: '1585672107503'
   alias: Purge recorder database
@@ -779,44 +770,50 @@
 - id: '1589227167980'
   alias: Notify Battery Low Downstairs Smoke/CO Alarm
   description: ''
-  trigger:
-  - platform: numeric_state
-    entity_id: sensor.downstairs_smoke_co_alarm_battery_level
+  triggers:
+  - entity_id: sensor.downstairs_smoke_co_alarm_battery_level
     below: 80
-  condition: []
-  action:
+    trigger: numeric_state
+  conditions: []
+  actions:
   - data:
       message: The downstairs smoke/co alarm battery is low, please replace it ASAP.
       title: Downstairs Smoke/CO Alarm Battery Low
-    service: notify.notify
+      data:
+        clickAction: entityId:sensor.downstairs_smoke_co_alarm_battery_level
+    action: notify.mobile_app_pixel_8a
   mode: single
 - id: '1589227293445'
   alias: Notify Battery Low Upstairs Smoke/CO Alarm
   description: ''
-  trigger:
-  - platform: numeric_state
-    entity_id: sensor.upstairs_smoke_co_alarm_battery_level
+  triggers:
+  - entity_id: sensor.upstairs_smoke_co_alarm_battery_level
     below: 80
-  condition: []
-  action:
+    trigger: numeric_state
+  conditions: []
+  actions:
   - data:
       message: The upstairs smoke/co alarm battery is low, please replace it ASAP.
       title: Upstairs Smoke/CO Alarm Battery Low
-    service: notify.notify
+      data:
+        clickAction: entityId:sensor.upstairs_smoke_co_alarm_battery_level
+    action: notify.mobile_app_pixel_8a
   mode: single
 - id: '1589565473182'
   alias: Notify Battery Low Family Room Smoke/CO Alarm
   description: ''
-  trigger:
-  - platform: numeric_state
-    entity_id: sensor.family_room_smoke_co_alarm_battery_level
+  triggers:
+  - entity_id: sensor.family_room_smoke_co_alarm_battery_level
     below: 80
-  condition: []
-  action:
+    trigger: numeric_state
+  conditions: []
+  actions:
   - data:
       message: The family room smoke/co alarm battery is low, please replace it ASAP.
       title: Family Room Smoke/CO Alarm Battery Low
-    service: notify.notify
+      data:
+        clickAction: entityId:sensor.family_room_smoke_co_alarm_battery_level
+    action: notify.mobile_app_pixel_8a
   mode: single
 - id: '1589813195543'
   alias: Blinds Open at Sunrise if Armed Away
@@ -973,20 +970,16 @@
       milliseconds: 0
     trigger: template
   conditions:
-  - condition: device
-    type: is_on
-    device_id: cbfd393800a549f18ffe84e0f6b6be6f
-    entity_id: switch.humidifier_power
-    domain: switch
-    for:
-      hours: 0
-      minutes: 4
-      seconds: 0
+  - condition: switch.is_on
+    target:
+      entity_id: switch.humidifier_outlet
+    options:
+      behavior: any
   actions:
   - data:
       title: Humidifier Water
       message: Humidifier is out of water.
-    action: notify.notify
+    action: notify.mobile_app_pixel_8a
   mode: single
 - id: '1613156571890'
   alias: Notify HA Started
@@ -1760,46 +1753,37 @@
     target:
       entity_id: select.dte_energy_used_hourly
   mode: single
-- id: '1630505270910'
-  alias: Renew Let's Encrypt Certificate
-  description: ''
-  use_blueprint:
-    path: mcnovy/renew_ssl_cert_homeassistant.yaml
-    input:
-      cert_expiry_sensor: sensor.cert_expiry_timestamp_ha_mtl_svn_dyndns_home_com
-      time_to_check_cert: 03:20:00
-      send_notification: true
-      notification_device: a13a5c1c59aaf6f70b604da5b2824cb7
-      notification_title: Encryption Certificate Renewed Successfully
-      notification_message: HA Home encryption certificate has been successfully renewed!
-      renew_date: 20
 - id: '1630938392774'
   alias: Notify Battery Low Garage Smoke/CO Alarm
   description: ''
-  trigger:
-  - platform: numeric_state
-    entity_id: sensor.garage_smoke_alarm_battery_level
+  triggers:
+  - entity_id: sensor.garage_smoke_alarm_battery_level
     below: 80
-  condition: []
-  action:
+    trigger: numeric_state
+  conditions: []
+  actions:
   - data:
       message: The garage smoke/co alarm battery is low, please replace it ASAP.
       title: Garage Smoke/CO Alarm Battery Low
-    service: notify.notify
+      data:
+        clickAction: entityId:sensor.garage_smoke_alarm_battery_level
+    action: notify.mobile_app_pixel_8a
   mode: single
 - id: '1630938436914'
   alias: Notify Battery Low Laundry Smoke/CO Alarm
   description: ''
-  trigger:
-  - platform: numeric_state
-    entity_id: sensor.laundry_smoke_alarm_battery_level
+  triggers:
+  - entity_id: sensor.laundry_smoke_alarm_battery_level
     below: 80
-  condition: []
-  action:
+    trigger: numeric_state
+  conditions: []
+  actions:
   - data:
       message: The laundry smoke/co alarm battery is low, please replace it ASAP.
       title: Laundry Smoke/CO Alarm Battery Low
-    service: notify.notify
+      data:
+        clickAction: entityId:sensor.laundry_smoke_alarm_battery_level
+    action: notify.mobile_app_pixel_8a
   mode: single
 - id: '1630938647108'
   alias: Notify CO Laundry
@@ -1954,21 +1938,23 @@
 - id: '1639933441309'
   alias: Notify Furnace Pressure Release Overflow
   description: ''
-  trigger:
+  triggers:
   - entity_id: binary_sensor.furnace_relief_valve_warning
-    platform: state
     to: 'on'
     for:
       hours: 0
       minutes: 0
       seconds: 30
-  condition: []
-  action:
-  - service: notify.notify
-    data:
+    trigger: state
+  conditions: []
+  actions:
+  - data:
       message: Furnace pressure relief valve is releasing water and the catch pan
         is filling, check ASAP!
       title: Furnace Pressure Relief Warning
+      data:
+        clickAction: entityId:binary_sensor.furnace_relief_valve_warning
+    action: notify.mobile_app_pixel_8a
   mode: single
 - id: '1640015570768'
   alias: Check and Reload Tuya Integration
@@ -1999,11 +1985,12 @@
     trigger: time_pattern
   conditions:
   - condition: state
-    entity_id: humidifier.main_bedroom_humidifier
-    state: 'on'
+    entity_id: humidifier.humidifier
+    state:
+    - 'on'
   actions:
   - data_template:
-      entity_id: humidifier.main_bedroom_humidifier
+      entity_id: humidifier.humidifier
       humidity: '{{ states("sensor.humidifier_off_point") | int(default=20) }}'
     action: humidifier.set_humidity
   mode: single
@@ -2022,9 +2009,9 @@
   conditions: []
   actions:
   - action: humidifier.turn_off
-    target:
-      entity_id: humidifier.main_bedroom_humidifier
     data: {}
+    target:
+      entity_id: humidifier.humidifier
   mode: single
 - id: '1651789695739'
   alias: Humidifier On Return Home
@@ -2045,9 +2032,9 @@
     state: heat
   actions:
   - action: humidifier.turn_on
-    target:
-      entity_id: humidifier.main_bedroom_humidifier
     data: {}
+    target:
+      entity_id: humidifier.humidifier
   mode: single
 - id: '1652383371263'
   alias: House Fan Control Set Away Mode
@@ -2208,59 +2195,65 @@
 - id: '1673966516951'
   alias: Notify Beer Fridge Low Voltage
   description: ''
-  trigger:
-  - platform: numeric_state
-    entity_id: sensor.beer_fridge_outlet_voltage
+  triggers:
+  - entity_id: sensor.beer_fridge_outlet_voltage
     for:
       hours: 0
       minutes: 30
       seconds: 0
     below: 110
-  condition: []
-  action:
-  - service: notify.notify
-    data:
+    trigger: numeric_state
+  conditions: []
+  actions:
+  - data:
       title: Beer Fridge Voltage Low
       message: Beer Fridge voltage has been low for more than 30 minutes, check the
         power connection!
+      data:
+        clickAction: entityId:sensor.beer_fridge_outlet_voltage
+    action: notify.mobile_app_pixel_8a
   mode: single
 - id: '1673966604993'
   alias: Notify Refrigerator Low Voltage
   description: ''
-  trigger:
-  - platform: numeric_state
-    entity_id: sensor.refrigerator_outlet_voltage
+  triggers:
+  - entity_id: sensor.refrigerator_outlet_voltage
     for:
       hours: 0
       minutes: 30
       seconds: 0
     below: 110
-  condition: []
-  action:
-  - service: notify.notify
-    data:
+    trigger: numeric_state
+  conditions: []
+  actions:
+  - data:
       title: Refrigerator Voltage Low
       message: Refrigerator voltage has been low for more than 30 minutes, check the
         power connection!
+      data:
+        clickAction: entityId:sensor.refrigerator_outlet_voltage
+    action: notify.mobile_app_pixel_8a
   mode: single
 - id: '1673966741860'
   alias: Notify Freezer Low Voltage
   description: ''
-  trigger:
-  - platform: numeric_state
-    entity_id: sensor.freezer_outlet_voltage
+  triggers:
+  - entity_id: sensor.freezer_outlet_voltage
     for:
       hours: 0
       minutes: 30
       seconds: 0
     below: 110
-  condition: []
-  action:
-  - service: notify.notify
-    data:
+    trigger: numeric_state
+  conditions: []
+  actions:
+  - data:
       title: Freezer Voltage Low
       message: Freezer voltage has been low for more than 30 minutes, check the power
         connection!
+      data:
+        clickAction: entityId:sensor.freezer_outlet_voltage
+    action: notify.mobile_app_pixel_8a
   mode: single
 - id: '1677967541736'
   alias: Water Meter Restart And Notify When Stuck
@@ -2359,19 +2352,6 @@
       - camera.3629_cam_8_mainstreamprofile
     action: homeassistant.reload_config_entry
   mode: single
-- id: '1691769032132'
-  alias: Reload ASUS Router Integration After Router Reboot
-  description: ''
-  triggers:
-  - at: 03:40:00
-    trigger: time
-  conditions: []
-  actions:
-  - data: {}
-    action: homeassistant.reload_config_entry
-    target:
-      device_id: 8fd74ccdc915f3c6a1883bbc79c3b618
-  mode: single
 - id: '1700587190314'
   alias: Xmas Lights Sun Angle Brightness
   description: ''
@@ -2403,11 +2383,6 @@
     trigger: device
   conditions: []
   actions:
-  - type: toggle
-    device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
-    entity_id: 87ca97494cdaa95e7483ce9e959f736d
-    domain: light
-    enabled: true
   - action: light.toggle
     metadata: {}
     target:
@@ -2416,7 +2391,12 @@
   - action: light.toggle
     metadata: {}
     target:
-      device_id: 81d98d43a856d3542121f752c7d74f9e
+      entity_id: light.xmas_tree_lights
+    data: {}
+  - action: light.toggle
+    metadata: {}
+    target:
+      entity_id: light.front_xmas_lights_outlet
     data: {}
   mode: single
 - id: '1701278095569'
@@ -2460,13 +2440,13 @@
     domain: light
   mode: single
 - id: '1701278561361'
-  alias: IKEA Switch 6 Brightness Stop
+  alias: IKEA Switch 6 Brightness Move Down
   description: ''
   triggers:
   - domain: mqtt
     device_id: 66ce4854a8d4b12b6d797308ac243209
     type: action
-    subtype: 'on'
+    subtype: brightness_move_down
     trigger: device
   conditions: []
   actions:
@@ -2531,7 +2511,7 @@
   - domain: mqtt
     device_id: 66ce4854a8d4b12b6d797308ac243209
     type: action
-    subtype: 'on'
+    subtype: brightness_move_up
     trigger: device
   conditions: []
   actions:
@@ -2765,19 +2745,14 @@
     metadata: {}
     data: {}
     target:
-      device_id:
-      - 89623a628829316126c198861feb7312
-      - 6f257e741b564746b69eca3a6eae1985
-      - 8634cb8bb78921b89b81f5cbde731504
-      - 4e5e0f5cb909ea1597d60eedd210e112
-      - ad38b2b29eb24331b68fbae50ee3316a
-      - 99fd9317a4436057d9ea782e1d97c80f
-      - 607e22cc045ff0934805bcc5a982f628
-      - 9ae5e2c7ce24aa1ff636bd0cd53f3dba
-      - 91ffc5cd28e478e88a0a8113dd633f7f
-      - 0c1cce990f9a9a7945b0ed35dae83b79
-      entity_id:
-      - light.family_room_lamps
+      area_id:
+      - ba35ea6dc22d42808e3dc7511c49bfe6
+      - ae8548e9d7b24e11b7d5670a4da86499
+      - a9551ad1cd4c4f63ab8c697ff8949be5
+      - 316107820cce4630be06041fc14816e3
+      - be918af12ae344be9d3936091fc54a20
+      - d66690d909184fc39c8ef0e3559befea
+      - 994d07af5955428c961b2448d9bcf261
   mode: single
 - id: '1736903196700'
   alias: Aqara Cube 1 Tap
@@ -2794,19 +2769,14 @@
     metadata: {}
     data: {}
     target:
-      device_id:
-      - 89623a628829316126c198861feb7312
-      - 6f257e741b564746b69eca3a6eae1985
-      - 8634cb8bb78921b89b81f5cbde731504
-      - 4e5e0f5cb909ea1597d60eedd210e112
-      - ad38b2b29eb24331b68fbae50ee3316a
-      - 99fd9317a4436057d9ea782e1d97c80f
-      - 607e22cc045ff0934805bcc5a982f628
-      - 9ae5e2c7ce24aa1ff636bd0cd53f3dba
-      - 91ffc5cd28e478e88a0a8113dd633f7f
-      - 0c1cce990f9a9a7945b0ed35dae83b79
-      entity_id:
-      - light.family_room_lamps
+      area_id:
+      - ba35ea6dc22d42808e3dc7511c49bfe6
+      - d66690d909184fc39c8ef0e3559befea
+      - ae8548e9d7b24e11b7d5670a4da86499
+      - a9551ad1cd4c4f63ab8c697ff8949be5
+      - 316107820cce4630be06041fc14816e3
+      - be918af12ae344be9d3936091fc54a20
+      - 994d07af5955428c961b2448d9bcf261
   mode: single
 - id: '1740330705094'
   alias: Calendar Away Sensing
@@ -3009,7 +2979,7 @@
     metadata: {}
     data: {}
     target:
-      device_id: 4e5e0f5cb909ea1597d60eedd210e112
+      entity_id: light.bedside_lamp_bulb
   mode: single
 - id: '1753219791692'
   alias: Main Bedroom Light Switches Input 1 Off
@@ -3026,7 +2996,7 @@
     metadata: {}
     data: {}
     target:
-      device_id: 4e5e0f5cb909ea1597d60eedd210e112
+      entity_id: light.bedside_lamp_bulb
   mode: single
 - id: '1753219865224'
   alias: Main Bedroom Light Switches Input 2 On
@@ -3043,7 +3013,7 @@
     metadata: {}
     data: {}
     target:
-      device_id: 8634cb8bb78921b89b81f5cbde731504
+      device_id: 4e5e0f5cb909ea1597d60eedd210e112
   mode: single
 - id: '1753219932083'
   alias: Main Bedroom Light Switches Input 2 Off
@@ -3060,7 +3030,7 @@
     metadata: {}
     data: {}
     target:
-      device_id: 8634cb8bb78921b89b81f5cbde731504
+      device_id: 4e5e0f5cb909ea1597d60eedd210e112
   mode: single
 - id: '1758129674862'
   alias: Floods On Armed Away
@@ -3159,11 +3129,9 @@
     - sensor.furnace_pressure_sensor
   conditions:
   - condition: template
-    value_template: "{## Low Pressure Limit ##}\n{%  set m = 0.0472 -%}\n{%- set b
-      = 3.6944 -%}\n{%- set temp = states(\"sensor.furnace_temperature_probe_3\")
+    value_template: "{## Low Pressure Limit ##}\n{%  set low = states(\"sensor.furnace_pressure_low_limit\")
       | float -%}\n{%- set pres = states(\"sensor.furnace_pressure_sensor\") | float
-      -%}\n{%- if (pres < (m * temp) + b) -%}\n  true\n{%- else -%}\n  false\n{%-
-      endif %}\n"
+      -%}\n{%- if (pres < low) -%}\n  true\n{%- else -%}\n  false\n{%- endif %}\n"
   actions:
   - action: notify.mobile_app_pixel_8a
     metadata: {}
@@ -3171,6 +3139,8 @@
       message: Furnace pressure ({{ states("sensor.furnace_pressure_sensor") }}) is
         below low limit
       title: Furnace Pressure Low
+      data:
+        clickAction: /history?entity_id=sensor.furnace_pressure_sensor%2Csensor.furnace_pressure_low_limit%2Csensor.furnace_pressure_high_limit
   mode: single
 - id: '1767717461100'
   alias: Notify Furnace Pressure High
@@ -3182,11 +3152,9 @@
     - sensor.furnace_pressure_sensor
   conditions:
   - condition: template
-    value_template: "{## High Pressure Limit ##}\n{%  set m = 0.04167 -%}\n{%- set
-      b = 11.0833 -%}\n{%- set temp = states(\"sensor.furnace_temperature_probe_3\")
+    value_template: "{## High Pressure Limit ##}\n{%  set high = states(\"sensor.furnace_pressure_high_limit\")
       | float -%}\n{%- set pres = states(\"sensor.furnace_pressure_sensor\") | float
-      -%}\n{%- if (pres > (m * temp) + b) -%}\n  true\n{%- else -%}\n  false\n{%-
-      endif %}\n"
+      -%}\n{%- if (pres > high) -%}\n  true\n{%- else -%}\n  false\n{%- endif %}\n"
   actions:
   - action: notify.mobile_app_pixel_8a
     metadata: {}
@@ -3194,4 +3162,66 @@
       message: Furnace pressure ({{ states("sensor.furnace_pressure_sensor") }}) is
         above high limit
       title: Furnace Pressure High
+      data:
+        clickAction: /history?entity_id=sensor.furnace_pressure_sensor%2Csensor.furnace_pressure_low_limit%2Csensor.furnace_pressure_high_limit
+  mode: single
+- id: '1768666362414'
+  alias: Renew Lets Encrypt Certificate
+  description: ''
+  use_blueprint:
+    path: mtl010957/renew_certificate_restart_nginx.yaml
+    input:
+      cert_expiry_sensor: sensor.cert_expiry_timestamp_ha_mtl_svn_dyndns_home_com
+      time_to_check_cert: 03:20:00
+      notification_device: b6edadb9ce5034f108453f8cab8d6e5c
+      notification_title: Home HA Certificate Renewal
+      notification_message: Home HA Lets Encrypt Certificate has been renewed
+      send_notification: true
+- id: '1771020104622'
+  alias: IKEA Switch 7 On
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - event.bilresa_dual_button_button_1
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.0xf0d1b80000049891
+    data: {}
+  mode: single
+- id: '1771020547144'
+  alias: IKEA Switch 7 Off
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - event.bilresa_dual_button_button_2
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    target:
+      entity_id: light.0xf0d1b80000049891
+    data: {}
+  mode: single
+- id: '1771356582352'
+  alias: IKEA Switch 2 Brightness Up
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 598f8a95bb581d7a415f29ed23da2a0c
+    type: action
+    subtype: brightness_move_up
+    metadata: {}
+    trigger: device
+  conditions: []
+  actions:
+  - action: script.turn_on
+    metadata: {}
+    target:
+      entity_id: script.sw_blinds_block_afternoon_sun
+    data: {}
   mode: single
