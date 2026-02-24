@@ -23,12 +23,6 @@ security_lighting_on:
     data: {}
     action: switch.turn_on
   - delay: 00:{{ (range(1, 5) | random) }}:00
-  - data:
-      brightness_pct: 100
-    target:
-      device_id: 0362fab09a27e3af33a03b7a87816af8
-    action: light.turn_on
-  - delay: 00:{{ (range(1, 5) | random) }}:00
   - target:
       entity_id: light.family_room_lamps
     data:
@@ -48,6 +42,7 @@ security_lighting_on:
     action: light.turn_on
   mode: single
   icon: mdi:lightbulb
+  description: ''
 security_lighting_off:
   alias: Security Lighting Off
   sequence:
@@ -62,11 +57,6 @@ security_lighting_off:
     data: {}
     action: switch.turn_off
   - delay: 00:{{ (range(1, 5) | random) }}:00
-  - data: {}
-    target:
-      entity_id: light.guest_room_lamp_bulb
-    action: light.turn_off
-  - delay: 00:{{ (range(1, 5) | random) }}:00
   - target:
       entity_id: light.family_room_lamps
     data: {}
@@ -83,6 +73,7 @@ security_lighting_off:
     action: light.turn_off
   mode: single
   icon: mdi:lightbulb
+  description: ''
 irrigation_zone_1_run:
   alias: Irrigation Zone 1 Run
   sequence:
@@ -121,60 +112,52 @@ open_all_blinds:
 turn_on_xmas_lights:
   alias: Turn On Xmas Lights Bright
   sequence:
-  - type: turn_on
-    device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
-    entity_id: c9d614139d904b82b6c3aa5396200990
-    domain: switch
   - action: light.turn_on
     metadata: {}
     target:
       device_id: f9e34b5552f10bdad7afcf634886782f
     data:
       brightness_pct: 100
-  - action: light.turn_on
+  - action: switch.turn_on
     metadata: {}
     target:
-      device_id: 81d98d43a856d3542121f752c7d74f9e
+      entity_id:
+      - switch.xmas_tree_lights_outlet
+      - switch.front_xmas_lights_outlet
     data: {}
   mode: single
   icon: mdi:string-lights
 turn_off_xmas_lights:
   alias: Turn Off Xmas Lights
   sequence:
-  - type: turn_off
-    device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
-    entity_id: c9d614139d904b82b6c3aa5396200990
-    domain: switch
   - action: light.turn_off
     metadata: {}
     target:
       device_id: f9e34b5552f10bdad7afcf634886782f
     data: {}
-  - action: light.turn_off
+  - action: switch.turn_off
     metadata: {}
     target:
-      device_id: 81d98d43a856d3542121f752c7d74f9e
+      entity_id:
+      - switch.xmas_tree_lights_outlet
+      - switch.front_xmas_lights_outlet
     data: {}
   mode: single
   icon: mdi:string-lights
+  description: ''
 turn_on_xmas_lights_10:
   alias: Turn On Xmas Lights Dim
   sequence:
-  - type: turn_on
-    device_id: 8b90b436c1854e4fa6d18dc2c9e076a7
-    entity_id: c9d614139d904b82b6c3aa5396200990
-    domain: switch
-  - action: light.turn_on
+  - action: script.turn_on_xmas_lights_10
     metadata: {}
-    target:
-      device_id: 81d98d43a856d3542121f752c7d74f9e
     data: {}
-  - action: light.turn_on
+  - action: switch.turn_on
     metadata: {}
     target:
-      device_id: f9e34b5552f10bdad7afcf634886782f
-    data:
-      brightness_pct: 60
+      entity_id:
+      - switch.xmas_tree_lights_outlet
+      - switch.front_xmas_lights_outlet
+    data: {}
   mode: single
   icon: mdi:string-lights
 sw_blinds_block_afternoon_sun:
