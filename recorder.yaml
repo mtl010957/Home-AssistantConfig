@@ -153,6 +153,7 @@ include:
     - sensor.ups_status
     - sensor.ups_input_voltage
     - sensor.ups_battery_charge
+    - sensor.ups_battery_voltage
     - sensor.upstairs_smoke_co_alarm_battery_level
     - sensor.ikea_remote_1_battery
     - sensor.ikea_remote_2_battery
@@ -214,6 +215,10 @@ include:
     - sensor.front_yard_camera_outlet_energy
     - sensor.front_yard_camera_outlet_power
     - sensor.front_yard_camera_outlet_voltage
+    - sensor.front_doorbell_outlet_active_current
+    - sensor.front_doorbell_outlet_energy
+    - sensor.front_doorbell_outlet_power
+    - sensor.front_doorbell_outlet_voltage
     - sensor.nas_cpu_load_1
     - sensor.nas_cpu_load_15
     - sensor.nas_cpu_load_5
