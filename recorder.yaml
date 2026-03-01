@@ -211,6 +211,10 @@ include:
     - sensor.water_meter_water_used
     - sensor.water_meter_water_used_cost
     - sensor.water_meter_field_strength_x
+    - sensor.back_yard_camera_outlet_active_current
+    - sensor.back_yard_camera_outlet_energy
+    - sensor.back_yard_camera_outlet_power
+    - sensor.back_yard_camera_outlet_voltage
     - sensor.front_yard_camera_outlet_active_current
     - sensor.front_yard_camera_outlet_energy
     - sensor.front_yard_camera_outlet_power
