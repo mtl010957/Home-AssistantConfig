@@ -27,8 +27,6 @@ include:
     - binary_sensor.upstairs_smoke_co_alarm_co_alarm_carbon_monoxide_detected
     - binary_sensor.upstairs_smoke_co_alarm_smoke_alarm_smoke_detected
     - binary_sensor.rpi_power_status
-    - binary_sensor.caravan_rpi_power_status
-    - binary_sensor.desert_rpi_power_status
     - binary_sensor.furnace_relief_valve_warning
     - binary_sensor.furnace_burner_valve
     - binary_sensor.3629_cam_5_motion_detected
@@ -36,6 +34,12 @@ include:
     - binary_sensor.3629_cam_7_motion_detected
     - binary_sensor.3629_cam_8_cell_motion_detection
     - binary_sensor.13821_cam_1_cell_motion_detection
+    - binary_sensor.home_occupied
+    - binary_sensor.family_room_presence
+    - binary_sensor.living_room_presence_occupancy
+    - binary_sensor.main_bedroom_presence_occupancy
+    - binary_sensor.main_bedroom_presence
+    - binary_sensor.garage_presence_occupancy
     # climate
     - climate.thermostat
     - climate.living_room_thermostat
