@@ -41,6 +41,7 @@ include:
     - binary_sensor.main_bedroom_presence
     - binary_sensor.garage_presence_occupancy
     - binary_sensor.office_presence_occupancy
+    - binary_sensor.guest_room_presence_occupance
     # climate
     - climate.thermostat
     - climate.living_room_thermostat
