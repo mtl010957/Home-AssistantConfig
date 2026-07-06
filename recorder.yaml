@@ -292,6 +292,10 @@ include:
     - sensor.router_outlet_energy
     - sensor.router_outlet_power
     - sensor.router_outlet_voltage
+    - sensor.main_bedroom_air_conditioner_outlet_active_current
+    - sensor.main_bedroom_air_conditioner_outlet_energy
+    - sensor.main_bedroom_air_conditioner_outlet_power
+    - sensor.main_bedroom_air_conditioner_outlet_voltage
     # lakefront sensors
     - sensor.lakefront_relay_and_climate_humidity
     - sensor.lakefront_relay_and_climate_temperature
