@@ -296,9 +296,18 @@ include:
     - sensor.main_bedroom_air_conditioner_outlet_energy
     - sensor.main_bedroom_air_conditioner_outlet_power
     - sensor.main_bedroom_air_conditioner_outlet_voltage
+    - sensor.family_room_air_quality
+    - sensor.family_room_air_quality_carbon_dioxide
+    - sensor.family_room_air_quality_humidity
+    - sensor.family_room_air_quality_pm2_5
+    - sensor.family_room_air_quality_temperature
     # lakefront sensors
     - sensor.lakefront_relay_and_climate_humidity
     - sensor.lakefront_relay_and_climate_temperature
+    - sensor.lakefront_router_outlet_energy
+    - sensor.lakefront_router_outlet_power
+    - sensor.lakefront_router_outlet_voltage
+    - sensor.lakefront_router_outlet_current
     
     # switches
     - switch.family_room_ceiling_fan_light
