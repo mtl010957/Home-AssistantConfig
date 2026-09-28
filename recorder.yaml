@@ -76,6 +76,7 @@ include:
     - light.family_room_link_bulb_2
     - light.back_porch_light
     - light.front_porch_light
+    - light.garage_light
     - light.garage_attic_link_bulb
     - light.guest_room_lamp_bulb
     - light.office_light_bulb
@@ -137,6 +138,10 @@ include:
     - sensor.furnace_gas_flow
     - sensor.furnace_gas_used
     - sensor.furnace_gas_used_cost
+    - sensor.utility_room_furnace_outlet_active_current
+    - sensor.utility_room_furnace_outlet_energy
+    - sensor.utility_room_furnace_outlet_power
+    - sensor.utility_room_furnace_outlet_voltage
     - sensor.gas_meter
     - sensor.garage_climate_humidity
     - sensor.garage_climate_temperature
@@ -304,10 +309,10 @@ include:
     # lakefront sensors
     - sensor.lakefront_relay_and_climate_humidity
     - sensor.lakefront_relay_and_climate_temperature
-    - sensor.lakefront_router_outlet_energy
-    - sensor.lakefront_router_outlet_power
-    - sensor.lakefront_router_outlet_voltage
-    - sensor.lakefront_router_outlet_current
+    - sensor.brigadoon_router_outlet_energy
+    - sensor.brigadoon_router_outlet_power
+    - sensor.brigadoon_router_outlet_voltage
+    - sensor.brigadoon_router_outlet_current
     
     # switches
     - switch.family_room_ceiling_fan_light
