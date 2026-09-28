@@ -14,7 +14,5 @@ sensor.dte_energy_used_hourly_on_peak:
   friendly_name: DTE On Peak
 sensor.dte_energy_used_hourly_on_peak_cost:
   friendly_name: DTE On Peak Cost
-zone.desert_home:
-  icon: mdi:cactus
 sensor.furnace_gas_used:
   device_class: gas
