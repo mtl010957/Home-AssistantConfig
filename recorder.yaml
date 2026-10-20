@@ -43,6 +43,7 @@ include:
     - binary_sensor.garage_presence_occupancy
     - binary_sensor.office_presence_occupancy
     - binary_sensor.guest_room_presence_occupancy
+    - binary_sensor.laundry_room_backup_charging
     # climate
     - climate.thermostat
     - climate.living_room_thermostat
@@ -306,6 +307,29 @@ include:
     - sensor.family_room_air_quality_humidity
     - sensor.family_room_air_quality_pm2_5
     - sensor.family_room_air_quality_temperature
+    - sensor.laundry_room_backup_battery
+    - sensor.laundry_room_backup_current
+    - sensor.laundry_room_backup_energy_in
+    - sensor.laundry_room_backup_energy_out
+    - sensor.laundry_room_backup_power
+    - sensor.laundry_room_backup_power_in
+    - sensor.laundry_room_backup_power_out
+    - sensor.laundry_room_backup_stored_energy
+    - sensor.laundry_room_backup_temperature
+    - sensor.laundry_room_backup_voltage
+    - sensor.laundry_room_backup_solar_controller_energy_generated_today
+    - sensor.laundry_room_backup_solar_controller_pv_current
+    - sensor.laundry_room_backup_solar_controller_pv_output_voltage
+    - sensor.laundry_room_backup_solar_controller_pv_power
+    - sensor.laundry_room_backup_solar_controller_pv_voltage
+    - sensor.laundry_room_backup_charger_outlet_active_current
+    - sensor.laundry_room_backup_charger_outlet_energy
+    - sensor.laundry_room_backup_charger_outlet_power
+    - sensor.laundry_room_backup_charger_outlet_voltage
+    - sensor.laundry_room_backup_grid_outlet_active_current
+    - sensor.laundry_room_backup_grid_outlet_energy
+    - sensor.laundry_room_backup_grid_outlet_power
+    - sensor.laundry_room_backup_grid_outlet_voltage
     # lakefront sensors
     - sensor.lakefront_relay_and_climate_humidity
     - sensor.lakefront_relay_and_climate_temperature
