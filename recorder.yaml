@@ -317,9 +317,9 @@ include:
     - sensor.backup_battery_stored_energy
     - sensor.backup_battery_temperature
     - sensor.backup_battery_voltage
-    - sensor.backup_solar_controller_energy_generated_today
+    - sensor.backup_solar_controller_device_temperature
+    - sensor.backup_solar_controller_generated_energy_today
     - sensor.backup_solar_controller_pv_current
-    - sensor.backup_solar_controller_pv_output_voltage
     - sensor.backup_solar_controller_pv_power
     - sensor.backup_solar_controller_pv_voltage
     - sensor.backup_charger_outlet_active_current
@@ -330,6 +330,8 @@ include:
     - sensor.backup_grid_outlet_energy
     - sensor.backup_grid_outlet_power
     - sensor.backup_grid_outlet_voltage
+    - sensor.backup_climate_humidity
+    - sensor.backup_climate_temperature
     # lakefront sensors
     - sensor.lakefront_relay_and_climate_humidity
     - sensor.lakefront_relay_and_climate_temperature
