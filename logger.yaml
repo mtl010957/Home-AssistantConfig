@@ -1,5 +1,7 @@
 default: warning
 #logs:
+#  custom_components.zepever: debug
+#  pymodbus: debug
 #  homeassistant.components.onvif: debug
 #  homeassistant.components.zeep: debug
 #  homeassistant.components.nws: debug
