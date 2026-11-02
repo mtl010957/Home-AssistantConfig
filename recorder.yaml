@@ -331,7 +331,7 @@ include:
     - sensor.backup_grid_feed_power
     - sensor.backup_grid_feed_voltage
     - sensor.backup_inverter_output_current
-    _ sensor.backup_inverter_output_energy
+    - sensor.backup_inverter_output_energy
     - sensor.backup_inverter_output_power
     - sensor.backup_inverter_output_voltage
     - sensor.backup_climate_humidity
