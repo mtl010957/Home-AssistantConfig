@@ -322,14 +322,18 @@ include:
     - sensor.backup_solar_controller_pv_current
     - sensor.backup_solar_controller_pv_power
     - sensor.backup_solar_controller_pv_voltage
-    - sensor.backup_charger_outlet_active_current
-    - sensor.backup_charger_outlet_energy
-    - sensor.backup_charger_outlet_power
-    - sensor.backup_charger_outlet_voltage
-    - sensor.backup_grid_outlet_active_current
-    - sensor.backup_grid_outlet_energy
-    - sensor.backup_grid_outlet_power
-    - sensor.backup_grid_outlet_voltage
+    - sensor.backup_charger_current
+    - sensor.backup_charger_energy
+    - sensor.backup_charger_power
+    - sensor.backup_charger_voltage
+    - sensor.backup_grid_feed_current
+    - sensor.backup_grid_feed_energy
+    - sensor.backup_grid_feed_power
+    - sensor.backup_grid_feed_voltage
+    - sensor.backup_inverter_output_current
+    _ sensor.backup_inverter_output_energy
+    - sensor.backup_inverter_output_power
+    - sensor.backup_inverter_output_voltage
     - sensor.backup_climate_humidity
     - sensor.backup_climate_temperature
     # lakefront sensors
