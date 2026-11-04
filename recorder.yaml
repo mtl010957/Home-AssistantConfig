@@ -294,6 +294,10 @@ include:
     - sensor.front_xmas_lights_outlet_energy
     - sensor.front_xmas_lights_outlet_power
     - sensor.front_xmas_lights_outlet_voltage
+    - sensor.laundry_room_network_outlet_active_current
+    - sensor.laundry_room_network_outlet_energy
+    - sensor.laundry_room_network_outlet_power
+    - sensor.laundry_room_network_outlet_voltage
     - sensor.router_outlet_current
     - sensor.router_outlet_energy
     - sensor.router_outlet_power
