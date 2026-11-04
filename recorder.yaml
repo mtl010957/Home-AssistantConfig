@@ -113,17 +113,11 @@ include:
     - sensor.guest_room_climate_humidity
     - sensor.office_climate_temperature
     - sensor.office_climate_humidity
+    - sensor.laundry_room_dte_energy_bridge_current_price
     - sensor.dte_energy_bridge_summary
     - sensor.dte_energy_bridge
     - sensor.dte_energy_used
-    - sensor.dte_energy_used_hourly_critical_peak
-    - sensor.dte_energy_used_hourly_critical_peak_cost
-    - sensor.dte_energy_used_hourly_mid_peak
-    - sensor.dte_energy_used_hourly_mid_peak_cost
-    - sensor.dte_energy_used_hourly_off_peak
-    - sensor.dte_energy_used_hourly_off_peak_cost
-    - sensor.dte_energy_used_hourly_on_peak
-    - sensor.dte_energy_used_hourly_on_peak_cost
+    - sensor.dte_energy_used_cost
     - sensor.downstairs_smoke_co_alarm_battery_level
     - sensor.family_room_climate_humidity
     - sensor.corrected_barometer

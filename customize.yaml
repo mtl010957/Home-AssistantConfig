@@ -1,18 +1,2 @@
-sensor.dte_energy_used_hourly_critical_peak:
-  friendly_name: DTE Critical Peak
-sensor.dte_energy_used_hourly_critical_peak_cost:
-  friendly_name: DTE Critical Peak Cost
-sensor.dte_energy_used_hourly_mid_peak:
-  friendly_name: DTE Mid Peak
-sensor.dte_energy_used_hourly_mid_peak_cost:
-  friendly_name: DTE Mid Peak Cost
-sensor.dte_energy_used_hourly_off_peak:
-  friendly_name: DTE Off Peak
-sensor.dte_energy_used_hourly_off_peak_cost:
-  friendly_name: DTE Off Peak Cost
-sensor.dte_energy_used_hourly_on_peak:
-  friendly_name: DTE On Peak
-sensor.dte_energy_used_hourly_on_peak_cost:
-  friendly_name: DTE On Peak Cost
 sensor.furnace_gas_used:
   device_class: gas
