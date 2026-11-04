@@ -40,3 +40,6 @@ nest.conf
 !.storage/lovelace_dashboards
 !.storage/lovelace_resources
 !.storage/mobile_app
+automations.yaml
+google_calendars.yaml
+scenes.yaml
