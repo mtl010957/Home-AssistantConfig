@@ -8,32 +8,18 @@ include:
     - binary_sensor.back_door_sensor_any
     - binary_sensor.downstairs_smoke_co_alarm_co_alarm_carbon_monoxide_detected
     - binary_sensor.downstairs_smoke_co_alarm_smoke_alarm_smoke_detected
-    - binary_sensor.family_room_smoke_co_alarm_co_alarm_carbon_monoxide_detected
-    - binary_sensor.family_room_smoke_co_alarm_smoke_alarm_smoke_detected
     - binary_sensor.front_door_sensor_any
-    - binary_sensor.front_yard_camera_front_porch_person_detected
-    - binary_sensor.front_yard_camera_front_porch_porch_activity
     - binary_sensor.garage_door_sensor_any
     - binary_sensor.garage_inside_door_sensor_any
-    - binary_sensor.garage_motion
-    - binary_sensor.garage_co_detected
-    - binary_sensor.garage_smoke_detected
-    - binary_sensor.living_room_camera_person_detected
     - binary_sensor.laundry_co_detected
     - binary_sensor.laundry_smoke_detected
     - binary_sensor.main_bedroom_motion_sensor_any
     - binary_sensor.office_motion_sensor_any
-    - binary_sensor.updater
     - binary_sensor.upstairs_smoke_co_alarm_co_alarm_carbon_monoxide_detected
     - binary_sensor.upstairs_smoke_co_alarm_smoke_alarm_smoke_detected
     - binary_sensor.rpi_power_status
     - binary_sensor.furnace_relief_valve_warning
     - binary_sensor.furnace_burner_valve
-    - binary_sensor.3629_cam_5_motion_detected
-    - binary_sensor.3629_cam_6_cell_motion_detection
-    - binary_sensor.3629_cam_7_motion_detected
-    - binary_sensor.3629_cam_8_cell_motion_detection
-    - binary_sensor.13821_cam_1_cell_motion_detection
     - binary_sensor.home_presence
     - binary_sensor.home_occupied
     - binary_sensor.family_room_presence
@@ -43,22 +29,21 @@ include:
     - binary_sensor.garage_presence_occupancy
     - binary_sensor.office_presence_occupancy
     - binary_sensor.guest_room_presence_occupancy
-    - binary_sensor.laundry_room_backup_charging
+    - binary_sensor.backup_battery_charging
     # climate
-    - climate.thermostat
     - climate.living_room_thermostat
     - climate.house_fan_thermostat
-    - sensor.living_room_thermostat_humidity
-    - sensor.living_room_thermostat_temperature
+    - sensor.living_room_humidity
+    - sensor.living_room_temperature
     - climate.hot_water_recirc_control_setting
     # covers
-    - cover.family_room_sene_blinds
-    - cover.family_room_sesw_blinds
-    - cover.family_room_swse_blinds
-    - cover.family_room_swctr_blinds
-    - cover.family_room_swnw_blinds
-    - cover.family_room_nwsw_blinds
-    - cover.family_room_nwne_blinds
+    - cover.family_room_se_ne_blinds
+    - cover.family_room_se_sw_blinds
+    - cover.family_room_sw_se_blinds
+    - cover.family_room_sw_ctr_blinds
+    - cover.family_room_sw_nw_blinds
+    - cover.family_room_nw_sw_blinds
+    - cover.family_room_nw_ne_blinds
     - cover.living_room_se_blinds
     - cover.living_room_se_ctr_blinds
     - cover.living_room_ctr_blinds
@@ -71,25 +56,20 @@ include:
     # lights
     - light.dining_room_ceiling_light
     - light.living_room_lamp_dimmer
-    - light.family_room_lamp_bulb_1
-    - light.family_room_lamp_bulb_2
-    - light.family_room_link_bulb_1
-    - light.family_room_link_bulb_2
+    - light.family_room_lamp_1_bulb_1
+    - light.family_room_lamp_1_bulb_2
+    - light.family_room_lamp_2_bulb_1
+    - light.family_room_lamp_2_bulb_2
     - light.back_porch_light
     - light.front_porch_light
     - light.garage_light
     - light.garage_attic_link_bulb
-    - light.guest_room_lamp_bulb
     - light.office_light_bulb
-    - light.living_room_lamp_dimmer
     - light.bedside_lamp_bulb
-    - light.main_bedroom_nw_ceiling_lights
-    - light.main_bedroom_se_ceiling_lights
     - light.back_outdoor_xmas_lights
     - light.front_yard_light
     # media_players
-    - media_player.caravan_tv
-    - media_player.family_room_tv
+    - media_player.family_room_tv_2
     - media_player.main_bedroom_tv
     # persons
     - person.michael_loeffler
@@ -102,8 +82,6 @@ include:
     - sensor.swap_use_percent
     - sensor.processor_use
     - sensor.cpu_temperature
-    - sensor.asuswrt_load_avg_1m
-    - sensor.asuswrt_load_avg_5m
     - sensor.router_load_1m
     - sensor.router_load_5m
     - sensor.router_memory_used
@@ -147,19 +125,11 @@ include:
     - sensor.house_fan_current
     - sensor.house_fan_voltage
     - sensor.humidifier_off_point
-    - sensor.humidifier_on_point
     - sensor.laundry_smoke_alarm_battery_level
     - sensor.living_room_humidity
     - sensor.living_room_temperature
     - sensor.main_bedroom_climate_humidity
     - sensor.main_bedroom_climate_temperature
-    - sensor.main_bedroom_air_eco2
-    - sensor.main_bedroom_air_humidity
-    - sensor.main_bedroom_air_particulate_matter_1_0mm_concentration
-    - sensor.main_bedroom_air_particulate_matter_10_0mm_concentration
-    - sensor.main_bedroom_air_particulate_matter_2_5mm_concentration
-    - sensor.main_bedroom_air_temperature
-    - sensor.main_bedroom_air_total_volatile_organic_compounds
     - sensor.outdoor_climate_humidity
     - sensor.outdoor_climate_temperature
     - sensor.ups_status
@@ -189,11 +159,7 @@ include:
     - sensor.living_room_nw_ctr_blinds_tilt_position
     - sensor.living_room_se_blinds_tilt_position
     - sensor.living_room_se_ctr_blinds_tilt_position
-    - sensor.cam1_motion_detect
-    - sensor.cam2_motion_detect
-    - sensor.cam3_motion_detect
     - sensor.hot_water_recirc_control_temperature
-    - sensor.hot_water_recirc_control_temperature_meter
     - sensor.freezer_outlet_active_current
     - sensor.freezer_outlet_energy
     - sensor.freezer_outlet_power
@@ -245,10 +211,6 @@ include:
     - sensor.nas_cpu_temperature
     - sensor.nas_fan_speed
     - sensor.nas_md0_percent_used
-    - sensor.sensor_outlet_active_current
-    - sensor.sensor_outlet_energy
-    - sensor.sensor_outlet_power
-    - sensor.sensor_outlet_voltage
     - sensor.utility_outlet_active_current
     - sensor.utility_outlet_energy
     - sensor.utility_outlet_power
