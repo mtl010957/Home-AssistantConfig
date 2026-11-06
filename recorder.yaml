@@ -115,6 +115,10 @@ include:
     - sensor.utility_room_furnace_outlet_energy
     - sensor.utility_room_furnace_outlet_power
     - sensor.utility_room_furnace_outlet_voltage
+    - sensor.utility_room_network_outlet_active_current
+    - sensor.utility_room_network_outlet_energy
+    - sensor.utility_room_network_outlet_power
+    - sensor.utility_room_network_outlet_voltage
     - sensor.gas_meter
     - sensor.garage_climate_humidity
     - sensor.garage_climate_temperature
@@ -254,6 +258,10 @@ include:
     - sensor.laundry_room_network_outlet_energy
     - sensor.laundry_room_network_outlet_power
     - sensor.laundry_room_network_outlet_voltage
+    - sensor.laundry_room_modem_outlet_active_current
+    - sensor.laundry_room_modem_outlet_energy
+    - sensor.laundry_room_modem_outlet_power
+    - sensor.laundry_room_modem_outlet_voltage
     - sensor.router_outlet_current
     - sensor.router_outlet_energy
     - sensor.router_outlet_power
@@ -272,6 +280,7 @@ include:
     - sensor.backup_battery_energy_in
     - sensor.backup_battery_energy_out
     - sensor.backup_battery_power
+    - sensor.backup_battery_power_inverted
     - sensor.backup_battery_power_in
     - sensor.backup_battery_power_out
     - sensor.backup_battery_stored_energy
