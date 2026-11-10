@@ -1,0 +1,17 @@
+  - trigger:
+      - platform: time_pattern
+        minutes: "/10"
+    action:
+      - service: weather.get_forecasts
+        data:
+          type: twice_daily
+        target:
+          entity_id: weather.kptk_daynight
+        response_variable: daynight
+    sensor:
+      - name: Forecast Today
+        unique_id: forecast_today
+        state: "{{ daynight['weather.kptk_daynight'].forecast[2].condition }}"
+        attributes:
+          forecast: "{{ daynight['weather.kptk_daynight'].forecast[2].condition }}"
+          
