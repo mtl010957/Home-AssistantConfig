@@ -67,7 +67,6 @@ include:
     - light.office_light_bulb
     - light.bedside_lamp_bulb
     - light.back_outdoor_xmas_lights
-    - light.front_yard_light
     # media_players
     - media_player.family_room_tv_2
     - media_player.main_bedroom_tv
@@ -136,10 +135,6 @@ include:
     - sensor.main_bedroom_climate_temperature
     - sensor.outdoor_climate_humidity
     - sensor.outdoor_climate_temperature
-    - sensor.ups_status
-    - sensor.ups_input_voltage
-    - sensor.ups_battery_charge
-    - sensor.ups_battery_voltage
     - sensor.upstairs_smoke_co_alarm_battery_level
     - sensor.ikea_remote_1_battery
     - sensor.ikea_remote_2_battery
@@ -215,10 +210,6 @@ include:
     - sensor.nas_cpu_temperature
     - sensor.nas_fan_speed
     - sensor.nas_md0_percent_used
-    - sensor.utility_outlet_active_current
-    - sensor.utility_outlet_energy
-    - sensor.utility_outlet_power
-    - sensor.utility_outlet_voltage
     - sensor.pi_outlet_active_current
     - sensor.pi_outlet_energy
     - sensor.pi_outlet_power
@@ -235,10 +226,6 @@ include:
     - sensor.rh_end_cabinet_light_power
     - sensor.kptk_relative_humidity
     - sensor.kptk_temperature
-    - sensor.front_yard_light_outlet_active_current
-    - sensor.front_yard_light_outlet_energy
-    - sensor.front_yard_light_outlet_power
-    - sensor.front_yard_light_outlet_voltage
     - sensor.garage_light_outlet_active_current
     - sensor.garage_light_outlet_energy
     - sensor.garage_light_outlet_power
@@ -254,14 +241,6 @@ include:
     - sensor.front_xmas_lights_outlet_energy
     - sensor.front_xmas_lights_outlet_power
     - sensor.front_xmas_lights_outlet_voltage
-    - sensor.laundry_room_network_outlet_active_current
-    - sensor.laundry_room_network_outlet_energy
-    - sensor.laundry_room_network_outlet_power
-    - sensor.laundry_room_network_outlet_voltage
-    - sensor.laundry_room_modem_outlet_active_current
-    - sensor.laundry_room_modem_outlet_energy
-    - sensor.laundry_room_modem_outlet_power
-    - sensor.laundry_room_modem_outlet_voltage
     - sensor.router_outlet_current
     - sensor.router_outlet_energy
     - sensor.router_outlet_power
