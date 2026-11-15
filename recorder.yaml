@@ -95,6 +95,9 @@ include:
     - sensor.dte_energy_bridge
     - sensor.dte_energy_used
     - sensor.dte_energy_used_cost
+    - sensor.ups_battery_charge
+    - sensor.ups_input_voltage
+    - sensor.ups_status
     - sensor.downstairs_smoke_co_alarm_battery_level
     - sensor.family_room_climate_humidity
     - sensor.corrected_barometer
